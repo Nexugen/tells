@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 REPO=$(pwd)
 YES=${1:-}
 PORT=$(grep -E '^TELLS_PORT=' /etc/tells-api.env 2>/dev/null | cut -d= -f2 || true)
-PORT=${PORT:-3791}
+PORT=${PORT:-3891}
 
 say() { printf '==> %s\n' "$*"; }
 run() { if [[ "$YES" == "--yes" ]]; then "$@"; else printf '    would run: %s\n' "$*"; fi; }
