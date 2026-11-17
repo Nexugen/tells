@@ -1,0 +1,76 @@
+{
+  "scoredAt": "2026-11-17T23:38:18.939Z",
+  "rows": [
+    {
+      "name": "human exemplars",
+      "samples": 10,
+      "words": 798,
+      "meanScore": 1.6,
+      "medianScore": 0,
+      "withErrors": 1,
+      "clean": 6,
+      "topRules": [
+        "dash (2)",
+        "scare-quotes (1)",
+        "corporate-excitement (1)",
+        "exclamation (1)"
+      ]
+    },
+    {
+      "name": "claude-code-haiku+tells (claude-cli:haiku rewritten by claude-cli:haiku)",
+      "samples": 12,
+      "words": 880,
+      "meanScore": 0.1,
+      "medianScore": 0,
+      "withErrors": 0,
+      "clean": 11,
+      "topRules": [
+        "uniform-rhythm (1)"
+      ]
+    },
+    {
+      "name": "claude-code-haiku (claude-cli:haiku)",
+      "samples": 12,
+      "words": 880,
+      "meanScore": 1.6,
+      "medianScore": 0,
+      "withErrors": 0,
+      "clean": 9,
+      "topRules": [
+        "hashtag (4)",
+        "uniform-rhythm (1)",
+        "emoji (1)",
+        "rhetorical-qa (1)",
+        "staccato (1)"
+      ]
+    },
+    {
+      "name": "claude-code-sonnet+tells (claude-cli:sonnet rewritten by claude-cli:haiku)",
+      "samples": 12,
+      "words": 1053,
+      "meanScore": 0.1,
+      "medianScore": 0,
+      "withErrors": 0,
+      "clean": 11,
+      "topRules": [
+        "exclamation (1)"
+      ]
+    },
+    {
+      "name": "claude-code-sonnet (claude-cli:sonnet)",
+      "samples": 12,
+      "words": 1065,
+      "meanScore": 2.9,
+      "medianScore": 0,
+      "withErrors": 1,
+      "clean": 8,
+      "topRules": [
+        "hashtag (5)",
+        "emoji (3)",
+        "exclamation (2)",
+        "staccato (2)",
+        "sycophantic-opener (1)"
+      ]
+    }
+  ]
+}

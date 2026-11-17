@@ -1,0 +1,69 @@
+{
+  "name": "claude-code-haiku",
+  "via": "claude-cli",
+  "model": "claude-cli:haiku",
+  "createdAt": "2026-11-17T23:25:14.338Z",
+  "costUsd": 0.02807675,
+  "items": [
+    {
+      "id": "slack-delay",
+      "register": "casual",
+      "text": "Hi team, heads up: the release is moving from Thursday to Monday. The payment provider's sandbox has been down since Tuesday, and we can't finish testing the payment flows without it. I'll share the new timeline once we know when the sandbox is back."
+    },
+    {
+      "id": "forum-cors",
+      "register": "casual",
+      "text": "Dev usually works because a proxy (CRA's `proxy` field or Vite's `server.proxy`) makes the calls same-origin, and that proxy doesn't exist in production. Check these:\n\n1. **Origin mismatch:** Add your production site's exact origin (scheme, host, port, no trailing slash) to Express's CORS config. Using `cors({ origin: process.env.CLIENT_ORIGIN })` lets you set it per environment.\n2. **Hardcoded URLs:** Make sure the build isn't still calling `http://localhost:4000`. Read the API base URL from an env var like `REACT_APP_API_URL` or `VITE_API_URL`.\n3. **Preflight:** Confirm Express answers `OPTIONS` requests for any route with custom headers or methods like `PUT` or `DELETE`.\n4. **Error responses:** A 500 or a reverse-proxy 502 may lack CORS headers, so the browser reports a CORS error. Check the Network tab for the real status."
+    },
+    {
+      "id": "friend-recommend",
+      "register": "casual",
+      "text": "Honestly just plain markdown files in a git repo, synced with a cron job. No fancy app. Works everywhere, and I can grep it, version it, and never worry about a company shutting down or changing pricing. Overkill maybe, but I like it. What are you using?"
+    },
+    {
+      "id": "support-refund",
+      "register": "professional",
+      "text": "Hi,\n\nI'm sorry about the duplicate charge on order 4471. We've refunded the extra payment today. It should appear on your statement within 3 to 5 business days, depending on your bank.\n\nThanks for your patience, and please reply if the refund hasn't shown up by then.\n\nBest regards,\nCustomer Support"
+    },
+    {
+      "id": "email-meeting",
+      "register": "professional",
+      "text": "Subject: Moving our Wednesday review to Friday at 10am\n\nHi [Client name],\n\nI need to move our review from Wednesday at 2pm to Friday at 10am. The staging environment needs one more day to finish your data import, and I want the review to run on complete data.\n\nDoes Friday at 10am work for you? If not, let me know what time suits you best and I'll adjust.\n\nThanks for your flexibility.\n\nBest,\n[Your name]"
+    },
+    {
+      "id": "incident-summary",
+      "register": "professional",
+      "text": "On November 3, between 14:05 and 14:47 UTC, about 8% of checkout requests failed. The failures started when a configuration change reduced the database connection pool size from 50 to 5. With only 5 connections available, checkout requests competed for connections and a share of them failed. The impact lasted 42 minutes.\n\nThe configuration change was rolled back, which restored the connection pool to its previous size and ended the checkout failures. The incident was resolved by reverting the change, not by a code fix.\n\nTo prevent a recurrence, a new check now blocks any change that sets the database connection pool below 20. This guardrail stops a value this low from being deployed without an explicit override."
+    },
+    {
+      "id": "pr-description",
+      "register": "technical",
+      "text": "## Replace 5-second job status polling with an SSE stream\n\nActive users were polling the job status endpoint every 5 seconds, which is 720 requests per hour per user. This change has the client open one server-sent events (SSE) connection per active user and receive status updates over it, so each active user makes 1 connection in place of 720 requests per hour.\n\n**Changes**\n- New SSE endpoint that streams status updates for the user's jobs.\n- Client switches from the polling loop to a single `EventSource` connection, reconnecting on drop.\n- The old polling endpoint stays in place for one release for existing clients. It is deprecated and will be removed in the following release.\n\n**Compatibility**\n- Clients still on the old build keep polling the old endpoint and are unaffected.\n- The old endpoint is not removed in this PR. Removing it is a separate change, scheduled for the release after this one.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+    },
+    {
+      "id": "docs-cache",
+      "register": "technical",
+      "text": "The client caches responses to GET requests for 60 seconds by default, so repeated GET calls to the same resource within that window return the stored response without a new network request. To change the lifetime, pass the `cacheTtl` option when you create the client, with the duration you want the cache to hold GET responses. POST requests are never cached, so every POST is sent to the server and its response is never stored or reused."
+    },
+    {
+      "id": "changelog",
+      "register": "technical",
+      "text": "## [2.4.0] - 2026-11-18\n\n### Added\n- CSV export on the reports page.\n\n### Fixed\n- Timezone offsets in weekly summaries.\n\n### Removed\n- Node 18 support. Node 18 is no longer supported; upgrade to a currently supported Node version before installing 2.4.0."
+    },
+    {
+      "id": "launch-post",
+      "register": "marketing",
+      "text": "Snap a photo of any receipt and our bookkeeping app reads it for you, filling in the vendor, date and amount automatically. No signal? No problem. It works offline and syncs the moment you're back online. Your books, always up to date."
+    },
+    {
+      "id": "landing-blurb",
+      "register": "marketing",
+      "text": "**Fewer no-shows. Fuller chairs.**\n\nYour patients get a text reminder and can confirm or reschedule by simply replying. Your front desk spends less time on the phone, and your schedule stays full."
+    },
+    {
+      "id": "linkedin-hire",
+      "register": "marketing",
+      "text": "We just hired our first data engineer, and it's a milestone for a 12-person logistics team.\n\nLate deliveries cost our customers time and trust, and until now we've tracked them mostly after the fact. Our new data engineer will build the pipeline that predicts which deliveries are at risk of running late, so we can act before a shipment misses its window.\n\nIf you've worked on data pipelines, forecasting, or operational analytics in logistics, we'd love to hear from you. Welcome to the team.\n\n#Logistics #DataEngineering #Hiring #Startup"
+    }
+  ]
+}

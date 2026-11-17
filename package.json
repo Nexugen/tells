@@ -1,0 +1,76 @@
+{
+  "name": "tells",
+  "version": "0.1.0",
+  "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rule-based linter, CLI, CI check, and an optional model-backed rewrite.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "tells": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./rules.json": "./dist/rules.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "DATA-LICENSES.md"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node dist/cli.js rules --json > dist/rules.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "lint:self": "node --experimental-strip-types src/cli.ts lint README.md DATA-LICENSES.md deploy/README.md --register technical --ci --fail-on warning",
+    "serve": "node dist/server/index.js",
+    "bench": "node --experimental-strip-types bench/run.ts",
+    "prepublishOnly": "npm run build && npm test && npm run lint:self"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "writing",
+    "lint",
+    "linter",
+    "prose",
+    "style",
+    "agent",
+    "slop",
+    "em-dash",
+    "cli"
+  ],
+  "homepage": "https://github.com/Nexugen/tells#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nexugen/tells.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nexugen/tells/issues"
+  },
+  "author": "Nexugen (https://nexugen.app)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=1.10.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^1.10.0",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

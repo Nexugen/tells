@@ -1,0 +1,69 @@
+{
+  "name": "claude-code-sonnet+tells",
+  "via": "claude-cli",
+  "model": "claude-cli:sonnet rewritten by claude-cli:haiku",
+  "createdAt": "2026-11-17T23:37:53.731Z",
+  "costUsd": 0.00659449,
+  "items": [
+    {
+      "id": "slack-delay",
+      "register": "casual",
+      "text": "Heads up, team: the release is moving from Thursday to Monday. The payment provider's sandbox has been down since Tuesday, so we can't finish end-to-end payment testing. I'll post an update as soon as it's back, and if it stays down we'll reassess the Monday date."
+    },
+    {
+      "id": "forum-cors",
+      "register": "casual",
+      "text": "This usually means your production setup differs from dev. Locally, you may have a proxy (like CRA's `proxy` or Vite's `server.proxy`) hiding the cross-origin request. In production, the browser sees a different origin (different port counts), so the Express server must send CORS headers.\n\nQuick fix:\n\n```js\nconst cors = require('cors');\napp.use(cors({\n  origin: 'https://your-frontend-domain.com', // exact origin, with port if non-standard\n  credentials: true // only if you use cookies\n}));\n```\n\nPut it before your routes. Check that:\n- The origin matches exactly (scheme, host, port, no trailing slash).\n- Preflight `OPTIONS` requests aren't blocked by auth middleware or a reverse proxy like Nginx.\n- Your API URL isn't still pointing at `localhost`.\n\nAlternatively, serve both behind one domain with a reverse proxy to avoid CORS entirely."
+    },
+    {
+      "id": "friend-recommend",
+      "register": "casual",
+      "text": "Plain markdown files in a git repo, synced with a cron job. No app, no account. I just edit in whatever text editor I'm already using, and the cron job commits and pushes every few minutes. Everything's searchable with grep and I've got full history for free. Not fancy, but it's never broken on me and I can't get locked in. Happy to show you my setup if you want!"
+    },
+    {
+      "id": "support-refund",
+      "register": "professional",
+      "text": "Hi there,\n\nI'm sorry for the trouble. You're right: order 4471 was charged twice. I've refunded the duplicate charge today.\n\nThe refund should appear on your statement within 3 to 5 business days, depending on your bank. You don't need to do anything else.\n\nIf it hasn't shown up after that, reply to this message and we'll look into it right away.\n\nThanks for your patience.\n\nBest regards,\nCustomer Support"
+    },
+    {
+      "id": "email-meeting",
+      "register": "professional",
+      "text": "Subject: Review moved to Friday at 10am\n\nHi [Name],\n\nWe need to move Wednesday's 2pm review to Friday at 10am. The staging environment needs one more day to finish your data import, and we'd rather walk you through it with everything in place.\n\nPlease let me know if Friday at 10am doesn't work and I'll find another time.\n\nThanks for your flexibility.\n\nBest,\n[Your name]"
+    },
+    {
+      "id": "incident-summary",
+      "register": "professional",
+      "text": "On November 3, between 14:05 and 14:47 UTC, roughly 8% of checkout requests failed. The incident lasted 42 minutes. Customers who hit the failures could not complete their purchases during that window. Requests that did not fail were not affected.\n\nThe cause was a configuration change that lowered the database connection pool size from 50 to 5. With so few connections available, checkout requests could not get one when load was high. Some of them timed out or returned errors. The change was deployed without a safeguard that would have flagged the reduction as unsafe.\n\nThe configuration change was rolled back, and checkout success rates returned to normal at 14:47 UTC. To prevent a repeat, we added an automated check that blocks any change setting the connection pool below 20. Any change that lowers the pool below that threshold will now be rejected before it reaches production."
+    },
+    {
+      "id": "pr-description",
+      "register": "technical",
+      "text": "## Replace job status polling with a server-sent events stream\n\n### Summary\n\nThe client currently polls the job status endpoint every 5 seconds. This PR replaces that with a single server-sent events (SSE) connection that pushes status updates as they happen.\n\n### Why\n\nPolling every 5 seconds costs 720 requests per hour for each active user, and most of those requests return no change. With SSE, each active user holds 1 connection instead. This lowers server load and request volume, and status changes reach the UI as soon as they occur instead of up to 5 seconds late.\n\n### What changed\n\n- Added an SSE endpoint that streams job status events to the client.\n- Replaced the 5-second polling loop in the client with an `EventSource` subscription.\n- The client closes the stream when the job reaches a terminal state or the user leaves the page.\n\n### Compatibility\n\nThe old polling endpoint stays in place for one release so that cached or older clients keep working. It will be removed in the following release. It is not called by the updated client.\n\n### Testing\n\n- Verified that status updates arrive over the stream without polling.\n- Verified that the connection closes cleanly on job completion and on navigation away.\n- Verified that the old endpoint still responds as before.\n\n### Follow-up\n\n- Remove the legacy polling endpoint after one release."
+    },
+    {
+      "id": "docs-cache",
+      "register": "technical",
+      "text": "By default, the client caches responses to GET requests for 60 seconds. Repeated GET requests to the same resource within that window return the stored response instead of making another network call, which reduces latency and load on the server. To change how long responses are cached, set the `cacheTtl` option to the number of seconds you want when you create the client or make a request. For example, `cacheTtl: 300` caches responses for five minutes, and `cacheTtl: 0` disables caching. POST requests are never cached, regardless of the `cacheTtl` setting. Each POST request is always sent to the server, because POST requests typically change state and their responses should not be reused."
+    },
+    {
+      "id": "changelog",
+      "register": "technical",
+      "text": "## 2.4.0 - 2026-11-18\n\n### Added\n- CSV export on the reports page.\n\n### Fixed\n- Timezone offsets in weekly summaries.\n\n### Removed\n- **Breaking:** Dropped support for Node 18. Node 20 or later is now required."
+    },
+    {
+      "id": "launch-post",
+      "register": "marketing",
+      "text": "Receipts, sorted.\n\nOur bookkeeping app now reads receipts straight from a photo and fills in the vendor, date and amount for you. No more typing numbers by hand.\n\nThe app keeps working when you have no signal at all. It works fully offline and syncs when you're back online.\n\nTake a photo, save it, and you're finished.\n\nUpdate now and try it on your next receipt."
+    },
+    {
+      "id": "landing-blurb",
+      "register": "marketing",
+      "text": "**Fewer no-shows, fuller chairs.**\n\nSend patients automatic SMS reminders before every appointment, and let them confirm or reschedule just by replying. Your front desk spends less time on the phone, and your schedule stays full."
+    },
+    {
+      "id": "linkedin-hire",
+      "register": "marketing",
+      "text": "We've hired our first data engineer.\n\nAt 12 people, every hire changes how we work, and this one changes what we can promise our customers.\n\nPlease welcome [Name] to the team. [Name] will build the pipeline that predicts late deliveries before they happen.\n\nRight now, we find out a shipment is running behind when someone calls to ask where it is. Soon, we'll see the warning signs early enough to reroute, reset expectations, or fix the problem before anyone has to ask.\n\nWe're a small team solving a big, messy problem, and we're excited to have [Name] building the foundation.\n\nWelcome aboard, [Name]!"
+    }
+  ]
+}

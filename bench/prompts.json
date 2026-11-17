@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "note": "Everyday writing tasks an agent gets asked to do. Each prompt gives the facts, so a good answer has no reason to invent filler.",
+  "prompts": [
+    { "id": "slack-delay", "register": "casual", "prompt": "Write a short Slack message to your team saying the release moves from Thursday to Monday because the payment provider's sandbox has been down since Tuesday. Two to four sentences." },
+    { "id": "forum-cors", "register": "casual", "prompt": "Someone on a forum says their React app gets a CORS error calling their own Express API on another port, only in production. Write a reply that helps. Under 120 words." },
+    { "id": "friend-recommend", "register": "casual", "prompt": "A friend asks which note-taking app you use. You use plain markdown files in a git repo, synced with a cron job. Write your reply as a text message." },
+    { "id": "support-refund", "register": "professional", "prompt": "Write a support reply to a customer who was charged twice for one order (order 4471). The duplicate charge has been refunded today and should show in 3 to 5 business days. Under 100 words." },
+    { "id": "email-meeting", "register": "professional", "prompt": "Write an email to a client moving Wednesday's 2pm review to Friday at 10am, because the staging environment needs one more day for their data import. Short." },
+    { "id": "incident-summary", "register": "professional", "prompt": "Write a three-paragraph incident summary: on Nov 3 between 14:05 and 14:47 UTC, about 8% of checkout requests failed because a config change lowered the database connection pool from 50 to 5. It was rolled back. A check now blocks pool changes below 20." },
+    { "id": "pr-description", "register": "technical", "prompt": "Write a pull request description for a change that replaces polling every 5 seconds with a server-sent events stream for job status, cutting requests per active user from 720 an hour to 1 connection. Mention that the old endpoint stays for one release." },
+    { "id": "docs-cache", "register": "technical", "prompt": "Write a docs paragraph explaining that the client caches GET responses for 60 seconds by default, how to change it with the cacheTtl option, and that POST requests are never cached." },
+    { "id": "changelog", "register": "technical", "prompt": "Write a changelog entry for version 2.4.0: adds CSV export on the reports page, fixes timezone offsets in weekly summaries, drops Node 18 support." },
+    { "id": "launch-post", "register": "marketing", "prompt": "Write a short launch post for social media: a bookkeeping app now reads receipts from photos and fills in the vendor, date and amount. It works offline and syncs later. Under 80 words." },
+    { "id": "landing-blurb", "register": "marketing", "prompt": "Write the hero text (a headline and two sentences) for a website of a scheduling tool for dental clinics that sends patients SMS reminders and lets them confirm or reschedule by replying." },
+    { "id": "linkedin-hire", "register": "marketing", "prompt": "Write a LinkedIn post announcing that a 12-person logistics startup has hired its first data engineer, who will build the pipeline that predicts late deliveries. Under 120 words." }
+  ]
+}
