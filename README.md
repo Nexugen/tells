@@ -10,11 +10,11 @@ You can try it in a browser at [tells.nexugen.app](https://tells.nexugen.app).
 
 ## Try it
 
-Install it with `npm i tells`, or run it straight from npm with `npx`:
+The package is `@nexugen/tells` on npm and the command it installs is `tells`. Install it with `npm i @nexugen/tells` and run `npx tells`, or try it without installing:
 
 ```sh
-npx tells lint draft.md
-echo "Great question! It's not a tool — it's a movement. Our seamless platform empowers teams to unlock their full potential." | npx tells lint
+npx @nexugen/tells lint draft.md
+echo "Great question! It's not a tool — it's a movement. Our seamless platform empowers teams to unlock their full potential." | npx @nexugen/tells lint
 ```
 
 ```text
@@ -134,6 +134,8 @@ Severity changes with the register you pick: `casual`, `professional` (the defau
 
 ## Use it in CI
 
+Add it to the project with `npm i -D @nexugen/tells`, then:
+
 ```sh
 npx tells lint docs/ --ci                    # fail on any error
 npx tells lint docs/ --ci --fail-on warning  # stricter
@@ -154,7 +156,7 @@ To skip a line, put `tells-ignore` on it. To skip a block, wrap it in `<!-- tell
 ## Use it in an agent
 
 ```ts
-import { lint, rewrite } from 'tells';
+import { lint, rewrite } from '@nexugen/tells';
 
 const draft = await agent.write(task);
 const result = lint(draft, { register: 'casual' });
@@ -186,7 +188,7 @@ npx tells rewrite draft.md --backend cli
 Any other model works if you pass something with a `complete` method:
 
 ```ts
-import { rewrite, fromFunction } from 'tells';
+import { rewrite, fromFunction } from '@nexugen/tells';
 
 const model = fromFunction('my-model', async ({ system, prompt, maxTokens }) => {
   return callMyModel(system, prompt, maxTokens); // return the reply text

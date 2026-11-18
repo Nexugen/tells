@@ -109,17 +109,18 @@ footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
 </div>
 
 <h2>Install</h2>
-<pre><code>npm i tells</code></pre>
-<p>Or run it without installing:</p>
-<pre><code>npx tells lint draft.md
-npx tells lint docs/ --ci --fail-on warning
+<pre><code>npm i @nexugen/tells</code></pre>
+<p>The command it installs is <code>tells</code>. To try it without installing:</p>
+<pre><code>npx @nexugen/tells lint draft.md</code></pre>
+<p>In a project that has it:</p>
+<pre><code>npx tells lint docs/ --ci --fail-on warning
 npx tells rewrite draft.md --write</code></pre>
 <p>In code:</p>
-<pre><code>import { lint, rewrite } from 'tells';
+<pre><code>import { lint, rewrite } from '@nexugen/tells';
 const result = lint(draft, { register: 'casual' });
 console.log(result.findings, result.human.missing);</code></pre>
 <p>In CI, inline on the pull request:</p>
-<pre><code>- run: npx tells lint docs/ --format github --ci</code></pre>
+<pre><code>- run: npx @nexugen/tells lint docs/ --format github --ci</code></pre>
 
 <h2>Two sides</h2>
 <p>The linter has two halves. <span class="t-txt">Tells</span> are habits to remove: dashes, contrast frames, closing slogans, stock openers, generic examples, a summary line at the end of every paragraph. <span class="h-txt">Human signals</span> are patterns people use far more than models: specific numbers, names and dates, first-hand detail, asides, an opinion with something at stake, uneven rhythm.</p>

@@ -1,5 +1,5 @@
 {
-  "name": "tells",
+  "name": "@nexugen/tells",
   "version": "0.3.0",
   "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rule-based linter, CLI, CI check, and an optional model-backed rewrite.",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "tells": "./dist/cli.js"
+    "tells": "dist/cli.js"
   },
   "exports": {
     ".": {
