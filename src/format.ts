@@ -12,8 +12,17 @@ export function formatText(file: string, text: string, result: LintResult, opts:
     lines.push(`    ${c('2', JSON.stringify(match.replace(/\s+/g, ' ')))}`);
     lines.push(`    ${f.fix}`);
   }
-  const summary = `${file}: ${result.words} words, slop score ${result.score} (${result.grade}), ${result.counts.error} errors, ${result.counts.warning} warnings, ${result.counts.info} info`;
+  const summary = `${file}: ${result.words} words, ${result.score} known tells per 100 words (${result.grade}), ${result.counts.error} errors, ${result.counts.warning} warnings, ${result.counts.info} info`;
   lines.push(result.findings.length ? summary : `${file}: clean, ${result.words} words`);
+  const h = result.human;
+  if (h) {
+    const present = h.present.map((p) => `${p.name} (${p.count})`).join(', ');
+    lines.push(`  ${c('32', 'human signals')}  ${present || 'none found'}${h.present.length ? `, signal score ${h.signalScore}/100` : ''}`);
+    for (const m of h.missing) {
+      lines.push(`  ${c('35', 'missing')}  ${m.name}. ${m.message}`);
+      lines.push(`    ${m.add}`);
+    }
+  }
   void text;
   return lines.join('\n');
 }

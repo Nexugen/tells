@@ -3,7 +3,9 @@ import { fileURLToPath } from 'node:url';
 import { lint } from '../lint.ts';
 import { rewrite } from '../rewrite.ts';
 import { rulesAsJson } from '../serialize.ts';
-import { anthropic, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
+import { readFileSync } from 'node:fs';
+import { anthropic, claudeCli, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
+import { landingPage } from './page.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
 
@@ -23,12 +25,22 @@ export interface ServerConfig {
   trustProxy: boolean;
   rewriteOff: boolean;
   model: string;
+  /** 'anthropic' (API key) or 'cli' (the claude CLI and its login). */
+  backend: 'anthropic' | 'cli';
+  cliConfigDir?: string;
+  /** Model calls per UTC day for the whole server. */
+  dailyCalls: number;
+  /** Rewrites per address per day without a key, for the try-it box. */
+  anonRewritesPerIp: number;
+  /** Optional JSON file shaped like {"claude":{"pct":N}}; rewrite pauses at or above usageMaxPct. */
+  usageFile?: string;
+  usageMaxPct: number;
 }
 
 export function configFromEnv(env = process.env): ServerConfig {
   const num = (k: string, d: number) => (env[k] !== undefined && env[k] !== '' ? Number(env[k]) : d);
   return {
-    port: num('TELLS_PORT', 3791),
+    port: num('TELLS_PORT', 3891),
     host: env.TELLS_HOST ?? '127.0.0.1',
     dataDir: env.TELLS_DATA_DIR ?? env.STATE_DIRECTORY ?? '.tells-api-data',
     keyDailyRewrites: num('TELLS_KEY_DAILY_REWRITES', 25),
@@ -39,7 +51,13 @@ export function configFromEnv(env = process.env): ServerConfig {
     lintPerIpPerMinute: num('TELLS_LINT_PER_IP_PER_MINUTE', 120),
     trustProxy: env.TELLS_TRUST_PROXY === '1',
     rewriteOff: env.TELLS_REWRITE_OFF === '1',
-    model: env.TELLS_MODEL ?? DEFAULT_ANTHROPIC_MODEL,
+    backend: env.TELLS_MODEL_BACKEND === 'cli' ? 'cli' : 'anthropic',
+    model: env.TELLS_MODEL ?? (env.TELLS_MODEL_BACKEND === 'cli' ? 'haiku' : DEFAULT_ANTHROPIC_MODEL),
+    cliConfigDir: env.TELLS_CLI_CONFIG_DIR || undefined,
+    dailyCalls: num('TELLS_DAILY_CALLS', 300),
+    anonRewritesPerIp: num('TELLS_ANON_REWRITES_PER_IP', 3),
+    usageFile: env.TELLS_USAGE_FILE || undefined,
+    usageMaxPct: num('TELLS_USAGE_MAX_PCT', 85),
   };
 }
 
@@ -55,7 +73,8 @@ class HttpError extends Error {
 
 /** Worst-case cost of one rewrite, used to reserve budget before calling the model. */
 export function estimateCostUsd(chars: number, model: string): number {
-  const price = ANTHROPIC_PRICES[model] ?? ANTHROPIC_PRICES['claude-opus-5-5'];
+  const alias: Record<string, string> = { haiku: 'claude-haiku-5-5', sonnet: 'claude-sonnet-5-5', opus: 'claude-opus-5-5' };
+  const price = ANTHROPIC_PRICES[alias[model] ?? model] ?? ANTHROPIC_PRICES['claude-opus-5-5'];
   const inputTokens = 2500 + chars / 2; // system prompt and examples, plus generous context
   const outputTokens = Math.min(8000, 600 + chars) + 2000; // the edits, plus thinking
   return (inputTokens * price.input + outputTokens * price.output) / 1e6;
@@ -63,7 +82,19 @@ export function estimateCostUsd(chars: number, model: string): number {
 
 export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Store } = {}): Server {
   const store = deps.store ?? new Store(cfg.dataDir);
-  const model = deps.model ?? anthropic({ model: cfg.model });
+  const model = deps.model ?? (cfg.backend === 'cli' ? claudeCli({ model: cfg.model, configDir: cfg.cliConfigDir }) : anthropic({ model: cfg.model }));
+  const page = landingPage({ rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites });
+
+  /** True when the shared model account is busy enough that rewrites should wait. */
+  const accountBusy = () => {
+    if (!cfg.usageFile) return false;
+    try {
+      const pct = Number((JSON.parse(readFileSync(cfg.usageFile, 'utf8')) as { claude?: { pct?: unknown } }).claude?.pct);
+      return !Number.isFinite(pct) || pct >= cfg.usageMaxPct;
+    } catch {
+      return true; // cannot tell, so do not risk it
+    }
+  };
   const lintHits = new Map<string, { at: number; n: number }>();
 
   const clientIp = (req: IncomingMessage) => {
@@ -122,11 +153,11 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   };
 
   const routes: Record<string, (req: IncomingMessage) => Promise<unknown>> = {
-    'GET /': async () => ({
+    'GET /v1': async () => ({
       name: 'tells',
-      about: 'Finds the habits that make text read as AI-written. Lint is free with no key; rewrite needs a free key.',
+      about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['POST /v1/lint', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', 'POST /v1/lint', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),
     'GET /v1/rules': async () => rulesAsJson(),
@@ -150,31 +181,38 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     },
     'POST /v1/rewrite': async (req) => {
       if (cfg.rewriteOff) throw new HttpError(503, 'rewrite_off', 'Free rewrites are switched off right now. Lint still works.');
-      const key = keyFrom(req);
-      if (store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
+      const ip = clientIp(req);
+      const key = req.headers.authorization ? keyFrom(req) : undefined;
+      if (key && store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
+      if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `That was the last free try for today. POST /v1/keys for a free key with ${cfg.keyDailyRewrites} rewrites a day.`);
       const data = await body(req, cfg.rewriteMaxChars);
       const text = textFrom(data, cfg.rewriteMaxChars);
       const register = registerFrom(data);
       const minSeverity = ['error', 'warning', 'info'].includes(String(data.minSeverity)) ? (data.minSeverity as Severity) : undefined;
 
       const before = lint(text, { register });
-      if (before.findings.length === 0) return { text, changes: [], before, after: before, model: null, costUsd: 0 };
+      if (before.findings.length === 0 && before.human.missing.length === 0) return { text, changes: [], suggestions: [], before, after: before, model: null, costUsd: 0 };
 
+      if (accountBusy()) throw new HttpError(503, 'busy', 'Rewrite is busy, try later. Lint still works.');
+      if (store.callsToday() + 2 > cfg.dailyCalls) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
       const estimate = estimateCostUsd(text.length, cfg.model) * 2; // two calls at most
       const { spendUsd, reservedUsd } = store.spendToday();
-      if (spendUsd + reservedUsd + estimate > cfg.dailySpendUsd) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works, and you can run rewrite yourself with your own key.');
+      if (spendUsd + reservedUsd + estimate > cfg.dailySpendUsd) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
       store.reserve(estimate);
       let settled = false;
       try {
         const res = await rewrite(text, { register, minSeverity, model });
-        store.settle(estimate, res.costUsd || estimate, key);
+        store.settle(estimate, res.costUsd || estimate, { key, ip: key ? undefined : ip, calls: res.calls });
         settled = true;
-        return { text: res.text, changes: res.changes, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6 };
+        return { text: res.text, changes: res.changes, suggestions: res.suggestions, rejected: res.rejected.length, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6 };
       } catch (err) {
-        if (err instanceof ModelError) throw new HttpError(502, 'model_error', 'The rewrite model failed. Try again shortly.');
+        if (err instanceof ModelError) {
+          process.stderr.write(`tells-api: model error: ${err.message.slice(0, 200)}\n`);
+          throw new HttpError(502, 'model_error', 'The rewrite model failed. Try again shortly.');
+        }
         throw err;
       } finally {
-        if (!settled) store.settle(estimate, 0);
+        if (!settled) store.settle(estimate, 0, { calls: 1 });
       }
     },
   };
@@ -195,6 +233,15 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   return createServer(async (req, res) => {
     const path = (req.url ?? '/').split('?')[0];
     if (req.method === 'OPTIONS') return send(res, 204, null);
+    if (req.method === 'GET' && path === '/') {
+      res.writeHead(200, {
+        'content-type': 'text/html; charset=utf-8',
+        'cache-control': 'public, max-age=300',
+        'x-content-type-options': 'nosniff',
+        'content-security-policy': "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      });
+      return void res.end(page);
+    }
     const route = routes[`${req.method} ${path}`];
     try {
       if (!route) throw new HttpError(404, 'not_found', 'No such endpoint. GET / lists them.');
@@ -212,7 +259,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const store = new Store(cfg.dataDir);
   const server = createApp(cfg, { store });
   server.listen(cfg.port, cfg.host, () => {
-    process.stdout.write(`tells-api listening on http://${cfg.host}:${cfg.port} (rewrite ${cfg.rewriteOff ? 'off' : `on, ${cfg.model}, $${cfg.dailySpendUsd}/day cap`})\n`);
+    process.stdout.write(`tells-api listening on http://${cfg.host}:${cfg.port} (rewrite ${cfg.rewriteOff ? 'off' : `on, ${cfg.backend}:${cfg.model}, ${cfg.dailyCalls} calls a day`})\n`);
   });
   const stop = () => {
     store.flush();

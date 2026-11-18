@@ -1,0 +1,129 @@
+{
+  "name": "claude-code-opus+tells",
+  "via": "claude-cli",
+  "model": "claude-cli:opus, rewritten by claude-cli:haiku",
+  "createdAt": "2026-11-18T00:24:16.540Z",
+  "costUsd": 0.01115966,
+  "items": [
+    {
+      "id": "slack-delay",
+      "register": "casual",
+      "text": "Heads up, team: we're moving the release from Thursday to Monday. The payment provider's sandbox has been down since Tuesday, so we can't finish testing the checkout flow. We'll keep an eye on their status page and share an update once it's back up. Sorry this is taking so long."
+    },
+    {
+      "id": "forum-cors",
+      "register": "casual",
+      "text": "In development, your React dev server probably proxies API requests (CRA's `\"proxy\"` or Vite's `server.proxy`), so the browser never makes a cross-origin call. That proxy is gone in production, so the browser enforces CORS.\n\nFix it on the Express side:\n\n```js\nconst cors = require('cors');\napp.use(cors({\n  origin: 'https://your-frontend-domain.com',\n  credentials: true // only if you send cookies/auth\n}));\n```\n\nRegister it **before** your routes so preflight `OPTIONS` requests are handled.\n\nAlso check:\n- The origin matches exactly (protocol, subdomain, port, no trailing slash).\n- A reverse proxy (Nginx, Cloudflare) isn't stripping headers or blocking `OPTIONS`.\n- The request isn't actually failing (500 or 404). Error responses often lack CORS headers and get misreported as CORS errors."
+    },
+    {
+      "id": "friend-recommend",
+      "register": "casual",
+      "text": "Honestly none lol. I just keep plain markdown files in a git repo and have a cron job that commits and pushes them every so often. Works on anything, no subscriptions, and I'll never lose my notes to some app shutting down 😅"
+    },
+    {
+      "id": "support-refund",
+      "register": "professional",
+      "text": "Hi there,\n\nSorry about the trouble with order 4471. You're right: you were charged twice for this order. We've refunded the duplicate charge today. Depending on your bank, it should appear on your statement within 3 to 5 business days.\n\nYour original order isn't affected and will go ahead as normal. If the refund hasn't appeared after 5 business days, please reply to this email and we'll look into it right away.\n\nBest regards,\nCustomer Support Team"
+    },
+    {
+      "id": "email-meeting",
+      "register": "professional",
+      "text": "Subject: Rescheduling Wednesday's Review to Friday at 10am\n\nHi there,\n\nWe need to move Wednesday's 2pm review to Friday at 10am. The staging environment needs one more day to finish your data import, and we'd like you to see it fully loaded.\n\nPlease let me know if Friday at 10am works for you. If not, I'm happy to find another time.\n\nBest,"
+    },
+    {
+      "id": "incident-summary",
+      "register": "professional",
+      "text": "On November 3, between 14:05 and 14:47 UTC, approximately 8% of checkout requests failed. For roughly 42 minutes, affected customers could not complete purchases and received errors during checkout. Requests that did not fail were processed normally.\n\nThe cause was a configuration change that reduced the database connection pool size for the checkout service from 50 to 5. With far fewer connections available, requests had to wait for a free connection, and those that could not get one in time failed. It hit harder as traffic rose, so some requests failed while others got through.\n\nThe configuration change was rolled back, restoring the pool size to 50, and checkout error rates returned to normal. To prevent a recurrence, we added an automated check that blocks any connection pool configuration change that would set the size below 20. We're going to keep looking at how we make config changes, so similar risks get caught before they reach production."
+    },
+    {
+      "id": "pr-description",
+      "register": "technical",
+      "text": "## Replace job status polling with server-sent events\n\n### Summary\n\nThe client used to poll the job status endpoint every 5 seconds. This change replaces that with a server-sent events (SSE) stream. The server now pushes status updates as they happen, and the client keeps one long-lived connection.\n\n### Motivation\n\nPolling every 5 seconds produces 720 requests per hour for each active user, whether or not anything changed. Most of those responses are identical to the one before. The load grows linearly with active users, and the client can be up to 5 seconds behind the actual state.\n\nWith SSE, each active user holds **1 connection** instead of making **720 requests/hour**. Updates arrive as soon as the job state changes.\n\n### Changes\n\n- **Server:** Added an SSE endpoint that streams job status events. It emits an event on each state transition and sends periodic heartbeats so idle connections stay open through proxies and load balancers.\n- **Client:** Replaced the 5-second polling loop with an `EventSource` subscription. On disconnect, the client reconnects with backoff and resumes from the last received event.\n- **Cleanup:** Removed the polling timer and its associated retry logic from the client.\n\n### Backward compatibility\n\nThe old polling endpoint **stays for one release** so that clients that haven't updated yet keep working. It will be removed in the following release. Usage of the old endpoint is logged so we can confirm traffic has dropped off before removal.\n\n### Testing\n\n- Verified that status transitions (queued → running → completed / failed) are delivered over the stream in order.\n- Verified reconnection after a dropped connection, including resuming without missing events.\n- Verified that heartbeats keep connections alive past the proxy idle timeout.\n- Confirmed the old polling endpoint still returns correct results.\n\n### Rollout notes\n\n- Watch open connection counts and memory per connection on the API servers after deploy.\n- Make sure any proxies in front of the service don't buffer responses for the SSE route."
+    },
+    {
+      "id": "docs-cache",
+      "register": "technical",
+      "text": "By default, the client caches responses to GET requests for 60 seconds, so repeated requests to the same URL within that window are served from the cache instead of hitting the network. To change this duration, set the `cacheTtl` option (in seconds) when creating the client. For example, `cacheTtl: 300` keeps responses for five minutes, and `cacheTtl: 0` turns caching off. Caching applies only to GET requests. POST requests are never cached, regardless of the `cacheTtl` setting, so every POST is always sent to the server."
+    },
+    {
+      "id": "changelog",
+      "register": "technical",
+      "text": "## [2.4.0] - 2026-11-18\n\n### Added\n- CSV export on the reports page.\n\n### Fixed\n- Incorrect timezone offsets in weekly summaries.\n\n### Removed\n- **Breaking:** Dropped support for Node 18."
+    },
+    {
+      "id": "launch-post",
+      "register": "marketing",
+      "text": "Snap it. Done.\n\nOur bookkeeping app reads your receipts straight from a photo and fills in the vendor, date and amount. You won't have to squint at faded ink or type numbers by hand.\n\nYou don't need a signal to use it. It works fully offline and syncs everything once you're back online.\n\nYou'll spend less time typing things in.\n\nYou can test it on your next receipt."
+    },
+    {
+      "id": "landing-blurb",
+      "register": "marketing",
+      "text": "**Fewer empty chairs.**\n\nYour patients get a friendly text before every appointment and can confirm or reschedule with a single reply. Your front desk spends less time dialing. That leaves more time for the people in the chair."
+    },
+    {
+      "id": "linkedin-hire",
+      "register": "marketing",
+      "text": "Big news from our team of 12: we just hired our first data engineer.\n\nLate deliveries are the most frustrating part of logistics, for our customers and for us. Until now we've mostly reacted to delays after they happened. That's about to change.\n\nOur new data engineer will build a pipeline that pulls in carrier data, routes, weather and past performance, so we can spot late deliveries before they happen. That gives us time to reroute, re-plan, and give customers a heads-up early.\n\nAt our size, this hire is a big bet on being proactive rather than reactive. We couldn't be more excited.\n\nPlease join us in giving them a warm welcome."
+    },
+    {
+      "id": "slack-standup",
+      "register": "casual",
+      "text": "**Yesterday:** Finished the invoice PDF export ✅\n**Today:** Digging into the flaky login test 🔍\n**Blockers:** Waiting on staging access. Could someone with admin rights grant it? 🙏"
+    },
+    {
+      "id": "forum-git",
+      "register": "casual",
+      "text": "Assume the password is already compromised. Bots scrape public GitHub for secrets within minutes, so act now:\n\n1. **Rotate the password immediately.** Change it on the database and update your app's config. This is the step that actually matters.\n2. **Check for unauthorized access.** Review your database logs for unfamiliar IPs or queries since the commit.\n3. **Rotate anything else in that .env**: API keys, tokens, secrets.\n4. **Remove it from history** with `git filter-repo` or BFG, then force-push. Deleting the file in a new commit isn't enough, and forks or caches may still have it.\n5. **Prevent repeats.** Add `.env` to `.gitignore` and consider enabling GitHub secret scanning or a pre-commit hook.\n\nDon't stop at step 4. Rotation is the real fix."
+    },
+    {
+      "id": "group-chat",
+      "register": "casual",
+      "text": "Hey all! Bad news, my car's in the shop until Monday so I don't have a way to get to Saturday's hike 😩 Any chance someone has room to give me a ride? Happy to chip in for gas! If not, no worries, I'll catch the next one."
+    },
+    {
+      "id": "email-quote",
+      "register": "professional",
+      "text": "Subject: Quote for Your Salon Booking Website\n\nHi there,\n\nGood talking with you about your salon. Here's the quote for your new booking website:\n\n- **Project:** A custom booking website for your salon\n- **Timeline:** 4 weeks\n- **Total:** $6,500\n- **Payment:** 50% ($3,250) upfront to start, and the other 50% when the work is done\n\nWhen would you like to get started? Once I hear back, I'll send over the agreement and first invoice so we can lock in your start date.\n\nBest regards,\n[Your Name]"
+    },
+    {
+      "id": "email-decline",
+      "register": "professional",
+      "text": "Subject: Re: CRM Proposal\n\nHello [Vendor Contact Name],\n\nThank you for the time and effort you and your team put into the CRM proposal and the demonstration. The walkthrough of the platform's features was clear, and we could see how it would fit our sales and customer service work.\n\nWe've decided not to go ahead for now. We plan to stay with our current system through the remainder of this budget cycle, and we won't be considering new software investments until our budget review next year.\n\nIt comes down to timing and budget. Your solution isn't the problem. We were impressed with what you presented, and we'd welcome the chance to revisit the conversation when we begin evaluating options ahead of next year's review. If it's alright with you, we'll keep your proposal on file and reach out then.\n\nThanks for understanding, and for all the thought you put into this. We look forward to staying in touch.\n\nBest regards,\n\n[Your Name]\n[Your Title] at [Company Name]\n[Phone Number]"
+    },
+    {
+      "id": "support-bug",
+      "register": "professional",
+      "text": "Hi there,\n\nThanks for reporting this. Sorry for the trouble. CSV exports are currently dropping the final row. This is a known bug, and our team has a fix scheduled to ship this Thursday.\n\nUntil then, exporting to XLSX works correctly and includes every row. You'll find it in the same export menu.\n\nOnce the fix is live, CSV exports will work as expected without any action needed on your end. Let us know if anything else comes up.\n\nBest regards,\nSupport Team"
+    },
+    {
+      "id": "readme-intro",
+      "register": "technical",
+      "text": "**sqlite2parquet** is a small command-line tool that converts a SQLite database into a set of Apache Parquet files, writing one file per table. Point it at a `.db` file and it reads each table's schema, maps SQLite's types to their Parquet equivalents, and streams the rows out to a matching `<table>.parquet` file in the output directory of your choice. Compression is optional: pass `--zstd` to compress the output with Zstandard, which produces much smaller files while staying fast to read. The tool is useful when data that lives in SQLite needs to move into analytics engines such as DuckDB, Polars, Spark, or pandas."
+    },
+    {
+      "id": "code-review",
+      "register": "technical",
+      "text": "**Blocking: catch-all returns 200 and hides payment failures**\n\n```python\ntry:\n    process_payment_event(event)\nexcept Exception as e:\n    logger.error(f\"Webhook error: {e}\")\nreturn Response(status=200)\n```\n\nThis handler acknowledges every webhook with a 200, even when processing fails. The payment provider takes a 200 to mean \"delivered and handled,\" so it won't retry. Any transient failure becomes permanent data loss:\n\n- A DB timeout while marking an order paid leaves the customer charged with no fulfilled order.\n- A deadlock while recording a refund means our ledger never reflects it.\n- A downstream outage during subscription renewal leaves the account in the wrong state.\n\nWe'd only notice through a customer complaint or a reconciliation mismatch, and the single `logger.error` line is easy to miss. It also drops the stack trace.\n\n**Suggestion:** Let unexpected failures return a 5xx so the provider's retry mechanism (with backoff) recovers transient errors for us. Keep a 2xx/4xx only for cases where retrying can't help:\n\n```python\ntry:\n    event = verify_and_parse(request)  # signature check\nexcept InvalidSignature:\n    return Response(status=400)  # don't retry forged/malformed requests\n\nif event.type not in HANDLED_EVENT_TYPES:\n    return Response(status=200)  # acknowledge events we intentionally ignore\n\ntry:\n    process_payment_event(event)\nexcept Exception:\n    logger.exception(\"Failed to process webhook event %s\", event.id)\n    return Response(status=500)  # provider will retry\n\nreturn Response(status=200)\n```\n\n**Things to check alongside this change:**\n\n1. **Idempotency.** Retries mean the same event can arrive more than once, including after partial success. Please make sure `process_payment_event` deduplicates on `event.id` (e.g., a processed-events table with a unique constraint, written in the same transaction as the side effects). Otherwise a retry could double-credit or double-fulfill.\n2. **Permanent vs. transient errors.** If an event is malformed in a way that will never succeed (e.g., it references an unknown customer), returning 500 forever just burns retries. Consider catching a specific `NonRetryableError`, logging or alerting on it, and returning 200. Let everything else fall through to 500.\n3. **Timeouts.** Most providers treat a slow response as a failure. If processing can be slow, consider persisting the event and acknowledging quickly, then processing async from a queue with its own retry logic.\n4. **Alerting.** With `logger.exception`, we get the full traceback. It would also be worth adding a metric or alert on webhook 5xx rate so repeated failures surface before the provider's retry window runs out and it disables the endpoint.\n\nHappy to pair on the idempotency piece if useful. That part needs to land in the same PR as the status code change."
+    },
+    {
+      "id": "migration-note",
+      "register": "technical",
+      "text": "## Migration Note: `timeoutSeconds` → `timeoutMs` (v3)\n\nIn v3, the `timeoutSeconds` config key has been renamed to `timeoutMs`, and its value is now in **milliseconds**.\n\n**What you need to do**\n\n1. Rename `timeoutSeconds` to `timeoutMs` in your configuration.\n2. Multiply the existing value by 1000.\n\n**Before (v2):**\n```json\n{\n  \"timeoutSeconds\": 30\n}\n```\n\n**After (v3):**\n```json\n{\n  \"timeoutMs\": 30000\n}\n```\n\n**If you don't migrate**\n\nv3 ignores `timeoutSeconds` and logs a deprecation warning at startup. The default timeout applies instead of your configured value. Update your config to keep the timeout you intended."
+    },
+    {
+      "id": "newsletter",
+      "register": "marketing",
+      "text": "Here's this month's update. We've been busy turning your feedback into features, and we think you'll love what's new. You can now see your projects in Gantt view, which makes it easy to map out timelines, spot dependencies, and keep every deadline in sight. Recurring tasks are here too, so weekly check-ins, monthly reports, and other routine work can be set once and handled automatically. We also tackled one of your most-requested fixes: large boards now load significantly faster, so you can spend less time waiting and more time getting things done. Here's the detail, plus a few tips to get more out of them."
+    },
+    {
+      "id": "product-desc",
+      "register": "marketing",
+      "text": "Our premium stainless steel water bottle keeps you refreshed all day. Double-wall insulation keeps drinks ice-cold for a full 24 hours, so your water tastes as crisp at sunset as it did at sunrise. With a generous 750 ml capacity and a leak-proof lid, it's ready to toss in your bag for the gym, office, or trail. Durable, stylish, and built for every adventure."
+    },
+    {
+      "id": "event-invite",
+      "register": "marketing",
+      "text": "Is your small business website backed up? If something went wrong tomorrow, could you get it back?\n\nJoin our **free online workshop** on **March 12 at 5pm GMT** and learn how to set up automated backups that run quietly in the background, so you never have to worry about losing your site.\n\n- Choosing the right backup tools\n- Scheduling automatic backups\n- Storing copies safely off-site\n- Restoring your site quickly when you need to\n\nNo tech expertise needed. Just bring your questions.\n\nSave your spot today. Link in bio."
+    }
+  ]
+}

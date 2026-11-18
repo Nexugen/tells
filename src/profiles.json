@@ -1,0 +1,220 @@
+{
+ "version": 1,
+ "builtAt": "2026-11-18",
+ "samples": {
+  "human": {
+   "casual": 10,
+   "professional": 11,
+   "technical": 6,
+   "marketing": 6
+  },
+  "model": {
+   "casual": 9,
+   "professional": 9,
+   "technical": 12,
+   "marketing": 15
+  }
+ },
+ "registers": {
+  "casual": {
+   "specific-number": {
+    "human": 0.4,
+    "model": 0.22
+   },
+   "named-thing": {
+    "human": 1,
+    "model": 1
+   },
+   "time-anchor": {
+    "human": 0.1,
+    "model": 0.67
+   },
+   "first-hand": {
+    "human": 0,
+    "model": 0.11
+   },
+   "stake": {
+    "human": 0.2,
+    "model": 0
+   },
+   "aside": {
+    "human": 0.8,
+    "model": 0.11
+   },
+   "contraction": {
+    "human": 0.5,
+    "model": 0.67
+   },
+   "plain-verb": {
+    "human": 0.7,
+    "model": 0.67
+   },
+   "real-question": {
+    "human": 0,
+    "model": 0.44
+   },
+   "bursty-rhythm": {
+    "human": 0.3,
+    "model": 0.33
+   },
+   "uneven-paragraphs": {
+    "human": 0.3,
+    "model": 0.11
+   },
+   "concrete-first": {
+    "human": 0.5,
+    "model": 0.89
+   }
+  },
+  "professional": {
+   "specific-number": {
+    "human": 0.91,
+    "model": 1
+   },
+   "named-thing": {
+    "human": 1,
+    "model": 1
+   },
+   "time-anchor": {
+    "human": 0.55,
+    "model": 0.67
+   },
+   "first-hand": {
+    "human": 0.27,
+    "model": 0.22
+   },
+   "stake": {
+    "human": 0.09,
+    "model": 0
+   },
+   "aside": {
+    "human": 0.64,
+    "model": 0.11
+   },
+   "contraction": {
+    "human": 0.73,
+    "model": 0.78
+   },
+   "plain-verb": {
+    "human": 0.55,
+    "model": 0.67
+   },
+   "real-question": {
+    "human": 0,
+    "model": 0.22
+   },
+   "bursty-rhythm": {
+    "human": 0.27,
+    "model": 0.67
+   },
+   "uneven-paragraphs": {
+    "human": 0.36,
+    "model": 0.67
+   },
+   "concrete-first": {
+    "human": 0.73,
+    "model": 1
+   }
+  },
+  "technical": {
+   "specific-number": {
+    "human": 0.67,
+    "model": 0.75
+   },
+   "named-thing": {
+    "human": 1,
+    "model": 1
+   },
+   "time-anchor": {
+    "human": 0.33,
+    "model": 0.17
+   },
+   "first-hand": {
+    "human": 0.33,
+    "model": 0
+   },
+   "stake": {
+    "human": 0,
+    "model": 0
+   },
+   "aside": {
+    "human": 0.17,
+    "model": 0.33
+   },
+   "contraction": {
+    "human": 0.67,
+    "model": 0
+   },
+   "plain-verb": {
+    "human": 0.5,
+    "model": 0.92
+   },
+   "real-question": {
+    "human": 0,
+    "model": 0
+   },
+   "bursty-rhythm": {
+    "human": 0,
+    "model": 0.5
+   },
+   "uneven-paragraphs": {
+    "human": 0.67,
+    "model": 0
+   },
+   "concrete-first": {
+    "human": 0.5,
+    "model": 0.83
+   }
+  },
+  "marketing": {
+   "specific-number": {
+    "human": 0.83,
+    "model": 0.6
+   },
+   "named-thing": {
+    "human": 1,
+    "model": 0.47
+   },
+   "time-anchor": {
+    "human": 0,
+    "model": 0.4
+   },
+   "first-hand": {
+    "human": 0.17,
+    "model": 0.2
+   },
+   "stake": {
+    "human": 0,
+    "model": 0
+   },
+   "aside": {
+    "human": 0.83,
+    "model": 0
+   },
+   "contraction": {
+    "human": 0.5,
+    "model": 0.87
+   },
+   "plain-verb": {
+    "human": 1,
+    "model": 0.73
+   },
+   "real-question": {
+    "human": 0.17,
+    "model": 0.07
+   },
+   "bursty-rhythm": {
+    "human": 0,
+    "model": 0.47
+   },
+   "uneven-paragraphs": {
+    "human": 0.33,
+    "model": 0.53
+   },
+   "concrete-first": {
+    "human": 1,
+    "model": 0.73
+   }
+  }
+ }
+}

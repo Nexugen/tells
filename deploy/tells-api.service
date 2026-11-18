@@ -5,18 +5,25 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-DynamicUser=yes
+# Runs as the platform user so rewrite can use the Claude Code login it already has.
+User=nexugen
+Group=nexugen
 StateDirectory=tells-api
+Environment=HOME=/var/lib/tells-api
+ReadWritePaths=/var/nexugen/agent-accounts/claude
 WorkingDirectory=/opt/tells
 EnvironmentFile=/etc/tells-api.env
 ExecStart=/usr/local/bin/node /opt/tells/dist/server/index.js
 Restart=on-failure
 RestartSec=3
-MemoryMax=256M
-CPUQuota=50%
+MemoryMax=1G
+CPUQuota=100%
 NoNewPrivileges=yes
 ProtectSystem=strict
-ProtectHome=yes
+# Every home folder is hidden. If the Claude Code login links into one (here /root/.claude),
+# bind just that folder back; the leading - skips it when it does not exist.
+ProtectHome=tmpfs
+BindPaths=-/root/.claude
 PrivateTmp=yes
 PrivateDevices=yes
 ProtectKernelTunables=yes

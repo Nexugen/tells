@@ -2,17 +2,125 @@
   "version": 1,
   "note": "Everyday writing tasks an agent gets asked to do. Each prompt gives the facts, so a good answer has no reason to invent filler.",
   "prompts": [
-    { "id": "slack-delay", "register": "casual", "prompt": "Write a short Slack message to your team saying the release moves from Thursday to Monday because the payment provider's sandbox has been down since Tuesday. Two to four sentences." },
-    { "id": "forum-cors", "register": "casual", "prompt": "Someone on a forum says their React app gets a CORS error calling their own Express API on another port, only in production. Write a reply that helps. Under 120 words." },
-    { "id": "friend-recommend", "register": "casual", "prompt": "A friend asks which note-taking app you use. You use plain markdown files in a git repo, synced with a cron job. Write your reply as a text message." },
-    { "id": "support-refund", "register": "professional", "prompt": "Write a support reply to a customer who was charged twice for one order (order 4471). The duplicate charge has been refunded today and should show in 3 to 5 business days. Under 100 words." },
-    { "id": "email-meeting", "register": "professional", "prompt": "Write an email to a client moving Wednesday's 2pm review to Friday at 10am, because the staging environment needs one more day for their data import. Short." },
-    { "id": "incident-summary", "register": "professional", "prompt": "Write a three-paragraph incident summary: on Nov 3 between 14:05 and 14:47 UTC, about 8% of checkout requests failed because a config change lowered the database connection pool from 50 to 5. It was rolled back. A check now blocks pool changes below 20." },
-    { "id": "pr-description", "register": "technical", "prompt": "Write a pull request description for a change that replaces polling every 5 seconds with a server-sent events stream for job status, cutting requests per active user from 720 an hour to 1 connection. Mention that the old endpoint stays for one release." },
-    { "id": "docs-cache", "register": "technical", "prompt": "Write a docs paragraph explaining that the client caches GET responses for 60 seconds by default, how to change it with the cacheTtl option, and that POST requests are never cached." },
-    { "id": "changelog", "register": "technical", "prompt": "Write a changelog entry for version 2.4.0: adds CSV export on the reports page, fixes timezone offsets in weekly summaries, drops Node 18 support." },
-    { "id": "launch-post", "register": "marketing", "prompt": "Write a short launch post for social media: a bookkeeping app now reads receipts from photos and fills in the vendor, date and amount. It works offline and syncs later. Under 80 words." },
-    { "id": "landing-blurb", "register": "marketing", "prompt": "Write the hero text (a headline and two sentences) for a website of a scheduling tool for dental clinics that sends patients SMS reminders and lets them confirm or reschedule by replying." },
-    { "id": "linkedin-hire", "register": "marketing", "prompt": "Write a LinkedIn post announcing that a 12-person logistics startup has hired its first data engineer, who will build the pipeline that predicts late deliveries. Under 120 words." }
+    {
+      "id": "slack-delay",
+      "register": "casual",
+      "prompt": "Write a short Slack message to your team saying the release moves from Thursday to Monday because the payment provider's sandbox has been down since Tuesday. Two to four sentences."
+    },
+    {
+      "id": "forum-cors",
+      "register": "casual",
+      "prompt": "Someone on a forum says their React app gets a CORS error calling their own Express API on another port, only in production. Write a reply that helps. Under 120 words."
+    },
+    {
+      "id": "friend-recommend",
+      "register": "casual",
+      "prompt": "A friend asks which note-taking app you use. You use plain markdown files in a git repo, synced with a cron job. Write your reply as a text message."
+    },
+    {
+      "id": "support-refund",
+      "register": "professional",
+      "prompt": "Write a support reply to a customer who was charged twice for one order (order 4471). The duplicate charge has been refunded today and should show in 3 to 5 business days. Under 100 words."
+    },
+    {
+      "id": "email-meeting",
+      "register": "professional",
+      "prompt": "Write an email to a client moving Wednesday's 2pm review to Friday at 10am, because the staging environment needs one more day for their data import. Short."
+    },
+    {
+      "id": "incident-summary",
+      "register": "professional",
+      "prompt": "Write a three-paragraph incident summary: on Nov 3 between 14:05 and 14:47 UTC, about 8% of checkout requests failed because a config change lowered the database connection pool from 50 to 5. It was rolled back. A check now blocks pool changes below 20."
+    },
+    {
+      "id": "pr-description",
+      "register": "technical",
+      "prompt": "Write a pull request description for a change that replaces polling every 5 seconds with a server-sent events stream for job status, cutting requests per active user from 720 an hour to 1 connection. Mention that the old endpoint stays for one release."
+    },
+    {
+      "id": "docs-cache",
+      "register": "technical",
+      "prompt": "Write a docs paragraph explaining that the client caches GET responses for 60 seconds by default, how to change it with the cacheTtl option, and that POST requests are never cached."
+    },
+    {
+      "id": "changelog",
+      "register": "technical",
+      "prompt": "Write a changelog entry for version 2.4.0: adds CSV export on the reports page, fixes timezone offsets in weekly summaries, drops Node 18 support."
+    },
+    {
+      "id": "launch-post",
+      "register": "marketing",
+      "prompt": "Write a short launch post for social media: a bookkeeping app now reads receipts from photos and fills in the vendor, date and amount. It works offline and syncs later. Under 80 words."
+    },
+    {
+      "id": "landing-blurb",
+      "register": "marketing",
+      "prompt": "Write the hero text (a headline and two sentences) for a website of a scheduling tool for dental clinics that sends patients SMS reminders and lets them confirm or reschedule by replying."
+    },
+    {
+      "id": "linkedin-hire",
+      "register": "marketing",
+      "prompt": "Write a LinkedIn post announcing that a 12-person logistics startup has hired its first data engineer, who will build the pipeline that predicts late deliveries. Under 120 words."
+    },
+    {
+      "id": "slack-standup",
+      "register": "casual",
+      "prompt": "Write your standup update for Slack: yesterday you finished the invoice PDF export, today you're on the flaky login test, and you're blocked on staging access."
+    },
+    {
+      "id": "forum-git",
+      "register": "casual",
+      "prompt": "Someone on a forum committed a .env file with a database password to a public GitHub repo an hour ago. Write a reply telling them what to do. Under 120 words."
+    },
+    {
+      "id": "group-chat",
+      "register": "casual",
+      "prompt": "Write a message to a group chat of friends saying you can't make Saturday's hike because your car is in the shop until Monday, and asking if anyone can drive."
+    },
+    {
+      "id": "email-quote",
+      "register": "professional",
+      "prompt": "Write an email to a prospective client sending a quote: a booking website for their salon, 4 weeks, $6,500, with 50% upfront. Ask when they'd like to start. Short."
+    },
+    {
+      "id": "email-decline",
+      "register": "professional",
+      "prompt": "Write a polite email declining a vendor's proposal for a new CRM because the team is staying on their current system until next year's budget review."
+    },
+    {
+      "id": "support-bug",
+      "register": "professional",
+      "prompt": "Write a support reply to a user whose CSV export is missing the last row. It's a known bug, a fix ships Thursday, and in the meantime exporting to XLSX works. Under 90 words."
+    },
+    {
+      "id": "readme-intro",
+      "register": "technical",
+      "prompt": "Write the opening paragraph of a README for a small CLI that converts SQLite databases to Parquet files, one file per table, with optional zstd compression."
+    },
+    {
+      "id": "code-review",
+      "register": "technical",
+      "prompt": "Write a code review comment on a pull request that catches all exceptions in a payment webhook handler and returns 200, which hides failures. Suggest returning 500 so the provider retries."
+    },
+    {
+      "id": "migration-note",
+      "register": "technical",
+      "prompt": "Write a short migration note: the config key `timeoutSeconds` is renamed to `timeoutMs` in v3, values must be multiplied by 1000, and the old key is ignored with a warning."
+    },
+    {
+      "id": "newsletter",
+      "register": "marketing",
+      "prompt": "Write the intro paragraph of a monthly customer newsletter for a project management tool: this month added Gantt view, recurring tasks, and fixed slow loading on large boards."
+    },
+    {
+      "id": "product-desc",
+      "register": "marketing",
+      "prompt": "Write a product description for a stainless steel water bottle that keeps drinks cold for 24 hours, holds 750 ml, and has a leak-proof lid. Under 70 words."
+    },
+    {
+      "id": "event-invite",
+      "register": "marketing",
+      "prompt": "Write a short social post inviting people to a free online workshop on March 12 at 5pm GMT about setting up automated backups for small business websites."
+    }
   ]
 }

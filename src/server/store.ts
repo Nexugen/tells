@@ -8,6 +8,8 @@ interface Day {
   reservedUsd: number;
   rewrites: Record<string, number>;
   keysIssued: Record<string, number>;
+  anon?: Record<string, number>;
+  calls?: number;
 }
 
 interface State {
@@ -93,12 +95,26 @@ export class Store {
     this.day().reservedUsd += usd;
   }
 
-  /** Swap the reservation for the real cost. `key` is set only when the rewrite succeeded. */
-  settle(reservedUsd: number, actualUsd: number, key?: string) {
+  anonRewritesToday(ip: string): number {
+    return this.day().anon?.[hash(ip)] ?? 0;
+  }
+
+  callsToday(): number {
+    return this.day().calls ?? 0;
+  }
+
+  /** Swap the reservation for the real cost. `key` or `ip` is set only when the rewrite succeeded. */
+  settle(reservedUsd: number, actualUsd: number, done: { key?: string; ip?: string; calls?: number } = {}) {
     const d = this.day();
     d.reservedUsd = Math.max(0, d.reservedUsd - reservedUsd);
     d.spendUsd += actualUsd;
-    if (key) d.rewrites[hash(key)] = (d.rewrites[hash(key)] ?? 0) + 1;
+    d.calls = (d.calls ?? 0) + (done.calls ?? 0);
+    if (done.key) d.rewrites[hash(done.key)] = (d.rewrites[hash(done.key)] ?? 0) + 1;
+    if (done.ip) {
+      d.anon ??= {};
+      d.anon[hash(done.ip)] = (d.anon[hash(done.ip)] ?? 0) + 1;
+    }
     this.save();
   }
+
 }

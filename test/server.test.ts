@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync } from 'node:fs';
+import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import type { AddressInfo } from 'node:net';
@@ -49,7 +49,6 @@ test('lint is free and needs no key', async () => {
 test('rewrite needs a key, then stops at the per-key daily cap', async () => {
   const s = await setup({ TELLS_KEY_DAILY_REWRITES: '2' });
   try {
-    assert.equal((await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' })).status, 401);
     assert.equal((await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' }, 'tells_fake')).status, 401);
     const { key } = await (await post(`${s.url}/v1/keys`, {})).json();
     assert.match(key, /^tells_[0-9a-f]{40}$/);
@@ -91,6 +90,39 @@ test('the global spend cap stops rewrites before the model is called', async () 
   }
 });
 
+test('a few free tries per address without a key', async () => {
+  const s = await setup({ TELLS_ANON_REWRITES_PER_IP: '2' });
+  try {
+    assert.equal((await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' })).status, 200);
+    assert.equal((await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' })).status, 200);
+    const third = await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' });
+    assert.equal(third.status, 429);
+    assert.equal((await third.json()).error.code, 'try_limit');
+  } finally {
+    s.close();
+  }
+});
+
+test('rewrite waits when the shared account is busy, and stops at the daily call cap', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'tells-usage-'));
+  const usage = join(dir, 'usage.json');
+  writeFileSync(usage, JSON.stringify({ claude: { pct: 90 } }));
+  const s = await setup({ TELLS_USAGE_FILE: usage, TELLS_USAGE_MAX_PCT: '85', TELLS_DAILY_CALLS: '2' });
+  try {
+    const busy = await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' });
+    assert.equal(busy.status, 503);
+    assert.equal((await busy.json()).error.code, 'busy');
+    assert.equal(s.calls(), 0);
+    writeFileSync(usage, JSON.stringify({ claude: { pct: 40 } }));
+    assert.equal((await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' })).status, 200);
+    const capped = await post(`${s.url}/v1/rewrite`, { text: 'We leverage it.' });
+    assert.equal(capped.status, 503);
+    assert.equal((await capped.json()).error.code, 'global_daily_cap');
+  } finally {
+    s.close();
+  }
+});
+
 test('keys per address per day, text length, and the kill switch', async () => {
   const s = await setup({ TELLS_KEYS_PER_IP_PER_DAY: '1', TELLS_REWRITE_MAX_CHARS: '10' });
   try {
@@ -106,5 +138,23 @@ test('keys per address per day, text length, and the kill switch', async () => {
     assert.equal((await post(`${off.url}/v1/lint`, { text: 'We leverage it.' })).status, 200);
   } finally {
     off.close();
+  }
+});
+
+test('the root serves the page, the JSON index moved to /v1, and lint returns human signals', async () => {
+  const s = await setup();
+  try {
+    const page = await fetch(`${s.url}/`);
+    assert.equal(page.status, 200);
+    assert.match(page.headers.get('content-type') ?? '', /text\/html/);
+    const html = await page.text();
+    assert.match(html, /\/v1\/lint/);
+    assert.ok(!/[—–]/.test(html), 'no dashes on the page');
+    const index = await fetch(`${s.url}/v1`);
+    assert.match(index.headers.get('content-type') ?? '', /json/);
+    const lint = await (await post(`${s.url}/v1/lint`, { text: "I moved the cron to 02:10 on Tuesday (twice, actually)." })).json();
+    assert.ok(lint.human.present.length > 0);
+  } finally {
+    s.close();
   }
 });

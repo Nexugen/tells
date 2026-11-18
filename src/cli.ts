@@ -8,7 +8,7 @@ import { rulesAsJson } from './serialize.ts';
 import { RULES } from './rules.ts';
 import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
-import { anthropic } from './model.ts';
+import { anthropic, claudeCli } from './model.ts';
 
 const VERSION = '0.1.0';
 
@@ -25,7 +25,7 @@ Lint options
   --format <f>       text | json | github (default text)
   --ci               exit 1 when the check fails (see --fail-on and --max-score)
   --fail-on <s>      error | warning | info (default error)
-  --max-score <n>    also fail when the slop score is above n
+  --max-score <n>    also fail when known tells per 100 words is above n
   --disable <ids>    comma-separated rule ids to skip
   --plain            treat input as plain text, not markdown
 
@@ -33,7 +33,9 @@ Rewrite options
   --register <r>     as above
   --write            write the result back to the file
   --min-severity <s> lowest severity to fix (default warning)
-  --model <id>       Anthropic model id (default claude-haiku-5-5, or TELLS_MODEL)
+  --backend <name>   anthropic (ANTHROPIC_API_KEY) or cli (the Claude Code CLI, claude -p
+                     with no tools). Default anthropic, or TELLS_MODEL_BACKEND
+  --model <id>       model id (default claude-haiku-5-5 for anthropic, haiku for cli)
   --json             print the full result as JSON
 
 Config
@@ -156,7 +158,7 @@ async function main() {
       else if (format === 'github') {
         const out = formatGithub(name, result);
         if (out) console.log(out);
-        console.log(`${name}: slop score ${result.score} (${result.grade})`);
+        console.log(`${name}: ${result.score} known tells per 100 words (${result.grade})`);
       } else console.log(formatText(name, text, result, { color }));
     }
     if (format === 'json') console.log(JSON.stringify(files.length === 1 ? all[0] : all, null, 2));
@@ -167,7 +169,10 @@ async function main() {
   if (cmd === 'rewrite') {
     const file = rest[0] ?? (process.stdin.isTTY ? usage('give a file, or pipe text in') : '-');
     const text = read(file);
-    const model = anthropic({ model: typeof flags.model === 'string' ? flags.model : undefined });
+    const backend = typeof flags.backend === 'string' ? flags.backend : (process.env.TELLS_MODEL_BACKEND ?? 'anthropic');
+    const modelId = typeof flags.model === 'string' ? flags.model : undefined;
+    if (backend !== 'anthropic' && backend !== 'cli') usage('--backend is anthropic or cli');
+    const model = backend === 'cli' ? claudeCli({ model: modelId, configDir: process.env.TELLS_CLI_CONFIG_DIR }) : anthropic({ model: modelId });
     try {
       const res = await rewrite(text, {
         ...base,
@@ -178,10 +183,12 @@ async function main() {
       if (flags.json) console.log(JSON.stringify(res, null, 2));
       else if (flags.write && file !== '-') {
         writeFileSync(file, res.text);
-        process.stderr.write(`${file}: ${res.changes.length} sentences changed, slop score ${res.before.score} -> ${res.after.score}\n`);
+        process.stderr.write(`${file}: ${res.changes.length} sentences changed, known tells per 100 words ${res.before.score} -> ${res.after.score}\n`);
       } else {
         process.stdout.write(res.text);
-        process.stderr.write(`\n${res.changes.length} sentences changed, slop score ${res.before.score} -> ${res.after.score}, ${res.model}, about $${res.costUsd.toFixed(4)}\n`);
+        process.stderr.write(`\n${res.changes.length} sentences changed, known tells per 100 words ${res.before.score} -> ${res.after.score}, ${res.model}, about $${res.costUsd.toFixed(4)}\n`);
+        for (const sg of res.suggestions) process.stderr.write(`fill in ${sg.placeholder}: ${sg.sentence}\n`);
+        if (res.rejected.length) process.stderr.write(`${res.rejected.length} edits dropped for adding facts the text did not have\n`);
       }
     } catch (err) {
       process.stderr.write(`tells: ${(err as Error).message}\n`);

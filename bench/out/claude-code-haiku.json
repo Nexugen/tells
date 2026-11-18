@@ -2,68 +2,128 @@
   "name": "claude-code-haiku",
   "via": "claude-cli",
   "model": "claude-cli:haiku",
-  "createdAt": "2026-11-17T23:25:14.338Z",
-  "costUsd": 0.02807675,
+  "createdAt": "2026-11-18T00:09:12.135Z",
+  "costUsd": 0.050308790000000006,
   "items": [
     {
       "id": "slack-delay",
       "register": "casual",
-      "text": "Hi team, heads up: the release is moving from Thursday to Monday. The payment provider's sandbox has been down since Tuesday, and we can't finish testing the payment flows without it. I'll share the new timeline once we know when the sandbox is back."
+      "text": "Hi team, heads up: the release is moving from Thursday to Monday. The payment provider's sandbox has been down since Tuesday, and we can't finish testing payments without it. I'll post the new timeline once we have a firm date for the sandbox coming back."
     },
     {
       "id": "forum-cors",
       "register": "casual",
-      "text": "Dev usually works because a proxy (CRA's `proxy` field or Vite's `server.proxy`) makes the calls same-origin, and that proxy doesn't exist in production. Check these:\n\n1. **Origin mismatch:** Add your production site's exact origin (scheme, host, port, no trailing slash) to Express's CORS config. Using `cors({ origin: process.env.CLIENT_ORIGIN })` lets you set it per environment.\n2. **Hardcoded URLs:** Make sure the build isn't still calling `http://localhost:4000`. Read the API base URL from an env var like `REACT_APP_API_URL` or `VITE_API_URL`.\n3. **Preflight:** Confirm Express answers `OPTIONS` requests for any route with custom headers or methods like `PUT` or `DELETE`.\n4. **Error responses:** A 500 or a reverse-proxy 502 may lack CORS headers, so the browser reports a CORS error. Check the Network tab for the real status."
+      "text": "Your production frontend origin has to match the Express `Access-Control-Allow-Origin` exactly, including protocol, host, and port. Check the Network tab: if the preflight `OPTIONS` request or the actual request returns an error without CORS headers, the browser reports it as a CORS error. Common causes:\n\n- Your CORS config allows `http://localhost:3000` but not the deployed `https://yourapp.com`.\n- A `FRONTEND_URL` env var is missing in production, so the allowed origin is `undefined`.\n- The React build still points at `http://localhost:5000` because `REACT_APP_API_URL` wasn't set at build time.\n\nFix: `app.use(cors({ origin: process.env.CLIENT_ORIGIN.split(','), credentials: true }))` and set `CLIENT_ORIGIN` in production. Or serve the API and the frontend from the same origin behind a reverse proxy, which avoids CORS entirely."
     },
     {
       "id": "friend-recommend",
       "register": "casual",
-      "text": "Honestly just plain markdown files in a git repo, synced with a cron job. No fancy app. Works everywhere, and I can grep it, version it, and never worry about a company shutting down or changing pricing. Overkill maybe, but I like it. What are you using?"
+      "text": "Plain markdown files in a git repo, synced with a cron job. Nothing fancy, and it's been reliable. Mostly I just like that everything is plain text I can grep, version, and move between tools without an export step. What about you, are you looking for something new?"
     },
     {
       "id": "support-refund",
       "register": "professional",
-      "text": "Hi,\n\nI'm sorry about the duplicate charge on order 4471. We've refunded the extra payment today. It should appear on your statement within 3 to 5 business days, depending on your bank.\n\nThanks for your patience, and please reply if the refund hasn't shown up by then.\n\nBest regards,\nCustomer Support"
+      "text": "Hi,\n\nThanks for reporting the double charge on order 4471. We've refunded the duplicate payment today. It should appear on your statement within 3 to 5 business days, depending on your bank.\n\nSorry for the trouble. If the refund hasn't shown up after 5 business days, reply here and we'll look into it right away.\n\nBest regards,\nCustomer Support"
     },
     {
       "id": "email-meeting",
       "register": "professional",
-      "text": "Subject: Moving our Wednesday review to Friday at 10am\n\nHi [Client name],\n\nI need to move our review from Wednesday at 2pm to Friday at 10am. The staging environment needs one more day to finish your data import, and I want the review to run on complete data.\n\nDoes Friday at 10am work for you? If not, let me know what time suits you best and I'll adjust.\n\nThanks for your flexibility.\n\nBest,\n[Your name]"
+      "text": "Subject: Wednesday review moved to Friday, 10am\n\nHi [Client name],\n\nI need to move our Wednesday 2pm review to Friday at 10am. The staging environment needs one more day to finish your data import, and I want the review to run on complete data.\n\nDoes Friday at 10am work for you? If not, let me know what time suits and I'll adjust.\n\nApologies for the change, and thanks for your patience.\n\nBest,\n[Your name]"
     },
     {
       "id": "incident-summary",
       "register": "professional",
-      "text": "On November 3, between 14:05 and 14:47 UTC, about 8% of checkout requests failed. The failures started when a configuration change reduced the database connection pool size from 50 to 5. With only 5 connections available, checkout requests competed for connections and a share of them failed. The impact lasted 42 minutes.\n\nThe configuration change was rolled back, which restored the connection pool to its previous size and ended the checkout failures. The incident was resolved by reverting the change, not by a code fix.\n\nTo prevent a recurrence, a new check now blocks any change that sets the database connection pool below 20. This guardrail stops a value this low from being deployed without an explicit override."
+      "text": "Over a 42-minute window on Nov 3, 2026 (14:05–14:47 UTC), about 8% of checkout requests failed. The cause was a configuration change that reduced the database connection pool size from 50 to 5. With the pool that small, requests queued for or were refused a database connection, and those checkouts errored out. The change was rolled back, which restored normal checkout success.\n\nTo prevent a recurrence, a new check now blocks any configuration change that sets the database connection pool below 20. Changes that would lower it under that threshold are rejected before they reach production, so an undersized pool like this one can't be deployed unnoticed. The check applies to future pool changes, and it guards against this specific misconfiguration rather than against every kind of config error."
     },
     {
       "id": "pr-description",
       "register": "technical",
-      "text": "## Replace 5-second job status polling with an SSE stream\n\nActive users were polling the job status endpoint every 5 seconds, which is 720 requests per hour per user. This change has the client open one server-sent events (SSE) connection per active user and receive status updates over it, so each active user makes 1 connection in place of 720 requests per hour.\n\n**Changes**\n- New SSE endpoint that streams status updates for the user's jobs.\n- Client switches from the polling loop to a single `EventSource` connection, reconnecting on drop.\n- The old polling endpoint stays in place for one release for existing clients. It is deprecated and will be removed in the following release.\n\n**Compatibility**\n- Clients still on the old build keep polling the old endpoint and are unaffected.\n- The old endpoint is not removed in this PR. Removing it is a separate change, scheduled for the release after this one.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+      "text": "## Replace 5-second job status polling with an SSE stream\n\nClients polling job status every 5 seconds make 720 requests per hour per active user. This change moves job status to a server-sent events (SSE) stream, so each active user holds one connection instead.\n\n### What changed\n- Added an SSE endpoint that pushes job status updates to subscribed clients as they change.\n- The web client now opens one stream per active user and stops the 5-second polling loop.\n- The old polling endpoint remains for one release so existing clients keep working. It is deprecated and will be removed in the following release.\n\n### Impact\n- Requests per active user drop from 720/hour to 1 long-lived connection.\n- Status updates arrive when the job changes, not on the next poll tick.\n\n### Notes for reviewers\n- Check that the stream reconnects after network drops and resumes without missing or duplicating status events.\n- Check that connections close cleanly when a user leaves the page or a job reaches a terminal state.\n- The old endpoint stays for one release only. Remove it in the next release and update any remaining callers.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
     },
     {
       "id": "docs-cache",
       "register": "technical",
-      "text": "The client caches responses to GET requests for 60 seconds by default, so repeated GET calls to the same resource within that window return the stored response without a new network request. To change the lifetime, pass the `cacheTtl` option when you create the client, with the duration you want the cache to hold GET responses. POST requests are never cached, so every POST is sent to the server and its response is never stored or reused."
+      "text": "The client caches responses to `GET` requests for 60 seconds by default. A repeated `GET` to the same URL within that window returns the cached response without making a network request. To change the window, pass the `cacheTtl` option, specified in seconds, when you create the client or per request. Setting `cacheTtl` to `0` disables caching for `GET` requests. `POST` requests are never cached, so every `POST` is sent to the server."
     },
     {
       "id": "changelog",
       "register": "technical",
-      "text": "## [2.4.0] - 2026-11-18\n\n### Added\n- CSV export on the reports page.\n\n### Fixed\n- Timezone offsets in weekly summaries.\n\n### Removed\n- Node 18 support. Node 18 is no longer supported; upgrade to a currently supported Node version before installing 2.4.0."
+      "text": "## 2.4.0\n\n### Added\n- CSV export on the Reports page.\n\n### Fixed\n- Weekly summaries now apply the correct timezone offsets.\n\n### Removed\n- Node 18 is no longer supported."
     },
     {
       "id": "launch-post",
       "register": "marketing",
-      "text": "Snap a photo of any receipt and our bookkeeping app reads it for you, filling in the vendor, date and amount automatically. No signal? No problem. It works offline and syncs the moment you're back online. Your books, always up to date."
+      "text": "Snap a photo of any receipt and our bookkeeping app reads it for you. Vendor, date, and amount fill in automatically. No signal? No problem. It works offline and syncs the moment you're back online. Less typing, cleaner books, zero hassle. Try it today."
     },
     {
       "id": "landing-blurb",
       "register": "marketing",
-      "text": "**Fewer no-shows. Fuller chairs.**\n\nYour patients get a text reminder and can confirm or reschedule by simply replying. Your front desk spends less time on the phone, and your schedule stays full."
+      "text": "Turn your appointment reminders into confirmed visits.\n\nYour patients get a text reminder, and they confirm or reschedule by simply replying. Your front desk stops chasing no-shows and starts filling the chair time that matters."
     },
     {
       "id": "linkedin-hire",
       "register": "marketing",
-      "text": "We just hired our first data engineer, and it's a milestone for a 12-person logistics team.\n\nLate deliveries cost our customers time and trust, and until now we've tracked them mostly after the fact. Our new data engineer will build the pipeline that predicts which deliveries are at risk of running late, so we can act before a shipment misses its window.\n\nIf you've worked on data pipelines, forecasting, or operational analytics in logistics, we'd love to hear from you. Welcome to the team.\n\n#Logistics #DataEngineering #Hiring #Startup"
+      "text": "We just hired our first data engineer.\n\nWe're a 12-person logistics startup, and until now, nobody has had the time to build the data pipeline we need to see late deliveries coming before they happen. That changes with our new data engineer, who will build the pipeline that predicts late deliveries so our operations team can act early: rerouting, notifying customers, and fixing the bottlenecks behind the delays.\n\nFor a team our size, this hire is a big step. We're excited to see what our data can do.\n\nIf you've built prediction pipelines for logistics or supply chain, we'd love to hear from you.\n\n#Logistics #DataEngineering #Hiring #Startups"
+    },
+    {
+      "id": "slack-standup",
+      "register": "casual",
+      "text": "Yesterday: Finished the invoice PDF export.\nToday: Working on the flaky login test.\nBlocked: Waiting on staging access."
+    },
+    {
+      "id": "forum-git",
+      "register": "casual",
+      "text": "Act now, before cleaning up the repo. Bots scan public GitHub constantly, so treat that password as already leaked.\n\n1. Change the database password immediately, and update wherever the app reads it.\n2. Check the database logs for logins from unknown IPs or unexpected changes.\n3. Then remove the file from history with git filter-repo or BFG, and force-push. Forks and clones may still hold the old copy, so rotating the password is what actually protects you.\n4. Add `.env` to `.gitignore`, and keep secrets in environment variables or a secrets manager.\n\nIf the repo doesn't need to be public, make it private."
+    },
+    {
+      "id": "group-chat",
+      "register": "casual",
+      "text": "Hey all, I've got to bail on Saturday's hike. My car's in the shop until Monday, so I'm stuck without wheels. Can anyone give me a ride? I'd chip in for gas. Sorry to miss it!"
+    },
+    {
+      "id": "email-quote",
+      "register": "professional",
+      "text": "Subject: Website quote for your salon\n\nHi [Client name],\n\nThanks for speaking with me about a booking website for your salon. Here's my quote:\n\n- **Scope:** Custom booking website for your salon\n- **Timeline:** 4 weeks\n- **Price:** $6,500\n- **Payment:** 50% upfront ($3,250) to start, with the remaining 50% due on launch\n\nWhen would you like to start?\n\nBest,\n[Your name]"
+    },
+    {
+      "id": "email-decline",
+      "register": "professional",
+      "text": "Subject: Thank You for Your CRM Proposal\n\nHi [Vendor Contact Name],\n\nThank you for taking the time to put together the proposal for your CRM platform. We appreciate the detail you included and the effort your team put into understanding our needs.\n\nAfter careful review, we have decided not to move forward at this time. Our team will continue using our current system until next year's budget review, when we plan to reassess our CRM options.\n\nWe were impressed by [specific strength of the vendor's solution], and we'd welcome the chance to reconnect when we revisit this decision. Would it be all right if we kept your contact information on file and reached out next year?\n\nThank you again for your time and collaboration. We wish you and your team continued success.\n\nBest regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+    },
+    {
+      "id": "support-bug",
+      "register": "professional",
+      "text": "Hi there,\n\nThanks for reporting this. You're right that CSV exports are currently dropping the last row. We've confirmed it's a known bug, and the fix is scheduled to ship Thursday.\n\nIn the meantime, exporting to XLSX includes every row, so it's a reliable workaround. We're sorry for the trouble and appreciate your patience.\n\nBest,\n[Your name]\nSupport Team"
+    },
+    {
+      "id": "readme-intro",
+      "register": "technical",
+      "text": "`sqlite2parquet` is a small command-line tool that converts every table in a SQLite database into its own Parquet file, so you can move data into pandas, DuckDB, Spark, or any other Parquet-aware system without writing a conversion script. Each table becomes `<table>.parquet` in your output directory, and you can optionally compress the output with zstd to reduce file size. The tool reads the schema from SQLite and maps column types to Parquet equivalents, so the output files keep their column names and types."
+    },
+    {
+      "id": "code-review",
+      "register": "technical",
+      "text": "Catching every exception and returning 200 means a failed payment update is acknowledged as successful, so the provider never retries it. That can leave orders unpaid or inconsistent with no alert.\n\nSuggest returning a 5xx (e.g. 500) from the catch path so the provider retries. Only return 200 after the event has been processed, or for errors that retrying can't fix, such as invalid signatures or malformed payloads, which should return 4xx. Log the exception with the event ID before returning, and consider a dead-letter or alert path for events that keep failing."
+    },
+    {
+      "id": "migration-note",
+      "register": "technical",
+      "text": "```\nMigration: timeoutSeconds → timeoutMs (v3)\n\nThe config key `timeoutSeconds` is renamed to `timeoutMs` in v3.\nValues must be converted from seconds to milliseconds by multiplying by 1000\n(e.g., `timeoutSeconds: 30` becomes `timeoutMs: 30000`).\n\nThe old key `timeoutSeconds` is no longer read. It is ignored, and a\nwarning is emitted at startup. Update your configuration to use `timeoutMs`.\n```"
+    },
+    {
+      "id": "newsletter",
+      "register": "marketing",
+      "text": "This month we shipped three changes you've been asking for. Gantt view is live, so you can see task timelines, dependencies, and overlaps at a glance and plan your work around them. Recurring tasks are here too: set a task to repeat daily, weekly, or monthly and it will regenerate on schedule, so routine work stops getting re-entered by hand. We also fixed the slow loading on large boards, which should make boards with hundreds of tasks open noticeably faster. Thanks for the feedback that helped us prioritize these, and keep it coming."
+    },
+    {
+      "id": "product-desc",
+      "register": "marketing",
+      "text": "Keep your drinks ice-cold for 24 hours with this 750 ml stainless steel water bottle. Double-wall insulation keeps liquids chilled all day, while the durable steel resists rust and odors. The leak-proof lid locks in every drop, so you can toss it in your bag with confidence."
+    },
+    {
+      "id": "event-invite",
+      "register": "marketing",
+      "text": "Join us for a free online workshop on setting up automated backups for small business websites.\n\n📅 March 12, 5pm GMT\n💻 Online, free to join\n\nLosing your website can cost you customers and sales. In this session, you'll learn how to set up automated backups so your site stays protected without manual effort. Register now and secure your business website."
     }
   ]
 }

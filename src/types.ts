@@ -84,6 +84,8 @@ export interface LintResult {
   score: number;
   grade: Grade;
   counts: Record<Severity, number>;
+  /** Human signals present in the text, and the ones its register usually has but this text lacks. */
+  human: import('./human.ts').HumanReport;
 }
 
 export type Grade = 'clean' | 'light' | 'noticeable' | 'heavy';

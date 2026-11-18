@@ -1,11 +1,14 @@
 export { lint, slopScore, grade, fails, severityFor, SEVERITY_WEIGHT } from './lint.ts';
-export { rewrite, buildUnits, parseEdits } from './rewrite.ts';
-export type { RewriteOptions, RewriteResult, Change } from './rewrite.ts';
+export { rewrite, buildUnits, parseEdits, newFacts } from './rewrite.ts';
+export type { RewriteOptions, RewriteResult, Change, Suggestion, Rejected } from './rewrite.ts';
+export { SIGNALS, detectSignals, humanReport, signalContext, getSignal } from './human.ts';
+export type { HumanSignal, HumanReport } from './human.ts';
+export { textSignals, sharedTemplates } from './signals.ts';
 export { RULES, getRule, AI_VOCABULARY } from './rules.ts';
 export { EXEMPLARS, exemplarsFor } from './exemplars.ts';
 export type { Exemplar } from './exemplars.ts';
-export { anthropic, fromFunction, ModelError, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL } from './model.ts';
-export type { Model, ModelRequest, ModelResponse, AnthropicOptions } from './model.ts';
+export { anthropic, claudeCli, fromFunction, ModelError, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL } from './model.ts';
+export type { Model, ModelRequest, ModelResponse, AnthropicOptions, ClaudeCliOptions } from './model.ts';
 export { rulesAsJson } from './serialize.ts';
 export { formatText, formatGithub } from './format.ts';
 export { REGISTERS } from './types.ts';

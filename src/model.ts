@@ -118,3 +118,86 @@ export function fromFunction(name: string, fn: (req: ModelRequest) => Promise<st
     },
   };
 }
+
+export interface ClaudeCliOptions {
+  /** Model alias or id passed to --model. Default "haiku". */
+  model?: string;
+  /** Path to the claude binary. Default "claude" on PATH. */
+  bin?: string;
+  /** Account folder for the CLI's login (CLAUDE_CONFIG_DIR). */
+  configDir?: string;
+  timeoutMs?: number;
+}
+
+/**
+ * Claude Code's print mode as a plain completion: no tools, no settings, no MCP servers,
+ * nothing saved, JSON out. It uses whatever login the CLI has in `configDir`. The child gets
+ * a minimal environment, so an API key in this process is never picked up by mistake.
+ */
+export function claudeCli(options: ClaudeCliOptions = {}): Model {
+  const model = options.model ?? 'haiku';
+  return {
+    name: `claude-cli:${model}`,
+    async complete(req) {
+      const { spawn } = await import('node:child_process');
+      const { mkdtempSync, rmSync } = await import('node:fs');
+      const { tmpdir } = await import('node:os');
+      const { join } = await import('node:path');
+      const cwd = mkdtempSync(join(tmpdir(), 'tells-cli-'));
+      const env: Record<string, string> = { PATH: process.env.PATH ?? '/usr/local/bin:/usr/bin:/bin', HOME: process.env.HOME ?? cwd, LANG: 'C.UTF-8' };
+      if (options.configDir) env.CLAUDE_CONFIG_DIR = options.configDir;
+      const args = [
+        '-p', '--output-format', 'json', '--model', model,
+        '--tools', '', '--strict-mcp-config', '--no-session-persistence', '--disable-slash-commands', '--setting-sources', '',
+        '--system-prompt', req.system,
+      ];
+      try {
+        const stdout = await new Promise<string>((resolve, reject) => {
+          const child = spawn(options.bin ?? 'claude', args, { cwd, env, stdio: ['pipe', 'pipe', 'pipe'] });
+          let out = '';
+          let err = '';
+          const timer = setTimeout(() => {
+            child.kill('SIGTERM');
+            reject(new ModelError('The rewrite model timed out.', true));
+          }, options.timeoutMs ?? 120_000);
+          child.stdout.on('data', (d) => (out += d));
+          child.stderr.on('data', (d) => (err += d));
+          child.on('error', (e) => {
+            clearTimeout(timer);
+            reject(new ModelError(`Could not start the claude CLI: ${e.message}`));
+          });
+          child.on('close', (code) => {
+            clearTimeout(timer);
+            if (code === 0) resolve(out);
+            else {
+              // The CLI prints its JSON result even on failure. Report only the message, never the raw output.
+              let why = err.trim().slice(0, 300);
+              try {
+                const j = JSON.parse(out) as { result?: unknown };
+                if (typeof j.result === 'string') why = j.result.slice(0, 300);
+              } catch {
+                // not JSON
+              }
+              reject(new ModelError(`claude CLI exited with ${code}${why ? `: ${why}` : ''}`, true));
+            }
+          });
+          child.stdin.end(req.prompt);
+        });
+        let j: { result?: string; is_error?: boolean; total_cost_usd?: number; usage?: { input_tokens?: number; output_tokens?: number } };
+        try {
+          j = JSON.parse(stdout);
+        } catch {
+          throw new ModelError('The claude CLI did not return JSON.', true);
+        }
+        if (j.is_error || typeof j.result !== 'string') throw new ModelError(`The claude CLI reported an error: ${String(j.result ?? '').slice(0, 300)}`, true);
+        return {
+          text: j.result,
+          costUsd: j.total_cost_usd,
+          usage: { inputTokens: j.usage?.input_tokens ?? 0, outputTokens: j.usage?.output_tokens ?? 0 },
+        };
+      } finally {
+        rmSync(cwd, { recursive: true, force: true });
+      }
+    },
+  };
+}

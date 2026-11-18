@@ -1,6 +1,7 @@
 import { RULES, regexHits } from './rules.ts';
 import { countWords, lineIndex, mask, paragraphs, sentences } from './text.ts';
 import type { Finding, Grade, Hit, LintOptions, LintResult, Register, Rule, RuleContext, Severity } from './types.ts';
+import { humanReport } from './human.ts';
 
 export const SEVERITY_WEIGHT: Record<Severity, number> = { error: 3, warning: 2, info: 1 };
 
@@ -61,7 +62,7 @@ export function lint(text: string, options: LintOptions = {}): LintResult {
   const counts: Record<Severity, number> = { error: 0, warning: 0, info: 0 };
   for (const f of findings) counts[f.severity]++;
   const score = slopScore(findings, words);
-  return { findings, words, score, grade: grade(score), counts };
+  return { findings, words, score, grade: grade(score), counts, human: humanReport(ctx) };
 }
 
 /**

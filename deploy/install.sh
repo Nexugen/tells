@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install or update the tells API on this box. Nothing changes unless you pass --yes.
+# Install or update the tells API on a Linux server with nginx and systemd. Nothing changes unless you pass --yes.
 #   deploy/install.sh            show what would happen
 #   deploy/install.sh --yes      do it
 set -euo pipefail
@@ -27,7 +27,8 @@ run npm test
 
 say "copy to /opt/tells"
 run mkdir -p /opt/tells
-run rsync -a --delete --exclude node_modules --exclude .git --exclude bench/out "$REPO/" /opt/tells/
+run rsync -a --delete --exclude node_modules --exclude .git "$REPO/" /opt/tells/
+run chown -R root:root /opt/tells
 run bash -c "cd /opt/tells && npm ci --omit=dev --no-audit --no-fund && npm install --no-save --no-audit --no-fund @anthropic-ai/sdk@^1.10.0"
 
 say "config"
@@ -46,8 +47,14 @@ say "nginx"
 run install -m 644 deploy/nginx-tells.conf /etc/nginx/sites-available/tells
 run ln -sf /etc/nginx/sites-available/tells /etc/nginx/sites-enabled/tells
 if [[ "$YES" == "--yes" ]]; then
-  nginx -t
-  systemctl reload nginx
+  if nginx -t; then
+    systemctl reload nginx
+  else
+    echo "    nginx -t failed, removing the tells site again"
+    rm -f /etc/nginx/sites-enabled/tells
+    nginx -t && systemctl reload nginx
+    exit 1
+  fi
 fi
 
 say "health"

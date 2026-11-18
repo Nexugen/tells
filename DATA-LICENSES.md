@@ -15,3 +15,9 @@ Changes: some excerpts drop markdown links, code, footnote markers or an account
 The Stack Overflow samples are share-alike. If you reuse them, keep the credit and the licence. The rest of this repository is not a derivative of them.
 
 We left out anything with an unclear licence, including forum and social media posts.
+
+## Benchmark samples
+
+`bench/human.json` holds 52 longer samples from the same four kinds of source: 19 from the Go blog (CC BY 4.0), 15 Stack Overflow answers (CC BY-SA 2.5, 3.0 or 4.0, by revision date), 10 from the Rust blog (MIT or Apache 2.0) and 8 GOV.UK pages (Open Government Licence v3.0). Each sample records its source link, author where there is one, and licence. `bench/tools/` has the scripts that fetched them.
+
+The model answers in `bench/out/` were written by Claude models for this benchmark.

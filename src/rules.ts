@@ -1,4 +1,6 @@
 import type { Hit, Rule, RuleContext, Sentence } from './types.ts';
+import { regexHits } from './rules-util.ts';
+import { MORE_RULES } from './rules-more.ts';
 
 const A = `['’]`; // straight or curly apostrophe
 
@@ -11,24 +13,6 @@ function phrases(list: string[], opts: { start?: boolean } = {}): RegExp {
   return new RegExp(`${lead}(?:${body})(?![\\p{L}\\p{N}])`, 'giu');
 }
 
-function regexHits(re: RegExp, text: string, group?: number): Hit[] {
-  const hits: Hit[] = [];
-  re.lastIndex = 0;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(text))) {
-    if (m[0].length === 0) {
-      re.lastIndex++;
-      continue;
-    }
-    if (group && m[group] !== undefined) {
-      const at = m.index + m[0].indexOf(m[group]);
-      hits.push({ start: at, end: at + m[group].length });
-    } else {
-      hits.push({ start: m.index, end: m.index + m[0].length });
-    }
-  }
-  return hits;
-}
 
 function inSentences(ctx: RuleContext, re: RegExp, filter?: (s: Sentence) => boolean): Hit[] {
   const out: Hit[] = [];
@@ -150,6 +134,7 @@ const SLOGAN_ENDINGS = [
   "we're just getting started", 'we are just getting started', 'the sky is the limit',
   "that's the difference between", 'that is the difference between', "that's what it's all about",
   "that's what matters", 'and that matters', "that's the kind of", 'and that is the point', 'more on that soon',
+  "can't wait to see what", 'cannot wait to see what', 'excited to see what', 'we look forward to seeing what',
 ];
 
 const CORPORATE_EXCITEMENT = [
@@ -189,7 +174,7 @@ const SIGNPOSTING = [
   'in this article', 'in this post', 'in this guide', 'in this blog post', 'in this section',
   "in this article, we'll", "let's explore", 'let’s explore', "let's take a look", 'let’s take a look',
   "let's break it down", 'let’s break it down', "let's unpack", 'let’s unpack', "here's a breakdown",
-  'here is a breakdown', "here's a quick overview", 'here is an overview', 'read on to learn',
+  'here is a breakdown', "here's a quick overview", 'here is an overview', 'read on to learn', 'read on for',
 ];
 
 const VAGUE_ATTRIBUTION = [
@@ -203,7 +188,7 @@ const TAGLINES = [
   'the future of', 'built for the way you', 'designed for the way you', 'made simple',
   'the only tool you need', 'all in one place', 'at your fingertips', 'the way it should be',
   'like never before', 'the power of', 'take it to the next level', 'level up your',
-  'your one-stop', 'one-stop shop', 'look no further',
+  'your one-stop', 'one-stop shop', 'look no further', "you'll actually want to", "you'll actually use", "you didn't know you needed",
 ];
 
 const EXPLAINER_STARTS = [
@@ -402,7 +387,7 @@ function titleCaseHeading(ctx: RuleContext): Hit[] {
 
 // --- the rules --------------------------------------------------------------------------
 
-export const RULES: Rule[] = [
+const BASE_RULES: Rule[] = [
   {
     id: 'dash',
     name: 'Em or en dash',
@@ -897,6 +882,8 @@ export const RULES: Rule[] = [
     },
   },
 ];
+
+export const RULES: Rule[] = [...BASE_RULES, ...MORE_RULES];
 
 /** Run a regex across each sentence and the boundary with the next one (for two-sentence frames). */
 function inSentenceWindows(ctx: RuleContext, re: RegExp): Hit[] {

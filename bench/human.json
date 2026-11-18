@@ -1,0 +1,838 @@
+{
+ "version": 1,
+ "note": "Human writing for the benchmark. Every sample has its source and licence. Excerpts, markup removed.",
+ "samples": [
+  {
+   "id": "go-go1.13-errors",
+   "register": "technical",
+   "text": "Go’s treatment of errors as values has served us well over the last decade. Although the standard library’s support for errors has been minimal—just the `errors.New` and `fmt.Errorf` functions, which produce errors that contain only a message—the built-in `error` interface allows Go programmers to add whatever information they desire. All it requires is a type that implements an `Error` method:\n\nError types like this one are ubiquitous, and the information they store varies widely, from timestamps to filenames to server addresses. Often, that information includes another, lower-level error to provide additional context.\n\nThe pattern of one error containing another is so pervasive in Go code that, after extensive discussion, Go 1.13 added explicit support for it. This post describes the additions to the standard library that provide that support: three new functions in the `errors` package, and a new formatting verb for `fmt.Errorf`.\n\nBefore describing the changes in detail, let's review how errors are examined and constructed in previous versions of the language.\n\nGo errors are values. Programs make decisions based on those values in a few ways. The most common is to compare an error to `nil` to see if an operation failed.\n\nSometimes we compare an error to a known _sentinel_ value, to see if a specific error has occurred.",
+   "source": {
+    "title": "Working with Errors in Go 1.13",
+    "url": "https://go.dev/blog/go1.13-errors",
+    "author": "Damien Neil and Jonathan Amsterdam",
+    "date": "2019-10-17"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-module-mirror-launch",
+   "register": "technical",
+   "text": "We are excited to share that our module mirror, index, and checksum database are now production ready! The `go` command will use the module mirror and checksum database by default for Go 1.13 module users.  See proxy.golang.org/privacy for privacy information about these services and the go command documentation for configuration details, including how to disable the use of these servers or use different ones.  If you depend on non-public modules, see the documentation for configuring your environment.\n\nThis post will describe these services and the benefits of using them, and summarizes some of the points from the Go Module Proxy: Life of a Query talk at Gophercon 2019. See the recording if you are interested in the full talk.\n\nThe solution is to use a module proxy, which speaks an API that is better suited to the `go` command’s needs (see `go help goproxy`). When `go get` runs in module mode with a proxy, it will work faster by only asking for the specific module metadata or source code it needs, and not worrying about the rest. Below is an example of how the `go` command may use a proxy with `go get` by requesting the list of versions, then the info, mod, and zip file for the latest tagged version.",
+   "source": {
+    "title": "Module Mirror and Checksum Database Launched",
+    "url": "https://go.dev/blog/module-mirror-launch",
+    "author": "Katie Hockman",
+    "date": "2019-08-29"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-gopls-scalability",
+   "register": "technical",
+   "text": "Earlier this summer, the Go team released version v0.12 of gopls, the language server for Go, featuring a rewrite of its core that allows it to scale to larger codebases. This is the culmination of a year-long effort, and we're excited to share our progress, as well as talk a little bit about the new architecture and what it means for the future of gopls.\n\nSince the v0.12 release, we've fine-tuned the new design, focusing on making interactive queries (such as auto-completion or finding references) as fast as they were with v0.11, despite holding so much less state in memory. If you haven't already, we hope you'll try it out:\n\nWe'd love to hear about your experience with it via this brief survey.\n\nBefore we dive into the details, let's look at the results! The chart below shows the change to startup time and memory usage for 28 of the most popular Go repositories on GitHub. These measurements were taken after opening a randomly selected Go file and waiting for gopls to fully load its state, and since we assume that the initial indexing is amortized over many editing sessions, we take these measurements the _second_ time we open the file.",
+   "source": {
+    "title": "Scaling gopls for the growing Go ecosystem",
+    "url": "https://go.dev/blog/gopls-scalability",
+    "author": "Robert Findley, Alan Donovan",
+    "date": "2023-09-08"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-migrating-to-go-modules",
+   "register": "technical",
+   "text": "Go projects use a wide variety of dependency management strategies. Vendoring tools such as dep and glide are popular, but they have wide differences in behavior and don't always work well together. Some projects store their entire GOPATH directory in a single Git repository. Others simply rely on `go get` and expect fairly recent versions of dependencies to be installed in GOPATH.\n\nGo's module system, introduced in Go 1.11, provides an official dependency management solution built into the `go` command. This article describes tools and techniques for converting a project to modules.\n\nPlease note: if your project is already tagged at v2.0.0 or higher, you will need to update your module path when you add a `go.mod` file. We'll explain how to do that without breaking your users in a future article focused on v2 and beyond.\n\nA project might be in one of three states when beginning the transition to Go modules:\n\nThe first case is covered in Using Go Modules; we'll address the latter two in this post.\n\nTo convert a project that already uses a dependency management tool, run the following commands:\n\n$ git clone https://github.com/my/project [...] $ cd project $ cat Godeps/Godeps.json { \"ImportPath\": \"github.com/my/project\", \"GoVersion\": \"go1.12\", \"GodepVersion\": \"v80\", \"Deps\": [ { \"ImportPath\": \"rsc.io/binaryregexp\", \"Comment\": \"v0.2.0-1-g545cabd\", \"Rev\": \"545cabda89ca36b48b8e681a30d9d769a30b3074\" }, { \"ImportPath\": \"rsc.io/binaryregexp/syntax\", \"Comment\": \"v0.2.0-1-g545cabd\", \"Rev\": \"545cabda89ca36b48b8e681a30d9d769a30b3074\" } ] } $ go mod init github.com/my/project go: creating new go.mod: module github.com/my/project go: copying requirements from Godeps/Godeps.json $ cat go.mod module github.com/my/project",
+   "source": {
+    "title": "Migrating to Go Modules",
+    "url": "https://go.dev/blog/migrating-to-go-modules",
+    "author": "Jean Barkhuysen",
+    "date": "2019-08-21"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-survey2019-results",
+   "register": "professional",
+   "text": "I want to start with an enormous **thank you** to the thousands of Go developers who participated in this year’s survey. For 2019, we saw 10,975 responses, nearly twice as many as last year! On behalf of the rest of the team, I cannot adequately stress how much we appreciate you taking the time and effort to tell us about your experiences with Go. Thank you!\n\nSharp-eyed readers may notice that our year-over-year comparisons don’t quite square with numbers we’ve shared in the past. The reason is that from 2016–2018, we calculated percentages for each question using the total number of people who started the survey as the denominator. While that’s nice and consistent, it ignores the fact that not everyone finishes the survey—up to 40% of participants stop before reaching the final page, which meant questions that occurred later in the survey appeared to perform worse solely because they were later. Thus, this year we’ve recalculated all of our results (including the 2016–2018 responses shown in this post) to use the number of people who responded to a given question as the denominator for that question. We’ve included the number of 2019 responses for each chart—in the form of \"n=[number of respondents]\" on the x-axis or in the chart’s legend—to give readers a better understanding of the weight of evidence underlying each finding.",
+   "source": {
+    "title": "Go Developer Survey 2019 Results",
+    "url": "https://go.dev/blog/survey2019-results",
+    "author": "Todd Kulesza",
+    "date": "2020-04-20"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-contributors-summit-2019",
+   "register": "professional",
+   "text": "For the third year in a row, the Go team and contributors convened the day before GopherCon to discuss and plan for the future of the Go project. The event included self-organizing into breakout groups, a town-hall style discussion about the proposal process in the morning, and afternoon break-out roundtable discussions based on topics our contributors chose. We asked five contributors to write about their experience in various discussions at this year’s summit.\n\nThe Go contributors summit was a great opportunity to meet and discuss topics and ideas with others who also contribute to Go.\n\nThe day started out with a time to meet everyone in the room. There was a good mix of the core Go team and others who actively contribute to Go. From there we decided what topics were of interest and how to split the big group into smaller groups. My area of interest is the compiler, so I joined that group and stayed with them for most of the time.\n\nAt our first meeting, a long list of topics were brought up and as a result the compiler group decided to keep meeting throughout the day. I had a few topics of interest that I shared and many that others suggested were also of interest to me. Not all items on the list were discussed in detail; here is my list of those topics which had the most interest and discussion, followed by some brief comments that were made on other topics.",
+   "source": {
+    "title": "Contributors Summit 2019",
+    "url": "https://go.dev/blog/contributors-summit-2019",
+    "author": "Carmen Andoh and contributors",
+    "date": "2019-08-15"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-go.dev",
+   "register": "marketing",
+   "text": "Over the last two years, as we’ve spoken with users at companies of all sizes, we’ve heard three questions repeatedly: who else is using Go, what do they use it for, and how can I find useful Go packages?\n\nToday we are launching go.dev, a new hub for Go developers, to help answer those questions. There you will find a wealth of learning resources to get started with the language, featured use cases, and case studies of companies using Go.\n\n(Note that golang.org is still the home for the open source Go project and the Go distribution. Go.dev is a companion site to provide these supporting resources.)\n\nClicking on Explore brings you to pkg.go.dev, a central source of information about Go packages and modules. Like godoc.org, pkg.go.dev serves Go documentation. However, it also understands modules and has information about all versions of a package, including all releases of the standard library! And it detects and displays licenses and has a better search algorithm. You can follow Go issue 33654 for future developments.\n\nToday’s launch is our minimum viable product for go.dev, so we can share what we’ve built to help the community and get feedback. We intend to expand the site over time. If you have any ideas, suggestions or issues, please let us know via the “Share Feedback” and “Report an Issue” links at the bottom of every page. Or you can send your bugs, ideas, feature requests, and questions to go-discovery-feedback@google.com.",
+   "source": {
+    "title": "Go.dev: a new hub for Go developers",
+    "url": "https://go.dev/blog/go.dev",
+    "author": "Steve Francia and Julie Qiu",
+    "date": "2019-11-13"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-10years",
+   "register": "marketing",
+   "text": "This weekend we celebrate the 10th anniversary of the Go release, marking the 10th birthday of Go as an open-source programming language and ecosystem for building modern networked software.\n\nTo mark the occasion, Renee French, the creator of the Go gopher, painted this delightful scene:\n\nCelebrating 10 years of Go makes me think back to early November 2009, when we were getting ready to share Go with the world. We didn’t know what kind of reaction to expect, whether anyone would care about this little language. I hoped that even if no one ended up using Go, we would at least have drawn attention to some good ideas, especially Go’s approach to concurrency and interfaces, that could influence follow-on languages.\n\nOnce it became clear that people were excited about Go, I looked at the history of popular languages like C, C++, Perl, Python, and Ruby, examining how long each took to gain widespread adoption. For example, Perl seemed to me to have appeared fully-formed in the mid-to-late 1990s, with CGI scripts and the web, but it was first released in 1987. This pattern repeated for almost every language I looked at: it seems to take roughly a decade of quiet, steady improvement and dissemination before a new language really takes off.",
+   "source": {
+    "title": "Go Turns 10",
+    "url": "https://go.dev/blog/10years",
+    "author": "Russ Cox, for the Go team",
+    "date": "2019-11-08"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-go1.13",
+   "register": "marketing",
+   "text": "Today the Go team is very happy to announce the release of Go 1.13. You can get it from the download page.\n\nFor the complete list of changes and more information about the improvements above, see the **Go 1.13 release notes**.\n\nWe want to thank everyone who contributed to this release by writing code, filing bugs, providing feedback, and/or testing the beta and release candidates. Your contributions and diligence helped to ensure that Go 1.13 is as stable as possible. That said, if you notice any problems, please file an issue.",
+   "source": {
+    "title": "Go 1.13 is released",
+    "url": "https://go.dev/blog/go1.13",
+    "author": "Andrew Bonventre",
+    "date": "2019-09-03"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-go1.14",
+   "register": "marketing",
+   "text": "Today the Go team is very happy to announce the release of Go 1.14. You can get it from the download page.\n\nFor the complete list of changes and more information about the improvements above, see the **Go 1.14 release notes**.\n\nWe want to thank everyone who contributed to this release by writing code, filing bugs, providing feedback, and/or testing the beta and release candidate. Your contributions and diligence helped to ensure that Go 1.14 is as stable as possible. That said, if you notice any problems, please file an issue.",
+   "source": {
+    "title": "Go 1.14 is released",
+    "url": "https://go.dev/blog/go1.14",
+    "author": "Alex Rakoczy",
+    "date": "2020-02-25"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-go1.16",
+   "register": "marketing",
+   "text": "Today the Go team is very happy to announce the release of Go 1.16. You can get it from the download page.\n\nThe new embed package provides access to files embedded at compile time using the new `//go:embed` directive. Now it is easy to bundle supporting data files into your Go programs, making developing with Go even smoother. You can get started using the embed package documentation. Carl Johnson has also written a nice tutorial, “How to use Go embed”.\n\nGo 1.16 also adds macOS ARM64 support (also known as Apple silicon). Since Apple’s announcement of their new arm64 architecture, we have been working closely with them to ensure Go is fully supported; see our blog post “Go on ARM and Beyond” for more.\n\nNote that Go 1.16 requires use of Go modules by default, now that, according to our 2020 Go Developer Survey, 96% of Go developers have made the switch. We recently added official documentation for developing and publishing modules.\n\nFinally, there are many other improvements and bug fixes, including builds that are up to 25% faster and use as much as 15% less memory. For the complete list of changes and more information about the improvements above, see the Go 1.16 release notes.",
+   "source": {
+    "title": "Go 1.16 is released",
+    "url": "https://go.dev/blog/go1.16",
+    "author": "Matt Pearring, Dmitri Shuralyov",
+    "date": "2021-02-16"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-pkg.go.dev-2020",
+   "register": "marketing",
+   "text": "As part of the site, we also launched pkg.go.dev, a central source of information about Go packages and modules. Like godoc.org, pkg.go.dev serves Go documentation. However, it also understands modules and has information about past versions of a package!\n\nThroughout this year, we will be adding features to pkg.go.dev to help our users better understand their dependencies and help them make better decisions around what libraries to import.\n\nTo minimize confusion about which site to use, later this year we are planning to redirect traffic from godoc.org to the corresponding page on pkg.go.dev. We need your help to ensure that pkg.go.dev addresses all of our users' needs. We encourage everyone to begin using pkg.go.dev today for all of their needs and provide feedback.\n\nYour feedback will inform our transition plan, with the goal of making pkg.go.dev our primary source of information and documentation for packages and modules. We’re sure there are things that you want to see on pkg.go.dev, and we want to hear from you about what those features are!\n\nAs part of this transition, we will also be discussing plans for API access to pkg.go.dev. We will be posting updates on Go issue 33654.\n\nSince our launch in November, we’ve received tons of great feedback about pkg.go.dev from Go users. For the remainder of this post, we thought it would be helpful to answer some frequently asked questions.",
+   "source": {
+    "title": "Next steps for pkg.go.dev",
+    "url": "https://go.dev/blog/pkg.go.dev-2020",
+    "author": "Julie Qiu",
+    "date": "2020-01-31"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-modules2019",
+   "register": "technical",
+   "text": "2018 was a great year for the Go ecosystem, with package management as one of our major focuses. In February, we started a community-wide discussion about how to integrate package management directly into the Go toolchain, and in August we delivered the first rough implementation of that feature, called Go modules, in Go 1.11. The migration to Go modules will be the most far-reaching change for the Go ecosystem since Go 1. Converting the entire ecosystem—code, users, tools, and so on—from GOPATH to modules will require work in many different areas. The module system will in turn help us deliver better authentication and build speeds to the Go ecosystem.\n\nThis post is a preview of what the Go team is planning relating to modules in 2019.\n\nGo 1.11, released in August 2018, introduced preliminary support for modules. For now, module support is maintained alongside the traditional GOPATH-based mechanisms. The `go` command defaults to module mode when run in directory trees outside GOPATH/src and marked by `go.mod` files in their roots. This setting can be overridden by setting the transitional environment variable `$GO111MODULE` to `on` or `off`; the default behavior is `auto` mode. We’ve already seen significant adoption of modules across the Go community, along with many helpful suggestions and bug reports to help us improve modules.",
+   "source": {
+    "title": "Go Modules in 2019",
+    "url": "https://go.dev/blog/modules2019",
+    "author": "Russ Cox",
+    "date": "2018-12-19"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-gopls-vscode-go",
+   "register": "technical",
+   "text": "We're happy to announce that the VS Code Go extension now enables the gopls language server by default, to deliver more robust IDE features and better support for Go modules.\n\n_(`gopls` provides IDE features, such as intelligent autocompletion, signature help, refactoring, and workspace symbol search.)_\n\nWhen Go modules were released two years ago, they completely changed the landscape of Go developer tooling. Tools like `goimports` and `godef` previously depended on the fact that code was stored in your `$GOPATH`. When the Go team began rewriting these tools to work with modules, we immediately realized that we needed a more systematic approach to bridge the gap.\n\nAs a result, we began working on a single Go language server, `gopls`, which provides IDE features, such as autocompletion, formatting, and diagnostics to any compatible editor frontend. This persistent and unified server is a fundamental shift from the earlier collections of command-line tools.\n\nIn addition to working on `gopls`, we sought other ways of creating a stable ecosystem of editor tooling. Last year, the Go team took responsibility for the Go extension for VS Code. As part of this work, we smoothed the extension’s integration with the language server—automating `gopls` updates, rearranging and clarifying `gopls` settings, improving the troubleshooting workflow, and soliciting feedback through a survey. We’ve also continued to foster a community of active users and contributors who have helped us improve the stability, performance, and user experience of the Go extension.",
+   "source": {
+    "title": "Gopls on by default in the VS Code Go extension",
+    "url": "https://go.dev/blog/gopls-vscode-go",
+    "author": "Go tools team",
+    "date": "2021-02-01"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-fuzz-beta",
+   "register": "technical",
+   "text": "We are excited to announce that native fuzzing is ready for beta testing on tip!\n\nFuzzing is a type of automated testing which continuously manipulates inputs to a program to find issues such as panics or bugs. These semi-random data mutations can discover new code coverage that existing unit tests may miss, and uncover edge case bugs which would otherwise go unnoticed. Since fuzzing can reach these edge cases, fuzz testing is particularly valuable for finding security exploits and vulnerabilities.\n\nThis builds the Go toolchain from the master branch. After running this, `gotip` can act as a drop-in replacement for the `go` command. You can now run commands like\n\nA fuzz test must be in a \\*\\_test.go file as a function in the form `FuzzXxx`. This function must be passed a` *testing.F` argument, much like a `*testing.T` argument is passed to a `TestXxx` function.\n\nBelow is an example of a fuzz test that’s testing the behavior of the net/url package.\n\nYou can read more about fuzzing at pkg.go.dev, including an overview of fuzzing with Go and the godoc for the new `testing.F` type.\n\nThis is a new feature that's still in beta, so you should expect some bugs and an incomplete feature set. Check the issue tracker for issues labelled “fuzz” to stay up-to-date on existing bugs and missing features.",
+   "source": {
+    "title": "Fuzzing is Beta Ready",
+    "url": "https://go.dev/blog/fuzz-beta",
+    "author": "Katie Hockman, Jay Conrod",
+    "date": "2021-06-03"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-go116-module-changes",
+   "register": "technical",
+   "text": "We hope you're enjoying Go 1.16! This release has a lot of new features, especially for modules. The release notes describe these changes briefly, but let's explore a few of them in depth.\n\nThe `go` command now builds packages in module-aware mode by default, even when no `go.mod` is present. This is a big step toward using modules in all projects.\n\nIt's still possible to build packages in GOPATH mode by setting the `GO111MODULE` environment variable to `off`. You can also set `GO111MODULE` to `auto` to enable module-aware mode only when a go.mod file is present in the current directory or any parent directory. This was previously the default. Note that you can set `GO111MODULE` and other variables permanently with `go env -w`:\n\nWe plan to drop support for GOPATH mode in Go 1.17. In other words, Go 1.17 will ignore `GO111MODULE`. If you have projects that do not build in module-aware mode, now is the time to migrate. If there is a problem preventing you from migrating, please consider filing an issue or an experience report.\n\nPreviously, when the `go` command found a problem with `go.mod` or `go.sum` like a missing `require` directive or a missing sum, it would attempt to fix the problem automatically. We received a lot of feedback that this behavior was surprising, especially for commands like `go list` that don't normally have side effects. The automatic fixes weren't always desirable: if an imported package wasn't provided by any required module, the `go` command would add a new dependency, possibly triggering upgrades of common dependencies. Even a misspelled import path would result in a (failed) network lookup.",
+   "source": {
+    "title": "New module changes in Go 1.16",
+    "url": "https://go.dev/blog/go116-module-changes",
+    "author": "Jay Conrod",
+    "date": "2021-02-18"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-contributor-workshop",
+   "register": "professional",
+   "text": "During the community day at GopherCon, the Go team held two workshops where we worked with people to help them make their first contribution to the Go project. This was the first time the Go project has ever attempted anything like this. We had about 140 participants and about 35 people who volunteered as mentors. Mentors not only received warm fuzzy feelings for helping others, but also a very stylish Go Mentor trucker hat. We had contributors of all ages and experience levels coming from North and South America, Africa, Europe, Asia, and Australia. It was truly a worldwide effort of Gophers coming together at GopherCon.\n\nOne of our reasons for running the workshop was for it to act as a forcing function to make us improve our contributor experience. In preparation for the workshop, we rewrote our contributor guide, including adding a \"troubleshooting\" section and built a tool `go-contrib-init`, which automated the process of setting up a development environment to be able to contribute to Go.\n\nFor the workshop itself, we developed a presentation _\"Contributing to Go,\"_ and a dashboard / scoreboard that was presented during the event. The scoreboard was designed to encourage us all to work together towards a common goal of seeing our collective score increase. Participants added 1, 2 or 3 points to the total score when they performed actions like registering an account, making a change list (also known as a CL, similar to a pull request), amending a CL, or submitting a CL.",
+   "source": {
+    "title": "Contribution Workshop",
+    "url": "https://go.dev/blog/contributor-workshop",
+    "author": "Steve Francia, Cassandra Salisbury, Matt Broberg, Dmitri Shuralyov",
+    "date": "2017-08-09"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-gophercon2015",
+   "register": "professional",
+   "text": "A few weeks ago, Go programmers from around the world descended on Denver, Colorado for GopherCon 2015. The two-day, single-track conference attracted more than 1,250 attendees—nearly double last year's number—and featured 22 talks presented by Go community members.\n\nToday the organizers have posted the videos online so you can now enjoy the conference from afar:\n\nThe hack day was also a ton of fun, with hours of lightning talks and a range of activities from programming robots to a Magic: the Gathering tournament.\n\nHuge thanks to the event organizers Brian Ketelsen and Eric St. Martin and their production team, the sponsors, the speakers, and the attendees for making this such a fun and action-packed conference. Hope to see you there next year!",
+   "source": {
+    "title": "GopherCon 2015 Roundup",
+    "url": "https://go.dev/blog/gophercon2015",
+    "author": "Andrew Gerrand",
+    "date": "2015-07-28"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "go-open-source",
+   "register": "professional",
+   "text": "Thank you all for traveling to Denver to be here, and thank you to everyone watching on video. If this is your first Gophercon, welcome. If you were here last year, welcome back. Thank you to the organizers for all the work it takes to make a conference like this happen. I am thrilled to be here and to be able to talk to all of you.\n\nI am the tech lead for the Go project and the Go team at Google. I share that role with Rob Pike. In that role, I spend a lot of time thinking about the overall Go open source project, in particular the way it runs, what it means to be open source, and the interaction between contributors inside and outside Google. Today I want to share with you how I see the Go project as a whole and then based on that explain how I see the Go open source project evolving.\n\nTo get started, we have to go back to the beginning. Why did we start working on Go?\n\nGo is an attempt to make programmers more productive. We wanted to improve the software development process at Google, but the problems Google has are not unique to Google.",
+   "source": {
+    "title": "Go, Open Source, Community",
+    "url": "https://go.dev/blog/open-source",
+    "author": "Russ Cox",
+    "date": "2015-07-08"
+   },
+   "licence": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-update-on-crates.io-incident",
+   "register": "professional",
+   "text": "On Monday, Oct 15, starting at approximately 20:00 UTC, crates.io sustained an operational incident. You can find the status page report here and our tweets about it here.\n\nA user called `cratesio` was created on crates.io and proceeded to upload packages using common, short names. These packages contained nothing beyond a `Cargo.toml` file and a `README.md` instructing users that if they wanted to use the name, they should open an issue on the crates.io issue tracker.\n\nThe rate at which this user uploaded packages eventually resulted in our servers being throttled by GitHub, causing a slowdown in all package uploads or yanks. Endpoints which did not involve updating the index were unaffected.\n\nWe decided to take action on this behavior because: - The contents of the uploaded packages appeared to be an attempt to impersonate the crates.io team (both through the username `cratesio`, as well as directing people to the crates-io issue tracker in the crates' `Readme` files) - the rate of uploading impacted the stability of the service\n\nThe user's IP address was banned immediately. We then backdated the users' packages to remove their packages from the homepage. We also redirected the `cratesio` user's page to a 404.\n\nFinally, the `cratesio` user and all crates they uploaded were deleted. The user was reported to GitHub, and has since been banned by them.",
+   "source": {
+    "title": "Update on the October 15, 2018 incident on crates.io",
+    "url": "https://blog.rust-lang.org/2018/10/19/Update-on-crates.io-incident/",
+    "author": "The Crates.io Team",
+    "date": "2018-10-19"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-security-advisory-for-std",
+   "register": "professional",
+   "text": "The Rust team was recently notified of a security vulnerability affecting the standard library's `str::repeat` function. When passed a large number this function has an integer overflow which can lead to an out of bounds write. If you are not using `str::repeat`, you are not affected.\n\nWe're in the process of applying for a CVE number for this vulnerability. Fixes for this issue have landed in the Rust repository for the stable/beta/master branches. Nightlies and betas with the fix will be produced tonight, and 1.29.1 will be released on 2018-09-25 with the fix for stable Rust.\n\nYou can find the full announcement on our rustlang-security-announcements mailing list [here].",
+   "source": {
+    "title": "Security advisory for the standard library",
+    "url": "https://blog.rust-lang.org/2018/09/21/Security-advisory-for-std/",
+    "author": "The Rust Core Team",
+    "date": "2018-09-21"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-crates-io-security-session-cookies",
+   "register": "technical",
+   "text": "Today the crates.io team discovered that the contents of the `cargo_session` cookie were being persisted to our error monitoring service, Sentry, as part of event payloads sent when an error occurs in the crates.io backend. The value of this cookie is a signed value that identifies the currently logged in user, and therefore these cookie values could be used to impersonate any logged in user.\n\nSentry access is limited to a trusted subset of the crates.io team, Rust infrastructure team, and the crates.io on-call rotation team, who already have access to the production environment of crates.io. There is no evidence that these values were ever accessed or used.\n\nNevertheless, out of an abundance of caution, we have taken these actions today:\n\nNote that API tokens are **not** affected by this: they are transmitted using the `Authorization` HTTP header, and were already properly redacted before events were stored in Sentry. All existing API tokens will continue to work.\n\nWe apologise for the inconvenience. If you have any further questions, please contact us on Zulip or GitHub.",
+   "source": {
+    "title": "crates.io security incident: improperly stored session cookies",
+    "url": "https://blog.rust-lang.org/2025/04/11/crates-io-security-session-cookies/",
+    "author": "Adam Harvey",
+    "date": "2025-04-11"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-rust-1.0@0",
+   "register": "marketing",
+   "text": "Rust 1.0 is on its way! We have nailed down a concrete list of features and are hard at work on implementing them. We plan to ship the 1.0 beta around the end of the year. If all goes well, this will go on to become the 1.0 release after the beta period. After 1.0 is released, future 1.x releases will be backwards compatible, meaning that existing code will continue to compile unmodified (modulo compiler bugs, of course).\n\nOf course, a Rust 1.0 release means something more than \"your code will continue to compile\". Basically, it means that we think the design of Rust finally feels right. More specifically, it feels *minimal*. The language itself is now focused on a simple core concept, which we call ownership and borrowing (more on this later). Leveraging ownership and borrowing, we have been able to build up everything else that we have needed in libraries. This is very exciting, because any library we can write, you can write too. This really gives us confidence that Rust will not only achieve its original goals but also go beyond and be used for all kinds of things that we haven't even envisioned.\n\nRust has gone through a long evolution. If you haven't looked at Rust in a while, you may be surprised at what you see: over the last year, we've been radically simplifying the design. As a prominent example, Rust once featured several pointer types, indicated by various sigils: these are gone, and only the reference types (`&T`, `&mut T`) remain. We have also been able to consolidate and simplify a number of other language features, such as closures, that once sported a wide variety of options. (Some of these changes are still in progress.)",
+   "source": {
+    "title": "Road to Rust 1.0",
+    "url": "https://blog.rust-lang.org/2014/09/15/Rust-1.0/",
+    "author": "Niko Matsakis",
+    "date": "2014-09-15"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-rust-1.41.0",
+   "register": "marketing",
+   "text": "The Rust team is happy to announce a new version of Rust, 1.41.0. Rust is a programming language that is empowering everyone to build reliable and efficient software.\n\nIf you have a previous version of Rust installed via rustup, getting Rust 1.41.0 is as easy as:\n\nIf you don't have it already, you can get `rustup` from the appropriate page on our website, and check out the detailed release notes for 1.41.0 on GitHub.\n\nThe highlights of Rust 1.41.0 include relaxed restrictions for trait implementations, improvements to `cargo install`, a more `git`-friendly `Cargo.lock`, and new FFI-related guarantees for `Box<T>`. See the detailed release notes to learn about other changes not covered by this post.\n\nTo prevent breakages in the ecosystem when a dependency adds a new trait `impl`, Rust enforces the *orphan rule*. The gist of it is that a trait `impl` is only allowed if either the trait or the type being implemented is *local* to (defined in) the current crate as opposed to a *foreign* crate. What this means exactly is complicated, however, when generics are involved.\n\nBefore Rust 1.41.0, the orphan rule was unnecessarily strict, getting in the way of composition. As an example, suppose your crate defines the `BetterVec<T>` struct, and you want a way to convert your struct to the standard library's `Vec<T>`. The code you would write is:",
+   "source": {
+    "title": "Announcing Rust 1.41.0",
+    "url": "https://blog.rust-lang.org/2020/01/30/Rust-1.41.0/",
+    "author": "The Rust Release Team",
+    "date": "2020-01-30"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-rust-1.51.0",
+   "register": "technical",
+   "text": "The Rust team is happy to announce a new version of Rust, 1.51.0. Rust is a programming language that is empowering everyone to build reliable and efficient software.\n\nIf you have a previous version of Rust installed via rustup, getting Rust 1.51.0 is as easy as:\n\nIf you don't have it already, you can get `rustup` from the appropriate page on our website, and check out the detailed release notes for 1.51.0 on GitHub.\n\nIf we then use `FixedArray<u8>`, the compiler will make a monomorphic version of `FixedArray` that looks like:\n\nThis is a powerful feature that allows you to write reusable code with no runtime overhead. However, until this release it hasn't been possible to easily be generic over the *values* of those types. This was most notable in arrays which include their length in their type definition (`[T; N]`), which previously you could not be generic over. Now with 1.51.0 you can write code that is generic over the values of any integer, `bool`, or `char` type! (Using `struct` or `enum` values is still unstable.)\n\nThis change now lets us have our own array struct that's generic over its type *and* its length. Let's look at an example definition, and how it can be used.",
+   "source": {
+    "title": "Announcing Rust 1.51.0",
+    "url": "https://blog.rust-lang.org/2021/03/25/Rust-1.51.0/",
+    "author": "The Rust Release Team",
+    "date": "2021-03-25"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-rust-1.61.0",
+   "register": "marketing",
+   "text": "The Rust team is happy to announce a new version of Rust, 1.61.0. Rust is a programming language empowering everyone to build reliable and efficient software.\n\nIf you have a previous version of Rust installed via rustup, you can get 1.61.0 with:\n\nIf you don't have it already, you can get `rustup` from the appropriate page on our website, and check out the detailed release notes for 1.61.0 on GitHub.\n\nIf you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel (`rustup default beta`) or the nightly channel (`rustup default nightly`). Please [report] any bugs you might come across!\n\nIn the beginning, Rust `main` functions could only return the unit type `()` (either implicitly or explicitly), always indicating success in the exit status, and if you wanted otherwise you had to call `process::exit(code)`. Since Rust 1.26, `main` has been allowed to return a `Result`, where `Ok` translated to a C `EXIT_SUCCESS` and `Err` to `EXIT_FAILURE` (also debug-printing the error). Under the hood, these alternate return types were unified by an unstable `Termination` trait.\n\nIn this release, that `Termination` trait is finally stable, along with a more general `ExitCode` type that wraps platform-specific return types. That has `SUCCESS` and `FAILURE` constants, and also implements `From<u8>` for more arbitrary values. The `Termination` trait can also be implemented for your own types, allowing you to customize any kind of reporting before converting to an `ExitCode`.",
+   "source": {
+    "title": "Announcing Rust 1.61.0",
+    "url": "https://blog.rust-lang.org/2022/05/19/Rust-1.61.0/",
+    "author": "The Rust Release Team",
+    "date": "2022-05-19"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-rust-1.0-beta",
+   "register": "marketing",
+   "text": "Today we are excited to announce the release of Rust 1.0 beta! The beta release marks a very significant \"state transition\" in the move towards 1.0. In particular, with the beta release, **all libraries and language features that are planned to be stable for 1.0 have been marked as stable**. As such, the beta release represents an accurate preview of what Rust 1.0 will include.\n\nTo see what has changed since 1.0-alpha2, please see the release notes.\n\nThe Beta release also marks a turning point in our approach to stability. During the alpha cycle, the use of unstable APIs and language features was permitted, but triggered a warning. As of the Beta release, the use of unstable APIs will become an error (unless you are using Nightly builds or building from source).\n\nThe Rust ecosystem continues to grow. The crates.io repository just passed 1 million downloads and has over 1,700 crates available. Many of the top crates in crates.io can now be built using only stable Rust, and efforts to port the remainder are underway. Therefore, we are now recommending that new users start with the Beta release, rather than the Nightly builds, and the rustup script will be modified to install Beta by default. (However, it is easy to switch to the Nightly build if some of your dependencies aren't updated yet. See the install page for details.)",
+   "source": {
+    "title": "Announcing Rust 1.0 Beta",
+    "url": "https://blog.rust-lang.org/2015/04/03/Rust-1.0-beta/",
+    "author": "The Rust Core Team",
+    "date": "2015-04-03"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-security-advisory",
+   "register": "professional",
+   "text": "This is a cross-post of the official security advisory. The official post contains a signed version with our PGP key, as well.\n\nThe Rust team was recently notified of a security vulnerability affecting manual implementations of `Error::type_id` and their interaction with the `Error::downcast` family of functions in the standard library. If your code does not manually implement `Error::type_id` your code is not affected.\n\nThe `Error::type_id` function in the standard library was stabilized in the 1.34.0 release on 2019-04-11. This function allows acquiring the concrete `TypeId` for the underlying error type to downcast back to the original type. This function has a default implementation in the standard library, but it can also be overridden by downstream crates. For example, the following is currently allowed on Rust 1.34.0 and Rust 1.34.1:\n\nWhen combined with the `Error::downcast*` family of methods this can enable safe casting of a type to the wrong type, causing security issues such as out of bounds reads/writes/etc.\n\nPrior to the 1.34.0 release this function was not stable and could not be either implemented or called in stable Rust.\n\nThe `Error::type_id` function was first stabilized in Rust 1.34.0, released on 2019-04-11. The Rust 1.34.1 release, published 2019-04-25, is also affected. The `Error::type_id` function has been present, unstable, for all releases of Rust since 1.0.0 meaning code compiled with nightly may have been affected at any time.",
+   "source": {
+    "title": "Security advisory for the standard library",
+    "url": "https://blog.rust-lang.org/2019/05/13/Security-advisory/",
+    "author": "The Rust Core Team",
+    "date": "2019-05-13"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "rust-mdbook-security-advisory",
+   "register": "professional",
+   "text": "> This is a cross-post of the official security advisory. The official post > contains a signed version with our PGP key, as well.\n\nThe Rust Security Response Working Group was recently notified of a security issue affecting the search feature of mdBook, which could allow an attacker to execute arbitrary JavaScript code on the page.\n\nThe search feature of mdBook (introduced in version 0.1.4) was affected by a cross site scripting vulnerability that allowed an attacker to execute arbitrary JavaScript code on an user's browser by tricking the user into typing a malicious search query, or tricking the user into clicking a link to the search page with the malicious search query prefilled.\n\nOwners of websites built with mdBook have to upgrade to mdBook 0.4.5 or greater and rebuild their website contents with it. It's possible to install mdBook 0.4.5 on the local system with:\n\nThanks to Kamil Vavra for responsibly disclosing the vulnerability to us according to our security policy.",
+   "source": {
+    "title": "mdBook security advisory",
+    "url": "https://blog.rust-lang.org/2021/01/04/mdbook-security-advisory/",
+    "author": "Rust Security Response WG",
+    "date": "2021-01-04"
+   },
+   "licence": {
+    "name": "MIT OR Apache-2.0",
+    "url": "https://github.com/rust-lang/blog.rust-lang.org"
+   },
+   "note": "Opening prose paragraphs; links, code and headings removed."
+  },
+  {
+   "id": "govuk-renew-driving-licence",
+   "register": "professional",
+   "text": "It costs £14 when you apply online.\n\nYou must renew a photocard licence every 10 years - you’ll receive a reminder before your current licence ends.\n\nTo renew your licence, you must:\n\nbe a resident of Great Britain (there’s a different service in Northern Ireland)\n\nYou’ll need to apply for your first provisional licence if:\n\nyou’ve never applied for a provisional licence before\n\nyou applied for a provisional licence before 1 March 1973\n\nrenew your licence if you’re 70 or over\n\nrenew a 5-year bus or lorry licence\n\nrenew a short-term medical driving licence\n\nThis page is also available in Welsh (Cymraeg).\n\nIf you cannot use the online service, you can apply at a Post Office or by post.\n\nIf your name, title or signature has changed\n\nYou cannot renew your driving licence online.\n\nIf your signature has changed, you must apply by post or at a Post Office.\n\nIf your name or title has changed, you can only apply by post.",
+   "source": {
+    "title": "Renew your driving licence",
+    "url": "https://www.gov.uk/renew-driving-licence",
+    "author": "GOV.UK",
+    "date": "2025-01-01"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-apply-first-provisional-driving-licence",
+   "register": "professional",
+   "text": "Get your first provisional driving licence for a car, motorbike, moped or other vehicle from DVLA online. To apply you must:\n\nbe at least 15 years and 9 months old\n\nbe able to read a number plate from 20 metres away\n\nhave been given permission to live in Great Britain (England, Scotland and Wales) for at least 185 days\n\nIt costs £34 when you apply online.\n\nIf you applied for a provisional licence before 1 March 1973 you’ll need to use this service to get a new licence.\n\nThis service is also available in Welsh (Cymraeg).\n\nYou’ll need to sign in to use this service. If you do not already have sign in details, you’ll be able to create them.\n\nYou’ll be told when you sign in if you need to prove your identity. This is to keep your details safe and usually involves using photo ID like a passport.\n\nDVLA will send you a confirmation email once you’ve applied.",
+   "source": {
+    "title": "Apply for your first provisional driving licence",
+    "url": "https://www.gov.uk/apply-first-provisional-driving-licence",
+    "author": "GOV.UK",
+    "date": "2025-01-01"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-council-tax",
+   "register": "professional",
+   "text": "You’ll need to know 3 things:\n\nthe valuation band for your home in England and Wales or in Scotland\n\nhow much your local council charges for that band\n\nwhether you can get a discount or exemption from the full bill\n\nYou may be able to get Council Tax Reduction (this used to be called Council Tax Benefit) if you’re on a low income or get benefits.\n\nYou can challenge your Council Tax band if you think your home is in the wrong valuation band.\n\nChanges that may affect your Council Tax band\n\nYour property may be put in a different band in some circumstances, for example if:\n\nyou demolish part of your property and do not rebuild it\n\nyou alter your property to create 2 or more self-contained units, for example an annexe - each unit will have its own band\n\nyou split a single property into self-contained flats\n\nyou convert flats into a single property\n\nyou start or stop working from home",
+   "source": {
+    "title": "How Council Tax works",
+    "url": "https://www.gov.uk/council-tax",
+    "author": "GOV.UK",
+    "date": "2025-02-05"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-jury-service",
+   "register": "professional",
+   "text": "If you get a jury summons in the post, you must respond within 7 days and confirm if you can attend.\n\nYour name was chosen randomly from the electoral register.\n\nYou’ll be part of a jury of 12 people to decide the outcome of a criminal trial.\n\nYou can watch a video about jury service. There’s also a Welsh language version of the video.\n\nThere are different rules for jury service in Scotland and jury service in Northern Ireland.\n\nThis guide is also available in Welsh (Cymraeg).\n\nJury service usually lasts up to 10 working days.\n\nIf the trial is likely to last longer than 10 days, jury staff will let you know. If the trial is shorter than 10 days, you may be asked to be a juror on other trials.\n\nYou’ll usually need to be at court from 10am to 5:30pm Monday to Friday, but times can vary.\n\nYou’ll need to arrive at court earlier on your first day. Check your summons letter for the exact time.",
+   "source": {
+    "title": "Jury service",
+    "url": "https://www.gov.uk/jury-service",
+    "author": "GOV.UK",
+    "date": "2021-05-14"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-pay-self-assessment-tax-bill",
+   "register": "professional",
+   "text": "The deadlines for paying your tax bill are usually:\n\n31 January - for any tax you owe for the previous tax year (known as a balancing payment) and your first payment on account\n\n31 July for your second payment on account\n\nThis guide is also available in Welsh (Cymraeg).\n\nYou can also use the HMRC app to pay your bill through your bank’s app or using online banking.\n\nYou can pay the amount you owe in instalments before the deadline, if you prefer. You can do this by:\n\nsetting up weekly or monthly payments towards your bill\n\nmaking one-off payments through your online bank account, using online or telephone banking (Faster Payments), setting up single Direct Debits or by posting cheques\n\nYou can get help if you cannot pay your tax bill on time.\n\nMake sure you pay HM Revenue and Customs (HMRC) by the deadline. You’ll be charged interest and may be charged a penalty if your payment is late.",
+   "source": {
+    "title": "Pay your Self Assessment tax bill",
+    "url": "https://www.gov.uk/pay-self-assessment-tax-bill",
+    "author": "GOV.UK",
+    "date": "2024-11-22"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-universal-credit",
+   "register": "professional",
+   "text": "Universal Credit is a payment to help with your living costs. It’s paid monthly - or twice a month for some people in Scotland.\n\nYou may be able to get it if you’re on a low income, out of work or you cannot work.\n\nThis guide is also available in Welsh (Cymraeg) and in an easy read format.\n\nIf you live in Northern Ireland, go to Universal Credit in Northern Ireland.\n\nSign in to your Universal Credit account if you already have one.\n\nIf you already get other benefits\n\nUniversal Credit is replacing Housing Benefit and income-related Employment and Support Allowance (ESA).\n\nIf you’re getting these benefits, you do not need to do anything unless either:\n\nyou get a letter called a ‘Migration Notice’ telling you that you must claim Universal Credit\n\nIf you get a Migration Notice, you must move to Universal Credit by the deadline date in your letter to keep getting financial support.\n\nYou’ll stop getting these benefits when you or your partner claim Universal Credit. If you or your partner gets Pension Credit, this will also stop if one of you claims Universal Credit.",
+   "source": {
+    "title": "Universal Credit",
+    "url": "https://www.gov.uk/universal-credit",
+    "author": "GOV.UK",
+    "date": "2024-10-17"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-tax-on-your-private-pension",
+   "register": "professional",
+   "text": "Your private pension contributions are tax-free up to certain limits.\n\nThis applies to most private pension schemes, for example:\n\noverseas pension schemes that qualify for UK tax relief - ask your provider if it’s a ‘qualifying overseas pension scheme’\n\nPension schemes must be registered with HM Revenue and Customs (HMRC) to qualify for tax relief. Check with your pension provider if you’re unsure if your scheme is registered or not.\n\nYou pay tax when you take money out of a pension.\n\nThis guide is also available in Welsh (Cymraeg).\n\nYou usually pay tax if savings in your pension pots go above:\n\n100% of your earnings in a year - this is the limit on tax relief you get\n\n£60,000 a year - check your ‘annual allowance’\n\nYou also pay tax on contributions if your pension provider:\n\nis not registered for tax relief with HMRC\n\ndoes not invest your pension pot according to HMRC’s rules\n\nYou can get tax relief on private pension contributions worth up to 100% of your annual earnings.",
+   "source": {
+    "title": "Tax on your private pension contributions",
+    "url": "https://www.gov.uk/tax-on-your-private-pension",
+    "author": "GOV.UK",
+    "date": "2024-11-08"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "govuk-student-finance",
+   "register": "professional",
+   "text": "You may be eligible for student finance to help you study at university or college.\n\nFor example, you may be able to apply for:\n\na Tuition Fee Loan to help pay the course tuition fees charged by your university or college\n\na Maintenance Loan to help pay for things like rent, food, books, travel and other living costs\n\nTuition Fee Loans are paid directly to your university or college. Maintenance Loans are paid into your bank account.\n\nAny loan you borrow needs to be paid back, but not until you’ve finished or left your course, and you earn over a certain amount.\n\nYou might get extra financial help on top of this, for example if you’re on a low income, are disabled or have children. You do not usually need to pay back this extra help.\n\nYou may be able to get student finance even if you’re not from the UK.\n\nStudent finance is changing. If your course starts on or after 1 January 2027, find out what you could get.",
+   "source": {
+    "title": "Student finance for undergraduates",
+    "url": "https://www.gov.uk/student-finance",
+    "author": "GOV.UK",
+    "date": "2025-01-02"
+   },
+   "licence": {
+    "name": "Open Government Licence v3.0",
+    "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+   },
+   "note": "Paragraphs and list items from the page body, markup removed."
+  },
+  {
+   "id": "so-8881376",
+   "register": "casual",
+   "text": "Strings are immutable. That means once you've created the String, if another process can dump memory, there's no way (aside from reflection) you can get rid of the data before garbage collection kicks in.\nWith an array, you can explicitly wipe the data after you're done with it. You can overwrite the array with anything you like, and the password won't be present anywhere in the system, even before garbage collection.\nSo yes, this is a security concern - but even using char[] only reduces the window of opportunity for an attacker, and it's only for this specific type of attack.\nAs noted in the comments, it's possible that arrays being moved by the garbage collector will leave stray copies of the data in memory. I believe this is implementation-specific - the garbage collector may clear all memory as it goes, to avoid this sort of thing. Even if it does, there's still the time during which the char[] contains the actual characters as an attack window.",
+   "source": {
+    "title": "Why is char[] preferred over String for passwords? (answer)",
+    "url": "https://stackoverflow.com/a/8881376",
+    "author": "Jon Skeet",
+    "date": "2012-01-16"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-10999165",
+   "register": "casual",
+   "text": "Matthew’s answer is great for removing remote branches, and I also appreciate the explanation, but to make a simple distinction between the two commands:\n\nTo remove a local branch from your machine: git branch -d {local_branch} Use -D instead of -d to force deletion without checking the merged status.\n\nTo remove a remote branch from the server: git push origin -d {remote_branch}.\n\nReference: Git: Delete a branch (local or remote).",
+   "source": {
+    "title": "How do I delete a Git branch locally and remotely? (answer)",
+    "url": "https://stackoverflow.com/a/10999165",
+    "author": "Eric Brotto",
+    "date": "2012-06-12"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-1733489",
+   "register": "casual",
+   "text": "While parsing arbitrary HTML with only a regex is impossible, it's sometimes appropriate to use them for parsing a limited, known set of HTML.\nIf you have a small set of HTML pages that you want to scrape data from and then stuff into a database, regexes might work fine.  For example, I recently wanted to get the names, parties, and districts of Australian federal Representatives, which I got off of the Parliament's web site.  This was a limited, one-time job.\nRegexes worked just fine for me, and were very fast to set up.",
+   "source": {
+    "title": "RegEx match open tags except XHTML self-contained tags (answer)",
+    "url": "https://stackoverflow.com/a/1733489",
+    "author": "Kaitlin Duck Sherwood",
+    "date": "2009-11-14"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-73357",
+   "register": "casual",
+   "text": "First:\nyy or Y to copy the line (mnemonic: yank)\nor\ndd to delete the line (Vim copies what you deleted into a clipboard-like \"register\", like a cut operation)\nthen:\np to paste the copied or deleted text after the current line\nor\nShift + P to paste the copied or deleted text before the current line",
+   "source": {
+    "title": "How to duplicate a whole line in Vim? (answer)",
+    "url": "https://stackoverflow.com/a/73357",
+    "author": "Mark Biek",
+    "date": "2008-09-16"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-235841",
+   "register": "casual",
+   "text": "Use the > command. To indent five lines, 5>>. To mark a block of lines and indent it, Vjj> to indent three lines (Vim only). To indent a curly-braces block, put your cursor on one of the curly braces and use >% or from anywhere inside block use >iB.\n\nIf you’re copying blocks of text around and need to align the indent of a block in its new location, use ]p instead of just p. This aligns the pasted block with the surrounding text.\n\nAlso, the shiftwidth setting allows you to control how many spaces to indent.",
+   "source": {
+    "title": "Indent multiple lines quickly in vi (answer)",
+    "url": "https://stackoverflow.com/a/235841",
+    "author": "Greg Hewgill",
+    "date": "2008-10-25"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-105074",
+   "register": "casual",
+   "text": "UUIDs (Universally Unique IDentifier), also known as GUIDs (Globally Unique IDentifier), according to RFC 4122, are identifiers designed to provide certain uniqueness guarantees.\nWhile it is possible to implement RFC-compliant UUIDs in a few lines of JavaScript code (e.g., see @broofa's answer, below) there are several common pitfalls:\n\nInvalid id format (UUIDs must be of the form \"xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx\", where x is one of [0-9, a-f] M is one of [1-5], and N is [8, 9, a, or b]\nUse of a low-quality source of randomness (such as Math.random)\n\nThus, developers writing code for production environments are encouraged to use a rigorous, well-maintained implementation such as the uuid module.",
+   "source": {
+    "title": "How do I create a GUID / UUID? (answer)",
+    "url": "https://stackoverflow.com/a/105074",
+    "author": "John Millikin",
+    "date": "2008-09-19"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-105734",
+   "register": "casual",
+   "text": "Just the $ (dollar sign) key.  You can use A to move to the end of the line and switch to editing mode (Append).  To jump to the last non-blank character, you can press g then _ keys.\nThe opposite of A is I (Insert mode at beginning of line), as an aside.  Pressing just the ^ will place your cursor at the first non-white-space character of the line.",
+   "source": {
+    "title": "How do I move to end of line in Vim? (answer)",
+    "url": "https://stackoverflow.com/a/105734",
+    "author": "dvorak",
+    "date": "2008-09-19"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-1758162",
+   "register": "casual",
+   "text": "I think the flaw here is that HTML is a Chomsky Type 2 grammar (context free grammar) and a regular expression is a Chomsky Type 3 grammar (regular grammar). Since a Type 2 grammar is fundamentally more complex than a Type 3 grammar (see the Chomsky hierarchy), you can't possibly make this work.\nBut many will try, and some will even claim success, but that is until others find the fault and will totally mess you up.",
+   "source": {
+    "title": "RegEx match open tags except XHTML self-contained tags (answer)",
+    "url": "https://stackoverflow.com/a/1758162",
+    "author": "NealB",
+    "date": "2009-11-18"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-6841572",
+   "register": "casual",
+   "text": "You've encountered a local time discontinuity:\n\n  When local standard time was about to reach Sunday, 1. January 1928,\n  00:00:00 clocks were turned backward 0:05:52 hours to Saturday, 31.\n  December 1927, 23:54:08 local standard time instead\n\nThis is not particularly strange and has happened pretty much everywhere at one time or another as timezones were switched or changed due to political or administrative actions.",
+   "source": {
+    "title": "Why is subtracting these two epoch-milli Times (in year 1927) giving a strange result? (answer)",
+    "url": "https://stackoverflow.com/a/6841572",
+    "author": "Michael Borgwardt",
+    "date": "2011-07-27"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-134957",
+   "register": "casual",
+   "text": "Neither.  \n\nIf you can have an actual URL that makes sense use that as the HREF.  The onclick won't fire if someone middle-clicks on your link to open a new tab or if they have JavaScript disabled.\n\nIf that is not possible, then you should at least inject the anchor tag into the document with JavaScript and the appropriate click event handlers.  \n\nI realize this isn't always possible, but in my opinion it should be striven for in developing any public website.\n\nCheck out Unobtrusive JavaScript and Progressive enhancement (both Wikipedia).",
+   "source": {
+    "title": "Which \"href\" value should I use for JavaScript links, \"#\" or \"javascript:void(0)\"? (answer)",
+    "url": "https://stackoverflow.com/a/134957",
+    "author": "Aaron Wagner",
+    "date": "2008-09-25"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-16761439",
+   "register": "casual",
+   "text": "If your purpose is the isolation, I think Docker is what you want.\n\nVagrant is a virtual machine manager. It allows you to script the virtual machine configuration as well as the provisioning. However, it is still a virtual machine depending on VirtualBox (or others) with a huge overhead. It requires you to have a hard drive file that can be huge, it takes a lot of ram, and performance may be not very good.\n\nDocker on the other hand uses kernel cgroup and namespacing via LXC. It means that you are using the same kernel as the host and the same file system.\nYou can use Dockerfile with the docker build command in order to handle the provisioning and configuration of your container. You have an example at docs.docker.com on how to make your Dockerfile; it is very intuitive.\n\nThe only reason you could want to use Vagrant is if you need to do BSD, Windows or other non-Linux development on your Ubuntu box. Otherwise, go for Docker.",
+   "source": {
+    "title": "Should I use Vagrant or Docker for creating an isolated environment? (answer)",
+    "url": "https://stackoverflow.com/a/16761439",
+    "author": "creack",
+    "date": "2013-05-26"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-60180",
+   "register": "casual",
+   "text": "I'd recommend using PDO (PHP Data Objects) to run parameterized SQL queries.\nNot only does this protect against SQL injection, but it also speeds up queries.\nAnd by using PDO rather than mysql_, mysqli_, and pgsql_ functions, you make your application a little more abstracted from the database, in the rare occurrence that you have to switch database providers.",
+   "source": {
+    "title": "How can I prevent SQL injection in PHP? (answer)",
+    "url": "https://stackoverflow.com/a/60180",
+    "author": "Kibbee",
+    "date": "2008-09-13"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-5708510",
+   "register": "casual",
+   "text": "INNER JOIN gets all records that are common between both tables based on the supplied ON clause.\n\nLEFT JOIN gets all records from the LEFT linked and the related record from the right table ,but if you have selected some columns from the RIGHT table, if there is no related records, these columns will contain NULL.\n\nRIGHT JOIN is like the above but gets all records in the RIGHT table.\n\nFULL JOIN gets all records from both tables and puts NULL in the columns where related records do not exist in the opposite table.",
+   "source": {
+    "title": "What's the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN and FULL JOIN? (answer)",
+    "url": "https://stackoverflow.com/a/5708510",
+    "author": "Brian Leeming",
+    "date": "2011-04-18"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-202528",
+   "register": "casual",
+   "text": "This question is asked a lot, but I think you should step back and ask yourself why you want to validate email adresses syntactically? What is the benefit really?\n\nIt will not catch common typos.\nIt does not prevent people from entering invalid or made-up email addresses, or entering someone else's address for that matter.\n\nIf you want to validate that an email is correct, you have no choice than to send a confirmation email and have the user reply to that. In many cases you will have to send a confirmation mail anyway for security reasons or for ethical reasons (so you cannot e.g. sign someone up to a service against their will).",
+   "source": {
+    "title": "How can I validate an email address using a regular expression? (answer)",
+    "url": "https://stackoverflow.com/a/202528",
+    "author": "JacquesB",
+    "date": "2008-10-14"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  },
+  {
+   "id": "so-5888753",
+   "register": "casual",
+   "text": "The best I've seen explaining this with examples, diagrams, and even a 'try it yourself' view is here.  \n\nThe diagram below I think gives an instant visual understanding of the difference.\n\nOne thing to keep in mind is standards compliant browsers (IE quirks is an exception) render only the content portion to the given width, so keep track of this in layout calculations.  Also note that border box is seeing somewhat of a comeback with Bootstrap 3 supporting it.",
+   "source": {
+    "title": "What is the difference between margin and padding in CSS? (answer)",
+    "url": "https://stackoverflow.com/a/5888753",
+    "author": "Scott",
+    "date": "2011-05-04"
+   },
+   "licence": {
+    "name": "CC BY-SA (2.5, 3.0 or 4.0, by revision date)",
+    "url": "https://stackoverflow.com/help/licensing"
+   },
+   "note": "Answer body as text; markup removed."
+  }
+ ]
+}
