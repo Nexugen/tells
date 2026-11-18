@@ -1,23 +1,9 @@
-import { existsSync, readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-interface BenchRow { name: string; samples: number; knownTellsPer100: number }
-interface Bench { rows: BenchRow[]; separation?: { auc: number; tellsOnlyAuc: number; test: { human: number; model: number } } }
-
-function loadBench(): Bench | null {
-  const here = dirname(fileURLToPath(import.meta.url));
-  for (const p of [join(here, '..', '..', 'bench', 'results.json'), join(process.cwd(), 'bench', 'results.json')]) {
-    if (existsSync(p)) {
-      try {
-        return JSON.parse(readFileSync(p, 'utf8')) as Bench;
-      } catch {
-        return null;
-      }
-    }
-  }
-  return null;
-}
+// Benchmark figures shown on the page. The source of truth is bench/EVAL.md and bench/RESULTS.md (v2, final round fresh-2 and the locked test split).
+const BENCH = {
+  humanSamples: '10,604', modelSamples: '2,494', prompts: '1,047', genres: 25, sources: 25,
+  freshHuman: 881, freshPlainFlagged: '97.6%', freshAuc: '0.998',
+  testHuman: '2,006', testFlagged: '0.2%', adversarialFlagged: '86%',
+};
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
@@ -29,17 +15,7 @@ Hope this helps! Let me know if you have any questions.`;
 
 /** The landing page served at /. One request, no external assets. */
 export function landingPage(opts: { rewriteOn: boolean; anonTries: number; keyDaily: number }): string {
-  const bench = loadBench();
-  const rows = bench?.rows ?? [];
-  const table = rows.length
-    ? `<table><thead><tr><th>Source</th><th class="n">Samples</th><th class="n">Known tells per 100 words</th></tr></thead><tbody>${rows
-        .map((r) => `<tr><td>${esc(r.name)}</td><td class="n">${r.samples}</td><td class="n">${r.knownTellsPer100}</td></tr>`)
-        .join('')}</tbody></table>`
-    : '<p class="muted">Run the benchmark to fill this table.</p>';
-  const sep = bench?.separation
-    ? `<p>On ${bench.separation.test.human + bench.separation.test.model} held-out samples, a simple model using these signals tells the human writing from the model output with an AUC of ${bench.separation.auc}. Known tells alone reach ${bench.separation.tellsOnlyAuc}. The sets are small and the human writing is a narrow kind, so read the caveats in the results file.</p>`
-    : '';
-
+  const B = BENCH;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -97,7 +73,11 @@ table { width: 100%; border-collapse: collapse; font-size: 15px; }
 th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { font-weight: 600; color: var(--muted); font-size: 13px; }
 td.n, th.n { text-align: right; white-space: nowrap; }
-.scroll { overflow-x: auto; }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0 16px; }
+.fig { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 14px 16px; }
+.fig b { display: block; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 40px; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; white-space: nowrap; }
+@media (max-width: 420px) { .fig { padding: 12px 14px; } .fig b { font-size: 34px; } }
+.fig span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--muted); }
 footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
 </style>
 </head>
@@ -129,13 +109,13 @@ footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
 </div>
 
 <h2>Install</h2>
+<pre><code>npm i tells</code></pre>
+<p>Or run it without installing:</p>
 <pre><code>npx tells lint draft.md
 npx tells lint docs/ --ci --fail-on warning
 npx tells rewrite draft.md --write</code></pre>
 <p>In code:</p>
-<pre><code>npm install tells
-
-import { lint, rewrite } from 'tells';
+<pre><code>import { lint, rewrite } from 'tells';
 const result = lint(draft, { register: 'casual' });
 console.log(result.findings, result.human.missing);</code></pre>
 <p>In CI, inline on the pull request:</p>
@@ -146,10 +126,14 @@ console.log(result.findings, result.human.missing);</code></pre>
 <p>The rewrite works toward the signals as well as away from the tells, and it never makes things up. When a detail would help and your draft does not have it, you get a marked gap in square brackets to fill in yourself.</p>
 
 <h2>Benchmark</h2>
-<div class="scroll">${table}</div>
-${sep}
-<p><b>How often it is wrong.</b> On 881 human texts from sources it had never seen, fetched after tuning stopped and checked once, it raised no warning or error. On the same check it flagged 98% of plain model output of 60 words or more, and 86% of output from prompts that told the model to sound human. One habit alone is only a hint: a warning needs two kinds of evidence. Short casual text is where it is weakest, since a model's text to a friend reads much like a person's. <a href="https://github.com/Nexugen/tells/blob/main/bench/EVAL.md">How it was measured</a>.</p>
-<p class="muted">The tells score counts known rule hits per 100 words. It is not a measure of how human a text sounds, and people trip the rules too. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Full results and caveats</a>.</p>
+<p>We tested it on ${B.humanSamples} human samples written before 2022, from about ${B.sources} sources, and ${B.modelSamples} answers from Claude Haiku, Sonnet and Opus to ${B.prompts} prompts in ${B.genres} genres. A third of the prompts told the model to sound like a person. The final check used a held-out set that tells had never seen, fetched after tuning stopped and scored once.</p>
+<div class="figures">
+  <div class="fig"><b>0</b><span>of ${B.freshHuman} human texts in the held-out set got a warning or error</span></div>
+  <div class="fig"><b>${B.freshPlainFlagged}</b><span>of plain AI text of 60 words or more flagged, same set</span></div>
+  <div class="fig"><b>${B.freshAuc}</b><span>AUC of the human-pattern score, same set</span></div>
+  <div class="fig"><b>${B.testFlagged}</b><span>of ${B.testHuman} human texts in the locked test split got a warning or error</span></div>
+</div>
+<p class="muted">Limits: texts under 60 words are judged by the rules alone, every model tested was a Claude model, and answers from prompts that asked the model to write like a person were caught about ${B.adversarialFlagged} of the time. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Method, data and per-source results</a>.</p>
 
 <h2>API</h2>
 <pre><code>curl -s https://tells.nexugen.app/v1/lint -d '{"text":"Great question! It is robust."}'

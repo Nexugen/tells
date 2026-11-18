@@ -10,6 +10,8 @@ You can try it in a browser at [tells.nexugen.app](https://tells.nexugen.app).
 
 ## Try it
 
+Install it with `npm i tells`, or run it straight from npm with `npx`:
+
 ```sh
 npx tells lint draft.md
 echo "Great question! It's not a tool — it's a movement. Our seamless platform empowers teams to unlock their full potential." | npx tells lint

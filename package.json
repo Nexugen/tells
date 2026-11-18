@@ -48,7 +48,7 @@
     "em-dash",
     "cli"
   ],
-  "homepage": "https://github.com/Nexugen/tells#readme",
+  "homepage": "https://tells.nexugen.app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nexugen/tells.git"
