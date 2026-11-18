@@ -10,7 +10,7 @@ import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
 
-const VERSION = '0.3.2';
+const VERSION = '0.3.3';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 

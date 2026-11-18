@@ -1,0 +1,14 @@
+dev            n   0  with a warning   0%  low score   0%  flagged   0%  score<50   0%  median score -
+test           n 186  with a warning  55%  low score  98%  flagged  98%  score<50  99%  median score 0
+advice         n  54  with a warning  46%  low score  98%  flagged  98%  score<50  98%  median score 0
+howto          n  42  with a warning  40%  low score 100%  flagged 100%  score<50 100%  median score 0
+explain        n  18  with a warning  22%  low score  89%  flagged  89%  score<50 100%  median score 1
+linkedin       n  18  with a warning  78%  low score  94%  flagged 100%  score<50 100%  median score 0
+email          n  30  with a warning 100%  low score 100%  flagged 100%  score<50 100%  median score 0
+article        n  12  with a warning  33%  low score 100%  flagged 100%  score<50 100%  median score 0
+product        n  12  with a warning  75%  low score 100%  flagged 100%  score<50 100%  median score 0
+haiku          n  62  with a warning  50%  low score  97%  flagged  97%  score<50  98%  median score 0
+sonnet         n  62  with a warning  56%  low score  98%  flagged  98%  score<50 100%  median score 0
+opus           n  62  with a warning  60%  low score  98%  flagged 100%  score<50 100%  median score 0
+rules that stand: unfilled-placeholder 47, bold-label-list 25, bold-lead 23, hashtag 12, chatbot-closer 12, corporate-excitement 10, listicle-intro 8, whether-youre 8, fragment-triad 8, upbeat-close 8, emoji 6, stock-courtesy 6, email-boilerplate 6, assistant-leak 5, ordinal-sequence 5, ai-vocabulary 4, stock-warmth 2, stock-hook 1, slogan-ending 1, exclamation 1, benefit-cliche 1
+wrote 186 fixtures

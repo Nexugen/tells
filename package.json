@@ -1,6 +1,6 @@
 {
   "name": "@nexugen/tells",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rules, a human-pattern score, a CLI, a CI check, and an optional model-backed rewrite.",
   "license": "MIT",
   "type": "module",

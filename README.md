@@ -51,12 +51,13 @@ It is a measurement of style, not proof of who wrote something. About 1% of huma
 
 ## How often it is wrong
 
-Measured on human and model writing that played no part in building tells. The last held-out set (fresh-3: 823 human texts from Stack Exchange sites, GitHub projects, Hacker News threads and IRC days the benchmark had never used, written from 2012 to Oct 2022, and 279 answers from Haiku, Sonnet and Opus to new prompts) was fetched after all tuning stopped and scored once:
+Measured on human and model writing that played no part in building tells. The last held-out set (fresh-3: 823 human texts from Stack Exchange sites, GitHub projects, Hacker News threads and IRC days the benchmark had never used, written from 2012 to Oct 2022, and 279 answers from Haiku, Sonnet and Opus to new prompts) was fetched after tuning for 0.3.2 stopped and scored once; the numbers below are the 0.3.3 model on the same set, a second look at it:
 
-- Human texts with a warning or an error: 0 of 823. On the larger locked test split it was 4 of 2,552 (0.2%), one of them an error.
-- Model output of 60 words or more flagged, by a warning, an error or a low human-pattern score: 98% of plain answers and 95% of answers from prompts written to sound human (97% and 89% on the test split).
+- Human texts with a warning or an error: 0 of 823. On the larger locked test split it was 3 of 2,552 (0.1%), none of them an error.
+- Model output of 60 words or more flagged, by a warning, an error or a low human-pattern score: 97% of plain answers and 94% of answers from prompts written to sound human (98% and 89% on the test split).
 - AUC of the human-pattern score: 0.999 overall and 0.998 on the adversarial answers.
-- Human texts about AI, apps or tech scored under the line no more often than other human texts: 0 of 126 against 0.6% (0.6% against 1.2% on the test split).
+- Human texts about AI, apps or tech scored under the line no more often than other human texts: 0 of 126 against 0.9% (0.9% against 1.0% on the test split).
+- Ordinary chat-assistant answers to everyday requests (advice, how-tos, LinkedIn posts, emails), none used for building: 98% of 186 flagged, 55% with a warning that stands; of 12 plain-prose answers in the default ChatGPT voice, 11 get a warning.
 - On a probe of 831 human texts about GPT-3, AI, apps and startups from 2020 to 2022, plus lowercase posts and IRC chat, 1.6% scored under the line, down from 3.0% in tells 0.3.0.
 
 Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those in round 2. Every model was a Claude model, because those were the ones we could run; expect other families to be caught less often until they are in the benchmark. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
@@ -107,7 +108,7 @@ Tells are habits to remove. Human signals are patterns people use in their writi
 
 ## The rules
 
-There are 59 of them. `npx tells rules` lists them all, and `npx tells rules --json` prints the full set with patterns, so you can use them from another language. Each rule has an id, a severity, a short note on why it reads as machine-written, what to do instead, and an example fix.
+There are 63 of them. `npx tells rules` lists them all, and `npx tells rules --json` prints the full set with patterns, so you can use them from another language. Each rule has an id, a severity, a short note on why it reads as machine-written, what to do instead, and an example fix.
 
 Some of the ones that matter most:
 
@@ -126,6 +127,10 @@ Some of the ones that matter most:
 | `uniform-rhythm` | six sentences in a row of nearly the same length |
 | `summary-line` | most paragraphs ending on "This means..." or "That's why..." |
 | `unfilled-placeholder` | [Your name], [Client name] or [link] left in the text |
+| `reassurance-frame` | "can feel overwhelming, but it doesn't have to be" |
+| `listicle-intro` | "Here are some key steps to help you get started" |
+| `ordinal-sequence` | "First, ... Second, ... Finally," written out as prose |
+| `upbeat-close` | "Remember, every journey begins with a single step" |
 | `generic-example` | "for example, a small business" in place of a real case |
 | `bold-label-list` | bullets that each open with a bold label and a colon |
 | `email-boilerplate` | "After careful consideration", "Thank you for taking the time" |

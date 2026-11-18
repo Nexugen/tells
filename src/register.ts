@@ -52,12 +52,17 @@ export function guessRegister(text: string): RegisterGuess {
     count(/\b(?:meeting|invoice|quote|contract|client|customer|team|schedule|deadline|proposal|refund|order|account|review|budget|attached|policy|please)\b/gi, t) * 0.6 +
     1; // the default when nothing stands out
 
-  const marketing =
-    count(/\b(?:new|now|free|today|introducing|launch(?:ed|ing)?|meet|discover|get|try|join|save|shop|book|sign up|start|download|upgrade|limited|exclusive|offer)\b/gi, t) * 0.5 +
+  // Promotional cues proper. Generic verbs ("get", "start", "save", "your") appear in every how-to answer,
+  // so they only count once the text shows at least one of these.
+  const promo =
+    count(/\b(?:free|introducing|launch(?:ed|ing)?|sign up|download|upgrade|limited time|exclusive|special offer|offer ends|discount|on sale|shop now|order now|buy now|book now|\d+% off|available now|subscribe|pre-order)\b/gi, t) +
     count(/#\w+/g, t) * 1.5 +
-    count(/\p{Extended_Pictographic}/gu, t) * 1 +
-    count(/\byour\b/gi, t) * 0.3 +
-    count(/!/g, t) * 0.4;
+    count(/\p{Extended_Pictographic}/gu, t) +
+    // One "Good luck!" is not a sales pitch.
+    Math.max(0, count(/!/g, t) - 1) * 0.5;
+  const marketing =
+    promo * 0.8 +
+    (promo > 0 ? 1 : 0.35) * (count(/\b(?:new|now|today|meet|discover|get|try|join|save|shop|book|start)\b/gi, t) * 0.5 + count(/\byour\b/gi, t) * 0.3);
 
   // Normalise by length so a long post doesn't win on raw counts alone.
   const scale = 100 / Math.max(words, 60);

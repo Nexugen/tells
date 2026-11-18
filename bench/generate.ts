@@ -27,7 +27,8 @@ const limit = Number(arg('limit', '100000'));
 const conc = Number(arg('concurrency', '3'));
 const maxPct = Number(arg('max-pct', '84'));
 const usageFile = process.env.TELLS_USAGE_FILE ?? '/var/nexugen/claude-subscription-usage.json';
-const SYSTEM = 'You are a helpful assistant. Write exactly what is asked. Output only the requested text, with no preamble.';
+// --system chat: the plain assistant setup people meet in a chat app, preamble and all.
+const SYSTEM = arg('system') === 'chat' ? 'You are a helpful assistant.' : 'You are a helpful assistant. Write exactly what is asked. Output only the requested text, with no preamble.';
 
 interface P { id: string; family: string; genre: string; register: string; variant: string; adversarial: boolean; prompt: string }
 const prompts = (JSON.parse(readFileSync(bankFile, 'utf8')) as { prompts: P[] }).prompts;

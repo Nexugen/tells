@@ -68,6 +68,10 @@ In all, 14,497 human samples (12,793 in the pool, 881 held out in round 2 and 82
 - Every model is a Claude model, answering through Claude Code's print mode with no system prompt beyond the task.
 - The human-pattern score was trained on the train split, so the pool's train numbers are not evidence of anything. Use tune, test and the held-out rounds.
 
+### Everyday assistant answers (tells 0.3.3)
+
+The test half of `bench/everyday` (186 answers, Haiku, Sonnet and Opus, plain "You are a helpful assistant." system prompt) scored once with the 0.3.3 model: 98% flagged by a warning or a low score, 55% with a warning that stands (49% with 0.3.2). By genre, flagged: advice 98%, how-to 100%, explain 89%, LinkedIn 100%, email 100%, article 100%, product 100%. Full output in `bench/rounds/r4-everyday-test.txt`; the method is in [EVAL.md](EVAL.md).
+
 ### Round 3, by source (tells 0.3.2)
 
 | Source | Texts | With a warning or error | Low score | Mean score |

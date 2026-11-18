@@ -1,0 +1,247 @@
+{
+ "on": "probe",
+ "samples": {
+  "human": 838,
+  "model": 0
+ },
+ "scoreModel": "2026-11-18",
+ "lowLine": 17,
+ "humanFindings": {
+  "blockLabel": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 838
+  },
+  "blockAuto": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 838
+  },
+  "blockDefault": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 838
+  }
+ },
+ "humanLowScore": 0.0156,
+ "techGap": {
+  "tech": {
+   "n": 171,
+   "low": 0.0117,
+   "mean": 93.5
+  },
+  "other": {
+   "n": 660,
+   "low": 0.0167,
+   "mean": 94.6
+  },
+  "gap": -0.005,
+  "lowercase": {
+   "n": 184,
+   "low": 0.0163,
+   "mean": 93.6
+  }
+ },
+ "modelFlagged": {
+  "plain": {
+   "n": 0,
+   "rules": 0,
+   "score": 0,
+   "either": 0
+  },
+  "adversarial": {
+   "n": 0,
+   "rules": 0,
+   "score": 0,
+   "either": 0
+  },
+  "plainJudged": {
+   "n": 0,
+   "rules": 0,
+   "score": 0,
+   "either": 0
+  }
+ },
+ "auc": {
+  "all": null,
+  "plain": null,
+  "adversarial": null,
+  "casual": null,
+  "professional": null,
+  "technical": null,
+  "marketing": null
+ },
+ "calibration": {
+  "ece": 0.028,
+  "bands": [
+   {
+    "band": "0-9",
+    "human": 7,
+    "model": 0,
+    "meanScore": 0.06,
+    "humanShare": 1
+   },
+   {
+    "band": "10-19",
+    "human": 7,
+    "model": 0,
+    "meanScore": 0.13,
+    "humanShare": 1
+   },
+   {
+    "band": "20-29",
+    "human": 6,
+    "model": 0,
+    "meanScore": 0.24,
+    "humanShare": 1
+   },
+   {
+    "band": "30-39",
+    "human": 9,
+    "model": 0,
+    "meanScore": 0.35,
+    "humanShare": 1
+   },
+   {
+    "band": "40-49",
+    "human": 9,
+    "model": 0,
+    "meanScore": 0.44,
+    "humanShare": 1
+   },
+   {
+    "band": "50-59",
+    "human": 9,
+    "model": 0,
+    "meanScore": 0.53,
+    "humanShare": 1
+   },
+   {
+    "band": "60-69",
+    "human": 7,
+    "model": 0,
+    "meanScore": 0.64,
+    "humanShare": 1
+   },
+   {
+    "band": "70-79",
+    "human": 9,
+    "model": 0,
+    "meanScore": 0.76,
+    "humanShare": 1
+   },
+   {
+    "band": "80-89",
+    "human": 27,
+    "model": 0,
+    "meanScore": 0.85,
+    "humanShare": 1
+   },
+   {
+    "band": "90-100",
+    "human": 741,
+    "model": 0,
+    "meanScore": 0.99,
+    "humanShare": 1
+   }
+  ]
+ },
+ "bySource": {
+  "human:probe-github": {
+   "n": 160,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0063,
+   "meanScore": 96.9
+  },
+  "human:probe-hn": {
+   "n": 200,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0357,
+   "meanScore": 92
+  },
+  "human:probe-hn-lower": {
+   "n": 13,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0,
+   "meanScore": 96.9
+  },
+  "human:probe-irc": {
+   "n": 240,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0127,
+   "meanScore": 96.8
+  },
+  "human:probe-reddit": {
+   "n": 225,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0089,
+   "meanScore": 91.9
+  }
+ },
+ "byRegister": {
+  "casual": {
+   "human": 783,
+   "humanWarn": 0,
+   "humanLow": 0.0168,
+   "model": 0,
+   "modelFlagged": 0
+  },
+  "professional": {
+   "human": 0,
+   "humanWarn": 0,
+   "humanLow": 0,
+   "model": 0,
+   "modelFlagged": 0
+  },
+  "technical": {
+   "human": 55,
+   "humanWarn": 0,
+   "humanLow": 0,
+   "model": 0,
+   "modelFlagged": 0
+  },
+  "marketing": {
+   "human": 0,
+   "humanWarn": 0,
+   "humanLow": 0,
+   "model": 0,
+   "modelFlagged": 0
+  }
+ },
+ "byGenre": {
+  "chat": {
+   "human": 240,
+   "humanWarn": 0,
+   "model": 0,
+   "modelFlagged": 0,
+   "auc": null
+  },
+  "comment": {
+   "human": 373,
+   "humanWarn": 0,
+   "model": 0,
+   "modelFlagged": 0,
+   "auc": null
+  },
+  "forum": {
+   "human": 225,
+   "humanWarn": 0,
+   "model": 0,
+   "modelFlagged": 0,
+   "auc": null
+  }
+ },
+ "nonNative": {
+  "n": 0,
+  "warn": 0,
+  "low": 0
+ },
+ "byModel": {},
+ "humanRuleHits": {},
+ "modelRuleHits": {}
+}

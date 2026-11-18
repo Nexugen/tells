@@ -65,6 +65,10 @@ mark.h { background: var(--human-bg); box-shadow: inset 0 -2px 0 var(--human); }
 .stat { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
 .stat b { display: block; font-size: 22px; font-family: "Iowan Old Style", Georgia, serif; }
 .stat span { font-size: 13px; color: var(--muted); }
+.stat small { font-size: 13px; color: var(--muted); }
+.sev { font-size: 12px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); }
+.sev.error, .sev.warning { color: var(--tell, #b42318); border-color: currentColor; }
+.sev.info { color: var(--muted); }
 ul.list { padding-left: 18px; margin: 8px 0; } ul.list li { margin: 4px 0; }
 .t-txt { color: var(--tell); } .h-txt { color: var(--human); }
 .muted { color: var(--muted); font-size: 15px; }
@@ -215,19 +219,24 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
     out.innerHTML = html || '<span class="muted">Nothing to check.</span>';
     var h = r.human || { present: [], missing: [], tooShort: true };
     var hints = r.findings.filter(function (f) { return f.severity === 'info'; }).length, strong = r.findings.length - hints;
+    var low = h.pattern && h.pattern.low;
+    var tooShort = h.tooShort, verdict = strong ? 'Has tells' : low ? 'Reads AI-written' : hints ? 'Only hints' : 'No tells';
+    var why = tooShort ? 'to judge, under 60 words' : strong ? 'worth a second look' : low ? 'the human-pattern score is low, though no single habit stands out' : hints ? 'each habit alone is common in human writing too' : 'none of the known habits';
     stats.innerHTML =
-      '<div class="stat"><b class="t-txt">' + strong + '</b><span>' + (strong === 1 ? 'tell' : 'tells') + (hints ? ', plus ' + hints + (hints === 1 ? ' minor hint' : ' minor hints') : '') + '</span></div>' +
-      '<div class="stat"><b>' + r.score + '</b><span>known tells per 100 words</span></div>' +
+      '<div class="stat"><b class="t-txt">' + strong + '</b><span>' + (strong === 1 ? 'tell' : 'tells') + ' (warnings and errors)' + (hints ? ', plus ' + hints + (hints === 1 ? ' hint' : ' hints') : '') + '</span></div>' +
+      (h.pattern ? '<div class="stat"><b class="' + (h.pattern.low ? 't-txt' : 'h-txt') + '">' + h.pattern.score + '<small> / 100</small></b><span>human-pattern score' + (h.pattern.low ? ', reads machine-like' : h.pattern.score < 50 ? ', unclear' : '') + '</span></div>' : '') +
+      '<div class="stat"><b>' + (tooShort ? 'Too short' : verdict) + '</b><span>' + why + '</span></div>' +
+      '<div class="stat"><b>' + r.score + '</b><span>weighted tells per 100 words (' + r.grade + ')</span></div>' +
       '<div class="stat"><b class="h-txt">' + h.present.length + '</b><span>human signals present</span></div>' +
-      '<div class="stat"><b>' + (h.tooShort ? 'Too short' : strong ? 'Has tells' : 'No tells') + '</b><span>' + (h.tooShort ? 'to judge, under 60 words' : strong ? 'worth a second look' : 'none of the known habits') + '</span></div>' +
-      (h.pattern ? '<div class="stat"><b class="' + (h.pattern.low ? 't-txt' : 'h-txt') + '">' + h.pattern.score + '</b><span>human-pattern score' + (h.pattern.low ? ', reads machine-like' : '') + '</span></div>' : '') +
       (r.registerGuess ? '<div class="stat"><b>' + r.register[0].toUpperCase() + r.register.slice(1) + '</b><span>register, picked from the text</span></div>' : '');
     var d = '';
     if (r.findings.length) {
       var seen = {};
       d += '<p class="t-txt"><b>Tells</b></p><ul class="list">';
-      r.findings.forEach(function (f) { if (seen[f.ruleId]) return; seen[f.ruleId] = 1; d += '<li><b>' + esc(f.name) + '</b>: ' + esc(f.fix) + '</li>'; });
+      var LABEL = { error: 'Error', warning: 'Warning', info: 'Hint' };
+      r.findings.slice().sort(function (a, b) { return (a.severity === 'info') - (b.severity === 'info'); }).forEach(function (f) { if (seen[f.ruleId]) return; seen[f.ruleId] = 1; d += '<li><span class="sev ' + f.severity + '">' + LABEL[f.severity] + '</span> <b>' + esc(f.name) + '</b>: ' + esc(f.fix) + '</li>'; });
       d += '</ul>';
+      if (!strong && hints) d += '<p class="muted">Hints stay hints until a text shows two different kinds of habit, or one plus a low human-pattern score. Pick a register above if Auto guessed wrong.</p>';
     }
     if (h.missing.length) {
       d += '<p class="h-txt"><b>Missing for this register</b></p><ul class="list">';

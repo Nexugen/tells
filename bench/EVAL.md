@@ -18,6 +18,46 @@ A text counts as **about AI, apps or tech** when it uses three or more words suc
 - **The probe** (`bench/v2.ts probe`) is present-day-topic human writing that is never trained on: HN comments from 2020 and 2021 found by searching for GPT-3, Copilot, AI, apps and startups; GitHub issue comments on AI and app projects from 2020 to Oct 2022; Reddit posts from tech and business subreddits and lowercase posts; and chat from Ubuntu's IRC channels. It is human only, so it measures how often real writing about these subjects is called machine-like.
 - About a third of the prompts are adversarial: the model is told to sound like a person, avoid dashes and lists, type in lowercase like a chat app, write as a tired or non-native writer, or fool a detector.
 
+## Everyday assistant answers (tells 0.3.3)
+
+### What was wrong
+
+A reader pasted a stock ChatGPT-style answer on moving abroad ("can feel overwhelming, but with the right preparation, it doesn't have to be. Here are some key steps... First... Second... Finally... Remember, every journey begins with a single step") into 0.3.2 and got one hint (the dash), a grade of "light" and a human-pattern score of 69. The 0.3.0 and 0.3.1 code gave the same findings and the same 69, so this was not a 0.3.2 regression and not the corroboration gate: with the gate switched off only the dash fired. The rules had nothing for the helpful-answer shape, and every model answer in the benchmark came from Claude with an instruction to skip preambles, so the plain chat-assistant voice was missing from the data.
+
+### What changed
+
+- Four rules for that shape (`src/rules-everyday.ts`): `reassurance-frame` (tone), `listicle-intro` and `ordinal-sequence` (structure), and `upbeat-close` (structure). All are warnings and still go through the gate, so one alone stays a hint.
+- `ai-vocabulary` gained invaluable, thrive, unleash, resonates with, enhance your. `corporate-excitement` is a warning (was a hint) and covers "I'm thrilled", "career journey". `whether-youre` covers "whether you have... or...".
+- The register guess no longer calls a how-to "marketing" from words like get, start, save and your, which every how-to uses; those count only once a real promotional cue (sale, sign up, % off, hashtags, emoji, more than one "!") is present.
+- `bench/everyday/`: 108 everyday requests (advice, how-tos, explanations, LinkedIn posts, emails, first-person articles, product copy), each asked plainly and as "a few plain paragraphs", answered by Haiku, Sonnet and Opus with only "You are a helpful assistant." as the system prompt. Families are split by hash: the dev half (138 answers) joined the training pool, the test half (186 answers) was scored once with the frozen model and is the regression set in `test/fixtures/everyday.json`.
+- `test/fixtures/everyday-prose.json`: 12 plain-prose answers in the default ChatGPT voice, the reported one first, never trained on.
+- The web page labels each finding Error, Warning or Hint, says "Only hints" (not "No tells") when only hints fired, and "Reads AI-written" when the score is low but no single habit stands out.
+
+### Results
+
+| Set | Texts | With a standing warning, 0.3.2 | 0.3.3 | Warning or low score, 0.3.2 | 0.3.3 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Plain-prose assistant answers | 12 | 17% | 92% | 58% | 92% |
+| Everyday answers, test half | 186 | 49% | 55% | 98% | 98% |
+
+The reported answer now has seven warnings across five rules and scores 47 (was 69). Claude's everyday answers were already mostly caught by the score; the gain is on plain prose without markdown, where 0.3.2 had no rule to fire.
+
+Human texts with a warning or error: 4 of 2,768 on tune (3 before; the new one is a human essay that does use First, Second, Third, Finally), 1 of 7,473 on train, 3 of 2,552 on the locked test split (0.1%, was 0.2%), 0 of 823 on fresh-3. Fresh-3 was already scored once by the 0.3.2 model, so its 0.3.3 numbers (AUC 0.999, 97.2% of plain model output flagged, tech gap -0.9 points) are a second look, not a new held-out round.
+
+| Set | Human texts | With a warning or error | With an error | Low human-pattern score | Model texts | Plain model output flagged (60+ words) | All plain model output flagged | Adversarial flagged | AUC | AUC, adversarial | Calibration error |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| r4-fresh-3 | 823 | 0.0% | 0.0% | 0.7% | 279 | 97.2% | 97.2% | 93.9% | 0.999 | 0.999 | 0.015 |
+| r4-test | 2552 | 0.1% | 0.0% | 1.0% | 496 | 97.6% | 86.8% | 88.9% | 0.998 | 0.998 | 0.008 |
+| r4-tune | 2768 | 0.1% | 0.0% | 0.9% | 552 | 94.6% | 88.5% | 83.7% | 0.997 | 0.996 | 0.005 |
+
+On the human probe, 1.6% scored under the line, as in 0.3.2.
+
+### Remaining weaknesses
+
+- A plain, correct explanation (why the sky is blue, compound interest) has no habit to point at; only the score catches it, so it shows "Reads AI-written" with no highlighted sentence.
+- A stock LinkedIn job announcement still scores 96 and keeps its tells as hints, because a high score asks for one more kind of evidence. Short LinkedIn-style posts by people score high too, and we have not found a feature that splits them.
+- Every model is still a Claude model. The plain-prose set imitates the ChatGPT default voice; real GPT and Gemini output is not in the benchmark yet.
+
 ## Round 3: present-day human writing (tells 0.3.2)
 
 ### What was wrong

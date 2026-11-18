@@ -1,0 +1,977 @@
+{
+ "version": 1,
+ "prompts": [
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I prepare for moving to a new country?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I prepare for moving to a new country? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#plain",
+   "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Give me some tips for my first week at a new job."
+  },
+  {
+   "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#prose",
+   "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Give me some tips for my first week at a new job. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-can-i-get-better-sleep#plain",
+   "family": "everyday:advice:how-can-i-get-better-sleep",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How can I get better sleep?"
+  },
+  {
+   "id": "everyday:advice:how-can-i-get-better-sleep#prose",
+   "family": "everyday:advice:how-can-i-get-better-sleep",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How can I get better sleep? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#plain",
+   "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What should I know before adopting a dog?"
+  },
+  {
+   "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#prose",
+   "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What should I know before adopting a dog? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#plain",
+   "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start saving money when I live paycheck to paycheck?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#prose",
+   "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start saving money when I live paycheck to paycheck? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#plain",
+   "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How can I be more productive working from home?"
+  },
+  {
+   "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#prose",
+   "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How can I be more productive working from home? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#plain",
+   "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I deal with a difficult coworker?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#prose",
+   "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I deal with a difficult coworker? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:tips-for-a-long-haul-flight#plain",
+   "family": "everyday:advice:tips-for-a-long-haul-flight",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Tips for a long-haul flight?"
+  },
+  {
+   "id": "everyday:advice:tips-for-a-long-haul-flight#prose",
+   "family": "everyday:advice:tips-for-a-long-haul-flight",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Tips for a long-haul flight? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-make-friends-as-an-adult#plain",
+   "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I make friends as an adult?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-make-friends-as-an-adult#prose",
+   "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I make friends as an adult? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I prepare for a job interview?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I prepare for a job interview? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#plain",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How can I stop procrastinating?"
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#prose",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How can I stop procrastinating? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#plain",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What are some ways to reduce stress?"
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#prose",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What are some ways to reduce stress? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#plain",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I start running if I have never exercised?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#prose",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I start running if I have never exercised? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#plain",
+   "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I ask my landlord to fix something?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#prose",
+   "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I ask my landlord to fix something? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-plan-a-budget-wedding#plain",
+   "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I plan a budget wedding?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-plan-a-budget-wedding#prose",
+   "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I plan a budget wedding? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#plain",
+   "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I get my kids to read more?"
+  },
+  {
+   "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#prose",
+   "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I get my kids to read more? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#plain",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I clean a cast iron pan?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#prose",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I clean a cast iron pan? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#plain",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I change a flat tyre?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#prose",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How do I change a flat tyre? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-vegetable-garden#plain",
+   "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start a vegetable garden?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-vegetable-garden#prose",
+   "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start a vegetable garden? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-learn-a-new-language-fast#plain",
+   "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I learn a new language fast?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-learn-a-new-language-fast#prose",
+   "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I learn a new language fast? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-set-up-a-home-network#plain",
+   "family": "everyday:howto:how-do-i-set-up-a-home-network",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I set up a home network?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-set-up-a-home-network#prose",
+   "family": "everyday:howto:how-do-i-set-up-a-home-network",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I set up a home network? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-write-a-good-cv#plain",
+   "family": "everyday:howto:how-do-i-write-a-good-cv",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I write a good CV?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-write-a-good-cv#prose",
+   "family": "everyday:howto:how-do-i-write-a-good-cv",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I write a good CV? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-make-sourdough-bread#plain",
+   "family": "everyday:howto:how-do-i-make-sourdough-bread",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I make sourdough bread?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-make-sourdough-bread#prose",
+   "family": "everyday:howto:how-do-i-make-sourdough-bread",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I make sourdough bread? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-podcast#plain",
+   "family": "everyday:howto:how-do-i-start-a-podcast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start a podcast?"
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-podcast#prose",
+   "family": "everyday:howto:how-do-i-start-a-podcast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "How do I start a podcast? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#plain",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Explain inflation in simple terms."
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#prose",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Explain inflation in simple terms. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#plain",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What is the difference between a Roth IRA and a traditional IRA?"
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#prose",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What is the difference between a Roth IRA and a traditional IRA? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:why-is-the-sky-blue#plain",
+   "family": "everyday:explain:why-is-the-sky-blue",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Why is the sky blue?"
+  },
+  {
+   "id": "everyday:explain:why-is-the-sky-blue#prose",
+   "family": "everyday:explain:why-is-the-sky-blue",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Why is the sky blue? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:what-is-machine-learning#plain",
+   "family": "everyday:explain:what-is-machine-learning",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "What is machine learning?"
+  },
+  {
+   "id": "everyday:explain:what-is-machine-learning#prose",
+   "family": "everyday:explain:what-is-machine-learning",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "What is machine learning? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:how-does-compound-interest-work#plain",
+   "family": "everyday:explain:how-does-compound-interest-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How does compound interest work?"
+  },
+  {
+   "id": "everyday:explain:how-does-compound-interest-work#prose",
+   "family": "everyday:explain:how-does-compound-interest-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "How does compound interest work? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:what-causes-jet-lag#plain",
+   "family": "everyday:explain:what-causes-jet-lag",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "What causes jet lag?"
+  },
+  {
+   "id": "everyday:explain:what-causes-jet-lag#prose",
+   "family": "everyday:explain:what-causes-jet-lag",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "What causes jet lag? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:explain-how-vaccines-work#plain",
+   "family": "everyday:explain:explain-how-vaccines-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Explain how vaccines work."
+  },
+  {
+   "id": "everyday:explain:explain-how-vaccines-work#prose",
+   "family": "everyday:explain:explain-how-vaccines-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Explain how vaccines work. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#plain",
+   "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What is a credit score and why does it matter?"
+  },
+  {
+   "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#prose",
+   "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "What is a credit score and why does it matter? Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about starting a new job as a product manager."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about starting a new job as a product manager. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about lessons from my first year as a founder."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about lessons from my first year as a founder. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post celebrating my team shipping a big project."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post celebrating my team shipping a big project. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about being laid off and looking for work."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about being laid off and looking for work. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about why soft skills matter in engineering."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about why soft skills matter in engineering. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about getting a certification in data analytics."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a LinkedIn post about getting a certification in data analytics. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#plain",
+   "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email to my manager asking for a day off next Friday."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#prose",
+   "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email to my manager asking for a day off next Friday. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#plain",
+   "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email to a client saying the project will be a week late."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#prose",
+   "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email to a client saying the project will be a week late. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#plain",
+   "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email following up after a job interview."
+  },
+  {
+   "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#prose",
+   "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email following up after a job interview. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#plain",
+   "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+   "genre": "email",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write an email to a landlord asking for my deposit back."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#prose",
+   "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+   "genre": "email",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write an email to a landlord asking for my deposit back. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#plain",
+   "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email declining a meeting invitation politely."
+  },
+  {
+   "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#prose",
+   "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email declining a meeting invitation politely. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#plain",
+   "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email introducing myself to a new team."
+  },
+  {
+   "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#prose",
+   "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an email introducing myself to a new team. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#plain",
+   "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a short blog post in the first person about what I learned from a year of journaling."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#prose",
+   "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a short blog post in the first person about what I learned from a year of journaling. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-article-about-switching-car#plain",
+   "family": "everyday:article:write-a-first-person-article-about-switching-car",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a first-person article about switching careers into tech at 35."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-article-about-switching-car#prose",
+   "family": "everyday:article:write-a-first-person-article-about-switching-car",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a first-person article about switching careers into tech at 35. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#plain",
+   "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short first-person blog post about my experience with minimalism."
+  },
+  {
+   "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#prose",
+   "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short first-person blog post about my experience with minimalism. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#plain",
+   "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a short blog post about the benefits of walking every day."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#prose",
+   "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write a short blog post about the benefits of walking every day. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#plain",
+   "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short article about how to stay motivated while learning to code."
+  },
+  {
+   "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#prose",
+   "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short article about how to stay motivated while learning to code. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#plain",
+   "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a first-person post about traveling solo for the first time."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#prose",
+   "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a first-person post about traveling solo for the first time. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#plain",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a product description for a bamboo cutting board."
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#prose",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a product description for a bamboo cutting board. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:product:write-a-short-description-for-a-meditation-app#plain",
+   "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short description for a meditation app."
+  },
+  {
+   "id": "everyday:product:write-a-short-description-for-a-meditation-app#prose",
+   "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "prompt": "Write a short description for a meditation app. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#plain",
+   "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an Instagram caption for a new coffee shop opening."
+  },
+  {
+   "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#prose",
+   "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write an Instagram caption for a new coffee shop opening. Write it as a few plain paragraphs, no lists, headings or bold."
+  },
+  {
+   "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#plain",
+   "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write the about section for a small bakery website."
+  },
+  {
+   "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#prose",
+   "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "prompt": "Write the about section for a small bakery website. Write it as a few plain paragraphs, no lists, headings or bold."
+  }
+ ]
+}

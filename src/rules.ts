@@ -1,6 +1,7 @@
 import type { Hit, Rule, RuleContext, Sentence } from './types.ts';
 import { inDialogue, regexHits } from './rules-util.ts';
 import { MORE_RULES } from './rules-more.ts';
+import { EVERYDAY_RULES } from './rules-everyday.ts';
 
 const A = `['’]`; // straight or curly apostrophe
 
@@ -58,6 +59,7 @@ export const AI_VOCABULARY = [
   'ever-evolving', 'ever-changing', 'fast-paced',
   'transformative', 'unparalleled', 'groundbreaking',
   'in the realm of', 'a deep dive', 'deep dive into',
+  'invaluable', 'thrive', 'thriving', 'unleash', 'unleashing', 'resonates with', 'enhance your', 'enhancing your',
   'actionable insights', 'key takeaways', 'unleash', 'unleashes',
 ];
 
@@ -141,7 +143,7 @@ const CORPORATE_EXCITEMENT = [
   'we are excited to announce', "we're excited to announce", 'we are thrilled', "we're thrilled",
   'we are delighted', "we're delighted", 'proud to announce', 'excited to share', 'thrilled to share',
   'thrilled to announce', 'delighted to announce', 'we are pleased to announce', "we're pleased to announce",
-  'thrilled to introduce', 'excited to introduce',
+  'thrilled to introduce', 'excited to introduce', "i'm thrilled", "i'm excited to", 'i am thrilled', 'i am excited to', 'humbled to', 'honored to share', 'grateful for the opportunity', 'career journey',
 ];
 
 const ASSISTANT_LEAKS = [
@@ -694,7 +696,7 @@ const BASE_RULES: Rule[] = [
     id: 'corporate-excitement',
     name: 'Announcement voice',
     category: 'tone',
-    severity: 'info',
+    severity: 'warning',
     registers: { technical: 'info' },
     description: '"We\'re excited to announce", "thrilled to share", "proud to announce".',
     why: 'Every launch post says it, so it says nothing. The news is the thing you shipped.',
@@ -717,7 +719,7 @@ const BASE_RULES: Rule[] = [
       before: "Whether you're a beginner or a seasoned pro, this guide has you covered.",
       after: 'This guide assumes you have deployed a Node app before.',
     },
-    detect: { kind: 'pattern', pattern: /\bwhether (?:you['’]re|you are) (?:a |an )?[^,.!?\n]{1,40} or (?:a |an )?[^,.!?\n]{1,40}|\bfrom (?:startups|beginners|small businesses|solo creators|individuals|freelancers) to (?:enterprises|experts|large enterprises|pros|global brands|fortune 500)/gi },
+    detect: { kind: 'pattern', pattern: /\bwhether (?:you['’]re|you are|you have|you need|you want|you prefer|you live|you work) (?:a |an )?[^,.!?\n]{1,40} or (?:just )?(?:a |an )?[^,.!?\n]{1,40}|\bfrom (?:startups|beginners|small businesses|solo creators|individuals|freelancers) to (?:enterprises|experts|large enterprises|pros|global brands|fortune 500)/gi },
   },
   {
     id: 'lecturing',
@@ -928,7 +930,7 @@ const BASE_RULES: Rule[] = [
   },
 ];
 
-export const RULES: Rule[] = [...BASE_RULES, ...MORE_RULES];
+export const RULES: Rule[] = [...BASE_RULES, ...MORE_RULES, ...EVERYDAY_RULES];
 
 /** Run a regex across each sentence and the boundary with the next one (for two-sentence frames). */
 function inSentenceWindows(ctx: RuleContext, re: RegExp): Hit[] {

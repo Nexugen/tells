@@ -104,7 +104,10 @@ export const SPENT_ROUNDS = [1];
 export function loadAll(): Sample[] {
   const spent = SPENT_ROUNDS.flatMap((n) => loadFresh(n).map((s) => ({ ...s, split: splitOf(s.group) })));
   const topic = modelSets(join(here, 'out-topic'), false).map((s) => ({ ...s, source: 'claude-topic' }));
-  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...topic, ...spent];
+  // Plain chat-assistant answers to everyday requests: the dev half trains, the test half is the regression set (bench/everyday.ts).
+  const dev = new Set((existsSync(join(here, 'everyday', 'prompts.json')) ? JSON.parse(readFileSync(join(here, 'everyday', 'prompts.json'), 'utf8')).prompts : []).filter((p: { variant: string }) => p.variant === 'dev').map((p: { id: string }) => p.id));
+  const everyday = modelSets(join(here, 'everyday', 'out'), false).filter((s) => dev.has(s.id.slice(s.id.indexOf(':') + 1))).map((s) => ({ ...s, source: 'claude-everyday', split: 'train' as Split }));
+  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...topic, ...everyday, ...spent];
   // Drop exact duplicates and texts too short to judge.
   const seen = new Set<string>();
   return all.filter((s) => {

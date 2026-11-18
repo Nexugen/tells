@@ -2,16 +2,16 @@
  "note": "Written by bench/figures.ts from the round reports. Do not edit by hand.",
  "round": "fresh-3",
  "humanSamples": "14,497",
- "modelSamples": "3,209",
+ "modelSamples": "3,347",
  "prompts": "1,358",
  "genres": 14,
  "sources": 40,
  "freshHuman": "823",
  "freshHumanFlagged": 0,
- "freshPlainFlagged": "97.8%",
+ "freshPlainFlagged": "97.2%",
  "freshAuc": "0.999",
- "freshTechGap": "-0.6 points",
+ "freshTechGap": "-0.9 points",
  "testHuman": "2,552",
- "testFlagged": "0.2%",
- "adversarialFlagged": "95%"
+ "testFlagged": "0.1%",
+ "adversarialFlagged": "94%"
 }

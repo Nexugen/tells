@@ -36,7 +36,7 @@ const MIN_WORDS = 60;
 interface Row { s: Sample; words: number; blockLabel: Finding[]; blockAuto: Finding[]; blockDefault: Finding[]; autoRegister: Register; x: number[] }
 
 const CODE_VERSION = createHash('sha256')
-  .update(['rules.ts', 'rules-more.ts', 'rules-util.ts', 'lint.ts', 'human.ts', 'text.ts', 'register.ts', 'score-features.ts'].map((f) => readFileSync(join(here, '..', 'src', f), 'utf8')).join('\n'))
+  .update(['rules.ts', 'rules-more.ts', 'rules-everyday.ts', 'rules-util.ts', 'lint.ts', 'human.ts', 'text.ts', 'register.ts', 'score-features.ts'].map((f) => readFileSync(join(here, '..', 'src', f), 'utf8')).join('\n'))
   .digest('hex')
   .slice(0, 12);
 const cacheDir = join(DATA_DIR, 'cache');
