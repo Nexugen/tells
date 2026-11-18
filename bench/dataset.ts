@@ -103,7 +103,8 @@ export const SPENT_ROUNDS = [1];
 
 export function loadAll(): Sample[] {
   const spent = SPENT_ROUNDS.flatMap((n) => loadFresh(n).map((s) => ({ ...s, split: splitOf(s.group) })));
-  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...spent];
+  const topic = modelSets(join(here, 'out-topic'), false).map((s) => ({ ...s, source: 'claude-topic' }));
+  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...topic, ...spent];
   // Drop exact duplicates and texts too short to judge.
   const seen = new Set<string>();
   return all.filter((s) => {
@@ -120,4 +121,13 @@ export function loadFresh(n: number): Sample[] {
   const human = v2Human([join(dir, 'human'), join(DATA_DIR, `fresh-${n}`, 'human')]).map((s) => ({ ...s, split: 'test' as Split }));
   const ai = modelSets(join(dir, 'out'), false).map((s) => ({ ...s, source: `claude-fresh-${n}`, split: 'test' as Split }));
   return [...human, ...ai];
+}
+
+/**
+ * The modern probe: human writing about AI, apps, startups and software from 2014 to Oct 2022
+ * (Hacker News, GitHub issues, Reddit), plus lowercase chat-style posts. Kept apart from the pool
+ * and never trained on; it measures whether the score holds up on present-day topics.
+ */
+export function loadProbe(): Sample[] {
+  return v2Human([join(here, 'probe', 'human'), join(DATA_DIR, 'probe')]).map((s) => ({ ...s, split: 'test' as Split }));
 }

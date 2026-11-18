@@ -9,6 +9,13 @@ export interface RegisterGuess {
 
 const count = (re: RegExp, s: string) => (s.match(re) ?? []).length;
 
+/** Share of sentences that start with a small letter, from three sentences up; 0 otherwise. */
+function lowerStarts(t: string): number {
+  const s = t.split(/(?<=[.!?])\s+|\n+/).filter((x) => /\p{L}/u.test(x) && !/^\s*(?:[-*>$#|`]|\d)/.test(x));
+  if (s.length < 3) return 0;
+  return s.filter((x) => /^\W*\p{Ll}/u.test(x)).length / s.length;
+}
+
 /**
  * Guess the register from surface clues. It is a heuristic for picking sensible defaults,
  * not a classifier: pass an explicit register when you know it.
@@ -32,7 +39,11 @@ export function guessRegister(text: string): RegisterGuess {
     count(/\b(?:i|i'm|i've|i'd|i'll|me|my)\b/gi, t) * 0.25 +
     count(/\b\w+(?:'|’)(?:s|re|ve|ll|d|t|m)\b/gi, t) * 0.3 +
     count(/\?/g, t) * 0.6 +
-    (words < 80 ? 1 : 0);
+    (words < 80 ? 1 : 0) +
+    // Typed the way people chat: a lowercase "i", contractions without the apostrophe, sentences that start small.
+    count(/(?:^|[\s(])i(?=[\s',.!?])/g, t) * 0.8 +
+    count(/\b(?:dont|cant|wont|didnt|doesnt|isnt|im|ive|youre|thats|theyre|wouldnt|couldnt|shouldnt|havent|idk|imo|ngl|pls|thx)\b/g, t) * 0.8 +
+    lowerStarts(t) * 4;
 
   const professional =
     (/^\s*(?:dear|hi|hello)\s+[^\n,]{1,40},\s*$/im.test(t) ? 2.5 : 0) +

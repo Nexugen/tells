@@ -1,0 +1,17 @@
+{
+ "note": "Written by bench/figures.ts from the round reports. Do not edit by hand.",
+ "round": "fresh-3",
+ "humanSamples": "14,497",
+ "modelSamples": "3,209",
+ "prompts": "1,358",
+ "genres": 14,
+ "sources": 40,
+ "freshHuman": "823",
+ "freshHumanFlagged": 0,
+ "freshPlainFlagged": "97.8%",
+ "freshAuc": "0.999",
+ "freshTechGap": "-0.6 points",
+ "testHuman": "2,552",
+ "testFlagged": "0.2%",
+ "adversarialFlagged": "95%"
+}

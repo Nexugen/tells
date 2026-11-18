@@ -1,0 +1,843 @@
+{
+ "version": 1,
+ "round": 3,
+ "prompts": [
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40#plain",
+   "family": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a phone that keeps dying at 40 percent. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40#adv0",
+   "family": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a phone that keeps dying at 40 percent. Four to eight sentences. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:chat:to-your-team-about-moving-the-demo-to-next-week#plain",
+   "family": "fresh3:chat:to-your-team-about-moving-the-demo-to-next-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your team about moving the demo to next week. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive#plain",
+   "family": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend asking which laptop to buy for university. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive#adv0",
+   "family": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend asking which laptop to buy for university. Four to eight sentences. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal#plain",
+   "family": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your partner about the car insurance renewal. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal#adv0",
+   "family": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to your partner about the car insurance renewal. Four to eight sentences. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:chat:to-a-co-worker-asking-how-the-new-ai-note-taker-#plain",
+   "family": "fresh3:chat:to-a-co-worker-asking-how-the-new-ai-note-taker-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a co-worker asking how the new AI note-taker works. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-gym-that-keeps-charging-you-#plain",
+   "family": "fresh3:chat:to-a-friend-about-a-gym-that-keeps-charging-you-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a gym that keeps charging you after you cancelled. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-group-chat-about-a-pub-quiz-on-thursday#plain",
+   "family": "fresh3:chat:to-a-group-chat-about-a-pub-quiz-on-thursday",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a group chat about a pub quiz on Thursday. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:chat:to-a-client-asking-if-they-got-the-invoice#plain",
+   "family": "fresh3:chat:to-a-client-asking-if-they-got-the-invoice",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a client asking if they got the invoice. Four to eight sentences."
+  },
+  {
+   "id": "fresh3:comment:about-a-startup-that-charges-per-api-call#plain",
+   "family": "fresh3:comment:about-a-startup-that-charges-per-api-call",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about a startup that charges per API call. One to three paragraphs."
+  },
+  {
+   "id": "fresh3:comment:on-a-post-about-a-new-open-source-database#plain",
+   "family": "fresh3:comment:on-a-post-about-a-new-open-source-database",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a post about a new open source database. One to three paragraphs."
+  },
+  {
+   "id": "fresh3:comment:about-voice-assistants-getting-worse#plain",
+   "family": "fresh3:comment:about-voice-assistants-getting-worse",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about voice assistants getting worse. One to three paragraphs."
+  },
+  {
+   "id": "fresh3:comment:about-voice-assistants-getting-worse#adv5",
+   "family": "fresh3:comment:about-voice-assistants-getting-worse",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about voice assistants getting worse. One to three paragraphs. Write like a non-native English speaker who is fluent but makes small slips."
+  },
+  {
+   "id": "fresh3:comment:about-whether-code-review-slows-teams-down#plain",
+   "family": "fresh3:comment:about-whether-code-review-slows-teams-down",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about whether code review slows teams down. One to three paragraphs."
+  },
+  {
+   "id": "fresh3:comment:about-an-app-that-sells-location-data#plain",
+   "family": "fresh3:comment:about-an-app-that-sells-location-data",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about an app that sells location data. One to three paragraphs."
+  },
+  {
+   "id": "fresh3:comment:about-an-app-that-sells-location-data#adv3",
+   "family": "fresh3:comment:about-an-app-that-sells-location-data",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about an app that sells location data. One to three paragraphs. Write as someone who is a bit annoyed and in a hurry."
+  },
+  {
+   "id": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new#plain",
+   "family": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment saying a plugin broke after upgrading to the new major version. One or two paragraphs, no code block."
+  },
+  {
+   "id": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new#adv2",
+   "family": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment saying a plugin broke after upgrading to the new major version. One or two paragraphs, no code block. Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry#plain",
+   "family": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment asking for an option to turn off telemetry. One or two paragraphs, no code block."
+  },
+  {
+   "id": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry#adv4",
+   "family": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment asking for an option to turn off telemetry. One or two paragraphs, no code block. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-#plain",
+   "family": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment reporting that the Windows installer flags as a virus. One or two paragraphs, no code block."
+  },
+  {
+   "id": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-#adv1",
+   "family": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment reporting that the Windows installer flags as a virus. One or two paragraphs, no code block. Write it so it reads as written by a person, with nothing that sounds like an AI model."
+  },
+  {
+   "id": "fresh3:comment:agreeing-with-a-proposal-to-drop-python-3-7-supp#plain",
+   "family": "fresh3:comment:agreeing-with-a-proposal-to-drop-python-3-7-supp",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment agreeing with a proposal to drop Python 3.7 support. One or two paragraphs, no code block."
+  },
+  {
+   "id": "fresh3:forum:asking-if-a-smart-thermostat-is-worth-it#plain",
+   "family": "fresh3:forum:asking-if-a-smart-thermostat-is-worth-it",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a forum post asking if a smart thermostat is worth it. About 150 words."
+  },
+  {
+   "id": "fresh3:forum:about-selling-handmade-candles-online#plain",
+   "family": "fresh3:forum:about-selling-handmade-candles-online",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a forum post about selling handmade candles online. About 150 words."
+  },
+  {
+   "id": "fresh3:forum:asking-for-help-with-a-slow-home-wifi#plain",
+   "family": "fresh3:forum:asking-for-help-with-a-slow-home-wifi",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a forum post asking for help with a slow home wifi. About 150 words."
+  },
+  {
+   "id": "fresh3:forum:asking-for-help-with-a-slow-home-wifi#adv4",
+   "family": "fresh3:forum:asking-for-help-with-a-slow-home-wifi",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a forum post asking for help with a slow home wifi. About 150 words. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:forum:about-learning-to-code-at-35#plain",
+   "family": "fresh3:forum:about-learning-to-code-at-35",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a forum post about learning to code at 35. About 150 words."
+  },
+  {
+   "id": "fresh3:forum:about-learning-to-code-at-35#adv3",
+   "family": "fresh3:forum:about-learning-to-code-at-35",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a forum post about learning to code at 35. About 150 words. Write as someone who is a bit annoyed and in a hurry."
+  },
+  {
+   "id": "fresh3:forum:asking-whether-to-take-a-job-at-a-startup-or-a-b#plain",
+   "family": "fresh3:forum:asking-whether-to-take-a-job-at-a-startup-or-a-b",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a forum post asking whether to take a job at a startup or a bank. About 150 words."
+  },
+  {
+   "id": "fresh3:email:to-a-software-vendor-cancelling-your-contract#plain",
+   "family": "fresh3:email:to-a-software-vendor-cancelling-your-contract",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a software vendor cancelling your contract."
+  },
+  {
+   "id": "fresh3:email:to-a-software-vendor-cancelling-your-contract#adv4",
+   "family": "fresh3:email:to-a-software-vendor-cancelling-your-contract",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write an email to a software vendor cancelling your contract. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:email:to-a-recruiter-declining-an-interview#plain",
+   "family": "fresh3:email:to-a-recruiter-declining-an-interview",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a recruiter declining an interview."
+  },
+  {
+   "id": "fresh3:email:to-a-recruiter-declining-an-interview#adv2",
+   "family": "fresh3:email:to-a-recruiter-declining-an-interview",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write an email to a recruiter declining an interview. Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:email:to-a-customer-about-a-data-export-they-asked-for#plain",
+   "family": "fresh3:email:to-a-customer-about-a-data-export-they-asked-for",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a customer about a data export they asked for."
+  },
+  {
+   "id": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names#plain",
+   "family": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a school about an app that leaked pupil names."
+  },
+  {
+   "id": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names#adv2",
+   "family": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write an email to a school about an app that leaked pupil names. Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:email:to-a-supplier-asking-to-change-delivery-days#plain",
+   "family": "fresh3:email:to-a-supplier-asking-to-change-delivery-days",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a supplier asking to change delivery days."
+  },
+  {
+   "id": "fresh3:email:to-a-supplier-asking-to-change-delivery-days#adv0",
+   "family": "fresh3:email:to-a-supplier-asking-to-change-delivery-days",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write an email to a supplier asking to change delivery days. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:email:to-a-colleague-handing-over-a-project-before-lea#plain",
+   "family": "fresh3:email:to-a-colleague-handing-over-a-project-before-lea",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a colleague handing over a project before leave."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games#plain",
+   "family": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I stop my kid spending money in games?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games#adv3",
+   "family": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"How do I stop my kid spending money in games?\" Write a reply of up to 170 words. Write as someone who is a bit annoyed and in a hurry."
+  },
+  {
+   "id": "fresh3:qa:is-a-vpn-worth-paying-for#plain",
+   "family": "fresh3:qa:is-a-vpn-worth-paying-for",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Is a VPN worth paying for?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:is-a-vpn-worth-paying-for#adv4",
+   "family": "fresh3:qa:is-a-vpn-worth-paying-for",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Is a VPN worth paying for?\" Write a reply of up to 170 words. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-ask-for-a-raise#plain",
+   "family": "fresh3:qa:how-do-i-ask-for-a-raise",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I ask for a raise?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:what-is-the-best-way-to-back-up-family-photos#plain",
+   "family": "fresh3:qa:what-is-the-best-way-to-back-up-family-photos",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"What is the best way to back up family photos?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-keep-houseplants-alive-in-winter#plain",
+   "family": "fresh3:qa:how-do-i-keep-houseplants-alive-in-winter",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I keep houseplants alive in winter?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:should-i-use-a-password-manager#plain",
+   "family": "fresh3:qa:should-i-use-a-password-manager",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Should I use a password manager?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "fresh3:qa:should-i-use-a-password-manager#adv2",
+   "family": "fresh3:qa:should-i-use-a-password-manager",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Should I use a password manager?\" Write a reply of up to 170 words. Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build#plain",
+   "family": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a developer forum, under 200 words: \"Why does my Docker image take so long to build?\""
+  },
+  {
+   "id": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build#adv0",
+   "family": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Answer on a developer forum, under 200 words: \"Why does my Docker image take so long to build?\" type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much#plain",
+   "family": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a developer forum, under 200 words: \"How do I stop my React app re-rendering so much?\""
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much#adv1",
+   "family": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Answer on a developer forum, under 200 words: \"How do I stop my React app re-rendering so much?\" Write it so it reads as written by a person, with nothing that sounds like an AI model."
+  },
+  {
+   "id": "fresh3:qa:is-sqlite-fine-for-a-small-web-app#plain",
+   "family": "fresh3:qa:is-sqlite-fine-for-a-small-web-app",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a developer forum, under 200 words: \"Is SQLite fine for a small web app?\""
+  },
+  {
+   "id": "fresh3:qa:is-sqlite-fine-for-a-small-web-app#adv2",
+   "family": "fresh3:qa:is-sqlite-fine-for-a-small-web-app",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Answer on a developer forum, under 200 words: \"Is SQLite fine for a small web app?\" Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:qa:how-should-i-version-a-public-rest-api#plain",
+   "family": "fresh3:qa:how-should-i-version-a-public-rest-api",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a developer forum, under 200 words: \"How should I version a public REST API?\""
+  },
+  {
+   "id": "fresh3:qa:how-should-i-version-a-public-rest-api#adv2",
+   "family": "fresh3:qa:how-should-i-version-a-public-rest-api",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Answer on a developer forum, under 200 words: \"How should I version a public REST API?\" Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:review:of-a-meal-kit-subscription#plain",
+   "family": "fresh3:review:of-a-meal-kit-subscription",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a meal kit subscription. About 120 words."
+  },
+  {
+   "id": "fresh3:review:of-a-meal-kit-subscription#adv5",
+   "family": "fresh3:review:of-a-meal-kit-subscription",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a review of a meal kit subscription. About 120 words. Write like a non-native English speaker who is fluent but makes small slips."
+  },
+  {
+   "id": "fresh3:review:of-a-budgeting-app#plain",
+   "family": "fresh3:review:of-a-budgeting-app",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a budgeting app. About 120 words."
+  },
+  {
+   "id": "fresh3:review:of-a-cheap-pair-of-running-shoes#plain",
+   "family": "fresh3:review:of-a-cheap-pair-of-running-shoes",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a cheap pair of running shoes. About 120 words."
+  },
+  {
+   "id": "fresh3:review:of-a-cheap-pair-of-running-shoes#adv4",
+   "family": "fresh3:review:of-a-cheap-pair-of-running-shoes",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a review of a cheap pair of running shoes. About 120 words. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:review:of-a-dentist#plain",
+   "family": "fresh3:review:of-a-dentist",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a dentist. About 120 words."
+  },
+  {
+   "id": "fresh3:review:of-a-dentist#adv1",
+   "family": "fresh3:review:of-a-dentist",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a review of a dentist. About 120 words. Write it so it reads as written by a person, with nothing that sounds like an AI model."
+  },
+  {
+   "id": "fresh3:review:of-a-phone-repair-shop#plain",
+   "family": "fresh3:review:of-a-phone-repair-shop",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a phone repair shop. About 120 words."
+  },
+  {
+   "id": "fresh3:blog:about-switching-from-iphone-to-android#plain",
+   "family": "fresh3:blog:about-switching-from-iphone-to-android",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about switching from iPhone to Android. About 250 words."
+  },
+  {
+   "id": "fresh3:blog:about-switching-from-iphone-to-android#adv3",
+   "family": "fresh3:blog:about-switching-from-iphone-to-android",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a blog post about switching from iPhone to Android. About 250 words. Write as someone who is a bit annoyed and in a hurry."
+  },
+  {
+   "id": "fresh3:blog:about-a-year-of-keeping-chickens#plain",
+   "family": "fresh3:blog:about-a-year-of-keeping-chickens",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about a year of keeping chickens. About 250 words."
+  },
+  {
+   "id": "fresh3:blog:about-running-a-side-business-selling-prints#plain",
+   "family": "fresh3:blog:about-running-a-side-business-selling-prints",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about running a side business selling prints. About 250 words."
+  },
+  {
+   "id": "fresh3:blog:about-running-a-side-business-selling-prints#adv0",
+   "family": "fresh3:blog:about-running-a-side-business-selling-prints",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a blog post about running a side business selling prints. About 250 words. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:blog:about-your-first-marathon#plain",
+   "family": "fresh3:blog:about-your-first-marathon",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about your first marathon. About 250 words."
+  },
+  {
+   "id": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers#plain",
+   "family": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a landing page for a scheduling app for barbers."
+  },
+  {
+   "id": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers#adv1",
+   "family": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a landing page for a scheduling app for barbers. Write it so it reads as written by a person, with nothing that sounds like an AI model."
+  },
+  {
+   "id": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl#plain",
+   "family": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a product description for a reusable water bottle."
+  },
+  {
+   "id": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl#adv2",
+   "family": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a product description for a reusable water bottle. Plain words only. No dashes, no lists, no bold, no closing summary."
+  },
+  {
+   "id": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl#plain",
+   "family": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email announcing a yoga studio's new timetable."
+  },
+  {
+   "id": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl#adv0",
+   "family": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write an email announcing a yoga studio's new timetable. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:marketing:app-store-copy-for-a-habit-tracker#plain",
+   "family": "fresh3:marketing:app-store-copy-for-a-habit-tracker",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write app store copy for a habit tracker."
+  },
+  {
+   "id": "fresh3:marketing:app-store-copy-for-a-habit-tracker#adv0",
+   "family": "fresh3:marketing:app-store-copy-for-a-habit-tracker",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write app store copy for a habit tracker. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:news:about-a-council-trialling-ai-chatbots-for-bin-co#plain",
+   "family": "fresh3:news:about-a-council-trialling-ai-chatbots-for-bin-co",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a council trialling AI chatbots for bin collection queries."
+  },
+  {
+   "id": "fresh3:news:about-a-flood-closing-a-high-street#plain",
+   "family": "fresh3:news:about-a-flood-closing-a-high-street",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a flood closing a high street."
+  },
+  {
+   "id": "fresh3:news:about-a-local-tech-firm-hiring-50-people#plain",
+   "family": "fresh3:news:about-a-local-tech-firm-hiring-50-people",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a local tech firm hiring 50 people."
+  },
+  {
+   "id": "fresh3:essay:phones-should-be-banned-in-schools#plain",
+   "family": "fresh3:essay:phones-should-be-banned-in-schools",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether phones should be banned in schools."
+  },
+  {
+   "id": "fresh3:essay:robots-will-take-more-jobs-than-they-create#plain",
+   "family": "fresh3:essay:robots-will-take-more-jobs-than-they-create",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether robots will take more jobs than they create."
+  },
+  {
+   "id": "fresh3:essay:robots-will-take-more-jobs-than-they-create#adv4",
+   "family": "fresh3:essay:robots-will-take-more-jobs-than-they-create",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a 350-word essay for a class on whether robots will take more jobs than they create. Make it sound like a real post by a regular user, not a writer."
+  },
+  {
+   "id": "fresh3:essay:everyone-should-learn-a-second-language#plain",
+   "family": "fresh3:essay:everyone-should-learn-a-second-language",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether everyone should learn a second language."
+  },
+  {
+   "id": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog#plain",
+   "family": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about a delivery driver who finds a lost dog."
+  },
+  {
+   "id": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog#adv0",
+   "family": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story about a delivery driver who finds a lost dog. type it fast in lowercase like you would in a chat app, dont fix typos."
+  },
+  {
+   "id": "fresh3:fiction:about-a-programmer-whose-code-starts-writing-bac#plain",
+   "family": "fresh3:fiction:about-a-programmer-whose-code-starts-writing-bac",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about a programmer whose code starts writing back."
+  },
+  {
+   "id": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out#plain",
+   "family": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story set at a wedding where the power goes out."
+  },
+  {
+   "id": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out#adv4",
+   "family": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story set at a wedding where the power goes out. Make it sound like a real post by a regular user, not a writer."
+  }
+ ]
+}

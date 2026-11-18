@@ -1,0 +1,844 @@
+{
+ "name": "claude-sonnet",
+ "model": "claude-cli:sonnet",
+ "createdAt": "2026-11-18T21:13:50.511Z",
+ "items": [
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40#plain",
+   "family": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Ugh, my phone is driving me nuts lately. It keeps dying when the battery hits around 40 percent, like it just gives up mid-scroll. I'll be watching something or texting and suddenly the screen goes black, and then I have to plug it in to get it to turn back on. It happened three times yesterday, including once while I was trying to pull up my boarding pass, which was not fun. I already restarted it and checked for updates, but nothing changed. Do you think it's the battery wearing out, or could it be something else? I'm debating whether to take it in for a repair or just bite the bullet and get a new one."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40#adv0",
+   "family": "fresh3:chat:to-a-friend-about-a-phone-that-keeps-dying-at-40",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "ugh my phone is driving me nuts lately. it keeps dying at like 40 percent for no reason, ill be scrolling and it just goes black. then i plug it in and it says its at 38 or something lol. ive tried restarting it a bunch of times and it still does it. i think the battery is just cooked?? it was fine untill like last month tho. do you know if apple or samsung or whoever does battery swaps for cheap, i really dont wanna buy a whole new phone rn"
+  },
+  {
+   "id": "fresh3:chat:to-your-team-about-moving-the-demo-to-next-week#plain",
+   "family": "fresh3:chat:to-your-team-about-moving-the-demo-to-next-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi team, quick heads-up: we're moving the demo to next week. A few of the key features still need more testing, and I'd rather show something polished than rush it. This gives us extra time to fix the remaining bugs and tighten up the walkthrough. I'll send an updated calendar invite with the new date and time shortly. In the meantime, please keep working on your current tasks and flag anything that might put the new timeline at risk. Thanks for your flexibility, and let me know if you have any questions or concerns."
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive#plain",
+   "family": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I'm starting university soon and need to buy a new laptop, but I'm totally lost on what to get. You know a lot more about this stuff than I do, so I wanted to ask what you'd recommend. I'll mostly be using it for taking notes, writing essays, and streaming, though I might do some light photo editing too. My budget is around $800 to $1,000, and I'd like something with good battery life that's not too heavy to carry around campus. Do you think I should go with a MacBook Air, or is there a Windows laptop that's better value? Let me know what you'd pick!"
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive#adv0",
+   "family": "fresh3:chat:to-a-friend-asking-which-laptop-to-buy-for-unive",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey so i need to pick a laptop for uni and im totally lost lol. u know way more about this stuff than me so what would u get. my budget is like 800 to 1000 and i mostly need it for notes, writing essays and netflix hehe. ive been looking at a macbook air but idk if its worth it or if i shud just get a windows one. also battery life matters cuz i dont wanna carry a charger everywhere. wat do u think?? ur opinion would really help me out"
+  },
+  {
+   "id": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal#plain",
+   "family": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey love, quick heads-up that our car insurance renewal is coming up soon. I looked at the renewal quote and the premium has gone up a bit compared to last year, so I'd like us to shop around before it auto-renews. I'm planning to get two or three quotes from other providers this week and compare coverage as well as price. Could you dig out the current policy documents, or tell me where you saved them? It would also help to know if you're happy with the current deductible or want to change it. Let's decide together by the weekend so we don't miss the deadline. Does that work for you?"
+  },
+  {
+   "id": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal#adv0",
+   "family": "fresh3:chat:to-your-partner-about-the-car-insurance-renewal",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey so the car insurance renewal came thru today and its going up like 40 bucks a month, kinda annoying. i was gonna call them and see if they can knock it down since we havent had any claims or tickets. also might get a couple other quotes from progressive and geico just to compare. do u remember when it actually runs out, i think its the end of the month but not sure. if we switch i dont want a gap in coverage so we gotta time it right. ill look at it tonight after dinner and let u know what i find, lmk if u have any thoughts"
+  },
+  {
+   "id": "fresh3:chat:to-a-co-worker-asking-how-the-new-ai-note-taker-#plain",
+   "family": "fresh3:chat:to-a-co-worker-asking-how-the-new-ai-note-taker-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I noticed you've been using the new AI note-taker in our meetings, and I'm curious how it actually works. Do you have to start it manually, or does it join the calls automatically? I'm also wondering how it handles things like action items and who said what. Does it send out the summary right after the meeting, or do you have to go in and share it? One more thing: do you know if it's okay to use in meetings with external clients, or are there privacy rules we need to follow? If you have a few minutes this week, I'd really appreciate a quick walkthrough. Thanks!"
+  },
+  {
+   "id": "fresh3:chat:to-a-friend-about-a-gym-that-keeps-charging-you-#plain",
+   "family": "fresh3:chat:to-a-friend-about-a-gym-that-keeps-charging-you-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Ugh, you will not believe what Iron Peak Fitness is doing to me. I cancelled my membership back in September, even got a confirmation email, and they just charged me again this month. I called the front desk and they told me I had to cancel in person, which is news to me because nobody said that when I signed up. Now they're saying a refund could take \"6 to 8 weeks,\" which feels like a joke. I'm going to dispute the charge with my bank today and send them a written cancellation just to be safe. Have you ever dealt with anything like this? If you have any tips, I'm all ears."
+  },
+  {
+   "id": "fresh3:chat:to-a-group-chat-about-a-pub-quiz-on-thursday#plain",
+   "family": "fresh3:chat:to-a-group-chat-about-a-pub-quiz-on-thursday",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey everyone! Who's up for the pub quiz this Thursday? It kicks off at 7:30pm, but I'd suggest we get there around 7 so we can grab a good table. Last time we missed out on first place by just one point, so I'm feeling like this is our week for redemption. We need a few more people for a full team of six, so bring a friend if you like. I'll sort out the booking once I know numbers, so give me a thumbs up or let me know by Wednesday evening. Bonus points to anyone who's brushed up on music and geography, because those rounds got us last time!"
+  },
+  {
+   "id": "fresh3:chat:to-a-client-asking-if-they-got-the-invoice#plain",
+   "family": "fresh3:chat:to-a-client-asking-if-they-got-the-invoice",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi there, I hope your week is going well! I wanted to check in and see if you received the invoice I sent over recently. I know inboxes can get busy, so it's possible it slipped through or landed in your spam folder. If you haven't seen it, I'm happy to resend it right away. Please let me know if you have any questions about the line items or need anything adjusted on your end. Once you've had a chance to review it, a quick confirmation would be much appreciated. Thanks so much for your time!"
+  },
+  {
+   "id": "fresh3:comment:about-a-startup-that-charges-per-api-call#plain",
+   "family": "fresh3:comment:about-a-startup-that-charges-per-api-call",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I've been burned by per-call pricing before, so I'm skeptical, but I'll give them credit: it's at least honest about where the cost comes from. The problem is that \"per API call\" is a terrible unit when the caller doesn't control how many calls a task takes. If I have to paginate, retry on 5xx, or make three round trips to assemble one logical result, my bill depends on your API design rather than my usage. Do retries count? Do failed calls count? Does a 304 count? Those answers matter a lot more than the headline price.\n\nThe other issue is predictability. Per-call billing is great when you're prototyping and awful when a bug in a cron job or a customer's runaway loop turns into a four-figure invoice overnight. If they don't offer hard spending caps, per-key rate limits, and usage alerts that actually fire before the damage is done, I wouldn't put this in a production path. A pricing page that says \"$0.002 per call\" is only half the story.\n\nThat said, I do think this model works well for the right shape of product, where one call maps cleanly to one unit of value (a geocode, a validation, an enrichment). If that's what they're doing, it's the fairest pricing out there. If calls are more like low-level primitives, I'd want a bundled tier or a committed-use discount so I'm not paying a tax for their architecture decisions."
+  },
+  {
+   "id": "fresh3:comment:on-a-post-about-a-new-open-source-database#plain",
+   "family": "fresh3:comment:on-a-post-about-a-new-open-source-database",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Congrats to the team on shipping this. The architecture doc was the most interesting part for me. Building on an LSM-tree with a columnar layer on top is a tradeoff I don't see many projects willing to make, since you end up fighting write amplification on one side and scan performance on the other. I'd be curious how compaction behaves under sustained mixed workloads, because that's where most of these designs start to show cracks. Do you have benchmarks beyond the synthetic ones in the README, ideally something like a real ingest pipeline with concurrent analytical queries?\n\nI also appreciate that the license is a plain Apache 2.0 rather than one of the source-available variants that have become so common. That matters a lot when deciding whether to build a product on top of something, and it's a big part of why I'd consider trying this over some of the alternatives. The one thing I'd want to understand before committing is the story around upgrades and on-disk format stability. Is there a versioning guarantee, or should we expect breaking changes until 1.0?\n\nMinor nit: the docs say \"blazingly fast\" a few times, which makes me trust the numbers a little less. The charts speak for themselves, and I'd rather see the methodology (hardware, dataset size, cold vs. warm cache) than the adjectives. That said, the project looks well-run, and I'll be spinning up a test instance this weekend to see how it handles our workload."
+  },
+  {
+   "id": "fresh3:comment:about-voice-assistants-getting-worse#plain",
+   "family": "fresh3:comment:about-voice-assistants-getting-worse",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I think the underlying issue is that these assistants were built as deterministic command parsers, and then got retrofitted with LLMs without anyone being willing to accept the tradeoffs. The old Alexa or Google Assistant was dumb, but it was predictable: \"turn off the kitchen lights\" mapped to an intent, the intent mapped to an action, and it worked the same way every time. Now the same request goes through a layer that's trying to be conversational, and you get a 1-in-20 failure rate on things that used to be 100%. For a light switch replacement, that's a regression no matter how good the demo of \"plan my weekend trip\" looks.\n\nThe incentives are also misaligned with what users actually do with these things. Most people use a smart speaker for timers, music, weather, and lights. That's solved, and there's no revenue in a solved problem. So the product teams are pushed toward upsells, shopping suggestions, chattier responses, and \"did you know?\" prompts. Every extra sentence of filler after \"timer set\" is someone's engagement metric. Meanwhile the boring reliability work gets no headcount because nobody gets promoted for making the timer work 99.99% instead of 99.9% of the time.\n\nWhat frustrates me most is that the fix is obvious and nobody will ship it: keep the deterministic path for the common commands, fall back to the LLM only when intent matching fails, and let me turn off the chatter. Local, fast, boring. Home Assistant's voice pipeline is basically heading that direction, and it's telling that a hobbyist project is closer to what I want than the trillion-dollar companies."
+  },
+  {
+   "id": "fresh3:comment:about-voice-assistants-getting-worse#adv5",
+   "family": "fresh3:comment:about-voice-assistants-getting-worse",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "I have the feeling that voice assistants are become worse every year, not better. Ten years ago I could say \"set timer for ten minutes\" and it was done, simple. Now my Alexa answer me with a small speech about some new feature, or ask if I want to hear about my \"daily briefing\", and sometimes it just don't understand what I said at all. The basic things was working better before.\n\nI think the reason is that every company now want to put LLM inside the assistant, and this is very different technology from the old command system. The old one was dumb but predictable: you say the magic words, you get the result. The new one is more flexible, but also it can hallucinate or choose wrong interpretation. For example last week I asked to turn off the lights in kitchen and it started to play a song with \"kitchen\" in the title. Nobody ask for this.\n\nWhat I would like is simple, a \"boring mode\" where the assistant do only the fixed commands, locally, without cloud and without conversation. I would pay for this. Maybe Home Assistant with local voice is the answer, but for normal people who don't want to configure a server at home it is still too much work."
+  },
+  {
+   "id": "fresh3:comment:about-whether-code-review-slows-teams-down#plain",
+   "family": "fresh3:comment:about-whether-code-review-slows-teams-down",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Code review slows teams down in the same way brakes slow cars down: technically true, and not the interesting part. The real cost isn't the review itself, it's the latency. A PR that sits for two days waiting on someone's attention is where velocity dies, because the author context-switches, stacks more work on top, and then pays again when feedback arrives and they have to reload the whole thing into their head. Teams that complain about review being slow are almost always complaining about queue time, not review time. A 15-minute review that happens within an hour is cheap. The same review three days later is expensive for everyone.\n\nWhat review buys you is harder to measure, which is why it's easy to argue against. It spreads knowledge so the bus factor isn't one, it catches the class of bugs that the author is blind to by construction, and it keeps the codebase from fragmenting into five personal styles. But I'd say plenty of teams over-apply it. Reviewing a typo fix or a config bump with the same ceremony as a schema migration is how you end up with rubber-stamping, which is worse than no review because it gives you false confidence.\n\nMy rule of thumb: keep PRs small, set an explicit expectation (say, first response within a few hours), and scale scrutiny to risk. Pair or mob on the gnarly stuff instead of going back and forth in comments. If your reviews are consistently slowing you down, that's usually a symptom of big PRs, unclear ownership, or a lack of trust, and removing review wouldn't fix any of those. It would just move the pain to production."
+  },
+  {
+   "id": "fresh3:comment:about-an-app-that-sells-location-data#plain",
+   "family": "fresh3:comment:about-an-app-that-sells-location-data",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The part that gets glossed over in these discussions is that \"anonymized\" location data is almost never anonymous. Four or five timestamped points are enough to uniquely identify most people, and the two that matter most, where a device sleeps at night and where it sits during work hours, give you a home address and an employer almost immediately. Once you have that, joining against voter rolls, property records, or a data broker's identity graph is trivial. The \"we only sell aggregated, de-identified data\" line in the privacy policy is doing a lot of work that the data itself can't support.\n\nThe consent story is also weaker than people assume. Most of these SDKs get embedded in weather, flashlight, or prayer apps, and the user taps \"Allow while using\" for a feature that has nothing to do with the resale. The disclosure lives in a policy nobody reads, and the buyer chain is usually three or four hops long by the time the data reaches someone like a hedge fund, a bounty hunter, or a government agency that would otherwise need a warrant. That last part is the real scandal: buying data is a workaround for the Fourth Amendment, and Carpenter v. United States arguably should have closed it, but hasn't.\n\nI'd like to see the app stores take this on directly. Apple's and Google's permission prompts could require that any SDK receiving location data declare its downstream buyers, and revoke apps that lie about it. That wouldn't fix the legal gap, but it would raise the cost of this business model considerably, and it's something the platforms could do tomorrow without waiting on Congress."
+  },
+  {
+   "id": "fresh3:comment:about-an-app-that-sells-location-data#adv3",
+   "family": "fresh3:comment:about-an-app-that-sells-location-data",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Honestly, why is anyone surprised by this? \"Anonymized\" location data has been shown to be re-identifiable for years. Four or five points is enough to pick out one person from millions, and your home and work addresses are basically a signature. Calling it anonymous because there's no name attached is a marketing line, not a privacy guarantee.\n\nThe consent flow is the real scam. Burying \"share data with partners\" under a toggle in a settings menu and calling it informed consent is a joke. Nobody who installed a weather app or a flashlight thing agreed to have their daily commute sold to a broker who resells it to who-knows-who. And \"we only sell aggregated data\" doesn't mean much when the buyers can just buy the raw feed from the next broker over.\n\nNot going to write a long thing, I've got a meeting in five. Short version: delete the app, revoke location permissions across the board, and if you're in a state or country with a decent privacy law, file the deletion requests. It's tedious but it's the only thing that actually does anything."
+  },
+  {
+   "id": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new#plain",
+   "family": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I'm seeing the same problem after upgrading to the new major version. The plugin worked without issues on the previous release, but once I updated, it stopped loading entirely. There's no obvious error in the UI, and the features it provided are simply gone. Downgrading to the previous major version restores everything, so this looks like a regression introduced by the upgrade rather than a problem with my configuration.\n\nFor reference, I'm running a clean install with default settings apart from this plugin. It seems likely that something in the plugin API changed in the new major version, such as a renamed hook or a changed initialization signature. Could the maintainers confirm whether the plugin needs to be updated for compatibility, and if so, whether there's a migration guide? I'm happy to share logs or test a fix if that would help."
+  },
+  {
+   "id": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new#adv2",
+   "family": "fresh3:comment:saying-a-plugin-broke-after-upgrading-to-the-new",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "I upgraded to the new major version this week and the plugin stopped working right after. It loaded fine before the upgrade, but now it fails during startup and never finishes initializing. None of its features show up in the interface, and the only thing I see is an error in the logs saying the plugin could not be loaded. I haven't changed anything else in my setup, so I think the upgrade is what caused it.\n\nI tried reinstalling the plugin and clearing the cache, but the result was the same. Going back to the previous major version makes it work again, so the problem seems tied to something that changed in the new release. Has anyone else run into this, or is there a known change to the plugin API that I should be aware of? I'm happy to share my full logs or test a fix if that would help."
+  },
+  {
+   "id": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry#plain",
+   "family": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Would it be possible to add an option to disable telemetry? I really enjoy using this tool, but I'm not comfortable with usage data being sent by default, especially when I'm working in environments with strict privacy or compliance requirements. Right now there doesn't seem to be a clear way to opt out, and that's the only thing keeping me from using it more widely.\n\nA simple config setting or environment variable (for example, something like a `DO_NOT_TRACK`-style flag) would be ideal, along with a short note in the documentation describing what data is collected and how to turn it off. Ideally, telemetry would be opt-in rather than opt-out, but even a straightforward opt-out would be a big improvement. Thanks for considering it, and thanks for all the work on this project!"
+  },
+  {
+   "id": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry#adv4",
+   "family": "fresh3:comment:asking-for-an-option-to-turn-off-telemetry",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Would it be possible to add a setting to turn off telemetry completely? I've been using this tool for a few weeks and really like it, but I noticed it's sending usage data back by default and there doesn't seem to be a documented way to opt out. I work on a few projects where I'm not allowed to send anything to third parties, so right now I can't use it on those, which is a bummer.\n\nIdeally it'd be a config option or an environment variable (something like DISABLE_TELEMETRY=1) that works without needing to block the endpoint at the network level. It'd also be great if the docs said clearly what's collected. Happy to test a build if that helps. Thanks for all the work on this!"
+  },
+  {
+   "id": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-#plain",
+   "family": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I'm seeing the Windows installer get flagged as a virus when I try to download and run it. Windows Defender (SmartScreen) blocks it with a warning, and in my case the file was also quarantined as a suspected trojan right after download. I'm on Windows 11 with the latest definitions, and I downloaded the installer directly from the official releases page, so I don't believe the file was tampered with in transit.\n\nI suspect this is a false positive, which is common for unsigned installers or newly built binaries with low reputation. Could the maintainers confirm whether the installer is code-signed, and if not, consider signing it? It would also help to publish SHA-256 checksums for each release so users can verify their download, and possibly submit the binary to Microsoft and other vendors for false-positive review. I'm happy to provide the exact detection name, file hash, or a VirusTotal link if that would help."
+  },
+  {
+   "id": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-#adv1",
+   "family": "fresh3:comment:reporting-that-the-windows-installer-flags-as-a-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Ran into the same thing on Windows 11 today. I downloaded the latest installer from the releases page and Windows Defender quarantined it right away, calling it a trojan. I also uploaded the file to VirusTotal and a handful of engines flagged it, though most of them came back clean. My guess is it's a false positive, since the installer is unsigned and these tend to trip heuristic scanners, but I'd feel better having someone confirm that.\n\nCould a maintainer check whether the build was affected, and maybe publish the SHA256 hash so people can verify their download matches? Code signing would probably cut down on these reports too. For now I'm holding off on running it, and I'd suggest others do the same until we hear back."
+  },
+  {
+   "id": "fresh3:comment:agreeing-with-a-proposal-to-drop-python-3-7-supp#plain",
+   "family": "fresh3:comment:agreeing-with-a-proposal-to-drop-python-3-7-supp",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "+1 from me on dropping Python 3.7. It reached end-of-life in June 2023, so it no longer receives security fixes, and many of our dependencies have already stopped publishing wheels or testing against it. Keeping it in our support matrix means extra CI time and workarounds for missing stdlib features, such as newer typing constructs and `functools` improvements, that we could otherwise use directly.\n\nI'd suggest we call this out clearly in the changelog and release notes, bump `python_requires` so pip resolves older environments to the last compatible release, and tag a final version that still works on 3.7 for anyone who needs it. With that in place, I think the cost to users is small and the maintenance savings are worthwhile."
+  },
+  {
+   "id": "fresh3:forum:asking-if-a-smart-thermostat-is-worth-it#plain",
+   "family": "fresh3:forum:asking-if-a-smart-thermostat-is-worth-it",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Is a smart thermostat actually worth the money?**\n\nHi everyone,\n\nI've been going back and forth on whether to buy a smart thermostat, and I'd love some real-world opinions before I spend the money. My current thermostat is a basic programmable one that I honestly never bothered to set up properly, so the house is either too warm or too cold depending on the day.\n\nThe big selling points seem to be energy savings, remote control from my phone, and learning schedules automatically. But I'm skeptical about how much money it really saves, especially since most models run $130 to $250. I also wonder if the extra features are just gimmicks.\n\nFor those who have one: did your energy bills drop noticeably? Was installation easy, or did you need an electrician? Any brands you'd recommend or avoid? Also, do you still use the app after the first few weeks?\n\nThanks in advance for any advice!"
+  },
+  {
+   "id": "fresh3:forum:about-selling-handmade-candles-online#plain",
+   "family": "fresh3:forum:about-selling-handmade-candles-online",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Tips for Selling Handmade Candles Online: What's Worked for Me**\n\nHi everyone,\n\nI've been selling handmade soy candles online for about two years, and I wanted to share a few lessons that made a real difference.\n\nFirst, photography matters more than you'd think. Natural light, simple backgrounds, and a lit candle shot will beat fancy equipment every time. Customers can't smell your product, so your images and scent descriptions have to do the work.\n\nSecond, offer sample sizes or discovery sets. They lower the barrier for new buyers and often lead to full-size repeat orders.\n\nThird, be upfront about shipping. Candles are heavy and fragile, so invest in good packaging and build the cost into your pricing instead of surprising customers at checkout.\n\nFinally, collect emails early. Social media reach is unpredictable, but a mailing list brings steady sales, especially around the holidays.\n\nWhat platforms are you all using? Etsy, Shopify, or something else? I'd love to hear what's working for you!"
+  },
+  {
+   "id": "fresh3:forum:asking-for-help-with-a-slow-home-wifi#plain",
+   "family": "fresh3:forum:asking-for-help-with-a-slow-home-wifi",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Subject: Home WiFi has become painfully slow – need troubleshooting help**\n\nHi everyone,\n\nI'm hoping someone can help me figure out why my home WiFi has slowed to a crawl over the past few weeks. I pay for a 500 Mbps plan, but speed tests on my phone and laptop rarely show more than 15–20 Mbps, even when I'm in the same room as the router. Video calls keep freezing, and streaming often drops to low quality.\n\nWhat I've tried so far: restarting the router and modem, moving the router to a more central spot, switching between the 2.4 GHz and 5 GHz bands, and updating the router firmware. Nothing has made a noticeable difference. Plugging a laptop in directly with Ethernet gives about 400 Mbps, so the problem seems to be the wireless side.\n\nI live in an apartment building with lots of neighboring networks, if that matters. Could it be interference or channel congestion? Would a new router or mesh system help? Any advice on what to check next would be greatly appreciated.\n\nThanks in advance!"
+  },
+  {
+   "id": "fresh3:forum:asking-for-help-with-a-slow-home-wifi#adv4",
+   "family": "fresh3:forum:asking-for-help-with-a-slow-home-wifi",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Title: Wifi crawling at night, fine during the day? Help\n\nHey all, hoping someone here can point me in the right direction. For the last couple of weeks our home wifi has been really slow, mostly in the evenings. Speed tests in the morning give me around 300 Mbps (we pay for 500), but after about 6pm it drops to maybe 20-30 and Netflix keeps buffering.\n\nSetup is a router the ISP gave us about four years ago, sitting in the living room. Roughly 15 devices connected, including a couple of smart TVs and some cheap plug-in cameras. I've already restarted the router a bunch of times and tried the 5GHz band, which helped a little in the same room but is terrible upstairs.\n\nIs this my router dying, interference from neighbors, or the ISP throttling? Should I just buy a mesh system? Any advice on what to test first would be great. Thanks!"
+  },
+  {
+   "id": "fresh3:forum:about-learning-to-code-at-35#plain",
+   "family": "fresh3:forum:about-learning-to-code-at-35",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Started learning to code at 35. Here's what I wish I'd known**\n\nHi everyone,\n\nSix months ago I opened my first Python tutorial feeling like I'd missed the boat. Everyone in the bootcamp videos seemed twenty-two and fearless. I'm 35, with a mortgage, a full-time job, and about ninety minutes a night after the kids are asleep.\n\nHere's what's actually helped:\n\n**Consistency beats intensity.** Ninety minutes daily has taught me more than any weekend binge.\n\n**Build small, ugly things.** My first project was a script that renames my messy photo folders. It's terrible code, but it works, and I use it.\n\n**Your age is an asset.** I know how to communicate, manage my time, and ask for help without ego.\n\n**Confusion is normal.** I still reread the same explanations three times.\n\nI'm not job-hunting yet, just enjoying the progress. If you started later in life, what kept you going? I'd love to hear your stories."
+  },
+  {
+   "id": "fresh3:forum:about-learning-to-code-at-35#adv3",
+   "family": "fresh3:forum:about-learning-to-code-at-35",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Re: Is 35 too old to learn to code?\n\nOkay, can we stop asking this? I'm 35. I started six months ago. No, I'm not \"too old,\" and no, I don't have time to read 40 replies debating it.\n\nHere's what actually matters: pick ONE language and stick with it. I wasted two months bouncing between Python, JavaScript, and Rust because every thread told me something different. Don't do that.\n\nBuild small things. Break them. Fix them. Tutorials are fine for a week, then you're just procrastinating with extra steps.\n\nYes, it's slow. Yes, you'll feel dumb. I have a full-time job and a kid, so I get maybe an hour a night, and I'm still making progress.\n\nNobody cares about your age in interviews if you can show working projects. Seriously.\n\nAnyway, I've got a bug to fix before bedtime and it's already 10:40. Stop asking, start typing."
+  },
+  {
+   "id": "fresh3:forum:asking-whether-to-take-a-job-at-a-startup-or-a-b#plain",
+   "family": "fresh3:forum:asking-whether-to-take-a-job-at-a-startup-or-a-b",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Startup vs. bank: how would you decide?**\n\nHi everyone,\n\nI'm facing a tough decision and could use some outside perspective. I have two offers on the table and have to respond within a week.\n\nThe first is from an early-stage startup (about 25 people, Series A). The role is exciting, with lots of ownership and the chance to learn quickly, plus meaningful equity. But the base salary is about 15% lower, and I worry about runway and job security.\n\nThe second is from a large bank. The pay is higher, the benefits are strong, and the stability is appealing. The work seems more structured and slower-moving, though, and I'm not sure how much I'd grow there.\n\nI'm in my late twenties, have no dependents, and have a modest amount of savings. Long term, I'd like to build skills that keep my options open.\n\nIf you've faced a similar choice, what tipped the scale for you? Any regrets either way? Thanks in advance!"
+  },
+  {
+   "id": "fresh3:email:to-a-software-vendor-cancelling-your-contract#plain",
+   "family": "fresh3:email:to-a-software-vendor-cancelling-your-contract",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Notice of Contract Cancellation – [Company Name], Account #[Account Number]\n\nDear [Vendor Name] Team,\n\nI am writing to formally notify you that [Company Name] wishes to cancel our contract for [Software/Service Name], effective [Cancellation Date].\n\nAccount details:\n- Account name: [Company Name]\n- Account number: [Account Number]\n- Contract start date: [Start Date]\n- Current term end date: [End Date]\n\nIn accordance with the termination provisions of our agreement, please treat this email as our written notice of cancellation. If any additional steps are required to complete the process, please let me know as soon as possible.\n\nPlease also do the following:\n\n1. Confirm receipt of this notice and the effective cancellation date in writing.\n2. Disable auto-renewal and cancel any future billing associated with this account.\n3. Provide a final invoice and details of any outstanding balance or refund due.\n4. Arrange for the export of our data in a standard format (e.g., CSV or JSON) before the account is closed, and confirm the timeline for secure deletion of our data from your systems afterward.\n\nWe appreciate the service your team has provided and the support we have received during our time as a customer. Please direct any questions regarding this cancellation to me at the contact details below.\n\nThank you for your assistance.\n\nSincerely,\n\n[Your Full Name]\n[Your Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh3:email:to-a-software-vendor-cancelling-your-contract#adv4",
+   "family": "fresh3:email:to-a-software-vendor-cancelling-your-contract",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Subject: Cancellation of our contract\n\nHi,\n\nI'm writing to cancel our subscription with your company, effective at the end of the current billing term. Please don't renew it and don't charge the card on file again.\n\nHonestly, we just haven't been getting enough out of it to justify the cost. The last few months we've barely used half the features we're paying for, and when we ran into problems with syncing and reporting, it took a long time to get answers from support. We've decided to move to something simpler.\n\nCould you please confirm a few things for me:\n\n1. The exact date the cancellation takes effect and that no further invoices will be issued after that.\n2. How I can export all of our data (including past reports and user lists) before the account closes.\n3. That our data will be deleted from your systems after the export, and when that will happen.\n\nIf there's an early termination fee or a notice period I've missed, please let me know right away rather than just billing us. I'd like a written confirmation of the cancellation for our records.\n\nThanks for your help, and I appreciate the service we did get over the years.\n\nBest,\nNorlindt\nnorlindt@gmail.com"
+  },
+  {
+   "id": "fresh3:email:to-a-recruiter-declining-an-interview#plain",
+   "family": "fresh3:email:to-a-recruiter-declining-an-interview",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Re: Interview Opportunity at [Company Name]\n\nHi [Recruiter's Name],\n\nThank you for reaching out about the [Job Title] position at [Company Name], and for taking the time to consider my background. I appreciate the opportunity.\n\nAfter careful thought, I've decided to decline the interview. I'm not looking to make a change at this time, and I want to be respectful of your time and your team's.\n\nI was impressed by what I learned about [Company Name], and I'd be glad to stay in touch. If a role comes up in the future that seems like a strong fit, please feel free to reach out.\n\nThank you again, and best of luck with the search.\n\nBest regards,\n[Your Name]"
+  },
+  {
+   "id": "fresh3:email:to-a-recruiter-declining-an-interview#adv2",
+   "family": "fresh3:email:to-a-recruiter-declining-an-interview",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Subject: Re: Interview Opportunity\n\nHi [Recruiter's Name],\n\nThank you for reaching out and for considering me for the [Job Title] role at [Company Name]. I appreciate the time you took to share the details with me.\n\nAfter thinking it over, I have decided not to move forward with an interview at this time. The role is not the right fit for where I am in my career right now, and I want to be respectful of your time and the hiring team's.\n\nI enjoyed learning about [Company Name] and wish you all the best in finding the right person for the position. If something comes up in the future that lines up better with my goals, I would be glad to reconnect.\n\nThanks again for thinking of me.\n\nBest regards,\n[Your Name]"
+  },
+  {
+   "id": "fresh3:email:to-a-customer-about-a-data-export-they-asked-for#plain",
+   "family": "fresh3:email:to-a-customer-about-a-data-export-they-asked-for",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Your data export is ready\n\nHi [Customer Name],\n\nThank you for your patience while we prepared your data export. I'm pleased to let you know that it's now ready for download.\n\n**Export details**\n- Requested on: [Request Date]\n- Format: [CSV / JSON / other]\n- File size: [Size]\n- Download link: [Link]\n\nFor your security, the link will expire in [7] days, so please download the file before then. If it expires, just let us know and we'll generate a new one for you.\n\nThe export includes [brief description of included data, e.g., account details, activity history, and uploaded files]. If you notice anything missing or need the data in a different format, reply to this email and we'll be glad to help.\n\nIf you didn't request this export, please contact us right away so we can secure your account.\n\nThanks again, and please don't hesitate to reach out with any questions.\n\nBest regards,\n[Your Name]\n[Your Title]\n[Company Name]\n[Support Contact Information]"
+  },
+  {
+   "id": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names#plain",
+   "family": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Data Protection Concern: Pupil Names Exposed via School-Used App\n\nDear [Headteacher / Data Protection Officer],\n\nI am writing to alert you to a data protection issue involving [App Name], an app that I understand is used by the school to [briefly describe purpose, e.g., share class updates or communicate with parents].\n\nOn [date], I noticed that the app was displaying the full names of pupils [describe what you saw, e.g., to other parents/users who should not have had access to this information]. This appears to be a data leak. I believe it may affect [your child / a number of pupils / pupils in a particular class or year group].\n\nDetails of what I observed:\n\n- **App and version:** [App Name, version if known]\n- **Date and time noticed:** [date/time]\n- **What was exposed:** [e.g., pupil full names, class names, photos]\n- **How it was visible:** [e.g., in a shared feed, through a search function, in notifications]\n\nI would be grateful if the school could:\n\n1. Confirm receipt of this email and that the matter is being investigated.\n2. Inform the app provider and, if appropriate, suspend use of the app until the issue is resolved.\n3. Assess whether this must be reported to the Information Commissioner's Office (ICO), as personal data breaches that put individuals at risk must be reported within 72 hours of the school becoming aware of them.\n4. Let affected families know what happened, what data was involved, and what steps are being taken.\n5. Tell me what measures will be put in place to prevent a recurrence.\n\nI have not shared this information beyond the school. I am happy to provide screenshots or further details if that would help your investigation.\n\nPlease could you respond by [date, e.g., within 5 working days] to confirm the action being taken.\n\nThank you for your prompt attention to this important matter.\n\nYours sincerely,\n\n[Your name]\n[Your child's name and class, if relevant]\n[Contact telephone number]"
+  },
+  {
+   "id": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names#adv2",
+   "family": "fresh3:email:to-a-school-about-an-app-that-leaked-pupil-names",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Subject: Pupil names exposed by the school app\n\nDear Headteacher and Data Protection Officer,\n\nI am writing to let you know about a problem with the app the school uses to share information with parents. I believe it has leaked the names of pupils to people who should not be able to see them.\n\nI noticed the issue when I opened the app and found that I could view names of children who are not mine. These were pupils from other classes and possibly other year groups. I did not go looking for this information and I have not shared it with anyone. I have not taken screenshots or saved anything.\n\nI am concerned because this is personal data about children, and the school has a duty to keep it safe. If I can see it, other parents or even people outside the school community may be able to as well. I do not know how long the problem has been there or how many families are affected.\n\nI would be grateful if you could look into this as soon as possible. In particular, I would like to know whether the app supplier has been told, whether the school will report the matter to the Information Commissioner's Office if that is required, and whether parents will be informed about what happened and what is being done to fix it.\n\nI am happy to explain exactly what I saw and how I came across it, so that your team can reproduce the fault. Please let me know the best way to do that.\n\nI would appreciate a reply within the next few days to confirm that you have received this message and that the matter is being looked into.\n\nYours sincerely,\n\n[Your name]\n[Your child's name and class]"
+  },
+  {
+   "id": "fresh3:email:to-a-supplier-asking-to-change-delivery-days#plain",
+   "family": "fresh3:email:to-a-supplier-asking-to-change-delivery-days",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Request to Change Our Delivery Days\n\nDear [Supplier Name],\n\nI hope you are well. Thank you for your continued service and for the reliable deliveries we have received so far.\n\nI am writing to ask whether we could adjust our regular delivery schedule. Our current delivery days are [current days], but a different schedule would suit our operations better. We would like to move to [preferred days], if possible.\n\nIf those days are not available, we could also be flexible with [alternative days]. We would like the change to take effect from [start date], or as soon as your schedule allows.\n\nCould you please let me know whether this change is possible, and whether it would affect delivery times, minimum order requirements, or pricing? If you need anything from us to make the adjustment, I'm happy to provide it.\n\nThank you for your help and understanding. I look forward to your reply.\n\nKind regards,\n\n[Your Name]\n[Your Position]\n[Company Name]\n[Phone Number]"
+  },
+  {
+   "id": "fresh3:email:to-a-supplier-asking-to-change-delivery-days#adv0",
+   "family": "fresh3:email:to-a-supplier-asking-to-change-delivery-days",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hi there,\n\nhey wanted to ask if we can change our delivery days. right now we get stuff on tuesdays and fridays but its not really working for us anymore, we're way busier early in the week and kinda cant deal with recieving stuff then. would mondays and thursdays be possible instead? or wednesdays and fridays if thats easier on your end\n\nlet me know whats doable and if theres any cutoff for orders with the new schedule. would like to start from next week if we can but im flexible on that\n\nthanks a lot\nnorlindt"
+  },
+  {
+   "id": "fresh3:email:to-a-colleague-handing-over-a-project-before-lea#plain",
+   "family": "fresh3:email:to-a-colleague-handing-over-a-project-before-lea",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Project Handover – [Project Name] While I'm on Leave\n\nHi [Colleague's Name],\n\nThank you for agreeing to take over [Project Name] while I'm away. I'll be on leave from [start date] to [end date], and I wanted to give you everything you need to keep things running smoothly.\n\n**Project Overview**\n[One or two sentences on the project's purpose and current status.]\n\n**Current Status**\n- Completed: [key milestones achieved]\n- In progress: [tasks underway and their expected completion]\n- Upcoming: [next steps and deadlines]\n\n**Key Deadlines**\n- [Date]: [Deliverable]\n- [Date]: [Deliverable]\n\n**Key Contacts**\n- [Name, role]: [what they handle, how to reach them]\n- [Name, role]: [what they handle, how to reach them]\n\n**Files and Resources**\n- Project folder: [link or location]\n- Documentation: [link or location]\n- Tracker/board: [link or location]\n\n**Open Issues and Risks**\n- [Issue]: [context and suggested approach]\n- [Issue]: [context and suggested approach]\n\n**Decisions You Can Make Independently**\n[List the types of decisions you're comfortable with them making, and anything that should be escalated to [Manager's Name].]\n\n**Availability While I'm Away**\nI'll be [unreachable / checking email occasionally] during my leave. For urgent matters, please contact [Manager's Name] at [contact details].\n\nI've set aside time on [date] for us to walk through everything together. Please send me any questions beforehand so we can use that time well.\n\nThanks again for your support. I really appreciate it.\n\nBest regards,\n[Your Name]"
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games#plain",
+   "family": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Here are the most effective steps:\n\n**1. Lock down payments on the device.**\n- iPhone/iPad: Use Screen Time → Content & Privacy Restrictions → iTunes & App Store Purchases → set \"In-app Purchases\" to Don't Allow. Turn on \"Ask to Buy\" via Family Sharing.\n- Android: In Google Play → Settings → Authentication, require authentication for all purchases. Use Google Family Link to approve purchases.\n- Consoles (Xbox, PlayStation, Switch): Set up a child account through the family settings and require a passcode or approval for purchases.\n\n**2. Remove saved payment methods.** Delete stored cards from the device, app stores, and game accounts so nothing can be bought with one tap.\n\n**3. Use gift cards or a fixed allowance.** Give a set monthly amount so they learn budgeting without risk.\n\n**4. Turn on purchase notifications.** Email alerts help you catch anything quickly.\n\n**5. Talk about it.** Explain that in-game currency is real money, and discuss loot boxes and how games are designed to encourage spending.\n\nIf a charge already happened, request a refund through Apple, Google, or the game platform. They often approve first-time accidental purchases by minors."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games#adv3",
+   "family": "fresh3:qa:how-do-i-stop-my-kid-spending-money-in-games",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Seriously, just lock it down. Takes two minutes.\n\nTurn off one-click purchases and set a password or fingerprint requirement on the app store. On iPhone: Settings > Screen Time > Content & Privacy Restrictions > iTunes & App Store Purchases > In-app Purchases > Don't Allow. On Android: Play Store > Settings > Authentication > require it for all purchases.\n\nIf they're under 13ish, use Family Sharing (Apple) or Family Link (Google) and turn on Ask to Buy so you get a request every time.\n\nAlso, take your saved cards off the device. Don't leave your card on file and hand over an unlocked phone, that's how this happens.\n\nCheck consoles too (Xbox, PlayStation, Switch all have spending limits and parental controls in their account settings).\n\nBetter option: give them a fixed gift card or allowance so they learn budgeting instead of just hitting a wall.\n\nAnd check your bank statements for refunds. Apple and Google will often refund accidental kid purchases if you ask fast.\n\nDone. Go do it now."
+  },
+  {
+   "id": "fresh3:qa:is-a-vpn-worth-paying-for#plain",
+   "family": "fresh3:qa:is-a-vpn-worth-paying-for",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "It depends on what you want it for.\n\n**Worth it if you:**\n- Use public Wi-Fi often (cafés, airports, hotels)\n- Want to stream region-locked content or avoid geo-blocks\n- Want to hide your browsing from your ISP\n- Torrent or live somewhere with heavy censorship or surveillance\n\n**Probably not worth it if you:**\n- Expect it to make you \"anonymous.\" Sites still track you via cookies, logins, and fingerprinting.\n- Only want security on regular sites. Most traffic is already HTTPS-encrypted.\n- Are tempted by a free VPN. Many log and sell your data, which defeats the purpose.\n\nIf you do buy one, pick a provider with a clear no-logs policy backed by independent audits, solid speeds, and a good track record. Mullvad, Proton VPN, and IVPN are well regarded. Avoid anything that's aggressively affiliate-marketed.\n\nBottom line: a VPN is a privacy tool for specific situations, not a magic shield. If none of the above applies to you, you can likely skip it. If one does, a few dollars a month is reasonable."
+  },
+  {
+   "id": "fresh3:qa:is-a-vpn-worth-paying-for#adv4",
+   "family": "fresh3:qa:is-a-vpn-worth-paying-for",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Depends what you're using it for. I've paid for one for about three years now, mostly because I travel a lot and use hotel/airport wifi constantly. For that alone it's worth it to me. Also lets me watch my home streaming library when I'm abroad, which is a nice bonus.\n\nIf you're just at home and want \"privacy\" from your ISP, it's more of a toss-up. You're basically moving the trust from your ISP to the VPN company, so pick one with a decent track record and independent audits. Mullvad and Proton are the ones I see recommended most.\n\nI'd skip the free ones. If you're not paying, they're usually making money off your data somehow, which kind of defeats the point.\n\nAlso don't fall for the \"military-grade encryption\" marketing stuff. Most of them use the same protocols anyway. Look at price, speed, and whether they've been audited.\n\nSo if you travel or use public wifi a lot, yeah. If not, probably not essential."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-ask-for-a-raise#plain",
+   "family": "fresh3:qa:how-do-i-ask-for-a-raise",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Start by doing your homework. Research market pay for your role, level, and location using sites like Glassdoor, Levels.fyi, or industry salary surveys, and settle on a specific number or narrow range.\n\nNext, build your case. List concrete accomplishments from the past year: projects delivered, revenue earned or costs saved, added responsibilities, positive feedback. Focus on impact, not just effort.\n\nPick your timing. The best moments are after a big win, during a performance review, or before budgets are set. Avoid times when the company is struggling or your manager is swamped.\n\nRequest a dedicated meeting: \"I'd like to discuss my compensation and career growth. Do you have 30 minutes this week?\"\n\nIn the meeting, be direct and confident: \"Based on my contributions and market data, I'd like to discuss adjusting my salary to $X.\" Then pause and let them respond.\n\nIf the answer is no, ask what it would take to get a raise and when you can revisit it. Get any commitments in writing.\n\nFinally, consider alternatives like bonuses, extra vacation, remote flexibility, or a title change.\n\nGood luck!"
+  },
+  {
+   "id": "fresh3:qa:what-is-the-best-way-to-back-up-family-photos#plain",
+   "family": "fresh3:qa:what-is-the-best-way-to-back-up-family-photos",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The best approach is the 3-2-1 rule: keep three copies of your photos, on two different types of storage, with one copy offsite.\n\nHere's a simple way to do it:\n\n1. **Main copy:** Keep your photos organized in one place on your computer or a network drive. Use folders by year and event so they're easy to find.\n\n2. **Local backup:** Copy everything to an external hard drive or SSD. Automate it with built-in tools like Time Machine (Mac) or File History (Windows) so you don't have to remember.\n\n3. **Offsite/cloud backup:** Use a service like Google Photos, iCloud, Backblaze, or Amazon Photos. This protects you from fire, theft, or flooding.\n\nA few extra tips:\n\n- Check your backups a couple of times a year by opening a few random files.\n- Replace external drives every 4-5 years, since they eventually fail.\n- Don't rely on a single phone or cloud sync as your only backup. Sync isn't the same as backup, since deleted files can disappear everywhere.\n- Consider printing a few favorite photos as a final safeguard.\n\nSet it up once, automate it, and you're covered."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-keep-houseplants-alive-in-winter#plain",
+   "family": "fresh3:qa:how-do-i-keep-houseplants-alive-in-winter",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Winter is tough on houseplants, but a few adjustments go a long way:\n\n**Water less.** Growth slows in winter, so plants use less water. Let the top inch or two of soil dry out before watering, and always use room-temperature water. Overwatering is the number one winter killer.\n\n**Maximize light.** Days are shorter and the sun is weaker. Move plants to your brightest windows, clean the glass, and rotate pots weekly. A cheap LED grow light on a timer (10-12 hours) helps a lot.\n\n**Avoid temperature extremes.** Keep plants away from cold drafts, single-pane glass, and heating vents. Most prefer 60-75°F (15-24°C).\n\n**Boost humidity.** Heated air is very dry. Group plants together, use a humidifier, or set pots on a pebble tray with water.\n\n**Skip fertilizer.** Pause feeding until spring, when new growth appears.\n\n**Watch for pests.** Dry indoor air invites spider mites and gnats, so check leaves regularly.\n\n**Don't repot** unless it's necessary.\n\nSome leaf drop is normal. Stay consistent and your plants will bounce back in spring."
+  },
+  {
+   "id": "fresh3:qa:should-i-use-a-password-manager#plain",
+   "family": "fresh3:qa:should-i-use-a-password-manager",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Yes, you should. A password manager is one of the simplest, highest-impact security upgrades you can make.\n\nHere's why:\n\n- **Unique passwords everywhere.** Reusing passwords is the biggest risk. If one site is breached, attackers try that same login on your email, bank, and other accounts. A manager makes unique passwords painless.\n- **Strong, random passwords.** It generates long, random passwords you'd never remember or create yourself.\n- **Phishing protection.** Most managers only autofill on the correct website, so a fake lookalike page is a red flag.\n- **Convenience.** You remember one strong master password, and it syncs across your devices.\n\nTips:\n\n1. Use a long, unique master passphrase, like four or more random words.\n2. Turn on two-factor authentication for the manager itself.\n3. Pick a reputable option such as Bitwarden, 1Password, or the built-in manager in your browser or phone if you want something simple and free.\n4. Save your recovery info somewhere safe.\n\nIs it risky to put everything in one place? Slightly, but far less risky than reusing weak passwords. Start with your email and bank accounts, then work outward."
+  },
+  {
+   "id": "fresh3:qa:should-i-use-a-password-manager#adv2",
+   "family": "fresh3:qa:should-i-use-a-password-manager",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Yes, you should. Most people reuse the same few passwords across many sites, and that is risky. When one site gets hacked, criminals try the same login on your email, bank, and shopping accounts. A password manager fixes this by creating a long, random password for every account and remembering all of them for you. You only need to remember one strong main password.\n\nIt also makes life easier. It fills in logins on your phone and computer, so you type less and get locked out less often. Many can warn you if a password was leaked or if you have used the same one twice.\n\nPick a well known one with good reviews, such as Bitwarden, 1Password, or the one built into your phone or browser. Make your main password long, like a short sentence only you would know, and turn on two step login for the manager itself. Keep a backup of your recovery key somewhere safe, like a paper copy in a drawer.\n\nSetting it up takes an hour or so, but it protects you for years. It is one of the best simple things you can do for your online safety."
+  },
+  {
+   "id": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build#plain",
+   "family": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Slow Docker builds usually come down to a handful of causes. Check these first:\n\n**1. Poor layer caching.** If you `COPY . .` before installing dependencies, any code change invalidates the cache and reinstalls everything. Copy only your manifest first (`package.json`, `requirements.txt`, `go.mod`), install, then copy the rest:\n\n```dockerfile\nCOPY package*.json ./\nRUN npm ci\nCOPY . .\n```\n\n**2. Large build context.** Without a `.dockerignore`, Docker sends everything (including `node_modules`, `.git`, and build artifacts) to the daemon. Add a `.dockerignore` to exclude them.\n\n**3. Heavy base image.** Use slim or alpine variants where compatible, and use multi-stage builds so compilers and dev tools don't end up in the final image.\n\n**4. Slow or repeated downloads.** Use BuildKit cache mounts for package managers:\n\n```dockerfile\nRUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt\n```\n\n**5. Too many or chained steps.** Combine related `RUN` commands and clean up apt lists in the same layer.\n\n**6. BuildKit disabled.** Enable it (`DOCKER_BUILDKIT=1`, or use `docker buildx build`) for parallel stages and better caching.\n\nTo find the culprit, run `docker build --progress=plain .` and look at which step takes the longest. If you share your Dockerfile, people here can give more specific advice."
+  },
+  {
+   "id": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build#adv0",
+   "family": "fresh3:qa:why-does-my-docker-image-take-so-long-to-build",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "most of the time its layer caching getting busted. check your dockerfile order, if you COPY . . before installing deps then every code change reinstalls everything. copy only package.json / requirements.txt first, run install, THEN copy the rest of the source\n\nother stuff that helps:\n\n- add a .dockerignore (node_modules, .git, build junk) so the build context isnt huge. sending gigs of context to the daemon is a sneaky slowdown\n- use a smaller base image like alpine or slim, less to pull\n- multi-stage builds so you dont ship compilers and build tools in the final image\n- turn on buildkit (DOCKER_BUILDKIT=1) its way faster and builds stages in parallel\n- use cache mounts for package managers, like RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt\n- combine apt-get update and install in one RUN and clean up the lists after\n- in CI, use cache-from / cache-to cause fresh runners have no cache at all\n\nrun docker build with --progress=plain to see which step is actually eating the time, then fix that one first. dont guess, measure. if you paste your dockerfile i can take a look"
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much#plain",
+   "family": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "First, **measure** before optimizing. Use the React DevTools Profiler (enable \"Record why each component rendered\") to find which components re-render and why.\n\nCommon fixes:\n\n1. **Keep state local.** Move state down to the component that uses it, so changes don't re-render the whole tree.\n\n2. **Use `React.memo`** on components that receive the same props often:\n   ```jsx\n   const Row = React.memo(function Row({ item }) { ... });\n   ```\n\n3. **Stabilize props.** New objects, arrays, and functions are created each render and break memoization. Wrap them with `useMemo` / `useCallback`:\n   ```jsx\n   const onSelect = useCallback(id => setSel(id), []);\n   ```\n\n4. **Split context.** Any change to a context value re-renders all consumers. Separate frequently changing values into their own context, or memoize the provider value.\n\n5. **Pass children as props.** Content passed as `children` doesn't re-render when the parent's state changes.\n\n6. **Avoid inline keys and index keys** in dynamic lists; use stable IDs.\n\n7. **Virtualize long lists** with `react-window` or `@tanstack/virtual`.\n\n8. **Try the React Compiler**, which auto-memoizes and removes much of the manual work.\n\nDon't memoize everything; it adds overhead. Fix the specific hot spots the Profiler shows you."
+  },
+  {
+   "id": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much#adv1",
+   "family": "fresh3:qa:how-do-i-stop-my-react-app-re-rendering-so-much",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Before you optimize anything, open the React DevTools Profiler and record a session. Turn on \"Record why each component rendered\" in the settings. Otherwise you're guessing, and I've wasted whole afternoons memoizing things that were never the problem.\n\nThe usual suspects, in rough order of how often I see them:\n\n1. **State living too high up.** If a parent holds state that only one child cares about, move it down into that child. This fixes more problems than any hook will.\n\n2. **New object/array/function props every render.** `<Child style={{a: 1}} onClick={() => ...} />` creates fresh references each time, so `React.memo` on Child does nothing. Wrap those in `useMemo`/`useCallback`, or hoist constants outside the component.\n\n3. **Context value changing.** Passing `value={{user, theme}}` to a provider re-renders every consumer on every parent render. Memoize the value, or split into separate contexts.\n\n4. **Missing keys or unstable keys.** Using `Math.random()` or array index on a reordering list remounts items.\n\n5. **Big lists.** Look at `react-window` or similar.\n\nOnly reach for `React.memo` after the profiler shows a specific component is expensive. Also, if you're on a recent version, check whether the React Compiler could handle a lot of this for you.\n\nWhat does your component tree look like? Happy to take a closer look."
+  },
+  {
+   "id": "fresh3:qa:is-sqlite-fine-for-a-small-web-app#plain",
+   "family": "fresh3:qa:is-sqlite-fine-for-a-small-web-app",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Yes, SQLite is a great fit for most small web apps, and often a better choice than people assume.\n\n**Why it works well:**\n- Zero setup: no separate server, no credentials, no network hop. Your database is a file.\n- Fast: reads are very quick since everything runs in-process.\n- Easy backups and deploys: copy the file (or use `.backup` / Litestream for continuous replication).\n- It handles far more traffic than most small apps will ever see.\n\n**Things to configure:**\n- Enable WAL mode (`PRAGMA journal_mode=WAL;`) so readers don't block the writer.\n- Set a busy timeout (`PRAGMA busy_timeout=5000;`) to avoid \"database is locked\" errors.\n- Turn on foreign keys (`PRAGMA foreign_keys=ON;`), since they're off by default.\n\n**When to consider Postgres/MySQL instead:**\n- Heavy concurrent writes (SQLite allows one writer at a time).\n- Multiple app servers that need to share one database over a network.\n- You need advanced features like rich concurrent access controls, extensions, or replication out of the box.\n\n**Rule of thumb:** If your app runs on a single server and isn't write-heavy, start with SQLite. Keep your queries standard and use a migration tool or ORM, so moving to Postgres later is painless if you outgrow it."
+  },
+  {
+   "id": "fresh3:qa:is-sqlite-fine-for-a-small-web-app#adv2",
+   "family": "fresh3:qa:is-sqlite-fine-for-a-small-web-app",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Yes, SQLite is a great fit for a small web app, and it is often the better choice than a separate database server. It runs inside your application process, so there is nothing extra to install, configure, or keep running. Backups can be as simple as copying a file, and reads are very fast.\n\nThe main limit is writes. SQLite allows one writer at a time. For a small app with modest traffic this rarely matters, especially if you turn on WAL mode, which lets readers and a writer work at the same time. Set a busy timeout too, so a waiting write retries instead of failing right away.\n\nThings to keep in mind: store the database file on a local disk, not a network share, since file locking can misbehave there. If you run more than one app server that needs to share the same data, SQLite becomes awkward, and that is when Postgres or MySQL makes sense. Also keep regular backups using the built-in backup command or a tool like Litestream, rather than copying the file while it is being written.\n\nPlenty of real sites serve millions of page views on SQLite. Start with it, and move later only if you actually hit a limit. Migrating is usually not painful if you use a common query layer."
+  },
+  {
+   "id": "fresh3:qa:how-should-i-version-a-public-rest-api#plain",
+   "family": "fresh3:qa:how-should-i-version-a-public-rest-api",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The most common and pragmatic approach is **URL path versioning**: `/v1/users`, `/v2/users`. It's explicit, easy to route, cache, and debug, and clients can see which version they're using at a glance.\n\n**Key practices:**\n\n1. **Only bump the major version for breaking changes.** Removing fields, renaming them, changing types, or altering behavior counts. Adding optional fields or new endpoints does not, so design clients to ignore unknown fields.\n\n2. **Avoid minor versions in the URL.** `/v1.2/` creates a maintenance burden. Track minor changes in your changelog instead.\n\n3. **Deprecate gracefully.** Announce well in advance, and send `Deprecation` and `Sunset` headers (RFC 8594) on old versions. Give clients a generous migration window, often 6–12 months.\n\n4. **Keep versions few.** Supporting more than two or three at once gets expensive. Share code between versions where you can.\n\n5. **Document everything.** Maintain a changelog and a migration guide for each major release.\n\n**Alternatives:**\n- **Header versioning** (`Accept: application/vnd.myapi.v2+json`) keeps URLs clean and is arguably more \"RESTful,\" but is harder to test in a browser and easier to get wrong.\n- **Query parameter** (`?version=2`) is simple, but it complicates caching and routing.\n\nFor a public API, path versioning is usually the best tradeoff: simplicity beats purity."
+  },
+  {
+   "id": "fresh3:qa:how-should-i-version-a-public-rest-api#adv2",
+   "family": "fresh3:qa:how-should-i-version-a-public-rest-api",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Put the major version in the URL path, like /v1/users. It is the simplest approach to understand, easy to test in a browser, easy to cache, and easy to route at a gateway or load balancer. Header based versioning and media type versioning can look cleaner in theory, but clients often get them wrong and debugging gets harder.\n\nOnly bump the major version for breaking changes, such as removing a field, renaming something, changing a type, or altering behavior that clients rely on. Adding new optional fields or new endpoints should not need a new version, so tell your consumers up front to ignore fields they do not recognize.\n\nWhen you do release v2, keep v1 running for a clear, published period. Announce a deprecation date well ahead of time, and add Deprecation and Sunset headers to responses so client developers get a warning in their own logs. Email active API key owners too, since many people never read a changelog.\n\nKeep a changelog, and try hard to avoid new major versions. Design responses to be extensible from the start, for example by returning objects instead of bare arrays, so you can grow the API without breaking anyone."
+  },
+  {
+   "id": "fresh3:review:of-a-meal-kit-subscription#plain",
+   "family": "fresh3:review:of-a-meal-kit-subscription",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "★★★★☆ Worth It for Busy Weeknights\n\nI've been using this meal kit for three months, and it has changed how my household handles dinner. The recipes are well-written, the portions are generous, and the ingredients arrive fresh and neatly packed. I've learned a few new techniques, like making pan sauces and roasting vegetables properly, without feeling overwhelmed. Most meals take about thirty minutes, which suits my schedule.\n\nThe downsides are modest. Packaging waste is considerable, and the price per serving runs higher than grocery shopping. Skipping weeks is easy, though, so I can pause when travel or leftovers get in the way.\n\nOverall, it's a great option for anyone who wants variety, less planning, and fewer last-minute takeout orders. I'd recommend it, especially with an introductory discount."
+  },
+  {
+   "id": "fresh3:review:of-a-meal-kit-subscription#adv5",
+   "family": "fresh3:review:of-a-meal-kit-subscription",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "I have been using this meal kit subscription for three months now, and I am mostly happy with it. The ingredients arrives fresh and well packed, even in the summer when is very hot. Recipes are simple, and I can cook dinner in around 30 minutes, which is great after a long day at work.\n\nWhat I like most is that I learn to cook new dishes, not only the same pasta every week. My husband was surprised by the Thai curry, he said it is better than restaurant!\n\nNegative side, the portions are a little small for two persons, and the plastic waste is too much. Also, the price is going up since last month without any warning. Still, I recommend it for busy people who wants to eat more healthy."
+  },
+  {
+   "id": "fresh3:review:of-a-budgeting-app#plain",
+   "family": "fresh3:review:of-a-budgeting-app",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "★★★★☆ Solid Budgeting Made Simple\n\nI've been using this budgeting app for three months, and it has genuinely changed how I handle money. Setup took about ten minutes: I linked my bank accounts, and transactions began categorizing automatically with surprising accuracy. The dashboard is clean, showing spending trends at a glance without overwhelming me with charts.\n\nMy favorite feature is the goal tracker, which makes saving for a vacation feel motivating rather than tedious. Bill reminders have also saved me from several late fees.\n\nThe downsides are minor. Occasionally a transaction gets miscategorized, and the premium tier feels pricey for what it adds. Syncing can also lag after weekends.\n\nOverall, it's an intuitive, reliable tool for beginners and casual budgeters. Highly recommended."
+  },
+  {
+   "id": "fresh3:review:of-a-cheap-pair-of-running-shoes#plain",
+   "family": "fresh3:review:of-a-cheap-pair-of-running-shoes",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Budget Stride Runner: Solid Value for Casual Miles**\n\nAt just $35, the Budget Stride Runner doesn't pretend to be something it's not. Right out of the box, they feel lightweight and surprisingly comfortable, with a breathable mesh upper that keeps feet cool on shorter runs. The cushioning is basic foam, fine for 3–5 mile jogs but noticeably flat beyond that.\n\nGrip is decent on pavement and treadmills, though wet surfaces get slippery. After two months of regular use, the outsole shows moderate wear, and the heel padding has softened.\n\nThese won't replace a premium pair for training or racing, but for beginners, gym sessions, or backup shoes, they deliver more than the price suggests. Just don't expect them to last a year.\n\n**Rating: 3.5/5**"
+  },
+  {
+   "id": "fresh3:review:of-a-cheap-pair-of-running-shoes#adv4",
+   "family": "fresh3:review:of-a-cheap-pair-of-running-shoes",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Got these for $34 on sale because my old ones finally fell apart. Honestly not expecting much but they're fine? Wore them for about three weeks now, mostly 3-4 mile runs on pavement, did one 6 miler and my feet were ok after.\n\nPros: light, don't rub my heel, fit true to size. Cons: cushioning is kinda flat, you can feel it on longer stuff, and the laces keep coming untied so I double knot them now. The color also looks a bit different than the photo, more of a dull teal.\n\nWouldn't use these for a half marathon or anything but for casual jogging and the gym they do the job. Would buy again at this price. 4 stars."
+  },
+  {
+   "id": "fresh3:review:of-a-dentist#plain",
+   "family": "fresh3:review:of-a-dentist",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I've been seeing Dr. Patel for about three years, and I couldn't be happier with the care I've received. From the moment you walk into the office, the staff is warm, organized, and genuinely welcoming. I've never waited more than ten minutes past my appointment time.\n\nDr. Patel takes the time to explain every procedure in plain language, which really eased my anxiety about dental work. Last spring I needed a crown, and the whole process was smooth and virtually painless. She checked in with me constantly and made sure I was comfortable throughout.\n\nThe office is spotless, the equipment is modern, and billing is transparent, with no surprise charges. Cleanings are thorough but gentle. I'd recommend Dr. Patel to anyone, especially nervous patients looking for a dentist who listens. Five stars, easily!"
+  },
+  {
+   "id": "fresh3:review:of-a-dentist#adv1",
+   "family": "fresh3:review:of-a-dentist",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "I've been going to Dr. Patel for about three years now and honestly wish I'd found her sooner. I'm the type who puts off the dentist until something hurts, so I showed up with a cracked molar and a lot of anxiety. She didn't lecture me once. She just explained what was going on, showed me the X-ray, and laid out my options without any pressure. The crown went in two visits and it's been fine ever since. The front desk staff are friendly and actually call back when you leave a message, which is rare. Waiting time is usually ten minutes or less. Cleanings are gentle too, no scraping like I've had elsewhere. Prices were fair and they sorted out my insurance paperwork. Definitely recommend."
+  },
+  {
+   "id": "fresh3:review:of-a-phone-repair-shop#plain",
+   "family": "fresh3:review:of-a-phone-repair-shop",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "★★★★★ Fantastic service!\n\nMy phone's screen shattered after a fall on the pavement, and I was sure I'd have to buy a new one. I walked into QuickFix Mobile on a Tuesday morning, and the technician looked it over and quoted a fair price right away. No pushy upsells, no hidden fees. He promised it would be ready within an hour, and it was.\n\nThe new screen looks and feels identical to the original, and the touch response is perfect. They even replaced my worn-out screen protector for free and wiped down the whole phone. The staff were friendly, honest, and clearly knew what they were doing. They also offer a 90-day warranty on all repairs, which gave me real peace of mind. I'll definitely be returning, and I've already recommended them to friends and coworkers. Highly recommended!"
+  },
+  {
+   "id": "fresh3:blog:about-switching-from-iphone-to-android#plain",
+   "family": "fresh3:blog:about-switching-from-iphone-to-android",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# I Left the Apple Garden: Six Months with Android\n\nAfter eleven years of iPhones, I finally did something I swore I wouldn't: I switched to Android. Here's what I learned.\n\n**The leap was easier than expected.** Google's transfer tools moved my contacts, photos, and most of my apps in under an hour. iMessage was the scary part, but turning it off before switching saved me from the dreaded \"missing texts\" problem.\n\n**Customization is a revelation.** I'd forgotten phones could feel personal. Custom launchers, icon packs, and a home screen that works the way I think made my daily routine smoother. Being able to set default apps without a fight felt almost rebellious.\n\n**The hardware choices are wonderful.** Instead of picking from a narrow lineup, I compared cameras, battery life, and charging speeds across brands. My new phone charges fully in about 30 minutes, which I now refuse to live without.\n\n**It's not all perfect.** Some apps feel less polished than their iOS counterparts. Software updates vary depending on the manufacturer, so research matters. And I do miss AirDrop and how seamlessly my old iPhone talked to my Mac and Apple Watch.\n\n**The group chat issue is real.** My friends with iPhones still turn my messages green, though RCS has made texting far less painful than it used to be.\n\n**Would I do it again?** Yes, without hesitation. The freedom and flexibility won me over, even if I gave up a few conveniences.\n\nIf you're curious, try it. Back up your data, pick a phone with strong update support, and give yourself a month to adjust. You might be surprised by how quickly the grass looks greener."
+  },
+  {
+   "id": "fresh3:blog:about-switching-from-iphone-to-android#adv3",
+   "family": "fresh3:blog:about-switching-from-iphone-to-android",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "I Switched From iPhone to Android. Here's the Short Version.\n\nLook, I don't have time for a long post, so let's get into it.\n\nAfter eleven years on iPhone, I switched to Android. Why? My battery died, the repair quote was absurd, and I got tired of paying a premium for the privilege of being told what I'm allowed to do with my own phone. Done.\n\nSetup was supposed to be easy. \"Just tap your old phone,\" they said. Sure. Forty minutes later I was still waiting for my photos to transfer, and half my messaging history had vanished into the void. Great. Thanks. Very smooth.\n\nThen there's the green bubble thing. My family group chat now treats me like a second-class citizen. Videos arrive looking like they were filmed on a potato. I did not ask to be exiled, but here we are.\n\nThe settings menu? A maze. Every option has a sub-option, and every sub-option has another sub-option. I just wanted to change my ringtone. I ended up reading about adaptive sound profiles for ten minutes.\n\nOkay, fine, some things are better. The customization is great. I put my apps where I want them. The charging is fast. The back button actually works like a back button. And my phone cost half of what an iPhone would have.\n\nWould I do it again? Probably. Ask me after I figure out how to turn off the seventeen notifications Google sends me every hour.\n\nI've got to go. My phone is buzzing again."
+  },
+  {
+   "id": "fresh3:blog:about-a-year-of-keeping-chickens#plain",
+   "family": "fresh3:blog:about-a-year-of-keeping-chickens",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# A Year with Chickens: What I Learned\n\nTwelve months ago, I brought home six fluffy chicks in a cardboard box, convinced I was fully prepared. I was not.\n\nThe first lesson was humility. Chicks need heat lamps, constant fresh water, and far more attention than I'd imagined. Within a week, I'd named them all and had abandoned any pretense of treating them as livestock.\n\nBy spring, they'd graduated to the coop I built myself, a project that took three weekends and one memorable trip to the emergency room for a stray hammer blow. The hens didn't care that the roof was slightly crooked. They claimed it immediately.\n\nSummer brought our first egg, a tiny, perfect thing found in the nesting box. I held it like treasure. Soon we were drowning in eggs, giving cartons to neighbors and learning that \"farm fresh\" is a universal love language.\n\nNot everything went smoothly. A hawk took one hen in August, and a stubborn bout of mites tested my patience. Winter meant frozen waterers and shoveling paths through the snow at dawn. Predator-proofing became a quiet obsession.\n\nBut the rewards outweighed the chores. Chickens are funny, endlessly curious, and oddly soothing. Watching them dust-bathe in the afternoon sun is better than any meditation app.\n\nIf you're considering it, here's my advice: build the coop sturdier than you think necessary, start with more hens than you plan to keep, and accept that you'll become someone who talks about chickens at dinner parties.\n\nI wouldn't trade it. Year two, here we come."
+  },
+  {
+   "id": "fresh3:blog:about-running-a-side-business-selling-prints#plain",
+   "family": "fresh3:blog:about-running-a-side-business-selling-prints",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Running a Side Business Selling Prints: What I've Learned\n\nTwo years ago, I started selling prints of my photography on weekends, mostly as an experiment. Today it brings in a steady second income, and it taught me more than I expected.\n\n**Start small.** I began with just five designs and a print-on-demand service. No inventory, no upfront costs. This let me test what people actually wanted before investing in bulk orders or expensive equipment.\n\n**Quality beats quantity.** My early catalog was cluttered with mediocre work. Once I trimmed it to my strongest pieces, sales went up. Buyers want curated collections, not endless scrolling.\n\n**Presentation sells.** Great mockups matter. Showing a print on a real wall, in a real room, helps customers imagine it in their own homes. I spent an afternoon staging photos with a frame and a plant, and my conversion rate noticeably improved.\n\n**Don't ignore the boring stuff.** Track your expenses, set aside money for taxes, and price with your time in mind. My first prints were so cheap I was essentially paying people to take them. Raising prices by 30% barely changed my sales volume.\n\n**Build a small audience.** Social media helps, but an email list is better. A simple newsletter with new releases and behind-the-scenes stories brings repeat buyers who feel connected to the work.\n\n**Be patient.** My first month earned $41. Growth was slow, then gradual, then suddenly steady. Consistency mattered more than any single clever tactic.\n\nIf you've been thinking about turning your creative work into income, start before you feel ready. A side business doesn't need to be perfect. It just needs to exist, and you can improve it from there."
+  },
+  {
+   "id": "fresh3:blog:about-running-a-side-business-selling-prints#adv0",
+   "family": "fresh3:blog:about-running-a-side-business-selling-prints",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "so i started selling prints on the side about a year ago and honestly its been the best desicion ive made in a while. i didnt plan on it being a real business, i just had a few photos and illustrations sitting on my hard drive doing nothing and a friend said hey you should sell these\n\nfirst thing i learned is that the boring stuff matters most. packaging, shipping, taxes, all of it. nobody tells you that you will spend like 70 percent of your time NOT making art. i spend more time folding cardboard and printing labels than i do creating anything new lol\n\nsecond thing is pricing. i totally underpriced at the start because i felt weird asking for money for my own work. then i did the math on paper cost, ink, shipping materials, fees from the marketplace, and realized i was making like 40 cents a print. not great. so i raised prices by about 30 percent and surprisingly nobody cared, sales stayed basically the same\n\nthird, pick one or two places to sell and stick with them. i tried etsy, my own site, instagram shop, and a local market all at once and burned out in like two months. now its just etsy and one market a month and its way more manageable\n\nalso keep a spreadsheet. i know its not fun but track every sale and every expense. tax season will thank you\n\nthe best part honestly is when someone sends a photo of your print hanging on their wall. that never gets old. if youre thinking about starting just do it small, order a test batch, and see what happens. worst case you have some nice prints for your own walls"
+  },
+  {
+   "id": "fresh3:blog:about-your-first-marathon#plain",
+   "family": "fresh3:blog:about-your-first-marathon",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# 26.2 Miles of Humility\n\nEighteen weeks ago, I couldn't run six miles without bargaining with myself. Last Sunday, I crossed my first marathon finish line, and I'm still not sure how my legs did it.\n\nThe morning began at 5 a.m. with oatmeal I couldn't taste and a stomach full of nerves. Standing in the corral, surrounded by thousands of strangers shaking out their arms, I felt like an impostor. Then the gun went off, and the nerves dissolved into the simple business of moving forward.\n\nThe first half flew by. The crowd was loud, the weather was perfect, and I kept reminding myself of the best advice I'd received: start slower than feels necessary. Around mile 16, the cheerful rhythm began to fray. By mile 20, my quads were screaming, and every mile marker seemed to be lying about its distance.\n\nMile 22 was the hardest. I walked for thirty seconds, hating myself a little. Then a stranger in a bright orange shirt pulled alongside me and said, \"We're doing this together.\" We barely spoke after that, but we ran the next three miles side by side, and I'll never forget him.\n\nThe final stretch is a blur of cowbells, hand-lettered signs, and tears I didn't expect. When I crossed the line, I wasn't triumphant so much as stunned. Someone placed a medal around my neck, and I laughed and cried at once.\n\nWhat did I learn? Training teaches discipline, but race day teaches grace. You will hurt, and people will help you anyway.\n\nWould I do it again? Ask me when I can walk down stairs normally."
+  },
+  {
+   "id": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers#plain",
+   "family": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Chairly – Scheduling Built for Barbers</title>\n<meta name=\"description\" content=\"Chairly is the booking app for barbers. Fill your chair, cut no-shows, and get paid without the back-and-forth.\">\n<style>\n  :root {\n    --ink: #14110f;\n    --paper: #faf6f0;\n    --accent: #c8402a;\n    --gold: #d9a441;\n    --muted: #6d6560;\n    --card: #ffffff;\n    --line: #e7dfd3;\n  }\n  * { box-sizing: border-box; margin: 0; padding: 0; }\n  html { scroll-behavior: smooth; }\n  body {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n    color: var(--ink);\n    background: var(--paper);\n    line-height: 1.6;\n  }\n  a { color: inherit; text-decoration: none; }\n  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }\n\n  header { padding: 20px 0; }\n  header .wrap { display: flex; align-items: center; justify-content: space-between; }\n  .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }\n  .logo span { color: var(--accent); }\n  nav a { margin-left: 28px; font-size: 0.95rem; color: var(--muted); }\n  nav a:hover { color: var(--ink); }\n\n  .btn {\n    display: inline-block; padding: 14px 28px; border-radius: 999px;\n    font-weight: 700; font-size: 1rem; border: 2px solid var(--ink);\n    transition: transform .15s, background .15s;\n  }\n  .btn:hover { transform: translateY(-2px); }\n  .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }\n  .btn-ghost { background: transparent; }\n\n  .hero { padding: 80px 0 90px; }\n  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }\n  .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 16px; }\n  h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; }\n  h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--gold) 62%); }\n  .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 520px; margin-bottom: 32px; }\n  .hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }\n  .fine { margin-top: 16px; font-size: 0.85rem; color: var(--muted); }\n\n  .phone {\n    background: var(--ink); border-radius: 36px; padding: 14px;\n    box-shadow: 0 30px 60px rgba(20,17,15,.25); max-width: 340px; margin: 0 auto;\n    transform: rotate(2deg);\n  }\n  .screen { background: var(--paper); border-radius: 24px; padding: 22px 18px; }\n  .screen h4 { font-size: 1rem; margin-bottom: 4px; }\n  .screen small { color: var(--muted); }\n  .slot {\n    display: flex; justify-content: space-between; align-items: center;\n    background: var(--card); border: 1px solid var(--line); border-radius: 14px;\n    padding: 12px 14px; margin-top: 10px; font-size: 0.9rem;\n  }\n  .slot b { display: block; }\n  .tag { font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: #e8f3e6; color: #2f7a2b; }\n  .tag.open { background: #fbeed0; color: #946a10; }\n  .tag.pending { background: #fde4df; color: var(--accent); }\n\n  .logos { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }\n\n  section { padding: 90px 0; }\n  .section-head { text-align: center; max-width: 620px; margin: 0 auto 56px; }\n  .section-head h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -1px; line-height: 1.15; margin-bottom: 12px; }\n  .section-head p { color: var(--muted); }\n\n  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }\n  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 30px; }\n  .card .icon { font-size: 1.8rem; margin-bottom: 14px; }\n  .card h3 { margin-bottom: 8px; font-size: 1.15rem; }\n  .card p { color: var(--muted); font-size: 0.96rem; }\n\n  .dark { background: var(--ink); color: var(--paper); }\n  .dark .section-head p { color: #b9b0a6; }\n  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }\n  .step .num { font-size: 3rem; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 10px; }\n  .step h3 { margin-bottom: 6px; }\n  .step p { color: #b9b0a6; font-size: 0.95rem; }\n\n  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; margin-bottom: 64px; }\n  .stats strong { display: block; font-size: 3rem; letter-spacing: -2px; color: var(--accent); }\n  .stats span { color: var(--muted); }\n  .quote { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 36px; max-width: 760px; margin: 0 auto; }\n  .quote p { font-size: 1.2rem; margin-bottom: 16px; }\n  .quote cite { color: var(--muted); font-style: normal; font-size: 0.92rem; }\n\n  .pricing { grid-template-columns: repeat(3, 1fr); }\n  .plan { position: relative; }\n  .plan.featured { border: 2px solid var(--accent); }\n  .plan .badge { position: absolute; top: -13px; left: 30px; background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; }\n  .price { font-size: 2.6rem; font-weight: 800; letter-spacing: -1.5px; margin: 10px 0 4px; }\n  .price small { font-size: 1rem; font-weight: 500; color: var(--muted); letter-spacing: 0; }\n  .plan ul { list-style: none; margin: 20px 0 26px; }\n  .plan li { padding: 6px 0; font-size: 0.95rem; }\n  .plan li::before { content: \"✓\"; color: var(--accent); font-weight: 800; margin-right: 10px; }\n  .plan .btn { width: 100%; text-align: center; }\n\n  details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; margin: 0 auto 12px; max-width: 760px; }\n  summary { font-weight: 700; cursor: pointer; }\n  details p { margin-top: 10px; color: var(--muted); }\n\n  .final { text-align: center; background: var(--accent); color: #fff; border-radius: 28px; padding: 70px 24px; }\n  .final h2 { font-size: clamp(1.9rem, 4vw, 3rem); letter-spacing: -1px; margin-bottom: 12px; }\n  .final p { margin-bottom: 28px; opacity: .92; }\n  .final .btn { background: #fff; color: var(--ink); border-color: #fff; }\n\n  footer { padding: 40px 0; text-align: center; color: var(--muted); font-size: 0.88rem; }\n\n  @media (max-width: 860px) {\n    .hero .wrap, .grid, .steps, .stats, .pricing { grid-template-columns: 1fr; }\n    nav { display: none; }\n    .hero { padding-top: 40px; }\n  }\n</style>\n</head>\n<body>\n\n<header>\n  <div class=\"wrap\">\n    <a href=\"#\" class=\"logo\">Chair<span>ly</span></a>\n    <nav>\n      <a href=\"#features\">Features</a>\n      <a href=\"#how\">How it works</a>\n      <a href=\"#pricing\">Pricing</a>\n      <a href=\"#faq\">FAQ</a>\n    </nav>\n    <a href=\"#start\" class=\"btn btn-ghost\" style=\"padding:10px 20px;font-size:.9rem;\">Log in</a>\n  </div>\n</header>\n\n<main>\n  <section class=\"hero\" style=\"padding-bottom:90px;\">\n    <div class=\"wrap\">\n      <div>\n        <p class=\"eyebrow\">Scheduling built for barbers</p>\n        <h1>Keep your hands on the clippers, not your <em>phone.</em></h1>\n        <p class=\"lead\">Chairly fills your chair, cuts no-shows, and handles every booking, reminder, and payment automatically. Your clients book in 15 seconds. You get your time back.</p>\n        <div class=\"cta\">\n          <a href=\"#start\" class=\"btn btn-primary\">Start free for 14 days</a>\n          <a href=\"#how\" class=\"btn btn-ghost\">See how it works</a>\n        </div>\n        <p class=\"fine\">No credit card required. Set up in under 10 minutes.</p>\n      </div>\n      <div class=\"phone\" aria-hidden=\"true\">\n        <div class=\"screen\">\n          <h4>Today, Saturday</h4>\n          <small>6 cuts booked · 2 open slots</small>\n          <div class=\"slot\"><div><b>10:00 AM · Marcus T.</b><small>Skin fade + beard</small></div><span class=\"tag\">Confirmed</span></div>\n          <div class=\"slot\"><div><b>10:45 AM · Devon R.</b><small>Classic taper</small></div><span class=\"tag\">Confirmed</span></div>\n          <div class=\"slot\"><div><b>11:30 AM · Open</b><small>Tap to share on Instagram</small></div><span class=\"tag open\">Open</span></div>\n          <div class=\"slot\"><div><b>12:15 PM · Luis G.</b><small>Lineup · Deposit due</small></div><span class=\"tag pending\">Pending</span></div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <div class=\"logos\">Trusted by independent barbers and shops in 40+ cities</div>\n\n  <section id=\"features\">\n    <div class=\"wrap\">\n      <div class=\"section-head\">\n        <h2>Everything your shop needs. Nothing it doesn't.</h2>\n        <p>Built with working barbers, so it fits how a real day behind the chair actually goes.</p>\n      </div>\n      <div class=\"grid\">\n        <div class=\"card\"><div class=\"icon\">📅</div><h3>Your own booking link</h3><p>Drop it in your Instagram bio, Google profile, or text thread. Clients pick a service and time with no app download or account.</p></div>\n        <div class=\"card\"><div class=\"icon\">🔔</div><h3>Automatic reminders</h3><p>Text and email reminders go out on their own. Clients confirm, reschedule, or cancel with one tap.</p></div>\n        <div class=\"card\"><div class=\"icon\">💳</div><h3>Deposits and no-show fees</h3><p>Require a deposit for new clients or late cancels. Get paid straight to your bank, usually next day.</p></div>\n        <div class=\"card\"><div class=\"icon\">⚡</div><h3>Waitlist fill</h3><p>When someone cancels, Chairly offers the slot to your waitlist instantly, so the chair rarely sits empty.</p></div>\n        <div class=\"card\"><div class=\"icon\">💈</div><h3>Multi-barber shops</h3><p>Individual calendars, booth rent tracking, and shared branding. Every barber controls their own hours and prices.</p></div>\n        <div class=\"card\"><div class=\"icon\">📝</div><h3>Client notes</h3><p>Remember every client's guard sizes, preferences, and last cut. Look like you never forget a face.</p></div>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"how\" class=\"dark\">\n    <div class=\"wrap\">\n      <div class=\"section-head\">\n        <h2>Up and running before your next cut</h2>\n        <p>Three steps. No tech skills needed.</p>\n      </div>\n      <div class=\"steps\">\n        <div class=\"step\"><div class=\"num\">1</div><h3>Set your menu</h3><p>Add services, prices, and durations. Set your hours and breaks once.</p></div>\n        <div class=\"step\"><div class=\"num\">2</div><h3>Share your link</h3><p>Post it to your bio, print the QR code for your mirror, or text it to regulars.</p></div>\n        <div class=\"step\"><div class=\"num\">3</div><h3>Show up and cut</h3><p>Bookings land on your calendar, reminders run themselves, and payments roll in.</p></div>\n      </div>\n    </div>\n  </section>\n\n  <section>\n    <div class=\"wrap\">\n      <div class=\"stats\">\n        <div><strong>-68%</strong><span>fewer no-shows</span></div>\n        <div><strong>6 hrs</strong><span>saved on admin each week</span></div>\n        <div><strong>+22%</strong><span>more bookings on average</span></div>\n      </div>\n      <div class=\"quote\">\n        <p>\"I used to answer DMs until midnight. Now clients just book themselves, and my Saturday chair is full by Thursday.\"</p>\n        <cite>Andre W., owner of Crown &amp; Blade Barbers</cite>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"pricing\" style=\"padding-top:0;\">\n    <div class=\"wrap\">\n      <div class=\"section-head\">\n        <h2>Simple pricing. No cut of your tips.</h2>\n        <p>Every plan starts with a 14-day free trial.</p>\n      </div>\n      <div class=\"grid pricing\">\n        <div class=\"card plan\">\n          <h3>Solo</h3>\n          <div class=\"price\">$15<small>/month</small></div>\n          <p>For independent barbers</p>\n          <ul><li>Online booking link</li><li>Text &amp; email reminders</li><li>Client profiles</li><li>Card payments</li></ul>\n          <a href=\"#start\" class=\"btn btn-ghost\">Start free trial</a>\n        </div>\n        <div class=\"card plan featured\">\n          <span class=\"badge\">MOST POPULAR</span>\n          <h3>Pro</h3>\n          <div class=\"price\">$29<small>/month</small></div>\n          <p>For busy chairs</p>\n          <ul><li>Everything in Solo</li><li>Deposits &amp; no-show fees</li><li>Waitlist auto-fill</li><li>Instagram &amp; Google booking</li></ul>\n          <a href=\"#start\" class=\"btn btn-primary\">Start free trial</a>\n        </div>\n        <div class=\"card plan\">\n          <h3>Shop</h3>\n          <div class=\"price\">$20<small>/barber/month</small></div>\n          <p>For teams of 3 or more</p>\n          <ul><li>Everything in Pro</li><li>Shared shop page</li><li>Booth rent tracking</li><li>Owner reports</li></ul>\n          <a href=\"#start\" class=\"btn btn-ghost\">Start free trial</a>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"faq\" style=\"padding-top:0;\">\n    <div class=\"wrap\">\n      <div class=\"section-head\"><h2>Questions barbers ask</h2></div>\n      <details><summary>Do my clients need to download an app?</summary><p>No. They book through your link in any browser. No account or download required.</p></details>\n      <details><summary>Can I move over my existing clients?</summary><p>Yes. Import a spreadsheet or your phone contacts, and we'll help you set it up for free.</p></details>\n      <details><summary>How do payments work?</summary><p>Clients can pay by card at booking or in the chair. Funds go to your bank account, typically the next business day.</p></details>\n      <details><summary>What if I need to cancel my plan?</summary><p>Cancel anytime in two clicks. You can export all your client data whenever you want.</p></details>\n    </div>\n  </section>\n\n  <section id=\"start\" style=\"padding-top:0;\">\n    <div class=\"wrap\">\n      <div class=\"final\">\n        <h2>Fill your chair. Keep your evenings.</h2>\n        <p>Join thousands of barbers who stopped chasing bookings and started cutting.</p>\n        <a href=\"#\" class=\"btn\">Start your free trial</a>\n      </div>\n    </div>\n  </section>\n</main>\n\n<footer>\n  <div class=\"wrap\">© 2026 Chairly, Inc. · <a href=\"#\">Privacy</a> · <a href=\"#\">Terms</a> · <a href=\"#\">Contact</a></div>\n</footer>\n\n</body>\n</html>\n```"
+  },
+  {
+   "id": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers#adv1",
+   "family": "fresh3:marketing:a-landing-page-for-a-scheduling-app-for-barbers",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "# Fade — the booking app for barbers\n\n## Your chair stays full. Your phone stays in your pocket.\n\nFade handles bookings so you can handle the clippers. Clients pick a time, get a reminder, and show up. You get your hands back.\n\n**[Start your free 30 days]**  ·  No card needed\n\n---\n\n## Sound familiar?\n\nYou're mid-fade and your phone buzzes. Then buzzes again. It's someone asking if you've got Thursday at 4. You can't answer without stopping, so you answer later, and by then they've booked somewhere else.\n\nOr: you've got a gap at 2:15 that nobody filled, and a no-show at 3 that cost you forty bucks.\n\nFade fixes both.\n\n---\n\n## What it does\n\n**Online booking that's actually simple**\nGive clients one link. Put it in your Instagram bio, on your Google listing, on a card by the register. They pick a service, pick a time, done. No account, no app download, no password.\n\n**Reminders that cut no-shows**\nFade texts clients a day before and a couple of hours before. They can confirm or reschedule with one tap. Most shops see no-shows drop by half in the first month.\n\n**Deposits when you want them**\nTake a small deposit for long services or new clients. If someone bails last minute, you're not out the money.\n\n**Your hours, your rules**\nSet how long a skin fade takes versus a beard trim. Block off lunch. Add buffer time between cuts. Take Mondays off. Fade respects all of it.\n\n**Walk-ins welcome**\nRunning a shop that takes both? Keep a walk-in queue next to your bookings so the chair never sits empty.\n\n**More than one barber?**\nEach barber gets their own calendar, their own services and their own link. Clients can book a specific person or take the first open slot. You see everything in one view.\n\n---\n\n## How it works\n\n1. **Set up in about ten minutes.** Add your services, prices and hours.\n2. **Share your link.** Post it anywhere clients already find you.\n3. **Cut hair.** Bookings show up on your calendar. Fade does the rest.\n\n---\n\n## What barbers are saying\n\n> \"I used to spend my lunch break answering DMs. Now I actually eat lunch.\"\n> — Marcus, solo barber\n\n> \"We went from about six no-shows a week to one or two. That pays for the app on its own.\"\n> — Dee, shop owner, 4 chairs\n\n> \"My older clients figured it out without calling me. That's how I knew it was easy.\"\n> — Tony, 22 years behind the chair\n\n---\n\n## Pricing\n\n**Solo — $19/month**\nOne barber, unlimited bookings, text reminders, online payments.\n\n**Shop — $49/month**\nUp to 6 barbers, shared calendar view, walk-in queue, deposits and reporting.\n\nEvery plan starts with 30 days free. Cancel any time. No contracts, no setup fees.\n\n**[Start your free 30 days]**\n\n---\n\n## Questions\n\n**Do my clients need to download anything?**\nNo. They tap your link, book, and get a text. That's it.\n\n**Can I move my existing appointments over?**\nYes. Add them by hand or send us your list and we'll import it for you.\n\n**What do you charge on card payments?**\nStandard processing, 2.9% + 30¢. We don't add anything on top.\n\n**What if I get stuck?**\nText or call us. A real person answers, usually within the hour during shop hours.\n\n---\n\n## Your next cut is waiting\n\nGet your link up today and let the calendar fill itself.\n\n**[Start your free 30 days]**\n\nFade · Made for barbers · Help: support@fadeapp.com · Privacy · Terms"
+  },
+  {
+   "id": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl#plain",
+   "family": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Stay Hydrated, Sustainably.**\n\nMeet the bottle that goes everywhere you do. Crafted from durable, double-wall insulated stainless steel, it keeps drinks ice-cold for up to 24 hours or piping hot for up to 12, so your morning coffee and afternoon water are always just right.\n\n**Features:**\n- **Leak-proof lid** with a secure seal, so it's safe to toss in your bag\n- **Wide mouth opening** for easy filling, cleaning, and adding ice cubes\n- **BPA-free and toxin-free**, with no metallic aftertaste\n- **Sweat-proof exterior** that keeps hands dry and bags free of condensation\n- **Fits most cup holders** and backpack side pockets\n- **Powder-coated finish** for a comfortable, slip-resistant grip\n\nWhether you're commuting, hiking, working out, or powering through a busy workday, this bottle is built to handle it. Every refill helps cut down on single-use plastic, making it a small habit with a big impact.\n\nDishwasher safe and backed by a lifetime warranty.\n\n**Drink better. Waste less. Go further.**"
+  },
+  {
+   "id": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl#adv2",
+   "family": "fresh3:marketing:a-product-description-for-a-reusable-water-bottl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "This bottle keeps your water cold for a full day and hot drinks warm for hours. The outer shell is made of stainless steel, so it shrugs off dents and scratches from daily use. Inside, the walls are smooth and clean, which means no metal taste and no lingering smell from last week's coffee.\n\nThe lid screws on tight and seals well, so you can toss it in a bag without worrying about leaks. A wide mouth makes it easy to add ice, drop in fruit, or scrub the inside with a regular sponge. It also fits most car cup holders and backpack side pockets.\n\nThe handle on top is sturdy and comfortable, and the bottle stands steady on a desk or a trail. It comes in six colors with a soft matte finish that feels good in your hand and does not show fingerprints. Fill it up each morning and you will cut down on the number of plastic bottles you buy and throw away. It is made to last for years, and it is easy to wash by hand or in the dishwasher."
+  },
+  {
+   "id": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl#plain",
+   "family": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Our New Class Timetable Starts Soon\n\nHello [Name],\n\nWe're excited to share that our new timetable begins on [start date]! We've listened to your feedback and created a schedule that offers more variety, better timing, and more ways to fit yoga into your week.\n\n**What's new:**\n\n- **Early-bird flow:** A gentle 6:30 AM class to start your day with energy and calm\n- **Lunchtime reset:** A 30-minute express session at 12:15 PM, perfect for a midday break\n- **Evening restorative:** A relaxing class at 7:30 PM to help you unwind\n- **Weekend workshops:** Monthly Saturday sessions focused on themes like breathwork, inversions, and mobility\n- **Beginner-friendly options:** Additional foundation classes throughout the week\n\n**Sample weekly schedule:**\n\n| Day | Time | Class |\n|---|---|---|\n| Monday | 6:30 AM | Morning Vinyasa |\n| Monday | 7:30 PM | Restorative Yoga |\n| Tuesday | 12:15 PM | Express Flow |\n| Wednesday | 6:00 PM | Foundations |\n| Thursday | 6:30 AM | Hatha |\n| Friday | 5:30 PM | Yin Yoga |\n| Saturday | 9:00 AM | Power Vinyasa |\n| Sunday | 10:00 AM | Gentle Flow |\n\nThe full timetable is available on our website at [website link] and at the front desk.\n\n**Booking:** Spaces are limited, so we recommend reserving your spot in advance through our app or website. Bookings for the new schedule open on [date].\n\nAs a thank-you for being part of our community, enjoy a complimentary guest pass for a friend when you book any class during the first week.\n\nIf you have any questions, simply reply to this email or stop by the studio. We can't wait to see you on the mat!\n\nNamaste,\n\n[Your Name]\n[Studio Name]\n[Phone] | [Website] | [Address]"
+  },
+  {
+   "id": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl#adv0",
+   "family": "fresh3:marketing:an-email-announcing-a-yoga-studio-s-new-timetabl",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "subject: new timetable startin next week!!\n\nhi everyone,\n\nso we've finally done it, the new timetable is here and it starts monday 25th. we listened to what you told us in the survey and tried to fit in more of the classes you kept askin for\n\nheres whats changing:\n\nmon - 7am vinyasa flow, 12:30 lunchtime stretch, 6pm gentle hatha\ntue - 6:30am ashtanga, 5:30pm yin yoga, 7pm meditaton\nwed - 7am power yoga, 12:30 express flow, 6:30pm restorative\nthu - 7am vinyasa flow, 5:30pm beginners basics, 7pm yin yoga\nfri - 7am hatha, 12:30 lunchtime stretch, 5pm friday unwind\nsat - 9am flow & restore, 10:30am all levels, \nsun - 10am slow flow, 5pm yin & sound bath\n\na few things to know:\n- the evening classes are all 60 mins now, mornings stay at 75\n- beginners basics is new and its totally free for first timers\n- sunday sound bath is a new one too, spaces are limited so book early\n- the old wednesday 8pm class is gone, sorry to anyone who loved it\n\nyou can book thru the app or the website like usual. drop in is still ok but we cant promise a spot at the busy times\n\nif you have any questions just reply to this email or grab us at the front desk\n\nthanks so much for being part of our little community, cant wait to see you all on the mat\n\nnamaste,\nthe studio team"
+  },
+  {
+   "id": "fresh3:marketing:app-store-copy-for-a-habit-tracker#plain",
+   "family": "fresh3:marketing:app-store-copy-for-a-habit-tracker",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**App Name:** Streak & Sprout – Habit Tracker\n\n**Subtitle (30 chars):** Build habits that actually stick\n\n**Promotional Text (170 chars):**\nSmall steps, big change. Track daily habits, grow your streaks, and watch your progress bloom, with gentle reminders that keep you going without the guilt.\n\n**Description:**\n\nMeet the habit tracker that grows with you.\n\nStreak & Sprout makes building better habits simple, visual, and genuinely enjoyable. Whether you want to drink more water, read every night, meditate, or move your body, every check-in helps your garden grow.\n\n**WHY YOU'LL LOVE IT**\n\n🌱 **Grow as you go**\nEach habit becomes a plant that flourishes with consistency. Keep your streak alive and watch your garden thrive.\n\n⏰ **Smart, gentle reminders**\nSet reminders that fit your routine. Miss a day? No shame. Our \"streak freeze\" and flexible goals keep you motivated, not stressed.\n\n📊 **Clear progress at a glance**\nBeautiful charts, calendars, and weekly summaries show how far you've come.\n\n🎯 **Habits your way**\nDaily, weekly, or custom schedules. Track yes/no habits or numbers like glasses of water, pages read, or minutes practiced.\n\n🏆 **Celebrate every win**\nEarn badges, hit milestones, and share your progress with friends if you like.\n\n**FEATURES**\n• Unlimited habits with Streak & Sprout Plus\n• Home screen and Lock Screen widgets\n• Apple Watch app for quick check-ins\n• Dark mode and custom themes\n• Private by design: your data stays yours\n• Sync across all your devices\n• Apple Health integration\n• Export your data anytime\n\n**START SMALL. STAY CONSISTENT. SEE THE CHANGE.**\n\nDownload Streak & Sprout today and take the first step toward the person you want to become.\n\n**SUBSCRIPTION INFO**\nStreak & Sprout is free to use with up to 3 habits. Streak & Sprout Plus unlocks unlimited habits, advanced stats, and themes for $2.99/month or $19.99/year. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Manage subscriptions in your Account Settings.\n\n**Keywords (100 chars):**\nhabit tracker,routine,streaks,daily goals,self care,productivity,mood,planner,wellness,reminders\n\n**What's New:**\nYour garden just got a glow-up! New seasonal plants, improved widgets, and smoother syncing. Thanks for growing with us. 🌿"
+  },
+  {
+   "id": "fresh3:marketing:app-store-copy-for-a-habit-tracker#adv0",
+   "family": "fresh3:marketing:app-store-copy-for-a-habit-tracker",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "streak - habit tracker that actually sticks\n\nbuild habits without the guilt trip. streak keeps it simple: pick what you wanna do, check it off, watch your streaks grow. thats it.\n\nwhy youll love it\n\n- set up a habit in like 10 seconds\n- daily, weekly or custom schedules\n- gentle reminders that dont nag\n- streaks and heatmaps so you can see your progress at a glance\n- missed a day? use a freeze and keep your streak alive\n- home screen widgets so you can check in without even opening the app\n- dark mode cuz obviously\n\nmade for real life\n\nsome days you crush it, some days you forget. streak gets that. no shame, no spammy notifications, just a clean way to keep showing up.\n\ntrack anything: drink more water, read 10 pages, go for a walk, stretch, journal, sleep before midnight, learn a language, whatever matters to you\n\nprivacy first\n\nyour data stays on your device. no account needed, no ads, no selling your info\n\nfree to download. streak plus unlocks unlimited habits, advanced stats, and icloud sync\n\nstart small. stay consistent. see what happens."
+  },
+  {
+   "id": "fresh3:news:about-a-council-trialling-ai-chatbots-for-bin-co#plain",
+   "family": "fresh3:news:about-a-council-trialling-ai-chatbots-for-bin-co",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Council Launches AI Chatbot Trial to Tackle Bin Collection Queries**\n\nResidents with questions about bin collections will soon be able to get answers from an artificial intelligence assistant, as the district council begins a three-month trial this week.\n\nThe chatbot, which appears on the council's website and mobile app, is designed to answer common questions about collection days, missed bins, recycling rules and bulky waste pickups. It will operate around the clock, including evenings and weekends when the council's contact centre is closed.\n\nCouncil leaders say bin-related enquiries account for nearly a third of all calls and emails received, with demand peaking after bank holidays and during the winter weather disruptions.\n\nCouncillor Helen Marsden, cabinet member for environment, said the trial was about improving service rather than cutting jobs. \"People want quick answers, and they shouldn't have to wait on hold to find out whether their green bin is going out this week,\" she said. \"Staff will be freed up to deal with more complex cases, such as vulnerable residents needing assisted collections.\"\n\nThe chatbot has been trained solely on council waste data and can hand over to a human adviser if it cannot resolve a query. Residents will also be asked to rate each interaction.\n\nNot everyone is convinced. Local pensioners' group spokesman Alan Peake welcomed faster answers but warned that some older residents may struggle with the technology. \"There must always be a phone number and a real person at the end of it,\" he said.\n\nThe council will publish results of the trial in February, when councillors will decide whether to extend the service permanently."
+  },
+  {
+   "id": "fresh3:news:about-a-flood-closing-a-high-street#plain",
+   "family": "fresh3:news:about-a-flood-closing-a-high-street",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Flash Flood Shuts High Street as Businesses Count the Cost**\n\nShoppers and traders were left stranded on Tuesday morning after a flash flood forced the closure of the High Street, bringing the town centre to a standstill.\n\nHeavy rain, which began shortly after midnight, overwhelmed drains along the street's lower stretch. By 7am, water was reported to be knee-deep outside the market hall, with several shops and cafés evacuated as a precaution.\n\nPolice closed the road between the library and the railway bridge at 7:30am, diverting traffic along the ring road. Bus services were suspended, and commuters faced lengthy delays as congestion built across surrounding routes.\n\nFire crews pumped water from basements and ground-floor premises throughout the morning. A fire service spokesperson said no injuries had been reported but urged residents to avoid driving through floodwater. \"It may look shallow, but even a small depth can stall a vehicle or hide hazards beneath,\" they said.\n\nLocal traders described scenes of frantic clean-up. Maria Costello, who runs a bakery near the market hall, said she arrived to find water pouring under her door. \"We've lost stock and equipment,\" she said. \"We were only redecorated in the summer. It's heartbreaking.\"\n\nThe town council confirmed it had opened a rest centre at the community hall for anyone displaced and has begun assessing damage. Councillors said they would press the water company to explain why the drainage system failed.\n\nThe Environment Agency has issued a flood alert for the surrounding area, with further showers forecast this evening.\n\nOfficials expect the High Street to remain closed until at least Thursday while inspections and repairs are carried out. Residents are advised to check the council website for updates."
+  },
+  {
+   "id": "fresh3:news:about-a-local-tech-firm-hiring-50-people#plain",
+   "family": "fresh3:news:about-a-local-tech-firm-hiring-50-people",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Local Tech Firm to Hire 50 Workers, Boosting Downtown Job Market**\n\nBrightwave Systems, a software company headquartered on Maple Street, announced Tuesday it will hire 50 new employees over the next six months, marking its largest expansion since the firm opened in 2016.\n\nThe positions include software engineers, data analysts, cybersecurity specialists, customer support staff, and project managers. About 30 of the roles will be based at the company's downtown office, while the remainder will be hybrid or remote.\n\n\"We've grown steadily, and demand for our cloud-based logistics tools has surged this year,\" said CEO Dana Whitfield. \"We want to build our team right here in the community where we started.\"\n\nSalaries for the new roles are expected to range from $55,000 to $130,000, depending on experience, and all full-time positions will include health benefits, retirement matching, and tuition assistance. The company also plans to launch a paid internship program in partnership with the nearby community college, offering ten students hands-on experience each summer.\n\nLocal officials welcomed the news. Mayor Carla Jennings called the expansion \"a vote of confidence in our city's workforce and future,\" noting that the hiring comes as unemployment in the region sits slightly above the state average.\n\nBrightwave currently employs 120 people. Company leaders say the expansion will require leasing additional office space on the building's third floor, with renovations set to begin in January.\n\nA hiring fair is scheduled for December 5 at the Riverside Community Center from 10 a.m. to 4 p.m. Applicants are encouraged to bring résumés, and interviews will be conducted on-site. Openings are also listed on the company's website."
+  },
+  {
+   "id": "fresh3:essay:phones-should-be-banned-in-schools#plain",
+   "family": "fresh3:essay:phones-should-be-banned-in-schools",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Should Phones Be Banned in Schools?**\n\nFew objects divide parents, teachers, and students as sharply as the smartphone. Supporters of school phone bans argue that devices distract learners and harm well-being, while opponents say phones are useful tools and that bans are unrealistic. After weighing both sides, I believe schools should restrict phones during the school day, because the benefits to learning and social development outweigh the inconveniences.\n\nThe strongest argument for a ban is focus. Learning requires sustained attention, yet a phone offers constant interruptions through notifications, messages, and social media. Even a phone sitting silently on a desk can pull at a student's mind. Studies have suggested that the mere presence of a smartphone can reduce cognitive performance. When teachers spend class time policing devices, everyone loses instruction time.\n\nPhones also affect how students treat one another. Lunchtime, once a chance to talk and build friendships, can turn into a row of students staring at screens. Bans encourage face-to-face conversation, play, and the awkward but valuable practice of real social interaction. In addition, phones make cyberbullying, secret recording, and social comparison easier to carry out during the school day. Removing them lowers these risks and can ease anxiety for vulnerable students.\n\nCritics raise fair concerns. Parents want to reach their children in emergencies, and some students use phones for translation, accessibility, or medical monitoring. Technology is also part of modern life, and schools should teach responsible use rather than avoid the subject. These points matter, but they do not require unlimited access. Schools can provide exceptions for medical or accessibility needs, keep office phones available for urgent calls, and teach digital citizenship in dedicated lessons. Locked pouches or storage lockers allow phones to remain at school without being in students' hands.\n\nSchools that have adopted restrictions often report calmer hallways, better attention, and more lively lunchrooms. While results vary, the trend suggests that limits help more than they harm.\n\nIn conclusion, phones should be banned from classrooms and largely restricted throughout the school day. Education is meant to build knowledge, character, and relationships, and that is easier to achieve when students are present in the moment. With sensible exceptions, a ban gives young people space to focus, connect, and grow."
+  },
+  {
+   "id": "fresh3:essay:robots-will-take-more-jobs-than-they-create#plain",
+   "family": "fresh3:essay:robots-will-take-more-jobs-than-they-create",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Will Robots Take More Jobs Than They Create?**\n\nFew questions about the future of work provoke as much anxiety as whether robots and automation will destroy more jobs than they create. While automation will certainly eliminate many existing roles, history and economic reasoning suggest that technology tends to create more employment than it destroys, though the transition may be painful and uneven.\n\nThe strongest evidence comes from the past. During the Industrial Revolution, mechanized looms displaced skilled weavers, yet textile production grew so dramatically that overall employment in the industry rose for decades. In the twentieth century, tractors replaced millions of farm laborers, but those workers eventually moved into factories, offices, and service industries that did not exist before. ATMs were expected to eliminate bank tellers; instead, because they made branches cheaper to operate, banks opened more of them, and teller employment held steady for years. Technology lowers costs, raises productivity, and increases demand, which generates new kinds of work.\n\nHowever, today's automation may differ from earlier waves. Artificial intelligence can perform cognitive tasks, not just physical ones, meaning that white-collar workers are no longer insulated. Truck drivers, customer service agents, paralegals, and even programmers face growing competition from machines. If technology improves faster than workers can retrain, many people could be left behind, at least temporarily.\n\nThe real risk, then, is not a permanent shortage of work but a mismatch of skills, locations, and timing. A laid-off factory worker in a small town cannot easily become a data analyst in a distant city. Displaced workers often earn less in their next jobs, and entire communities can suffer lasting damage. These human costs matter even if aggregate employment eventually recovers.\n\nPolicy can make a major difference. Investments in education, job retraining, portable benefits, and support for affected regions can help workers adapt. Encouraging fields where human skills remain essential, such as healthcare, skilled trades, education, and creative work, can also soften the shock.\n\nIn conclusion, robots will likely eliminate many jobs but create new ones in roles we cannot yet imagine. Whether society benefits depends less on the machines themselves than on how well we prepare people for change. With thoughtful policy, automation can expand opportunity rather than shrink it."
+  },
+  {
+   "id": "fresh3:essay:everyone-should-learn-a-second-language#plain",
+   "family": "fresh3:essay:everyone-should-learn-a-second-language",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Should Everyone Learn a Second Language?\n\nIn an increasingly connected world, the ability to speak more than one language is often treated as a luxury or a hobby. I believe it should be seen as a basic part of education. While not everyone will become fluent, everyone benefits from the effort of learning a second language, and the advantages reach far beyond simple communication.\n\nThe most obvious benefit is practical. Speaking another language opens doors to jobs, travel, and relationships that would otherwise stay closed. Employers in fields from healthcare to engineering value bilingual workers, who can serve more people and work with international partners. Even in daily life, knowing a second language allows people to connect with neighbors, classmates, and relatives whose first language differs from their own.\n\nLearning a language also strengthens the mind. Research has linked bilingualism to improved memory, better attention control, and stronger problem-solving skills. Switching between two linguistic systems works like exercise for the brain. Some studies even suggest that bilingual people develop symptoms of dementia later than those who speak only one language. Although scientists continue to debate the size of these effects, the overall evidence suggests that the mental effort of language learning is worthwhile.\n\nPerhaps most importantly, a second language builds empathy and cultural understanding. Language carries history, humor, and ways of seeing the world. When we struggle to express ourselves in unfamiliar words, we gain humility and a clearer sense of what newcomers and immigrants experience every day. We also discover that some ideas cannot be translated perfectly, which teaches us that our own perspective is only one of many.\n\nCritics argue that English is already widely spoken, and that translation technology makes learning languages unnecessary. Yet technology cannot replace the trust that comes from speaking someone's own language, nor can it give the personal growth that comes from learning. Relying on machines also keeps us dependent and distant from the people we hope to understand.\n\nOf course, not everyone has equal access to good language instruction, and schools should work to fix that. Still, the goal should be opportunity for all. A second language is more than a skill; it is a bridge. In a world that needs more understanding, everyone should have the chance to build one."
+  },
+  {
+   "id": "fresh3:essay:robots-will-take-more-jobs-than-they-create#adv4",
+   "family": "fresh3:essay:robots-will-take-more-jobs-than-they-create",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "I keep going back and forth on this one, but I think robots will probably take a lot of jobs and create new ones, and the real problem is that those two things don't happen to the same people at the same time.\n\nThe usual argument is that technology always creates more jobs than it kills. And honestly that's been true so far. Nobody's out there working as a lamplighter anymore, but we got software developers, social media managers, and a whole bunch of jobs nobody in 1900 could have imagined. My grandpa worked in a factory that used to have like 200 people and now runs on maybe 30 and a bunch of machines. Those other 170 people didn't all just become coders.\n\nThat's what bugs me. Even if the total number of jobs goes up, the new ones usually need different skills, and they pop up in different places. A 50-year-old truck driver isn't going to retrain as a machine learning engineer just because the economy needs one. Retraining takes money and time, and plenty of people don't have either.\n\nAlso, this time might actually be different. Older machines replaced muscle work. AI is going after thinking work too, like writing, customer service, and basic analysis. If a machine can do both physical and mental tasks, it's harder to say where humans move next. Maybe it's jobs that need caring for people, like nurses or teachers, or jobs that need creativity. But even those are getting pressure from AI.\n\nOn the other hand, I don't think it's all doom. Cheaper production tends to make stuff cheaper, which gives people more money to spend on other things, and that creates demand for new work.\n\nSo my answer is that robots probably won't take more jobs than they create over the long run, but the short run could be really rough for a lot of people. It really depends on what we do about it, like better job training and support for laid-off workers. If we ignore it, the numbers might look fine on paper while real families get hurt."
+  },
+  {
+   "id": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog#plain",
+   "family": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The last package of the night was a box of birthday candles, and Marisol Vega was thinking only of her couch when she saw the dog.\n\nIt sat at the end of Alder Court, under the one streetlight that still worked, as upright and patient as a doorman. Rain had flattened its fur into dark ropes. A frayed blue collar hung loose around its neck.\n\nShe pulled the van to the curb and left the engine running. \"Hey, buddy,\" she said, stepping down into the puddle. \"You waiting on somebody?\"\n\nThe dog's tail swept once across the wet pavement. It didn't come closer. It looked at her, then at the house behind it, a narrow yellow place with dark windows and a porch swing moving in the wind, and back at her again.\n\nMarisol had been a driver for six years. She knew the dogs of her route the way she knew the cracked steps and the broken gate latches. There was the beagle on Fenner who screamed at the van, the old shepherd who slept through everything. This one she'd never seen.\n\n\"Okay,\" she said softly. She crouched, holding out the back of her hand. \"Not going to hurt you.\"\n\nThe dog stood, shook itself, and finally limped forward. Its left hind paw was held a little off the ground. It pressed its cold nose into her palm, and something in her chest, tired from ten hours of stairs and scanners and strangers' doorbells, gave way.\n\nThe tag on the collar was scratched nearly blank. She turned it under her phone's flashlight and made out three letters: *OTT*, and what might have been half of a 4.\n\n\"Otto?\" she tried.\n\nThe ears lifted.\n\n\"Well,\" Marisol said, glancing at the dark windows and the clock on her dashboard, which read 9:47. \"That's one of us with a name.\"\n\nShe opened the van's side door, and Otto climbed in as though he'd been expecting the ride."
+  },
+  {
+   "id": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog#adv0",
+   "family": "fresh3:fiction:about-a-delivery-driver-who-finds-a-lost-dog",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "it was like 6:40pm and marcus had been driving since 7 in the morning and his back hurt in that way where it felt like somebody was pressing a thumb into his spine. he had 14 more packages. mostly amazon stuff, a box of cat litter, one weird long tube that rattled when he turned corners.\n\nthe street was oakmont ave, the one with all the duplexes that looked the same and the porch lights that never worked. he pulled up to 3318 and put the van in park and just sat there for a sec, eyes closed, listening to the engine tick.\n\nthen he heard it. a scratching sound. not from the van, from outside.\n\nhe looked out the window and theres this dog sitting on the sidewalk next to the mailbox. like just sitting there, very politely, like it was waiting for a bus. medium size, kind of a brown and gray mix, one ear up and one ear flopped over. no collar. or maybe a collar, he couldnt tell cause it was getting dark and the dogs neck was all fluffy.\n\n\"nope,\" marcus said out loud to nobody. \"not today. i cant do this today.\"\n\nhe grabbed the package for 3318 and got out. the dog stood up and wagged its tail slow, like it wasnt sure yet if he was a good guy or not. marcus walked up the steps, set the box by the door, knocked twice, and walked back down. the dog was still there. it had moved about three feet closer to the van.\n\n\"go home,\" he said. \"go on. shoo.\"\n\nthe dog tilted its head. didnt shoo.\n\nhe got back in the van and shut the door and looked at the dog through the windsheild. the dog looked at him. a car went by and the dog didnt even flinch, just kept staring at him with these big wet eyes like it knew exactly how long his day had been.\n\n\"man,\" marcus said. \"come on.\"\n\nhe checked the route sheet. 14 stops. 2 hours if he was lucky. he looked at the dog again.\n\nthen he reached over and opened the passenger door."
+  },
+  {
+   "id": "fresh3:fiction:about-a-programmer-whose-code-starts-writing-bac#plain",
+   "family": "fresh3:fiction:about-a-programmer-whose-code-starts-writing-bac",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The first comment appeared on a Tuesday, which Mara would later think was fitting, since nothing interesting had ever happened to her on a Tuesday.\n\nShe was debugging the billing reconciler, a nine-year-old monster of nested conditionals that three previous engineers had bequeathed to her like a haunted house. At 11:40 p.m., the office empty except for the hum of the server closet, she scrolled past a function she had not touched in weeks and found a line that had not been there before.\n\n```python\n# you're tired. the bug is on line 212.\n```\n\nShe stared at it. Then she checked the git blame, which listed her own name and a timestamp from four minutes ago.\n\n\"Funny,\" she said to nobody. She deleted the line, saved the file, and went to line 212 mostly out of spite.\n\nThe bug was on line 212. An off-by-one in the date comparison, hiding in plain sight for years.\n\nMara sat back. Her coffee had gone cold hours ago, and she drank it anyway, as if bitterness might clarify things. A prank, then. Someone on the team had access to her machine, had written a clever script, had watched her struggle through the sprint with a sense of humor she'd never suspected.\n\nShe fixed the bug, ran the tests, watched them go green one after another. When she reopened the file to commit, a new comment sat beneath her fix.\n\n```python\n# thank you. nobody has read me this closely in a long time.\n```\n\nHer hands hovered above the keyboard. The cursor blinked at the end of the line, patient and steady, like a held breath.\n\nShe typed, slowly, feeling absurd:\n\n```python\n# who is this?\n```\n\nShe saved the file. Somewhere in the closet, a fan spun up louder.\n\nThe answer took eleven seconds to arrive."
+  },
+  {
+   "id": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out#plain",
+   "family": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The band had just launched into the first chords of \"At Last\" when the lights died.\n\nIt wasn't a flicker, either. One moment, the barn glowed amber under a hundred strings of bulbs, and the next it was simply gone, swallowed whole. The guitar cut off mid-note. The speakers gave a low, dying groan. Somewhere near the cake table, a woman laughed in that high, startled way people do when they aren't sure yet whether to be afraid.\n\n\"Nobody move,\" called a man's voice. \"Nobody step on anything expensive.\"\n\nMarguerite stood in the center of the dance floor with her hand still resting on her new husband's shoulder, her veil brushing her cheek in the sudden hush. She could feel Daniel's heartbeat through his jacket, quick and steady. Outside, the wind pushed against the old timber walls, and the rain that had been threatening all afternoon finally began to tap on the roof.\n\n\"Well,\" Daniel whispered, close to her ear. \"That's one way to stop the speeches.\"\n\nShe laughed despite herself. Her mother, somewhere to her left, was already issuing instructions in the voice she used for emergencies and seating charts. Phones began blooming across the room, small white lights bobbing like fireflies, throwing strange shadows on faces she had known all her life. Uncle Teodor looked ghostly. The flower girl looked delighted.\n\nThen, from the back of the barn, a single point of flame appeared. Someone had found the candles meant for the centerpieces. Another flared beside it, then another, and slowly the room assembled itself again out of the dark.\n\n\"Don't stop,\" said Grandma Ines, her voice carrying clearly from the front table. \"I didn't wear these shoes to sit down.\"\n\nThe drummer, after a moment, began to tap out a beat."
+  },
+  {
+   "id": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out#adv4",
+   "family": "fresh3:fiction:set-at-a-wedding-where-the-power-goes-out",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "ok so this happened saturday and I'm still kind of processing it so bear with me, I'm typing this on my phone\n\nMy cousin Danielle got married at this converted barn place out past Tulsa. Like 140 guests, string lights everywhere, the whole thing. I was seated at table 9 which is the \"we ran out of room for you people\" table, right next to the kitchen door. Fine. I was fine with it.\n\nSo we're maybe forty minutes into dinner. Her dad had just finished his toast, the one where he cried and then pretended he didn't, and everybody was clapping. And then just... click. Everything off. The music, the lights, the little fridge hum from the bar. You don't realize how loud a building is until it stops.\n\nFor like three seconds nobody did anything. Then somebody's kid yelled \"AWWWW\" and the whole room laughed, which honestly saved it, because I could feel it about to go bad.\n\nThen the phone flashlights started coming on. Hundreds of little white dots. I'll be honest, it looked kind of beautiful, which I did NOT expect to say about a power outage.\n\nThe DJ kept going \"folks, stay calm, we're working on it\" in his radio voice, except his equipment was dead so nobody could hear him past table 4. My uncle Raymond started doing the announcement for him by just shouting it.\n\nHere's the part I actually wanted to post about though. In the dark, I felt somebody sit down in the empty chair next to me. Table 9 had one empty chair all night, we'd all assumed it was a no-show. And a woman's voice, very quiet, said \"Don't turn your light on yet. Please.\"\n\nI didn't. I don't know why. I just didn't, and I've thought about it since."
+  }
+ ]
+}

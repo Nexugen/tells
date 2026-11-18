@@ -95,7 +95,7 @@ export interface LintResult {
 export type Grade = 'clean' | 'light' | 'noticeable' | 'heavy';
 
 export interface LintOptions {
-  /** 'auto' guesses it from the text (see guessRegister). Default 'professional'. */
+  /** 'auto' (the default) guesses it from the text (see guessRegister). */
   register?: Register | 'auto';
   /** Rule ids to skip. */
   disable?: string[];

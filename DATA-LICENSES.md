@@ -24,7 +24,7 @@ The model answers in `bench/out/` were written by Claude models for this benchma
 
 ## Benchmark v2
 
-The v2 benchmark (`bench/dataset.ts`) uses about 9,700 human samples, all written before 2022. Each one records its source link, author where known, date and licence. Only sources whose licence allows redistribution are committed. The rest are fetched by the scripts in `bench/fetch/` into `$TELLS_DATA` (default `/root/tells-data`), and `bench/data/manifests/` lists their ids so a rerun can be checked against ours. `python3 -I bench/fetch/export.py` rebuilds the committed files and the manifests.
+The v2 benchmark (`bench/dataset.ts`) uses about 12,800 human samples in its pool, all written before 2022 except the round-3 additions, which are from before ChatGPT (30 Nov 2022). Each one records its source link, author where known, date and licence. Only sources whose licence allows redistribution are committed. The rest are fetched by the scripts in `bench/fetch/` into `$TELLS_DATA` (default `/root/tells-data`), and `bench/data/manifests/` lists their ids so a rerun can be checked against ours. `python3 -I bench/fetch/export.py` rebuilds the committed files and the manifests.
 
 | Source | Samples | Licence | In the repo |
 | --- | ---: | --- | --- |
@@ -43,6 +43,12 @@ The v2 benchmark (`bench/dataset.ts`) uses about 9,700 human samples, all writte
 | Blog Authorship Corpus | 500 | non-commercial research use | no, `fetch_blogs.py` |
 | Amazon reviews (amazon_polarity) | 400 | research use | no, `fetch_amazon.py` |
 | WineEnthusiast tasting notes | 300 | CC BY-NC-SA 4.0 | no, `fetch_wine.py` |
+| Reddit posts from tech and business subreddits, and lowercase posts (Webis-TLDR-17) | 343 | CC BY 4.0 | yes, `fetch_modern.py reddit` |
+| Stack Exchange: ai, datascience, android, apple, softwarerecs, freelancing, pm | 207 | CC BY-SA 3.0 or 4.0, by date | yes, `fetch_modern.py se` |
+| Ubuntu IRC channels, one person's consecutive lines (2010 to 2021) | 1,763 | public logs, no open licence | no, `fetch_irc.py` |
+| Hacker News comments about AI, apps and startups (2014 to May 2020) | 450 | no open licence | no, `fetch_modern.py hn` |
+| GitHub issue comments, AI and app projects (2018 to Oct 2022) | 292 | GitHub user content, no open licence | no, `fetch_modern.py github` |
+| Hacker News comments typed mostly in lowercase | 15 | no open licence | no, `mine_lowercase.py` |
 
 Held-out rounds, each fetched after the previous one was scored:
 
@@ -58,7 +64,13 @@ Held-out rounds, each fetched after the previous one was scored:
 | fresh-2 | Wikivoyage | 150 | CC BY-SA 3.0 | yes |
 | fresh-2 | Apache Software Foundation mailing lists | 215 | public archive, no open licence | no, `fresh2_apache.py` |
 | fresh-2 | debian-user mailing list | 98 | public archive, no open licence | no, `fresh2_debian.py` |
+| fresh-3 | Stack Exchange: cooking, travel, parenting, pets, gardening, diy, money, workplace, stats, cs, gamedev, security | 240 | CC BY-SA 3.0 or 4.0, by date | yes, `bench/fresh-3/human/` |
+| fresh-3 | Ubuntu IRC channels, days not used elsewhere | 303 | public logs, no open licence | no, `fetch_irc.py` |
+| fresh-3 | Hacker News comments, Jan to Oct 2022 | 160 | no open licence | no, `fetch_modern.py hn` |
+| fresh-3 | GitHub issue comments, six repositories not used elsewhere (2021 to Oct 2022) | 120 | GitHub user content, no open licence | no, `fetch_modern.py github` |
+
+The modern probe (`bench/v2.ts probe`, never trained on) has 838 human texts: 225 Reddit posts (CC BY 4.0, committed in `bench/probe/human/`), and 240 Ubuntu IRC runs, 200 HN comments from 2020 and 2021, 160 GitHub issue comments and 13 lowercase HN comments, which are not redistributable and listed by id in `bench/data/manifests/probe-*.ids.jsonl`. IRC samples do not keep nicknames.
 
 The share-alike samples keep their licence if you reuse them. The PERSUADE and ELLIPSE files give no per-essay date, so their date field is an upper bound.
 
-Model samples in `bench/out-v2/`, `bench/fresh-1/out/` and `bench/fresh-2/out/` were written by Claude Haiku, Sonnet and Opus for this benchmark from the prompts in `bench/prompts-v2.json` and the `prompts.json` of each round.
+Model samples in `bench/out-v2/`, `bench/out-topic/`, `bench/fresh-1/out/`, `bench/fresh-2/out/` and `bench/fresh-3/out/` were written by Claude Haiku, Sonnet and Opus for this benchmark from the prompts in `bench/prompts-v2.json`, `bench/prompts-topic.json` and the `prompts.json` of each round.

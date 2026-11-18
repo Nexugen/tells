@@ -7,7 +7,8 @@ import { rulesAsJson } from '../src/serialize.ts';
 import { mask, sentences } from '../src/text.ts';
 import type { Register } from '../src/types.ts';
 
-const ids = (text: string, register?: Register) => lint(text, { register }).findings.map((f) => f.ruleId);
+// Rule tests pin the register (professional unless given), so they do not depend on the guess.
+const ids = (text: string, register: Register = 'professional') => lint(text, { register }).findings.map((f) => f.ruleId);
 
 function registerFor(ruleId: string): Register {
   // A register where the rule is on.

@@ -6,6 +6,7 @@
  *   node --experimental-strip-types bench/v2.ts train                 fit the score on train, calibrate on tune, write src/score-model.json
  *   node --experimental-strip-types bench/v2.ts report [--on tune]    the numbers on one split (train, tune, test) or a fresh round (fresh-1, fresh-2)
  *   node --experimental-strip-types bench/v2.ts fp [--on tune]        human texts with warnings or errors, for fixing rules
+ *   node --experimental-strip-types bench/v2.ts probe [--json f]       the modern probe (AI, apps, lowercase chat), human only
  *
  * `--on test` and `--on fresh-N` print a one-time score. Do not tune on what they show.
  * `--json file` saves the report.
@@ -20,7 +21,7 @@ import { scoreFeatures, stripLayout, SCORE_KEYS } from '../src/score-features.ts
 import { mask, paragraphs, sentences, countWords } from '../src/text.ts';
 import type { Register, RuleContext, Finding } from '../src/types.ts';
 import { REGISTERS } from '../src/types.ts';
-import { DATA_DIR, loadAll, loadFresh, type Sample } from './dataset.ts';
+import { DATA_DIR, loadAll, loadFresh, loadProbe, type Sample } from './dataset.ts';
 import { auc, platt, predictMargin, trainGbdt, type Gbdt } from './gbdt.ts';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -92,7 +93,7 @@ function weights(rows: Row[]): number[] {
 // --- commands ------------------------------------------------------------------------------
 
 function load(on: string, gated = true): Row[] {
-  const all = on.startsWith('fresh-') ? loadFresh(Number(on.slice(6))) : loadAll().filter((s) => s.split === on);
+  const all = on === 'probe' ? loadProbe() : on.startsWith('fresh-') ? loadFresh(Number(on.slice(6))) : loadAll().filter((s) => s.split === on);
   const rows = all.map(analyse);
   flush();
   if (!gated) return rows;
@@ -110,7 +111,7 @@ function load(on: string, gated = true): Row[] {
       gate(copy, need, low, undefined, (arg('gate-by', 'category') as 'rule' | 'category'), reg, high);
       return copy.filter((f) => f.severity !== 'info');
     };
-    return { ...r, blockLabel: g(r.blockLabel, r.s.register), blockAuto: g(r.blockAuto, r.autoRegister), blockDefault: g(r.blockDefault, 'professional') };
+    return { ...r, blockLabel: g(r.blockLabel, r.s.register), blockAuto: g(r.blockAuto, r.autoRegister), blockDefault: g(r.blockDefault, r.autoRegister) };
   });
 }
 
@@ -139,10 +140,39 @@ function stats() {
   console.log(`\n${all.length} samples, ${groups.size} groups, ${all.filter((s) => s.nonNative).length} non-native`);
 }
 
+/**
+ * Short pieces of the longer texts, cut at sentence ends to 70 to 150 words, as extra training rows
+ * in the same split and group. Most texts in the pool run long, while the score is used from 60
+ * words up; without these it had seen little short writing from either side and judged a short
+ * chat message by habits that only mean something in a long one.
+ */
+export function chunkSamples(rows: Row[], perText: number): Row[] {
+  const out: Row[] = [];
+  for (const r of rows) {
+    if (r.words < 160 || perText <= 0) continue;
+    const sents = r.s.text.replace(/\r/g, '').split(/(?<=[.!?])\s+(?=[\p{L}"“(])|\n{2,}/u).filter((x) => x.trim());
+    const seed = parseInt(createHash('sha256').update(`chunk:${r.s.id}`).digest('hex').slice(0, 8), 16);
+    let start = seed % Math.max(1, Math.floor(sents.length / 3)), made = 0;
+    while (made < perText && start < sents.length) {
+      const target = 70 + ((seed >>> (made * 5)) % 81);
+      let end = start, n = 0;
+      while (end < sents.length && n < target) n += countWords(sents[end++]);
+      if (n < 70 || n > 190) break;
+      const text = sents.slice(start, end).join(' ');
+      out.push(analyse({ ...r.s, id: `${r.s.id}#c${made}`, text }));
+      made++;
+      start = end + 1;
+    }
+  }
+  flush();
+  return out;
+}
+
 function train() {
-  const tr = load('train', false).filter((r) => r.words >= MIN_WORDS);
+  const base = load('train', false).filter((r) => r.words >= MIN_WORDS);
+  const tr = [...base, ...chunkSamples(base, Number(arg('chunks', '0')))];
   const tu = load('tune', false).filter((r) => r.words >= MIN_WORDS);
-  const opts = { trees: Number(arg('trees', '400')), depth: Number(arg('depth', '3')), rate: Number(arg('rate', '0.06')), minLeaf: Number(arg('min-leaf', '25')), colsample: Number(arg('col', '0.5')) };
+  const opts = { trees: Number(arg('trees', '2000')), depth: Number(arg('depth', '3')), rate: Number(arg('rate', '0.03')), minLeaf: Number(arg('min-leaf', '25')), colsample: Number(arg('col', '0.5')) };
   const m = trainGbdt(tr.map((r) => r.x), tr.map((r) => r.s.y), weights(tr), opts);
   const mTu = tu.map((r) => predictMargin(m, r.x));
   const wTu = weights(tu);
@@ -172,6 +202,33 @@ function importance(m: Gbdt) {
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
+/** A text about AI, apps, software or business: two or more of these words. */
+const TECH_RE = /\b(?:AI|A\.I\.|artificial intelligence|machine learning|ML|deep learning|neural (?:net|network)s?|GPT-?\d?|chatbots?|models?|apps?|app store|startups?|SaaS|pricing|platforms?|software|APIs?|users?|customers?|business(?:es)?|revenue|margins?|subscriptions?|developers?|code|online|website|tech|technology|Android|iOS|iPhone)\b/gi;
+export const isTech = (t: string) => (t.match(TECH_RE)?.length ?? 0) >= 3;
+/** Typed mostly in lowercase: at least half the sentences start with a small letter. */
+export function isLowercase(t: string): boolean {
+  const s = t.split(/(?<=[.!?])\s+|\n\n/).filter((x) => /[A-Za-z]/.test(x));
+  return s.length >= 3 && s.filter((x) => /^\W*[a-z]/.test(x)).length / s.length >= 0.5;
+}
+
+/** The modern probe, human only: score distribution by source, for tech and lowercase texts. */
+function probe() {
+  const rows = load('probe').filter((r) => r.words >= MIN_WORDS);
+  const m = JSON.parse(readFileSync(join(here, '..', 'src', 'score-model.json'), 'utf8'));
+  const sc = modelScore();
+  const dist = (xs: Row[]) => {
+    const v = xs.map((r) => sc(r.x)).sort((a, b) => a - b);
+    const q = (p: number) => v[Math.floor(p * (v.length - 1))] ?? null;
+    return { n: v.length, low: round(v.filter((x) => x < m.low).length / Math.max(1, v.length), 3), under50: round(v.filter((x) => x < 50).length / Math.max(1, v.length), 3), p10: q(0.1), p25: q(0.25), median: q(0.5), mean: round(v.reduce((a, b) => a + b, 0) / Math.max(1, v.length), 1), warn: round(xs.filter((r) => r.blockAuto.length).length / Math.max(1, xs.length), 3) };
+  };
+  const out: Record<string, unknown> = { scoreModel: m.builtAt, lowLine: m.low, all: dist(rows), tech: dist(rows.filter((r) => isTech(r.s.text))), lowercase: dist(rows.filter((r) => isLowercase(r.s.text))) };
+  for (const src of [...new Set(rows.map((r) => r.s.source))].sort()) out[src] = dist(rows.filter((r) => r.s.source === src));
+  console.log(JSON.stringify(out, null, 1));
+  const j = arg('json');
+  if (j) writeFileSync(j, JSON.stringify(out, null, 1) + '\n');
+  if (arg('show')) for (const r of rows.filter((r) => sc(r.x) < m.low).slice(0, Number(arg('show')))) console.log(`--- ${r.s.id} ${sc(r.x)}\n${r.s.text.slice(0, 300).replace(/\n+/g, ' / ')}`);
+}
+
 function modelScore() {
   const m = JSON.parse(readFileSync(join(here, '..', 'src', 'score-model.json'), 'utf8'));
   return (x: number[]) => {
@@ -200,6 +257,10 @@ function report() {
   // Humans: low score.
   const Hj = H.filter(judged), Aj = A.filter(judged);
   out.humanLowScore = round(Hj.filter((r) => sc(r.x) < m.low).length / Math.max(1, Hj.length));
+  // Human texts about AI, apps or tech against the rest: the score should not care which.
+  const lowOf = (xs: Row[]) => ({ n: xs.length, low: round(xs.filter((r) => sc(r.x) < m.low).length / Math.max(1, xs.length)), mean: round(xs.reduce((a, r) => a + sc(r.x), 0) / Math.max(1, xs.length), 1) });
+  const ht = lowOf(Hj.filter((r) => isTech(r.s.text))), ho = lowOf(Hj.filter((r) => !isTech(r.s.text)));
+  out.techGap = { tech: ht, other: ho, gap: round(ht.low - ho.low), lowercase: lowOf(Hj.filter((r) => isLowercase(r.s.text))) };
   // Model output flagged: a warning or error under its own register, or a low score.
   const flaggedBy = (r: Row) => ({ rules: blocking(r, 'blockLabel'), score: judged(r) && sc(r.x) < m.low });
   const flagShare = (xs: Row[]) => {
@@ -286,7 +347,7 @@ function fpList() {
  */
 function loso() {
   const rows = [...load('train', false), ...load('tune', false)].filter((r) => r.words >= MIN_WORDS);
-  const opts = { trees: Number(arg('trees', '400')), depth: Number(arg('depth', '3')), rate: Number(arg('rate', '0.06')), minLeaf: Number(arg('min-leaf', '25')), colsample: Number(arg('col', '0.5')) };
+  const opts = { trees: Number(arg('trees', '2000')), depth: Number(arg('depth', '3')), rate: Number(arg('rate', '0.03')), minLeaf: Number(arg('min-leaf', '25')), colsample: Number(arg('col', '0.5')) };
   const lowLine = Number(arg('low', '20'));
   const humanSources = [...new Set(rows.filter((r) => r.s.y === 1).map((r) => r.s.source))].filter((src) => rows.filter((r) => r.s.source === src).length >= 30);
   const res: Record<string, unknown> = {};
@@ -312,6 +373,27 @@ function loso() {
     const scores = te.map((r) => sc(r.x));
     console.log(`model genre ${g}`, JSON.stringify({ n: te.length, flaggedLow: round(scores.filter((v) => v < lowLine).length / te.length, 3), mean: round(scores.reduce((a, b) => a + b, 0) / te.length, 1) }));
   }
+}
+
+/**
+ * Leave the topic out: fit on train with every text about AI, apps or tech removed (people and
+ * models alike), then compare tech and other texts on tune. If the score had learned the topic,
+ * the tech texts it never saw would land on one side.
+ */
+function topicout() {
+  const tr = load('train', false).filter((r) => r.words >= MIN_WORDS && !isTech(r.s.text));
+  const tu = load('tune', false).filter((r) => r.words >= MIN_WORDS);
+  const opts = { trees: Number(arg('trees', '2000')), depth: Number(arg('depth', '3')), rate: Number(arg('rate', '0.03')), minLeaf: Number(arg('min-leaf', '25')), colsample: Number(arg('col', '0.5')) };
+  const m = trainGbdt(tr.map((r) => r.x), tr.map((r) => r.s.y), weights(tr), opts);
+  const cal = platt(tu.map((r) => predictMargin(m, r.x)), tu.map((r) => r.s.y), weights(tu));
+  const sc = (x: number[]) => 100 / (1 + Math.exp(-(cal.a * predictMargin(m, x) + cal.b)));
+  const hs = tu.filter((r) => r.s.y === 1).map((r) => sc(r.x)).sort((a, b) => a - b);
+  const low = hs[Math.floor(hs.length * 0.01)];
+  const part = (y: 0 | 1, tech: boolean) => {
+    const xs = tu.filter((r) => r.s.y === y && isTech(r.s.text) === tech);
+    return { n: xs.length, under: round(xs.filter((r) => sc(r.x) < low).length / Math.max(1, xs.length), 3), mean: round(xs.reduce((a, r) => a + sc(r.x), 0) / Math.max(1, xs.length), 1) };
+  };
+  console.log(JSON.stringify({ trainedOn: tr.length, lowLine: round(low, 1), humanTech: part(1, true), humanOther: part(1, false), modelTech: part(0, true), modelOther: part(0, false) }, null, 1));
 }
 
 /** Model texts the score misses on train or tune, to see what the features do not catch. */
@@ -346,7 +428,7 @@ async function profiles() {
 }
 
 const cmd = process.argv[2];
-const run: Record<string, () => unknown> = { stats, train, report, fp: fpList, loso, misses, profiles };
+const run: Record<string, () => unknown> = { stats, train, report, fp: fpList, loso, misses, profiles, probe, topicout };
 if (!run[cmd]) {
   console.error('usage: bench/v2.ts stats|train|report|fp [--on split]');
   process.exit(2);

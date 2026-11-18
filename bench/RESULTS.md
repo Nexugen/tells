@@ -6,7 +6,7 @@ Built with `bench/v2.ts`. The accuracy numbers and how they were measured are in
 
 ### The data
 
-Human samples were all written before 2022 and come from openly licensed or public sources (see `DATA-LICENSES.md`). Model samples are answers from Claude Haiku, Sonnet and Opus to the prompts in `bench/prompts-v2.json` and each round's `prompts.json`. "Non-native" marks writers known to be learning English (ELLIPSE, and PERSUADE essays by English learners). Sources marked fresh-2 are the final held-out round.
+Human samples were all written before 2022, or before 30 Nov 2022 for the sources added in round 3, and come from openly licensed or public sources (see `DATA-LICENSES.md`). Model samples are answers from Claude Haiku, Sonnet and Opus to the prompts in `bench/prompts-v2.json`, `bench/prompts-topic.json` and each round's `prompts.json`. "Non-native" marks writers known to be learning English (ELLIPSE, and PERSUADE essays by English learners). Sources marked fresh-2 and fresh-3 are held-out rounds; the rows from `irc` down were added in round 3.
 
 | Source | Samples | Casual | Professional | Technical | Marketing | Non-native | Genres |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
@@ -40,22 +40,91 @@ Human samples were all written before 2022 and come from openly licensed or publ
 | gov.uk | 20 | 0 | 8 | 0 | 12 | 0 | guidance |
 | go.dev | 19 | 0 | 5 | 8 | 6 | 0 | blog |
 | blog.rust-lang.org | 10 | 0 | 4 | 2 | 4 | 0 | blog |
+| irc | 1763 | 1763 | 0 | 0 | 0 | 0 | chat |
+| hn-ai | 450 | 414 | 0 | 36 | 0 | 0 | comment |
+| reddit-modern | 343 | 318 | 0 | 25 | 0 | 0 | forum |
+| gh-ai | 292 | 241 | 0 | 51 | 0 | 0 | comment |
+| se-ai | 207 | 175 | 0 | 32 | 0 | 0 | qa |
+| hn-lower | 15 | 15 | 0 | 0 | 0 | 0 | comment |
+| se3 (fresh-3) | 240 | 219 | 0 | 21 | 0 | 0 | qa |
+| irc3 (fresh-3) | 303 | 303 | 0 | 0 | 0 | 0 | chat |
+| hn3 (fresh-3) | 160 | 147 | 0 | 13 | 0 | 0 | comment |
+| gh3 (fresh-3) | 120 | 106 | 0 | 14 | 0 | 0 | comment |
+| model: claude-topic | 436 | 382 | 22 | 32 | 0 | 0 | chat, comment, forum, email, qa |
+| model: claude-fresh-3 (fresh-3) | 279 | 144 | 66 | 45 | 24 | 0 | chat, comment, forum, email, qa, review, blog, marketing, news, essay, fiction |
 | model: claude-v2 | 1582 | 680 | 392 | 250 | 260 | 0 | chat, email, qa, docs, comment, forum, blog, essay, letter, fiction, news, guidance, marketing, review |
 | model: claude-fresh-1 | 414 | 177 | 123 | 69 | 45 | 0 | chat, email, qa, docs, comment, blog, essay, fiction, news, marketing, review, letter |
 | model: claude-fresh-2 (fresh-2) | 354 | 153 | 120 | 45 | 36 | 0 | chat, email, qa, docs, comment, blog, essay, fiction, news, marketing, review, letter |
 | model: claude-v1 | 144 | 60 | 36 | 18 | 30 | 0 | mixed |
 
-In all, 10,604 human samples (9,723 in the pool, 881 held out in round 2) and 2,494 model samples.
+In all, 14,497 human samples (12,793 in the pool, 881 held out in round 2 and 823 in round 3) and 3,209 model samples. The probe adds 838 human texts that are never trained on (`bench/v2.ts probe`, see `EVAL.md`).
 
 ### Read these with care
 
-- The human sets are published writing. Private messages are only represented by Enron, the Python, Apache and Debian mailing lists and SMS.
+- Most human sets are published writing. Private or chat-style messages come from Enron, the Python, Apache and Debian mailing lists, SMS and Ubuntu's public IRC channels.
+- IRC samples are one person's consecutive lines. A person's chat turn is how they typed it, but a run of lines is not always one thought.
 - Stack Exchange, Wikipedia and Gutenberg texts can include quotations of other writers. They were kept, because people quote in real writing too.
 - PERSUADE and ELLIPSE give no per-essay date. The date field is an upper bound.
 - Every model is a Claude model, answering through Claude Code's print mode with no system prompt beyond the task.
 - The human-pattern score was trained on the train split, so the pool's train numbers are not evidence of anything. Use tune, test and the held-out rounds.
 
-### Locked test split, by source
+### Round 3, by source (tells 0.3.2)
+
+| Source | Texts | With a warning or error | Low score | Mean score |
+| --- | ---: | ---: | ---: | ---: |
+| human:gh3 | 120 | 0.0% | 0.0% | 96.7 |
+| human:hn3 | 160 | 0.0% | 1.3% | 94.8 |
+| human:irc3 | 303 | 0.0% | 0.0% | 97.8 |
+| human:se3 | 240 | 0.0% | 0.8% | 95.2 |
+| model:claude-fresh-3 | 279 | 28.3% | 97.1% | 1.9 |
+
+| Model | Texts | Rules flag | Score flags | Either |
+| --- | ---: | ---: | ---: | ---: |
+| claude-cli:haiku | 93 | 21.5% | 95.7% | 95.7% |
+| claude-cli:opus | 93 | 34.4% | 97.9% | 97.9% |
+| claude-cli:sonnet | 93 | 29.0% | 96.8% | 96.8% |
+
+### Locked test split, by source (tells 0.3.2)
+
+| Source | Texts | With a warning or error | Low score | Mean score |
+| --- | ---: | ---: | ---: | ---: |
+| human:amazon | 96 | 0.0% | 1.0% | 96.6 |
+| human:blogs | 104 | 1.0% | 2.9% | 91.7 |
+| human:ellipse | 72 | 0.0% | 0.0% | 99.3 |
+| human:enron | 186 | 0.0% | 1.6% | 93.4 |
+| human:gh-ai | 60 | 0.0% | 1.7% | 96 |
+| human:gov.uk | 20 | 0.0% | 10.0% | 88.4 |
+| human:govuk | 84 | 0.0% | 0.0% | 98.3 |
+| human:gutenberg | 157 | 0.0% | 0.6% | 98.2 |
+| human:gutenberg2 | 36 | 0.0% | 0.0% | 98.7 |
+| human:hn | 114 | 0.0% | 0.9% | 96.9 |
+| human:hn-ai | 80 | 0.0% | 0.0% | 96.4 |
+| human:hn-lower | 3 | 0.0% | 0.0% | 99.7 |
+| human:irc | 343 | 0.0% | 0.9% | 97.5 |
+| human:jobs | 84 | 0.0% | 1.2% | 93.6 |
+| human:mozblog | 44 | 0.0% | 2.3% | 93.9 |
+| human:oss | 2 | 0.0% | 0.0% | 94.5 |
+| human:oss2 | 40 | 0.0% | 2.5% | 93.1 |
+| human:persuade | 102 | 0.0% | 0.0% | 97 |
+| human:pymail | 45 | 2.2% | 4.4% | 93.2 |
+| human:reddit | 93 | 0.0% | 1.1% | 95.8 |
+| human:reddit-modern | 32 | 0.0% | 6.3% | 85.4 |
+| human:se-ai | 28 | 0.0% | 0.0% | 95.5 |
+| human:sms | 54 | 0.0% | n/a | n/a |
+| human:stackexchange | 361 | 0.5% | 0.8% | 97.1 |
+| human:stackexchange-v1 | 82 | 0.0% | 2.6% | 92.9 |
+| human:wikibooks | 24 | 0.0% | 0.0% | 99.1 |
+| human:wikinews | 55 | 0.0% | 0.0% | 95.1 |
+| human:wikitalk | 105 | 0.0% | 0.0% | 99.1 |
+| human:wine | 46 | 0.0% | 0.0% | 92.4 |
+| model:claude-fresh-1 | 54 | 18.5% | 100.0% | 0.7 |
+| model:claude-topic | 96 | 7.3% | 92.5% | 3.9 |
+| model:claude-v1 | 36 | 41.7% | 96.0% | 3.8 |
+| model:claude-v2 | 310 | 31.9% | 95.5% | 2.5 |
+
+The rest of this section is the 0.3.0 score model on the 0.3.0 pool, as published then.
+
+### Locked test split, by source (tells 0.3.0)
 
 | Source | Texts | With a warning or error | Low score | Mean score |
 | --- | ---: | ---: | ---: | ---: |
@@ -108,7 +177,7 @@ In all, 10,604 human samples (9,723 in the pool, 881 held out in round 2) and 2,
 | human:wikinews | 250 | 0.0% | 4.8% | 89.1 |
 | model:claude-fresh-1 | 414 | 24.9% | 94.1% | 5 |
 
-A mean score near 100 means the texts read clearly human to the score. Old fiction, open-source READMEs and job ads sit lowest among the human sources.
+A mean score near 100 means the texts read clearly human to the score. Under 0.3.0, old fiction, open-source READMEs and job ads sat lowest among the human sources; under 0.3.2 the lowest are Reddit posts from tech and business subreddits (mean 85) and GOV.UK pages from the v1 set.
 
 ## v1 benchmark
 

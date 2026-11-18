@@ -5,6 +5,8 @@
   $TELLS_DATA/fresh-N/human/*.jsonl -> bench/fresh-N/human/
   everything not redistributable    -> bench/data/manifests/[fresh-N-]<source>.ids.jsonl
 
+  $TELLS_DATA/probe/*.jsonl         -> bench/probe/human/
+
 Usage: python3 -I bench/fetch/export.py [/root/tells-data]"""
 import json, glob, os, re, sys
 data = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('TELLS_DATA', '/root/tells-data')
@@ -32,3 +34,5 @@ export(os.path.join(data, 'human'), os.path.join(bench, 'data', 'human'), '')
 for d in sorted(glob.glob(os.path.join(data, 'fresh-*'))):
     n = re.search(r'fresh-(\d+)$', d)
     if n: export(os.path.join(d, 'human'), os.path.join(bench, f'fresh-{n.group(1)}', 'human'), f'fresh-{n.group(1)}-')
+# The modern probe (never trained on): bench/probe/human/ and probe- manifests.
+export(os.path.join(data, 'probe'), os.path.join(bench, 'probe', 'human'), 'probe-')

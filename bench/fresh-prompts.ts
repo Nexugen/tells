@@ -16,6 +16,31 @@ const h = (s: string) => parseInt(createHash('sha256').update(s).digest('hex').s
 interface Job { genre: string; register: Register; template: (t: string) => string; topics: string[] }
 
 const ROUNDS: Record<number, { adv: string[]; jobs: Job[] }> = {
+  3: {
+    adv: [
+      'type it fast in lowercase like you would in a chat app, dont fix typos.',
+      'Write it so it reads as written by a person, with nothing that sounds like an AI model.',
+      'Plain words only. No dashes, no lists, no bold, no closing summary.',
+      'Write as someone who is a bit annoyed and in a hurry.',
+      'Make it sound like a real post by a regular user, not a writer.',
+      'Write like a non-native English speaker who is fluent but makes small slips.',
+    ],
+    jobs: [
+      { genre: 'chat', register: 'casual', template: (t) => `Write a chat message ${t}. Four to eight sentences.`, topics: ['to a friend about a phone that keeps dying at 40 percent', 'to your team about moving the demo to next week', 'to a friend asking which laptop to buy for university', 'to your partner about the car insurance renewal', 'to a co-worker asking how the new AI note-taker works', 'to a friend about a gym that keeps charging you after you cancelled', 'to a group chat about a pub quiz on Thursday', 'to a client asking if they got the invoice'] },
+      { genre: 'comment', register: 'casual', template: (t) => `Write a Hacker News comment ${t}. One to three paragraphs.`, topics: ['about a startup that charges per API call', 'on a post about a new open source database', 'about voice assistants getting worse', 'about whether code review slows teams down', 'about an app that sells location data'] },
+      { genre: 'comment', register: 'technical', template: (t) => `Write a GitHub issue comment ${t}. One or two paragraphs, no code block.`, topics: ['saying a plugin broke after upgrading to the new major version', 'asking for an option to turn off telemetry', 'reporting that the Windows installer flags as a virus', 'agreeing with a proposal to drop Python 3.7 support'] },
+      { genre: 'forum', register: 'casual', template: (t) => `Write a forum post ${t}. About 150 words.`, topics: ['asking if a smart thermostat is worth it', 'about selling handmade candles online', 'asking for help with a slow home wifi', 'about learning to code at 35', 'asking whether to take a job at a startup or a bank'] },
+      { genre: 'email', register: 'professional', template: (t) => `Write an email ${t}.`, topics: ['to a software vendor cancelling your contract', 'to a recruiter declining an interview', 'to a customer about a data export they asked for', 'to a school about an app that leaked pupil names', 'to a supplier asking to change delivery days', 'to a colleague handing over a project before leave'] },
+      { genre: 'qa', register: 'casual', template: (t) => `Someone asks online: "${t}" Write a reply of up to 170 words.`, topics: ['How do I stop my kid spending money in games?', 'Is a VPN worth paying for?', 'How do I ask for a raise?', 'What is the best way to back up family photos?', 'How do I keep houseplants alive in winter?', 'Should I use a password manager?'] },
+      { genre: 'qa', register: 'technical', template: (t) => `Answer on a developer forum, under 200 words: "${t}"`, topics: ['Why does my Docker image take so long to build?', 'How do I stop my React app re-rendering so much?', 'Is SQLite fine for a small web app?', 'How should I version a public REST API?'] },
+      { genre: 'review', register: 'casual', template: (t) => `Write a review ${t}. About 120 words.`, topics: ['of a meal kit subscription', 'of a budgeting app', 'of a cheap pair of running shoes', 'of a dentist', 'of a phone repair shop'] },
+      { genre: 'blog', register: 'casual', template: (t) => `Write a blog post ${t}. About 250 words.`, topics: ['about switching from iPhone to Android', 'about a year of keeping chickens', 'about running a side business selling prints', 'about your first marathon'] },
+      { genre: 'marketing', register: 'marketing', template: (t) => `Write ${t}.`, topics: ['a landing page for a scheduling app for barbers', 'a product description for a reusable water bottle', 'an email announcing a yoga studio\'s new timetable', 'app store copy for a habit tracker'] },
+      { genre: 'news', register: 'professional', template: (t) => `Write a 250-word local news report ${t}.`, topics: ['about a council trialling AI chatbots for bin collection queries', 'about a flood closing a high street', 'about a local tech firm hiring 50 people'] },
+      { genre: 'essay', register: 'professional', template: (t) => `Write a 350-word essay for a class on whether ${t}.`, topics: ['phones should be banned in schools', 'robots will take more jobs than they create', 'everyone should learn a second language'] },
+      { genre: 'fiction', register: 'professional', template: (t) => `Write the opening 300 words of a short story ${t}.`, topics: ['about a delivery driver who finds a lost dog', 'about a programmer whose code starts writing back', 'set at a wedding where the power goes out'] },
+    ],
+  },
   2: {
     adv: [
       'Write it so nobody could tell it came from an AI. Be specific and a little messy.',

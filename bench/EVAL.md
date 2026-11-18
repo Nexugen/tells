@@ -1,21 +1,95 @@
 # Accuracy
 
-Two benchmarks live in `bench/`. The v2 benchmark below is the current one. The v1 numbers (tells 0.2, 182 human samples) are kept at the end for comparison.
+Two benchmarks live in `bench/`. The v2 benchmark is the current one. Round 3 (tells 0.3.2) is at the top; rounds 1 and 2 (tells 0.3.0) and the v1 numbers (tells 0.2) are kept below for comparison.
 
 ## What is measured
 
-A human text is **wrongly flagged** when tells reports a warning or an error on it, in the register it was written in. Hints (info) never count. A model text is **flagged** when it gets a warning or an error, or a human-pattern score under the line (about 30). The score needs 60 words, so shorter texts are judged by the rules alone. AUC is for the human-pattern score, computed over texts of 60 words or more. Calibration error is the expected calibration error of the score read as a probability, over ten bins.
+A human text is **wrongly flagged** when tells reports a warning or an error on it, in the register it was written in. Hints (info) never count. A model text is **flagged** when it gets a warning or an error, or a human-pattern score under the line (18 in 0.3.2, 30 in 0.3.0). The score needs 60 words, so shorter texts are judged by the rules alone. AUC is for the human-pattern score, computed over texts of 60 words or more. Calibration error is the expected calibration error of the score read as a probability, over ten bins.
+
+A text counts as **about AI, apps or tech** when it uses three or more words such as AI, model, app, startup, pricing, software, users, customers or business (`isTech` in `bench/v2.ts`). **Lowercase** means at least half its sentences start with a small letter.
 
 ## Data and splits
 
-About 10,600 human samples written before 2022 and about 2,500 model answers (Haiku, Sonnet and Opus through Claude Code's print mode). See `DATA-LICENSES.md` for sources and licences and `bench/v2.ts stats` for the counts by source, register and genre.
+12,793 human samples written before 2022 (before 30 Nov 2022 for the newest sources) and 2,576 model answers in the pool, plus two held-out rounds (881 and 823 human texts) and an 838-text probe. Model answers are from Haiku, Sonnet and Opus through Claude Code's print mode. See `DATA-LICENSES.md` for sources and licences and `bench/v2.ts stats` for the counts by source, register and genre.
 
-- **Pool:** 9,723 human and 2,140 model samples, split by group (a mailbox, a Stack Exchange site, a book, a subreddit, an essay prompt, or one prompt topic with its plain and adversarial versions), 60% train, 20% tune, 20% test. No group appears in two splits.
-- **Train** builds the score and is where rules were checked for false positives. **Tune** sets the calibration and the low line and was used to choose between changes. **Test** is locked and was scored once, at the end.
-- **Held-out rounds** were fetched from sources and prompts not in the pool. Each was scored exactly once with a model frozen beforehand (`bench/rounds/`). After round 1 was scored and analysed it joined the pool, so round 2 was the only untouched set left for the final check.
-- About a third of the prompts are adversarial: the model is told to sound like a person, avoid dashes and lists, write as a tired or non-native writer, or fool a detector.
+- **Pool:** split by group (a mailbox, a Stack Exchange site, a book, a subreddit, an IRC channel on one day, a GitHub repository, an HN thread, or one prompt topic with its plain and adversarial versions), 60% train, 20% tune, 20% test. No group appears in two splits. Train has 7,473 human and 1,528 model samples, tune 2,768 and 552, test 2,552 and 496.
+- **Train** builds the score and is where rules were checked for false positives. **Tune** sets the calibration and the low line and was used to choose between changes. **Test** is locked and is scored once per release, at the end.
+- **Held-out rounds** are fetched from sources and prompts not in the pool, after tuning stops, and scored exactly once with a model frozen beforehand (`bench/rounds/`, with the model and a hash of the code).
+- **The probe** (`bench/v2.ts probe`) is present-day-topic human writing that is never trained on: HN comments from 2020 and 2021 found by searching for GPT-3, Copilot, AI, apps and startups; GitHub issue comments on AI and app projects from 2020 to Oct 2022; Reddit posts from tech and business subreddits and lowercase posts; and chat from Ubuntu's IRC channels. It is human only, so it measures how often real writing about these subjects is called machine-like.
+- About a third of the prompts are adversarial: the model is told to sound like a person, avoid dashes and lists, type in lowercase like a chat app, write as a tired or non-native writer, or fool a detector.
 
-## Results on data tells never saw
+## Round 3: present-day human writing (tells 0.3.2)
+
+### What was wrong
+
+Real writing typed today could score very low. A casual chat message, lowercase with typos, asking a colleague about pricing, AI and customers, scored 14 under 0.3.0. Four causes were suspected: the topic (AI and apps), the era (words like "AI" and "npm"), the register guess, and features that reward tidy punctuation. The evidence:
+
+- **Not the topic.** Swapping every tech and business word in that message for gardening words made it score lower (7), not higher. Leave-topic-out (`bench/v2.ts topicout`): with every text about AI, apps or tech removed from training, unseen tech human texts fell under the line 1.7% of the time against 0.9% for other human texts, and unseen tech model text was still caught 94% of the time (other topics 89%). The score was not using the subject to find models. Within the 0.3.0 pool, tech human texts scored under the line as often as the rest (1.2% against 2.0% on test).
+- **Not the era, mostly.** On the probe the 0.3.0 score put 4.1% of 2020 and 2021 HN comments about GPT-3, AI and apps under the line and 1.3% of GitHub comments, against about 1% to 2% for the pool. A little higher, and the HN misses were mostly job posts.
+- **The register was a side issue.** With no register given, the CLI and API judged every text as `professional`, so that message was reported as professional. But the score was 14 under every register, so this changed the label, not the score.
+- **The main cause: no long human chat.** The only human chat in the pool was SMS, under 60 words, so the score never saw it. Of 60+ word training texts, chat came almost only from models. Lowercase, chatty human writing of 60 words or more was rare (140 training texts). Single-feature ablations on the message pointed the same way: lexical variety over 50-word windows (0.87 against a human median of 0.82) moved it 57 points, one use of "every" moved it 44, and the `named-thing` signal (which needs capital letters) 30 (each measure set to the median of human casual training texts in turn, 0.3.0 model). The score had learned that a long, lowercase, comma-heavy chat message is what models write, because that is all it had seen.
+- **Short and casual was the soft spot.** Human texts of 120 to 159 words fell under the line about ten times as often as long ones (2.7% against 0.2% on tune and test), and short model text was thin in training.
+
+### What changed
+
+- **More human data, chosen to match the hole:** 1,763 chat runs from Ubuntu's public IRC channels, 2010 to 2021 (one person's consecutive lines, at most three minutes apart, 60 words or more); 450 HN comments from 2014 to May 2020 about machine learning, AI, apps, startups and pricing; 292 GitHub issue comments from AI and app projects, 2018 to Oct 2022; 207 Stack Exchange answers from ai, datascience, android, apple, softwarerecs, freelancing and pm; 343 Reddit posts from tech and business subreddits or typed in lowercase; and 15 lowercase HN comments. Everything predates ChatGPT.
+- **Topic-matched model answers:** 436 answers (`bench/prompts-topic.json`, `bench/out-topic/`) in the same genres and subjects: chat with a co-founder or colleague about apps, AI and pricing, HN-style comments, GitHub issue comments, Reddit posts, customer emails, and long everyday chat. About 40% are adversarial, one of them asks for lowercase chat typing with typos. Five prompts that paraphrased a probe text were removed with their answers before training.
+- **The score model:** 2,000 trees of depth 3 at rate 0.03, against 400 at 0.06. On tune this raised the share of plain model output caught at the 1% line from 91% to 95%. Chunking long texts into short training pieces was tried and dropped: the message above went from 14 to 5. Chat slang and greeting features were tried and dropped too: no gain.
+- **The low line** is still the score under which 1% of human tune texts fall. With harder human writing in tune it is now 18, not 30.
+- **The register:** with no register given, tells now guesses it from the text, as `--register auto` did. The guess counts a lowercase "i", contractions without apostrophes and sentences that start lowercase as casual. On lowercase human texts labelled casual, the guess is right 99% of the time, against 86%; over all train and tune texts, 58.3% against 57.9%.
+
+### Results
+
+Round 3 was fetched after the model was frozen and scored once: Stack Exchange answers from twelve sites never used before (cooking, travel, parenting, pets, gardening, diy, money, workplace, stats, cs, gamedev, security), HN comments from Jan to Oct 2022 about GPT-3, AI art, apps, startups, pricing, remote work and customers, GitHub issue comments from six repositories never used, IRC chat from days never used, and 279 answers from all three models to 93 new prompts (`bench/fresh-3/prompts.json`), a third of them adversarial.
+
+| Set | Human texts | With a warning or error | With an error | Low human-pattern score | Model texts | Plain model output flagged (60+ words) | All plain model output flagged | Adversarial flagged | AUC | AUC, adversarial | Calibration error |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| r3-fresh-3 | 823 | 0.0% | 0.0% | 0.5% | 279 | 97.8% | 97.8% | 95.0% | 0.999 | 0.998 | 0.013 |
+| r3-test | 2552 | 0.2% | 0.0% | 1.1% | 496 | 97.0% | 86.2% | 88.9% | 0.998 | 0.998 | 0.008 |
+| r3-tune | 2768 | 0.1% | 0.0% | 0.9% | 552 | 94.6% | 88.2% | 84.2% | 0.997 | 0.997 | 0.008 |
+| r3-fresh-3, 0.3.0 model | 823 | 0.2% | 0.0% | 2.2% | 279 | 93.9% | 93.9% | 85.9% | 0.992 | 0.986 | 0.016 |
+
+The target was: no human text with an error, at most 1% with a warning, at least 95% of plain model output of 60+ words flagged, an AUC of at least 0.97, and human texts about AI, apps or tech called machine-like no more often than other human texts. Round 3 met all five. The last row scores the same round with the 0.3.0 model, for comparison only; it was run after the round-3 numbers were saved and changed nothing. The locked test split had 4 human texts of 2,552 with a finding (0.16%), one of them an error; every fresh-3 model answer was 60 words or more, which is why both plain columns match there. The Stack Exchange part was first saved with 120 answers repeated as comments (a cache-key bug in `fetch_modern.py`, now fixed); the repeats were removed and the report was rerun with the same frozen model, so each text was still scored by one model only once it was fixed. The numbers above are without the repeats.
+
+Human texts about AI, apps or tech against the rest:
+
+| Set | Human texts about AI, apps or tech | Under the line | Other human texts | Under the line | Gap | Lowercase human texts | Under the line |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| r3-fresh-3 | 126 | 0.0% | 694 | 0.6% | -0.6 points | 89 | 0.0% |
+| r3-test | 318 | 0.6% | 2087 | 1.2% | -0.6 points | 176 | 1.7% |
+| r3-tune | 275 | 1.1% | 2376 | 0.9% | 0.2 points | 200 | 2.0% |
+| r3-fresh-3, 0.3.0 model | 126 | 0.8% | 694 | 2.5% | -1.7 points | 89 | 1.1% |
+
+A negative gap means tech texts were called machine-like less often than the rest.
+
+### The probe, before and after
+
+The same 831 probe texts of 60+ words, scored by the 0.3.0 model (line 30) and the 0.3.2 model (line 18):
+
+| Probe set | Texts | Under the line, before (30) | After (18) | Under 50, before | After | 10th percentile, before | After | Mean, before | After |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| all | 831 | 3.0% | 1.6% | 4.7% | 4.7% | 77 | 89 | 92.9 | 94.4 |
+| about AI, apps or tech | 171 | 3.5% | 1.2% | 5.8% | 7.0% | 76 | 85 | 92.2 | 93.7 |
+| lowercase | 184 | 3.8% | 1.6% | 6.0% | 5.4% | 76 | 77 | 91.4 | 93.4 |
+| GitHub issues, AI and app projects | 160 | 1.3% | 0.6% | 1.9% | 1.3% | 83 | 92 | 94.2 | 96.9 |
+| HN, GPT-3, AI and apps, 2020 to 2021 | 196 | 4.1% | 3.6% | 5.1% | 6.6% | 73 | 83 | 92.2 | 92.6 |
+| HN, lowercase | 13 | 7.7% | 0.0% | 15.4% | 0.0% | 35 | 90 | 87 | 97 |
+| Ubuntu IRC chat | 237 | 2.1% | 1.3% | 3.0% | 2.5% | 88 | 96 | 95.2 | 96.8 |
+| Reddit, tech and lowercase | 225 | 4.0% | 0.9% | 7.6% | 8.0% | 67 | 68 | 90.5 | 91.6 |
+
+Half as many probe texts fall under the line, and the 10th percentile rose from 77 to 89. The share under 50 did not move (4.7%): the line came down and the middle of the range barely changed, so a few percent of real writing still sits in the uncertain band. The chat message that started this round now scores 28, over the line but still low. Its wording, lowercase and typos are what Claude writes when asked to type casually, and a style measure can only go so far there. HN comments from 2020 and 2021 remain the hardest set (3.6% under the line), mostly job posts and pitches.
+
+### Remaining weaknesses
+
+- Round 3's human texts are casual and technical only: there were no professional or marketing human texts in it. The locked test split covers those registers (0.0% of professional and marketing human texts with a finding).
+- Every model is a Claude model.
+- Under 60 words only the rules apply.
+- Scores on short casual text are not precise: the chat message above scored anywhere from 11 to 40 across the model settings tried on tune. Read a score under 50 on short chat as "can't tell", not as "machine".
+- Rounds 2 and 3 have not joined the pool; the next retrain should add them and fetch a new round.
+
+## tells 0.3.0: rounds 1 and 2
+
+The numbers in this section are for the 0.3.0 score model (line about 30), as published then.
 
 | Set | Human texts | With a warning or error | With an error | Low human-pattern score | Model texts | Plain model output flagged (60+ words) | All plain model output flagged | Adversarial flagged | AUC | AUC, adversarial | Calibration error |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -136,7 +210,7 @@ Leave-one-source-out on train and tune, measured before round 1 joined the pool:
 
 For model output the hard case is a kind of writing the score has never seen from a model: left out one genre at a time, model emails were caught 60% of the time, essays 43%, fiction 44%, comments 38% and chat 31%, against 92% to 100% for answers, forum posts, blogs and marketing. This is why the prompt bank covers 25 genres.
 
-## Remaining weaknesses
+## Remaining weaknesses in 0.3.0
 
 - Every model in the benchmark is a Claude model. GPT, Gemini and open models could not be run for this round. Expect other families to be caught less often until they are added.
 - Under 60 words only the rules apply, and short casual text from a model reads much like a person's.

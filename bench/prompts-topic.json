@@ -1,0 +1,1967 @@
+{
+ "version": 1,
+ "prompts": [
+  {
+   "id": "topic:chat:saying-the-new-onboarding-email-is-converting-be#plain",
+   "family": "topic:chat:saying-the-new-onboarding-email-is-converting-be",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder saying the new onboarding email is converting better. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:saying-the-new-onboarding-email-is-converting-be#adv2",
+   "family": "topic:chat:saying-the-new-onboarding-email-is-converting-be",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder saying the new onboarding email is converting better. Three to seven sentences. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:about-a-competitor-that-just-raised-a-big-round#plain",
+   "family": "topic:chat:about-a-competitor-that-just-raised-a-big-round",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about a competitor that just raised a big round. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di#plain",
+   "family": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder asking whether to offer an annual plan with a discount. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di#adv3",
+   "family": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder asking whether to offer an annual plan with a discount. Three to seven sentences. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:asking-whether-to-pause-the-free-tier#plain",
+   "family": "topic:chat:asking-whether-to-pause-the-free-tier",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder asking whether to pause the free tier. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-which-ai-model-to-switch-the-app-to#plain",
+   "family": "topic:chat:about-which-ai-model-to-switch-the-app-to",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about which AI model to switch the app to. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-which-ai-model-to-switch-the-app-to#adv2",
+   "family": "topic:chat:about-which-ai-model-to-switch-the-app-to",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder about which AI model to switch the app to. Three to seven sentences. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:about-the-server-bill-doubling-this-month#plain",
+   "family": "topic:chat:about-the-server-bill-doubling-this-month",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about the server bill doubling this month. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-a-bug-that-only-happens-on-android#plain",
+   "family": "topic:chat:about-a-bug-that-only-happens-on-android",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about a bug that only happens on Android. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-a-bug-that-only-happens-on-android#adv2",
+   "family": "topic:chat:about-a-bug-that-only-happens-on-android",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder about a bug that only happens on Android. Three to seven sentences. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil#plain",
+   "family": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about whether to hire a contractor for the mobile app. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil#adv1",
+   "family": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder about whether to hire a contractor for the mobile app. Three to seven sentences. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:about-a-user-who-churned-after-a-week#plain",
+   "family": "topic:chat:about-a-user-who-churned-after-a-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your co-founder about a user who churned after a week. Three to seven sentences."
+  },
+  {
+   "id": "topic:chat:about-a-user-who-churned-after-a-week#adv0",
+   "family": "topic:chat:about-a-user-who-churned-after-a-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to your co-founder about a user who churned after a week. Three to seven sentences. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:asking-them-to-review-your-pull-request-before-l#plain",
+   "family": "topic:chat:asking-them-to-review-your-pull-request-before-l",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker asking them to review your pull request before lunch. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:saying-the-staging-deploy-is-broken-again#plain",
+   "family": "topic:chat:saying-the-staging-deploy-is-broken-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker saying the staging deploy is broken again. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:saying-the-staging-deploy-is-broken-again#adv2",
+   "family": "topic:chat:saying-the-staging-deploy-is-broken-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a Slack message to a coworker saying the staging deploy is broken again. Two to six sentences. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh#plain",
+   "family": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker asking if the ML model retrain finished overnight. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh#adv0",
+   "family": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Slack message to a coworker asking if the ML model retrain finished overnight. Two to six sentences. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:saying-the-app-store-rejected-the-build#plain",
+   "family": "topic:chat:saying-the-app-store-rejected-the-build",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker saying the app store rejected the build. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:about-the-analytics-dashboard-showing-zero-signu#plain",
+   "family": "topic:chat:about-the-analytics-dashboard-showing-zero-signu",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker about the analytics dashboard showing zero signups. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:about-the-analytics-dashboard-showing-zero-signu#adv1",
+   "family": "topic:chat:about-the-analytics-dashboard-showing-zero-signu",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Slack message to a coworker about the analytics dashboard showing zero signups. Two to six sentences. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:asking-who-owns-the-billing-webhook#plain",
+   "family": "topic:chat:asking-who-owns-the-billing-webhook",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker asking who owns the billing webhook. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee#plain",
+   "family": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker saying the GPU instance was left running all weekend. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee#adv0",
+   "family": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Slack message to a coworker saying the GPU instance was left running all weekend. Two to six sentences. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo#plain",
+   "family": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Slack message to a coworker asking whether the chatbot should say it is a bot. Two to six sentences."
+  },
+  {
+   "id": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo#adv3",
+   "family": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a Slack message to a coworker asking whether the chatbot should say it is a bot. Two to six sentences. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-gpt-3-writing-code#plain",
+   "family": "topic:comment:on-a-thread-about-gpt-3-writing-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a thread about GPT-3 writing code. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-gpt-3-writing-code#adv0",
+   "family": "topic:comment:on-a-thread-about-gpt-3-writing-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment on a thread about GPT-3 writing code. One to three paragraphs. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:comment:on-a-launch-post-for-a-no-code-app-builder#plain",
+   "family": "topic:comment:on-a-launch-post-for-a-no-code-app-builder",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a launch post for a no-code app builder. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-launch-post-for-a-no-code-app-builder#adv1",
+   "family": "topic:comment:on-a-launch-post-for-a-no-code-app-builder",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment on a launch post for a no-code app builder. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-why-most-startups-underprice-their-product#plain",
+   "family": "topic:comment:about-why-most-startups-underprice-their-product",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about why most startups underprice their product. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-why-most-startups-underprice-their-product#adv1",
+   "family": "topic:comment:about-why-most-startups-underprice-their-product",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about why most startups underprice their product. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-whether-ai-will-replace-junior-developers#plain",
+   "family": "topic:comment:about-whether-ai-will-replace-junior-developers",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about whether AI will replace junior developers. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-the-app-store-taking-a-30-cut#plain",
+   "family": "topic:comment:on-a-thread-about-the-app-store-taking-a-30-cut",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a thread about the App Store taking a 30% cut. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-self-driving-cars-being-further-off-than-p#plain",
+   "family": "topic:comment:about-self-driving-cars-being-further-off-than-p",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about self-driving cars being further off than promised. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-self-driving-cars-being-further-off-than-p#adv1",
+   "family": "topic:comment:about-self-driving-cars-being-further-off-than-p",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about self-driving cars being further off than promised. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-running-a-profitable-side-project#plain",
+   "family": "topic:comment:about-running-a-profitable-side-project",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about running a profitable side project. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud#plain",
+   "family": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a post about a company moving off the cloud. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud#adv1",
+   "family": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment on a post about a company moving off the cloud. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-recommendation-algorithms-on-social-media#plain",
+   "family": "topic:comment:about-recommendation-algorithms-on-social-media",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about recommendation algorithms on social media. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-remote-work-after-the-pandemic#plain",
+   "family": "topic:comment:on-a-thread-about-remote-work-after-the-pandemic",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a thread about remote work after the pandemic. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-copilot-suggesting-licensed-code#plain",
+   "family": "topic:comment:about-copilot-suggesting-licensed-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about Copilot suggesting licensed code. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-copilot-suggesting-licensed-code#adv1",
+   "family": "topic:comment:about-copilot-suggesting-licensed-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about Copilot suggesting licensed code. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-building-a-saas-as-a-solo-founder#plain",
+   "family": "topic:comment:about-building-a-saas-as-a-solo-founder",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about building a SaaS as a solo founder. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-building-a-saas-as-a-solo-founder#adv1",
+   "family": "topic:comment:about-building-a-saas-as-a-solo-founder",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about building a SaaS as a solo founder. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-deep-learning-hype-in-medical-imaging#plain",
+   "family": "topic:comment:about-deep-learning-hype-in-medical-imaging",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about deep learning hype in medical imaging. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-deep-learning-hype-in-medical-imaging#adv1",
+   "family": "topic:comment:about-deep-learning-hype-in-medical-imaging",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about deep learning hype in medical imaging. One to three paragraphs. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-why-enterprise-software-is-so-bad#plain",
+   "family": "topic:comment:about-why-enterprise-software-is-so-bad",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about why enterprise software is so bad. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:about-why-enterprise-software-is-so-bad#adv3",
+   "family": "topic:comment:about-why-enterprise-software-is-so-bad",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment about why enterprise software is so bad. One to three paragraphs. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:comment:about-subscription-fatigue-for-mobile-apps#plain",
+   "family": "topic:comment:about-subscription-fatigue-for-mobile-apps",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment about subscription fatigue for mobile apps. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company#plain",
+   "family": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Hacker News comment on a thread about a data breach at a big company. One to three paragraphs."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company#adv3",
+   "family": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a Hacker News comment on a thread about a data breach at a big company. One to three paragraphs. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c#plain",
+   "family": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/startups asking how to find the first ten customers. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c#adv1",
+   "family": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/startups asking how to find the first ten customers. About 150 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an#plain",
+   "family": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/Entrepreneur about quitting a job to run an app full time. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an#adv1",
+   "family": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/Entrepreneur about quitting a job to run an app full time. About 150 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:forum:in-r-smallbusiness-asking-whether-to-build-an-ap#plain",
+   "family": "topic:forum:in-r-smallbusiness-asking-whether-to-build-an-ap",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/smallbusiness asking whether to build an app or a website. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-#plain",
+   "family": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/MachineLearning asking how to get into the field without a PhD. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-#adv0",
+   "family": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/MachineLearning asking how to get into the field without a PhD. About 150 words. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:forum:in-r-android-complaining-about-battery-life-afte#plain",
+   "family": "topic:forum:in-r-android-complaining-about-battery-life-afte",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/Android complaining about battery life after an update. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-android-complaining-about-battery-life-afte#adv1",
+   "family": "topic:forum:in-r-android-complaining-about-battery-life-afte",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/Android complaining about battery life after an update. About 150 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:forum:in-r-cscareerquestions-about-a-bad-technical-int#plain",
+   "family": "topic:forum:in-r-cscareerquestions-about-a-bad-technical-int",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/cscareerquestions about a bad technical interview. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-personalfinance-about-whether-to-invest-in-#plain",
+   "family": "topic:forum:in-r-personalfinance-about-whether-to-invest-in-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/personalfinance about whether to invest in AI stocks. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay#plain",
+   "family": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/webdev about a client who will not pay. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay#adv1",
+   "family": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/webdev about a client who will not pay. About 150 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a#plain",
+   "family": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/iphone about an app that keeps asking for a review. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a#adv1",
+   "family": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/iphone about an app that keeps asking for a review. About 150 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:forum:in-r-freelance-about-raising-your-rates#plain",
+   "family": "topic:forum:in-r-freelance-about-raising-your-rates",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/freelance about raising your rates. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-freelance-about-raising-your-rates#adv0",
+   "family": "topic:forum:in-r-freelance-about-raising-your-rates",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/freelance about raising your rates. About 150 words. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:forum:in-r-technology-about-a-smart-speaker-listening-#plain",
+   "family": "topic:forum:in-r-technology-about-a-smart-speaker-listening-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/technology about a smart speaker listening in. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us#plain",
+   "family": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Reddit post in r/SaaS asking how to price per seat or per usage. About 150 words."
+  },
+  {
+   "id": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us#adv3",
+   "family": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a Reddit post in r/SaaS asking how to price per seat or per usage. About 150 words. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol#plain",
+   "family": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment saying the fix in the latest release did not solve your crash on startup. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol#adv1",
+   "family": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment saying the fix in the latest release did not solve your crash on startup. One or two paragraphs, no code block. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a#plain",
+   "family": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment on a feature request for dark mode in a mobile app. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a#adv3",
+   "family": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment on a feature request for dark mode in a mobile app. One or two paragraphs, no code block. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:comment:reporting-that-the-model-gives-different-results#plain",
+   "family": "topic:comment:reporting-that-the-model-gives-different-results",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment reporting that the model gives different results on GPU and CPU. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:asking-when-the-next-release-with-the-tokenizer-#plain",
+   "family": "topic:comment:asking-when-the-next-release-with-the-tokenizer-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment asking when the next release with the tokenizer fix is coming out. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:explaining-a-workaround-for-a-build-that-fails-o#plain",
+   "family": "topic:comment:explaining-a-workaround-for-a-build-that-fails-o",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment explaining a workaround for a build that fails on M1 Macs. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:explaining-a-workaround-for-a-build-that-fails-o#adv1",
+   "family": "topic:comment:explaining-a-workaround-for-a-build-that-fails-o",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment explaining a workaround for a build that fails on M1 Macs. One or two paragraphs, no code block. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m#plain",
+   "family": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment saying the stable diffusion web UI runs out of memory at 768 pixels. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m#adv2",
+   "family": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment saying the stable diffusion web UI runs out of memory at 768 pixels. One or two paragraphs, no code block. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:comment:on-a-pull-request-that-changes-the-default-learn#plain",
+   "family": "topic:comment:on-a-pull-request-that-changes-the-default-learn",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment on a pull request that changes the default learning rate. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun#plain",
+   "family": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment asking maintainers whether a paid tier would fund the project. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun#adv1",
+   "family": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment asking maintainers whether a paid tier would fund the project. One or two paragraphs, no code block. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:comment:about-push-notifications-not-arriving-on-ios#plain",
+   "family": "topic:comment:about-push-notifications-not-arriving-on-ios",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment about push notifications not arriving on iOS. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate#plain",
+   "family": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue comment saying a docs example for fine-tuning is outdated. One or two paragraphs, no code block."
+  },
+  {
+   "id": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate#adv1",
+   "family": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue comment saying a docs example for fine-tuning is outdated. One or two paragraphs, no code block. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:email:to-a-customer-explaining-a-price-rise-on-your-so#plain",
+   "family": "topic:email:to-a-customer-explaining-a-price-rise-on-your-so",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a customer explaining a price rise on your software plan."
+  },
+  {
+   "id": "topic:email:to-a-customer-explaining-a-price-rise-on-your-so#adv3",
+   "family": "topic:email:to-a-customer-explaining-a-price-rise-on-your-so",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write an email to a customer explaining a price rise on your software plan. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-#plain",
+   "family": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a client handing over the code of an app you built for them."
+  },
+  {
+   "id": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-#adv3",
+   "family": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write an email to a client handing over the code of an app you built for them. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:email:to-a-beta-user-asking-for-feedback-on-the-ai-ass#plain",
+   "family": "topic:email:to-a-beta-user-asking-for-feedback-on-the-ai-ass",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a beta user asking for feedback on the AI assistant."
+  },
+  {
+   "id": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem#plain",
+   "family": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a prospect in the US following up after a demo."
+  },
+  {
+   "id": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem#adv2",
+   "family": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write an email to a prospect in the US following up after a demo. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:email:to-a-customer-whose-subscription-payment-failed#plain",
+   "family": "topic:email:to-a-customer-whose-subscription-payment-failed",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to a customer whose subscription payment failed."
+  },
+  {
+   "id": "topic:email:to-a-customer-whose-subscription-payment-failed#adv0",
+   "family": "topic:email:to-a-customer-whose-subscription-payment-failed",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write an email to a customer whose subscription payment failed. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:email:to-an-investor-with-a-short-monthly-update-on-th#plain",
+   "family": "topic:email:to-an-investor-with-a-short-monthly-update-on-th",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email to an investor with a short monthly update on the app."
+  },
+  {
+   "id": "topic:email:to-an-investor-with-a-short-monthly-update-on-th#adv0",
+   "family": "topic:email:to-an-investor-with-a-short-monthly-update-on-th",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write an email to an investor with a short monthly update on the app. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool#plain",
+   "family": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Is it worth paying for an AI writing tool?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool#adv0",
+   "family": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Is it worth paying for an AI writing tool?\" Write a reply of up to 170 words. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:qa:how-do-i-know-if-my-app-idea-is-any-good#plain",
+   "family": "topic:qa:how-do-i-know-if-my-app-idea-is-any-good",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I know if my app idea is any good?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:should-i-learn-machine-learning-or-web-developme#plain",
+   "family": "topic:qa:should-i-learn-machine-learning-or-web-developme",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Should I learn machine learning or web development first?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:should-i-learn-machine-learning-or-web-developme#adv1",
+   "family": "topic:qa:should-i-learn-machine-learning-or-web-developme",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Should I learn machine learning or web development first?\" Write a reply of up to 170 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:qa:how-do-apps-make-money-if-they-are-free#plain",
+   "family": "topic:qa:how-do-apps-make-money-if-they-are-free",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do apps make money if they are free?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:how-do-apps-make-money-if-they-are-free#adv3",
+   "family": "topic:qa:how-do-apps-make-money-if-they-are-free",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"How do apps make money if they are free?\" Write a reply of up to 170 words. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:qa:can-i-build-an-app-without-knowing-how-to-code#plain",
+   "family": "topic:qa:can-i-build-an-app-without-knowing-how-to-code",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Can I build an app without knowing how to code?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:can-i-build-an-app-without-knowing-how-to-code#adv1",
+   "family": "topic:qa:can-i-build-an-app-without-knowing-how-to-code",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Can I build an app without knowing how to code?\" Write a reply of up to 170 words. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:qa:how-do-i-price-my-first-freelance-web-project#plain",
+   "family": "topic:qa:how-do-i-price-my-first-freelance-web-project",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I price my first freelance web project?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo#plain",
+   "family": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Is it safe to put my business data into a chatbot?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo#adv3",
+   "family": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Is it safe to put my business data into a chatbot?\" Write a reply of up to 170 words. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:qa:why-do-so-many-startups-fail-in-the-first-year#plain",
+   "family": "topic:qa:why-do-so-many-startups-fail-in-the-first-year",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Why do so many startups fail in the first year?\" Write a reply of up to 170 words."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-weekend-trip-that-went-wrong#plain",
+   "family": "topic:chat:to-a-friend-about-a-weekend-trip-that-went-wrong",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend about a weekend trip that went wrong."
+  },
+  {
+   "id": "topic:chat:to-your-sister-about-planning-your-dad-s-60th-bi#plain",
+   "family": "topic:chat:to-your-sister-about-planning-your-dad-s-60th-bi",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your sister about planning your dad's 60th birthday."
+  },
+  {
+   "id": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities#plain",
+   "family": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend explaining why you are moving cities."
+  },
+  {
+   "id": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities#adv3",
+   "family": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend explaining why you are moving cities. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-your-partner-about-splitting-the-bills-differ#plain",
+   "family": "topic:chat:to-your-partner-about-splitting-the-bills-differ",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your partner about splitting the bills differently."
+  },
+  {
+   "id": "topic:chat:to-your-partner-about-splitting-the-bills-differ#adv1",
+   "family": "topic:chat:to-your-partner-about-splitting-the-bills-differ",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to your partner about splitting the bills differently. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-proposing-a-five-a-side-football#plain",
+   "family": "topic:chat:to-a-group-chat-proposing-a-five-a-side-football",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a group chat proposing a five-a-side football night."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-advice-on-buying-a-used-c#plain",
+   "family": "topic:chat:to-a-friend-asking-for-advice-on-buying-a-used-c",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend asking for advice on buying a used car."
+  },
+  {
+   "id": "topic:chat:to-your-flatmate-about-a-cleaning-rota#plain",
+   "family": "topic:chat:to-your-flatmate-about-a-cleaning-rota",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your flatmate about a cleaning rota."
+  },
+  {
+   "id": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl#plain",
+   "family": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend after a job interview that went badly."
+  },
+  {
+   "id": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl#adv0",
+   "family": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend after a job interview that went badly. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-your-mum-s-health-appointm#plain",
+   "family": "topic:chat:to-your-brother-about-your-mum-s-health-appointm",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your brother about your mum's health appointment."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-your-mum-s-health-appointm#adv0",
+   "family": "topic:chat:to-your-brother-about-your-mum-s-health-appointm",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to your brother about your mum's health appointment. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-tv-series-and-why#plain",
+   "family": "topic:chat:to-a-friend-recommending-a-tv-series-and-why",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend recommending a TV series and why."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-tv-series-and-why#adv1",
+   "family": "topic:chat:to-a-friend-recommending-a-tv-series-and-why",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend recommending a TV series and why. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea#plain",
+   "family": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to an old friend you have not spoken to in a year."
+  },
+  {
+   "id": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea#adv3",
+   "family": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to an old friend you have not spoken to in a year. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-a-neighbour-about-a-parcel-they-took-in-for-y#plain",
+   "family": "topic:chat:to-a-neighbour-about-a-parcel-they-took-in-for-y",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a neighbour about a parcel they took in for you."
+  },
+  {
+   "id": "topic:chat:to-a-neighbour-about-a-parcel-they-took-in-for-y#adv0",
+   "family": "topic:chat:to-a-neighbour-about-a-parcel-they-took-in-for-y",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a neighbour about a parcel they took in for you. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-your-new-puppy-keeping-you-awa#plain",
+   "family": "topic:chat:to-a-friend-about-your-new-puppy-keeping-you-awa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend about your new puppy keeping you awake."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising#plain",
+   "family": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend asking to borrow money and promising to pay it back."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising#adv3",
+   "family": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend asking to borrow money and promising to pay it back. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-your-cousin-about-a-family-argument-at-dinner#plain",
+   "family": "topic:chat:to-your-cousin-about-a-family-argument-at-dinner",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your cousin about a family argument at dinner."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-trying-to-get-fit-again#plain",
+   "family": "topic:chat:to-a-friend-about-trying-to-get-fit-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend about trying to get fit again."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-trying-to-get-fit-again#adv2",
+   "family": "topic:chat:to-a-friend-about-trying-to-get-fit-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to a friend about trying to get fit again. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-about-who-is-driving-to-the-wedd#plain",
+   "family": "topic:chat:to-a-group-chat-about-who-is-driving-to-the-wedd",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to a group chat about who is driving to the wedding."
+  },
+  {
+   "id": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie#plain",
+   "family": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long chat message (five to nine sentences) to your landlord about a broken window, in a friendly tone."
+  },
+  {
+   "id": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie#adv2",
+   "family": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a long chat message (five to nine sentences) to your landlord about a broken window, in a friendly tone. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:asking-an-irc-channel-for-help-because-your-lapt#plain",
+   "family": "topic:chat:asking-an-irc-channel-for-help-because-your-lapt",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking an IRC channel for help because your laptop will not boot after an update."
+  },
+  {
+   "id": "topic:chat:explaining-to-a-support-chat-that-your-router-po#plain",
+   "family": "topic:chat:explaining-to-a-support-chat-that-your-router-po",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper explaining to a support chat that your router port forwarding is not working."
+  },
+  {
+   "id": "topic:chat:explaining-to-a-support-chat-that-your-router-po#adv2",
+   "family": "topic:chat:explaining-to-a-support-chat-that-your-router-po",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper explaining to a support chat that your router port forwarding is not working. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:asking-a-friend-who-codes-whether-your-app-idea-#plain",
+   "family": "topic:chat:asking-a-friend-who-codes-whether-your-app-idea-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a friend who codes whether your app idea makes sense."
+  },
+  {
+   "id": "topic:chat:asking-a-friend-who-codes-whether-your-app-idea-#adv2",
+   "family": "topic:chat:asking-a-friend-who-codes-whether-your-app-idea-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a friend who codes whether your app idea makes sense. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w#plain",
+   "family": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a forum helper why your printer stopped working on Linux."
+  },
+  {
+   "id": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w#adv0",
+   "family": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a forum helper why your printer stopped working on Linux. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:asking-a-teammate-to-look-at-a-failing-test-befo#plain",
+   "family": "topic:chat:asking-a-teammate-to-look-at-a-failing-test-befo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a teammate to look at a failing test before the release."
+  },
+  {
+   "id": "topic:chat:asking-a-teammate-to-look-at-a-failing-test-befo#adv2",
+   "family": "topic:chat:asking-a-teammate-to-look-at-a-failing-test-befo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a teammate to look at a failing test before the release. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app#plain",
+   "family": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a freelancer to quote for a mobile app."
+  },
+  {
+   "id": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app#adv1",
+   "family": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a long message (five to nine sentences) to a colleague or helper asking a freelancer to quote for a mobile app. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig#plain",
+   "family": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a concert you went to last night. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig#adv2",
+   "family": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a concert you went to last night. Four to eight sentences, as one message. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-your-mum-about-what-to-bring-for-sunday-lunch#plain",
+   "family": "topic:chat:to-your-mum-about-what-to-bring-for-sunday-lunch",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your mum about what to bring for Sunday lunch. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-whose-dog-just-died#plain",
+   "family": "topic:chat:to-a-friend-whose-dog-just-died",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend whose dog just died. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-whose-dog-just-died#adv0",
+   "family": "topic:chat:to-a-friend-whose-dog-just-died",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend whose dog just died. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-organising-a-camping-trip#plain",
+   "family": "topic:chat:to-a-group-chat-organising-a-camping-trip",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a group chat organising a camping trip. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-organising-a-camping-trip#adv3",
+   "family": "topic:chat:to-a-group-chat-organising-a-camping-trip",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a chat message to a group chat organising a camping trip. Four to eight sentences, as one message. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-book-club-pick-you-hated#plain",
+   "family": "topic:chat:to-a-friend-about-a-book-club-pick-you-hated",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a book club pick you hated. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-#plain",
+   "family": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your brother about fixing the leaking tap at your parents. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-#adv2",
+   "family": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to your brother about fixing the leaking tap at your parents. Four to eight sentences, as one message. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-how-their-new-job-is-going#plain",
+   "family": "topic:chat:to-a-friend-asking-how-their-new-job-is-going",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend asking how their new job is going. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-how-their-new-job-is-going#adv0",
+   "family": "topic:chat:to-a-friend-asking-how-their-new-job-is-going",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend asking how their new job is going. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-your-partner-about-a-holiday-you-want-to-book#plain",
+   "family": "topic:chat:to-your-partner-about-a-holiday-you-want-to-book",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your partner about a holiday you want to book. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-trying-a-new-recipe-that-flopp#plain",
+   "family": "topic:chat:to-a-friend-about-trying-a-new-recipe-that-flopp",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about trying a new recipe that flopped. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-the-office-fridge-situation#plain",
+   "family": "topic:chat:to-a-coworker-about-the-office-fridge-situation",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a coworker about the office fridge situation. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-the-office-fridge-situation#adv0",
+   "family": "topic:chat:to-a-coworker-about-the-office-fridge-situation",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a coworker about the office fridge situation. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-learning-guitar#plain",
+   "family": "topic:chat:to-a-friend-about-learning-guitar",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about learning guitar. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-learning-guitar#adv0",
+   "family": "topic:chat:to-a-friend-about-learning-guitar",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about learning guitar. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-bad-haircut#plain",
+   "family": "topic:chat:to-a-friend-about-a-bad-haircut",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a bad haircut. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-housemate-about-having-friends-over-on-s#plain",
+   "family": "topic:chat:to-your-housemate-about-having-friends-over-on-s",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your housemate about having friends over on Saturday. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-housemate-about-having-friends-over-on-s#adv0",
+   "family": "topic:chat:to-your-housemate-about-having-friends-over-on-s",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to your housemate about having friends over on Saturday. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-football-match-result#plain",
+   "family": "topic:chat:to-a-friend-about-a-football-match-result",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a football match result. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-football-match-result#adv1",
+   "family": "topic:chat:to-a-friend-about-a-football-match-result",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a football match result. Four to eight sentences, as one message. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-getting-a-tattoo#plain",
+   "family": "topic:chat:to-a-friend-about-getting-a-tattoo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about getting a tattoo. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present#plain",
+   "family": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your aunt thanking her for a birthday present. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present#adv3",
+   "family": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a chat message to your aunt thanking her for a birthday present. Four to eight sentences, as one message. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-help-moving-house#plain",
+   "family": "topic:chat:to-a-friend-asking-for-help-moving-house",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend asking for help moving house. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-help-moving-house#adv3",
+   "family": "topic:chat:to-a-friend-asking-for-help-moving-house",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend asking for help moving house. Four to eight sentences, as one message. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-series-finale#plain",
+   "family": "topic:chat:to-a-friend-about-a-series-finale",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a series finale. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-series-finale#adv2",
+   "family": "topic:chat:to-a-friend-about-a-series-finale",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a series finale. Four to eight sentences, as one message. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-your-sister-about-babysitting-next-week#plain",
+   "family": "topic:chat:to-your-sister-about-babysitting-next-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your sister about babysitting next week. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-planting-a-vegetable-garden#plain",
+   "family": "topic:chat:to-a-friend-about-planting-a-vegetable-garden",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about planting a vegetable garden. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-planting-a-vegetable-garden#adv0",
+   "family": "topic:chat:to-a-friend-about-planting-a-vegetable-garden",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about planting a vegetable garden. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-long-delayed-train#plain",
+   "family": "topic:chat:to-a-friend-about-a-long-delayed-train",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a long delayed train. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-neighbour-about-their-noisy-party-nicely#plain",
+   "family": "topic:chat:to-your-neighbour-about-their-noisy-party-nicely",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your neighbour about their noisy party, nicely. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-starting-therapy#plain",
+   "family": "topic:chat:to-a-friend-about-starting-therapy",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about starting therapy. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g#plain",
+   "family": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a wedding speech you have to give. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g#adv0",
+   "family": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a wedding speech you have to give. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly#plain",
+   "family": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a gaming friend about a raid that went badly. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly#adv0",
+   "family": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a gaming friend about a raid that went badly. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b#plain",
+   "family": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend asking if their phone has the same bug after an update. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b#adv2",
+   "family": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend asking if their phone has the same bug after an update. Four to eight sentences, as one message. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-building-your-first-pc#plain",
+   "family": "topic:chat:to-a-friend-about-building-your-first-pc",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about building your first PC. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin#plain",
+   "family": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a smart watch you regret buying. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin#adv0",
+   "family": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a smart watch you regret buying. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-a-meeting-that-ran-over#plain",
+   "family": "topic:chat:to-a-coworker-about-a-meeting-that-ran-over",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a coworker about a meeting that ran over. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-job-offer-in-another-country#plain",
+   "family": "topic:chat:to-a-friend-about-a-job-offer-in-another-country",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a job offer in another country. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-hiking-route#plain",
+   "family": "topic:chat:to-a-friend-about-a-hiking-route",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a hiking route. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-hiking-route#adv3",
+   "family": "topic:chat:to-a-friend-about-a-hiking-route",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a hiking route. Four to eight sentences, as one message. Make it read like a first draft that nobody edited."
+  },
+  {
+   "id": "topic:chat:to-your-dad-about-setting-up-his-new-tablet#plain",
+   "family": "topic:chat:to-your-dad-about-setting-up-his-new-tablet",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your dad about setting up his new tablet. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-dad-about-setting-up-his-new-tablet#adv1",
+   "family": "topic:chat:to-your-dad-about-setting-up-his-new-tablet",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to your dad about setting up his new tablet. Four to eight sentences, as one message. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-terrible-flatshare-viewing#plain",
+   "family": "topic:chat:to-a-friend-about-a-terrible-flatshare-viewing",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a terrible flatshare viewing. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party#plain",
+   "family": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a group chat about a friend's surprise party. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party#adv1",
+   "family": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to a group chat about a friend's surprise party. Four to eight sentences, as one message. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-quitting-sugar#plain",
+   "family": "topic:chat:to-a-friend-about-quitting-sugar",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about quitting sugar. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-classmate-about-a-group-project-nobody-is-d#plain",
+   "family": "topic:chat:to-a-classmate-about-a-group-project-nobody-is-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a classmate about a group project nobody is doing. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-classmate-about-a-group-project-nobody-is-d#adv0",
+   "family": "topic:chat:to-a-classmate-about-a-group-project-nobody-is-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to a classmate about a group project nobody is doing. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding#plain",
+   "family": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about a stray cat you keep feeding. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding#adv1",
+   "family": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about a stray cat you keep feeding. Four to eight sentences, as one message. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-cheap-restaurant#plain",
+   "family": "topic:chat:to-a-friend-recommending-a-cheap-restaurant",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend recommending a cheap restaurant. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-cheap-restaurant#adv2",
+   "family": "topic:chat:to-a-friend-recommending-a-cheap-restaurant",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend recommending a cheap restaurant. Four to eight sentences, as one message. No em dashes, no lists, no headings, no bold, no sign-off."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-losing-your-keys-again#plain",
+   "family": "topic:chat:to-a-friend-about-losing-your-keys-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to a friend about losing your keys again. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-losing-your-keys-again#adv1",
+   "family": "topic:chat:to-a-friend-about-losing-your-keys-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a chat message to a friend about losing your keys again. Four to eight sentences, as one message. Write it the way a real person would, not like an AI."
+  },
+  {
+   "id": "topic:chat:to-your-grandma-about-your-exam-results#plain",
+   "family": "topic:chat:to-your-grandma-about-your-exam-results",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a chat message to your grandma about your exam results. Four to eight sentences, as one message."
+  },
+  {
+   "id": "topic:chat:to-your-grandma-about-your-exam-results#adv0",
+   "family": "topic:chat:to-your-grandma-about-your-exam-results",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a chat message to your grandma about your exam results. Four to eight sentences, as one message. Type it the way people actually type in chat: all lowercase, quick, a typo or two, no polishing."
+  }
+ ]
+}

@@ -15,8 +15,9 @@ export function severityFor(rule: Rule, register: Register, overrides?: Record<s
 
 /** Find AI writing tells in `text`. Pure and synchronous: no network, no model. */
 export function lint(text: string, options: LintOptions = {}): LintResult {
-  const guessed = options.register === 'auto' ? guessRegister(text) : undefined;
-  const register: Register = guessed ? guessed.register : ((options.register as Register | undefined) ?? 'professional');
+  // With no register given, it is picked from the text, so a lowercase chat message is not judged as a business letter.
+  const guessed = (options.register ?? 'auto') === 'auto' ? guessRegister(text) : undefined;
+  const register: Register = guessed ? guessed.register : (options.register as Register);
   const masked = mask(text, options.plain);
   const paras = paragraphs(masked);
   const ctx: RuleContext = { text, masked, paragraphs: paras, sentences: sentences(masked, paras), register };

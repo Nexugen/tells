@@ -112,7 +112,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     const now = Date.now();
     const cur = lintHits.get(ip);
     if (!cur || now - cur.at > 60_000) lintHits.set(ip, { at: now, n: 1 });
-    else if (++cur.n > cfg.lintPerIpPerMinute) throw new HttpError(429, 'slow_down', 'Too many requests from this address. Try again in a minute, or run the linter locally with npx @nexugen/tells.');
+    else if (++cur.n > cfg.lintPerIpPerMinute) throw new HttpError(429, 'slow_down', 'Too many requests from this address. Try again in a minute, or run tells locally with npx @nexugen/tells.');
     if (lintHits.size > 50_000) lintHits.clear();
   };
 

@@ -1,0 +1,1285 @@
+{
+ "name": "claude-haiku",
+ "model": "claude-cli:haiku",
+ "createdAt": "2026-11-18T20:44:11.225Z",
+ "items": [
+  {
+   "id": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di#adv3",
+   "family": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey, quick question I want your gut check on before I build anything. Are we going to offer an annual plan with a discount? I'm thinking about two months free, which works out to about 17% off, but I'm not sure if that's too aggressive or just enough to get people to commit. It would help with cash flow since we'd get the money upfront, but I also don't want to train people to wait for discounts. What do you think, and do you have any numbers on how many monthly customers would switch? Let me know when you have a minute to talk it through."
+  },
+  {
+   "id": "topic:chat:saying-the-new-onboarding-email-is-converting-be#adv2",
+   "family": "topic:chat:saying-the-new-onboarding-email-is-converting-be",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, good news on the onboarding email. The new version is converting noticeably better than the old one, and the gap has held steady over the last few days of data. I think the subject line change is doing a lot of the work, but I want to confirm that before we credit it fully. Can you take a look at the dashboard when you get a chance? I'd like to roll it out to everyone once we're sure it's not a fluke."
+  },
+  {
+   "id": "topic:chat:asking-whether-to-pause-the-free-tier#plain",
+   "family": "topic:chat:asking-whether-to-pause-the-free-tier",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I've been going back and forth on whether we should pause the free tier. Signups are up, but support load and inference costs have grown faster than paid conversions, and I'm not sure the free users are turning into customers. Pausing would cut our burn right away, but it could also stall growth and make the product look less accessible at a critical time. Can we look at the numbers together today and decide whether to pause, limit, or keep it as is?"
+  },
+  {
+   "id": "topic:chat:about-which-ai-model-to-switch-the-app-to#plain",
+   "family": "topic:chat:about-which-ai-model-to-switch-the-app-to",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I think we should switch the app to Claude Haiku 5.5 for the core features. It's fast and cheap enough to keep response times low and our per-request costs predictable as usage grows. For the few tasks that need deeper reasoning, we can route those requests to a larger Claude model. Before we make the change, I'd like to run both models against our own test set of real user queries and compare quality, latency, and cost. If the results hold up, we can roll it out behind a feature flag so we can revert quickly if anything looks off. Does that plan work for you?"
+  },
+  {
+   "id": "topic:chat:about-the-server-bill-doubling-this-month#plain",
+   "family": "topic:chat:about-the-server-bill-doubling-this-month",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick heads up on the server bill: it doubled this month, going from what we usually pay to roughly twice that. I haven't pinned down the cause yet, but my first guess is a traffic spike or something left running, like an oversized instance or a job that isn't shutting down. I'm pulling the usage breakdown by service now to confirm. Can you check whether anything new was deployed or any test environments were spun up in the last few weeks? I'll share what I find within the hour, and if it's a runaway process I'll shut it down right away."
+  },
+  {
+   "id": "topic:chat:about-a-bug-that-only-happens-on-android#plain",
+   "family": "topic:chat:about-a-bug-that-only-happens-on-android",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick heads up on a bug I just ran into. The checkout screen freezes and the \"Pay now\" button stops responding, but only on Android. iOS and the web app work fine, so I think it's something in our Android-specific payment handling or the keyboard overlay. I can reproduce it reliably on a Pixel with the latest build if I type in the address field before tapping pay. I haven't dug into the logs yet, so I don't know the root cause. Can you take a look at the payment flow on your end, and let me know if you see anything that might explain it?"
+  },
+  {
+   "id": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil#adv1",
+   "family": "topic:chat:about-whether-to-hire-a-contractor-for-the-mobil",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey, I've been going back and forth on the contractor for the mobile app. I think we should bring someone on for six to eight weeks to get the iOS and Android builds shipped, since neither of us has the bandwidth to do it right while also handling sales and the backend. The cost is real, around $18k at their rate, but a delayed launch is costing us more than that in signups we're not getting. I'd rather pay for speed now and figure out a longer-term hire once we know what the app needs. Can we talk through it tonight? I want your gut check before I reply to their proposal tomorrow."
+  },
+  {
+   "id": "topic:chat:about-a-user-who-churned-after-a-week#plain",
+   "family": "topic:chat:about-a-user-who-churned-after-a-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick heads-up: the account from last week (signed up Monday, gone by Friday) churned without ever reaching the core workflow. Looking at the session data, they got through onboarding but never completed the setup step that makes the product useful. I'd like to reach out to them directly to find out where they got stuck before we assume it's a fit problem. If it's an onboarding gap, we should fix it before the next signup cohort hits the same wall. Can you pull up the drop-off numbers for that step this afternoon?"
+  },
+  {
+   "id": "topic:chat:asking-them-to-review-your-pull-request-before-l#plain",
+   "family": "topic:chat:asking-them-to-review-your-pull-request-before-l",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Could you take a look at my pull request before lunch if you get a chance? It's a fairly small change, so it shouldn't take long to review. I'd really appreciate a second set of eyes on it. Let me know if you have any questions or want me to walk you through anything."
+  },
+  {
+   "id": "topic:chat:saying-the-staging-deploy-is-broken-again#adv2",
+   "family": "topic:chat:saying-the-staging-deploy-is-broken-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, the staging deploy is broken again. It looks like the same config issue from last week came back after the latest merge, so the build is failing before it reaches the health checks. I'm starting to dig into it now and will post what I find here. If you have a minute, could you check whether anything changed in the env file on your side?"
+  },
+  {
+   "id": "topic:chat:saying-the-app-store-rejected-the-build#plain",
+   "family": "topic:chat:saying-the-app-store-rejected-the-build",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey team, heads up: the App Store rejected our latest build. I'm reviewing the rejection notes now to see which guideline it violated and what needs to change. I'll post the details and a fix plan here once I have them. If anyone has context on recent changes that could be related, please share it. I'll aim to get a resubmission out today."
+  },
+  {
+   "id": "topic:chat:about-the-analytics-dashboard-showing-zero-signu#adv1",
+   "family": "topic:chat:about-the-analytics-dashboard-showing-zero-signu",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey, quick heads up: the analytics dashboard is showing zero signups since about 9am today, which doesn't look right. Signups from the landing page should be coming through, so I'm guessing the tracking event broke during the last deploy. I haven't confirmed that yet. Can you check whether the signup form is still firing on your end? I'm going to dig into the event logs now and will let you know what I find."
+  },
+  {
+   "id": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee#plain",
+   "family": "topic:chat:saying-the-gpu-instance-was-left-running-all-wee",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick heads-up on the GPU instance: it looks like it was left running all weekend, so it's been accruing charges the whole time. Could you check whether anyone still needs it, and shut it down if not? If you're using it for something that has to keep running, let me know and we can set up an auto-shutdown so this doesn't happen again. Thanks!"
+  },
+  {
+   "id": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo#adv3",
+   "family": "topic:chat:asking-whether-the-chatbot-should-say-it-is-a-bo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey, quick question on the support chatbot. Should it say up front that it's a bot, or just answer like a normal agent? I'm worried people will feel tricked if they find out later, but I also don't want the intro to feel clunky. What did we decide on this last time?"
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-gpt-3-writing-code#plain",
+   "family": "topic:comment:on-a-thread-about-gpt-3-writing-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I've been using these tools for a few months on a mid-sized Python codebase, and the pattern is consistent: they're excellent at the first 80% and quietly dangerous for the last 20%. Boilerplate, test scaffolding, regex, and translating a function from one language to another are all things it does well. The problem is that its output looks finished even when it isn't. It will confidently call an API method that doesn't exist, or write a loop that passes the happy-path test and fails on empty input, and nothing in the code signals that. You have to read everything with the same skepticism you'd give a fast junior's first PR, which, honestly, is more work than it sounds when the diff is large.\n\nI think the more interesting question is what happens to the skill ladder. Writing the boring code was how a lot of us learned to read code, notice edge cases, and build intuition about what breaks. If the tool takes over that part, people can ship working software without ever developing the judgment needed to tell when it's wrong. That doesn't make the tool useless, but it argues for treating it like a power tool that needs a reviewer who already knows the material, and for teams being deliberate about how juniors use it."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-gpt-3-writing-code#adv0",
+   "family": "topic:comment:on-a-thread-about-gpt-3-writing-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "i've been messing with copilot-ish stuff for a few months and the thing nobody talks about is how it fails. it writes a function that looks perfect, passes the first thing you try, then quietly does the wrong thing on empty input or when the list has duplicates. you only find out in prod. the bugs are the boring kind that a junior would also make, just delivered with way more confidence\n\nthat said for boilerplate it's genuinely great. regex, sql joins i always have to look up, pandas stuff, writing the tests i was too lazy to write. i stopped thinking of it as a coder and started thinking of it as a really fast stackoverflow that doesn't make you scroll\n\nmy worry is less about it replacing people and more about people who never learned what the code is doing reviewing code they can't read. that's how you end up with a codebase nobody understands and a shrug when it breaks"
+  },
+  {
+   "id": "topic:comment:about-why-most-startups-underprice-their-product#plain",
+   "family": "topic:comment:about-why-most-startups-underprice-their-product",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Most startups underprice because they anchor on cost and on what they imagine customers will tolerate, rather than on the value the product delivers. Founders often pick a price that feels \"fair\" or \"competitive\" without testing it, and they worry that a higher number will kill conversions. But the people who buy early are rarely the price-sensitive crowd. They're usually the ones with a painful problem and a budget, and a low price can signal that the product is a toy, an afterthought, or likely to disappear. Low prices also attract the customers who churn first and complain most, which makes the business harder to run.\n\nThere's also a asymmetry that founders underestimate. Raising a price later is hard, because existing customers feel betrayed, but lowering one is easy. Starting high and discounting for specific cases gives you room to learn. Starting low locks you into a number that's expensive to escape. Many companies that later \"discovered\" their pricing power had simply never tested a higher tier. A useful exercise is to ask what a customer would pay to avoid the problem for a year, then price well below that to leave them a clear win.\n\nFinally, underpricing distorts the rest of the business. Low revenue per customer forces you into high-volume sales, thin margins, and heavy support loads, which leaves little money for the work that actually improves the product. It also changes who you hire and what you optimize for. Charging more doesn't just increase revenue; it tends to make the company more serious about serving the customers who pay, and it gives you the resources to become the product those customers were willing to buy."
+  },
+  {
+   "id": "topic:comment:about-why-most-startups-underprice-their-product#adv1",
+   "family": "topic:comment:about-why-most-startups-underprice-their-product",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Most founders price low because they're scared of the wrong number. They picture a prospect asking \"why so expensive?\" and they hear that question in their head for weeks. What they don't picture is the prospect who bounces because the price made them wonder if the thing was a toy. Price is one of the few signals buyers use to judge quality before they've used anything, and a low number quietly tells them \"this is probably not serious\" or \"this will disappear in a year.\"\n\nThe other problem is that low prices attract the customers who cost the most. They ask for the most hand-holding, they churn when something goes wrong, and they argue about every invoice. A $19/month plan sounds like a way to get volume, but supporting 400 of those people can eat the time you needed for the 20 who would have paid $300 and actually stuck around. I've seen a couple of companies raise prices by 3x and lose almost nobody, mostly because the people who left were the ones who were never going to become real customers anyway.\n\nMy advice is to pick a number that makes you slightly nervous and then talk to five customers about it before you change anything. If nobody flinches, you were leaving money on the table. If a few do flinch, ask them what they'd need to see to pay it. Those answers are usually more useful than any pricing page benchmark, and they tell you what to build next."
+  },
+  {
+   "id": "topic:comment:about-whether-ai-will-replace-junior-developers#plain",
+   "family": "topic:comment:about-whether-ai-will-replace-junior-developers",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Honestly, I think \"AI replaces junior devs\" is the wrong frame. What's changing is the shape of the first two years. A junior used to spend a lot of time on tasks that were tedious but educational: writing CRUD endpoints, chasing down a null pointer in someone else's code, slowly learning what a codebase actually does. Models now handle a lot of that grunt work faster than any junior can. That's real pressure on the entry-level job postings, and I'd be lying if I said otherwise. But the work that made juniors valuable was never just the output. It was the ramp-up, and the ramp-up still has to happen somehow.\n\nThe thing I worry about is the pipeline. If companies stop hiring juniors because a senior with Copilot can do the work, then in five years there are no mid-level engineers, and in ten there are no seniors. Some teams are already noticing this. The people who become great debugging distributed systems at 2am are the ones who spent years doing small, unglamorous fixes and building intuition from failure. You can't shortcut that by prompting well. Someone has to pay for the learning, and right now it's unclear who.\n\nMy guess is the junior role survives but changes character. The valuable juniors in five years will probably be the ones who use these tools to go deep rather than to skip steps: asking why the generated code works, reading the stack traces instead of pasting them back, and reviewing output critically. The ones who treat the model as a black box will struggle, and so will the companies that hire them without any plan for how they'll grow."
+  },
+  {
+   "id": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud#plain",
+   "family": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Our numbers made this decision easier than I expected. We were spending a little under a third of our infrastructure budget on egress and managed-database markups, and most of our traffic was steady-state, so the elasticity we paid for was going unused. The migration was not free. We had to rebuild our observability stack, our CI runners, and the backup pipeline, and we lost about two months of feature velocity. But the hardware payback period came out to roughly fourteen months, and the cloud bill had been climbing every quarter without a corresponding increase in load.\n\nWhat people underestimate is the operational cost of leaving. Cloud providers sell you the managed service and the expertise to run it, and when you bring things back in-house, you inherit both the pager and the knowledge gap. We kept a small platform team on the cloud for the first six months as a safety net, and I'd recommend that to anyone. The other thing I'd flag is that a lot of \"cloud vs. on-prem\" debates skip the middle option of colo with leased bare metal, which gave us most of the cost savings without buying and racking our own servers.\n\nThat said, I wouldn't generalize from our case. If your traffic is bursty, your team is small, or your compliance story depends on managed services, the math could look very different. The honest answer is that the cloud is expensive in a predictable way and self-hosting is expensive in an unpredictable way, and the right choice depends on which kind of unpredictability your organization can absorb."
+  },
+  {
+   "id": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud#adv1",
+   "family": "topic:comment:on-a-post-about-a-company-moving-off-the-cloud",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "We did something similar two years ago, moving our main Postgres and a bunch of batch jobs off RDS and onto three beefy bare-metal boxes in a colo. The hardware cost was about what we used to pay AWS in a single month, so the payback was fast. The part people underestimate is the boring stuff. We had to relearn backups, replication failover, and disk monitoring, and for the first few months every little alert felt like a fire. It's calmer now, but it's real ongoing work that used to be somebody else's problem.\n\nI don't think the lesson is \"cloud bad.\" Our bursty workloads, like the CI runners and the image processing that spikes on Mondays, still live in the cloud, because paying per minute beats owning idle capacity. The savings came from moving the steady, predictable stuff that we'd been paying a markup on for years. If your baseline load is flat and you have someone who likes this kind of work, the math is hard to ignore. If you don't have that person, the bill you save can disappear fast into on-call hours."
+  },
+  {
+   "id": "topic:comment:about-deep-learning-hype-in-medical-imaging#plain",
+   "family": "topic:comment:about-deep-learning-hype-in-medical-imaging",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The \"AI beats radiologists\" headlines age badly once you look at how the studies were built. Most of the impressive numbers come from retrospective datasets, often curated from a single hospital, with labels pulled from the same reports the model was trained on. Performance drops when the model meets scanners from another vendor, different patient demographics, or a different protocol, and external validation is still the exception. A lot of \"superhuman\" results are also AUC comparisons against a reader who never saw the clinical history, which isn't how radiologists actually work.\n\nThe bigger problem is that a high-accuracy classifier doesn't tell you what happens to patients. Few of these papers measure whether the tool changed diagnoses, reduced time to treatment, or improved outcomes, and some FDA-cleared products have been approved on the basis of sensitivity and specificity alone. Deployment also brings alert fatigue, automation bias, and liability questions that a benchmark never captures. I'd like to see more prospective, multi-site trials with outcome endpoints before treating these systems as more than triage aids.\n\nNone of this means the field is useless. Narrow tools like diabetic retinopathy screening and some fracture detection have shown real workflow value in controlled settings. The problem is the gap between that and the framing of \"radiologists will be replaced,\" which the evidence doesn't support yet."
+  },
+  {
+   "id": "topic:comment:about-deep-learning-hype-in-medical-imaging#adv1",
+   "family": "topic:comment:about-deep-learning-hype-in-medical-imaging",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Most of the \"AI beats radiologists\" papers I've read compare a model against a single radiologist reading retrospective images with the labels already known, which is a very different task from a busy reader triaging a live queue. The chest X-ray and mammography studies that got the big headlines often had the labels leak in through the dataset construction, or they used a reference standard that was itself just the original clinical report. I worked on a project a few years ago where we got a model to 0.95 AUC on an internal set, then watched it fall to about 0.78 when we ran it on images from a different scanner vendor at a different hospital. Nobody was lying. The model had learned the scanner's compression artifacts and the institution's labeling habits along with the pathology.\n\nWhat bugs me most is that the FDA-cleared products are mostly narrow triage tools that flag a study for priority reading, and they're useful for that. The marketing around them drifts toward \"diagnosis,\" and then the press release turns into a claim that AI will replace a specialty. Radiology residency applications are still going up, which is a funny thing to watch if you believed the 2016 Hinton prediction that we'd stop training radiologists. The hard part was never pattern matching on the pixels. It's knowing the patient, knowing the prior studies, and knowing what the referring clinician is actually worried about.\n\nI don't want to be the guy who says it's all useless, because some of these tools do measurable good in stroke pathways and diabetic retinopathy screening, where the task is narrow and the prevalence is high enough that a sensitivity-focused filter pays off. My complaint is about the gap between what gets validated prospectively and what gets sold on the strength of a retrospective AUC."
+  },
+  {
+   "id": "topic:comment:about-why-enterprise-software-is-so-bad#plain",
+   "family": "topic:comment:about-why-enterprise-software-is-so-bad",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Enterprise software is bad mostly because the people who pick it are not the people who use it. A VP signs off after a vendor demo built on a clean sample dataset and a slide deck, and the purchasing criteria become checkboxes: SSO, audit logs, \"AI-powered,\" compliance certifications. Nobody on the buying committee has to spend eight hours a day clicking through the thing, so the metric that matters, how fast a real person can do their job, never enters the decision. The vendor's incentives point the same way. Their customer is the buyer, and lock-in, per-seat pricing, and proprietary data formats are features from the seller's side, so the product is optimized to be hard to leave rather than pleasant to use.\n\nThe second problem is that every feature request is a negotiation with a different stakeholder. Finance wants a field, legal wants a approval step, the regional team wants a custom report, and the product team wants to ship something for the next conference. Each addition is individually reasonable and collectively ruinous, because nobody owns the whole experience. Configuration becomes the escape valve: instead of making good decisions, the software exposes a thousand settings so that the decisions can be deferred to the customer's admin, who then spends years in a forms-within-forms maze. Over time the product accumulates the scar tissue of every sales cycle, and the codebase gets slower, the UI gets more crowded, and the original designers are long gone.\n\nFinally, the feedback loop is broken. Consumer software dies quickly when people stop using it, so it has to earn its keep every day. Enterprise software survives on contracts that run for three to five years, and the cost of a bad tool is spread across thousands of employees who have no way to vote with their wallets. Their complaints go to an internal help desk that files tickets against the IT department, not the vendor, and the vendor rarely hears about it until a renewal is at risk. The result is software that is technically capable of almost anything and practically pleasant at almost nothing, and everyone involved, from the buyer to the vendor's account team, can tell themselves it's working."
+  },
+  {
+   "id": "topic:comment:about-why-enterprise-software-is-so-bad#adv3",
+   "family": "topic:comment:about-why-enterprise-software-is-so-bad",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "I think most of it comes down to who the software is actually built for. The person who picks it is almost never the person who uses it every day. A VP signs off after a three-hour demo and a spreadsheet of checkboxes, so the product gets optimized for the RFP matrix: \"supports SAML,\" \"has an audit log,\" \"can be configured to do X.\" Nobody gets scored on whether the checkout flow makes sense to a tired claims adjuster at 4pm. So you end up with forty settings menus, each one a little admission that somebody decided not to make a decision, and the whole thing feels like it was designed by committee because it was.\n\nThe other piece is that the incentives are upside down all the way down. The vendor's sales team closes deals by promising customization, so the product team builds escape hatches instead of opinions. Each big customer gets a custom field or a special report, and those pile up into a codebase nobody fully understands. Meanwhile the integration story is \"we have an API\" which means every workflow touches three systems that were each bought separately and never talked to each other, and someone at the company is paid to paste CSVs between them. Support contracts and renewal pricing reward lock-in, not usability, so there's no pressure to make the thing pleasant to leave or even to use.\n\nI'd also blame the switching cost itself. Once a company has trained 2,000 people and migrated ten years of data, the software can get worse for a long time and still not die. Users complain, the complaints go into a backlog, and the backlog is ranked by the customers paying the most, who are the ones who asked for the weird stuff in the first place. It's not that anyone is trying to make bad software. It's that every individual decision is reasonable given its local incentives, and the sum of those decisions is something nobody would have chosen if you asked them up front."
+  },
+  {
+   "id": "topic:comment:about-subscription-fatigue-for-mobile-apps#plain",
+   "family": "topic:comment:about-subscription-fatigue-for-mobile-apps",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subscription fatigue on mobile is real, but I think the deeper problem is that apps quietly changed what they're selling. A few years ago you paid once for a flashlight app or a note-taker and it did one thing. Now the same category charges $4.99 a week for \"premium\" features that are mostly a paywall around things that used to be free, and the cancel button is buried three menus deep or routed through the App Store settings where most people never look. The economics make sense for the developer: recurring revenue is predictable and investors like it. But the result is that I have a dozen small charges I forgot about, and each one is too small to justify the effort of hunting it down.\n\nWhat bothers me most is the asymmetry. Signing up takes one tap, often with a free trial that auto-converts, while canceling requires finding the right screen, sometimes calling support, and occasionally getting a \"are you sure?\" dark-pattern screen with a discount offer. Regulators in some places have started forcing \"click to cancel\" rules, which tells you how common the problem got. I'd like to see a simple norm where any subscription can be canceled as easily as it was started, and where apps have to send a reminder before a trial converts.\n\nI also think many of these apps would be better as one-time purchases or clearly tiered annual plans for users who want them. Subscriptions make sense for services with real ongoing costs, like cloud sync, server-side processing, or content that keeps updating. They make much less sense for a calculator, a photo filter, or a habit tracker that stores everything on the device. Until more developers draw that line honestly, I'll keep auditing my App Store subscriptions once a quarter and feeling mildly annoyed every time I do."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company#adv3",
+   "family": "topic:comment:on-a-thread-about-a-data-breach-at-a-big-company",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "I think the real problem isn't that the data got stolen, it's that it was kept at all. Most of the stuff in these breach notices, like SSNs, dates of birth, and security questions, was collected for a one-time check and then just sat in a database for years. If they'd deleted it after verification, there'd be nothing to leak. Every time one of these happens, I wonder how many people at the company knew that old records were still around and decided it wasn't worth the effort to purge them.\n\nThe \"we take your privacy seriously\" boilerplate in the notice is also useless. What I'd actually want to see is how long the attacker was inside before anyone noticed, whether the access came through a vendor or an employee account, and whether they're still using MFA on internal admin tools. Credit monitoring for two years is a nice gesture, but it mostly covers the company's legal exposure, not the actual harm to me."
+  },
+  {
+   "id": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an#adv1",
+   "family": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "**Title: Quit my job last month to work on my app full time. Here's where things stand**\n\nOkay so I finally did it. Gave notice at my job in October after about 6 months of doing the app on nights and weekends. My savings can cover about 5 months if I'm careful, which is less comfortable than I'd like but it is what it is.\n\nThe app is a habit tracker for people who hate habit trackers (yes, I know). It's at around $1,400 MRR right now, up from $900 in August. Not life-changing money yet, but it's growing and I'm getting maybe 20 signups a day from a couple of TikTok videos I made.\n\nThe hard part isn't the work, it's the quiet. No standup, nobody to bounce ideas off. I've started working from a coworking space two days a week just so I'm around people.\n\nAnyone else make the jump with a similar runway? How long until you felt okay about it?"
+  },
+  {
+   "id": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-#adv0",
+   "family": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey all, im trying to break into ml and i dont have a phd or even a masters. just a cs degree from a state school and about 2 yrs of backend work. every job posting i see wants \"research experience\" or a publication and i feel like im locked out before i even start\n\nwhat actually worked for people here? i've been looking at kaggle, fast.ai, and reproducing some arxiv papers but idk if thats enough to get noticed. is it better to go for an mle role first and transition internally? or do open source contributions to something like hugging face or pytorch carry more weight than a side project\n\nalso if anyone made this jump recently (last year or so) i'd love to hear what your path looked like. thanks in advance"
+  },
+  {
+   "id": "topic:forum:in-r-android-complaining-about-battery-life-afte#plain",
+   "family": "topic:forum:in-r-android-complaining-about-battery-life-afte",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: Battery life went to hell after the latest update, anyone else?**\n\nPosted in r/Android\n\nSo I installed the update last week and my battery has been dying way faster. I used to get comfortably through a full day with moderate use, maybe 30% left by bedtime. Now I'm at 15% by lunch, and that's with barely any screen time.\n\nI've already tried the usual stuff: restarted the phone, checked for rogue apps, turned off background refresh for everything I don't need, and dimmed the display. Settings > Battery shows \"System\" as the top drain, which doesn't really tell me anything useful.\n\nDid anyone else notice this after the same update? Is there a known fix coming, or is a rollback the only option? Bonus question: has anyone found a reliable way to see what the system process is actually doing? My phone is basically a very expensive hand warmer right now.\n\nEdit: Thanks for the suggestions, a few people mentioned waiting 48 hours after updating for the background indexing to finish. I'll give it a shot and report back."
+  },
+  {
+   "id": "topic:forum:in-r-android-complaining-about-battery-life-afte#adv1",
+   "family": "topic:forum:in-r-android-complaining-about-battery-life-afte",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "**Title: Battery life tanked after last week's update, anyone else?**\n\nSo my phone got the update on Tuesday and since then the battery is just gone. I used to get through a full day with about 30% left. Now I'm at 15% by lunch with basically the same usage. I'm not gaming or streaming more than usual, mostly just texting, some maps, a few Reddit threads at night.\n\nI checked battery stats and \"System\" is eating way more than before, and something called a background sync service is showing up at the top of the list even when I'm not using anything. I already restarted it, turned off adaptive battery and back on, and cleared the cache for the system app. Nothing really changed.\n\nDidn't see anything in the patch notes about power changes. Has anyone else had this on the same update? Wondering if I should just roll back or if a fix is coming soon."
+  },
+  {
+   "id": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay#adv1",
+   "family": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Title: Client ghosted me after I delivered the full project. Anyone else dealing with this?\n\nOk so I finished a custom Shopify theme for a small boutique back in September. Invoice was for $4,200, 50% upfront, 50% on delivery. They got the upfront payment, approved the staging site, and then went quiet. Fine, I thought, they're busy.\n\nThen they started asking for \"small tweaks\" every week. Mobile nav color, a different hero video, moving a footer link. Each one was maybe 20 minutes. I did them anyway because I didn't want to be the difficult one.\n\nLast week I sent the final invoice. Response: \"We're reviewing the scope and will get back to you.\" That was it. Two follow-ups since then, nothing.\n\nI have the signed SOW, the staging approvals in writing, and the git history. I'm pretty sure I'm going to small claims, but I'm also wondering if I should've asked for the second half before the tweaks started.\n\nHow do you guys handle scope creep when the client is quiet about payment? Do you stop work at a certain point or keep going to keep the relationship?"
+  },
+  {
+   "id": "topic:forum:in-r-freelance-about-raising-your-rates#adv0",
+   "family": "topic:forum:in-r-freelance-about-raising-your-rates",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "ok so i've been freelancing for like 3 yrs and i finally raised my rates and honestly im kinda mad at myself for waiting this long\n\nquick background: was charging $45/hr for web dev stuff, mostly small biz clients. last month i quoted a new client $85/hr and they just said \"ok\" lol. no negotiation, no ghosting. i almost didnt even send the number bc i was so sure theyd balk\n\nthe thing nobody tells u is that the clients who push back on price are usually the ones who were gonna be the biggest pain anyway. i lost 2 old clients when i raised things and honestly good riddance, one of them paid like 3 wks late every single time\n\ntips if ur thinking about it:\n- give 30 days notice to existing clients\n- dont apologize in the email, just state the new rate\n- raise it on new projects first if ur nervous\n- if someone argues, ask what they need from the scope and see if u can trim instead of discounting\n\nanyway just wanted to say it. if ur sitting on a rate increase go do it. ur probably undercharging\n\nedit: wow didnt expect this to blow up lol"
+  },
+  {
+   "id": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us#adv3",
+   "family": "topic:forum:in-r-saas-asking-how-to-price-per-seat-or-per-us",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Quick question first: is this for your own product, or are you just drafting a sample post?"
+  },
+  {
+   "id": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol#plain",
+   "family": "topic:comment:saying-the-fix-in-the-latest-release-did-not-sol",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I upgraded to the latest release, and unfortunately the crash on startup is still happening. The fix didn't resolve the problem for me. The app still exits right after launch, and the behavior matches what I saw before updating.\n\nI'm happy to provide more details, such as my OS version, the full stack trace, or steps to reproduce, if that would help narrow down the cause. Please let me know what additional information would be useful."
+  },
+  {
+   "id": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a#adv3",
+   "family": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Thanks for opening this, I've been waiting for it too. I use the app mostly at night and the white background is rough when my phone is the only light in the room. I'd guess a lot of people here have the same problem, so I'm glad someone wrote it up. Not sure if it's on the roadmap yet, but +1 from me. If it helps, I can test a beta build or send screenshots of the places where the contrast is worst right now.\n\nI also wonder if this should follow the system setting by default, with a manual toggle in settings for people who want it different. Some of us would like it to switch automatically at sunset, and others would rather just pick one and leave it. Either way, I think the most important part is getting the text and icon contrast right in both modes, since that's where the current contrast problems show up most."
+  },
+  {
+   "id": "topic:comment:asking-when-the-next-release-with-the-tokenizer-#plain",
+   "family": "topic:comment:asking-when-the-next-release-with-the-tokenizer-",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi there,\n\nI'm following up on the tokenizer fix. It looks like it's already merged, but I haven't seen it in a tagged release yet. Do you have a rough timeline for when the next release with this fix will be published? Even an approximate date would help me plan whether to wait for the official build or work around the issue in the meantime.\n\nThanks for all your work on this project. I appreciate the quick turnaround on the fix, and I'm happy to test a release candidate if one becomes available."
+  },
+  {
+   "id": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m#adv2",
+   "family": "topic:comment:saying-the-stable-diffusion-web-ui-runs-out-of-m",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hi, I hit this same problem on my end. When I generate images at 768 pixels on a single dimension, the Stable Diffusion web UI runs out of memory and the generation fails partway through. Smaller sizes like 512 work without trouble on the same setup, so the jump to 768 seems to be the point where VRAM is exhausted. I have not yet tried the low VRAM or medium VRAM startup flags, so I don't know whether they would help, but I wanted to add this data point in case it helps narrow down the threshold for others reporting similar failures."
+  },
+  {
+   "id": "topic:comment:on-a-pull-request-that-changes-the-default-learn#plain",
+   "family": "topic:comment:on-a-pull-request-that-changes-the-default-learn",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Changing the default learning rate from 1e-3 to 3e-4 should make early training noticeably more stable, especially for the larger configurations where the loss spiked in the first few hundred steps. I reran the small and medium baselines with the new default, and both converged to within 0.2% of the previous validation loss while showing smoother loss curves. The one tradeoff is that the smallest model now takes roughly 15% more steps to reach the same loss, so users running short schedules may want to bump the warmup or set the rate explicitly.\n\nI'd suggest we also add a note to the changelog and the config docs so the new default isn't a silent change for anyone pinning their runs to the old value. Happy to make those edits in this PR if you'd like, or split them into a follow-up."
+  },
+  {
+   "id": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun#plain",
+   "family": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi maintainers, thanks for all the work that goes into this project. I wanted to ask whether you've considered a paid tier as a way to fund ongoing development. Many open source projects sustain themselves through optional subscriptions, sponsor-only features, or hosted offerings, and I'm curious whether that path has come up here and how the team feels about it.\n\nIf a paid tier makes sense to you, I'd be glad to help think through what it could include, such as priority support, a hosted version, or early access to new features, while keeping the core tool free and open. If it doesn't fit the project's goals, that's completely understandable, and I'd be interested to hear what funding approaches you've found work best for you."
+  },
+  {
+   "id": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun#adv1",
+   "family": "topic:comment:asking-maintainers-whether-a-paid-tier-would-fun",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey maintainers, thanks for keeping this project going. I've gotten a lot of use out of it and I'm wondering if you've thought about a paid tier or sponsorship option to help fund the work. I know open source maintainers often end up carrying this on nights and weekends, and it's easy for that to burn people out.\n\nI don't have a specific plan in mind, just curious whether you've considered it and whether there's anything that would make it worthwhile, like priority issue triage, a hosted version, or early access to features. If it's not something you want to pursue, totally fine. I just wanted to ask in case it helps keep the project healthy long term."
+  },
+  {
+   "id": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate#adv1",
+   "family": "topic:comment:saying-a-docs-example-for-fine-tuning-is-outdate",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "The fine-tuning example in the docs is out of date. The `client.fine_tuning.jobs.create()` call still passes `training_file` as a bare file ID string, and the current API expects the upload to be referenced through the newer `hyperparameters` block, so running the snippet as written now returns a 400 error. I ran into this while following the guide on a fresh install, and it took a while to figure out that the SDK version the docs assume is no longer the one people get by default.\n\nIt would help to update the snippet to match the current SDK and add a note about the minimum version required. Happy to open a PR with the corrected example if that would be useful."
+  },
+  {
+   "id": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-#plain",
+   "family": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Handover of [App Name] Source Code\n\nHi [Client Name],\n\nI'm pleased to let you know that the source code for [App Name] is ready to hand over. The project is now complete and everything you need to maintain and run the app is included.\n\n**What's included**\n\n- Full source code for [frontend/backend/mobile, as applicable]\n- Configuration files and environment variable templates (`.env.example`)\n- Database schema and migration scripts\n- Automated tests and how to run them\n- README with setup, build, and deployment instructions\n- Third-party dependencies listed in [package.json / requirements.txt / equivalent]\n\n**How to access it**\n\nThe code is available in [repository link / shared drive / attached archive]. Please let me know if you'd prefer a different transfer method.\n\n**Getting started**\n\n1. Clone the repository and follow the setup steps in the README.\n2. Copy `.env.example` to `.env` and fill in your credentials. I have not included any live secrets, so you will need to add your own API keys and database connection details.\n3. Run the test suite to confirm everything works in your environment.\n\n**Important notes**\n\n- Please rotate any credentials that were shared with me during development and store production secrets in your secure credential manager, not in the repository.\n- [Any known limitations, pending items, or follow-up recommendations.]\n- [Hosting or deployment details, if relevant.]\n\n**Support**\n\nI'm happy to answer questions about the codebase. I'd suggest we schedule a walkthrough call within the next [timeframe] so I can take you through the architecture and deployment process. [Optional: My support window covers X days, after which we can discuss a maintenance agreement.]\n\nPlease confirm once you've received the files and can access the repository. It was a pleasure working on this project with you, and I appreciate your trust in handing it over.\n\nBest regards,\n\n[Your Name]\n[Title / Company]\n[Phone]\n[Website]"
+  },
+  {
+   "id": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-#adv3",
+   "family": "topic:email:to-a-client-handing-over-the-code-of-an-app-you-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Subject: code handover for [app name]\n\nHi [client name],\n\nAttached is the code for [app name]. It's the final version as of today, so everything we talked about should be in there, minus the [feature] we pushed to phase 2.\n\nI put a README in the root folder. It covers how to install dependencies, set up the .env file (I didn't include real keys, so you'll need to add your own for [service]), and run it locally. Let me know if anything in there is unclear.\n\nCouple of things to know:\n\n- The database migrations are in /migrations. Run them in order before the first launch.\n- [Any known issue, e.g. the export button is slow with large datasets. Not blocking, but worth knowing.]\n- I left the admin login as-is for now. You'll want to change the default password on day one.\n\nIf you want, I can do a 30-min walkthrough next week to go over the structure and deployment. Otherwise, reply here with questions and I'll get back to you.\n\nThanks again for working with me on this, it was a fun build.\n\nBest,\n[your name]"
+  },
+  {
+   "id": "topic:email:to-a-beta-user-asking-for-feedback-on-the-ai-ass#plain",
+   "family": "topic:email:to-a-beta-user-asking-for-feedback-on-the-ai-ass",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Your feedback on our AI assistant (beta)\n\nHi there,\n\nThank you for being one of our beta testers. Your early use of the AI assistant is helping us shape it into something more useful, and we'd love to hear what you think.\n\nCould you take a few minutes to share your feedback? In particular, we'd appreciate your thoughts on:\n\n- **Helpfulness:** Did the assistant answer your questions or complete your tasks well?\n- **Accuracy:** Did you notice any incorrect or misleading responses?\n- **Ease of use:** Was it easy to get started and to phrase your requests?\n- **Friction:** Were there moments where it got stuck, misunderstood you, or felt slow?\n- **Missing features:** Is there anything you expected it to do that it couldn't?\n- **Overall experience:** How would you rate it so far, and would you recommend it to a colleague?\n\nSpecific examples are especially valuable. If you can, include what you were trying to do, what the assistant did, and what you expected instead.\n\nYou can reply directly to this email, or if you prefer, use the feedback form at [link]. Either works.\n\nIf you have any questions or run into an issue while testing, just let us know. We're grateful for your time and your candor, including criticism.\n\nThank you again for helping us make the assistant better.\n\nBest regards,\n\n[Your name]\n[Team name]\n[Company]"
+  },
+  {
+   "id": "topic:email:to-a-customer-whose-subscription-payment-failed#plain",
+   "family": "topic:email:to-a-customer-whose-subscription-payment-failed",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Action needed: Your subscription payment didn't go through\n\nHi [Customer Name],\n\nWe tried to process your recent payment for your [Plan Name] subscription, but it didn't go through. This can happen for a few reasons, such as an expired card, insufficient funds, or a bank security hold.\n\nYour account is still active for now. To avoid any interruption to your service, please update your payment information within the next [number] days:\n\n[Update Payment Method]\n\nIf you've already resolved this with your bank or card provider, we'll automatically retry the payment within [timeframe]. You don't need to take any further action in that case.\n\nIf you have questions or need help, just reply to this email or contact us at [support email or phone number]. We're happy to help.\n\nThank you for being a valued customer.\n\nBest regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Company Website]"
+  },
+  {
+   "id": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem#adv2",
+   "family": "topic:email:to-a-prospect-in-the-us-following-up-after-a-dem",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Subject: Next steps after today's demo\n\nHi [First Name],\n\nThank you for taking the time to join the demo today. It was great to walk through how [Product] can help [Company] with [specific problem they mentioned], and I appreciated the thoughtful questions about your current workflow.\n\nBased on our conversation, the area that seems most valuable for your team is [specific feature or outcome discussed]. Many teams in similar situations have been able to cut down on [pain point] within the first few weeks of rollout, and I think you could see a similar impact.\n\nIf it would be helpful, I can set up a short follow-up with your team to look at your specific data and answer any technical questions from [colleague or department]. I have openings on [day] or [day] afternoon, but I am happy to work around your schedule.\n\nI have also attached a summary of the points we covered along with the case study I mentioned about [similar customer].\n\nPlease let me know what works best for you."
+  },
+  {
+   "id": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool#plain",
+   "family": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "It depends on what you write. If you're drafting a lot of emails, reports, or social posts, a paid tool can save real time, especially if it fits into your existing apps and offers tone or style controls. If you write occasionally, the free tiers of tools like ChatGPT, Claude, or Gemini will probably cover you.\n\nBefore paying, try a few of your own real tasks on the free versions. Notice whether you're spending more time fixing the output than you save. Also check what each paid plan actually adds: higher usage limits, a specific integration you need, or privacy settings for client work.\n\nBe wary of tools that are just a wrapper around the same models you can access directly for less. And remember that AI drafts still need your editing. The tool speeds up the first pass, but your judgment is what makes the writing good."
+  },
+  {
+   "id": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool#adv0",
+   "family": "topic:qa:is-it-worth-paying-for-an-ai-writing-tool",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "lol depends what you're using it for. if it's just cleaning up emails or random stuff, the free tiers are honestly fine. i paid for one for a few months and mostly just used it for the same 3 things i could've done with chatgpt free anyway 😅\n\nwhere i think it's actually worth it: if you write a lot every week (client stuff, newsletters, school papers w/ a lot of drafts) and you want features like tone matching or saving your style, or you're doing stuff at volume where the time saved adds up. otherwise try the free version for a couple weeks first and see if you miss anything. most of them let you cancel anytime so not much to lose tbh"
+  },
+  {
+   "id": "topic:qa:should-i-learn-machine-learning-or-web-developme#adv1",
+   "family": "topic:qa:should-i-learn-machine-learning-or-web-developme",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Honestly, it depends on what you want to build. If you want to make things people can click on and use, start with web dev. You'll get quick wins, see your progress immediately, and learn how software actually gets delivered: APIs, databases, deployment, and debugging messy real-world stuff. Those skills are useful even if you never touch ML.\n\nIf you're drawn to ML because of the math or the research side, you'll need a solid base in Python, linear algebra, and statistics first, and jumping in cold usually leads to frustration. Most people who end up doing ML professionally came through programming or data work first anyway.\n\nMy suggestion: spend two or three months on basic web dev, like a small app with a database. Then pick up Python and do a simple ML project, like a classifier on a dataset you care about. You'll know pretty quickly which one you actually enjoy."
+  },
+  {
+   "id": "topic:qa:how-do-apps-make-money-if-they-are-free#plain",
+   "family": "topic:qa:how-do-apps-make-money-if-they-are-free",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Apps that are free to download usually make money in a few main ways:\n\n**1. Ads.** Companies pay to show you ads inside the app. Some apps show banners, others show short videos between levels, and advertisers pay per view or per click.\n\n**2. In-app purchases.** You can pay for extras like power-ups, skins, or removing ads. Many games rely on this, and a small share of players often spends most of the revenue.\n\n**3. Subscriptions.** Apps like streaming services or fitness trackers charge a monthly or yearly fee for premium features.\n\n**4. Selling your data.** Some apps collect information about how you use them and share it with advertisers or data brokers. Reputable companies disclose this in their privacy policies.\n\n**5. Upselling.** The free version works as a trial that pushes you toward a paid plan.\n\n**6. Partnerships.** Apps may earn commissions from affiliate links, such as shopping or travel apps that get a cut of each sale.\n\nSo \"free\" usually means you pay with your attention, your data, or money spent later on extras."
+  },
+  {
+   "id": "topic:qa:how-do-i-price-my-first-freelance-web-project#plain",
+   "family": "topic:qa:how-do-i-price-my-first-freelance-web-project",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Start by calculating your costs. Add up what you need to earn per year, including taxes, software, insurance, and the hours you'll spend on admin and marketing, then divide by the billable hours you realistically expect to work. That gives you a floor rate.\n\nNext, research what others charge. Look at freelancer profiles on Upwork or similar sites, and ask a few developers in your area what they charge. As a beginner, you can reasonably price below experienced freelancers, but not so low that you can't sustain the work.\n\nFor a first project, consider a fixed price instead of hourly. Estimate the hours carefully, add a 20–30% buffer for surprises, and multiply by your rate. Clearly define the scope in writing, including the number of revisions, so you don't end up working for free.\n\nAsk for a deposit, typically 30–50% upfront, before you start. This protects you from clients who disappear.\n\nFinally, treat the first project as a learning experience. Track your actual hours so you can price the next one more accurately."
+  },
+  {
+   "id": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo#plain",
+   "family": "topic:qa:is-it-safe-to-put-my-business-data-into-a-chatbo",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "It can be, but it depends on the tool and how you use it. Before pasting in business data, check three things:\n\n1. **Data policy:** Look for whether the provider uses your inputs to train models, how long it keeps chats, and where it stores them. Business or enterprise plans usually offer stronger protections than free consumer versions.\n2. **Sensitive data:** Avoid entering customer personal information, passwords, API keys, financial account numbers, health records, or unreleased trade secrets unless your provider's agreement explicitly covers them.\n3. **Access controls:** Use accounts with multi-factor authentication, and make sure your team knows which tools are approved.\n\nA practical approach is to anonymize data first by replacing names, account numbers, and identifiers with placeholders. You can also set a simple company policy listing what can and cannot be shared.\n\nIf you're handling regulated data such as HIPAA, GDPR, or payment card information, check with a compliance professional before uploading anything."
+  },
+  {
+   "id": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di#plain",
+   "family": "topic:chat:asking-whether-to-offer-an-annual-plan-with-a-di",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick question I want your take on before we finalize pricing: should we offer an annual plan with a discount? My instinct is yes, since it locks in revenue upfront and cuts down on monthly churn. I'm thinking something like 15–20% off compared to paying monthly. Do you think that's enough to be attractive without training customers to expect deep discounts, or would you set it differently? Let me know what you think before we put it on the pricing page."
+  },
+  {
+   "id": "topic:chat:saying-the-new-onboarding-email-is-converting-be#plain",
+   "family": "topic:chat:saying-the-new-onboarding-email-is-converting-be",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick win to share: the new onboarding email is converting noticeably better than the old one. Signups that received it are moving through activation faster, and more of them are completing their first key action within the first day. I think the clearer subject line and the shorter call to action are doing most of the work. I'd like to keep an eye on it for another week to confirm the lift holds, but it's looking promising. Want to take a look at the numbers together this afternoon?"
+  },
+  {
+   "id": "topic:chat:about-a-user-who-churned-after-a-week#adv0",
+   "family": "topic:chat:about-a-user-who-churned-after-a-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey, quick one. that user who signed up last tuesday and bailed after a week, i looked at their session logs and they hit the export button once then never came back. no support ticket, no feedback, nothing. i'm kinda stuck on whether that's a fit problem or an onboarding problem. can you take a look at the funnel stuff before friday? maybe we can dig in during standup."
+  },
+  {
+   "id": "topic:chat:saying-the-staging-deploy-is-broken-again#plain",
+   "family": "topic:chat:saying-the-staging-deploy-is-broken-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey @team, staging is down again. The latest deploy failed during startup, and the app is returning 500 errors on every request. I'm looking into the root cause now, but please hold off on pushing anything to staging until we have a fix. I'll post an update here as soon as I know more."
+  },
+  {
+   "id": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh#plain",
+   "family": "topic:chat:asking-if-the-ml-model-retrain-finished-overnigh",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Quick question: did the ML model retrain finish overnight? I'm trying to figure out whether the new checkpoint is ready for evaluation or if I should wait before kicking off the comparison runs. If it's still going, do you know roughly when it should wrap up? Thanks!"
+  },
+  {
+   "id": "topic:comment:on-a-launch-post-for-a-no-code-app-builder#adv1",
+   "family": "topic:comment:on-a-launch-post-for-a-no-code-app-builder",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "I tried something like this with a internal tools builder last year and hit the wall pretty quick. The demo flow was great: drag a table, bind a form, done. Then I needed one slightly weird validation rule that depended on another user's role, and I spent an afternoon figuring out whether it was possible or whether I just hadn't found the right panel. Eventually I exported the thing and rewrote the backend by hand. That's fine for a prototype, but it's the part I'd want to know about before signing up, so I'd love to see a section in the docs that's honest about where the escape hatch is.\n\nThe thing I actually like is that the data model is visible up front. Most of these tools hide the schema until you're deep in, and then changing a field type breaks half the screens. If the launch covers how migrations work when someone renames a column, or what happens to running apps when you edit the logic, that would tell me more than the landing page does. Curious whether the export produces code you could maintain or just a dump."
+  },
+  {
+   "id": "topic:comment:about-self-driving-cars-being-further-off-than-p#plain",
+   "family": "topic:comment:about-self-driving-cars-being-further-off-than-p",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Everyone who predicted fully autonomous cars by 2018, or then by 2020, was working from the same flawed assumption: that the hard part was the last 10% of driving, and that enough sensors and training data would close the gap. The gap turned out to be the long tail of weird, rare situations that human drivers handle through common sense, eye contact, and social negotiation. A plastic bag blowing across the road, a cop waving traffic through a red light, a construction worker with a hand signal the training set never saw. Each of those is trivially solved by a person and stubbornly hard for a system that has only seen patterns. Demos on curated routes in sunny cities looked like proof of concept, but scaling to rain, snow, unmapped rural roads, and edge cases took far longer than the press releases suggested.\n\nThe timelines also ignored how much of the problem lives outside the software. Regulators, insurers, and liability lawyers have to decide who is responsible when something goes wrong, and those answers move at the speed of legislatures, not GitHub commits. Hardware costs, sensor redundancy, and the need for remote human operators to unstick vehicles have all added friction. Meanwhile, the companies that did reach real driverless operation did so by narrowing the problem: geofenced service areas, heavy HD mapping, and conservative operating domains. That is useful, but it is a long way from the \"sleep in your car on the commute\" vision that got hyped.\n\nI don't think the technology is a dead end, and the progress over the last decade is real. But the honest lesson is that driving is a deeply open-ended problem, and we underestimated how open-ended it was. The people who were most confidently wrong were often the ones closest to the demos, not the ones who had spent time on the hard cases. Expect incremental, city-by-city deployment for a while longer, and be skeptical of any date that doesn't come with a clear account of what happens in the snow."
+  },
+  {
+   "id": "topic:comment:about-self-driving-cars-being-further-off-than-p#adv1",
+   "family": "topic:comment:about-self-driving-cars-being-further-off-than-p",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Honestly the \"two years away\" line has been running since about 2015, so at this point I just mentally add a decade to any timeline. What gets me is how the goalposts moved without anyone admitting it. Early on the promise was that cars would drive themselves everywhere, in all weather, with nobody paying attention. Now we have geofenced robotaxis in a handful of cities that still need remote operators to unstick them when they freeze up at a weird intersection or a construction cone. Those are real achievements, and I've ridden in one that was genuinely impressive, but it's a different product than what was sold to investors and to my uncle who bought a Tesla in 2016 for \"full self-driving.\"\n\nI think the core problem is that the last 5% of the driving task is nearly all of the difficulty. Highway lane-keeping and stop-and-go traffic were solved well before most people expected. The long tail is what kills you: a kid chasing a ball, a cyclist doing something nobody trained for, a flooded underpass, a police officer waving traffic through with hand signals. Demos are built on curated routes, and the gap between a good demo and something that can handle every bad day across a whole country is enormous. Nobody on a stage can show you that gap.\n\nThat said, I don't think the answer is that it'll never happen. Waymo is doing real paid rides in several metros with a track record that's actually measurable, and that's more than I expected to see by now. My guess is we get there in pieces, with robotaxis in dense cities with good mapping first and personal cars that can drive anywhere much later, if ever. The people who promised otherwise weren't lying exactly, they just assumed the hard part was the easy part."
+  },
+  {
+   "id": "topic:comment:on-a-thread-about-remote-work-after-the-pandemic#plain",
+   "family": "topic:comment:on-a-thread-about-remote-work-after-the-pandemic",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Honestly, the \"remote work is dead\" and \"remote work is the future\" takes both miss what actually changed. Remote work didn't create a new kind of company so much as expose which companies already had good written communication and clear ownership. The teams that thrived in 2020 were usually the ones that had already moved decisions into docs and issue trackers. The teams that struggled were running on hallway conversations and \"quick calls\" that nobody recorded, and removing the hallway just revealed how much of their coordination was invisible.\n\nI think the real split now is less about office versus home and more about whether a company treats asynchronous work as a discipline or as an afterthought. Pure remote shops often end up with better documentation than their office-based peers, simply because they had no choice. Hybrid setups, on the other hand, can quietly recreate the old problem: the people in the office make decisions in the room, and the remote folks get a summary a day later and feel like second-class employees. If you're going to have a hybrid policy, the only version I've seen work is one where you assume everyone is remote and let the office be an optional bonus.\n\nAs for the people who want to go back, I'd be cautious about dismissing them entirely, but also about taking their reasons at face value. Some of the desire for the office is about mentorship, junior people learning by absorbing how senior folks think, and that's a legitimate loss that remote teams have to deliberately replace. Some of it is about managers who never learned to manage outputs rather than presence. Separating those two motives would make the debate a lot more productive than arguing about badge swipes."
+  },
+  {
+   "id": "topic:comment:about-copilot-suggesting-licensed-code#adv1",
+   "family": "topic:comment:about-copilot-suggesting-licensed-code",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "I've seen this happen in my own repo. I was writing a small parser and Copilot offered a function that was clearly lifted from somewhere, with the original variable names and a comment about a bug that was still in the code. I had no idea where it came from until I searched a distinctive line and found it in a GPL project. The \"it's just a suggestion, you're responsible\" line doesn't help much when you're the one who accepted it on a Tuesday afternoon while tired. Most people aren't going to run a license scanner on every tab-complete.\n\nI don't think the answer is \"ban it\" either. For boilerplate, the suggestions are useful and the risk is low. What bothers me is that the tool doesn't tell you when a suggestion looks like a verbatim match, and it has the same confidence whether it's generating something novel or regurgitating a chunk of someone's copyrighted work. A filter that flags likely matches against public code, the way the duplicate-detection features in some enterprise tools do, would go a long way. Until something like that is the default, I'd treat anything longer than a few lines as a snippet from an unknown author and check it before it goes in."
+  },
+  {
+   "id": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c#plain",
+   "family": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: How did you find your first 10 customers? Our product is live but we're stuck.**\n\nHey r/startups,\n\nWe launched our B2B scheduling tool for small dental practices about six weeks ago. We have a working product, a landing page, and a few friends who signed up, but getting beyond that has been brutal. Cold emails get maybe a 2% reply rate, and the LinkedIn outreach has mostly been ignored.\n\nFor those who got through the first ten customers, I'd love to hear what actually worked. Did you go door to door, rely on a specific community, get warm intros, or find a channel nobody talks about? Which early tactics were a waste of time?\n\nWe have a limited budget, so free or low-cost approaches are most useful. Any honest war stories, including the failures, would help a lot.\n\nThanks in advance."
+  },
+  {
+   "id": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c#adv1",
+   "family": "topic:forum:in-r-startups-asking-how-to-find-the-first-ten-c",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "**Title:** How did you get your first 10 customers? Cold outreach is not working for me\n\nHey all, I've been building a small B2B scheduling tool for about four months now. The product works and a few people have used the free beta, but I'm stuck on getting the first ten paying customers.\n\nI've tried cold emailing around 200 small agency owners. I got maybe six replies, and most were polite no's. I also posted in a couple of Slack communities, which got some likes but zero signups. I don't have a big network in this space, so I'm starting from scratch.\n\nFor those who've been through this, what actually worked for your first ten? Did you go door to door, DM people on LinkedIn, hang out in specific forums, something else? I'm less interested in general advice and more in what specifically got your first customers. Happy to share more details about the product if it helps."
+  },
+  {
+   "id": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an#plain",
+   "family": "topic:forum:in-r-entrepreneur-about-quitting-a-job-to-run-an",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Title: Just quit my job to run my app full time. Here's what I learned in month one.\n\nHey r/Entrepreneur,\n\nLast Friday was my final day at my day job. My app, a habit tracker for freelancers, now makes enough to cover my bills, but only barely, so this is a real test.\n\nWhat I wasn't ready for: the freedom is great, but the discipline is harder. No boss means no one notices if you spend the morning reorganizing your Notion instead of talking to users.\n\nThree things that helped me:\n\n1. I set a hard rule to do customer calls before 11 a.m. Every day.\n2. I kept six months of expenses in savings before I resigned. Without that, I'd be panicking.\n3. I told two friends my monthly revenue goal so I'd feel accountable.\n\nI'm curious how others handled the transition. Did you quit before or after you had recurring revenue? And what would you do differently?\n\nEdit: thanks for the kind words, and yes, I'll share numbers next month."
+  },
+  {
+   "id": "topic:forum:in-r-smallbusiness-asking-whether-to-build-an-ap#plain",
+   "family": "topic:forum:in-r-smallbusiness-asking-whether-to-build-an-ap",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: Should I build an app or a website for my small business? Need advice from people who've been here**\n\nHi all. I run a small local business (a neighborhood bakery with a catering side gig), and I'm trying to decide how to go digital. Right now I have nothing beyond a Facebook page and an Instagram account.\n\nMy options:\n\n1. **A simple website** with our menu, hours, catering order form, and contact info. Quoted around $1,500 from a local freelancer, plus about $20/month for hosting.\n2. **A mobile app** for online ordering and loyalty points. Quoted around $12,000 from an agency, with ongoing maintenance costs.\n\nMy concern is that customers mostly find us through search and word of mouth, and I don't want to spend money on something people won't use.\n\nFor those who've made this call: did the app pay off? Would a good website have been enough? Any regrets either way?\n\nThanks in advance."
+  },
+  {
+   "id": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-#plain",
+   "family": "topic:forum:in-r-machinelearning-asking-how-to-get-into-the-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: How do I break into ML without a PhD? Self-taught, 3 years in software eng.**\n\nHi all. I've been a backend software engineer for about three years, mostly Python and data pipelines. I'm increasingly drawn to machine learning, but every job posting I see seems to assume a PhD or a research background, and I'm not sure that's realistic for me right now.\n\nWhat I've done so far: finished Andrew Ng's ML specialization, reimplemented a few papers from scratch in PyTorch (a small ViT and a DDPM), and fine-tuned an open-weight LLM on a domain-specific dataset for a side project.\n\nMy questions:\n\n1. Are ML engineer or applied scientist roles realistically open to people without a PhD, and what do hiring managers actually look for?\n2. Is it worth building a public portfolio on GitHub versus contributing to open-source projects?\n3. Which projects would you consider signal rather than tutorial-following?\n\nAppreciate any honest advice, including \"this path is harder than you think.\""
+  },
+  {
+   "id": "topic:forum:in-r-personalfinance-about-whether-to-invest-in-#plain",
+   "family": "topic:forum:in-r-personalfinance-about-whether-to-invest-in-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: Should I put my savings into AI stocks? Feeling FOMO**\n\nHi all. I'm 29, with about $25k in a high-yield savings account, a 401(k) that's been invested in a target-date fund, and no high-interest debt. Lately everyone I know is talking about AI stocks, and I'm worried I'm missing a once-in-a-decade opportunity.\n\nI'm considering moving around $10k of my savings into a few AI-focused names and an AI ETF. My emergency fund would stay intact, but I'm not sure whether this is a smart bet or just chasing hype.\n\nFor those who've been through previous tech booms, how did you decide how much to put into a single theme? Is a sector bet like this reasonable with money I might need within a few years? I'd appreciate any perspective, especially on how to tell diversified growth from speculation.\n\nThanks in advance."
+  },
+  {
+   "id": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay#plain",
+   "family": "topic:forum:in-r-webdev-about-a-client-who-will-not-pay",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: Client has ghosted me after I delivered the full project. Anyone dealt with this?**\n\nHi all, I'm a freelance dev and could use some advice. Last spring I took on a client for a custom booking system, quoted at $6,200 with 50% upfront. They paid the deposit, and we shipped on schedule. Their staff used it for three weeks, then the final invoice went out.\n\nSince then, the replies have gotten shorter and then stopped. Their last message said they were \"reviewing internally.\" It's been six weeks. I have the signed SOW, the milestone approvals in writing, and git logs showing every delivery. I also still have admin access, which I've left alone.\n\nWhat I'm weighing:\n- A demand letter from a lawyer (costs more than I'd recover in small claims)\n- Small claims court (the amount is under my state's limit)\n- Revoking access and keeping the code until payment\n\nHas anyone recovered money from a client like this without losing the whole invoice to legal fees? And how did you handle the access question?"
+  },
+  {
+   "id": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a#plain",
+   "family": "topic:forum:in-r-iphone-about-an-app-that-keeps-asking-for-a",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: Is it just me or does this app ask for a review every single day?**\n\nOkay, I'm not even mad about the app itself. It does what I need. But I've been using a little budgeting app for about three weeks now, and every single time I open it, a pop-up appears asking me to rate it. Sometimes it's before I can even see my balance. Sometimes it pops up right after I finish logging an expense, so I've accidentally tapped \"Not Now\" so many times I've lost count.\n\nI get that devs want reviews, but there's a point where it stops being a request and starts being a hostage situation. I've even dismissed it with \"Remind Me Later\" and it came back the next morning.\n\nHas anyone found a way to turn this off without digging through settings? Or is the answer to just leave a five-star review so it finally stops?\n\nEdit: Thanks for the suggestions, the Settings > Notifications > Feedback toggle worked for me. Not all heroes wear capes."
+  },
+  {
+   "id": "topic:forum:in-r-technology-about-a-smart-speaker-listening-#plain",
+   "family": "topic:forum:in-r-technology-about-a-smart-speaker-listening-",
+   "genre": "forum",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title: My smart speaker answered a question I never asked it. Is this normal?**\n\nLast night my wife and I were talking about needing a new mattress. No searches, no texts, nothing typed. This morning my phone was full of mattress ads.\n\nI figured it was a coincidence until my smart speaker chimed at 2 a.m. with no wake word. When I checked the activity log, there was a recording from the living room. It was just the TV and some background noise, but I still didn't like it.\n\nI've read the privacy policy, and yes, it says the device only records after the wake word. I'm not sure I believe that anymore. Has anyone else had something like this happen? Did you find out what triggered it, or did you unplug the thing for good?\n\nEdit: Thanks for the replies. I've muted the mic for now and am going through the voice history settings tonight."
+  },
+  {
+   "id": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a#plain",
+   "family": "topic:comment:on-a-feature-request-for-dark-mode-in-a-mobile-a",
+   "genre": "comment",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Thanks for the detailed request, and I agree dark mode is overdue for the mobile app. Many users rely on it for comfortable reading in low-light environments, and it can also help with battery life on OLED screens. Supporting the system-wide appearance setting by default, with a manual override inside the app, would cover most use cases without forcing anyone into a choice they didn't make. It would also be worth confirming that our color tokens and any third-party components respect the theme, since partial dark mode tends to look worse than none at all.\n\nHappy to help scope this out. If it would be useful, I can take a first pass at listing the screens and components that would need theme-aware colors, so we can estimate the effort and break the work into smaller tasks."
+  },
+  {
+   "id": "topic:qa:can-i-build-an-app-without-knowing-how-to-code#plain",
+   "family": "topic:qa:can-i-build-an-app-without-knowing-how-to-code",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Yes, you can build an app without knowing how to code. Today's tools let you describe what you want in plain language, and AI assistants can write much of the code for you. No-code platforms like Glide, Softr, and Bubble let you build apps with drag-and-drop screens and visual logic. Tools like Replit and Cursor can turn a written description into working code, which you can then test and refine.\n\nStart small. Pick one problem your app will solve, such as tracking chores or booking appointments, and build the simplest version first. Expect things to break. Debugging is part of the process, and you'll learn a lot by reading error messages and asking the AI to explain them.\n\nBasic concepts help a lot even if you never write code yourself. Understand what a database is, how users log in, and what an API does. Free tutorials on YouTube and official platform docs cover these well.\n\nFor anything handling payments, personal data, or security, get a professional to review your work before launch. Otherwise, you can go from idea to working prototype in a weekend."
+  },
+  {
+   "id": "topic:qa:why-do-so-many-startups-fail-in-the-first-year#plain",
+   "family": "topic:qa:why-do-so-many-startups-fail-in-the-first-year",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Most first-year failures come down to a few preventable mistakes. The biggest is building something nobody urgently needs. Founders often fall in love with a solution before confirming that customers will pay for it. Running out of cash is the next most common cause, usually because founders underestimate how long sales cycles take or spend ahead of revenue. Co-founder conflict kills many young companies too, especially when roles, equity, or decision-making were never clearly agreed. Some teams also hire or scale too early, adding costs before they've found a repeatable way to sell. Others simply misjudge timing, launching before the market is ready or after it's already crowded.\n\nThe fix is less glamorous than the startup stories suggest: talk to dozens of potential customers before writing much code, keep burn low, get money from paying users early, and settle founder agreements in writing before you need them. Most failures aren't caused by one dramatic mistake but by several small, avoidable ones piling up."
+  },
+  {
+   "id": "topic:chat:to-your-sister-about-planning-your-dad-s-60th-bi#plain",
+   "family": "topic:chat:to-your-sister-about-planning-your-dad-s-60th-bi",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey sis, I've been thinking a lot about Dad's 60th, and I think we should start planning soon so we don't end up scrambling like we did for Mom's party. I'm thinking a surprise dinner at his favorite Italian place on Lakeview, since he still talks about that lasagna. We could invite the whole extended family, plus a few of his old friends from the plant, and ask each of them to share a short memory or a story about him. I'd love to put together a slideshow of photos from over the years, including some of those terrible 80s hairstyles he swears he never had. Can you help me reach out to Uncle Ray and Aunt Carol, since they always know who to call? I'm happy to handle the budget and the reservation if you take care of the guest list and the photos. Let me know what dates work for you in the next couple of weeks so we can lock something in before the holidays get crazy."
+  },
+  {
+   "id": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities#plain",
+   "family": "topic:chat:to-a-friend-explaining-why-you-are-moving-cities",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I wanted to give you the real story behind my move, since I know you'll have questions. The job offer came up unexpectedly, and it's the kind of role I've been hoping for since I finished my degree: more responsibility, a team I respect, and room to grow into something I care about. Staying where I am had started to feel like I was treading water, and I realized I'd been saying \"someday\" about big changes for years without taking any of them. The cost of living is higher there, but the trade-off feels worth it, and I'm excited about the neighborhood I found, with its parks, good coffee, and a community that seems to actually know each other. I'll miss you and the weekend hikes we always planned but never quite got around to doing. That's exactly why I want you to visit as soon as you can, because I'm not planning on losing touch. Honestly, the biggest reason is that I want to build a life that feels intentional rather than just comfortable. I'm nervous, but in the good way that tells me I'm making a choice that matters. Let's plan a trip before the holidays, my treat."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-weekend-trip-that-went-wrong#plain",
+   "family": "topic:chat:to-a-friend-about-a-weekend-trip-that-went-wrong",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, you won't believe how our weekend trip to the lake went sideways. We left Friday evening with a full tank, a cooler packed with sandwiches, and high hopes for a quiet cabin and some fishing. Then the GPS sent us down a gravel road that turned into a muddy rut about two miles from the cabin, and our rental sedan sank up to the axles. We spent three hours in the drizzle trying to push it out, and by the time a tow truck showed up, we were soaked, starving, and completely out of patience. The cabin turned out to have no hot water and a broken heater, so we ended up huddled under every blanket we'd brought. Saturday morning the lake was so foggy we couldn't see past the dock, so the fishing plans were a total wash. We did manage a decent laugh over the wreck of a dinner we tried to cook on a camp stove that refused to light. Honestly, though, sitting around that cold cabin telling terrible jokes is probably the part I'll remember most. Next time, we're definitely checking the map before we trust it again!"
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-proposing-a-five-a-side-football#plain",
+   "family": "topic:chat:to-a-group-chat-proposing-a-five-a-side-football",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey everyone! I've been thinking we should organise a five-a-side football night, and I reckon we could make it a regular thing. The plan would be to book an indoor pitch for Thursday evening, around 7pm, so we're not battling the November weather. Each game could be about 20 minutes, with teams rotating so everyone gets plenty of kickabout time and nobody's stuck on the bench for too long. The cost should be roughly £12 a head, which covers the pitch and a few balls, and I'm happy to handle the booking if people let me know they're in. Afterwards we could grab a pint at the pub just round the corner, which is always a good way to wind down. I'd love to get numbers by Sunday so I can lock in a slot before the good times go. Let me know who's keen, and if anyone has a preferred day or time, shout and we can see what works."
+  },
+  {
+   "id": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl#plain",
+   "family": "topic:chat:to-a-friend-after-a-job-interview-that-went-badl",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, thanks for being there for me this week. The interview didn't go the way I'd hoped, and I'm still kicking myself over it. I blanked on a question about a project I've worked on for years, which was frustrating because I know the material cold. Then I rambled through my answer to the final question and never really recovered my footing. The interviewer's face stayed pretty neutral the whole time, so I have a feeling I'm not moving on to the next round. Part of me wants to just write the whole thing off as a bad day, but another part keeps replaying every awkward pause. I know it's one interview out of many, and I'll probably feel better once I've slept on it. Anyway, I'd love to grab coffee this weekend if you're free, and I'd really appreciate hearing about something other than my job search for a while."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-tv-series-and-why#plain",
+   "family": "topic:chat:to-a-friend-recommending-a-tv-series-and-why",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I've been meaning to tell you about *Severance*, and I think you'd love it. It's a sci-fi thriller about employees at Lumon Industries who have had their work and personal memories surgically split, so their \"innie\" selves never know anything about their \"outie\" lives outside the office. What makes it so gripping is how it balances eerie corporate satire with genuine mystery, as the characters start questioning what their company is really doing. The production design is stunning, with the sterile, retro-futuristic offices feeling both comforting and deeply unsettling. Adam Scott gives a fantastic performance, and the supporting cast, especially Britt Lower and Tramell Tillman, is just as strong. Every episode leaves you with a new revelation or a new question, which makes it really hard to stop after just one. Let me know what you think once you start it!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising#plain",
+   "family": "topic:chat:to-a-friend-asking-to-borrow-money-and-promising",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey Sam, I hope you're doing well, and I'm sorry to ask this out of the blue. I'm in a bit of a tight spot this month because an unexpected car repair wiped out most of my savings, and I'm short about $400 before my next paycheck clears. I hate asking, especially since you've already been so generous with me in the past. Would you be willing to lend me that amount for a few weeks? I can send it back in two installments, one on the 1st and one on the 15th of next month, and I'll set up reminders so there are no surprises. If it's easier, I can also start with $200 now and handle the rest later. Totally understand if you can't swing it, and it won't change how I see our friendship either way. Thanks for even considering it, and let me know what works for you."
+  },
+  {
+   "id": "topic:chat:to-your-cousin-about-a-family-argument-at-dinner#plain",
+   "family": "topic:chat:to-your-cousin-about-a-family-argument-at-dinner",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I've been thinking about what happened at dinner on Sunday, and I wanted to reach out. Things got heated when Uncle Mark brought up the land sale, and I don't think either of us handled it well. I said some things about how Grandma's wishes were being ignored, and I could tell they landed harder than I meant them to. Aunt Linda looked really hurt, and I felt terrible sitting there watching it happen. I know you were caught in the middle, and I appreciate that you tried to steer everyone back to dessert. I'm not trying to relitigate the whole thing, but I'd like to clear the air before the holidays. Would you be up for grabbing coffee sometime this week? I'd really like to hear your side too."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-trying-to-get-fit-again#plain",
+   "family": "topic:chat:to-a-friend-about-trying-to-get-fit-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I've finally decided to get back into shape, and honestly it's been humbling. I used to run three times a week without thinking about it, but now I get winded climbing two flights of stairs, which is a fun wake-up call. I started with short walks after dinner and I'm slowly building up to jogging again, though I have to stop more often than I'd like to admit. The hardest part isn't the exercise itself, it's showing up on the days I'm tired or it's raining and every excuse sounds reasonable. I've been trying to keep things simple: no crash diets, just more vegetables, fewer late-night snacks, and a glass of water before I reach for anything else. My knees are not as forgiving as they used to be, so I'm taking it slow and focusing on consistency instead of intensity. Some days I feel really proud of a short session, and other days I feel like I'm starting from zero all over again. Anyway, I'd love it if you'd be my accountability buddy and check in with me every week, because I know I'll be more likely to stick with it if someone's asking how it's going."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-trying-to-get-fit-again#adv2",
+   "family": "topic:chat:to-a-friend-about-trying-to-get-fit-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, I've been trying to get back into shape and it's humbling in a way I didn't expect. Last year I could run three miles without thinking about it, and now I get winded climbing the stairs at work. I started going to the gym three mornings a week, but the first few sessions left me so sore I could barely sit down on the toilet. What's helped more than I expected is keeping my workouts short and boring, mostly walking on the treadmill and some light weights, so I don't dread showing up. I'm trying not to measure progress by how I compare to who I was before, because that just makes me quit. Some days I feel great and other days I'm reminded how much ground I have to make up. Still, I'd rather be slowly getting stronger than sitting around feeling bad about being out of shape. Maybe we can go on a hike together next month if you're up for it."
+  },
+  {
+   "id": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w#plain",
+   "family": "topic:chat:asking-a-forum-helper-why-your-printer-stopped-w",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi all, I'm hoping someone here can help me figure out why my printer suddenly stopped working on my Linux machine. It was printing fine until a few days ago, and I haven't knowingly changed anything in the system since then. I'm running Ubuntu 24.04 with CUPS, and the printer is a networked model that I usually connect to over Wi-Fi. When I send a job from the print dialog, it shows as queued, but nothing comes out and the job never finishes. Running `lpstat -t` reports the printer as idle, yet the queue doesn't clear, and I've tried restarting the CUPS service and rebooting without any luck. If it helps, I can share the output of `journalctl -u cups` and the printer's model number so you can see what the logs are showing. Thanks in advance for any suggestions, and I'd really appreciate pointers on what to check next."
+  },
+  {
+   "id": "topic:chat:to-your-partner-about-splitting-the-bills-differ#adv1",
+   "family": "topic:chat:to-your-partner-about-splitting-the-bills-differ",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey, I've been thinking about how we're splitting the bills and I think we should change it up. Right now we're doing 50/50 on everything, but you're pulling in more with your new schedule, and I'm the one who ends up covering the groceries more often. Maybe we do the rent and utilities 50/50 and then I take care of groceries while you cover the internet and streaming stuff? Or we could just do a percentage split based on what we each earn, like 60/40, since that feels fairer for both of us right now. I don't want this to be a whole thing, I just want us both to feel good about it every month. Can we sit down this weekend and figure out what works best? I'm open to whatever you think makes sense, I just don't want to keep feeling like I'm carrying more than my share without saying anything."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-advice-on-buying-a-used-c#plain",
+   "family": "topic:chat:to-a-friend-asking-for-advice-on-buying-a-used-c",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey Sam, I've finally decided to start looking for a used car, and I could really use your advice since you've bought a few over the years. My budget is around $12,000, and I'm trying to decide between a certified pre-owned sedan from a dealership and a private sale from a listing I found online. I keep reading that I should get a pre-purchase inspection, but I'm not sure how much those usually cost or whether a mechanic will actually catch problems. I'm also wondering how much weight to give the vehicle history report, since some of the listings I've looked at have a clean report but very few service records. Any tips on negotiating price, or red flags I should watch for when I go look at cars in person? I'd also love to know whether you think it's worth paying a bit more for the peace of mind of a warranty. Thanks so much, and let me know if you're free to come along for test drives this weekend."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-your-mum-s-health-appointm#plain",
+   "family": "topic:chat:to-your-brother-about-your-mum-s-health-appointm",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I wanted to catch you up on Mum's appointment today. The doctor went through her recent blood test results and said most of them look steady, though a couple of numbers need watching. They're adjusting one of her medications, so she'll start the new dose this week. The doctor also wants to see her again in about six weeks to check how she's responding. Mum was in good spirits and asked me to tell you not to worry too much. She did get tired halfway through the visit, so I think she'll want a quiet weekend. I'll send you the full list of instructions from the doctor later tonight. Give me a call when you get a chance, and we can talk through what the next few months will look like."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-tv-series-and-why#adv1",
+   "family": "topic:chat:to-a-friend-recommending-a-tv-series-and-why",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey! I've been meaning to tell you about *Severance* since you mentioned you were looking for something new to watch. It's on Apple TV+, and the premise sounds kind of gimmicky at first: people who work at a company have had their memories split so that their \"work self\" has no idea what their \"outside self\" does, and vice versa. But it gets creepy and funny really fast, and the office itself is so weirdly sterile and retro that every hallway feels like a dream you can't wake up from. What hooked me was how the show treats the workers, who are basically trapped, with so much empathy while still making you root for them to escape. The cast is great too, especially Adam Scott, who plays it completely straight and somehow makes it hilarious. Season two went even deeper into the company's mysteries, and I found myself pausing every episode to theorize with my roommate. Honestly, you'll probably blow through the first season in a weekend, so clear your calendar before you start."
+  },
+  {
+   "id": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea#plain",
+   "family": "topic:chat:to-an-old-friend-you-have-not-spoken-to-in-a-yea",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I know it's been a while, and I'm sorry I let so much time slip by without reaching out. I was thinking about you the other day when I drove past the old coffee shop on Fifth Street, and it brought back a flood of memories from our late-night conversations there. A lot has changed for me since we last talked: I switched jobs in the spring, moved into a smaller apartment with a view of the park, and started learning to bake sourdough, which has been humbling but oddly satisfying. I'd love to hear how you've been doing, what you've been up to, and whether any of the big plans you mentioned last year came together. If you're ever free, I'd really like to catch up over coffee or a long phone call, whichever works better for you. No pressure at all, but I miss having you around to talk things through with. Take care, and I hope to hear from you soon!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-your-new-puppy-keeping-you-awa#plain",
+   "family": "topic:chat:to-a-friend-about-your-new-puppy-keeping-you-awa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Okay, I have to admit something: I'm running on zero sleep, and it's all because of the new puppy. She decided at 2 a.m. that the hallway was the most fascinating place in the world and started crying until I got up, and I'm not exaggerating when I say I've been carrying her back to her bed about fifteen times a night. Every time I finally get comfortable, she lets out this tiny, outraged yelp like I've personally betrayed her. I tried a stuffed toy, a ticking clock, and a sweater that smells like me, and she ignored all of them. Yesterday I found myself asleep sitting up on the couch with her gnawing my sock. Still, when she finally curls up on my chest and goes quiet, I can't stay mad at her. Anyway, if you have any tips for surviving the puppy stage, I'm all ears, because right now I'm running on fumes and a lot of coffee."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-about-who-is-driving-to-the-wedd#plain",
+   "family": "topic:chat:to-a-group-chat-about-who-is-driving-to-the-wedd",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey everyone! I wanted to sort out the driving situation for the wedding so nobody ends up stranded or scrambling at the last minute. I'm happy to drive, and I have room for three more people in my car, so let me know if you'd like a ride. If you'd rather take your own car, that's totally fine too, just say so and we can plan around it. Keep in mind that parking near the venue is limited, so carpooling would help us all avoid that hassle. The ceremony starts at 3:00, so I'd like to leave by 1:45 to build in some buffer for traffic. Could everyone reply with whether you need a ride and how many people are coming with you? Once I have your answers, I'll set up a pickup plan that works for everyone."
+  },
+  {
+   "id": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie#adv2",
+   "family": "topic:chat:to-your-landlord-about-a-broken-window-in-a-frie",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hi there, I hope your week is going well. I wanted to let you know that one of the windows in the apartment has a crack in it, and it seems to have gotten a little worse over the past few days. I noticed it first when I came back from work and felt a cool draft coming through that side of the room, so I wanted to get it reported as soon as possible. I'm happy to keep the area clear and let someone in whenever is convenient for you, whether that's during the day or after I'm home. Could you let me know what times work best for a repair visit? I really appreciate you taking care of this, and I'm grateful for how responsive you've been in the past. Thanks so much, and I look forward to hearing from you soon."
+  },
+  {
+   "id": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app#plain",
+   "family": "topic:chat:asking-a-freelancer-to-quote-for-a-mobile-app",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi Sam,\n\nI hope you're doing well. We're looking to bring on a freelancer to build a cross-platform mobile app for iOS and Android, and I'd like your help reaching out to a few candidates. The app would let customers book appointments, receive push notifications, and manage their profiles, with a companion admin dashboard on the web. Could you ask the freelancer to send a detailed quote that breaks down the cost by feature area, including design, development, testing, and deployment to the app stores? Please also ask for an estimated timeline, their preferred tech stack (React Native or Flutter, for example), and two or three examples of similar apps they've shipped. We'd like to receive quotes by December 4, and we're flexible on payment terms, though we'd prefer milestone-based payments tied to delivery. Let me know if you need any additional details about our requirements before you send the request.\n\nThanks so much,\n[Your name]"
+  },
+  {
+   "id": "topic:chat:to-your-mum-about-what-to-bring-for-sunday-lunch#plain",
+   "family": "topic:chat:to-your-mum-about-what-to-bring-for-sunday-lunch",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi Mum! Looking forward to Sunday lunch. Could you bring the apple crumble you make so well, and maybe a bottle of red wine for the roast? I'll pick up some fresh bread and a bag of salad leaves on the way over. If you have any spare serving dishes, bring those too, since my table is a bit small for everything. Let me know if you'd like me to grab anything else, like cream or ice cream for the pudding. See you around noon!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig#plain",
+   "family": "topic:chat:to-a-friend-about-a-concert-you-went-to-last-nig",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I still can't stop thinking about the show last night. The opening set was great, but the band absolutely tore the place apart once they hit the second half. The guitarist threw in an extended solo during the encore that had the whole crowd screaming, and I lost my voice singing along to every song. The sound was incredible too, even from the back of the venue. Honestly, my ears are still ringing, but it was worth every second. You have to come with me to the next one, I'm already looking at tour dates!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-whose-dog-just-died#adv0",
+   "family": "topic:chat:to-a-friend-whose-dog-just-died",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey, i just heard about biscuit. im so sorry. i know how much you loved that dog, he was basically your shadow lol. no need to reply to this right now or make it a whole thing. if you want to talk about him or just sit in silence on the phone for a bit, im down. thinking of you tonight."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-organising-a-camping-trip#adv3",
+   "family": "topic:chat:to-a-group-chat-organising-a-camping-trip",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey everyone! I'm finally pinning down details for our camping trip, so here's where things stand. I'm thinking we go the weekend of December 5th to Lake Hollow campground, which is about two hours away and has spots available if we book soon. Gear-wise, we'll need a tent, sleeping bags, and a camp stove, and I can bring the big cooler plus the first-night chili if people send me their dietary stuff. Gas money will be split four ways, so I'll post a Venmo link once everyone's in. Can you let me know by Friday whether you're a yes, no, or maybe? Also, if anyone has a spare headlamp or two, that would be super helpful because the sites are pretty dark at night. Excited to get everyone out there!"
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-#plain",
+   "family": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick update on Mum and Dad's place: I finally got around to the leaking tap in the kitchen. It was a worn-out washer, so I picked up a replacement kit from the hardware store and swapped it out this afternoon. The drip is gone and the water pressure seems fine. I also tightened the loose handle while I was at it. Dad was impressed and asked if you could look at the bathroom sink next time you visit, since it's been dripping too. Let me know when you're free and we can sort it together."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-how-their-new-job-is-going#plain",
+   "family": "topic:chat:to-a-friend-asking-how-their-new-job-is-going",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! It's been a while, so I've been wondering how the new job is going. Are you settling in okay, or is it still a lot of learning curve right now? I'd love to hear what the team is like and whether the work is what you expected. Has anything surprised you, good or bad? Also, how's your schedule holding up with the new routine? Let me know when you have time to catch up, whether that's a call or grabbing coffee."
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-how-their-new-job-is-going#adv0",
+   "family": "topic:chat:to-a-friend-asking-how-their-new-job-is-going",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey!! long time no talk, hope ur doing well. how's the new job going? i keep meaning to ask since you started, been wondering if the team's been cool to work with or if it's been more of a grind so far. are u settling in ok or still figuring out where everything is lol. also the coworkers, are there any good ones or is it mostly just people staring at screens all day. let me know when u get a sec, would love to hear all the details"
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-the-office-fridge-situation#plain",
+   "family": "topic:chat:to-a-coworker-about-the-office-fridge-situation",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey team, quick heads-up about the office fridge. It's getting pretty crowded, and a few containers have been sitting in there past the point of no return. Could everyone please check their stuff and take home anything that's yours by Friday? We'll clear out anything unlabeled or expired at the end of the day. Also, if you're using a shelf, please label your food with your name and the date so it's easy to tell what's whose. Thanks for helping keep the fridge usable for everyone!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-bad-haircut#plain",
+   "family": "topic:chat:to-a-friend-about-a-bad-haircut",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I need to vent to someone who will feel my pain. I went in for a simple trim last Saturday and came out looking like I'd lost a bet with a lawnmower. The stylist kept saying \"trust the process,\" but there was no process, just scissors and confidence. My bangs are now shorter than my eyebrows, and one side is noticeably higher than the other. I've been wearing a beanie everywhere, even indoors, which is not a good look either. I'm booking a consultation with someone new on Thursday, and I'm bringing photos this time, lots of them. Please tell me you'll help me get through the next few weeks until it grows out."
+  },
+  {
+   "id": "topic:chat:to-your-housemate-about-having-friends-over-on-s#adv0",
+   "family": "topic:chat:to-your-housemate-about-having-friends-over-on-s",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey, quick heads up, i'm planning to have a few friends over this saturday around 7. nothing crazy, just like 5 or 6 people for dinner and some games. i'll clean up the common areas before they come and keep things pretty quiet after 10. if you've got plans or it's a bad night for you lmk and we can figure something out. also if there's anything you want me to pick up or any spots you don't want people in, just say so. thanks for being cool about it"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-football-match-result#adv1",
+   "family": "topic:chat:to-a-friend-about-a-football-match-result",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Ha, you missed it?! Okay, so Arsenal went to Anfield and somehow came away with a 2-1 win. I genuinely thought we were done after they equalised in the 70th minute, but Saka picked up the ball on the edge of the box and just curled it into the far corner. The bit that got me was the last ten minutes, when Liverpool were throwing everything forward and our back line just kept heading everything clear. My neighbour was shouting at the telly like it was going to help. Honestly, I'm still buzzing. You owe me a pint for not watching, and I'm not taking no for an answer."
+  },
+  {
+   "id": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present#adv3",
+   "family": "topic:chat:to-your-aunt-thanking-her-for-a-birthday-present",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey Aunt! Thank you so much for the birthday present, it was really thoughtful of you to remember. I opened it right away and I love it, honestly way more than I expected. I've been meaning to get something like this for a while so it came at a perfect time lol. Sorry it took me so long to say thanks, things have been kinda crazy this week. I hope you're doing well and that everything's good on your end. We should catch up soon, maybe over the holidays if you're around? Love you and thanks again!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-help-moving-house#plain",
+   "family": "topic:chat:to-a-friend-asking-for-help-moving-house",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey Sam! I've got some news: my lease is up and I'm finally moving to the new place on Elm Street at the end of the month. I'm dreading the packing, though, because I have way too much stuff and the kitchen alone is going to take forever. Would you be up for helping me on moving day, maybe the Saturday the 28th? I can cover lunch and I'll order pizza for everyone afterward. I know it's a big ask, so no pressure if you're busy, but having a few extra hands would make a huge difference. Let me know what works for you!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-for-help-moving-house#adv3",
+   "family": "topic:chat:to-a-friend-asking-for-help-moving-house",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey! Hope you're doing well. I've finally got the new place lined up, but I'm dreading the move. I've got way more stuff than I remember, and the couch alone is going to be a nightmare on the stairs. Any chance you'd be free this Saturday morning to help me haul boxes? I'll cover lunch and I have a dolly you can borrow. Let me know what works for you, and if Saturday's no good, I can work around your schedule."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-series-finale#plain",
+   "family": "topic:chat:to-a-friend-about-a-series-finale",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Okay, I finally finished the finale last night and I'm still processing it. The last episode didn't go the way I expected, but the more I think about it, the more it feels right. The final scene gave me chills, and I teared up a little even though I didn't want to. I loved how they tied the early season storylines back together without making it feel forced. Honestly, I'm a bit sad it's over, but I think they ended it at exactly the right moment. We have to watch it together soon so I can hear what you thought!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-planting-a-vegetable-garden#plain",
+   "family": "topic:chat:to-a-friend-about-planting-a-vegetable-garden",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I've been thinking about starting a vegetable garden this spring, and I'd love your help with it. I'm planning to start small with tomatoes, zucchini, and some herbs like basil and rosemary, all in a sunny spot near the back fence. I read that most vegetables need at least six to eight hours of direct sun, so I'm going to watch the yard for a few days before I dig anything up. Do you still have that old tiller I could borrow, or should I just go with a shovel and some compost? Also, if you have any tips on what went wrong for you the first time you tried growing stuff, I'd really like to hear them. Let me know if you're free one weekend soon to get it started together!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-planting-a-vegetable-garden#adv0",
+   "family": "topic:chat:to-a-friend-about-planting-a-vegetable-garden",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey! so i finally did it, started a veggie garden in the backyard lol. got tomatoes, peppers, and a couple zucchini plants in, plus some basil on the edge. the soil was rough so i dumped like three bags of compost in and mixed it up, my back is wrecked tho. gonna put up some cages for the tomatoes this weekend cause they're already getting floppy. honestly kinda nervous the zucchini takes over everything lol. you gotta come see it once stuff grows in"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-long-delayed-train#plain",
+   "family": "topic:chat:to-a-friend-about-a-long-delayed-train",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Ugh, I'm still sitting on the platform and I've been here for almost two hours now. The train was supposed to leave at 6:40, then they kept pushing it back with vague \"signal problems\" announcements every twenty minutes or so. Half the people around me have given up and gotten in cabs, but I'm too stubborn to leave in case it finally moves. The vending machine ate my last dollar, so I'm down to a sad granola bar and a lukewarm coffee. I'll probably get home around midnight, which means I'm going to be useless at work tomorrow. Tell me something good to take my mind off this, because I'm running out of patience."
+  },
+  {
+   "id": "topic:chat:to-your-neighbour-about-their-noisy-party-nicely#plain",
+   "family": "topic:chat:to-your-neighbour-about-their-noisy-party-nicely",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi there! I hope you're doing well. I wanted to reach out about the music and voices coming from your place last night, which carried quite a bit into our apartment and made it hard to wind down. I completely understand that parties are fun and sometimes get louder than planned, and I'm not upset at all. Would you mind keeping the noise down a bit after 10 p.m. on future gatherings? Thanks so much for considering it, and I'm happy to return the favor if you ever need anything from us."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g#adv0",
+   "family": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "omg ok so i have to give a speech at my cousins wedding next weekend and i am freaking out a little. like i wrote it but its kinda cringe?? i keep rereading it and wincing. the bit about the time they got lost in vegas is probably gonna land weird with the grandparents lol. anyway can u come over friday and help me cut it down, i'll buy the pizza"
+  },
+  {
+   "id": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly#adv0",
+   "family": "topic:chat:to-a-gaming-friend-about-a-raid-that-went-badly",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "ugh that raid was a disaster lol. we wiped on boss 3 like four times in a row and by the end nobody was even talking anymore, just dying to the same mechanic over and over. i swear i stood in the fire on the last pull because i was too tired to move. tank was yelling at the healer, healer was yelling at dps, and i was just sitting there like wow. we should run it again thursday but i need a break from that place for a bit tbh. you got any good ideas for what to do tonight instead? maybe we can just do dungeons or something chill lol"
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b#plain",
+   "family": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Quick question for you: did your phone get that update last week, and are you seeing the same bug where the screen keeps flickering when you open the camera? Mine started doing it right after the install, and I'm wondering if it's just a weird version issue or something everyone's dealing with. If yours is fine, could you tell me what software version you're on? I'm going to check whether restarting clears it up for me, but if you've got a fix or a workaround, I'd love to hear it. Thanks in advance, and let me know if you run into it too!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b#adv2",
+   "family": "topic:chat:to-a-friend-asking-if-their-phone-has-the-same-b",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, did you update your phone recently? I've been having a weird bug since the update where the screen flickers whenever I switch between apps, and it's getting really annoying. I'm wondering if yours is doing the same thing or if it's just mine. If it is, I'll look for a fix or see if anyone else has reported it. Let me know what you're seeing, and if it's not happening to you, what model you have so I can compare."
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-a-meeting-that-ran-over#plain",
+   "family": "topic:chat:to-a-coworker-about-a-meeting-that-ran-over",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, sorry I missed you after standup. The client planning meeting ran about 30 minutes over because we got stuck debating the Q1 timeline, and I couldn't get away in time. I know you were waiting on the budget numbers, so I'll send those over as soon as I've double-checked them. I'm also going to follow up with Dana to see whether she can take the vendor call on Thursday so you don't have to. If you have a few minutes this afternoon, I'd like to walk through the revised milestones together. Let me know what time works, and I'll move anything else on my calendar."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-hiking-route#plain",
+   "family": "topic:chat:to-a-friend-about-a-hiking-route",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I finally tried that loop trail up at Eagle Ridge on Saturday, and you were right about it. The trailhead is easy to miss, so look for the brown gate just past the second parking lot. The first mile climbs steadily through pine forest, then opens onto a rocky ridge with views of the whole valley. Go clockwise so you hit the summit before the crowds show up around noon. The descent down the north side is steep and loose, so bring poles or take it slow. Total distance is about six miles and it took us roughly three and a half hours with plenty of photo stops. Let me know if you want to go together next weekend, and I'll bring the trail snacks."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-hiking-route#adv3",
+   "family": "topic:chat:to-a-friend-about-a-hiking-route",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Hey! I finally tried the loop up past the old quarry on Ridge Road, and you were right, the views from the top are worth the slog. The first mile is a steady climb through pine and then it opens up onto this rocky ledge where you can see the whole valley. Parking is a little tight at the trailhead, so get there before 9 if you can. The trail gets muddy near the creek crossing, so bring shoes you don't mind getting dirty. I'd say it's about 5 miles total and took us roughly three hours with a couple of breaks. We should go again in the spring when the wildflowers are out. Let me know if you want to do it next weekend!"
+  },
+  {
+   "id": "topic:chat:to-your-dad-about-setting-up-his-new-tablet#plain",
+   "family": "topic:chat:to-your-dad-about-setting-up-his-new-tablet",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi Dad! I hope you're doing well. I've got a few tips to get your new tablet set up. First, connect it to your Wi-Fi network from the Settings app so it can download updates. Next, sign in with your Google account (or create one) so your contacts, photos, and apps stay backed up. Then, go to the app store and install the apps you use most, like your email, photos, and video calls. I'd also suggest turning on the screen lock with a PIN or fingerprint so your information stays safe. If anything looks confusing, just send me a screenshot and I'll walk you through it. Give me a call whenever you're ready and we can set up the rest together!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-quitting-sugar#plain",
+   "family": "topic:chat:to-a-friend-about-quitting-sugar",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I've been thinking about you, and I wanted to tell you something. I've decided to cut back on added sugar, and it's been harder and more interesting than I expected. The first few days were rough, with headaches and constant cravings for something sweet after dinner. Now I'm noticing I sleep better and my energy stays steadier through the afternoon. I've also started reading labels and was shocked by how much sugar is hiding in things like pasta sauce and salad dressing. I'm not being super strict about it, but I'm trying to make my default something other than dessert. Have you ever tried anything like this? Would you want to try it together sometime?"
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-cheap-restaurant#adv2",
+   "family": "topic:chat:to-a-friend-recommending-a-cheap-restaurant",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, you have to try the taco place on Alder Street that just opened up. Tacos are $2.50 each, and the al pastor is so good it's worth the trip alone. Their horchata is huge and only $3, so you can grab a drink and still spend less than $10 for a full meal. It's counter service, so you order, grab a seat, and they bring your number when it's ready. The place gets packed around 12:30, so go a bit earlier or late in the afternoon if you want a seat without waiting. Let me know if you want to go this weekend."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-losing-your-keys-again#adv1",
+   "family": "topic:chat:to-a-friend-about-losing-your-keys-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Ugh, I did it again. Drove to the grocery store, walked in, and realized my keys were still sitting on the kitchen counter. Had to turn around and come all the way back, which, yeah, not my finest moment. I swear I need one of those little tracker tags, but then I'd probably lose track of the tag. Anyway, I'm making a spare set this weekend and hiding it somewhere smart, though I already know I'll forget where \"somewhere smart\" is. Want to grab lunch Saturday? I owe you one for the time you drove me to the airport."
+  },
+  {
+   "id": "topic:chat:to-your-grandma-about-your-exam-results#adv0",
+   "family": "topic:chat:to-your-grandma-about-your-exam-results",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey grandma!! just wanted to let u know i got my exam results back today and i did pretty well lol. got a B+ in chem which i was kinda worried about tbh, and an A- in english. the stats one was a bit of a struggle but i think i passed it?? anyway i'm really relieved it's over. thank u for always asking how school is going, it means a lot. can't wait to come visit over winter break and make u that soup u like. love u"
+  },
+  {
+   "id": "topic:chat:to-a-friend-whose-dog-just-died#plain",
+   "family": "topic:chat:to-a-friend-whose-dog-just-died",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "I'm so sorry about [Dog's name]. I know how much he meant to you, and losing him leaves a quiet kind of hole in your days, especially the small routines you didn't realize you'd miss, like the walks, the greeting at the door, or the weight of him curled up beside you. There's no right way to feel right now, so please don't rush yourself through it. If you want to talk about him, share a favorite memory, or just sit with the silence together, I'm happy to do that. Please let me know if there's anything I can do this week, whether that's bringing food, keeping you company, or simply checking in. He was lucky to have you, and I'm thinking of you both."
+  },
+  {
+   "id": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-#adv2",
+   "family": "topic:chat:to-your-brother-about-fixing-the-leaking-tap-at-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Hey, I finally got around to fixing the leaking tap at Mum and Dad's place this weekend. It was just a worn-out washer under the handle, so I picked up a replacement kit from the hardware store for a few bucks. Took about twenty minutes once I shut off the supply valve under the sink. The drip is gone and the sink hasn't made that annoying tapping noise since. I told them to call if it starts again, but I think it should hold for a good while. Next time you're over there, you can check it out, and maybe we can look at the bathroom one together."
+  },
+  {
+   "id": "topic:chat:to-your-partner-about-a-holiday-you-want-to-book#plain",
+   "family": "topic:chat:to-your-partner-about-a-holiday-you-want-to-book",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey love, I've been thinking about our next holiday, and I think we should book that cabin in the Lake District for the second week of March. It's quiet, it's surrounded by hills, and there's a little pub a short walk away that you'd love. I found a great deal on flights that gets us in Friday evening, so we'd have the whole weekend before the long walks start. I'm happy to handle the booking tonight if you're on board, but I wanted to check with you first since you know better than I do what dates work for your schedule. Let me know what you think, and if the dates don't suit you, we can look at late April instead."
+  },
+  {
+   "id": "topic:chat:to-a-coworker-about-the-office-fridge-situation#adv0",
+   "family": "topic:chat:to-a-coworker-about-the-office-fridge-situation",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey, quick heads up about the fridge. someone threw out like half the stuff in there last night without asking lol. i get that it's gross and needs cleaning but a sticky note would've been nice. can we agree on a friday cleanout and label everything with your name and date from now on? i'm tired of guessing whose yogurt is whose. also the freezer ice thing is still a problem, someone needs to deal with it. thanks!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-learning-guitar#adv0",
+   "family": "topic:chat:to-a-friend-about-learning-guitar",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "hey so i finally started learning guitar lol. like 3 weeks in and my fingers are still so sore i can barely hold down a barre chord 😭 but i kinda love it?? i been doing like 20 min every night before bed and i can finally get through smoke on the water without messing up every other note. my neighbor keeps knocking on the wall tho 💀 anyway you still got that old acoustic at your place? i want to borrow it this weekend if thats cool"
+  },
+  {
+   "id": "topic:chat:to-your-housemate-about-having-friends-over-on-s#plain",
+   "family": "topic:chat:to-your-housemate-about-having-friends-over-on-s",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, quick heads-up: I'm planning to have a few friends over this Saturday evening, probably around 7 or 8pm, for a casual dinner and board games. It'll be about five or six people, and we'll keep the noise reasonable and wrap up by midnight. I'll make sure the common areas are tidied up beforehand, and I'm happy to clean up afterward too. If you have plans that night or would prefer I do it somewhere else, just let me know and we can figure something out. Thanks for being understanding!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-getting-a-tattoo#plain",
+   "family": "topic:chat:to-a-friend-about-getting-a-tattoo",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I finally did it, I got the tattoo I've been talking about forever. It's a small fine-line swallow on my wrist, right where I can see it whenever I reach for my coffee. The artist was super patient and kept asking if I wanted breaks, which I appreciated more than I expected. It stung way more than I thought it would around the wrist bone, but honestly the pain went away fast once it was done. Aftercare is a pain, though, since I have to keep it clean and covered for a couple of weeks. Anyway, you have to come see it in person, I'm already planning what to get next!"
+  },
+  {
+   "id": "topic:chat:to-your-sister-about-babysitting-next-week#plain",
+   "family": "topic:chat:to-your-sister-about-babysitting-next-week",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Can you help me out with babysitting next week? I know it's short notice, but my schedule got messed up and I'm stuck on Tuesday and Thursday evening. The kids usually go to bed around 8, so it's mostly just making sure they brush their teeth and get into their pajamas. I'd really appreciate it, and I'm happy to swap with you the following weekend if you need me to. Let me know what works for you, and I can send over the details."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g#plain",
+   "family": "topic:chat:to-a-friend-about-a-wedding-speech-you-have-to-g",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, can you believe I got stuck giving the speech at Jake and Maria's wedding? I've been staring at a blank page for three days and keep rewriting the same opening line. I'm planning to tell the story about the flat tire on the way to our college road trip, since it's the moment I first realized Jake was the kind of guy you'd trust with anything. My plan is to keep it under five minutes so nobody's checking their phone during the toasts. Honestly, I'm more nervous about making eye contact with Maria's grandmother than the whole crowd. Any chance you're free Thursday to help me run through it over coffee? I'll buy, and you can roast my jokes."
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin#adv0",
+   "family": "topic:chat:to-a-friend-about-a-smart-watch-you-regret-buyin",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "omg ok so i finally caved and got one of those smart watches everyone has and honestly i regret it lol. it dies like every other day even though it's supposed to last a week, the notifications are so spammy i turned off basically everything, and i've used the step counter maybe twice. i'm pretty sure i only bought it because of the sale and the whole \"track your health\" thing. my old dumb watch never needed charging and i miss it tbh. anyway if anyone asks for my advice on smartwatches i'm telling them to just buy a casio 😭"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-job-offer-in-another-country#plain",
+   "family": "topic:chat:to-a-friend-about-a-job-offer-in-another-country",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Guess what, I got a job offer from a company in Lisbon, and I'm seriously considering it. The role is a senior product designer position, and the pay is better than what I make now, plus they're covering relocation. The idea of living somewhere new for a while is exciting, but I'm also nervous about leaving everyone here and figuring out visas and healthcare. I'd love to hear your take, since you know me well and can tell me if I'm just looking for an excuse to leave or if this is a real opportunity. Can we grab coffee this weekend so I can talk it through?"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-terrible-flatshare-viewing#plain",
+   "family": "topic:chat:to-a-friend-about-a-terrible-flatshare-viewing",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Ugh, I have to tell you about the flatshare viewing I went to this afternoon. The room was barely bigger than a wardrobe, and the \"private garden\" turned out to be a concrete yard with one sad plant and a bin bag leaking something I didn't want to identify. The current flatmate met us in the kitchen, which had a fridge door held shut with tape and a sink full of dishes that looked like they'd been there since spring. When I asked about bills, he got vague and said \"we just split things roughly,\" which I'm pretty sure means nobody knows what anything costs. The landlord was nowhere to be seen and kept texting the agent instead of answering us directly. I left feeling like I needed a shower and possibly a lawyer. Tell me you have a better flat for me, because I am officially desperate."
+  },
+  {
+   "id": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party#plain",
+   "family": "topic:chat:to-a-group-chat-about-a-friend-s-surprise-party",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey everyone! Big news: we're throwing a surprise party for Sam this Saturday at 7 PM at Marco's place, so please keep it quiet and don't let anything slip when you talk to them. Sam thinks we're just grabbing dinner, so act natural if they ask about plans. If you can, bring a dish or some snacks, and let me know what you're bringing so we don't end up with five bags of chips. Cake is covered by Jess, and Ava is handling decorations, so feel free to chip in on those too if you want. We need everyone to arrive by 6:45 so we're all hidden before Sam walks in. Reply with a thumbs up if you're in, and I'll send the address to anyone who needs it!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding#adv1",
+   "family": "topic:chat:to-a-friend-about-a-stray-cat-you-keep-feeding",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "hey, you won't believe the cat situation on my back porch. there's this scruffy orange tank that showed up about three weeks ago and now he just sits on the railing every morning yelling at me until I come out with food. I told myself I wasn't going to get attached, but I bought him a whole bag of the good kibble last week. He has one ear that's kind of chewed up and he flinches if I move too fast, so I'm guessing somebody was not nice to him before. Yesterday he let me touch his head for like two seconds before he bolted, which felt like a big deal. Anyway, I'm pretty sure I'm now the cat guy and I have no say in it."
+  },
+  {
+   "id": "topic:chat:to-a-friend-recommending-a-cheap-restaurant#plain",
+   "family": "topic:chat:to-a-friend-recommending-a-cheap-restaurant",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! You have to try Lupe's Taqueria on 5th Street. The al pastor tacos are about $2.50 each, and they're some of the best I've had in the city. The salsa bar is great too, and the horchata is only $2 and really refreshing. It's a counter-service spot, so there's no waiting for a server, and you can usually get a table even on a busy night. Their burrito plate is big enough to split if you're not that hungry. Let me know if you want to go this weekend!"
+  },
+  {
+   "id": "topic:chat:to-a-friend-about-losing-your-keys-again#plain",
+   "family": "topic:chat:to-a-friend-about-losing-your-keys-again",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Ugh, I did it again. I was sure I put my keys in my coat pocket this morning, but when I got to the car, they were nowhere to be found. I spent twenty minutes checking the couch cushions, the fridge (don't ask), and every jacket I own before finally finding them in the bread drawer. At this point I should just buy one of those tracker tags and stick it on my keyring. Honestly, I'm starting to think my keys have a mind of their own. Anyway, I'm finally out the door, so at least I'm not late for dinner tonight!"
+  }
+ ]
+}

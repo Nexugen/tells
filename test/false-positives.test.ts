@@ -82,3 +82,12 @@ test('the register guess picks casual for a check-in, technical for docs, profes
   );
   assert.equal(guessRegister('Introducing Snap: scan receipts in one tap. Free for 30 days, starting today. #bookkeeping').register, 'marketing');
 });
+
+test('lowercase chat is read as chat, and the register is guessed when none is given', () => {
+  const chat = 'ok so i tried the update last night and now the laptop wont boot. it gets to the logo then just sits there. i dont have a backup of the latest stuff either. is there any way to roll back without wiping it? also should i just stick with the old version until they fix it';
+  assert.equal(guessRegister(chat).register, 'casual');
+  const r = lint(chat);
+  assert.equal(r.register, 'casual');
+  assert.ok(r.registerGuess);
+  assert.equal(lint(chat, { register: 'professional' }).register, 'professional');
+});

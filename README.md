@@ -2,7 +2,7 @@
 
 [![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)
 
-A linter for the habits that make text read as AI-written, and for the patterns people use that models mostly don't. It finds both, explains each one, and can rewrite only the sentences that need it.
+tells finds what makes writing read as AI-written, and fixes it. It also finds the patterns people use that models mostly don't, explains each thing it finds, and can rewrite only the sentences that need it.
 
 We built it at [Nexugen](https://nexugen.app) because our agents write a lot of text that people read: replies, emails, release notes, captions. We kept fixing the same things by hand: the em dash, the `it's not X, it's Y` line, a closing sentence about the future, the word `seamless`. So we wrote the rules down, and then wrote code that checks them.
 
@@ -45,19 +45,21 @@ One habit on its own is not evidence. People write "Great question!" and "seamle
 
 ## The human-pattern score
 
-Texts of 60 words or more also get a human-pattern score from 0 to 100: roughly, the chance that a person wrote the text, judged by how its habits compare with about 9,700 human samples and 2,100 model samples. It is a small gradient-boosted tree model over about 200 measures (function words, punctuation, sentence shape, casual cues and the rule hits), trained on the benchmark's train split and calibrated on its tune split. Layout is stripped first, so a list or a table does not count against a text. Below the line in `src/score-model.json` (about 30) the text reads machine-like, and that counts as one kind of evidence for the rules.
+Texts of 60 words or more also get a human-pattern score from 0 to 100: roughly, the chance that a person wrote the text, judged by how its habits compare with about 12,800 human samples and 2,600 model samples. The human side includes chat, lowercase typing and writing about AI, apps and business, so the subject of a text does not move its score. It is a gradient-boosted tree model over about 200 measures (function words, punctuation, sentence shape, casual cues and the rule hits), trained on the benchmark's train split and calibrated on its tune split. Layout is stripped first, so a list or a table does not count against a text. Below the line in `src/score-model.json` (18) the text reads machine-like, and that counts as one kind of evidence for the rules.
 
-It is a measurement of style, not proof of who wrote something. About 1 to 2% of human texts score under the line, more for old fiction, open-source READMEs and short job ads, and a model told to write like a person scores over it about 14% of the time.
+It is a measurement of style, not proof of who wrote something. About 1% of human texts score under the line, and about 5% under 50, mostly short casual messages, pitches and READMEs. A model told to write like a person scores over the line 5% to 11% of the time. On short chat, read a score under 50 as "can't tell".
 
 ## How often it is wrong
 
-Measured on human and model writing that played no part in building tells. The last held-out set (fresh-2: 881 human texts from five sources the benchmark had never used, and 354 answers from Haiku, Sonnet and Opus to new prompts) was fetched after all tuning stopped and scored once:
+Measured on human and model writing that played no part in building tells. The last held-out set (fresh-3: 823 human texts from Stack Exchange sites, GitHub projects, Hacker News threads and IRC days the benchmark had never used, written from 2012 to Oct 2022, and 279 answers from Haiku, Sonnet and Opus to new prompts) was fetched after all tuning stopped and scored once:
 
-- Human texts with a warning or an error: 0 of 881. On the larger locked test split it was 4 of 2,006 (0.2%), one of them an error.
-- Model output of 60 words or more flagged, by a warning, an error or a low human-pattern score: 98% of plain answers and 86% of answers from prompts written to sound human. Counting short texts too, 91% of plain answers.
-- AUC of the human-pattern score: 0.998 overall and 0.997 on the adversarial answers.
+- Human texts with a warning or an error: 0 of 823. On the larger locked test split it was 4 of 2,552 (0.2%), one of them an error.
+- Model output of 60 words or more flagged, by a warning, an error or a low human-pattern score: 98% of plain answers and 95% of answers from prompts written to sound human (97% and 89% on the test split).
+- AUC of the human-pattern score: 0.999 overall and 0.998 on the adversarial answers.
+- Human texts about AI, apps or tech scored under the line no more often than other human texts: 0 of 126 against 0.6% (0.6% against 1.2% on the test split).
+- On a probe of 831 human texts about GPT-3, AI, apps and startups from 2020 to 2022, plus lowercase posts and IRC chat, 1.6% scored under the line, down from 3.0% in tells 0.3.0.
 
-Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those. Every model was a Claude model, because those were the ones we could run; expect other families to be caught less often until they are in the benchmark. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
+Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those in round 2. Every model was a Claude model, because those were the ones we could run; expect other families to be caught less often until they are in the benchmark. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
 
 ## Before and after
 
@@ -132,7 +134,7 @@ Some of the ones that matter most:
 
 The later rules came from reading what Haiku, Sonnet and Opus wrote for the benchmark prompts and writing down what kept coming back. Most of those are about structure, not words: how a reply is laid out, how each paragraph ends, what fills the space where an example should be.
 
-Severity changes with the register you pick: `casual`, `professional` (the default), `technical` or `marketing`. A semicolon is fine in docs and flagged in a tweet. An exclamation mark is a hint in a chat message and a warning on a landing page.
+Severity changes with the register: `casual`, `professional`, `technical` or `marketing`. With no `--register` (or `register` option) tells picks one from the text, so a lowercase chat message is judged as chat; pass one when you know it. A semicolon is fine in docs and flagged in a tweet. An exclamation mark is a hint in a chat message and a warning on a landing page.
 
 ## Use it in CI
 
@@ -169,7 +171,7 @@ if (result.counts.error > 0) {
 }
 ```
 
-`lint` returns every finding with its offsets, line and column, a score, and the human signals report under `result.human`. Pass `register: 'auto'` to have it guess the register from the text; `result.register` says which one it used. `rewrite` sends only the flagged sentences to a model, with the rules they broke and a few human examples in the same register, then checks the result and retries once if a tell is still there.
+`lint` returns every finding with its offsets, line and column, a score, and the human signals report under `result.human`. With no `register` it guesses one from the text (`result.registerGuess` has the reasons); `result.register` says which one it used. `rewrite` sends only the flagged sentences to a model, with the rules they broke and a few human examples in the same register, then checks the result and retries once if a tell is still there.
 
 When the text lacks the signals its register usually has, `rewrite` also hands the model one or two flat sentences to rework toward them. It may not add facts. An edit that brings in a number or a name the source doesn't have is thrown away and listed in `result.rejected`. Where a detail would help and isn't there, the model writes a placeholder such as `[number]` or `[example from your work]`, and `result.suggestions` lists each one for you to fill in. Pass `humanize: false` to fix tells only.
 
@@ -213,7 +215,7 @@ A few samples are house drafts from Nexugen that a person approved. They help th
 
 ## Benchmark
 
-`bench/` holds two benchmarks. The first (v1) is 48 everyday prompts against 182 licensed human samples. The second (v2, `bench/dataset.ts`) has about 10,600 human samples from 31 openly licensed or public sources written before 2022 (email, chat, forums, Q&A, reviews, essays by native and non-native students, fiction, news, guidance, docs and marketing copy) and about 2,500 answers from Haiku, Sonnet and Opus to 1,047 prompts, a third of them written to make the model sound human. Samples are split by group (a mailbox, a site, a book, a prompt topic) into train, tune and a locked test split, and each held-out round is fetched only after the previous one was scored. [bench/EVAL.md](bench/EVAL.md) has the accuracy numbers, [bench/RESULTS.md](bench/RESULTS.md) the per-source scores and caveats, and [DATA-LICENSES.md](DATA-LICENSES.md) the sources and licences.
+`bench/` holds two benchmarks. The first (v1) is 48 everyday prompts against 182 licensed human samples. The second (v2, `bench/dataset.ts`) has about 14,500 human samples from 40 openly licensed or public sources written before ChatGPT (email, IRC chat, forums, Q&A, GitHub issues, reviews, essays by native and non-native students, fiction, news, guidance, docs and marketing copy) and about 3,200 answers from Haiku, Sonnet and Opus to 1,358 prompts, a third of them written to make the model sound human. Samples are split by group (a mailbox, a site, a book, a prompt topic) into train, tune and a locked test split, and each held-out round is fetched only after the previous one was scored. [bench/EVAL.md](bench/EVAL.md) has the accuracy numbers, [bench/RESULTS.md](bench/RESULTS.md) the per-source scores and caveats, and [DATA-LICENSES.md](DATA-LICENSES.md) the sources and licences.
 
 ```sh
 node --experimental-strip-types bench/run.ts generate --via claude-cli --model haiku
@@ -225,6 +227,8 @@ node --experimental-strip-types bench/eval.ts        # held-out accuracy (v1)
 node --experimental-strip-types bench/v2.ts stats    # v2 dataset by source, register, genre
 node --experimental-strip-types bench/v2.ts train    # retrain the human-pattern score
 node --experimental-strip-types bench/v2.ts report --on tune
+node --experimental-strip-types bench/v2.ts probe     # the modern probe: AI, apps, lowercase chat, human only
+node --experimental-strip-types bench/v2.ts topicout  # leave the AI, apps and tech texts out of training, then compare
 ```
 
 ## Hosted API

@@ -1,9 +1,5 @@
-// Benchmark figures shown on the page. The source of truth is bench/EVAL.md and bench/RESULTS.md (v2, final round fresh-2 and the locked test split).
-const BENCH = {
-  humanSamples: '10,604', modelSamples: '2,494', prompts: '1,047', genres: 25, sources: 25,
-  freshHuman: 881, freshPlainFlagged: '97.6%', freshAuc: '0.998',
-  testHuman: '2,006', testFlagged: '0.2%', adversarialFlagged: '86%',
-};
+// Benchmark figures shown on the page, written by bench/figures.ts from the saved round reports (bench/rounds/).
+import BENCH from '../bench-figures.json' with { type: 'json' };
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
@@ -134,13 +130,13 @@ console.log(result.findings, result.human.missing);</code></pre>
 <pre><code>- run: npx @nexugen/tells lint docs/ --format github --ci</code></pre>
 
 <h2>Two sides</h2>
-<p>The linter has two halves. <span class="t-txt">Tells</span> are habits to remove: dashes, contrast frames, closing slogans, stock openers, generic examples, a summary line at the end of every paragraph. <span class="h-txt">Human signals</span> are patterns people use far more than models: specific numbers, names and dates, first-hand detail, asides, an opinion with something at stake, uneven rhythm.</p>
+<p>tells looks for two things. <span class="t-txt">Tells</span> are habits to remove: dashes, contrast frames, closing slogans, stock openers, generic examples, a summary line at the end of every paragraph. <span class="h-txt">Human signals</span> are patterns people use far more than models: specific numbers, names and dates, first-hand detail, asides, an opinion with something at stake, uneven rhythm.</p>
 <p>The rewrite works toward the signals as well as away from the tells, and it never makes things up. When a detail would help and your draft does not have it, you get a marked gap in square brackets to fill in yourself.</p>
 
 <h2>Benchmark</h2>
-<p>We tested it on ${B.humanSamples} human samples written before 2022, from about ${B.sources} sources, and ${B.modelSamples} answers from Claude Haiku, Sonnet and Opus to ${B.prompts} prompts in ${B.genres} genres. A third of the prompts told the model to sound like a person. The final check used a held-out set that tells had never seen, fetched after tuning stopped and scored once.</p>
+<p>We tested it on ${B.humanSamples} human samples written before 2022, from about ${B.sources} sources, and ${B.modelSamples} answers from Claude Haiku, Sonnet and Opus to ${B.prompts} prompts in ${B.genres} genres. A third of the prompts told the model to sound like a person. The human set includes chat, lowercase typing and writing about AI, apps and business, so the score judges style, not subject. The final check used a held-out set that tells had never seen, fetched after tuning stopped and scored once.</p>
 <div class="figures">
-  <div class="fig"><b>0</b><span>of ${B.freshHuman} human texts in the held-out set got a warning or error</span></div>
+  <div class="fig"><b>${B.freshHumanFlagged}</b><span>of ${B.freshHuman} human texts in the held-out set got a warning or error</span></div>
   <div class="fig"><b>${B.freshPlainFlagged}</b><span>of plain AI text of 60 words or more flagged, same set</span></div>
   <div class="fig"><b>${B.freshAuc}</b><span>AUC of the human-pattern score, same set</span></div>
   <div class="fig"><b>${B.testFlagged}</b><span>of ${B.testHuman} human texts in the locked test split got a warning or error</span></div>
@@ -247,7 +243,7 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
     fetch('/v1/lint', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ text: src, register: reg.value }) })
       .then(function (r) { return r.json(); })
       .then(function (r) { if (mine !== seq) return; if (r.error) { out.textContent = r.error.message; return; } render(src, r); })
-      .catch(function () { out.textContent = 'Could not reach the linter. Try again.'; });
+      .catch(function () { out.textContent = 'Could not reach tells. Try again.'; });
   }
   function soon() { clearTimeout(timer); timer = setTimeout(check, 250); }
   text.addEventListener('input', soon);

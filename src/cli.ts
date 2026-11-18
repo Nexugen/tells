@@ -10,7 +10,7 @@ import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
 
-const VERSION = '0.3.1';
+const VERSION = '0.3.2';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 
@@ -21,7 +21,7 @@ Usage
   tells exemplars [--register r]       list the human examples and their licences
 
 Lint options
-  --register <r>     casual | professional | technical | marketing (default professional)
+  --register <r>     auto | casual | professional | technical | marketing (default auto: picked from the text)
   --format <f>       text | json | github (default text)
   --ci               exit 1 when the check fails (see --fail-on and --max-score)
   --fail-on <s>      error | warning | info (default error)
@@ -90,8 +90,8 @@ function loadConfig(): Config {
   }
 }
 
-function asRegister(v: unknown): Register | undefined {
-  if (v === undefined) return undefined;
+function asRegister(v: unknown): Register | 'auto' | undefined {
+  if (v === undefined || v === 'auto') return v;
   if (!REGISTERS.includes(v as Register)) usage(`unknown register "${String(v)}" (use ${REGISTERS.join(', ')})`);
   return v as Register;
 }
@@ -218,7 +218,7 @@ async function main() {
 
   if (cmd === 'exemplars') {
     const reg = asRegister(flags.register);
-    const list = EXEMPLARS.filter((e) => !reg || e.register === reg);
+    const list = EXEMPLARS.filter((e) => !reg || reg === 'auto' || e.register === reg);
     if (flags.json) return void console.log(JSON.stringify(list, null, 2));
     for (const e of list) console.log(`${e.id} [${e.register}${e.human ? '' : ', house draft'}]\n  ${e.source.author}, ${e.source.url}\n  ${e.licence.name}\n`);
     return;
