@@ -6,6 +6,7 @@ import { rulesAsJson } from '../serialize.ts';
 import { readFileSync } from 'node:fs';
 import { anthropic, claudeCli, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
 import { landingPage } from './page.ts';
+import { BADGE_SVG } from './badge.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
 
@@ -158,7 +159,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       name: 'tells',
       about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['GET /', 'POST /v1/lint', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),
     'GET /v1/rules': async () => rulesAsJson(),
@@ -242,6 +243,16 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
         'content-security-policy': "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
       });
       return void res.end(page);
+    }
+    if ((req.method === 'GET' || req.method === 'HEAD') && path === '/badge.svg') {
+      res.writeHead(200, {
+        'content-type': 'image/svg+xml; charset=utf-8',
+        'cache-control': 'public, max-age=86400',
+        'access-control-allow-origin': '*',
+        'x-content-type-options': 'nosniff',
+        'content-security-policy': "default-src 'none'; style-src 'unsafe-inline'",
+      });
+      return void res.end(req.method === 'HEAD' ? undefined : BADGE_SVG);
     }
     const route = routes[`${req.method} ${path}`];
     try {

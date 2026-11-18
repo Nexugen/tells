@@ -2,7 +2,7 @@
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { extname, join, resolve } from 'node:path';
 import { fails, lint } from './lint.ts';
-import { formatGithub, formatText } from './format.ts';
+import { creditLine, formatGithub, formatText } from './format.ts';
 import { rewrite } from './rewrite.ts';
 import { rulesAsJson } from './serialize.ts';
 import { RULES } from './rules.ts';
@@ -10,7 +10,7 @@ import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
 
-const VERSION = '0.3.0';
+const VERSION = '0.3.1';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 
@@ -31,6 +31,7 @@ Lint options
   --strict           report every rule at its own severity, without corroboration
                      (by default one habit alone is a hint; see README)
   --no-score         skip the human-pattern score
+  --quiet            print only files with findings, and nothing else
 
 Rewrite options
   --register <r>     as above
@@ -64,7 +65,7 @@ function parse(argv: string[]) {
     if (a === '-') rest.push(a);
     else if (a.startsWith('--')) {
       const [k, v] = a.slice(2).split('=', 2);
-      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color', 'strict', 'no-score'];
+      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color', 'strict', 'no-score', 'quiet'];
       if (v !== undefined) flags[k] = v;
       else if (bool.includes(k)) flags[k] = true;
       else flags[k] = argv[++i] ?? '';
@@ -153,6 +154,7 @@ async function main() {
     if (maxScore !== undefined && Number.isNaN(maxScore)) usage('--max-score must be a number');
     const ci = Boolean(flags.ci) || cmd === 'check';
     const color = process.stdout.isTTY && !flags['no-color'] && !process.env.NO_COLOR;
+    const quiet = Boolean(flags.quiet);
     let failed = false;
     const all: unknown[] = [];
     for (const file of files) {
@@ -165,9 +167,11 @@ async function main() {
         const out = formatGithub(name, result);
         if (out) console.log(out);
         console.log(`${name}: ${result.score} known tells per 100 words (${result.grade})`);
-      } else console.log(formatText(name, text, result, { color }));
+      } else if (!quiet || result.findings.length) console.log(formatText(name, text, result, { color }));
     }
     if (format === 'json') console.log(JSON.stringify(files.length === 1 ? all[0] : all, null, 2));
+    const credit = creditLine({ format, quiet, tty: Boolean(process.stdout.isTTY), color });
+    if (credit) console.log(`\n${credit}`);
     process.exitCode = ci && failed ? 1 : 0;
     return;
   }

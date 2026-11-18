@@ -36,3 +36,13 @@ export function formatGithub(file: string, result: LintResult): string {
     .map((f) => `::${kind[f.severity]} file=${file},line=${f.line},col=${f.column},title=${esc(`${f.name} [${f.ruleId}]`)}::${esc(`"${f.match.slice(0, 80)}" ${f.fix}`)}`)
     .join('\n');
 }
+
+/**
+ * The one-line credit after human-readable lint output. Only for people at a terminal:
+ * never for json or github output, never with --quiet, and never when stdout is a pipe or a CI log.
+ */
+export function creditLine(opts: { format: string; quiet?: boolean; tty: boolean; color?: boolean }): string | null {
+  if (opts.format !== 'text' || opts.quiet || !opts.tty) return null;
+  const line = 'tells by Nexugen · tells.nexugen.app';
+  return opts.color ? `\x1b[2m${line}\x1b[0m` : line;
+}

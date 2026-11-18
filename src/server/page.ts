@@ -7,6 +7,9 @@ const BENCH = {
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
+const BADGE_MD = '[![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)';
+const BADGE_HTML = '<a href="https://tells.nexugen.app"><img src="https://tells.nexugen.app/badge.svg" alt="Linted with tells" height="20"></a>';
+
 const SAMPLE = `Great question! In today's fast-paced world, it's not just a tool, it's a movement.
 
 We leverage robust AI to seamlessly streamline your workflow. No setup. No fees. No problem.
@@ -78,7 +81,15 @@ td.n, th.n { text-align: right; white-space: nowrap; }
 .fig b { display: block; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 40px; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; white-space: nowrap; }
 @media (max-width: 420px) { .fig { padding: 12px 14px; } .fig b { font-size: 34px; } }
 .fig span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--muted); }
-footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
+footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: space-between; }
+footer nav { display: flex; gap: 16px; }
+.badge-show { display: flex; align-items: center; gap: 12px; margin: 4px 0 16px; }
+.badge-show img { display: block; height: 20px; width: auto; }
+.snip { margin: 0 0 16px; }
+.snip-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.snip-head span { font-size: 14px; color: var(--muted); }
+.snip-head button { font-size: 13px; padding: 4px 10px; }
+.snip pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
 </style>
 </head>
 <body>
@@ -141,7 +152,22 @@ console.log(result.findings, result.human.missing);</code></pre>
 curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
 <p class="muted">Lint is free with no key. Endpoints are listed at <a href="/v1">/v1</a>.</p>
 
-<footer>The code is on <a href="https://github.com/Nexugen/tells">GitHub</a> under the MIT licence, made by <a href="https://nexugen.app">Nexugen</a>.</footer>
+<h2>Badge</h2>
+<p>If your docs or README pass tells, you can say so.</p>
+<div class="badge-show"><img src="/badge.svg" alt="Linted with tells" width="102" height="20"></div>
+<div class="snip">
+  <div class="snip-head"><span>Markdown</span><button type="button" class="ghost copy" data-for="badge-md">Copy</button></div>
+  <pre><code id="badge-md">${esc(BADGE_MD)}</code></pre>
+</div>
+<div class="snip">
+  <div class="snip-head"><span>HTML</span><button type="button" class="ghost copy" data-for="badge-html">Copy</button></div>
+  <pre><code id="badge-html">${esc(BADGE_HTML)}</code></pre>
+</div>
+
+<footer>
+  <span>tells is open source, made by <a href="https://nexugen.app">Nexugen</a>. MIT licence.</span>
+  <nav aria-label="Project links"><a href="https://github.com/Nexugen/tells">GitHub</a><a href="https://www.npmjs.com/package/@nexugen/tells">npm</a></nav>
+</footer>
 </main>
 <script>
 (function () {
@@ -247,6 +273,14 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
         check();
       })
       .catch(function () { btn.disabled = false; note.textContent = 'Rewrite failed. Try again shortly.'; });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('button.copy'), function (b) {
+    b.addEventListener('click', function () {
+      var src = $(b.getAttribute('data-for')).textContent;
+      var done = function (ok) { b.textContent = ok ? 'Copied' : 'Select and copy'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(src).then(function () { done(true); }, function () { done(false); });
+      else done(false);
+    });
   });
   check();
 })();

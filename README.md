@@ -1,5 +1,7 @@
 # tells
 
+[![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)
+
 A linter for the habits that make text read as AI-written, and for the patterns people use that models mostly don't. It finds both, explains each one, and can rewrite only the sentences that need it.
 
 We built it at [Nexugen](https://nexugen.app) because our agents write a lot of text that people read: replies, emails, release notes, captions. We kept fixing the same things by hand: the em dash, the `it's not X, it's Y` line, a closing sentence about the future, the word `seamless`. So we wrote the rules down, and then wrote code that checks them.
@@ -237,4 +239,4 @@ New rules and signals are welcome. A rule needs a before example it catches and 
 
 MIT for the code. The human samples keep their own licences, listed per sample.
 
-Made by [Nexugen](https://nexugen.app).
+tells is open source, made by [Nexugen](https://nexugen.app). [GitHub](https://github.com/Nexugen/tells) · [npm](https://www.npmjs.com/package/@nexugen/tells) · [tells.nexugen.app](https://tells.nexugen.app)

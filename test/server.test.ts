@@ -158,3 +158,23 @@ test('the root serves the page, the JSON index moved to /v1, and lint returns hu
     s.close();
   }
 });
+
+test('the badge is a cached SVG, and the page shows it with copyable snippets', async () => {
+  const s = await setup();
+  try {
+    const res = await fetch(`${s.url}/badge.svg`);
+    assert.equal(res.status, 200);
+    assert.match(res.headers.get('content-type') ?? '', /^image\/svg\+xml/);
+    assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
+    const svg = await res.text();
+    assert.match(svg, /^<svg /);
+    assert.ok(svg.includes('linted with') && svg.includes('>tells<'));
+    const page = await (await fetch(`${s.url}/`)).text();
+    assert.ok(page.includes('<img src="/badge.svg"'));
+    assert.ok(page.includes('[![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)'));
+    assert.ok(page.includes('&lt;img src=&quot;https://tells.nexugen.app/badge.svg&quot;'));
+    assert.ok(page.includes('tells is open source, made by <a href="https://nexugen.app">Nexugen</a>'));
+  } finally {
+    s.close();
+  }
+});
