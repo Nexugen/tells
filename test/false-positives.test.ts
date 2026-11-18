@@ -70,7 +70,6 @@ test('staged questions in copy are still flagged', () => {
 test('too short to judge', () => {
   const r = lint('Congrats on the new job! So happy for you.', { register: 'casual' });
   assert.equal(r.human.tooShort, true);
-  assert.equal(r.human.signalScore, null);
   assert.deepEqual(r.human.missing, []);
 });
 

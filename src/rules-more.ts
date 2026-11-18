@@ -146,6 +146,7 @@ function placeholders(ctx: RuleContext): Hit[] {
     if (after === '(' || after === '[' || after === ':') continue; // a markdown link or reference
     const inner = m[0].slice(1, -1);
     if (/^(?:x| |\d+|[a-z]\.?|!\w+)$/i.test(inner)) continue; // checkboxes, footnotes
+    if (/['’]s$/.test(inner)) continue; // "[company's] bylaws": an editorial substitution in a quote
     if (!/\b(?:name|your|link|date|number|company|client|insert|specific|example|tbd|todo|url|email|phone|amount|time|product|feature|detail)\b/i.test(inner)) continue;
     out.push({ start: m.index, end: m.index + m[0].length });
   }
@@ -158,6 +159,8 @@ function fragmentTriad(ctx: RuleContext): Hit[] {
     if (s.words > 9) continue;
     const parts = s.text.replace(/[.!]\s*$/, '').split(/,\s+(?:and\s+|&\s+)?/);
     if (parts.length !== 3) continue;
+    // "Yes, yes, and yes." is emphasis, and a shouted line is someone quoting or joking.
+    if (new Set(parts.map((p) => p.trim().toLowerCase())).size < 3 || s.text === s.text.toUpperCase()) continue;
     if (!parts.every((p) => /^\W*[\p{L}\p{N}][\p{L}\p{N}'’-]*(?:\s[\p{L}\p{N}'’-]+){0,2}$/u.test(p.trim()))) continue;
     if (parts.some((p) => /^(?:but|so|and|or|which|because|then|if|when)\b/i.test(p.trim()))) continue;
     // "I bought eggs, milk, and bread" is a sentence with a list, not three fragments.
@@ -173,7 +176,72 @@ function boldLine(ctx: RuleContext): Hit[] {
     .map((p) => ({ start: p.start, end: p.end }));
 }
 
+const STOCK_WARMTH = [
+  "couldn't be happier for you", 'could not be happier for you', "they're lucky to have you", 'they are lucky to have you', 'exciting next chapter',
+  'this next chapter', 'next chapter', "you're the best", 'you are the best', "couldn't have done it without you", 'could not have done it without you',
+  'hope to see you there', "it's been way too long", 'been way too long', "hope life's been treating you well", 'hope life has been treating you well',
+  'nothing fancy, just', 'good company', 'well deserved', 'well-deserved', 'wishing you all the best', "i'd love to catch up", 'i would love to catch up',
+  'means the world', 'made my day', 'so grateful for you', 'truly appreciate', 'it means a lot', 'no worries if not',
+];
+
+const VALIDATION = /^\W*(?:oof,?\s*)?(?:that|this|it)(?:['’]s| is| was| sounds| must be| must have been| can be| can feel)\s+(?:so |really |genuinely |incredibly |understandably |completely )?(?:exhausting|frustrating|rough|tough|hard|stressful|infuriating|maddening|painful|awful|a lot|difficult|upsetting|overwhelming|stings|a tough spot|a hard spot)\b|^\W*(?:i['’]m|i am) (?:so )?sorry you(?:['’]re| are| had| have|['’]ve)\b|^\W*(?:i know how|i can only imagine how|i understand how) (?:much |hard |frustrating |tough )|^\W*(?:your (?:frustration|feelings|concern) (?:is|are) (?:valid|legitimate|understandable))|^\W*that stings\b|^\W*i['’]ve been there\b/i;
+
+function validationOpener(ctx: RuleContext): Hit[] {
+  const first = ctx.sentences.find((x) => x.words >= 2 && !/^\s*(?:hi|hey|hello|dear)\b[^.!?]{0,30}[,!]?\s*$/i.test(x.text));
+  return first && VALIDATION.test(first.text) ? [{ start: first.start, end: first.end }] : [];
+}
+
+function boldLead(ctx: RuleContext): Hit[] {
+  const leads = ctx.paragraphs.filter((p) => !p.heading && /^\s{0,3}(?:\d+[.)]\s+)?\*\*[^*\n]{3,80}\*\*\s*\S/.test(p.text));
+  return leads.length >= 2 ? leads.map((p) => ({ start: p.start, end: Math.min(p.end, p.start + p.text.indexOf('**', p.text.indexOf('**') + 2) + 2) })) : [];
+}
+
 export const MORE_RULES: Rule[] = [
+  {
+    id: 'validation-opener',
+    name: 'Validation opener',
+    category: 'tone',
+    severity: 'warning',
+    registers: { technical: 'info' },
+    description: 'A reply that opens by validating a feeling: "That sounds exhausting", "I\'m sorry you had to deal with that", "Your frustration is valid", "I\'ve been there".',
+    why: 'Generated advice almost always starts with sympathy before the answer. People on forums mostly start with the answer, or with a question.',
+    fix: 'Start with the answer or the useful fact. Keep the sympathy only if it says something specific.',
+    example: {
+      before: "That sounds exhausting. Try noise-cancelling headphones next time.",
+      after: 'Noise-cancelling headphones with a white noise track got me through a twelve-hour flight next to a teething baby.',
+    },
+    detect: { kind: 'heuristic', summary: 'The first sentence (after any greeting) opens with a stock validation of the reader\'s feeling.', run: validationOpener },
+  },
+  {
+    id: 'stock-warmth',
+    name: 'Stock warmth',
+    category: 'tone',
+    severity: 'info',
+    registers: { casual: 'warning' },
+    description: '"Couldn\'t be happier for you", "They\'re lucky to have you", "this exciting next chapter", "you\'re the best", "Nothing fancy, just good company".',
+    why: 'The greeting-card lines generated messages to friends are built from. A friend writes one specific thing instead.',
+    fix: 'Replace it with one detail only you would know: what they did, where you are going, what you will bring.',
+    example: {
+      before: "Congrats on the new job! They're lucky to have you.",
+      after: 'Congrats on the new job! Finally someone pays you for the spreadsheets you used to build for fun.',
+    },
+    detect: { kind: 'pattern', pattern: phraseRe(STOCK_WARMTH) },
+  },
+  {
+    id: 'bold-lead',
+    name: 'Bold lead-ins',
+    category: 'format',
+    severity: 'warning',
+    registers: { technical: 'info' },
+    description: 'Two or more paragraphs that open with a bold phrase: "**Document everything.** Save drafts..."',
+    why: 'Generated advice is laid out as bold-headed steps. People answering a question write paragraphs.',
+    fix: 'Drop the bold and let the first sentence of each paragraph do the work.',
+    example: {
+      before: '**Build your case.** List what you shipped.\n\n**Know your number.** Check salary surveys.',
+      after: 'List what you shipped this year.\n\nCheck two salary surveys and pick a number.',
+    },
+    detect: { kind: 'heuristic', summary: 'At least two paragraphs that begin with a **bold** phrase followed by more text.', run: boldLead },
+  },
   {
     id: 'unfilled-placeholder',
     name: 'Unfilled placeholder',
@@ -418,7 +486,19 @@ export const MORE_RULES: Rule[] = [
       before: "If you're looking for a faster way to book appointments, this is it.",
       after: 'Patients confirm or move their appointment by replying to the reminder text.',
     },
-    detect: { kind: 'pattern', pattern: phraseRe(IF_YOURE_LOOKING) },
+    detect: {
+      kind: 'heuristic',
+      summary: 'One of the hook phrases at the start of one of the first two sentences.',
+      run: (ctx) => {
+        const re = phraseRe(IF_YOURE_LOOKING);
+        const out: Hit[] = [];
+        for (const sent of ctx.sentences.slice(0, 2)) {
+          const h = regexHits(new RegExp(re.source, re.flags), sent.text)[0];
+          if (h && h.start <= 3) out.push({ start: sent.start + h.start, end: sent.start + h.end });
+        }
+        return out;
+      },
+    },
   },
   {
     id: 'label-opener',

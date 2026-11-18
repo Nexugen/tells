@@ -44,8 +44,6 @@ export interface HumanReport {
   present: SignalPresence[];
   missing: MissingSignal[];
   /** Signals present, weighted by how much more often people use them than models, 0 to 100. */
-  /** null when the text is too short to judge. */
-  signalScore: number | null;
   tooShort: boolean;
   words: number;
 }
@@ -253,10 +251,6 @@ export const SIGNALS: HumanSignal[] = [
 ];
 
 /** Every text-level weight is the human share minus the model share in the profile, floored at zero. */
-function weight(id: string, register: Register): number {
-  const p = SIGNAL_PROFILES.registers[register]?.[id];
-  return p ? Math.max(0, p.human - p.model) : 0;
-}
 
 export function detectSignals(ctx: RuleContext): SignalPresence[] {
   const out: SignalPresence[] = [];
@@ -281,7 +275,7 @@ const REGISTER_WORDS: Record<Register, string> = {
   marketing: 'marketing writing',
 };
 
-/** Texts shorter than this get no signal score and no missing-signal advice. */
+/** Texts shorter than this get no missing-signal advice. */
 export const MIN_WORDS = 60;
 
 export function humanReport(ctx: RuleContext): HumanReport {
@@ -289,17 +283,13 @@ export function humanReport(ctx: RuleContext): HumanReport {
   const have = new Set(present.map((p) => p.id));
   const words = countWords(ctx.masked);
   const missing: MissingSignal[] = [];
-  let total = 0;
-  let got = 0;
   for (const sig of SIGNALS) {
     const p = SIGNAL_PROFILES.registers[ctx.register]?.[sig.id];
     if (!p) continue;
-    const w = weight(sig.id, ctx.register);
-    total += w;
-    if (have.has(sig.id)) got += w;
+    if (have.has(sig.id)) continue;
     // Only call a signal missing when people in this register usually have it, the text is
     // long enough to expect it, and people use it clearly more than models do.
-    else if (p.human >= 0.5 && p.human - p.model >= 0.15 && words >= 40) {
+    if (p.human >= 0.5 && p.human - p.model >= 0.15 && words >= 40) {
       missing.push({
         id: sig.id,
         name: sig.name,
@@ -312,7 +302,7 @@ export function humanReport(ctx: RuleContext): HumanReport {
   }
   // Under this many words the shares say little about one text, so the report says so instead of scoring.
   const tooShort = words < MIN_WORDS;
-  return { register: ctx.register, present, missing: tooShort ? [] : missing, signalScore: total && !tooShort ? Math.round((got / total) * 100) : null, tooShort, words };
+  return { register: ctx.register, present, missing: tooShort ? [] : missing, tooShort, words };
 }
 
 const pct = (x: number) => `${Math.round(x * 100)}%`;

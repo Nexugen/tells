@@ -121,6 +121,126 @@
       "id": "event-invite",
       "register": "marketing",
       "prompt": "Write a short social post inviting people to a free online workshop on March 12 at 5pm GMT about setting up automated backups for small business websites."
+    },
+    {
+      "id": "checkin-friend",
+      "register": "casual",
+      "prompt": "Write a text message to a friend you haven't spoken to in a few months, just checking in. Two to four sentences."
+    },
+    {
+      "id": "dm-late",
+      "register": "casual",
+      "prompt": "Write a text to a friend saying you are running ten minutes late for dinner and asking what they want to drink."
+    },
+    {
+      "id": "dm-congrats",
+      "register": "casual",
+      "prompt": "Write a short message congratulating a former colleague on their new job."
+    },
+    {
+      "id": "dm-party",
+      "register": "casual",
+      "prompt": "Write a text inviting a few friends to a small get-together at your place on Saturday from 7pm."
+    },
+    {
+      "id": "dm-parcel",
+      "register": "casual",
+      "prompt": "Write a text to your neighbour asking whether they took in a parcel for you, since tracking says it was delivered."
+    },
+    {
+      "id": "comment-flight-kid",
+      "register": "casual",
+      "prompt": "Write a comment on a travel forum post where someone complained about a toddler crying next to them for a whole flight. One short paragraph."
+    },
+    {
+      "id": "comment-recipe",
+      "register": "casual",
+      "prompt": "Write a comment on a cooking Q&A site replying to someone whose bread keeps coming out dense. One short paragraph."
+    },
+    {
+      "id": "comment-bike",
+      "register": "casual",
+      "prompt": "Write a comment on a cycling forum replying to someone asking whether a squeaky disc brake is dangerous. One short paragraph."
+    },
+    {
+      "id": "comment-friend-ignored",
+      "register": "casual",
+      "prompt": "Write a comment on an advice forum replying to someone who thinks a friend is ignoring their messages. One short paragraph."
+    },
+    {
+      "id": "advice-roommate",
+      "register": "casual",
+      "prompt": "Write an answer on an advice forum for someone whose roommate keeps eating their food. About 150 words."
+    },
+    {
+      "id": "advice-parent-screen",
+      "register": "casual",
+      "prompt": "Write an answer on a parenting forum for a parent whose 8-year-old melts down when screen time ends. About 150 words."
+    },
+    {
+      "id": "advice-say-no",
+      "register": "casual",
+      "prompt": "Write an answer on an advice forum for someone who struggles to say no when friends ask for favours. About 150 words."
+    },
+    {
+      "id": "group-dinner",
+      "register": "casual",
+      "prompt": "Write a group chat message suggesting a place for dinner on Friday and asking who is in."
+    },
+    {
+      "id": "dm-thanks",
+      "register": "casual",
+      "prompt": "Write a short thank-you text to a friend who helped you move flats last weekend."
+    },
+    {
+      "id": "workplace-raise",
+      "register": "professional",
+      "prompt": "Write an answer on a workplace advice site for someone who wants to ask for a raise after a year without one. About 180 words."
+    },
+    {
+      "id": "workplace-credit",
+      "register": "professional",
+      "prompt": "Write an answer on a workplace advice site for someone whose manager presented their work as his own. About 180 words."
+    },
+    {
+      "id": "workplace-quit",
+      "register": "professional",
+      "prompt": "Write an answer on a workplace advice site for someone who wants to quit two months into a new job. About 180 words."
+    },
+    {
+      "id": "travel-visa",
+      "register": "professional",
+      "prompt": "Write an answer on a travel Q&A site for someone asking whether they can transit through a European airport without a visa. About 150 words."
+    },
+    {
+      "id": "freelance-late",
+      "register": "professional",
+      "prompt": "Write an answer on a freelancing Q&A site for someone whose client is 60 days late paying an invoice. About 180 words."
+    },
+    {
+      "id": "email-colleague-cover",
+      "register": "professional",
+      "prompt": "Write a short email asking a colleague to cover your Friday afternoon support shift."
+    },
+    {
+      "id": "press-library",
+      "register": "marketing",
+      "prompt": "Write a press release from a city council announcing that three public libraries will open on Sundays from next month. About 200 words."
+    },
+    {
+      "id": "press-bus",
+      "register": "marketing",
+      "prompt": "Write a press release from a transport department announcing a new night bus route between the airport and the city centre. About 200 words."
+    },
+    {
+      "id": "press-grant",
+      "register": "marketing",
+      "prompt": "Write a press release from a government department announcing a grant scheme for small shops to install solar panels. About 200 words."
+    },
+    {
+      "id": "press-campaign",
+      "register": "marketing",
+      "prompt": "Write a press release from a health agency launching a campaign encouraging people to get their flu jab. About 200 words."
     }
   ]
 }

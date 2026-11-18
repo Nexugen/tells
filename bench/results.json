@@ -1,67 +1,67 @@
 {
-  "scoredAt": "2026-11-18T00:28:26.875Z",
+  "scoredAt": "2026-11-18T09:42:28.025Z",
   "rows": [
     {
       "name": "Human writing",
-      "samples": 52,
-      "knownTellsPer100": 1.6,
+      "samples": 182,
+      "knownTellsPer100": 0.7,
       "byRegister": {
-        "casual": 1.1,
-        "professional": 1,
-        "technical": 2.8,
-        "marketing": 2.3
+        "casual": 0.5,
+        "professional": 0.6,
+        "technical": 1.1,
+        "marketing": 1.2
       },
-      "withErrors": 7,
-      "noTells": 21,
+      "withErrors": 0,
+      "noTells": 106,
       "topRules": [
-        "ai-vocabulary (14)",
-        "exclamation (12)",
-        "dash (8)",
-        "inflated-verb (8)",
-        "corporate-excitement (4)"
+        "scare-quotes (18)",
+        "inflated-verb (17)",
+        "dash (14)",
+        "no-point-of-view (12)",
+        "over-qualified (11)"
       ],
       "signals": {
-        "specific-number": 0.63,
-        "named-thing": 0.98,
-        "time-anchor": 0.29,
-        "first-hand": 0.15,
-        "stake": 0.13,
-        "aside": 0.56,
-        "contraction": 0.58,
-        "plain-verb": 0.69,
-        "real-question": 0.04,
-        "bursty-rhythm": 0.15,
-        "uneven-paragraphs": 0.38,
-        "concrete-first": 0.67
+        "specific-number": 0.39,
+        "named-thing": 0.6,
+        "time-anchor": 0.13,
+        "first-hand": 0.09,
+        "stake": 0.11,
+        "aside": 0.39,
+        "contraction": 0.65,
+        "plain-verb": 0.49,
+        "real-question": 0.16,
+        "bursty-rhythm": 0.25,
+        "uneven-paragraphs": 0.24,
+        "concrete-first": 0.4
       },
       "shape": {
-        "sentenceMean": 19,
-        "sentenceCv": 0.39,
-        "specificity": 8.6,
-        "repeatedOpeners": 0.09,
-        "paragraphCv": 0.23,
-        "openings": 0.21,
-        "closings": 0.04
+        "sentenceMean": 17.8,
+        "sentenceCv": 0.38,
+        "specificity": 4.7,
+        "repeatedOpeners": 0.05,
+        "paragraphCv": 0.15,
+        "openings": 0.12,
+        "closings": 0.02
       }
     },
     {
       "name": "claude-code-haiku+tells (claude-cli:haiku, rewritten by claude-cli:haiku)",
       "samples": 24,
-      "knownTellsPer100": 1.3,
+      "knownTellsPer100": 1.2,
       "byRegister": {
-        "casual": 1,
+        "casual": 0.7,
         "professional": 3.5,
         "technical": 0,
         "marketing": 0.6
       },
       "withErrors": 2,
-      "noTells": 17,
+      "noTells": 18,
       "topRules": [
         "unfilled-placeholder (7)",
         "label-opener (1)",
         "triad (1)",
         "list-everything (1)",
-        "exclamation (1)"
+        "fragment-triad (1)"
       ],
       "signals": {
         "specific-number": 0.5,
@@ -89,65 +89,65 @@
     },
     {
       "name": "claude-code-haiku (claude-cli:haiku)",
-      "samples": 24,
-      "knownTellsPer100": 5.2,
+      "samples": 48,
+      "knownTellsPer100": 4.1,
       "byRegister": {
-        "casual": 1.8,
-        "professional": 11.4,
+        "casual": 2.4,
+        "professional": 7,
         "technical": 0.1,
-        "marketing": 7.6
+        "marketing": 6.4
       },
-      "withErrors": 5,
-      "noTells": 7,
+      "withErrors": 9,
+      "noTells": 18,
       "topRules": [
-        "unfilled-placeholder (12)",
-        "hashtag (4)",
-        "bold-label-list (4)",
-        "bold-overuse (4)",
-        "email-boilerplate (4)"
+        "unfilled-placeholder (26)",
+        "bold-overuse (8)",
+        "bold-line (6)",
+        "triad (5)",
+        "stock-warmth (5)"
       ],
       "signals": {
-        "specific-number": 0.5,
+        "specific-number": 0.46,
         "named-thing": 0.71,
-        "time-anchor": 0.38,
-        "first-hand": 0.13,
+        "time-anchor": 0.31,
+        "first-hand": 0.1,
         "stake": 0,
-        "aside": 0.08,
-        "contraction": 0.67,
-        "plain-verb": 0.75,
-        "real-question": 0.21,
-        "bursty-rhythm": 0.38,
-        "uneven-paragraphs": 0.29,
-        "concrete-first": 0.67
+        "aside": 0.13,
+        "contraction": 0.73,
+        "plain-verb": 0.79,
+        "real-question": 0.19,
+        "bursty-rhythm": 0.44,
+        "uneven-paragraphs": 0.33,
+        "concrete-first": 0.44
       },
       "shape": {
-        "sentenceMean": 12,
-        "sentenceCv": 0.37,
-        "specificity": 8.6,
+        "sentenceMean": 13.5,
+        "sentenceCv": 0.44,
+        "specificity": 7.6,
         "repeatedOpeners": 0.02,
-        "paragraphCv": 0.1,
-        "openings": 0,
-        "closings": 0.08
+        "paragraphCv": 0.12,
+        "openings": 0.08,
+        "closings": 0.06
       }
     },
     {
       "name": "claude-code-opus+tells (claude-cli:opus, rewritten by claude-cli:haiku)",
       "samples": 24,
-      "knownTellsPer100": 2.4,
+      "knownTellsPer100": 2.6,
       "byRegister": {
-        "casual": 3.7,
+        "casual": 4.4,
         "professional": 3.4,
-        "technical": 1.6,
+        "technical": 1.8,
         "marketing": 1
       },
       "withErrors": 2,
       "noTells": 10,
       "topRules": [
         "bold-overuse (18)",
+        "bold-lead (7)",
         "emoji (5)",
         "bold-label-list (4)",
-        "bold-mid-sentence (3)",
-        "exclamation (2)"
+        "bold-mid-sentence (3)"
       ],
       "signals": {
         "specific-number": 0.58,
@@ -175,53 +175,53 @@
     },
     {
       "name": "claude-code-opus (claude-cli:opus)",
-      "samples": 24,
-      "knownTellsPer100": 6.7,
+      "samples": 48,
+      "knownTellsPer100": 6.4,
       "byRegister": {
-        "casual": 4.7,
-        "professional": 8.3,
-        "technical": 1.6,
-        "marketing": 12.3
+        "casual": 6.5,
+        "professional": 7.7,
+        "technical": 1.8,
+        "marketing": 7.6
       },
-      "withErrors": 5,
-      "noTells": 6,
+      "withErrors": 9,
+      "noTells": 8,
       "topRules": [
-        "bold-overuse (18)",
-        "emoji (16)",
-        "hashtag (8)",
-        "exclamation (7)",
-        "unfilled-placeholder (7)"
+        "bold-overuse (45)",
+        "bold-lead (30)",
+        "emoji (22)",
+        "unfilled-placeholder (14)",
+        "bold-line (10)"
       ],
       "signals": {
-        "specific-number": 0.58,
-        "named-thing": 0.83,
-        "time-anchor": 0.42,
-        "first-hand": 0.04,
+        "specific-number": 0.5,
+        "named-thing": 0.77,
+        "time-anchor": 0.38,
+        "first-hand": 0.15,
         "stake": 0,
-        "aside": 0.17,
-        "contraction": 0.63,
+        "aside": 0.25,
+        "contraction": 0.75,
         "plain-verb": 0.83,
-        "real-question": 0.17,
-        "bursty-rhythm": 0.54,
-        "uneven-paragraphs": 0.46,
-        "concrete-first": 0.71
+        "real-question": 0.21,
+        "bursty-rhythm": 0.5,
+        "uneven-paragraphs": 0.44,
+        "concrete-first": 0.52
       },
       "shape": {
-        "sentenceMean": 12.3,
-        "sentenceCv": 0.51,
-        "specificity": 9.7,
-        "repeatedOpeners": 0.01,
-        "paragraphCv": 0.18,
-        "openings": 0,
+        "sentenceMean": 12.8,
+        "sentenceCv": 0.52,
+        "specificity": 8.8,
+        "repeatedOpeners": 0.02,
+        "paragraphCv": 0.17,
+        "openings": 0.08,
         "closings": 0.08
       }
     },
     {
       "name": "claude-code-sonnet+tells (claude-cli:sonnet, rewritten by claude-cli:haiku)",
       "samples": 24,
-      "knownTellsPer100": 2.5,
+      "knownTellsPer100": 3.1,
       "byRegister": {
-        "casual": 3.3,
+        "casual": 5.7,
         "professional": 2.6,
         "technical": 2.3,
         "marketing": 1.7
@@ -230,10 +230,10 @@
       "noTells": 12,
       "topRules": [
         "bold-overuse (16)",
+        "bold-lead (11)",
         "unfilled-placeholder (6)",
         "label-opener (2)",
-        "list-everything (2)",
-        "uniform-rhythm (2)"
+        "list-everything (2)"
       ],
       "signals": {
         "specific-number": 0.58,
@@ -261,84 +261,84 @@
     },
     {
       "name": "claude-code-sonnet (claude-cli:sonnet)",
-      "samples": 24,
-      "knownTellsPer100": 7.1,
+      "samples": 48,
+      "knownTellsPer100": 6.4,
       "byRegister": {
-        "casual": 3.4,
-        "professional": 8,
+        "casual": 5.9,
+        "professional": 7.4,
         "technical": 2.3,
-        "marketing": 14.8
+        "marketing": 8.7
       },
-      "withErrors": 4,
-      "noTells": 8,
+      "withErrors": 5,
+      "noTells": 13,
       "topRules": [
-        "bold-overuse (17)",
-        "unfilled-placeholder (11)",
-        "emoji (9)",
-        "hashtag (9)",
-        "email-boilerplate (8)"
+        "bold-overuse (40)",
+        "bold-lead (37)",
+        "unfilled-placeholder (13)",
+        "stock-warmth (12)",
+        "emoji (11)"
       ],
       "signals": {
-        "specific-number": 0.58,
-        "named-thing": 0.79,
+        "specific-number": 0.52,
+        "named-thing": 0.75,
         "time-anchor": 0.42,
-        "first-hand": 0.13,
-        "stake": 0,
-        "aside": 0.08,
-        "contraction": 0.71,
-        "plain-verb": 0.79,
-        "real-question": 0.13,
-        "bursty-rhythm": 0.42,
-        "uneven-paragraphs": 0.42,
-        "concrete-first": 0.79
+        "first-hand": 0.19,
+        "stake": 0.02,
+        "aside": 0.17,
+        "contraction": 0.81,
+        "plain-verb": 0.71,
+        "real-question": 0.17,
+        "bursty-rhythm": 0.54,
+        "uneven-paragraphs": 0.4,
+        "concrete-first": 0.5
       },
       "shape": {
-        "sentenceMean": 12.4,
-        "sentenceCv": 0.45,
-        "specificity": 9.9,
-        "repeatedOpeners": 0.01,
-        "paragraphCv": 0.2,
-        "openings": 0,
-        "closings": 0.08
+        "sentenceMean": 12.7,
+        "sentenceCv": 0.51,
+        "specificity": 8.3,
+        "repeatedOpeners": 0.02,
+        "paragraphCv": 0.18,
+        "openings": 0.08,
+        "closings": 0.04
       }
     }
   ],
   "separation": {
     "train": {
-      "human": 33,
-      "model": 45
+      "human": 120,
+      "model": 102
     },
     "test": {
-      "human": 19,
-      "model": 27
+      "human": 62,
+      "model": 42
     },
     "auc": 0.89,
-    "accuracy": 0.78,
-    "tellsOnlyAuc": 0.79,
+    "accuracy": 0.77,
+    "tellsOnlyAuc": 0.84,
     "rewriteShift": [
       {
         "set": "claude-code-haiku+tells",
         "prompts": 9,
-        "humanLikeBefore": 0.13,
-        "humanLikeAfter": 0.16,
-        "tellsBefore": 7.5,
+        "humanLikeBefore": 0.36,
+        "humanLikeAfter": 0.43,
+        "tellsBefore": 7,
         "tellsAfter": 1.7
       },
       {
         "set": "claude-code-opus+tells",
         "prompts": 9,
-        "humanLikeBefore": 0.22,
-        "humanLikeAfter": 0.22,
-        "tellsBefore": 7.7,
-        "tellsAfter": 5.2
+        "humanLikeBefore": 0.17,
+        "humanLikeAfter": 0.14,
+        "tellsBefore": 8.5,
+        "tellsAfter": 6.3
       },
       {
         "set": "claude-code-sonnet+tells",
         "prompts": 9,
-        "humanLikeBefore": 0.26,
-        "humanLikeAfter": 0.32,
-        "tellsBefore": 6.6,
-        "tellsAfter": 4.2
+        "humanLikeBefore": 0.25,
+        "humanLikeAfter": 0.26,
+        "tellsBefore": 7.7,
+        "tellsAfter": 5.2
       }
     ]
   }

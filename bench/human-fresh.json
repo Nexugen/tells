@@ -1,0 +1,1304 @@
+{
+ "version": 1,
+ "note": "Second check set: fetched after the first round of rule changes. Its false positives led to the second round (dashes, filler transitions, short questions), so it is no longer untouched.",
+ "samples": [
+  {
+   "id": "se-comment-english-380147",
+   "register": "casual",
+   "text": "To be frank, I don't think it's a strange or new phenomenon. Honestly, it's used in basically every language I can think of, no lie. Truth be told, it seems an almost universal need for humans to emphasise that, actually, they are speaking the literal truth. The truth of the matter is that no one even gives it a second's thought.",
+   "source": "https://english.stackexchange.com/a/182709#comment380147",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Janus Bahs Jacquet."
+  },
+  {
+   "id": "se-comment-english-1003386",
+   "register": "casual",
+   "text": "Funny trivia: In Greek we usually pronounce Nike (the American sports brand, not the goddess) as naik, not naikee :)",
+   "source": "https://english.stackexchange.com/a/419377#comment1003386",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Thanassis."
+  },
+  {
+   "id": "se-comment-english-835747",
+   "register": "casual",
+   "text": "I once told TEN puns in a row, hoping that at least one would get a laugh... but no pun in ten did.",
+   "source": "https://english.stackexchange.com/a/359424#comment835747",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Digital Chris."
+  },
+  {
+   "id": "se-comment-english-306349",
+   "register": "casual",
+   "text": "Yes, yes, and yes. (USA) The only reason it doesn't have a sexual connotation with kids is because...well...they're kids. That assumption of innocence typically does not extend to adults.",
+   "source": "https://english.stackexchange.com/a/148349#comment306349",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: cHao."
+  },
+  {
+   "id": "se-comment-english-3481",
+   "register": "casual",
+   "text": "On the web, if you want two spaces after periods, you need to insert non-breaking space characters or entities (&nbsp;). Since this is such an effort, one space after periods has become the de facto standard on the web. You can type in as many spaces as you please in the HTML, but it will only ever display as a single space.",
+   "source": "https://english.stackexchange.com/a/2544#comment3481",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: nohat."
+  },
+  {
+   "id": "se-comment-english-1188376",
+   "register": "casual",
+   "text": "Your answer is grammatically correct, but it misses an important fact: \"commented-out code\" is idiomatic in the relevant domain of expertise. The phrase is widely used and well understood by programmers. I would not have a problem using it even in a formal context. Because \"commented-out code\" is idiomatic, \"code which was commented out\" is unnecessarily wordy and may intone smugness.",
+   "source": "https://english.stackexchange.com/a/492442#comment1188376",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: jpmc26."
+  },
+  {
+   "id": "se-comment-english-790115",
+   "register": "casual",
+   "text": "I'm now hearing 'get off your horse and drink your milk' in a worrying new light.",
+   "source": "https://english.stackexchange.com/a/342273#comment790115",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Spagirl."
+  },
+  {
+   "id": "se-comment-english-990204",
+   "register": "casual",
+   "text": "Nice explanation. Ultimately the word \"really\" means the same in both cases, of adding strength or emphasis. So the first one is like \"I definitely cannot tell the difference\" (ie I am sure that I can't) and the second is like \"I cannot definitely tell the difference\" (ie I am not sure that I can).",
+   "source": "https://english.stackexchange.com/a/414677#comment990204",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Max Williams."
+  },
+  {
+   "id": "se-comment-english-1240160",
+   "register": "casual",
+   "text": "And the \"triple-A map\" in the comic refers to the auto organization, which is my first search result on Google.",
+   "source": "https://english.stackexchange.com/a/511040#comment1240160",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: TaliesinMerlin."
+  },
+  {
+   "id": "se-comment-english-1185254",
+   "register": "casual",
+   "text": "Weird quirk: Latin does have the word levitas, which would be a direct contrast to gravitas. However, because the Latin form is part of what gives gravitas its gravitas, it would feel odd or quirky to use levitas in the same way. Hence levity (comp. gravity) is a great choice.",
+   "source": "https://english.stackexchange.com/a/491236#comment1185254",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: TaliesinMerlin."
+  },
+  {
+   "id": "se-comment-money-107366",
+   "register": "casual",
+   "text": "So your dad already has bad notices on his records for falling for fraud traps and asking for refund too many times...and you had to open up a new account in your name for this, and you are asking whether this scheme, which is dubious to you, is setting off all kinds of alarms in your head, is maybe a fraud? If my dad had done this so many times to have notices put on his records, I wouldn't trust any new schemes he tells me about.",
+   "source": "https://money.stackexchange.com/a/67941#comment107366",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Fixed Point."
+  },
+  {
+   "id": "se-comment-money-175080",
+   "register": "casual",
+   "text": "I never saw a \"Is this a scam ...\" question on here where the answer was No!",
+   "source": "https://money.stackexchange.com/a/97274#comment175080",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Daniel."
+  },
+  {
+   "id": "se-comment-money-173567",
+   "register": "casual",
+   "text": "How upset would you be if it was never paid back? How upset would you be if in addition to not getting paid back she immediately began racking up new debt?",
+   "source": "https://money.stackexchange.com/a/96564#comment173567",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Hart CO."
+  },
+  {
+   "id": "se-comment-money-77995",
+   "register": "casual",
+   "text": "Free clue: any time a complete stranger offers to put money in your bank account, it's a scam.",
+   "source": "https://money.stackexchange.com/a/50509#comment77995",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: David Richerby."
+  },
+  {
+   "id": "se-comment-money-187387",
+   "register": "casual",
+   "text": "wow, an 'is this a scam?' question that might not actually be a scam.",
+   "source": "https://money.stackexchange.com/a/101939#comment187387",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mr.Mindor."
+  },
+  {
+   "id": "se-comment-money-107367",
+   "register": "casual",
+   "text": "\"I had to get the bank account in my name because my dad has bad notices on his records for falling for fraud traps ...\" - And now you're following in his footsteps :)",
+   "source": "https://money.stackexchange.com/a/67941#comment107367",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: marcelm."
+  },
+  {
+   "id": "se-comment-money-113957",
+   "register": "casual",
+   "text": "Option 1.5: Point out that you could demand she pay in full, but offer to split the loss this once.",
+   "source": "https://money.stackexchange.com/a/71364#comment113957",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: keshlam."
+  },
+  {
+   "id": "se-comment-money-143533",
+   "register": "casual",
+   "text": "All alarm-bells should be screaming at you. Username and Password are never ever ever required for anyone to do anything, other than trying to fraud you!",
+   "source": "https://money.stackexchange.com/a/84251#comment143533",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ssn."
+  },
+  {
+   "id": "se-comment-money-182999",
+   "register": "casual",
+   "text": "telegraph.co.uk/technology/microsoft/9346371/… includes links to a Microsoft research paper with exactly this conclusion - \"by sending an email that repels all but the most gullible the scammer gets the most promising marks to self-select\"",
+   "source": "https://money.stackexchange.com/a/100040#comment182999",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: AakashM."
+  },
+  {
+   "id": "se-comment-money-107373",
+   "register": "casual",
+   "text": "\"A woman on Facebook recently contacted my dad.\" I knew a scam was coming up right there, and my instinct turned out right.",
+   "source": "https://money.stackexchange.com/a/67941#comment107373",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Masked Man."
+  },
+  {
+   "id": "se-comment-outdoors-53829",
+   "register": "casual",
+   "text": "I read this in the side bar as \"What are some common mistakes to avoid when trying winter campaigning for the first time?\" and my first reaction was \"Don't invade Russia\".",
+   "source": "https://outdoors.stackexchange.com/a/20746#comment53829",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: R. Schmitz."
+  },
+  {
+   "id": "se-comment-outdoors-38835",
+   "register": "casual",
+   "text": "Just focus on the fact that you're going to die if you don't stop worrying about dying.",
+   "source": "https://outdoors.stackexchange.com/a/15540#comment38835",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Ed Plunkett."
+  },
+  {
+   "id": "se-comment-outdoors-58807",
+   "register": "casual",
+   "text": "Without active cooling (which requires some sort of energy, gas or electricity), you'll not even remotely be able to keep your stuff cool for three weeks.",
+   "source": "https://outdoors.stackexchange.com/a/22241#comment58807",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: helm."
+  },
+  {
+   "id": "se-comment-outdoors-63306",
+   "register": "casual",
+   "text": "Also no matter how reliable a device is, a paper map will never run out of battery... Even if I were hiking with a GPS device, I would always take a paper map as a backup. Preparing for the worst case scenarios is how you survive them.",
+   "source": "https://outdoors.stackexchange.com/a/24502#comment63306",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Kialandei."
+  },
+  {
+   "id": "se-comment-outdoors-38849",
+   "register": "casual",
+   "text": "\"What to do if you find yourself stuck with no hope of rescue: Consider yourself lucky that life has been good to you so far. Alternatively, if life hasn't been good to you so far—which, given your present circumstances, seems more likely—consider yourself lucky that it won't be troubling you much longer\" - Hitchhiker's Guide to the Galaxy",
+   "source": "https://outdoors.stackexchange.com/a/15540#comment38849",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Cort Ammon."
+  },
+  {
+   "id": "se-comment-outdoors-46785",
+   "register": "casual",
+   "text": "My observation from the local dog park is that you can't even rely on a 80 lb German Shepard deterring an attack by a 5 lb Chihuahua, let alone a 200 lb starving black bear. A hungry bear (particularly one not familiar with dogs) may like their odds.",
+   "source": "https://outdoors.stackexchange.com/a/18620#comment46785",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user4030."
+  },
+  {
+   "id": "se-comment-outdoors-65792",
+   "register": "casual",
+   "text": "Maybe you don't, but you're endangering all humans in the area for the foreseeable future, by teaching the bears that people are a source of food",
+   "source": "https://outdoors.stackexchange.com/a/25581#comment65792",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Chris H."
+  },
+  {
+   "id": "se-comment-outdoors-737",
+   "register": "casual",
+   "text": "Really, if a bear is about to kill you, do you care if stopping it gets you in trouble with the law. I want that to be my last thought when a bear is eating me \"well at least I won't have to see a judge\"",
+   "source": "https://outdoors.stackexchange.com/a/679#comment737",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Russell Steen."
+  },
+  {
+   "id": "se-comment-outdoors-39387",
+   "register": "casual",
+   "text": "I'm puzzled that the light of the full moon keeps you awake and you expect to sleep better under the light of the sun…",
+   "source": "https://outdoors.stackexchange.com/a/15731#comment39387",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: gerrit."
+  },
+  {
+   "id": "se-comment-outdoors-56743",
+   "register": "casual",
+   "text": "To clarify kubanczyk's comment: The poles are the lands of the midnight sun. If there are any stars visible, that means it is winter; you really don't want to walk to the South Pole in winter.",
+   "source": "https://outdoors.stackexchange.com/a/21456#comment56743",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Martin Bonner supports Monica."
+  },
+  {
+   "id": "se-comment-music-108483",
+   "register": "casual",
+   "text": "\"Source: I work with junior concert bands.\" - Howls of laughter And sympathy. You are a hero in the world of music.",
+   "source": "https://music.stackexchange.com/a/69818#comment108483",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Todd Wilcox."
+  },
+  {
+   "id": "se-comment-music-108516",
+   "register": "casual",
+   "text": "'Can wind instruments be played in tune?' is often, alas, the more natural question to ask.",
+   "source": "https://music.stackexchange.com/a/69817#comment108516",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user3490."
+  },
+  {
+   "id": "se-comment-music-98997",
+   "register": "casual",
+   "text": "This answer does not specifically address scales. Give me evidence that he was referring specifically to scales, and I'll retract my downvote.",
+   "source": "https://music.stackexchange.com/a/64255#comment98997",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Dave."
+  },
+  {
+   "id": "se-comment-music-172871",
+   "register": "casual",
+   "text": "Virtually everything that separates an adequate musician from a good/great one is not written in the score.",
+   "source": "https://music.stackexchange.com/a/100117#comment172871",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Kilian Foth."
+  },
+  {
+   "id": "se-comment-music-187627",
+   "register": "casual",
+   "text": "Please read the highest voted answer and take it to heart. You’re not practicing the violin, your child is. You don’t have to and shouldn’t be standing by and correcting her. You can’t both point out her mistakes and also want her to be ok with not playing a new piece well. She almost certainly doesn’t need her mistakes pointed out. Let her practice alone.",
+   "source": "https://music.stackexchange.com/a/109026#comment187627",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Todd Wilcox."
+  },
+  {
+   "id": "se-comment-music-20044",
+   "register": "casual",
+   "text": "That's reducio ad absurdum. Unless you have a well developed absolute pitch, which most Westerners don't have (nor any other culture without a tonal language), then it's almost impossible to tell the difference between C major and C# major, unless they are played back-to-back. Moving keys up by one semitone is totally different to moving it 10 octaves (which is about the full range of human hearing).",
+   "source": "https://music.stackexchange.com/a/15225#comment20044",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: naught101."
+  },
+  {
+   "id": "se-comment-music-109615",
+   "register": "casual",
+   "text": "Just curious. Where are you seeing piano music which doesn’t include markings relating to volume?",
+   "source": "https://music.stackexchange.com/a/70237#comment109615",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: AJFaraday."
+  },
+  {
+   "id": "se-comment-music-4902",
+   "register": "casual",
+   "text": "Your explanation that \"the major key is present by nature in every note that is played. Therefore, it is interpreted as normal behavior, a happy day in our lives...\" could easily be rewritten as \"the major key is present by nature in every note that is played. Therefore it is interpreted as redundant behavior, a monotonous day in our lives.\" While I agree with what you're saying regarding the science of sound, I think you are introducing your own cultural biases about consonance/dissonance. Sound is a natural phenomena, music, on the other hand, is man-made.",
+   "source": "https://music.stackexchange.com/a/109#comment4902",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: seanreads."
+  },
+  {
+   "id": "se-comment-music-165489",
+   "register": "casual",
+   "text": "Might make a little more sense to count the tied notes to co-incide with the underlying rhythm. If it's 123 12, then a dotted minim followed by a minim is what I'd write. A count of 4 and 1 seems quite weird.",
+   "source": "https://music.stackexchange.com/a/96209#comment165489",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Tim."
+  },
+  {
+   "id": "se-comment-music-839",
+   "register": "casual",
+   "text": "This is the kind of question that would benefit from having a notation feature on the site.",
+   "source": "https://music.stackexchange.com/a/571#comment839",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Goodbye Stack Exchange."
+  },
+  {
+   "id": "se-comment-photo-2612",
+   "register": "casual",
+   "text": "+1 nailed it on the head. JPEG is the end, RAW is the beginning, and if you shoot JPEG, you just gave up your control of the end to the decisions of a programmer who may just have a different view.",
+   "source": "https://photo.stackexchange.com/a/2628#comment2612",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Joanne C."
+  },
+  {
+   "id": "se-comment-photo-174270",
+   "register": "casual",
+   "text": "Photos of one of the most historic moments in 20th century European history? Nah, don't waste a few dollars on that!",
+   "source": "https://photo.stackexchange.com/a/95593#comment174270",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: osullic."
+  },
+  {
+   "id": "se-comment-photo-161438",
+   "register": "casual",
+   "text": "Expensive as compared to what? Couldn't it be equally said, \"For a student who wants to pursue [activity X] by acquiring some decent gear is considerably hard\", for several values of X? Sailboating, SCUBA diving, classic car restoration, fine woodworking and cabinetry, etc. What is the basis of expectation of the price of expensive hobbies?",
+   "source": "https://photo.stackexchange.com/a/90543#comment161438",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: scottbb."
+  },
+  {
+   "id": "se-comment-photo-206693",
+   "register": "casual",
+   "text": "Honestly, if you don't like taking photos, and your friends always criticize the photos you take of them, tell them to take their own damned photos. If you are going to take photos, take them for somebody who will appreciate them (yourself, for example!) or who will give constructive feedback.",
+   "source": "https://photo.stackexchange.com/a/107985#comment206693",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: David Richerby."
+  },
+  {
+   "id": "se-comment-photo-126335",
+   "register": "casual",
+   "text": "Dear camera manufacturers, please never, ever, ever force me to use a stupid touch screen interface for any mission-critical aspect of taking a picture. Thank you. Sincerely, everyone who ever tries to take pictures under moderately adverse conditions anywhere, evar. :P",
+   "source": "https://photo.stackexchange.com/a/73395#comment126335",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: junkyardsparkle."
+  },
+  {
+   "id": "se-comment-photo-138174",
+   "register": "casual",
+   "text": "I remember back in the early 2000's when someone asked on a photo forum when digital cameras would be able to take 'HD' photos. The answer he got was 'Several years ago'.",
+   "source": "https://photo.stackexchange.com/a/80293#comment138174",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Steve Ives."
+  },
+  {
+   "id": "se-comment-photo-174473",
+   "register": "casual",
+   "text": "As a client, I would find the \"don't give them anything\" option very offensive. Even if you're not charging me anything, I already invested time into the shoot, and would be pretty adamant about wanting to get something out of that unless the circumstances were completely outside your control.",
+   "source": "https://photo.stackexchange.com/a/95713#comment174473",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: R.. GitHub STOP HELPING ICE."
+  },
+  {
+   "id": "se-comment-photo-161444",
+   "register": "casual",
+   "text": "For a student, pretty much everything is expensive. The per shot cost of photography is a lot lower now than it was 30 years ago.",
+   "source": "https://photo.stackexchange.com/a/90543#comment161444",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Michael C."
+  },
+  {
+   "id": "se-comment-photo-33723",
+   "register": "casual",
+   "text": "My reaction to the title was: Oh, don't worry about it... the wind will blow the sand back into the holes, and the beach will be fine before you know it.",
+   "source": "https://photo.stackexchange.com/a/20202#comment33723",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: coneslayer."
+  },
+  {
+   "id": "se-comment-photo-138110",
+   "register": "casual",
+   "text": "what camera? what lens? what is a 4k picture? 4k is video. As far as i can tell a 4k camera takes 4k video not 4k stills. ??",
+   "source": "https://photo.stackexchange.com/a/80291#comment138110",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Alaska Man."
+  },
+  {
+   "id": "se-comment-scifi-375115",
+   "register": "casual",
+   "text": "Curious that in the wizarding world one doesn't need to include in their password at least a number, a special character, and a Parseltongue alphabet symbol.",
+   "source": "https://scifi.stackexchange.com/a/146641#comment375115",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Federico Poloni."
+  },
+  {
+   "id": "se-comment-scifi-3819",
+   "register": "casual",
+   "text": "That said: The mental image of Harry putting a 9mm up to Voldemort's forehead and uttering a certain line from Dirty Harry before blowing him away, is beyond enjoyable.",
+   "source": "https://scifi.stackexchange.com/a/2611#comment3819",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: DampeS8N."
+  },
+  {
+   "id": "se-comment-scifi-123339",
+   "register": "casual",
+   "text": "Obviously, that's one student climbing on the shoulders of another to reach the cookie jar on the high shelf.",
+   "source": "https://scifi.stackexchange.com/a/61012#comment123339",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Brian S."
+  },
+  {
+   "id": "se-comment-scifi-10302",
+   "register": "casual",
+   "text": "Question my sanity, do you? Hmmm... When 900 years old you reach, be as sane, you will not.",
+   "source": "https://scifi.stackexchange.com/a/6343#comment10302",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user2900."
+  },
+  {
+   "id": "se-comment-scifi-375106",
+   "register": "casual",
+   "text": "When he's meeting with Death Eaters and is asked for the password, he just says, \"Dumbledore sucks!\" and the gargoyle just needs to hear \"Dumbledore\" but his guests think, \"Wow, that's a cold password, dude, considering. I like it!\"",
+   "source": "https://scifi.stackexchange.com/a/146641#comment375106",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: starpilotsix."
+  },
+  {
+   "id": "se-comment-scifi-554374",
+   "register": "casual",
+   "text": "FOUNDERS OF HOGWARTS: Okay, so we all know there are four types of kid; brave, smart, evil and miscellaneous. SCHOOL BOARD: Yes, continue.",
+   "source": "https://scifi.stackexchange.com/a/202936#comment554374",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Valorum."
+  },
+  {
+   "id": "se-comment-scifi-590227",
+   "register": "casual",
+   "text": "\"The Republic's \"Ambassadors\" are two fanatical heavily-armed religious zealots with elite commando training and the ability to invade your mind and manipulate your thoughts. They say they are here to negotiate.\"",
+   "source": "https://scifi.stackexchange.com/a/215931#comment590227",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: FuzzyBoots."
+  },
+  {
+   "id": "se-comment-scifi-192547",
+   "register": "casual",
+   "text": "“CLIMB IN! NO, NOT THERE, IT’S DANGEROUS. WELL NO, NOT EXACTLY AS DANGEROUS AS THE JOKER, BUT— SEE, NOW YOU’VE BURNED YOUR FOOT. *mutters* WHY DOESN’T ANYONE EVER READ THE DAMN SIGN”",
+   "source": "https://scifi.stackexchange.com/a/87546#comment192547",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Paul D. Waite."
+  },
+  {
+   "id": "se-comment-scifi-477241",
+   "register": "casual",
+   "text": "Show of hands, how many people instantly knew the movie just from reading the question title?",
+   "source": "https://scifi.stackexchange.com/a/177056#comment477241",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Stevoisiak."
+  },
+  {
+   "id": "se-comment-scifi-88410",
+   "register": "casual",
+   "text": "+1 for Gandalf identifying himself; a translation might be something like: \"Yo! Maiar dude. I'm a Maiar dude too. You've had your fun but now you're up against someone your own size. Back off or you might get hurt.\"",
+   "source": "https://scifi.stackexchange.com/a/40343#comment88410",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user8719."
+  },
+  {
+   "id": "se-comment-boardgames-53369",
+   "register": "casual",
+   "text": "One of the many house rules that makes the game take much longer and be more painful then intended.",
+   "source": "https://boardgames.stackexchange.com/a/38780#comment53369",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Joe W."
+  },
+  {
+   "id": "se-comment-boardgames-7147",
+   "register": "casual",
+   "text": "I'm surprised at how contentious this answer seems to be, and how strong the counter opinions run. It's not all about obliterating your opponent. In casual play, I enjoy playing with bigger decks. In fact, most of my decks are bigger than 60 cards. Sometimes I enjoy building decks that only use one of each card. Sometimes I like building decks that win with the most obscure mechanic available. The question asked \"Why would you want to...?\" not \"Are decks bigger than 60 cards a great idea for crushing my enemies?\" Magic is not just about the tournament scene.",
+   "source": "https://boardgames.stackexchange.com/a/358#comment7147",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ire_and_curses."
+  },
+  {
+   "id": "se-comment-boardgames-52603",
+   "register": "casual",
+   "text": "Monopoly suffers from many, many, house-rules – in other words, rules that people decide to use despite the fact they aren't the ones written down. I've heard of this being one such house rule. In my opinion, this house rule doesn't improve the game – it just allows people to be smug at other people's discomfort even more…",
+   "source": "https://boardgames.stackexchange.com/a/38325#comment52603",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Bill Michell."
+  },
+  {
+   "id": "se-comment-boardgames-1514",
+   "register": "casual",
+   "text": "I'm sorry but I completely disagree. (1) you are supposed to win by the time you have drawn all your deck; i.e. if your deck is so weak you didn't win after you have drawn 60 cards, burn it; (2) this is a very weak argument even if you know that the opponent will try to mill you: using anti-mill cards is much better instead; (3) if you can't fit all your cards, just have less cards for each type (1x or 2x instead of 4x) and use some tutors to find them - if you think you need too many 1x cards to fit 60, well, lol.",
+   "source": "https://boardgames.stackexchange.com/a/358#comment1514",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: o0&#39;.."
+  },
+  {
+   "id": "se-comment-boardgames-9211",
+   "register": "casual",
+   "text": "If I work out that someone is a \"creative player\", as you so generously term them, I would just not invite them to play in my games ever again. Simple as that. Treating cheating as though it's some kind of valid strategy is just wrong, and cheaters need to learn that there are consequences for their creativity. On a related note, I'm always delighted when WotC give cheats and unsportsmanlike players massive multi-year bans from competitive play. It's not \"unfair\" to them or their Magic careers. They brought it completely on themselves.",
+   "source": "https://boardgames.stackexchange.com/a/7183#comment9211",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: thesunneversets."
+  },
+  {
+   "id": "se-comment-boardgames-49913",
+   "register": "casual",
+   "text": "You say game of skill but it seems you are actually referring to games of strategy. They're NOT the same thing. Most direct competitions (e.g. archery) are games of pure skill with no luck. They don't have *strategy*—just skill.",
+   "source": "https://boardgames.stackexchange.com/a/35450#comment49913",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Wildcard."
+  },
+  {
+   "id": "se-comment-boardgames-7938",
+   "register": "casual",
+   "text": "\"but I do not want to focus on money in the creator's pockets being the reason for their existence.\" — you may not want to focus on that being the reason for their existence, but that is the primary reason for their existence. Without rares, there would be no relatively valuable cards, no secondary market, no chasing the \"good\" rares and buying boxes of cards. Wizards is a business, not trying to create the purest, best game they can.",
+   "source": "https://boardgames.stackexchange.com/a/6352#comment7938",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ghoppe."
+  },
+  {
+   "id": "se-comment-boardgames-49255",
+   "register": "casual",
+   "text": "This! Following the darned rules is a great way. Money in the middle makes the game last soooo long. The biggest complaint is \"then people go out!\" as if that isn't the point of the game .... right?",
+   "source": "https://boardgames.stackexchange.com/a/35092#comment49255",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: rocky."
+  },
+  {
+   "id": "se-comment-boardgames-49898",
+   "register": "casual",
+   "text": "If we're going to expand the definition of luck to include first-player advantage, such a game would have to have simultaneous turns. However, such games lend themselves to mixed strategies which seem like they would also be covered by generalized luck.",
+   "source": "https://boardgames.stackexchange.com/a/35450#comment49898",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: eyeballfrog."
+  },
+  {
+   "id": "se-comment-boardgames-52607",
+   "register": "casual",
+   "text": "To what end? The point of a game is to be fun, and the rules are there to facilitate that. How does this rule increase the enjoyability of the game, for anyone? The person who missed out on $200 is pissed off about losing $200, and everyone else's game experience is diminished by making the game unjustly easier for them.",
+   "source": "https://boardgames.stackexchange.com/a/38324#comment52607",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Alexander."
+  },
+  {
+   "id": "se-comment-fitness-32661",
+   "register": "casual",
+   "text": "Start with a lighter girlfriend, and gradually increase the weight of your girlfriends as you get stronger.",
+   "source": "https://fitness.stackexchange.com/a/18744#comment32661",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user2861."
+  },
+  {
+   "id": "se-comment-fitness-147",
+   "register": "casual",
+   "text": "+1 for \"less likely to quit\" - I one day ran 5 miles (which I can do fairly easily). I was not paying too much attention, just enjoying the beautiful day. Then I realized I had to run back. I took the next day off from running...",
+   "source": "https://fitness.stackexchange.com/a/212#comment147",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: JasCav."
+  },
+  {
+   "id": "se-comment-fitness-958",
+   "register": "casual",
+   "text": "I wonder how many times we will see variations on the \"targeted fat reduction\" question, maybe this should be in the wiki. I disagree on one point though: sugar is sugar, your liver does not know if it's from fruit or not. Someone who's overweight doesn't need sugar from ANY source unless they're hiking to the farm and climbing a fruit tree to get it.",
+   "source": "https://fitness.stackexchange.com/a/870#comment958",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: J. Win.."
+  },
+  {
+   "id": "se-comment-fitness-160",
+   "register": "casual",
+   "text": "What is this fresh air and sunshine you speak of, how can us Londoners get some",
+   "source": "https://fitness.stackexchange.com/a/212#comment160",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Chris S."
+  },
+  {
+   "id": "se-comment-fitness-1899",
+   "register": "casual",
+   "text": "Sorry, this is simply wrong. Human metabolism is too complex for the nutritional value of food to be reduced to a simple linear scale like calories. This is strictly anecdotal, but I personally lost more weight on a higher calorie low-carb diet in a couple of months than I did on a lower calorie high-carb diet for over a year.",
+   "source": "https://fitness.stackexchange.com/a/1351#comment1899",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Rune Aamodt."
+  },
+  {
+   "id": "se-comment-fitness-62349",
+   "register": "casual",
+   "text": "Honestly, you'll get better performance from your studies studying less. One's productivity on mental work falls sharply after six, seven hours. My academic performance shot up almost 20% after I reduced my study time to four hours a day, following a nervous breakdown. YMMV, but watch your brain's health too =)",
+   "source": "https://fitness.stackexchange.com/a/40481#comment62349",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: T. Sar."
+  },
+  {
+   "id": "se-comment-fitness-23972",
+   "register": "casual",
+   "text": "For future readers, don't sacrifice quality for speed. Natural bodybuilding is a hobby of patience.",
+   "source": "https://fitness.stackexchange.com/a/6828#comment23972",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: MDMoore313."
+  },
+  {
+   "id": "se-comment-fitness-953",
+   "register": "casual",
+   "text": "You can try lifting your kids in sets of 50, if you do all 4 of them that's a nice workout!",
+   "source": "https://fitness.stackexchange.com/a/869#comment953",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Ivo Flipse."
+  },
+  {
+   "id": "se-comment-fitness-684",
+   "register": "casual",
+   "text": "Nothing embarrassing about man-boobs... especially not in the context of how to get rid of them. That's what we're here for.",
+   "source": "https://fitness.stackexchange.com/a/718#comment684",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Nathan Wheeler."
+  },
+  {
+   "id": "se-comment-fitness-11",
+   "register": "casual",
+   "text": "BTW congrats on the progress. That first 50 pounds, 8-mile walks, and quitting smoking are already tremendous achievements!",
+   "source": "https://fitness.stackexchange.com/a/9#comment11",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: G__."
+  },
+  {
+   "id": "se-answer-lifehacks-8141",
+   "register": "casual",
+   "text": "A common solution I have seen is to have a tennis ball (or similarly soft item) that can be hung from the ceiling. (You may be able to purchase a kit made for this purpose.) With the assistance of another person, drive your vehicle into the garage to a place where you have clearance on both sides. Fasten a string to both the ceiling and your tennis ball. The ball should hang down and just touch your windshield (windscreen). \n\nUpon returning, drive into the garage just enough to touch the tennis ball to the windshield. You should be positioned with enough clearance to not damage the wall or the garage door.\n\nImage found on http://v6mustangperformance.com/",
+   "source": "https://lifehacks.stackexchange.com/a/8141",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Adam Zuckerman."
+  },
+  {
+   "id": "se-answer-lifehacks-9661",
+   "register": "casual",
+   "text": "When the cold caller asks for you, say \"Just a moment, I'll get them.\" and then place the phone next to the stereo and let it play, like hold music. Every once in a while get back on in your best message machine voice and say \"Your call is very important to us, please stay on the line and your call will be answered in the order it was received.\" Having been a cold caller in the past (shudder, nightmares) I can tell you that after a while they will make a note not to call you back.",
+   "source": "https://lifehacks.stackexchange.com/a/9661",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Coder-guy."
+  },
+  {
+   "id": "se-answer-lifehacks-9547",
+   "register": "casual",
+   "text": "Since this is Lifehacks, I figure it's fine to offer an alternative solution:\n\nInstall a cat typing detector on your computer.\n\nThis is software that detects when the keyboard is being operated in a non-humanlike manner (presumably, e.g. with clusters of nearby keys being pressed simultaneously), and locks the keyboard when that happens.\n\n(Source)\n\nSome can also be configured to emit a loud noise when they detect a cat on the keyboard, hopefully annoying the cat enough to keep them away even if you're not around to move them off. Or you can disable that feature and just let your cat lounge on your keyboard as much as she likes, secure in the knowledge that it won't harm your computer (except maybe by getting the fans full of cat hair, but that'll happen anyway).\n\nThe one I've personally used, and can testify to the effectiveness of, is PawSense, which the screenshot above comes from. Alas, it's Windows-only, and somewhat pricey too, but my parents own a license and have been quite satisfied with it. And it's even won an IgNobel prize! ;-)\n\nApparently, there's a program called CatNip that does the same for OS X. Alas, I'm not yet aware of equivalent software for Linux. Apparently, in this particular respect, open source is (so far) inferior! ;-)\n\nPs. See also this related question on Super User.",
+   "source": "https://lifehacks.stackexchange.com/a/9547",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Ilmari Karonen."
+  },
+  {
+   "id": "se-answer-lifehacks-14498",
+   "register": "casual",
+   "text": "Just blow it back around the floor and pretend it never happened.\n\nIf a rug is available, traditionally you would sweep it under the rug.\n\nExplanation: if it's not enough dust to sweep up it's not enough to care about.\n\nI don't have any citations for this. It's a technique I came up with myself and I haven't documented it anywhere else. Maybe someone else has covered it, I can update if needed.",
+   "source": "https://lifehacks.stackexchange.com/a/14498",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: djechlin."
+  },
+  {
+   "id": "se-answer-lifehacks-17473",
+   "register": "casual",
+   "text": "I use an IVAR side panel from IKEA (any similar thing, for example a small ladder, or screwing together a few wooden bars yourself will do as well). Lean it agains a wall at a slight angle and throw clothes over the horizontal bars. Done.\n\nStands almost entirely flat against the wall if you don't use it, comes in different sizes, is cheap and most people who have seen it in my room thought it looked kinda cool.\n\nIf you truly want to hide it, this usually fits behind a door pretty well.",
+   "source": "https://lifehacks.stackexchange.com/a/17473",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Laura."
+  },
+  {
+   "id": "se-answer-lifehacks-61",
+   "register": "casual",
+   "text": "Here's a solution that my friend came up with:\n\n- Take a bunch of Styrofoam cups\n\n- Cut out the bottoms of the cups\n\n- Stack them up\n\n- Put the wide end of the top cup under the faucet, and the (cut open) thinner end of the bottom cup over the edge of the sink\n\n- Place the urn directly underneath the end of your Styrofoam cup chain\n\n- Turn on the sink\n\nAt the end, your contraption should look like this:",
+   "source": "https://lifehacks.stackexchange.com/a/61",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Shokhet."
+  },
+  {
+   "id": "se-answer-lifehacks-10323",
+   "register": "casual",
+   "text": "Ask Her Best Friend or Mother\n\nEspecially if this is an engagement situation, ask her best friend or her mother if they know her ring size. If you've been dating seriously for awhile, you'd be surprised how often this type of thing comes up. If neither of them know her ring size, they will likely be more than happy to get in on the intrigue. They can (more easily than you) find out her size under the guise of buying a gift or some other type of conversational pretense like \"damn, you really need to know such things just in case, y'know?\" Of course, all oaths of secrecy apply.\n\nThe Solo Scenario\n\nIf you decide to go with this on your own — when you are buying a ring from a jeweler, you typically buy the ring in their \"standard\" size; I believe it is usually a size 7. Display case rings are typically made a bit larger by design because they want a prospective buyer to be able to see it on their finger; that plus it is typically less destructive to resize the ring smaller than to try and make it bigger later.\n\nAsk the jeweler about the design of the ring and if knowing the ring size is more or less important than sizing it later. If the shank is plain (the part that wraps around the bottom), re-sizing is easy. If it's too big, they simply slice out a small portion at the bottom and join the ends seamlessly. If it's too small, the metal can be heated and stretched, but the thickness of the band will determine how much they can size it before more material has to be added. Adding material can leave a slight line between the old and new metal, so it is better get the bigger ring.\n\nIf the ring shank is more ornamental (encrusted with diamonds or something), the ring size is sometimes best known before the ring is even made. That may be a factor in your decision about which ring to purchase. Ask the jeweler.",
+   "source": "https://lifehacks.stackexchange.com/a/10323",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Robert Cartaino."
+  },
+  {
+   "id": "se-answer-lifehacks-15171",
+   "register": "casual",
+   "text": "If you are looking to save money and go the easiest route, I would purchase a sleep mask.\n\nYears ago I worked the night shift for a few years and couldn't find any curtain that would truly make it seem like \"night time\". This is the only thing that worked for me. It may take a few nights to get adjusted but there are so many out there, that I am sure you will find one that you like. Even today as I work a normal day shift, I still wear one at night because I am just to accustomed to it.",
+   "source": "https://lifehacks.stackexchange.com/a/15171",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Flat Banana."
+  },
+  {
+   "id": "se-answer-pets-21577",
+   "register": "casual",
+   "text": "As in human cases of abuse, if you genuinely want to repair the relationship, the first and most essential thing to accept is you may not be able to. Especially with a young kitten, it's entirely possible you've scarred her for life. Even if she can recover in general, she may never be able to respond to you without fear. \n\nThe second most essential thing is the need for accountability. You know now that you are a person capable of abusing a kitten. You don't have the luxury anymore of assuming you will just not do those things. You need to involve at least one person that can hold you to account.\n\nI would honestly recommend that you give her to someone else who does not live with you. Give her a clean break and allow her to re-establish trust with an uninvolved human being. If this person reports to you that she's stabilized emotionally and acting like a normal cat towards them, then you can attempt a supervised visit with her. Do not push interaction on her - you should treat her like a feral cat, at maximum extend a hand and invite her towards you. Do not approach her or take any action that could conceivably be considered threatening. Accept that it could take numerous repeats of this before she is willing to approach.\n\nIf after several tries of this you see no improvement, or if the person caring for her reports that she backslides significantly after your visits, refer to point 1: it may be a hopeless case where you are concerned. Accept this and let her go. If she begins to warm back up to you, however, you could consider taking her back only if the following conditions are met:\n\n- You allow your accountability partner(s) to continue checking in on you regularly and confirm the cat's wellbeing\n\n- You have actively worked on the factors that led you to abuse her in the first place and have shown considerable improvement in the opinion of at least one relevant professional\n\nRecovering from being an abuser is possible (especially as you're still young), but it is a very serious matter and you cannot treat any part of this lightly. It is vitally important that you address the original abuse and commit to changing anything and everything that contributed to your behaviour. Do not accept responsibility for any animal until point 2 has been satisfactorily achieved, and even then, tread with caution. People criminally charged with animal abuse can be legally barred from owning animals again in the future; in the end this may be the sentence you have to impose on yourself.",
+   "source": "https://pets.stackexchange.com/a/21577",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Alan T.."
+  },
+  {
+   "id": "se-answer-pets-21576",
+   "register": "casual",
+   "text": "Honestly, it sounds as though you shouldn't have a cat right now. There is never any excuse to needlessly hurt an animal and, whilst your critical write-up of your own behaviour is a start, it certainly doesn't help the animal that has been abused. From the incidents that you've described, the cat could have sustained substantial injuries and needs to be seen by a vet immediately especially as it is young.\n\nWhat concerns me most is that after having this epiphany about your behaviour, you then continued to abuse the animal when it didn't do what you wanted. I can't help you with changing your own behaviour.\n\nWhilst you may be able to change the cat's feelings towards you, it sounds as though your own behaviour is going to be the limiting factor. Training and imparting knowledge to any animal is a difficult, repetitive and frequently frustrating endeavour. If you cannot rely on yourself to provide this level of care and kindness, the best thing to do is to give the cat to a rescue centre where it will receive the treatment it requires.\n\nJust for context – I don't know where you are located – if you were caught doing that to a cat in the UK, you would likely be prosecuted for animal abuse.",
+   "source": "https://pets.stackexchange.com/a/21576",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Henders."
+  },
+  {
+   "id": "se-answer-pets-18823",
+   "register": "casual",
+   "text": "If she's not satisfied with food/drink it may be that she is actually seeking nothing more than attention. Adult cats don't meow to each other (in cat-world it's only used to communicate between mothers and kittens) so she's definitely trying to say something to you. As to what, well that's a bit harder to be sure on (sadly there's no cat-translator yet) as a rough meow-vocabulary usually develops between a cat and it's slave-human.\n\nIn general terms though you can get a rough idea from the pitch and duration of the meow:\n\n- One or two short meows = A standard \"greeting\" meow, the cat equivalent of \"Hi\"\n\n- Multiple meows, especially if accompanied by a vertical tail = Excited greeting. e.g. “Great to see You!” often there's a subtext of \"Have you got any food handy?\" Or \"Give me some fuss\" as well.\n\n- Mid-pitch meow = Polite request for something, “I'd like to eat.” or \"Play with me\" or \"Fuss me!\"\n\n- Longer, more drawn-out mrrroooow = Demand for something, often an escalation of the \"Polite Request\" e.g. “Open the door. NOW.” or \"Feed me puny Human!\"\n\n- Low-pitch MRRRooooowww = Complaint of a wrong you have done. e.g. “You still haven't fed me!” or \"The litter tray is full of poop and I need to go\" or \"You're ignoring me and it's making me cross!\" etc.\n\n- High-pitched, relatively loud RRRROWW! = Anger or pain. e.g. \"You just stepped on my tail you oaf!\"\n\n- Hiss = Aggression e.g. \"Go away!\" Or \"Don't mess with me or I'll totally claw your face off!\" Hissing is used cat-to-cat as is growling as well as to humans.\n\n- BRRRUPP! = \"Excuse me, coming through!\"\n\n- PRRRIP! = General happy noise\n\n- Chirping/Chittering = Mild frustration e.g. \"I can't reach it (the prey/toy)\"\n\n- Multiple \"Yowl!\" Sounds = \"I'm in heat\"\n\n- Low-pitched growl = \"This food/toy/blanket/whatever is MINE, don't come near!\"\n\nFrom how you describe it I think this is likely a plea for fuss or attention, and as @Mick mentions in his comment you probably want to consider carefully before going ahead as the cat may be looking to bond with you and if you aren't prepared to reciprocate then it may be inadvisable to encourage her.\n\nVocalisations do vary from cat to cat, some don't even \"talk\" at all. The nuances of an individual cats \"speech\" are something that an owner gets used to over time. That said there is substantial overlap across many cats in general terms and the list here is intended as a rough starting point for people like the OP who don't have any history with the cat they are trying to understand, it's not always going to be right but it's better than nothing.",
+   "source": "https://pets.stackexchange.com/a/18823",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: motosubatsu."
+  },
+  {
+   "id": "se-answer-pets-21578",
+   "register": "casual",
+   "text": "Your attachment to this cat is irrelevant. It's what's in the best interest of the pet.\n\nThe best interest of this cat is to be away from you and in a caring and stable home. The cat will unlikely trust you anytime soon and maybe never. My biggest concern is that you are capable of repeating this behaviour.\n\nYou cannot own any pets until you have some intensive psychiatric help. The way you've treated this animal is not ok, never will be ok and there is no justification for it.\n\nIf you want the cat to recover and heal, please find a good, caring and loving home for it. With people who are stable and don't abuse sentient creatures when they lose control.\n\nAs you are under 18, you may be living with your parents, ask them to rehome the cat. I don't know what situation you have to be living like this, but I urge you to get help now. \n\nThe only commendable thing about this question is your willingness to be honest and desire to make a positive change. It's just too soon and too far gone at this stage to repair things between you and this cat.",
+   "source": "https://pets.stackexchange.com/a/21578",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user6796."
+  },
+  {
+   "id": "se-answer-pets-23837",
+   "register": "casual",
+   "text": "The other answers are good, but I've had success with a more direct approach: outstubborn the cat.\n\nRather than trying to minimize the sound/inconvenience of the falling lamp, try to maximize it. Be creative, e.g. put a bowl with glass marbles on the lamp (I used this + a metallic plate to create a really loud and startling noise). Anything that makes a racket will do.\n\nThe idea is to teach the cat that knocking over the lamp is not nice. As you said, there's not much drawback to the cat when it gets knocked over now, so make the message clearer by making the experience even less nice.\n\nMy cat did it twice after I started using the marbles, and never again. However, you will of course not enjoy the loud sounds so it requires some tenacity from your end.",
+   "source": "https://pets.stackexchange.com/a/23837",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Flater."
+  },
+  {
+   "id": "se-answer-pets-247",
+   "register": "casual",
+   "text": "This is one way cats show affection or try to get your attention. Not all cats do this, however, but they might show this in other ways such as as kneading, gentle scratching and gifting etc. Cats also show affection to other animals by rubbing against them\n\n\"When your cat puts its scent on you, it's saying something like, 'You and I belong together because I smell you on me and you smell me on you.' It's a scent complement.\"",
+   "source": "https://pets.stackexchange.com/a/247",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: iKlsR."
+  },
+  {
+   "id": "se-answer-academia-92903",
+   "register": "professional",
+   "text": "As the author of this particular free textbook, I can say that the previous answers have covered things pretty well. \"Introduction to programming using Java\" started in 1996 as a set of class notes written in HTML with embedded Java applets -- which all seemed pretty exciting in the heady early days of the Internet. I had published an earlier textbook in the usual way, and made not much money from it, which is true of the large majority of published textbooks. I had recently been promoted to full professor, possibly the most secure job in the world where the only further promotion available to me would move me into (shudder) administration, so it would make little difference to my career if I self-published a book instead of submitting it to a regular publisher.\n\nI lost creative control over my regularly published textbook. The copyright was assigned to the publisher until it goes out of print, which it will probably never do in these days of print-on-demand. There has never been a second edition. My Java textbook, on the other hand, has gone through seven versions and has been updated fairly regularly. I get the ego boost of hearing from people all over the world who have read it (something I can never seem to get most of my own students to do). The web site still gets hundreds of visits every day. It has certainly had more impact on the world than if I were selling it. And if someone doesn't like it, I can politely point out that they can write their own textbook, or even make a modified version of mine.\n\nSo, my main motivation was to write a textbook that I could use in my own courses. Selling it would make me very little profit. And since I use free software all the time, it's also a way that I could give back something to the open source / creative commons community.",
+   "source": "https://academia.stackexchange.com/a/92903",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: David J. Eck."
+  },
+  {
+   "id": "se-answer-academia-2221",
+   "register": "professional",
+   "text": "Yes. This. And it wouldn't be so damn tempting if those bricks didn't wiggle just a little bit every time I slammed my forehead into them. Sometimes I think my eyes must be playing tricks on me, what with the repeated cranial trauma and all. But then I remember how good it felt the last time my head actually went through the wall, and so I keep plugging away.\n\nI've found it extremely useful to have two or three walls to bang my head against at any given time. Surprisingly, sometimes banging my head against one wall actually makes one of the other walls weaker. But most walls prove considerably stronger than my head; so it's helpful to have options, so I don't feel so bad about walking away with some scalp intact. \n\nIf you're very lucky, one good smack on the bricks will actually bring the ceiling crashing around your ears. That takes a long time to clean up, but sometimes the debris will knock down other walls for you. And then you have a whole new set of even bigger walls to bang your head against!\n\nDo not listen to the Impostor Syndrome. Everyone \"actually smart\" is hearing exactly the same voice in their head saying \"Oh, if only someone who actually knew how to hit walls with their forehead hit this wall, it would come down like a stack of cards.\" when in fact the wall really is made of brick.\n\nYes. Eventually, you'll move from hoping that you'll be able to knock down a wall with your head someday, to being surprised at how often the walls you hit with your head actually fall, to finally believing that you really can knock down walls with your head sometimes. (For me, the second transition happened some time after tenure.)\n\nBut your head will still hurt.",
+   "source": "https://academia.stackexchange.com/a/2221",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: JeffE."
+  },
+  {
+   "id": "se-answer-academia-77443",
+   "register": "professional",
+   "text": "It depends entirely on whether you have consulted the other meeting participants. There is nothing inherently wrong about an 8 a.m. meeting if it is convenient for everyone involved.\n\nIf you have set the time without consulting the other participants, there are two serious problems. \n\nYou may be giving one or more of them a practical problem. For example, consider a parent whose child's school starts at 8 or later. You may be disrupting carpool arrangements. It may conflict with a class one of the students wants to attend.\n\nThe other problem is more subtle, and applies even if none of the participants actually has a problem with the meeting time. Setting the time for a small meeting without consulting the other participants and considering their views is very disrespectful. It tells them that you consider your schedule, your convenience, to be so much more important than theirs that you don't need to consider them at all. That sort of message is not good for a working relationship.",
+   "source": "https://academia.stackexchange.com/a/77443",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Patricia Shanahan."
+  },
+  {
+   "id": "se-answer-academia-102699",
+   "register": "professional",
+   "text": "You don't say where you're going to school but if it's here in the US, I would report the problem to the university and demand they do whatever is necessary to fix it. Title IX requires them to provide an inclusive environment free of sexual harassment. If you are unsatisfied by their response, I would report the school to the U.S. Department of Education’s Office of Civil Rights. You'll find additional helpful advice here at equalrights.org.\n\nAdded: Several comments express concern that reporting the harassment might result in retaliation. But it's worth noting that retaliation for filing a harassment complaint is also against the law and cause for a new complaint. The school has to do whatever it takes to fix this, even if means expelling the perpetrators. It is not sufficient for them to claim they did the best they could.\n\nStill more: Having conducted some other disciplinary actions, even if not any that were exactly like the one described here, I would expect the result of complaining to the university is that the Title IX conduct officer will call the students to a meeting that might go something like this: You start by asking the students if they know why they're there. After the usual squirmy they-can't-think-of-anything denials, you describe their offensive behavior and ask if the reason they can't remember any of this is because they think it's such completely ordinary behavior. You point out that in a workplace, it would get them fired and might subject the company to a lawsuit and an expensive settlement. You explain that university has an obligation under Title IX to maintain an inclusive environment free of sexual harassment.\n\nYou then ask, \"Do you think you should be allowed to stay at the university?\" Typically, the students' lives flash before their eyes as they realize the seriousness of the stakes and they decide they will never do this again. There are lots of ways to make this even more, ahem, memorable, e.g., by asking if they have a backup career in mind if this computer science thing doesn't work out or by making them wait a few extra days to hear the disposition of their case (especially if you expect to let them off lightly). It may seem a little like pulling the wings off flies, but trust me, the problem behavior will end, hopefully for the entire rest of their lives, in which case they will have learned something far more valuable than yet another algorithm.",
+   "source": "https://academia.stackexchange.com/a/102699",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Nicole Hamilton."
+  },
+  {
+   "id": "se-answer-academia-111505",
+   "register": "professional",
+   "text": "Well, yes... I’m sorry if this will come as a surprise to you, but coming across as an unreasonable, coercive boss who wants to force their students to participate in distasteful, privacy-violating activities that have zero relevance or value to their professional training, is in fact something that will greatly undermine your authority as an advisor. Effect, meet cause.\n\nMy suggestion is that, for your own good and the good of your students, you cease those authority-destroying activities immediately. Your “authority” is something that is given to you for the sole use of doing research and training and educating your students. Asking them to appear in social media videos so that you can have a “visible start” is no different than asking them to make you coffee or give you a back massage so that you can feel energetic - both of those things are indeed not in any job description of any PhD student anywhere. They are not things you should ask students to do, and they are not things you have any right to be upset at a student for not wanting or agreeing to do.\n\nFinally, the fact that you asked the student in the interview if he would be willing to appear in YouTube videos only means that you declared your abusive intentions in advance. It does not make those intentions any less abusive.\n\nGood luck in your tenure track career.\n\nEdit: I said I will address some of the comments left below. Rather than try to discuss fine points of logic, which I think will be tedious, I've decided to add a more personal type of note, which I think will do a better job of getting the point across.\n\nI have been asked many times over the years by various people to have lectures I was giving recorded and made publicly available online (on YouTube, etc). I always refused. Frankly, I find the thought of making publicly available videos of myself lecturing pretty repugnant. Why? Well, just because; I don't feel like it, and I don't owe anyone any explanations. If some silly people want to think that it's because (to quote a comment someone wrote) \"some people are super self-conscious about their voice and/or their looks\", fine, go ahead and think that. (Oh, and by the way, on another occasion I did agree, happily, to participate in a YouTube video that now has more than 700,000 views. Go figure... I guess I'm inconsistent! Again, I leave to others to engage in their pointless Freudian analyses of what that means about my personality or whatever.)\n\nOne of the lessons I learned from these experiences is that people who don't care about privacy have a really hard time understanding people who do. The people who asked me to make my videos available online were sometimes quite offended at my refusal, as if they could not understand why anyone might refuse such an amazing opportunity, and even (this was really bizarre) subtly pressured/guilt-tripped me, implying that I would be depriving the world of an important resource (trust me, I wasn't).\n\nOP, I am sure you are a good person and a good researcher who means well, but know this: your student who doesn't want to make YouTube videos really, really, really means it when he says he doesn't want to make YouTube videos. You might have a hard time understanding why; well, it's not important (or any of your business really) why -- just trust that it's true. And it's quite possible that your other students who haven't been as firm in standing up to you feel exactly the same.\n\nTo summarize, you probably don't view yourself as an abusive adviser. You think the student is being unreasonable, but he isn't. Attempting to force the issue will have bad consequences for both of you, and more importantly, is simply wrong. So please let the matter go, and figure out more acceptable ways to market yourself and your group.",
+   "source": "https://academia.stackexchange.com/a/111505",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Dan Romik."
+  },
+  {
+   "id": "se-answer-academia-94288",
+   "register": "professional",
+   "text": "Academics are old-fashioned people who care about things like truth, facts, and accuracy. By making sure that everything you write between quotation marks is what the person you quote actually wrote (with \"[sic]\" inserted as appropriate), you will contribute your small share to perpetuating these values, which, although temporarily out of fashion these days in some parts, have served humanity well and will continue to do so in the future. \n\nIt may seem silly to resist the urge to make a correction when it's just a typo, but it's a good way to get yourself and others into the habit of speaking truthfully and accurately. So please write \"sic\" rather than correct the quote. Silly as it may be, in a small way it makes the world a better place.",
+   "source": "https://academia.stackexchange.com/a/94288",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Dan Romik."
+  },
+  {
+   "id": "se-answer-academia-37372",
+   "register": "professional",
+   "text": "Yes, you should.\n\nFirst, most scientific software is terrible. I'd be very surprised if yours is worse than average: the mere fact you know design patterns and the difference between recursion and loops suggests it's better.\n\nSecond, it's unlikely you'll have the incentive or motivation to make it better unless, or until, it's needed by someone else (or you in 6 months). Making it open gives you that incentive.\n\nPotential upsides: possible new collaborators, bugfixes, extensions, publications.\n\nPotential downsides: timesink (maintaining code or fixing problems for other people), getting scooped. I'll be clear: I don't take either of these downsides very seriously.",
+   "source": "https://academia.stackexchange.com/a/37372",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Ian."
+  },
+  {
+   "id": "se-answer-academia-116464",
+   "register": "professional",
+   "text": "One really wants to say that the vice-chair is an idiot, but I will refrain. The policy is idiotic in any case. I've taught at places in which nearly every student excels on every measure I could devise. Why would I want to pit one student against another for the purpose of an artificial \"average\"? They weren't average. \n\nIf you have the twenty best people (students or employees for example) in the world and you measure them in any single way, then half of them will be below average. Just how fine can you make the graduations so that someone can be \"called\" worse than someone else. \n\nOn the other hand, if the average, as measured over several runnings of the class, is around 85 and if there are clear differences in behavior and outcome, then \"rewarding\" everyone equally is also idiotic. \n\nYou set a standard. People met it. The standard was not that you must do \"better\" than someone else. If you change it now you have an ethical failing. \n\nI hope you have enough standing in the university and in the profession that you can stand up to such unfair and unethical suggestions. If your group of students was exceptional there is no reason not to mark them as exceptional. \n\nIf you want to lower the average in future, with a different group of students, make the course more demanding. \n\nBut if you change the grading structure after they have finished their work then you are doing evil, not teaching.",
+   "source": "https://academia.stackexchange.com/a/116464",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Buffy."
+  },
+  {
+   "id": "se-answer-academia-97593",
+   "register": "professional",
+   "text": "I apologize in advance for my frankness.\n\nNothing.\n\nYou missed it, but it doesn't really matter: the student might have had a mate with a phone in the bathroom. Or not. The student might even have known the answer.\n\nIn your career you quite probably have already let others slide.\n\nI wrote in this answer that, on the basis of my (now sufficiently long) experience, if a student wants to cheat, they will. Therefore, one has to accept that, from time to time, a student cheats, and one doesn't notice or is not able to prove beyond reasonable doubt that the student cheated (and you don't want to accuse someone of cheating if you're not able to prove it, right?).\n\nSo, move on.\n\nNB: As some have remarked in various comments, the fact that almost all students were unable to answer that question can be a major issue. In this answer, I specifically wanted to address the cheating part only, because I think that this other issue is a totally different matter, which can be also culture-dependent, and which is probably worth of a different (interesting) question.",
+   "source": "https://academia.stackexchange.com/a/97593",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Massimo Ortolano."
+  },
+  {
+   "id": "se-answer-academia-118985",
+   "register": "professional",
+   "text": "No, they can't. But they can make you fail the class.\n\nLecturers usually have free rein over the specifics of the material taught. Therefore they are free to choose any technology or dialect as long as it is within the area of the course.\n\nNobody can force you to study anything but if you want to pass his exam or the course by e.g. submitting lab problems, you have to play by their rules. \n\nThey might not know any other dialect and therefore be only able to teach (and grade) Oracle SQL. Or they might consider it the best dialect, e.g., because of wide industry use.\n\nFinally, although I would be annoyed by this as well, sometimes you have to suck it up and just pass the course. Lecturers that teach the same (obsolete) material for 20 years are unfortunately a reality in academia. At least you might learn what to avoid in the future.",
+   "source": "https://academia.stackexchange.com/a/118985",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: problemofficer - n.f. Monica."
+  },
+  {
+   "id": "se-answer-money-99105",
+   "register": "professional",
+   "text": "Based on what you've said, you shouldn't buy this car, and probably can't buy it anyway.\n\nYou are saying you earn a total of $1200 a month and have a total of $600 to your name. After four months you will have just barely enough to make a down payment on the car by spending all your savings --- and that's if, as you say, you spend nothing between now and then. After you buy the car, you will be spending two-thirds of your income just on the car payment. That doesn't include any other car expenses like gas or insurance (which is likely to be fairly expensive as you are a young driver).\n\nA typical recommendation is that all of your car expenses should total no more than 20% of your income. You're going to be spending almost all your income on your car.\n\nYou'd need to earn at least quadruple what you're currently making for this purchase to make sense, and even then many people would say buying a brand-new car is not the best use of your money. What if you want to buy a house? Take a vacation? Go out for a nice dinner? Rent an apartment? Need a root canal? There are many other things you might want or need money for, and committing the lion's share of your cash flow to a car payment is not a wise move. (I probably sound like your mom, but as I said in the comments, that's because I think your mom is right.)\n\nIf you are willing to work for this car, you should be willing to work before getting it, to earn the money you need and get yourself on a firm financial footing before attempting to buy the car. There's no reason anyone \"needs\" a $40,000 car. If you need a car at all, you're better off getting a cheap one (possibly used) and saving your money. I wouldn't advise anyone, regardless of age or income, to buy a brand new Jeep for $40k.\n\nFinally, even assuming it were a good idea, I also agree with your mom that there's no clear path for you to buy this car given your financial situation. As mentioned above, you are on pace to only barely have enough for a decent down payment. Even if you have a good credit score, not many lenders will give you a loan whose monthly payment is two-thirds of your income. Four months is simply too short a timespan to go from \"I have $600 and earn $1200 a month\" to \"I have $5,000 and can spend $800 a month on a car payment\". The only people who would likely finance such a payment would be predatory lenders who would make your situation even worse with sky-high interest rates.",
+   "source": "https://money.stackexchange.com/a/99105",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: BrenBarn."
+  },
+  {
+   "id": "se-answer-money-43983",
+   "register": "professional",
+   "text": "There's an aspect to this question that I really love. In general, it's a question about consumer behavior that can be expanded to inquire about the purchasing profile of any luxury good. Who buys $500 pocketbooks, $1000 wristwatches, etc?\n\nI can offer one observation regarding the car. Two close neighbors, both couples drive cars valued well above what my wife and I drive. Both families moved, and shared with us that they failed to save for their kid's college tuition. My response was to feel that this was a choice they made. As I commented to my daughter, \"We can afford anything, we just can't afford everything.\" Our budget started with saving both for retirement and college. Very little eating out, and modest vacations, cars, and clothing. This story is getting more common for us as our peers have high school age children. \n\nAs others have mentioned, the millionaire next door does not drive a Ferrari or wear a Rolex. To some extent, if you were able to peek at the budgets of these car buyers, you'll find what members here would consider at best, an interesting set of priorities.",
+   "source": "https://money.stackexchange.com/a/43983",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user187."
+  },
+  {
+   "id": "se-answer-money-76729",
+   "register": "professional",
+   "text": "That \"something\" you are signing means you are liable for the mortgage payments - yes, all of them - if he can't or won't pay at any point.\n\nThe limit on what the bank will lend him based on his salary is there for a reason - they don't expect him to be able to keep up repayments if they lend him more (or more precisely, there's a big risk that he won't). Don't forget that even if he swears up and down to you that he can afford them, interest rates can rise; this is a 25 or 30 year commitment you would be making. Interest rates are at a historic low and the only way from here is up; in my living memory rates have been 12% or even 15%. As a very rough rule of thumb, for every £100k borrowed, every additional 1% on the interest rates costs an additional £100 on your monthly payment.\n\nAlso, the \"Transitional Arrangement\" is not without its own fees and the bank won't let him simply take you off the mortgage unless they are convinced he can keep up the repayments on his own, which they clearly aren't.\n\nAlso thanks to Kat for the additional good point that being on the hook for your friend's mortgage will prevent you from being able to get a mortgage yourself while the liability still exists, or at least severely limit your options. No matter how many times you protest \"but I'm not paying any money for that!\" - it won't help.\n\nAnother point: there are various schemes available to help first time buyers. By signing up for this, you would exclude yourself from any of those schemes in the future.",
+   "source": "https://money.stackexchange.com/a/76729",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user739."
+  },
+  {
+   "id": "se-answer-money-99107",
+   "register": "professional",
+   "text": "Your problem isn't that you have no credit. Your problem is that there is no way on earth how you can ever keep up with the payments for this $43,000 car, and there is no way on earth how you can repay this loan. I don't know if that is quite clear to you: Loans are not free money. They need to be repaid. YOU need to repay it. \n\nIf you somehow managed to get a loan for this car and purchased it, then here is what would happen: You wouldn't be able to pay back the loan, so after three or four months your car would be repossessed. At that point it's not worth $43,000 but $33,000; it will be sold at auction for $28,000, and you have $15,000 in debt and no car. \n\nThere are two things that protect you: The fact that you have no credit and won't get a loan, and the fact that you are 17, so nobody will sell you the car anyway. \n\nI would suggest that you think really, really hard what makes you want to buy an expensive, brand new car, that will be a millstone around your neck and drown you. At 18, I needed to have a car to go where I wanted to go. I paid 700 for my first car, which drove about 40,000 miles over the next four years. In your situation, you can afford about $2,000 to $3,000 to pay for a car. \n\nBit of maths: You saved $600 dollars. You will need SEVENTY-TWO times as much to pay the loan off. And that doesn't account for interest, it doesn't account for insurance, and you don't have a cent to put fuel in your brand new car.",
+   "source": "https://money.stackexchange.com/a/99107",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: gnasher729."
+  },
+  {
+   "id": "se-answer-money-97275",
+   "register": "professional",
+   "text": "They don't need that information to deposit funds to your account, and having that information will allow them to take money out of your account. You are being set up to be robbed. In the fine print of the terms of service with your bank you probably agreed not to give your password to anyone else, so if your account gets emptied the bank may not be very sympathetic. \n\nDo not give your bank password to anyone, and be extremely suspicious of anyone who asks for it.",
+   "source": "https://money.stackexchange.com/a/97275",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user3404."
+  },
+  {
+   "id": "se-answer-money-97572",
+   "register": "professional",
+   "text": "You have a misunderstanding of what a mortgage means.\n\nThe bank does not own 80% of your home. Instead they have lent you some amount of money, and they have a lien which means they can possess your home if you fail to pay it back. They are not responsible for any costs of your home.\n\nI know people popularly say \"the bank owns 80% of my home\" but it is not true in any technical or financial sense.\n\n(There are some exceptions for unusual kinds of 'mortgages')",
+   "source": "https://money.stackexchange.com/a/97572",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: DJClayworth."
+  },
+  {
+   "id": "se-answer-money-94678",
+   "register": "professional",
+   "text": "In my opinion, the ability to have wealth comes down to one thing: Behavior. For many, it is a tough pill to swallow, but once a person realizes that they have control over their financial future they can then act accordingly. However, many are stuck blaming some bogey man to retain the ability to behave how they wish.\n\nThere are countless examples of people who made an astronomical income but spent more and ended up broke. Why? Because they behaved irresponsibly.\n\nThere are many stories of people of modest income who lived well below their means and became very wealthy. Recently I read a story of a couple, that most would have considered of modest means, that left their children a 10 million dollar estate.\n\nThe books Stop Acting Rich and The Millionaire Next Door outline those who are not flashy but have a very high net worth.\n\nIn my mind it is a pretty simple algorithm:\n\n- Understand that you cannot duplicate your parent's household immediately. It took them 20-30 years to get there. You are just starting out.\n\n- Get out and stay out of consumer debt (this includes student loans and car payments)\n\n- Then start investing some money in low-cost mutual funds.\n\n- Save an emergency fund (3-6 months)\n\n- Buy a modest home (15-year mortgage 10-20% down)\n\n- With any extra income: give some, spend some, and invest a lot.\n\nSome may say that high income is a key to building wealth. Perhaps they are right, but guess what happens when you follow and stick to a plan? Your income will rise. What will come first a high income or a disciplined life? Perhaps they build on each other.\n\nUpdate About Education:\nI very much believe in education, two of my children are currently seeking terminal degrees, as is my wife. I hold a master's. However, education needs to be made as a business decision and student loans, if taken, should be minimized. No financing a BMW with student loans or lavish lifestyles.\n\nNow if one has an educational interest that is not likely to lead to a higher-paying career, NP. Simply take those classes as one desires but pay cash for them. Recognize they are a luxury and it would be silly to take out a student loan for such a luxury.\n\nSome simple behavior changes would pretty much eliminate the \"student loan crisis\".\n\nAn example of behavior that can make one wealthy: Start \"smoking\". If a person starts smoking a pack a day at age 18, they will currently spend about $5.51 per day (national average of the cost of a pack) or $165.30 per month. If however, instead of actually buying cigs, they instead invest it in an S&P 500 index fund they can become wealthy even if they do no other investments. By 65 they will have $1.8 million or so.\n\nSo the choice is yours, one way gives a person lung cancer, the other makes them wealthy.",
+   "source": "https://money.stackexchange.com/a/94678",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Pete B.."
+  },
+  {
+   "id": "se-answer-money-131597",
+   "register": "professional",
+   "text": "There is a real chance that you haven't found the scammer. You may have just found another victim. The risk to you is that you decide to try and scam the scammer, or you try to physically strike the scammer, and then you find out you were wrong. The police will then become very interested in you.\n\nIf you haven't contacted the police and/or your bank do so now. They are the only ones who can do something about this.",
+   "source": "https://money.stackexchange.com/a/131597",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: mhoran_psprep."
+  },
+  {
+   "id": "se-answer-pm-2766",
+   "register": "professional",
+   "text": "Using points is one version of what is often called \"Relative sizing.\" For a very highly recommended initial perspective, check out this video and then come back. Most uses of story point estimation limit you to the lower end of the Fibonacci series: 1, 2, 3, 5, 8, 13 because the goal is to group things of similar overall size rather than to pursue a highly precise estimate.\n\nStory points often take into account three different aspects when estimating: Complexity, Effort, and Doubt. This allows them to more effectively capture the sources of variation that will make an hour-based estimate wrong.\n\nComplexity is the \"stuff we have to figure out.\" We know we can solve the problem, and we probably have a decent feel for how we'll approach it, but we still have to figure it out.\n\nEffort is the sheer amount of stuff that needs done. For me, that example is configuring SharePoint lists, because I knew exactly how to solve everything, and I knew how many there were, but it still took time to run through them.\n\nDoubt is about the stuff we don't actually know if it can be done. We may suspect we're on the wrong track, that the technology isn't up to it, or some other factor that would cause us to churn for a while before we figure out if we can actually do the work.\n\nMost stories contain a combination of all three, and thus it's useful to have a common language so that when I say \"it's an eight\", I can follow with \"because of the complexity of the foobar algorithm\" or \"because I'm not sure if our cache is set up to handle that yet.\"\n\nThe final point estimate is just a way to say \"taking all of these things into account, I think this is bigger than most of the things we've called a three and smaller than most of the things that we've called an eight, so it must be a five\"",
+   "source": "https://pm.stackexchange.com/a/2766",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Eric Willeke."
+  },
+  {
+   "id": "se-answer-pm-5290",
+   "register": "professional",
+   "text": "Please be careful when using these kind of measurements as KPIs.\n\nIf you do this, I predict the following:\n\n- arguments about whether bugs are caused by development or by poor quality analysis\n\n- arguments about which developers caused which bugs\n\n- defensive programming, which will increase the maintenance costs\n\n- developers slowing down (no code means no bugs!)\n\n- a lack of collaboration between developers\n\n- and the beginning of a blame culture, if you don't already have one.\n\nThis article by Esther Derby suggests alternatives to using KPIs in pay reviews. There's a growing body of evidence that suggests that using performance as a way of measuring pay is destructive. My experience is certainly that it encourages heroism and a blame culture rather than team work, particularly when the KPIs are measuring unwanted items.",
+   "source": "https://pm.stackexchange.com/a/5290",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Lunivore."
+  },
+  {
+   "id": "se-answer-pm-16742",
+   "register": "professional",
+   "text": "In Scrum here is the rough breakdown:\n\nEpic - something so big it probably won't fit into a sprint, is not clearly understood in terms of customer requirements and should be broken down into stories. T-shirt sizing is a common way to size epics. Another way is to say we think it could take X to Y iterations to do this work. Epics are usually defined during initial product roadmapping and decomposed into stories in the product backlog as more is learned.\n\nStory - something actionable and small enough to fit in a sprint. These are story pointed and defined using INVEST criteria. Stories should deliver a vertical slice of functionality to the customer that is valuable and complete by the end of an iteration. Stories are usually created throughout product development, more so leading up to iteration planning and also during higher level product roadmapping.\n\nTasks - decomposed parts of a story that get into HOW the story will be completed. Tasks can be hour estimated if desired. Tasks are usually defined by the people doing the work (developers, QA, etc), whereas stories and epics are generally created by the customer or the product owner representing the customer. Tasks are created within the bounds of an iteration because they are short-lived. There is very little value is tasking out stories that won't be worked on in the upcoming iteration.",
+   "source": "https://pm.stackexchange.com/a/16742",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: WBW."
+  },
+  {
+   "id": "se-answer-pm-4252",
+   "register": "professional",
+   "text": "Some teams also use powers of two, or have a scale like 1, 2, 5, 8, 20. The idea is that the larger the story is, the more uncertainty there is around it and the less accurate the estimate will be. Using the Fibonacci sequence helps teams to recognise this uncertainty, deliberately creating a lack of precision instead of wasting time trying to produce estimates that might also carry a false degree of confidence.\n\nDan North's blog post, \"The Perils of Estimation\", explains this very effectively IMO.",
+   "source": "https://pm.stackexchange.com/a/4252",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Lunivore."
+  },
+  {
+   "id": "se-answer-pm-4717",
+   "register": "professional",
+   "text": "Scrum makes the distinction between supporting the team in WHAT work they do and HOW they do it. Trying to have one person play both of these would create a great deal of conflict. How do you choose in a stressful situation between negotiating features or helping the team grow and reach consensus. A scrum master is a facilitator, how can he/she facilitate if she owns the project too?\n\n\"The Product Owner and Scrum Master roles complement each other; The Product Owner is primarily responsible for the “what” – creating the right product. The Scrum Master is primarily responsible for the “how” – using Scrum the right way. Only when the right product is created with the right process is enduring success achieved.\"\n–Roman Pichler, “Agile Product Management with Scrum”\n\nHere is my visual view between the tradition vs. scrum roles...\n\nhttp://skipstoneconsulting.blogspot.com/2011/12/identifying-with-titles-or-what-happens.html\n\nIn summary, to specifically answer \"Why can't the scrum master and the project manager be the same person\"? is because you can not (should not) ask one person to be responsible for HOW the team does their work and WHAT work the team does because under business pressure, the person will cave or favor one side of the spectrum. Mostly likely the \"What\" part. With some there watching over the \"high\" you ensure that quality and good team practices and more are also getting the focus that is needed to keep a healthy performing team, while the other is focused on making sure that healthy performing team is getting good focused input and vision from one source.",
+   "source": "https://pm.stackexchange.com/a/4717",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Erin Beierwaltes."
+  },
+  {
+   "id": "se-answer-pm-28193",
+   "register": "professional",
+   "text": "This is the wrong question to ask. Planning poker is a tool. Asking if planning poker is bad for software development teams is like asking if a screwdriver is bad for plumbers. If the tool fits the job then it's a good tool, if not, then it's not.\n\nThe real question you should be asking yourself is:\n\nYou don't add any extra context to be able to answer this but I'm thinking at two immediate reasons:\n\n- they are a traditional project manager who lives and dies by schedules and deadlines. I can see that in your comments where you mention that the deadline is at the end of the sprint which is usually 3 weeks. A sprint end is not a deadline. Story points and sprints were mentioned in the comments so I'm thinking you are doing some sort of Agile? Let me tell it straight: you are not. The fact that everyone is stressed is another indicator that you are not. Another is that you estimate in hours and if something comes up as one day then you have one day to do it.\n\n- (as the logical continuation of the previous point) your project manager can't put pressure on the team when you use story points in the same way they can put pressure on the team if you use hours. So they prefer hours. If you estimate something at one day, they will put pressure on you to do it in one day. They want a commitment. And it doesn't matter if a senior is doing the job or a junior. You said one day, you better make it happen in one day. At this point, I think this image is should be mentioned:\n\nAn estimate is an approximation. The fact that you provide estimates as 3.75 hours (as you mention in your comment) means that you are ignoring this fact, you or maybe your project manager.\n\nI suggest you read the following posts for hours vs story point estimation and why planning poker is a good tool for many teams:\n\n- Definition of a Story Point\n\n- Why use story points instead of hours for estimating?\n\nAnother thing to add is that planning poker is a consensus-based estimation techniques. That means that when you get vastly different estimates, the team members discuss it until they reach a number that they all agree with. They don't just estimate as a team and then take the average. An average completely destroys the discussion that needs to take place in order to reach consensus and also destroys the spread of the different estimations people provided. If a senior says 1 day, and a junior says 5 days, getting back (5 + 1) /2 = 3 days is not a good estimate because the senior will finish early while the junior will probably be late. Then what happens if the junior works on the task? The project manager will pressure them to finish the work in 3 days even though they thought it will take 5 (and that was probably wrong too and most likely they will finish in 7 days).\n\nPlanning poker is a tool. Story points are tools. Your project manager should probably learn what these tools are all about before insisting on estimating in hours and keeping people accountable for estimates that look forced from what you are describing.",
+   "source": "https://pm.stackexchange.com/a/28193",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Bogdan."
+  }
+ ]
+}

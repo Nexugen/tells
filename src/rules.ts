@@ -42,11 +42,11 @@ export const AI_VOCABULARY = [
   'effortless', 'effortlessly',
   'tapestry', 'testament', 'realm',
   'pivotal', 'crucial', 'paramount',
-  'landscape', 'ecosystem',
+
   'navigate the', 'navigating the', 'navigate complex', 'navigate the complexities',
   'embark', 'embarks', 'embarking',
-  'foster', 'fosters', 'fostering',
-  'harness', 'harnessing',
+  'fosters', 'fostering',
+  'harness the', 'harness its', 'harness your', 'harnessing the',
   'holistic', 'synergy', 'synergies', 'paradigm',
   'multifaceted', 'intricate', 'intricacies',
   'meticulous', 'meticulously',
@@ -64,7 +64,7 @@ export const AI_VOCABULARY = [
 const HYPE = [
   'insane', 'insanely', 'mind-blowing', 'mind blowing', 'mindblowing',
   'jaw-dropping', 'next level', 'the most powerful', 'incredibly powerful',
-  'revolutionary', 'unbelievable', 'unbelievably', 'magical', 'like magic', 'the magic',
+  'revolutionary', 'unbelievable', 'unbelievably', 'feels magical', 'magical experience', 'like magic', 'the magic of',
   'blew my mind', 'changes everything', 'a whole new level', 'on another level',
 ];
 
@@ -103,7 +103,7 @@ const SYCOPHANTIC_OPENERS = [
   "i'd be happy to", 'i would be happy to', "i'd be glad to", 'happy to help!',
   'i hope this email finds you well', 'i hope this message finds you well', 'i hope you are doing well',
   "i hope you're doing well", 'thanks for reaching out', 'thank you for reaching out',
-  'been there', 'this!', 'love this', 'so true', "you're absolutely right", 'you are absolutely right',
+  'been there', 'love this', 'so true', "you're absolutely right", 'you are absolutely right',
   'what a fantastic', 'what an amazing', 'great point', 'i love this question',
 ];
 
@@ -211,10 +211,14 @@ function staccato(ctx: RuleContext): Hit[] {
       i = j;
     } else {
       // Two or more fragments in a row that open with the same word ("No code. No team.")
+      if (ss[i].text.trim().endsWith('?')) {
+        i++;
+        continue;
+      }
       let k = i;
       const first = firstWord(ss[i].text);
       const weak = new Set(['the', 'a', 'an', 'it', 'i', 'we', 'this', 'that', 'they', 'you', 'he', 'she']);
-      while (k + 1 < ss.length && ss[k + 1].words <= 3 && ss[k].words <= 3 && first && !weak.has(first) && firstWord(ss[k + 1].text) === first && sameParagraph(ctx, ss[i], ss[k + 1])) k++;
+      while (k + 1 < ss.length && ss[k + 1].words <= 3 && ss[k].words <= 3 && !ss[k + 1].text.trim().endsWith('?') && first && !weak.has(first) && firstWord(ss[k + 1].text) === first && sameParagraph(ctx, ss[i], ss[k + 1])) k++;
       if (k > i) {
         out.push({ start: ss[i].start, end: ss[k].end });
         i = k + 1;
@@ -237,7 +241,9 @@ function hedgeStack(ctx: RuleContext): Hit[] {
   const out: Hit[] = [];
   for (const s of ctx.sentences) {
     const hits = regexHits(re, s.text);
-    if (hits.length >= 2 && hits.length / Math.max(s.words, 1) >= 0.07) {
+    const gapWords = (a: Hit, b: Hit) => (s.text.slice(a.end, b.start).match(/\S+/g) ?? []).length;
+    const stacked = hits.some((h, i) => i > 0 && gapWords(hits[i - 1], h) <= 2);
+    if ((stacked && hits.length >= 2) || (hits.length >= 3 && hits.length / Math.max(s.words, 1) >= 0.1)) {
       out.push({ start: s.start + hits[0].start, end: s.start + hits[hits.length - 1].end, detail: `${hits.length} hedges` });
     }
   }
@@ -422,7 +428,8 @@ const BASE_RULES: Rule[] = [
     id: 'dash',
     name: 'Em or en dash',
     category: 'punctuation',
-    severity: 'error',
+    severity: 'info',
+    registers: { marketing: 'info' },
     description: 'An em dash (—), an en dash (–), or a double hyphen used as a dash.',
     why: 'Models reach for the em dash constantly, and readers have noticed. Most people type a comma, a colon or a full stop.',
     fix: 'Write the punctuation the dash stood in for: a comma for an aside, a colon before an explanation, or a full stop and a new sentence. Do not just swap in a hyphen.',
@@ -437,6 +444,7 @@ const BASE_RULES: Rule[] = [
     name: '"Not X, it\'s Y"',
     category: 'structure',
     severity: 'error',
+    registers: { casual: 'info', professional: 'info' },
     description: '"It\'s not X, it\'s Y", "This isn\'t just X. It\'s Y.", "not just X, but Y", "Less X, more Y".',
     why: 'The contrast frame is the most recognised model habit there is. It invents a claim nobody made so it can knock it down.',
     fix: 'Say the concrete thing directly, and drop the thing it supposedly is not.',
@@ -449,11 +457,11 @@ const BASE_RULES: Rule[] = [
       summary: 'Contrast frames across one or two sentences: "(it|this|that) (is|was)n\'t (just) X[,.;] (it|this|that)\'s Y", "not just X, but Y", "less X, more Y".',
       run: (ctx) => {
         const a = A;
-        const neg = `(?:it${a}s not|it is not|this is not|that${a}s not|that is not|it isn${a}t|this isn${a}t|that isn${a}t|isn${a}t|aren${a}t|wasn${a}t|weren${a}t|it${a}s no longer|this is no longer|is not|are not|was not|were not)`;
-        const turn = `(?:it${a}s|it is|it was|this is|this was|that${a}s|that is|that was|they${a}re|they are|they were|we${a}re|it${a}s about|it${a}s a|it${a}s the|but rather|but)`;
+        const neg = `(?:it${a}s not|it is not|this is not|that${a}s not|that is not|it isn${a}t|this isn${a}t|that isn${a}t|it wasn${a}t|this wasn${a}t|it was not|this was not|they${a}re not|they aren${a}t|it${a}s no longer|this is no longer)`;
+        const turn = `(?:it${a}s|it is|it was|this is|this was|that${a}s|that is|that was|they${a}re|they are|they were|we${a}re|it${a}s about|it${a}s a|it${a}s the)`;
         const res = [
-          new RegExp(`\\b${neg}\\s+(?:just|only|merely|simply|about|really)?\\s*[^.!?;:\\n]{1,60}?(?:[,;:]|[.!?]\\s+|\\s*[—–]\\s*|\\s+--?\\s+)\\s*${turn}\\b`, 'gi'),
-          /\bnot (?:just|only|merely) (?:about )?[^,.!?;\n]{1,50}, but (?:also )?/gi,
+          new RegExp(`\\b${neg}\\s+(?:just|only|merely|simply|about|really)?\\s*(?:[^\\s.!?;:,]+\\s*){1,6}?(?:[,;:]|[.!?]\\s+|\\s*[—–]\\s*|\\s+--?\\s+)\\s*${turn}\\b`, 'gi'),
+          /\bnot (?:just|merely) (?:about )?[^,.!?;\n]{1,50}, but (?:also )?/gi,
           /(?:^|[.!?]\s+)less [\p{L}-]+(?: [\p{L}-]+)?, more [\p{L}-]+/giu,
           /\b(?:isn|wasn|aren)['’]t about [^.!?\n]{1,50}[.,;] (?:it['’]s|it is) about\b/gi,
         ];
@@ -484,6 +492,7 @@ const BASE_RULES: Rule[] = [
     name: 'Staged question',
     category: 'structure',
     severity: 'warning',
+    registers: { professional: 'info', technical: 'info', marketing: 'warning' },
     description: 'A short rhetorical question answered straight away ("Why does this matter? Because...", "No signal? No problem.").',
     why: 'Real questions are asked because the writer wants to know. A question the writer answers in the next breath is a format, not a thought.',
     fix: 'State the answer as a plain sentence.',
@@ -596,6 +605,7 @@ const BASE_RULES: Rule[] = [
     name: 'AI vocabulary',
     category: 'vocabulary',
     severity: 'warning',
+    registers: { technical: 'info', marketing: 'info' },
     description: 'Words that show up far more in model output than in people\'s writing: delve, seamless, robust, leverage, unlock, tapestry, crucial, landscape...',
     why: 'Each one is fine on its own. Together they are the signature of generated text, and most of them are vague.',
     fix: 'Use the plain word, or better, the specific fact the word was covering for.',
@@ -609,7 +619,8 @@ const BASE_RULES: Rule[] = [
     id: 'hype',
     name: 'Hype',
     category: 'vocabulary',
-    severity: 'warning',
+    severity: 'info',
+    registers: { marketing: 'warning' },
     description: 'Superlatives and hype ("insane", "mind-blowing", "revolutionary", "changes everything").',
     why: 'Hype tells the reader how to feel instead of showing them why. It also reads as a sales voice.',
     fix: 'Replace the adjective with the detail that impressed you.',
@@ -637,8 +648,8 @@ const BASE_RULES: Rule[] = [
     id: 'filler-transition',
     name: 'Filler transition',
     category: 'vocabulary',
-    severity: 'warning',
-    registers: { technical: 'info' },
+    severity: 'info',
+    registers: { marketing: 'info' },
     description: '"It\'s worth noting", "Notably,", "Additionally,", "Furthermore,", "Ultimately,", "In conclusion", "When it comes to".',
     why: 'Essay glue. It announces that a point is coming instead of making it.',
     fix: 'Delete the transition and let the sentence start with its subject.',
@@ -653,6 +664,7 @@ const BASE_RULES: Rule[] = [
     name: 'Stock hook',
     category: 'tone',
     severity: 'warning',
+    registers: { technical: 'info' },
     description: '"Hot take", "Unpopular opinion", "Let\'s dive in", "Buckle up", "Here\'s why", "A thread", "I\'ll be honest".',
     why: 'Borrowed social-media formats. They signal that a template is running, not a person.',
     fix: 'Cut the hook and lead with the moment or the fact.',
@@ -666,7 +678,7 @@ const BASE_RULES: Rule[] = [
     id: 'hedge-stack',
     name: 'Stacked hedges',
     category: 'tone',
-    severity: 'warning',
+    severity: 'info',
     description: 'Two or more hedges in one sentence ("may potentially", "could perhaps", "generally tends to").',
     why: 'One small hedge is honest. A pile of them is a model covering itself, and the sentence ends up saying nothing.',
     fix: 'Keep at most one hedge, and only if you really are unsure.',
@@ -680,7 +692,8 @@ const BASE_RULES: Rule[] = [
     id: 'corporate-excitement',
     name: 'Announcement voice',
     category: 'tone',
-    severity: 'warning',
+    severity: 'info',
+    registers: { technical: 'info' },
     description: '"We\'re excited to announce", "thrilled to share", "proud to announce".',
     why: 'Every launch post says it, so it says nothing. The news is the thing you shipped.',
     fix: 'Start with what changed and who it helps.',

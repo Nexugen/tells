@@ -1,0 +1,264 @@
+{
+ "scoredAt": "2026-11-18",
+ "split": {
+  "train": {
+   "human": 120,
+   "ai": 102
+  },
+  "test": {
+   "human": 62,
+   "ai": 42
+  }
+ },
+ "heldOut": {
+  "rules": {
+   "humanLeftAlone": 0.984,
+   "aiFlagged": 0.571,
+   "precision": 0.96,
+   "human": 62,
+   "ai": 42
+  },
+  "style": {
+   "humanLeftAlone": 0.968,
+   "aiFlagged": 0.643,
+   "precision": 0.931,
+   "human": 62,
+   "ai": 42,
+   "auc": 0.932,
+   "threshold": 0.744
+  },
+  "both": {
+   "humanLeftAlone": 0.952,
+   "aiFlagged": 0.786,
+   "precision": 0.917,
+   "human": 62,
+   "ai": 42
+  }
+ },
+ "freshHuman": {
+  "casual": {
+   "samples": 94,
+   "rulesLeftAlone": 0.989,
+   "styleLeftAlone": 0.947,
+   "bothLeftAlone": 0.936
+  },
+  "professional": {
+   "samples": 24,
+   "rulesLeftAlone": 0.958,
+   "styleLeftAlone": 1,
+   "bothLeftAlone": 0.958
+  }
+ },
+ "finalHuman": {
+  "casual": {
+   "samples": 94,
+   "rulesLeftAlone": 1,
+   "styleLeftAlone": 0.989,
+   "bothLeftAlone": 0.989
+  },
+  "professional": {
+   "samples": 22,
+   "rulesLeftAlone": 0.909,
+   "styleLeftAlone": 1,
+   "bothLeftAlone": 0.909
+  }
+ },
+ "heldOutByRegister": {
+  "rules": {
+   "casual": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0.417,
+    "precision": 1,
+    "human": 38,
+    "ai": 12
+   },
+   "professional": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0.778,
+    "precision": 1,
+    "human": 14,
+    "ai": 18
+   },
+   "technical": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0,
+    "precision": 0,
+    "human": 4,
+    "ai": 6
+   },
+   "marketing": {
+    "humanLeftAlone": 0.833,
+    "aiFlagged": 0.833,
+    "precision": 0.833,
+    "human": 6,
+    "ai": 6
+   }
+  },
+  "style": {
+   "casual": {
+    "humanLeftAlone": 0.947,
+    "aiFlagged": 0.5,
+    "precision": 0.75,
+    "human": 38,
+    "ai": 12
+   },
+   "professional": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0.667,
+    "precision": 1,
+    "human": 14,
+    "ai": 18
+   },
+   "technical": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0.667,
+    "precision": 1,
+    "human": 4,
+    "ai": 6
+   },
+   "marketing": {
+    "humanLeftAlone": 1,
+    "aiFlagged": 0.833,
+    "precision": 1,
+    "human": 6,
+    "ai": 6
+   }
+  }
+ },
+ "signalLift": [
+  {
+   "id": "stake",
+   "human": 0.117,
+   "model": 0.01,
+   "lift": 4.586
+  },
+  {
+   "id": "aside",
+   "human": 0.45,
+   "model": 0.196,
+   "lift": 2.175
+  },
+  {
+   "id": "real-question",
+   "human": 0.217,
+   "model": 0.186,
+   "lift": 1.147
+  },
+  {
+   "id": "uneven-paragraphs",
+   "human": 0.275,
+   "model": 0.284,
+   "lift": 0.969
+  },
+  {
+   "id": "contraction",
+   "human": 0.675,
+   "model": 0.745,
+   "lift": 0.908
+  },
+  {
+   "id": "specific-number",
+   "human": 0.45,
+   "model": 0.52,
+   "lift": 0.871
+  },
+  {
+   "id": "named-thing",
+   "human": 0.6,
+   "model": 0.716,
+   "lift": 0.843
+  },
+  {
+   "id": "concrete-first",
+   "human": 0.383,
+   "model": 0.48,
+   "lift": 0.806
+  },
+  {
+   "id": "plain-verb",
+   "human": 0.55,
+   "model": 0.784,
+   "lift": 0.709
+  },
+  {
+   "id": "first-hand",
+   "human": 0.083,
+   "model": 0.186,
+   "lift": 0.501
+  },
+  {
+   "id": "bursty-rhythm",
+   "human": 0.267,
+   "model": 0.578,
+   "lift": 0.479
+  },
+  {
+   "id": "time-anchor",
+   "human": 0.15,
+   "model": 0.353,
+   "lift": 0.456
+  }
+ ],
+ "styleWeights": [
+  {
+   "feature": "p:comma",
+   "weight": 0.583
+  },
+  {
+   "feature": "fw:as",
+   "weight": -0.432
+  },
+  {
+   "feature": "len:sentence",
+   "weight": -0.403
+  },
+  {
+   "feature": "md:bold",
+   "weight": 0.375
+  },
+  {
+   "feature": "fw:so",
+   "weight": 0.331
+  },
+  {
+   "feature": "fw:of",
+   "weight": -0.331
+  },
+  {
+   "feature": "fw:this",
+   "weight": -0.308
+  },
+  {
+   "feature": "fw:every",
+   "weight": 0.296
+  },
+  {
+   "feature": "ttr",
+   "weight": 0.289
+  },
+  {
+   "feature": "r:emoji",
+   "weight": 0.284
+  },
+  {
+   "feature": "p:ellipsis",
+   "weight": -0.281
+  },
+  {
+   "feature": "fw:do",
+   "weight": -0.28
+  },
+  {
+   "feature": "fw:without",
+   "weight": 0.279
+  },
+  {
+   "feature": "fw:be",
+   "weight": -0.277
+  },
+  {
+   "feature": "r:one-sentence-paras",
+   "weight": -0.276
+  }
+ ]
+}

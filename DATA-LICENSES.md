@@ -18,6 +18,6 @@ We left out anything with an unclear licence, including forum and social media p
 
 ## Benchmark samples
 
-`bench/human.json` holds 52 longer samples from the same four kinds of source: 19 from the Go blog (CC BY 4.0), 15 Stack Overflow answers (CC BY-SA 2.5, 3.0 or 4.0, by revision date), 10 from the Rust blog (MIT or Apache 2.0) and 8 GOV.UK pages (Open Government Licence v3.0). Each sample records its source link, author where there is one, and licence. `bench/tools/` has the scripts that fetched them.
+`bench/human.json` holds 182 samples: 70 under CC BY-SA 3.0, 43 under CC BY-SA 4.0, 20 under Open Government Licence v3.0, 19 under CC BY 4.0, 15 under CC BY-SA (2.5, 3.0 or 4.0, by revision date), 10 under MIT OR Apache-2.0, 5 under CC BY-SA 2.5. They come from Stack Exchange answers and comments written before 2021, the Go and Rust blogs, and GOV.UK guidance and press releases. `bench/human-fresh.json` (118) and `bench/human-final.json` (116) are Stack Exchange comments and answers from other sites, under the same CC BY-SA terms, kept apart to check false positives. Each sample records its source link and licence, and its note names the author where there is one. `bench/tools/` has the scripts that fetched them.
 
 The model answers in `bench/out/` were written by Claude models for this benchmark.

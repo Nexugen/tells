@@ -3,7 +3,7 @@
   "via": "claude-cli",
   "model": "claude-cli:sonnet",
   "createdAt": "2026-11-18T00:12:08.484Z",
-  "costUsd": 0.9673071000000001,
+  "costUsd": 1.0907431000000003,
   "items": [
     {
       "id": "slack-delay",
@@ -124,6 +124,126 @@
       "id": "event-invite",
       "register": "marketing",
       "text": "🔧 Free Online Workshop: Automated Backups for Small Business Websites\n\nDon't wait for a crash, hack, or bad update to find out your site isn't backed up. Join us to learn how to set up automated backups that run on their own, so you can stop worrying and get back to running your business.\n\n📅 March 12\n🕔 5:00 PM GMT\n💻 Online, and completely free\n\nNo technical background needed. Bring your questions!\n\n👉 Reserve your spot: [link]\n\n#SmallBusiness #WebsiteBackup #WebsiteSecurity #FreeWorkshop"
+    },
+    {
+      "id": "checkin-friend",
+      "register": "casual",
+      "text": "Hey you! It's been way too long, and I realized I haven't heard how you're doing lately. I'd love to catch up whenever you have a free moment, whether that's a quick call or coffee. Hope life's been treating you well!"
+    },
+    {
+      "id": "dm-late",
+      "register": "casual",
+      "text": "Hey! I'm running about ten minutes late for dinner, so sorry! What do you want to drink? I'll grab it when I get there."
+    },
+    {
+      "id": "dm-congrats",
+      "register": "casual",
+      "text": "Congratulations on your new role! I just heard the news and couldn't be happier for you. Your talent, hard work, and positive attitude always stood out, so it's no surprise they snapped you up. They're lucky to have you.\n\nI'm sure you'll do amazing things there. Let's catch up soon and celebrate. Wishing you all the best in this exciting next chapter!"
+    },
+    {
+      "id": "dm-party",
+      "register": "casual",
+      "text": "Hey everyone! I'm having a few friends over at my place this Saturday, starting around 7pm. Nothing fancy, just good company, some food and drinks, and a relaxed evening. Would love for you to come! Let me know if you can make it, and feel free to bring a friend or your favorite snack. Hope to see you there!"
+    },
+    {
+      "id": "dm-parcel",
+      "register": "casual",
+      "text": "Hi! Hope you're having a good day. I was expecting a parcel today and the tracking says it was delivered, but I can't find it anywhere. Did you happen to take it in for me? If so, I'd be really grateful if I could pop by and pick it up. Thanks so much!"
+    },
+    {
+      "id": "comment-flight-kid",
+      "register": "casual",
+      "text": "That sounds exhausting, and I'm sorry you had to sit through it. A whole flight next to a crying toddler is rough, especially when you can't move seats. For what it's worth, the parents are usually just as stressed (if not more) and often feel awful about it. Noise-canceling headphones with some white noise have saved me on a few flights, and I've found that a friendly nod or a quick \"no worries\" to the parents can ease the tension for everyone. Hope your next flight is a quiet one!"
+    },
+    {
+      "id": "comment-recipe",
+      "register": "casual",
+      "text": "Dense bread is usually one of three things: not enough gluten development, under-proofing, or too much flour. Try kneading until the dough passes the windowpane test (you can stretch a small piece thin enough to see light through it without tearing), and measure your flour by weight rather than by cup, since scooping can pack in 20% more than the recipe intends. Then let the dough rise until it has roughly doubled and springs back slowly when you poke it. If it bounces back instantly, give it more time. Also check that your yeast is fresh and your water is warm, not hot, around 100 to 110°F. Fixing just one of these often makes a big difference, so I'd start with weighing your flour and extending the first rise."
+    },
+    {
+      "id": "comment-bike",
+      "register": "casual",
+      "text": "Squeaky disc brakes are usually annoying rather than dangerous, and the most common culprits are contamination or glazed pads. Wipe the rotor with isopropyl alcohol, then check that the pads aren't oily or worn down to the backing plate. If they look dirty, sand them lightly or just swap them out, and make sure the caliper is aligned so the rotor isn't rubbing. Squealing in the wet is normal for a lot of pads and goes away when things dry out. The things to take seriously are a sudden loss of stopping power, a spongy lever, or a grinding sound, which usually means the pads are gone and metal is on metal. If you get any of those, don't ride it until it's sorted. Otherwise a bit of noise is mostly a nuisance, but it's worth fixing before it turns into something worse."
+    },
+    {
+      "id": "comment-friend-ignored",
+      "register": "casual",
+      "text": "It's frustrating to feel like you're being ignored, but silence doesn't always mean what it feels like it means. People go quiet for all sorts of reasons: a rough stretch, burnout, a buried notification, or just feeling too overwhelmed to reply. Before assuming the worst, I'd send one low-pressure message, something like \"Hey, I've been thinking about you and just wanted to check in. No rush to reply, but I'm here if you want to talk.\" That gives them an easy way back in without guilt. If a good amount of time passes and you still hear nothing, it's okay to accept that the friendship may be in a different place than you hoped and to put your energy into people who show up for you. But give them a fair chance first, because most of the time it's about what they're going through, not about you."
+    },
+    {
+      "id": "advice-roommate",
+      "register": "casual",
+      "text": "This is frustrating, but it's very fixable. Start with a calm, direct conversation rather than a passive-aggressive note. Something like: \"Hey, I've noticed some of my food has been disappearing. Can we figure out a system that works for both of us?\" Many roommates genuinely don't realize where the line is, especially if you've never set one.\n\nBe specific about what's off-limits and what's shared. You might agree that staples like condiments or rice are fair game, but anything else needs asking first.\n\nIf it continues, give yourself some separation: label your items, use a clearly marked shelf or bin, or keep valuable things in your room. A small lockable storage box works well too.\n\nFinally, if the behavior persists after you've spoken up, ask them to replace what they've taken, or consider involving your landlord or a third party. Setting a boundary once, clearly and kindly, is usually enough."
+    },
+    {
+      "id": "advice-parent-screen",
+      "register": "casual",
+      "text": "You're definitely not alone. This is one of the most common struggles at this age, because screens are designed to be hard to stop, and 8-year-olds are still building the brain skills for switching gears.\n\nWhat helped us:\n\n**Warn early.** Give a 10-minute and a 2-minute heads-up. A visual timer works well, since the timer becomes the \"bad guy\" instead of you.\n\n**Stop at natural endpoints.** Ending mid-level is painful. Let them finish the round or episode.\n\n**Plan what comes next.** Have something specific lined up, like a snack, a game, or going outside, so the end of screen time leads somewhere.\n\n**Agree on rules ahead of time.** Talk it through when everyone is calm, not mid-meltdown.\n\n**Stay calm and consistent.** Acknowledge the feeling (\"It's hard to stop when it's fun\"), but hold the limit. Giving in teaches that meltdowns work.\n\nIt usually improves within a couple of weeks of consistency. Hang in there!"
+    },
+    {
+      "id": "advice-say-no",
+      "register": "casual",
+      "text": "Saying no is hard because you care about the people asking. But a constant yes can quietly turn into resentment, and that hurts friendships more than an honest refusal does.\n\nHere's what helps:\n\n**Pause before answering.** Try \"Let me check my schedule and get back to you.\" This gives you time to decide what you actually want, instead of agreeing out of reflex.\n\n**Keep it short.** You don't owe a long explanation. \"I can't take that on right now, but I hope it goes well\" is complete. Over-explaining invites negotiation.\n\n**Offer an alternative if you want to.** \"I can't drive you, but I can help you find a ride\" works, as long as it's something you're happy to give.\n\n**Remember what a no protects.** It protects your time, energy, and the quality of your yes when you do give it.\n\nReal friends will adjust. Start with small refusals and build up. It gets easier with practice."
+    },
+    {
+      "id": "group-dinner",
+      "register": "casual",
+      "text": "Hey everyone! Thinking we do dinner this Friday. How about that new ramen spot downtown? I've heard great things and it's a good spot for a big group. Maybe around 7pm? Who's in? 🍜"
+    },
+    {
+      "id": "dm-thanks",
+      "register": "casual",
+      "text": "Hey! Just wanted to say a huge thank you for helping me move last weekend. I honestly couldn't have done it without you, and I really appreciate you giving up your Saturday to haul boxes and wrestle my sofa up the stairs. Dinner and drinks are on me soon. Thanks again, you're the best! 🙌"
+    },
+    {
+      "id": "workplace-raise",
+      "register": "professional",
+      "text": "A year without a raise is a perfectly reasonable time to ask, so don't apologize for bringing it up. Here's how I'd approach it:\n\n**1. Do your homework.** Look up salary ranges for your role, location, and experience on sites like Glassdoor, Levels.fyi, or industry surveys. Come with a specific number or narrow range, not a vague \"more.\"\n\n**2. Build your case around results.** List what you've accomplished this year: projects delivered, revenue earned or costs saved, added responsibilities, positive feedback. Quantify wherever you can.\n\n**3. Pick your moment.** Request a dedicated meeting with your manager rather than ambushing them in the hallway. Ideally, do it before budgets are set or soon after a notable win.\n\n**4. Keep the tone collaborative.** Try: \"I've taken on X and Y this year and delivered Z. Based on market data, I'd like to discuss adjusting my salary to $___.\"\n\n**5. Prepare for any answer.** If the answer is no, ask what specific milestones would earn a raise and when you can revisit it. Get that in writing if possible.\n\nStay calm, confident, and factual. You're simply having a business conversation."
+    },
+    {
+      "id": "workplace-credit",
+      "register": "professional",
+      "text": "That stings, and your frustration is legitimate. Before you decide how to respond, though, take a breath and gather facts.\n\n**First, consider whether it was intentional.** Sometimes managers use \"I\" or \"we\" carelessly when summarizing team output to executives. Other times it's deliberate credit-taking. Your response should differ depending on which it is.\n\n**Next, document everything.** Save emails, drafts, timestamps, and version histories showing your authorship. You may never need them, but having them keeps you grounded and protected.\n\n**Then talk to your manager privately.** Keep it calm and specific: \"I noticed my analysis was presented in Thursday's meeting without attribution. I'd like to make sure my contributions are visible, especially with leadership. Can we discuss how to handle that going forward?\" Avoid accusations. Let their reaction tell you something.\n\n**Make your work visible going forward.** Send brief status updates to your manager and cc relevant stakeholders. Present your own work when possible. Share wins in team channels.\n\n**If it keeps happening,** consider going to HR or a skip-level manager, bringing your documentation. And if the pattern is clear and unchanging, it may be a sign to look elsewhere.\n\nYou deserve credit for what you build. Advocate for it."
+    },
+    {
+      "id": "workplace-quit",
+      "register": "professional",
+      "text": "Two months in is early, but it's not too early to trust what you're seeing. Before you resign, though, ask yourself a few questions.\n\nFirst, what exactly is wrong? If the job differs from what you were promised (the role, the hours, the pay, the manager's behavior), that's a legitimate reason to leave. If it's mostly that you feel lost, slow, or out of place, that's normal. Most people don't feel competent until month four to six.\n\nSecond, can the problem be fixed? Talk to your manager. Something like \"The role isn't what I expected. Can we discuss adjusting X?\" costs you nothing, and their response will tell you a lot.\n\nThird, what's your safety net? Quitting without another offer is risky. Start looking quietly while you stay employed, if you can.\n\nIf you do leave, do it professionally. Give proper notice, be brief and gracious, and don't badmouth anyone. On your résumé, a short stint can be left off or explained in one honest line: \"The role changed from what was described.\"\n\nOne short job won't define your career. Staying in a bad fit for years might."
+    },
+    {
+      "id": "travel-visa",
+      "register": "professional",
+      "text": "Whether you need a visa depends on your nationality and on how you transit, so check both.\n\n**Airside transit (staying in the international zone):** Many Schengen airports don't require a visa if you stay airside and your connection is within the same terminal area. However, nationals of certain countries (e.g., Afghanistan, Bangladesh, Eritrea, Ethiopia, Ghana, Iran, Iraq, Nigeria, Pakistan, Somalia, Sri Lanka, Democratic Republic of the Congo) must hold an Airport Transit Visa (ATV) even for airside transit. Some countries also impose their own extra ATV requirements, so look up the specific airport.\n\n**Landside transit (leaving the secure area):** If you must collect baggage, switch airports, or have separate tickets, you generally need a regular Schengen visa, since you'll pass through immigration.\n\n**What to do:**\n1. Check the official foreign ministry site of the transit country.\n2. Confirm whether your bags are checked through to the final destination.\n3. Ask your airline, since they may refuse boarding without proper documents.\n\nTell us your passport country and route, and we can be more specific."
+    },
+    {
+      "id": "freelance-late",
+      "register": "professional",
+      "text": "Sixty days late is frustrating, but you can usually fix it by escalating in clear steps.\n\n**1. Check the paper trail.** Confirm your invoice, contract, and payment terms. Make sure the invoice went to the right person and wasn't lost in accounts payable.\n\n**2. Send a firm, polite follow-up today.** Reference the invoice number, amount, and original due date. Ask for a specific payment date within 5 business days. Keep it factual and unemotional.\n\n**3. Call them.** Email is easy to ignore. Ask whether there's a hidden issue, such as a missing PO number, an approval bottleneck, or cash flow trouble.\n\n**4. Send a formal demand letter.** If there's no response, state that you'll apply late fees (if your contract allows them), pause any ongoing work, and pursue further action after a set deadline.\n\n**5. Stop working.** Don't deliver more until you're paid, especially final files or source assets.\n\n**6. Escalate.** Options include a collections agency, small claims court (often fine for amounts under a few thousand dollars), or a lawyer's demand letter, which often gets results on its own.\n\n**Going forward:** require deposits, shorten payment terms to net 15 or 30, and include late fees in your contract.\n\nGood luck!"
+    },
+    {
+      "id": "email-colleague-cover",
+      "register": "professional",
+      "text": "Subject: Can you cover my Friday afternoon support shift?\n\nHi [Name],\n\nI have a conflict this Friday and need to find someone to cover my afternoon support shift. Would you be able to take it for me? I'm happy to return the favor and cover one of your shifts in the future.\n\nIf you can't, no worries at all. Just let me know so I can ask around.\n\nThanks so much,\n[Your Name]"
+    },
+    {
+      "id": "press-library",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**City Council Announces Sunday Opening at Three Public Libraries**\n\n*Expanded hours begin next month to give residents more access to books, technology, and community programs*\n\nThe City Council today announced that three public libraries will open on Sundays beginning next month, expanding weekend access for residents across the city.\n\nThe Central Library, Riverside Branch, and Oakwood Branch will welcome visitors each Sunday from 12:00 p.m. to 5:00 p.m. Services will include book lending, public computers and Wi-Fi, study spaces, children's story hours, and access to digital resources.\n\n\"Libraries are the heart of our community, and many families simply can't visit during the work week,\" said Council President Elaine Hartwell. \"Sunday hours will give students, job seekers, parents, and seniors a welcoming place to learn, connect, and explore.\"\n\nThe expansion follows a community survey in which Sunday access was the most requested improvement. Funding for the pilot comes from the city's annual budget, with additional support from the Friends of the Library Foundation.\n\nThe Council will review attendance and community feedback after six months to determine whether Sunday hours should be extended to additional branches.\n\nResidents can find opening dates, program schedules, and updates on the city library website or by calling the main library information line.\n\n**Media Contact:**\nOffice of the City Council\nCommunications Department\n\n**###**"
+    },
+    {
+      "id": "press-bus",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**New Night Bus Route Connects Airport and City Centre**\n\n*Route N7 to begin overnight service from Monday, 2 December*\n\nThe Department of Transport today announced the launch of Route N7, a new night bus service linking the airport with the city centre, running every night of the week.\n\nStarting Monday, 2 December, buses will operate between 11:30 p.m. and 5:00 a.m., departing every 30 minutes. The journey takes approximately 35 minutes, with stops at the airport terminals, Riverside Interchange, the Central Library, and Central Station.\n\nThe service fills a long-standing gap for late-arriving and early-departing travellers, as well as airport staff working night shifts. Until now, passengers have relied on taxis or private hire vehicles when regular services stop for the night.\n\n\"Reliable transport should not end when the sun goes down,\" said Helen Marsh, Director of Public Transport. \"Route N7 will make travel safer, more affordable, and more convenient for thousands of residents and visitors.\"\n\nAll buses are low-floor, wheelchair accessible, and equipped with CCTV, USB charging, and real-time information displays. A single fare of $4 applies, and standard travel passes will be accepted.\n\nTimetables and live tracking are available on the department's website and mobile app.\n\n**Media contact:**\nPress Office, Department of Transport\npress@transportdept.example | 555-0142\n\n**ENDS**"
+    },
+    {
+      "id": "press-grant",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**Department for Energy and Local Growth Launches £25 Million Solar Grant Scheme for Small Shops**\n\n*18 November 2026*\n\nThe Department for Energy and Local Growth today announced a new £25 million grant scheme to help independent shops and small retailers install solar panels, cutting energy bills and reducing carbon emissions on high streets nationwide.\n\nUnder the Small Shop Solar Grant, eligible businesses with fewer than 25 employees can apply for funding covering up to 50 percent of installation costs, to a maximum of £8,000 per premises. Shop owners who rent their premises will be able to apply with their landlord's written consent.\n\nThe scheme is expected to support more than 4,000 businesses over the next two years, with typical savings of between £1,200 and £2,500 a year on electricity costs.\n\nMinister for Energy and Local Growth, Helen Marsden, said: \"Our local shops are the heart of our communities, but rising energy costs have put many under real pressure. This scheme will help them take control of their bills while contributing to our clean energy goals.\"\n\nApplications open on 4 January 2027 through the Department's website. Businesses must use accredited installers, and funding will be awarded on a first-come, first-served basis.\n\n**Ends**\n\n**Notes to editors:** For media enquiries, contact the Department's press office."
+    },
+    {
+      "id": "press-campaign",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**\"Roll Up Your Sleeve\": National Health Agency Launches Annual Flu Jab Campaign**\n\n**18 November 2026** – The National Public Health Agency today launched its \"Roll Up Your Sleeve\" campaign, urging everyone eligible to book their seasonal flu vaccination before winter pressures peak.\n\nFlu can cause serious illness, particularly among older adults, young children, pregnant women, and people with long-term health conditions. Each year, thousands are hospitalised, placing considerable strain on health services during the colder months.\n\n\"The flu jab is safe, quick, and the best protection we have against severe illness,\" said Dr. Helena Marsh, the Agency's Chief Medical Officer. \"Getting vaccinated doesn't just protect you. It protects your family, your colleagues, and the vulnerable people around you.\"\n\nThis year's vaccine has been updated to match the strains expected to circulate this season. Immunity takes around two weeks to develop, so the Agency recommends acting now.\n\nFree vaccinations are available to eligible groups through GP surgeries, community pharmacies, and local clinics. Appointments can be booked online, by phone, or by dropping in at participating pharmacies.\n\nThe campaign will run across television, radio, social media, and community venues through to February.\n\n\"A few minutes of your time could prevent weeks of illness,\" added Dr. Marsh. \"Please don't wait.\"\n\n**For more information and to book:** www.nphagency.example/flu\n\n**Media contact:** press@nphagency.example\n\n**ENDS**"
     }
   ]
 }

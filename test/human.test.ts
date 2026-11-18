@@ -37,7 +37,6 @@ test('lint reports both sides', () => {
   assert.ok(r.findings.length > 0);
   assert.ok(Array.isArray(r.human.present) && Array.isArray(r.human.missing));
   assert.equal(r.human.tooShort, true);
-  assert.equal(r.human.signalScore, null);
 });
 
 test('shape metrics: bursty text has a higher sentence-length spread', () => {
@@ -59,7 +58,7 @@ test('rewrite rejects an edit that invents a fact and keeps the original', async
     return { text: JSON.stringify({ edits: sentences.map((s) => ({ id: s.id, text: 'Our 4,000 customers at Acme love it.' })) }) };
   });
   const text = 'We leverage robust tooling.';
-  const res = await rewrite(text, { model, register: 'technical', humanize: false });
+  const res = await rewrite(text, { model, register: 'professional', humanize: false });
   assert.equal(res.text, text);
   assert.ok(res.rejected.length >= 1);
   assert.match(res.rejected[0].reason, /4,000|Acme/);
@@ -70,7 +69,7 @@ test('placeholders in a rewrite come back as suggestions', async () => {
     const { sentences } = JSON.parse(req.prompt) as { sentences: { id: number }[] };
     return { text: JSON.stringify({ edits: sentences.map((s) => ({ id: s.id, text: 'The tooling cut build time to [number] minutes.' })) }) };
   });
-  const res = await rewrite('We leverage robust tooling.', { model, register: 'technical', humanize: false });
+  const res = await rewrite('We leverage robust tooling.', { model, register: 'professional', humanize: false });
   assert.deepEqual(res.suggestions.map((s) => s.placeholder), ['[number]']);
 });
 

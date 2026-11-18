@@ -20,6 +20,8 @@ function fake(map: Record<string, string>, log: ModelRequest[] = []) {
 test('only flagged sentences change; the rest is byte for byte', async () => {
   const text = 'The deploy ran at 02:10.\nIt was not a bug, it was a race. Logs are in `/var/log/app`.\n\nHope this helps!';
   const res = await rewrite(text, {
+    register: 'marketing',
+    humanize: false,
     model: fake({
       'It was not a bug, it was a race.': 'Two requests raced on the same row.',
       'Hope this helps!': '',
@@ -34,12 +36,12 @@ test('only flagged sentences change; the rest is byte for byte', async () => {
 
 test('the prompt carries the rules, the context and register examples', async () => {
   const log: ModelRequest[] = [];
-  await rewrite('We leverage robust tooling. Nothing else here.', { register: 'technical', model: fake({}, log) });
+  await rewrite('We leverage robust tooling. Nothing else here.', { register: 'professional', model: fake({}, log) });
   const prompt = JSON.parse(log[0].prompt);
   assert.equal(prompt.sentences.length, 1);
   assert.equal(prompt.sentences[0].text, 'We leverage robust tooling.');
   assert.ok(prompt.sentences[0].problems.some((p: { rule: string }) => p.rule === 'AI vocabulary'));
-  assert.match(log[0].system, /Register: technical/);
+  assert.match(log[0].system, /Register: professional/);
   assert.match(log[0].system, /<example source=/);
 });
 

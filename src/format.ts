@@ -17,7 +17,7 @@ export function formatText(file: string, text: string, result: LintResult, opts:
   const h = result.human;
   if (h) {
     const present = h.present.map((p) => `${p.name} (${p.count})`).join(', ');
-    lines.push(`  ${c('32', 'human signals')}  ${present || 'none found'}${h.present.length ? `, signal score ${h.signalScore}/100` : ''}`);
+    lines.push(`  ${c('32', 'human signals')}  ${present || 'none found'}${h.tooShort ? ' (too short to judge)' : ''}`);
     for (const m of h.missing) {
       lines.push(`  ${c('35', 'missing')}  ${m.name}. ${m.message}`);
       lines.push(`    ${m.add}`);

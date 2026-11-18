@@ -3,7 +3,7 @@
   "via": "claude-cli",
   "model": "claude-cli:opus",
   "createdAt": "2026-11-18T00:15:43.518Z",
-  "costUsd": 0.23841999999999997,
+  "costUsd": 0.49359200000000003,
   "items": [
     {
       "id": "slack-delay",
@@ -124,6 +124,126 @@
       "id": "event-invite",
       "register": "marketing",
       "text": "💾 Is your small business website backed up? If something went wrong tomorrow, could you get it back?\n\nJoin our **free online workshop** on **March 12 at 5pm GMT** and learn how to set up automated backups that run quietly in the background, so you never have to worry about losing your site.\n\n✅ Choosing the right backup tools\n✅ Scheduling automatic backups\n✅ Storing copies safely off-site\n✅ Restoring your site quickly when you need to\n\nNo tech expertise needed. Just bring your questions!\n\n👉 Save your spot today. Link in bio.\n\n#SmallBusiness #WebsiteBackup #WebSecurity #FreeWorkshop"
+    },
+    {
+      "id": "checkin-friend",
+      "register": "casual",
+      "text": "Hey! I was just thinking about you and realized it's been way too long since we last caught up. How have you been? I'd love to hear what's new with you, maybe we can grab coffee or hop on a call soon?"
+    },
+    {
+      "id": "dm-late",
+      "register": "casual",
+      "text": "Hey! So sorry, I'm running about ten minutes late for dinner. Want me to grab you a drink on the way, or order one for you when I get there? Let me know what you'd like!"
+    },
+    {
+      "id": "dm-congrats",
+      "register": "casual",
+      "text": "Hi [Name],\n\nI just heard about your new role at [Company], and congratulations! They're lucky to have you. I always admired your skill and the energy you brought to every project when we worked together, so this is well deserved.\n\nI wish you all the best in this next chapter. Let's catch up soon!\n\nCheers,\n[Your Name]"
+    },
+    {
+      "id": "dm-party",
+      "register": "casual",
+      "text": "Hey everyone! I'm having a few people over at mine this Saturday from 7pm. Nothing fancy, just some food, drinks and good company. Would love for you to come! Feel free to bring something to drink if you like. Let me know if you can make it 😊"
+    },
+    {
+      "id": "dm-parcel",
+      "register": "casual",
+      "text": "Hi! Sorry to bother you, but did you happen to take in a parcel for me today? The tracking says it's been delivered, but I can't find it anywhere. No worries if not, just thought I'd check before I chase it up. Thanks so much!"
+    },
+    {
+      "id": "comment-flight-kid",
+      "register": "casual",
+      "text": "Oof, that sounds genuinely exhausting, and I'm sorry your flight went that way. A few hours of nonstop crying right next to you is rough no matter how understanding you are. For what it's worth, the parents were almost certainly having an even worse time than you were, and toddlers often cry on planes because of ear pressure they can't relieve or understand. Next time it might help to keep a good pair of noise-canceling headphones or foam earplugs in your carry-on. They won't fix everything, but they can take the edge off a lot. Hope your next trip is a quiet one!"
+    },
+    {
+      "id": "comment-recipe",
+      "register": "casual",
+      "text": "Dense bread usually comes down to one of three things: under-proofing, too much flour, or weak gluten development. First, check your yeast by proofing it in warm water (around 105–110°F) with a pinch of sugar. If it doesn't foam within 10 minutes, it's dead. Next, try weighing your flour instead of using cups, since scooping can pack in 20–30% extra and leave you with a stiff, heavy dough. Knead until the dough passes the windowpane test, meaning you can stretch a small piece thin enough to see light through it without tearing. Finally, let it rise until it's truly doubled rather than going by the recipe's clock, because a cool kitchen can easily double the time needed. A poke test helps here too: if a gentle fingertip dent springs back slowly and only partway, it's ready to bake."
+    },
+    {
+      "id": "comment-bike",
+      "register": "casual",
+      "text": "In most cases a squeaky disc brake is more annoying than dangerous, but it's worth checking what's causing it. The usual culprits are contaminated pads or rotors (oil, lube overspray, or even fingerprints), glazed pads, or a slightly misaligned caliper. If the brakes still bite hard and stop you confidently, you're probably fine to ride while you sort it out. Try cleaning the rotor with isopropyl alcohol and realigning the caliper first. If the squeal comes with a noticeable loss of stopping power, a grinding noise, or pads worn down to around 1mm, stop riding and replace the pads (and possibly the rotor) before heading out again. Contaminated pads usually can't be saved reliably, so new ones are often the quickest fix."
+    },
+    {
+      "id": "comment-friend-ignored",
+      "register": "casual",
+      "text": "I know how much it stings when messages go unanswered, but try not to assume the worst just yet. People go quiet for all kinds of reasons that have nothing to do with you: stress at work, a rough patch they're not ready to talk about, or simply feeling overwhelmed by their phone. Instead of sending more messages asking why they haven't replied, try one low-pressure note like \"Hey, no need to respond, just thinking of you and here whenever you want to catch up.\" That gives them space without guilt. If the silence goes on for weeks and you notice they're active elsewhere, it's fair to ask them directly and kindly whether something's changed between you. Most of the time, though, it turns out to be about what's going on in their life, not about how they feel about you."
+    },
+    {
+      "id": "advice-roommate",
+      "register": "casual",
+      "text": "I've been there, and the good news is this is usually fixable without a blowup.\n\nFirst, talk to them directly, and assume it's thoughtlessness rather than malice. Something like: \"Hey, I've noticed some of my groceries disappearing. I budget pretty tightly, so can we figure out a system?\" Keep it calm and specific. Most people get embarrassed and stop.\n\nThen make the boundaries obvious. Label your stuff, or claim a dedicated shelf in the fridge and pantry. Some roommates genuinely think everything's communal unless told otherwise.\n\nConsider splitting shared staples like milk, eggs, and condiments, and keeping only personal items separate. That removes a lot of gray area.\n\nIf it keeps happening after a clear conversation, ask them to replace what they take or Venmo you. If they still ignore it, a small lockable bin or a mini-fridge in your room is cheap peace of mind.\n\nGood luck!"
+    },
+    {
+      "id": "advice-parent-screen",
+      "register": "casual",
+      "text": "We went through this exact phase with our son at 8, so you're not alone! A few things that genuinely helped:\n\n**Give warnings.** A 10-minute and a 2-minute heads-up let him mentally wrap up instead of being yanked out mid-game.\n\n**End at a natural stopping point.** \"When this level ends\" works better than a hard 4:00 cutoff, since quitting mid-level feels like losing progress.\n\n**Have a \"next thing\" ready.** The transition is the hard part. Going straight to a snack, a walk, or LEGO gives his brain somewhere to land.\n\n**Let him own the timer.** Kids push back less against a timer they set than against a parent saying \"time's up.\"\n\n**Stay calm during the meltdown.** Acknowledge it (\"I know, it's hard to stop when it's fun\"), but don't negotiate. If tears earn extra time, you'll see more tears.\n\nConsistency matters most. It took us about two weeks before the meltdowns really faded. Hang in there!"
+    },
+    {
+      "id": "advice-say-no",
+      "register": "casual",
+      "text": "I used to be exactly like this, so I get it. What helped me most was realising that a \"yes\" only means something if \"no\" is also possible. Friends who value you will survive hearing it.\n\nA few practical things:\n\n**Buy yourself time.** You don't have to answer on the spot. \"Let me check and get back to you\" gives you space to decide what you actually want, not what feels least awkward in the moment.\n\n**Keep it short.** You don't owe a detailed justification. \"I can't this time, sorry\" is enough. Long explanations invite negotiation.\n\n**Offer an alternative if you genuinely want to.** \"I can't help you move Saturday, but I could bring food over Sunday.\" Only do this if it's real, though.\n\n**Notice the resentment.** If you're saying yes and then quietly fuming, that's hurting the friendship more than an honest no would.\n\nStart small. It gets easier with practice."
+    },
+    {
+      "id": "group-dinner",
+      "register": "casual",
+      "text": "Hey everyone! 🍽️ How about dinner Friday night at Bella Notte, that cozy Italian spot downtown? Thinking around 7:30. Their pasta is amazing and they've got a great happy hour menu too. Who's in? Let me know by Thursday so I can grab a reservation! 🍝"
+    },
+    {
+      "id": "dm-thanks",
+      "register": "casual",
+      "text": "Hey! Just wanted to say a massive thank you for helping me move last weekend. I honestly couldn't have done it without you, especially getting that sofa up the stairs! 😅 The new place is finally starting to feel like home. Drinks (and pizza) are on me next time, and come round once I've unpacked the last of the boxes! 🙏🍕"
+    },
+    {
+      "id": "workplace-raise",
+      "register": "professional",
+      "text": "A year without a raise is a perfectly reasonable time to ask for one, and preparation will matter more than timing.\n\n**Build your case first.** List what you've accomplished over the past twelve months: projects delivered, problems solved, money saved or earned, and responsibilities you've taken on beyond your original role. Concrete numbers carry far more weight than general claims about working hard.\n\n**Know your market value.** Research salaries for your role, experience level, and location using sites like Glassdoor, Levels.fyi, or industry surveys. This gives you a specific, defensible figure to request instead of a vague hope.\n\n**Pick the right moment.** Request a dedicated meeting rather than raising it in passing. Avoid busy deadlines, and if possible, ask a few weeks before budgets are set.\n\n**Frame it around value.** Say something like: \"Over the past year I've taken on X and delivered Y. Based on that and market rates, I'd like to discuss adjusting my salary to Z.\"\n\n**Prepare for any answer.** If the response is \"not now,\" ask what specifically you'd need to achieve, and agree on a date to revisit the conversation."
+    },
+    {
+      "id": "workplace-credit",
+      "register": "professional",
+      "text": "First, take a breath. Having your manager present your work as his own is infuriating, but how you respond matters more than how fast.\n\n**Document everything.** Save drafts, emails, timestamps, and version histories that show your authorship. You may never need them, but if you do, they'll be invaluable.\n\n**Assume nothing, then ask.** Request a private conversation and keep it neutral: \"I noticed the Q3 analysis was presented without mention of my role. Can we talk about how contributions get credited?\" Sometimes it's carelessness, not malice, and a direct conversation fixes it.\n\n**Make your work visible.** Going forward, share updates with your team or stakeholders directly. Copy relevant colleagues on deliverables, present your own findings when possible, and mention your projects in one-on-ones with your skip-level manager.\n\n**Know when to escalate.** If it becomes a pattern, bring your documentation to HR or a senior leader. Focus on facts and impact, not accusations.\n\nFinally, consider whether this is a manager you want to grow under. Recognition shapes your career. You deserve someone who champions you, not someone who erases you."
+    },
+    {
+      "id": "workplace-quit",
+      "register": "professional",
+      "text": "Two months in and already dreaming of your exit? You're not alone, and you're not trapped. But before you hand in notice, get clear on *why* you want out.\n\nAsk yourself: is this a fit problem or an adjustment problem? The first few months of any job are disorienting. New systems, unfamiliar people, and the pressure to prove yourself can make even a good role feel miserable. If your frustration is mostly about the learning curve, give it another few months.\n\nIf the issue is deeper, it's a different story. Maybe the role was misrepresented, the culture is toxic, or the work clashes with your values or health. In that case, staying out of guilt rarely pays off. A short stint on your résumé is easy to explain: \"It wasn't the right fit, and I realized that quickly.\"\n\nWhatever you decide, start your job search *before* you resign if you can. Leave professionally: give proper notice, wrap up your work, and skip the bridge-burning.\n\nLeaving early isn't failure. Staying somewhere that's genuinely wrong for you, just to save face, often is."
+    },
+    {
+      "id": "travel-visa",
+      "register": "professional",
+      "text": "**It depends on your nationality and whether you stay airside.**\n\nFor most travellers, transiting through a Schengen airport (Frankfurt, Amsterdam, Paris CDG, etc.) **without passing through passport control** requires no visa. You stay in the international transit zone and board your onward flight.\n\nHowever, citizens of certain countries need an **Airport Transit Visa (ATV)** even to stay airside. The EU-wide list includes Afghanistan, Bangladesh, DR Congo, Eritrea, Ethiopia, Ghana, Iran, Iraq, Nigeria, Pakistan, Somalia and Sri Lanka. Individual countries add other nationalities. You're often exempt if you hold a valid visa or residence permit for the US, Canada, Japan or an EU/EEA country.\n\n**You will need a Schengen visa if you:**\n- Must leave the transit area (e.g., terminal changes requiring immigration, overnight hotel)\n- Booked separate tickets and must recheck bags\n\nThe UK has its own transit rules.\n\nAlways check the specific country's official government site or the IATA Travel Centre before booking."
+    },
+    {
+      "id": "freelance-late",
+      "register": "professional",
+      "text": "Sixty days is frustrating, but you have more leverage than you think. Here's how I'd escalate:\n\n**1. Send a firm, factual reminder.** Reference the invoice number, amount, original due date, and days overdue. Ask for a specific payment date, not just \"soon.\" Sometimes invoices genuinely get lost in accounts payable.\n\n**2. Pick up the phone.** Emails are easy to ignore. A direct call to your contact (or their finance team) often resolves things faster.\n\n**3. Pause ongoing work.** If you're still delivering, politely state that further work is on hold until the account is current. This is standard practice, not a threat.\n\n**4. Apply late fees, if your contract allows.** Mention them in writing so the client knows the cost is growing.\n\n**5. Send a formal demand letter.** Give a final deadline (e.g., 10 business days) and state that you'll pursue collections or small claims court afterward.\n\n**6. Follow through.** Small claims is inexpensive and doesn't require a lawyer in most places.\n\nGoing forward, require deposits and include clear payment terms in every contract."
+    },
+    {
+      "id": "email-colleague-cover",
+      "register": "professional",
+      "text": "Subject: Could you cover my Friday afternoon support shift?\n\nHi [Name],\n\nWould you be able to cover my support shift this Friday afternoon, [1:00–5:00 PM]? Something has come up and I won't be available.\n\nI'll make sure the queue is up to date and leave notes on any open tickets before I head out. I'd be happy to take one of your shifts in return, so just let me know what works for you.\n\nThanks so much!\n\nBest,\n[Your Name]"
+    },
+    {
+      "id": "press-library",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**City Council Announces Sunday Opening Hours at Three Public Libraries**\n\n[City Name], November 18, 2026. Starting Sunday, December 6, 2026, three of the city's public libraries will open on Sundays. The City Council approved the change to give residents more access to library services.\n\nCentral Library, Riverside Branch Library, and Northgate Community Library will open every Sunday from 11:00 a.m. to 5:00 p.m. Visitors can borrow and return books, use public computers and free Wi-Fi, reserve study rooms, and join family activities.\n\n\"Our libraries are among the most valued public spaces in our city,\" said Councillor [Name], Chair of the Community Services Committee. \"Many residents work or study during the week. Opening on Sundays means more people can enjoy these resources at a time that suits them.\"\n\nThe extended hours follow a public consultation earlier this year. More than 70 percent of respondents supported weekend openings. The council will review attendance after six months to decide whether Sunday hours should be added at other branches.\n\nFull opening hours and event listings are available at [website] or from any library branch.\n\n**Media Contact:**\n[Name]\nCommunications Office, [City Name] City Council\n[Phone] | [Email]\n\n**###**"
+    },
+    {
+      "id": "press-bus",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**New Night Bus Route to Link Airport and City Centre Around the Clock**\n\nThe Department of Transport today announced the launch of the N50, a new overnight bus service connecting the International Airport with the city centre. Services begin on Monday, 5 January 2026.\n\nThe N50 will run every 20 minutes between midnight and 5:00 a.m., seven days a week. It fills the gap left when regular daytime services and rail connections stop for the night. The route will serve the airport terminals, the Central Station interchange, Riverside Hospital and Market Square, with a full journey time of about 35 minutes.\n\n\"Travellers, shift workers and airport staff have told us clearly that they need a safe, affordable way home after midnight,\" said the Director of Public Transport. \"The N50 gives them that, and it supports our wider goal of reducing late-night car journeys and taxi congestion at the terminals.\"\n\nAll N50 buses will be fully accessible and will have luggage racks, USB charging points and CCTV. Standard fares apply, and passengers can pay by contactless card, mobile ticket or travel pass.\n\nTimetables and route maps are available on the Department's website and journey planner app.\n\n**Media Contact:**\nDepartment of Transport Press Office\npress@transport.gov | 0800 123 4567\n\n**ENDS**"
+    },
+    {
+      "id": "press-grant",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**Department for Energy and Local Business Launches £40 Million Solar Grant Scheme for Small Shops**\n\n*18 November 2026*\n\nThe Department for Energy and Local Business today announced the Bright Streets Solar Grant, a £40 million scheme to help independent retailers install rooftop solar panels and cut their energy bills.\n\nFrom 5 January 2027, eligible small shops can apply for grants covering up to 60 per cent of installation costs, to a maximum of £8,000 per premises. The scheme is open to independent retailers with fewer than 25 employees and an annual turnover below £2 million, including shops in leased premises with landlord consent.\n\nThe Minister for Local Business said: \"Small shops are the heart of our high streets, yet many have struggled with rising energy costs. This scheme will help them generate their own clean power, save money, and invest in their future.\"\n\nOfficials estimate that a typical participating shop could save between £1,200 and £2,000 a year on electricity. The scheme is expected to support up to 6,000 businesses and reduce carbon emissions by around 18,000 tonnes annually.\n\nApplications will be processed through accredited local installers. Full eligibility criteria and guidance are available on the Department's website.\n\n**ENDS**\n\n*Media enquiries: Press Office, Department for Energy and Local Business*"
+    },
+    {
+      "id": "press-campaign",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**Health Agency Launches \"Don't Let Flu Floor You\" Campaign as Winter Approaches**\n\n*18 November 2026*\n\nThe National Health Protection Agency has launched its annual winter campaign, urging eligible people to book their free flu jab before cases rise over the coming weeks.\n\n\"Don't Let Flu Floor You\" will run across television, radio, social media and community venues until February. It highlights the serious risks flu poses to older people, young children, pregnant women and those with long-term health conditions.\n\nFlu is often dismissed as a bad cold, but it can lead to pneumonia, hospital admission and, in some cases, death. Last winter, thousands of people were hospitalised with flu-related complications, putting significant pressure on health services.\n\n\"The flu jab is the single best way to protect yourself and those around you,\" said Dr Helen Marsh, Director of Immunisation. \"It's quick, safe and free for those most at risk. If you're eligible, please don't wait. Book your appointment today.\"\n\nJabs are available at GP surgeries and participating pharmacies. Parents of eligible children can arrange a quick, painless nasal spray vaccine.\n\nTo check eligibility or find your nearest vaccination site, visit the Agency's website or speak to your local pharmacist.\n\n**ENDS**\n\n*Media enquiries: press office, National Health Protection Agency*"
     }
   ]
 }

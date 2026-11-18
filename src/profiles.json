@@ -3,117 +3,117 @@
  "builtAt": "2026-11-18",
  "samples": {
   "human": {
-   "casual": 10,
-   "professional": 11,
+   "casual": 71,
+   "professional": 27,
    "technical": 6,
-   "marketing": 6
+   "marketing": 16
   },
   "model": {
-   "casual": 9,
-   "professional": 9,
+   "casual": 48,
+   "professional": 18,
    "technical": 12,
-   "marketing": 15
+   "marketing": 24
   }
  },
  "registers": {
   "casual": {
    "specific-number": {
-    "human": 0.4,
-    "model": 0.22
+    "human": 0.21,
+    "model": 0.29
    },
    "named-thing": {
-    "human": 1,
-    "model": 1
+    "human": 0.39,
+    "model": 0.56
    },
    "time-anchor": {
-    "human": 0.1,
-    "model": 0.67
+    "human": 0.01,
+    "model": 0.27
    },
    "first-hand": {
     "human": 0,
-    "model": 0.11
+    "model": 0.21
    },
    "stake": {
-    "human": 0.2,
-    "model": 0
+    "human": 0.13,
+    "model": 0.02
    },
    "aside": {
-    "human": 0.8,
-    "model": 0.11
+    "human": 0.3,
+    "model": 0.25
    },
    "contraction": {
-    "human": 0.5,
-    "model": 0.67
+    "human": 0.63,
+    "model": 0.92
    },
    "plain-verb": {
-    "human": 0.7,
-    "model": 0.67
+    "human": 0.41,
+    "model": 0.73
    },
    "real-question": {
-    "human": 0,
-    "model": 0.44
+    "human": 0.27,
+    "model": 0.29
    },
    "bursty-rhythm": {
-    "human": 0.3,
-    "model": 0.33
+    "human": 0.18,
+    "model": 0.5
    },
    "uneven-paragraphs": {
-    "human": 0.3,
-    "model": 0.11
+    "human": 0.11,
+    "model": 0.13
    },
    "concrete-first": {
-    "human": 0.5,
-    "model": 0.89
+    "human": 0.27,
+    "model": 0.21
    }
   },
   "professional": {
    "specific-number": {
-    "human": 0.91,
-    "model": 1
+    "human": 0.67,
+    "model": 0.72
    },
    "named-thing": {
-    "human": 1,
+    "human": 0.78,
     "model": 1
    },
    "time-anchor": {
-    "human": 0.55,
-    "model": 0.67
+    "human": 0.26,
+    "model": 0.39
    },
    "first-hand": {
-    "human": 0.27,
-    "model": 0.22
+    "human": 0.22,
+    "model": 0.33
    },
    "stake": {
-    "human": 0.09,
+    "human": 0.04,
     "model": 0
    },
    "aside": {
-    "human": 0.64,
-    "model": 0.11
+    "human": 0.56,
+    "model": 0.22
    },
    "contraction": {
-    "human": 0.73,
-    "model": 0.78
+    "human": 0.85,
+    "model": 0.89
    },
    "plain-verb": {
-    "human": 0.55,
-    "model": 0.67
+    "human": 0.67,
+    "model": 0.83
    },
    "real-question": {
-    "human": 0,
+    "human": 0.15,
     "model": 0.22
    },
    "bursty-rhythm": {
-    "human": 0.27,
-    "model": 0.67
+    "human": 0.56,
+    "model": 0.61
    },
    "uneven-paragraphs": {
-    "human": 0.36,
-    "model": 0.67
+    "human": 0.33,
+    "model": 0.5
    },
    "concrete-first": {
-    "human": 0.73,
-    "model": 1
+    "human": 0.3,
+    "model": 0.5
    }
   },
   "technical": {
@@ -168,52 +168,52 @@
   },
   "marketing": {
    "specific-number": {
-    "human": 0.83,
-    "model": 0.6
+    "human": 0.94,
+    "model": 0.71
    },
    "named-thing": {
     "human": 1,
-    "model": 0.47
+    "model": 0.67
    },
    "time-anchor": {
-    "human": 0,
-    "model": 0.4
+    "human": 0.31,
+    "model": 0.58
    },
    "first-hand": {
-    "human": 0.17,
-    "model": 0.2
+    "human": 0.06,
+    "model": 0.13
    },
    "stake": {
-    "human": 0,
+    "human": 0.06,
     "model": 0
    },
    "aside": {
-    "human": 0.83,
+    "human": 0.69,
     "model": 0
    },
    "contraction": {
-    "human": 0.5,
-    "model": 0.87
+    "human": 0.25,
+    "model": 0.63
    },
    "plain-verb": {
-    "human": 1,
-    "model": 0.73
+    "human": 0.56,
+    "model": 0.75
    },
    "real-question": {
-    "human": 0.17,
-    "model": 0.07
+    "human": 0.06,
+    "model": 0.04
    },
    "bursty-rhythm": {
-    "human": 0,
-    "model": 0.47
+    "human": 0.13,
+    "model": 0.46
    },
    "uneven-paragraphs": {
-    "human": 0.33,
-    "model": 0.53
+    "human": 0.44,
+    "model": 0.71
    },
    "concrete-first": {
     "human": 1,
-    "model": 0.73
+    "model": 0.83
    }
   }
  }

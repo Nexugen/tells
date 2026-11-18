@@ -19,17 +19,27 @@ echo "Great question! It's not a tool — it's a movement." | npx tells lint
 <stdin>:1:1  error  Sycophantic or stock opener [sycophantic-opener]
     "Great question"
     Start with the answer.
-<stdin>:1:17  error  "Not X, it's Y" [not-x-but-y]
+<stdin>:1:17  info   "Not X, it's Y" [not-x-but-y]
     "It's not a tool — it's"
     Say the concrete thing directly, and drop the thing it supposedly is not.
-<stdin>:1:33  error  Em or en dash [dash]
+<stdin>:1:33  info   Em or en dash [dash]
     "—"
     Write the punctuation the dash stood in for: a comma for an aside, ...
-<stdin>: 9 words, 20 known tells per 100 words (heavy), 3 errors, 0 warnings, 1 info
-  human signals  Contraction (1), signal score 8/100
+<stdin>: 9 words, 10 known tells per 100 words (heavy), 1 errors, 0 warnings, 2 info
+  human signals  Contractions (2) (too short to judge)
 ```
 
 Linting is plain rules and heuristics, so it needs no model, network or key. A long document takes milliseconds.
+
+Errors and warnings are the findings we trust. Hints (info) are habits worth a look that people also have, like dashes, and they never fail a check on their own.
+
+## How often it is wrong
+
+On the human samples in the benchmark, tells raises no warning or error on 99% of casual texts, 98% of professional ones, all of the technical ones and 96% of the marketing ones. On a set fetched later from other sites and measured once before any fix, it left alone 98% of casual texts and 77% of professional ones. Those misfires are fixed now, but expect professional writing outside the benchmark to land somewhere between those two figures.
+
+It flags 57% of held-out model output, and 96% of what it flags is model output. Most of what it misses is short casual text: a current model asked for a message to a friend writes something close to what a person would, and tells doesn't claim otherwise. Every rule's false-positive rate per register is in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
+
+Under 60 words, lint doesn't give advice on human signals, because a short text can't show them.
 
 ## Before and after
 
@@ -54,7 +64,7 @@ Everything outside the flagged sentences comes back byte for byte.
 
 ## Two sides
 
-Tells are habits to remove. Human signals are things people do far more often than models, worked out from the human samples in `bench/human.json`:
+Tells are habits to remove. Human signals are patterns people use in their writing, measured on the human samples in `bench/human.json`:
 
 <!-- tells-off -->
 | id | what it looks for |
@@ -73,11 +83,11 @@ Tells are habits to remove. Human signals are things people do far more often th
 | `concrete-first` | a concrete detail before the general point |
 <!-- tells-on -->
 
-`lint` reports both. For each register it also says which signals people usually use and this text lacks, with the numbers behind that (in the current profile, 64% of the professional human samples have an aside or a self-correction and 11% of the model samples do). The shares come from `src/profiles.json`, which `bench/run.ts profiles` builds from the training half of the benchmark.
+`lint` reports both. For each register it also says which signals people usually use and this text lacks, with the numbers behind that (in the current profile, 56% of the professional human samples have an aside or a self-correction and 22% of the model samples do). The shares come from `src/profiles.json`, which `bench/run.ts profiles` builds from the training half of the benchmark. Most signals turn out not to separate people from current models: models use numbers, names, dates and contractions as often as people do. Asides and an opinion with something at stake are the two that still do, so treat the list as a description of the text, not a score.
 
 ## The rules
 
-There are 56 of them. `npx tells rules` lists them all, and `npx tells rules --json` prints the full set with patterns, so you can use them from another language. Each rule has an id, a severity, a short note on why it reads as machine-written, what to do instead, and an example fix.
+There are 59 of them. `npx tells rules` lists them all, and `npx tells rules --json` prints the full set with patterns, so you can use them from another language. Each rule has an id, a severity, a short note on why it reads as machine-written, what to do instead, and an example fix.
 
 Some of the ones that matter most:
 
@@ -139,7 +149,7 @@ if (result.counts.error > 0) {
 }
 ```
 
-`lint` returns every finding with its offsets, line and column, a score, and the human signals report under `result.human`. `rewrite` sends only the flagged sentences to a model, with the rules they broke and a few human examples in the same register, then checks the result and retries once if a tell is still there.
+`lint` returns every finding with its offsets, line and column, a score, and the human signals report under `result.human`. Pass `register: 'auto'` to have it guess the register from the text; `result.register` says which one it used. `rewrite` sends only the flagged sentences to a model, with the rules they broke and a few human examples in the same register, then checks the result and retries once if a tell is still there.
 
 When the text lacks the signals its register usually has, `rewrite` also hands the model one or two flat sentences to rework toward them. It may not add facts. An edit that brings in a number or a name the source doesn't have is thrown away and listed in `result.rejected`. Where a detail would help and isn't there, the model writes a placeholder such as `[number]` or `[example from your work]`, and `result.suggestions` lists each one for you to fill in. Pass `humanize: false` to fix tells only.
 
@@ -183,15 +193,17 @@ A few samples are house drafts from Nexugen that a person approved. They help th
 
 ## Benchmark
 
-`bench/` asks models for 24 everyday writing tasks (a Slack update, a refund reply, a PR description, a launch post, a code review and so on) and compares the answers with 52 human samples. Every sample is cut to its first 150 words so length doesn't give the answer away.
+`bench/` asks Haiku, Sonnet and Opus for 48 everyday writing tasks (a text to a friend, a forum reply, a refund email, a PR description, a press release and so on) and compares the answers with 182 licensed human samples written before 2021, plus two more sets kept aside to check for false positives. [bench/EVAL.md](bench/EVAL.md) has the accuracy numbers and [bench/RESULTS.md](bench/RESULTS.md) the per-source scores and caveats.
 
-It reports three things: known tells per 100 words for each source, how often each human signal shows up, and whether a small logistic regression on those features can tell human samples from model ones on a held-out 30% it never trained on. In the current run, known tells alone reach an AUC of 0.79 and the full set of features reaches 0.89. The current numbers and their caveats are in [bench/RESULTS.md](bench/RESULTS.md).
+We also tried a statistical layer on function words, punctuation and rhythm. It separates the benchmark sets well and then flags a plain text message from a real person, because it learns where the samples came from as much as who wrote them. It stays in `bench/` and the package doesn't use it.
 
 ```sh
 node --experimental-strip-types bench/run.ts generate --via claude-cli --model haiku
 node --experimental-strip-types bench/run.ts rewrite --via claude-cli --source claude-code-haiku
 node --experimental-strip-types bench/run.ts profiles
 node --experimental-strip-types bench/run.ts score
+node --experimental-strip-types bench/fp.ts          # false positives per rule
+node --experimental-strip-types bench/eval.ts        # held-out accuracy
 ```
 
 ## Hosted API

@@ -1,0 +1,1282 @@
+{
+ "version": 1,
+ "note": "Final check set: fetched after all rule changes and measured once. Never used to tune anything.",
+ "samples": [
+  {
+   "id": "se-comment-writers-86553",
+   "register": "casual",
+   "text": "Surely the answer is simple. There are no circumstances under which emoji should ever be used.",
+   "source": "https://writers.stackexchange.com/a/51030#comment86553",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Judith."
+  },
+  {
+   "id": "se-comment-writers-71543",
+   "register": "casual",
+   "text": "I'm afraid you misunderstand the idea of Chekhov's gun. It's the other way round. His point was that if you mention something, it must contribute to the whole plot and not be just an embellishment. It doesn't imply that if a gun is fired in Act 2, it must hang on the wall earlier, or even that it's good to make it so. If it's natural for the story to just pull out a pistol and fire, then fine.",
+   "source": "https://writers.stackexchange.com/a/43486#comment71543",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Zeus."
+  },
+  {
+   "id": "se-comment-writers-51560",
+   "register": "casual",
+   "text": "You might add something like, \"Know when not to answer\". Sometimes the most difficult response I have to a question is leaving alone for someone who I know would answer better than I can.",
+   "source": "https://writers.stackexchange.com/a/33617#comment51560",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Todd Wilcox."
+  },
+  {
+   "id": "se-comment-writers-49625",
+   "register": "casual",
+   "text": "Related: don't say you're busy because you're writing (or editing); say you're working or you're at work.",
+   "source": "https://writers.stackexchange.com/a/32613#comment49625",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Monica Cellio."
+  },
+  {
+   "id": "se-comment-writers-39532",
+   "register": "casual",
+   "text": "Harry Potter is not a wall of text. It uses line breaks, paragraphs, headings and chapters. thats the opposite of a \"wall of text\", which simply means \"a lot of text without formatting, line breaks, paragraphs or any typesetting whatsoever\".",
+   "source": "https://writers.stackexchange.com/a/26899#comment39532",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Polygnome."
+  },
+  {
+   "id": "se-comment-writers-46707",
+   "register": "casual",
+   "text": "There's nothing making me drop a book or series faster than (for me) obviously wrong or clichee statements (cut the red wire ! Press Yes to hack the internet!). IMHO if you can't do in-depth research on the topic or ask an expert then please don't go into detail (maybe even your storyteller doesn't understand what that guy is doing?) because your detail will just be crap. I agree that most people won't care for that one topic but you will have quite some topics like this (e.g. someones favorite band?) and I guess that everybody has at least some topics they care about.",
+   "source": "https://writers.stackexchange.com/a/31260#comment46707",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Christoph."
+  },
+  {
+   "id": "se-comment-writers-65536",
+   "register": "casual",
+   "text": "I am impressed that you are taking this on. Good luck! A shah is fine and I think real words (even if they are unknown to the reader) is great. I suggest not bombing the reader with all of them in chapter one, but instead using generic words like swordsman/swordswoman, swordsman's servant, and so on, and gently easing the reader into the unusual words. The swordsman carries a scimitar. At some point have someone address with him with his title: \"Vaspahr Rahil, you are needed in the stables.\" Rahil shook his head at being called Vaspahr. The title was true, but too formal for his taste.",
+   "source": "https://writers.stackexchange.com/a/40637#comment65536",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: SFWriter."
+  },
+  {
+   "id": "se-comment-writers-52005",
+   "register": "casual",
+   "text": "I'll just go ahead and say it: Someone who dislikes your story just because some characters eat meat is someone who is dogmatic and has given your story a very shallow reading. You can probably ignore that feedback pretty safely - and look for feedback from someone who will read your story seriously. (Unless there's something more to the advice than what you've described here?)",
+   "source": "https://writers.stackexchange.com/a/33813#comment52005",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Kevin."
+  },
+  {
+   "id": "se-comment-writers-92583",
+   "register": "casual",
+   "text": "Anything you write can be considered offensive. If you want to be completely sure you're not giving offense, the only option is to never write anything.",
+   "source": "https://writers.stackexchange.com/a/53332#comment92583",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mark."
+  },
+  {
+   "id": "se-comment-writers-42251",
+   "register": "casual",
+   "text": "If you're unfamiliar with the expression \"sunk cost fallacy\", today would be a great day to get familiar with it. It's sad but true: the amount of time you spent on something in the past is not any kind of reason to spend more time on it in the future, if there is something better you could be spending your time and effort on.",
+   "source": "https://writers.stackexchange.com/a/28548#comment42251",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Eric Lippert."
+  },
+  {
+   "id": "se-comment-sound-10918",
+   "register": "casual",
+   "text": "I'd personally be a little more careful who you spat this sort of thing about over the internet - especially on this site. I neither know who the mixer is nor have I seen the show, but with posts like above, not the best image is created, if you know what I mean. Any professional I have ever met doesn't go off on how bad or messy something is - they view it and save the low-grade things for reference later, they don't practically insult the person and assume he isn't worthy of the pay he's getting.",
+   "source": "https://sound.stackexchange.com/a/11316#comment10918",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Utopia."
+  },
+  {
+   "id": "se-comment-sound-19605",
+   "register": "casual",
+   "text": "I think this qoute by Antoine de Saint-Exupéry applies very well: \"It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.\" (en.wikiquote.org/wiki/Antoine_de_Saint-Exupéry). I find this to be true in programming, photography, audio production and just about all other creative processes I can think of.",
+   "source": "https://sound.stackexchange.com/a/22744#comment19605",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Kim Burgaard."
+  },
+  {
+   "id": "se-comment-sound-10316",
+   "register": "casual",
+   "text": "The one thing I don't get with Ric is this: whats he actually done? Based on his credits listed on IMDB I'm not sure I'm interested in taking advice from him.... imdb.com/name/nm1938551",
+   "source": "https://sound.stackexchange.com/a/10520#comment10316",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user49."
+  },
+  {
+   "id": "se-comment-sound-19612",
+   "register": "casual",
+   "text": "In live situations, I always leave the recording running 2 minutes of empty hall after the concert. You never know when it comes in handy.",
+   "source": "https://sound.stackexchange.com/a/22747#comment19612",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Pelle ten Cate."
+  },
+  {
+   "id": "se-comment-sound-22020",
+   "register": "casual",
+   "text": "This link would be more helpful if you summarized the contents here; especially since that link may not necessarily outlive this question",
+   "source": "https://sound.stackexchange.com/a/24638#comment22020",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: davetron5000."
+  },
+  {
+   "id": "se-comment-sound-24073",
+   "register": "casual",
+   "text": "+1 for double blind test, but bear in mind that you are also testing your speakers/headphones at the same time - if they have a limited frequency response they might mask the benefits of the higher bitrate encoding.",
+   "source": "https://sound.stackexchange.com/a/26223#comment24073",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mark Heath."
+  },
+  {
+   "id": "se-comment-sound-5908",
+   "register": "casual",
+   "text": "Matching the energy of the performance is very important too. Even if you have to ask the actor to run on the spot for a minute to energize them it can be worth - no amount of mixing will make a performance match if the energy doesn't match the action...",
+   "source": "https://sound.stackexchange.com/a/2269#comment5908",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user49."
+  },
+  {
+   "id": "se-comment-sound-7853",
+   "register": "casual",
+   "text": "\"...it got me wondering if there wear any other films where sound has deliberately been used to make the viewer feel physically uncomfortable?\" For that, I'd have to vote for \"Justin Bieber: Never Say Never\".",
+   "source": "https://sound.stackexchange.com/a/7806#comment7853",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: NoiseJockey."
+  },
+  {
+   "id": "se-comment-sound-22370",
+   "register": "casual",
+   "text": "Don't forget the history... When USB 1.0 was introduced it was MUCH slower than FireWire (12 MBit/s as opposed to 400 MBit/s). USB 2.0 came out at 480 MBit/s and eliminated most of FireWire's advantage.",
+   "source": "https://sound.stackexchange.com/a/24894#comment22370",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Joel Spolsky."
+  },
+  {
+   "id": "se-comment-sound-17542",
+   "register": "casual",
+   "text": "Foley always needs to be edited. You are absolutely correct about delay time. Advancing the track 1 to 3 frames sometimes does the trick but you will still need to do internal editing ... always. Bring the volume down and play it with your production and FX tracks and see how it sounds. Sometimes focusing on your cloth pass by itself and listening at an unnatural level can make it sound artificial. Level is a big, big part of it. Don't make yourself crazy. Keep things in perspective. The cloth track is not a big player. It's there to help things seem real. It's not meant to stand alone.",
+   "source": "https://sound.stackexchange.com/a/19424#comment17542",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Chris Assells."
+  },
+  {
+   "id": "se-comment-law-91869",
+   "register": "casual",
+   "text": "This is insane, I would say that refusing to create an account on these platforms actually proves some digital literacy, which the teacher apparently lacks. I think the lawyers of Electronic Frontier Foundation might be very interested in this case: eff.org",
+   "source": "https://law.stackexchange.com/a/47456#comment91869",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: JohnEye."
+  },
+  {
+   "id": "se-comment-law-54927",
+   "register": "casual",
+   "text": "I'm going to pile on a little here: Is she performing her job satisfactorily? If so, \"cannot simply let it go\" is, to be honest, childish and unprofessional. If not, what does her degree matter? You should have mechanisms in place to deal with underperforming employees.",
+   "source": "https://law.stackexchange.com/a/30523#comment54927",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Tin Wizard."
+  },
+  {
+   "id": "se-comment-law-52109",
+   "register": "casual",
+   "text": "I am sorry for your loss. I cannot imagine how something like this must feel. I would highly recommend contacting a local lawyer rather than asking online—they will be able to give you definite answers; and some offer a free first consultation.",
+   "source": "https://law.stackexchange.com/a/29069#comment52109",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Infiltrator."
+  },
+  {
+   "id": "se-comment-law-47601",
+   "register": "casual",
+   "text": "It was most likely a mistake on the part of the Chipotle workers rather than them actively desiring to cause you emotional harm, and they offered you a refund and the ability to submit a complaint as an attempt to make up for the mistake. Even if you could take legal action, I would say it would be unethical in this situation to do so. At the very least, it would be a significant overreaction given that neither you nor they intended for chicken to end up in your dish.",
+   "source": "https://law.stackexchange.com/a/26950#comment47601",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: JAB."
+  },
+  {
+   "id": "se-comment-law-54899",
+   "register": "casual",
+   "text": "Does she actually lack the needed skills to do the job? If so, why do you need her to have a \"real\" degree anyway? Can you give her some kind of exam to see if she is functioning at the college level in whatever competencies you need?",
+   "source": "https://law.stackexchange.com/a/30523#comment54899",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Robert Columbia."
+  },
+  {
+   "id": "se-comment-law-118001",
+   "register": "casual",
+   "text": "You may be surpised to learn this, but prison owners aren't the ones deciding who stays in prison.",
+   "source": "https://law.stackexchange.com/a/57769#comment118001",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: bdb484."
+  },
+  {
+   "id": "se-comment-law-8284",
+   "register": "casual",
+   "text": "tl;dr jury trials have become a theater where attorneys on each side will try to confuse the poor laypersons on the jury into voting in their favor. Lawyers will typically see through that and negate all the showmanship that the attorneys will do.",
+   "source": "https://law.stackexchange.com/a/4560#comment8284",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ratchet freak."
+  },
+  {
+   "id": "se-comment-law-83619",
+   "register": "casual",
+   "text": "If the ACLU does not act, the Satanic Temple is another organization that will press this. They'd be happy to demand that, if Christian materials are put up on school property, Satanic ones also be included.",
+   "source": "https://law.stackexchange.com/a/44350#comment83619",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: R.. GitHub STOP HELPING ICE."
+  },
+  {
+   "id": "se-comment-law-53016",
+   "register": "casual",
+   "text": "You can patent it and explicitly not enforce that patent. Conductor does it as well as Tesla. You basically release the patent as open source and grant wide open licenses to use that patent. A patent comes with a right to enforce it, not an obligation to.",
+   "source": "https://law.stackexchange.com/a/29588#comment53016",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Ron Beyer."
+  },
+  {
+   "id": "se-comment-law-22126",
+   "register": "casual",
+   "text": "\"You are not Sheldon Cooper\" -- well, some non-fictional people have genuine difficulty with this kind of implied context, and the questioner might be one of them. The actual answer is in the excluded middle between B and C: the instructions have authority to override some laws but not others. The issue of whether the driving test should be worded precisely enough so that Sheldon Cooper can pass it, is something to take up with the DMV as you say. The DMV might even argue that since road signs may sometimes be equally imprecise, if you can't cope with this you shouldn't drive ;-)",
+   "source": "https://law.stackexchange.com/a/13221#comment22126",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Steve Jessop."
+  },
+  {
+   "id": "se-comment-woodworking-1336",
+   "register": "casual",
+   "text": "Two answers put forth the claim that you need to have the blade have clearance above the workpiece to allow the gullets to clear. That's in error because the blade cuts on the down stroke, emptying itself at the bottom. The back of the blade shouldn't be doing any cutting on its way up through the table unless you're feeding the wood backwards, and that's just begging to get yourself hurt.",
+   "source": "https://woodworking.stackexchange.com/a/1061#comment1336",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: FreeMan."
+  },
+  {
+   "id": "se-comment-woodworking-7179",
+   "register": "casual",
+   "text": "When I first read the title I came fully prepared to leave a comment telling you to ask on SuperUser instead.",
+   "source": "https://woodworking.stackexchange.com/a/3566#comment7179",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Jason C."
+  },
+  {
+   "id": "se-comment-woodworking-5344",
+   "register": "casual",
+   "text": "Was the claim that the wood was cut 160 years ago, or that the tree was 160 years old before it was cut? Very different implications.",
+   "source": "https://woodworking.stackexchange.com/a/2647#comment5344",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: TREE."
+  },
+  {
+   "id": "se-comment-woodworking-4445",
+   "register": "casual",
+   "text": "Kattywompus - (noun) Knocked askew. Alternate spelling of cattywampus, alternate form of Kittywampus. What an amazing word.",
+   "source": "https://woodworking.stackexchange.com/a/2209#comment4445",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: JamesENL."
+  },
+  {
+   "id": "se-comment-woodworking-4046",
+   "register": "casual",
+   "text": "There is a big dent in the wall of my local custom cabinets shop that says it's a really bad idea.",
+   "source": "https://woodworking.stackexchange.com/a/2011#comment4046",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mr. Mascaro."
+  },
+  {
+   "id": "se-comment-woodworking-6896",
+   "register": "casual",
+   "text": "I have basically been using metal drill bits for everything I do my entire life it seems.",
+   "source": "https://woodworking.stackexchange.com/a/3438#comment6896",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: NipFu."
+  },
+  {
+   "id": "se-comment-woodworking-7830",
+   "register": "casual",
+   "text": "Practice on scraps you can afford to destroy before you go anywhere near the instrument!",
+   "source": "https://woodworking.stackexchange.com/a/3835#comment7830",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: keshlam."
+  },
+  {
+   "id": "se-comment-woodworking-409",
+   "register": "casual",
+   "text": "I like the grain explanation better. I get that the longest side if often in the grain direction.",
+   "source": "https://woodworking.stackexchange.com/a/328#comment409",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ratchet freak."
+  },
+  {
+   "id": "se-comment-woodworking-144",
+   "register": "casual",
+   "text": "If you want a bragging contest about how bad of a kickback you witnessed please take it to chat.",
+   "source": "https://woodworking.stackexchange.com/a/21#comment144",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: ratchet freak."
+  },
+  {
+   "id": "se-comment-woodworking-4610",
+   "register": "casual",
+   "text": "Make sure you nail the board to studs, and not to the drywall or plaster.",
+   "source": "https://woodworking.stackexchange.com/a/2300#comment4610",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: grfrazee."
+  },
+  {
+   "id": "se-comment-mechanics-123087",
+   "register": "casual",
+   "text": "I don't understand how you reconcile the statements \"it runs a bit rough and I can barely see out the rear and it drives like it's underwater\" and \"haven't noticed a problem.\" Because all of the symptoms you listed describe a serious problem",
+   "source": "https://mechanics.stackexchange.com/a/71535#comment123087",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: alroc."
+  },
+  {
+   "id": "se-comment-mechanics-105079",
+   "register": "casual",
+   "text": "Yes it's a bad practice, your car is at serious risk of being irreparably damaged by your long suffering neighbours.",
+   "source": "https://mechanics.stackexchange.com/a/60027#comment105079",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Chris Hatton."
+  },
+  {
+   "id": "se-comment-mechanics-82969",
+   "register": "casual",
+   "text": "Putting it very simply: this guy isn't your friend, he's a dick. He's being incredibly selfish and taking advantage of your good nature. If he's being so lazy that his preferred solution to a problem is to cost you large amounts of money, he's almost certainly doing other things you aren't aware of yet. Kick him out immediately.",
+   "source": "https://mechanics.stackexchange.com/a/48033#comment82969",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Philip Kendall."
+  },
+  {
+   "id": "se-comment-mechanics-105067",
+   "register": "casual",
+   "text": "This is probably really annoying for your neighbours, especially if you leave early in the morning.",
+   "source": "https://mechanics.stackexchange.com/a/60027#comment105067",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: David Richerby."
+  },
+  {
+   "id": "se-comment-mechanics-1829",
+   "register": "casual",
+   "text": "Side point on the \"keep a minimum of 1/4 tank\": it's actually handy for spouse cooling as well. Ever been late to an appointment with your loving significant other and had to explain that you're nearly out of gas...?",
+   "source": "https://mechanics.stackexchange.com/a/1879#comment1829",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Bob Cross."
+  },
+  {
+   "id": "se-comment-mechanics-78643",
+   "register": "casual",
+   "text": "I'm pretty sure that is an ancient cuneiform script. If I'm reading it correctly, it means \"do not remove\"",
+   "source": "https://mechanics.stackexchange.com/a/45749#comment78643",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: cory."
+  },
+  {
+   "id": "se-comment-mechanics-83477",
+   "register": "casual",
+   "text": "#3 is not true, electricity does not choose the path of least resistance, it will choose all paths, in inverse proportion to that paths resistance.",
+   "source": "https://mechanics.stackexchange.com/a/48271#comment83477",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Glen Yates."
+  },
+  {
+   "id": "se-comment-mechanics-66516",
+   "register": "casual",
+   "text": "If your tire guy recommends that these should be removed and couldn't explain what they are for, I would find a new tire guy.",
+   "source": "https://mechanics.stackexchange.com/a/39564#comment66516",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: KevinDTimm."
+  },
+  {
+   "id": "se-comment-mechanics-78634",
+   "register": "casual",
+   "text": "Double plus on not removing them. If one doesn't like the look, paint them black to match the rim.",
+   "source": "https://mechanics.stackexchange.com/a/45750#comment78634",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Pᴀᴜʟsᴛᴇʀ2."
+  },
+  {
+   "id": "se-comment-mechanics-54655",
+   "register": "casual",
+   "text": "Note also that an airbag is a supplemental restraint system. A harness is a primary restraint system. If the primary restraint system is sufficient, there's no need to supplement it.",
+   "source": "https://mechanics.stackexchange.com/a/33044#comment54655",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Snixtor."
+  },
+  {
+   "id": "se-comment-homebrew-580",
+   "register": "casual",
+   "text": "The danger of off-flavors caused by leaving beer on the yeast cake for too long is something of a boogey-man. The biggest concern is autolysis which produces flavors starting at \"yeasty\" & going through \"meaty\" to \"rubbery\". I left a brew on the yeast for six months without negative impact. This is, of course, anecdotal. I get some of my information from Basic Brewing Radio and The Jamil Show.",
+   "source": "https://homebrew.stackexchange.com/a/794#comment580",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Dean Brundage."
+  },
+  {
+   "id": "se-comment-homebrew-3108",
+   "register": "casual",
+   "text": "I'd like to rephrase this as \"How can I make all of my beer taste like bacon?\"",
+   "source": "https://homebrew.stackexchange.com/a/3373#comment3108",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mark McDonald."
+  },
+  {
+   "id": "se-comment-homebrew-88",
+   "register": "casual",
+   "text": "No edit. We, the rest of the world, have to drag you Americans kicking and screaming into the 21st century.",
+   "source": "https://homebrew.stackexchange.com/a/21#comment88",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Chris Cudmore."
+  },
+  {
+   "id": "se-comment-homebrew-6363",
+   "register": "casual",
+   "text": "This stack exchange model contiues to mystify me. Three answers and no up votes to the question.... even from a moderator! If its good enough to answer, is it not good enough to up vote? I thought this was a pretty good question. In fact I was left wondering, what is \"brewing\" sugar?",
+   "source": "https://homebrew.stackexchange.com/a/6151#comment6363",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: brewchez."
+  },
+  {
+   "id": "se-comment-homebrew-2350",
+   "register": "casual",
+   "text": "Once you get your water report - 1 gram of gypsum per gallon adds 62 ppm calcium, 147 ppm sulfate",
+   "source": "https://homebrew.stackexchange.com/a/2663#comment2350",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Northern Brewer Chris."
+  },
+  {
+   "id": "se-comment-homebrew-2020",
+   "register": "casual",
+   "text": "Soaking should be fine. Over time the high heat of boiling isn't good for the rubber gaskets. They dry out faster over time and need replacing.",
+   "source": "https://homebrew.stackexchange.com/a/1432#comment2020",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: brewchez."
+  },
+  {
+   "id": "se-comment-homebrew-4716",
+   "register": "casual",
+   "text": "To make that method work even better, run the tubing through a #2 one hole stopper. Seat the stopper in the bottle and start the beer flow. When pressure builds up in the bottle, the flow will stop. Very slightly crack the stopper to resume the flow and regulate the speed. This pretty much eliminates foaming when you fill.",
+   "source": "https://homebrew.stackexchange.com/a/4889#comment4716",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Denny Conn."
+  },
+  {
+   "id": "se-comment-homebrew-7481",
+   "register": "casual",
+   "text": "I'm not certain that you are reading your hydrometer correctly. Specific gravity in fermenting beer should not increase.",
+   "source": "https://homebrew.stackexchange.com/a/7038#comment7481",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: baka."
+  },
+  {
+   "id": "se-comment-homebrew-10873",
+   "register": "casual",
+   "text": "Seems like just etching a number on each keg and keeping a spreadsheet would work just fine.",
+   "source": "https://homebrew.stackexchange.com/a/9792#comment10873",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: GHP."
+  },
+  {
+   "id": "se-comment-homebrew-11439",
+   "register": "casual",
+   "text": "Bad news. You've been infected with: en.wikipedia.org/wiki/Portugese_Man_of_War Go ahead and dump it now before it starts stinging you.",
+   "source": "https://homebrew.stackexchange.com/a/10173#comment11439",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: GHP."
+  },
+  {
+   "id": "se-comment-gaming-5523",
+   "register": "casual",
+   "text": "Bah! I saw this question linked on stackexchange.com and thought it was on from Cooking site. It's far less interesting on this site...",
+   "source": "https://gaming.stackexchange.com/a/4999#comment5523",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: James McNellis."
+  },
+  {
+   "id": "se-comment-gaming-50121",
+   "register": "casual",
+   "text": "Of course there's a way to save it. You didn't actually incinerate your own companion cube, did you? You monster.",
+   "source": "https://gaming.stackexchange.com/a/34157#comment50121",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Oak."
+  },
+  {
+   "id": "se-comment-gaming-218170",
+   "register": "casual",
+   "text": "This question appears to be off-topic because it belongs on Aviation SE, which deals with plane-licking.",
+   "source": "https://gaming.stackexchange.com/a/162789#comment218170",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user48530."
+  },
+  {
+   "id": "se-comment-gaming-212901",
+   "register": "casual",
+   "text": "To the hot network questions with you! Go, out of context title, join your brothers!",
+   "source": "https://gaming.stackexchange.com/a/158907#comment212901",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: PeterL."
+  },
+  {
+   "id": "se-comment-gaming-52805",
+   "register": "casual",
+   "text": "From personal experience, I do not recommend deciding not to climb the mountain when halfway up. Horses may be good at climbing, but they're even better at falling to their death.",
+   "source": "https://gaming.stackexchange.com/a/36308#comment52805",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Ian Pugsley."
+  },
+  {
+   "id": "se-comment-gaming-54849",
+   "register": "casual",
+   "text": "Put a bucket on your shoulders and call it a day? Everyone else in Skyrim is doing it!",
+   "source": "https://gaming.stackexchange.com/a/37805#comment54849",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Raven Dreamer."
+  },
+  {
+   "id": "se-comment-gaming-231148",
+   "register": "casual",
+   "text": "And now I'm probably flagged in some government database for searching for \"naked kids\" in a video game...",
+   "source": "https://gaming.stackexchange.com/a/170659#comment231148",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: agent86."
+  },
+  {
+   "id": "se-comment-gaming-271430",
+   "register": "casual",
+   "text": "I understand Peter Jackson is planning a new version of this game which requires three browsers.",
+   "source": "https://gaming.stackexchange.com/a/200891#comment271430",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: bye."
+  },
+  {
+   "id": "se-comment-gaming-218540",
+   "register": "casual",
+   "text": "It's not just Aviation SE. Code golf: In as few characters as possible, lick a plane. Code review: Is my plane licking good enough? StackOverflow: I liked a plane, but didn't get the lick-a-plane achievement. What am I missing? Programmers: Is licking a plane an antipattern? Workplace: My boss circulated a memo restating the company policy against plane-licking. Should I quit now, or in two weeks? DIY: Not a hand plane? … etc",
+   "source": "https://gaming.stackexchange.com/a/162789#comment218540",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: kojiro."
+  },
+  {
+   "id": "se-comment-gaming-460115",
+   "register": "casual",
+   "text": "> which actually isn't true at all, they're just mad. This is very important. CS:GO is 90% salt.",
+   "source": "https://gaming.stackexchange.com/a/323038#comment460115",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Restioson."
+  },
+  {
+   "id": "se-comment-movies-128959",
+   "register": "casual",
+   "text": "\"It's just a matter of finding the right quote which, out of context, fits the plot... in question.\" Curiously enough, this is also a common practice for the opposition when an election is coming up.",
+   "source": "https://movies.stackexchange.com/a/78241#comment128959",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Steve-O."
+  },
+  {
+   "id": "se-comment-movies-159528",
+   "register": "casual",
+   "text": "Not only that. That simulated escape prevented him to try to escape when his sister went to rescue him. He thought it was another trap from Ramsay.",
+   "source": "https://movies.stackexchange.com/a/94184#comment159528",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Federico J.."
+  },
+  {
+   "id": "se-comment-movies-171302",
+   "register": "casual",
+   "text": "She was also fortunate to be hiding behind a wall that wasn't constructed of Explodium",
+   "source": "https://movies.stackexchange.com/a/100738#comment171302",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Mohirl."
+  },
+  {
+   "id": "se-comment-movies-165404",
+   "register": "casual",
+   "text": "For the record, the movie is wildly inaccurate on practically the entire story. He didn't invent that machine, there was far more than one of them, everybody knew about cribs and they were already using them and didn't need some bar floozy to teach them about it, he wasn't intellectually crippled by his chemical castration, etc. I did like the movie, but it's more fiction than non-fiction.",
+   "source": "https://movies.stackexchange.com/a/97694#comment165404",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: zibadawa timmy."
+  },
+  {
+   "id": "se-comment-movies-139846",
+   "register": "casual",
+   "text": "Thanks for pointing out that the $25M figure covers many aspects of reshooting (e.g. set, cast, crew) and not just the de-stache CGI.",
+   "source": "https://movies.stackexchange.com/a/82953#comment139846",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: brichins."
+  },
+  {
+   "id": "se-comment-movies-162993",
+   "register": "casual",
+   "text": "I honestly can't get over just how weird this question is. Are there really some countries with no manual boxes, all autos??",
+   "source": "https://movies.stackexchange.com/a/96371#comment162993",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Tetsujin."
+  },
+  {
+   "id": "se-comment-movies-147539",
+   "register": "casual",
+   "text": "I somehow think having a deposed African leader rely on the support of the very white \"Captain America\" to overthrow the current government would undermine the premise of Wakanda as the only nation on the continent to avoid the effects of colonization.",
+   "source": "https://movies.stackexchange.com/a/87458#comment147539",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: jeffronicus."
+  },
+  {
+   "id": "se-comment-movies-96355",
+   "register": "casual",
+   "text": "It should be noted, BTW, that many silent era comedians, like Chaplin, Keaton and Lloyd, were also amazing stuntmen, incredibly agile and gutsy, and usually performed their own stunts.",
+   "source": "https://movies.stackexchange.com/a/60924#comment96355",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: Walt."
+  },
+  {
+   "id": "se-comment-movies-102138",
+   "register": "casual",
+   "text": "Elves are immortal in Tolkein, so it's possible this is a form of population control.",
+   "source": "https://movies.stackexchange.com/a/64068#comment102138",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: DukeZhou."
+  },
+  {
+   "id": "se-comment-movies-112159",
+   "register": "casual",
+   "text": "This answer makes it seem like the phrase is completely a joke, and only used in that sense. It's not. Dry heat IS more tolerable than the same temperature in humid weather, and people still use it without making any kind of joke.",
+   "source": "https://movies.stackexchange.com/a/69694#comment112159",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange comment, HTML stripped. Author: user428517."
+  },
+  {
+   "id": "se-answer-cooking-84325",
+   "register": "casual",
+   "text": "The electric kettle is (clearly) not designed for this. The main issue is that milk doesn't evaporate, whereas water (obviously) does. The secondary reason is that milk will burn.\n\nMilk is a complex mixture of water, fats, and proteins. The fats and proteins will separate out from the water when heated, and form a layer on top. Unfortunately, this layer prevents the water from evaporating - it traps it. This is what causes milk to boil over. Incidentally, the reason potato or pasta water boils over is due to the starch.\n\nThe way kettles turn off is by steam reaching the top of the kettle, rushing down a tube and causing a bi-metallic plate to expand unevenly, tripping the switch.\n\nNo steam means the kettle will never turn off. Because the kettle doesn't turn off, the element continues to heat the milk next to it. With water, the hot water will rise, rather than stick to the element. This means leaving the lid open won't cause a fire - at least not until all your water has boiled away. Unfortunately, milk will burn, and this layer of burnt milk will prevent effective heat dissipation - the milk in contact with the element is not moving throughout the remainder of the liquid. This causes the element to get hotter than it is meant to.\n\nHowever, kettle manufacturers have thought this through - they don't want their products to catch on fire (well, most don't) - even when they are misused like this. They will have included a small (one time) temperature switch, like this one. This acts a little like a fuse, but for heat, not current. They are often called \"thermal fuses\" for this reason. When the element reaches a temperature which has been deemed \"too hot\" (probably around 190ºC, perhaps a little hotter) this switch is tripped, and electricity can no longer reach the element.\n\nThis is normally a permanent state. You could open the kettle, find the temperature, voltage and current rating for the thermal fuse, buy one on eBay or Amazon and replace it (you would have to crimp, not solder, for obvious reasons), and be confident it was installed safely, in good thermal contact with the element. But if I'm honest, it's sensible to just buy a new kettle.",
+   "source": "https://cooking.stackexchange.com/a/84325",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Tim."
+  },
+  {
+   "id": "se-answer-cooking-79675",
+   "register": "casual",
+   "text": "It's called deep pectoral myopathy or \"green muscle disease\", and it's a problem with heavy breasted poultry. The vessels are unable to supply enough blood to the muscle, with the result of death of the muscles affected. It's not detectable until the chicken is cut open. By the time you see the green colour, muscle death occurred a couple of weeks prior and fibrous woody tissue has developed. Since breeding practices for roaster chickens and turkeys often favor heavy-breasted poultry, this is likely to be found more often until that changes.\n\nThere is no odour or bacterial growth with this, and the meat itself is safe to eat, though no one would eat the green part. The Occurrence of Deep Pectoral Myopathy in Roaster Chickens, from The Journal of Applied Poultry Research, has extensive info available about it.",
+   "source": "https://cooking.stackexchange.com/a/79675",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Jude."
+  },
+  {
+   "id": "se-answer-cooking-81043",
+   "register": "casual",
+   "text": "Concord grapes, which most grape jellies/jams/preserves in the US are made from, are derived from the (US-native) \"fox grape\" (Vitis labrusca) rather than (Europe-native) wine grape (Vitis vinifera). Common table grapes (the ones eaten as fresh fruit) such as Thompson seedless are also derived from Vitis vinifera wine grapes. \n\nFox grapes have a \"foxy\" taste character, which is a result of the presence of the naturally occurring compound methyl anthranilate. Methyl anthranilate is a rather simple compound, and is used in many situations as an \"artificial grape flavor\". In many cases \"grape flavored\" candies, drinks and medicines are flavored not with grape extracts, but with synthetically produced methyl anthranilate. As such, these artificially flavored foods taste like Concord grapes (fox grapes), rather than table or wine grapes.\n\nWhile it would be possible to come up with \"artificial wine grape\" flavor, the flavor profile of wine and table grapes is not dominated by a single compound, as fox grapes are. Therefore, any such \"artificial wine grape\" flavor would be much more expensive than artificial Concord grape flavor (i.e. just methyl anthranilate). As such, when companies reach for \"grape flavor\", they tend to go for the more inexpensive Concord grape flavor.\n\nThis also adds to the persistent expectation (at least in the US) as to what \"grape flavored\" means. Even if you came out with a wine-grape-flavored Jolly Rancher, many in the US would think it wouldn't taste right, as they expect grape flavored things to taste like Concord grapes.",
+   "source": "https://cooking.stackexchange.com/a/81043",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: R.M.."
+  },
+  {
+   "id": "se-answer-cooking-2579",
+   "register": "casual",
+   "text": "The salt adds flavor, but it also helps reduce the gelatinization of the starch in the pasta. The starch in food is the form of microscopic grains. When these grains come into contact with water, they will trap some of it (think cornstarch in cold water), but when the water is hot they swell up like balloons and merge with each other, and you have starch gelatinization.\n\nAnother thing you may want to add to the pasta water is some acid (lemon or cream of tartar). Tap water in most cities is made alkaline, which increases the starch loss from the pasta to the water, making the pasta stickier.",
+   "source": "https://cooking.stackexchange.com/a/2579",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: papin."
+  },
+  {
+   "id": "se-answer-cooking-22409",
+   "register": "casual",
+   "text": "Surely the authors of the previous (sublime!) answers will throw the \"Sure it works in practice, but does it work in theory!?\" at me, but this great SE question and its answers still lured me into creating an answer backed up by empirical evidence.\n\nThe Answer\n\nYES! It's certainly possible. At least one successful attempt has been logged (see below).\n\nThe Experiment\n\nThe following equipment and ingredients were used in this experiment:\n\n- Two whole trouts (each 230 grams, 28 cm long, thickness 3 cm).\n\n- One salmon steak, cut in two equal pieces (90 grams each, thickest point 3 cm).\n\n- Herbs: rosemary and parsley.\n\n- Lemon slices (only on the trout, not on the salmon).\n\n- Sea salt.\n\n- Zip-lock bags.\n\n- Microwave foil (only on the salmon).\n\n- Dishwasher type: Bosch SGS55 (only sold in EU, it seems)\n\nSTEP 1 - Preparation\n\nSalmon\n\n- Wrap tightly in microwave foil with salt, rosemary, parsley.\n\n- Put in zip-lock bag.\n\n- Push air out of bag, close it.\n\nTrout\n\n- Salt, rosemary, parsley and lemon slices inside the fish.\n\n- Alas: the zip-lock bags were too small, I had to cut off the head and tail.\n\n- Put in zip-lock bag.\n\n- Push air out of bag, close it.\n\nSTEP 2 - Enter the Dishwasher\n\n- Rolled up the zip-lock bags a bit.\n\n- Put one salmon and one trout bag in the top rack, the other two in the bottom rack (to test the difference).\n\nSTEP 3 - Program\n\nHere's the tricky bit. I read up on sous-vide before trying, noting fish (particularly salmon) would need around 50° Celsius at a constant temperature. However, my main concern was that the temperature would not be constant enough to cook the fish: I was more afraid of under cooking than of overcooking. So I decided to run my experiment at this program:\n\n- The highest program marked 70° Celsius\n\n- Run for the full 137 minutes\n\n- No detergent\n\n- No other equipment (plates, cutlery, etc)\n\nTHE WAIT\n\nWith the dishwasher empty, the first bit of the program made an awful lot of noise, with cold water hitting the inside of the empty dishwasher. After that it kind-of returned to normal.\n\nSTEP 4 - Results\n\nAfter 136 minutes I was standing in front of the dishwasher eager like a little kid waiting to open his Christmas presents. The dishwasher felt really warm, even on the outside. When I opened the dishwasher I saw one of the bottom salmon bags had fallen to the bottom. This is what the bags looked like when I got 'em out:\n\nThen, with hands shaking, I opened the bags. This is the result:\n\nVictory! upon closer inspection it turned out the fish were all perfectly cooked! We put some extra salt on and enjoyed them very much.\n\nConclusion\n\nThe answer is then a wholehearted \"Yes: this is possible!\". Try this at home!",
+   "source": "https://cooking.stackexchange.com/a/22409",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Jeroen."
+  },
+  {
+   "id": "se-answer-cooking-2092",
+   "register": "casual",
+   "text": "Can't comment directly due to rep limit, but I'm not sure Ryan Elkins above is correct. I'm fairly certain both allinase and LFS are found throughout the layers, though the \"core\" might contain a higher concentration. Certainly there's no gas contained in the central bulb.\n\nThere's a couple of basic strategies for avoiding eye irritation:\n\nAvoid breaking cell walls: use a sharp knife\n\nThe enzymes and amino acids involved in producing the Onion Lachrymatory Factor (seriously!) are normally contained in the cells, and only become a problem when released in volume. Using a sharper knife will avoid mangling cell walls, creating more clean separations between layers, and reducing the amount of enzymes released.\n\nSlow down the reaction: refrigerate/freeze the onion\n\nI would guess the activity of both enzymes involved here peaks somewhere around room temperature, or maybe a little higher. You want to get out of this optimum range: either freeze the onion, or heat it beyond denaturation. The former is probably way more practical, since heating to denaturation will leave a soggy mess instead of an onion. You may also be able to deactivate the allinase by substantially altering the pH, for example by coating your knife in lye (not recommended) or lemon juice.\n\nAvoid the reaction products: cut underwater or ventilate\n\nThe OLF and the reaction intermediaries look to be fairly water soluble, so cutting under running water should take care of them with sufficient flow rate. \n\nI'm not sure what the mechanism behind the common candle suggestion is, OLF is a thial oxide and not very flammable. My best guess is that the rising air draws some of the irritant up and away from the area, but in that case a fan should work much better.",
+   "source": "https://cooking.stackexchange.com/a/2092",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: parkan."
+  },
+  {
+   "id": "se-answer-cooking-570",
+   "register": "casual",
+   "text": "The tearing of the eyes is a result of enzymes that form a sulpherous gas when the onion is cut (concentrated inside the inner core or bulb of the onion) being released into the surrounding air. \n\nYou have a few options to avoid this - one would be to not cut through the center of the onion but to extract the \"core\". This is kind of a pain and means you are discarding a decent chunk of onion, so I don't like it too much. \n\nAnother option is to use a fan to blow the gases away from you. A small fan next to you blowing horizontally should do the trick.\n\nYou could also wear goggles, although you'd have to leave them on for a while until the gas dissipates from the area.\n\nAnother technique is to cut a lemon in half and rub the fresh lemon against both sides of the blade. You'll have to keep \"refreshing\" the juice coat and your onions will have some lemon juice on them, so this is somewhat limited by that factor.",
+   "source": "https://cooking.stackexchange.com/a/570",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Ryan Elkins."
+  },
+  {
+   "id": "se-answer-cooking-46495",
+   "register": "casual",
+   "text": "See the improved answer here: What DOES Help?\n\nWhich acid works best to keep avocados from browning?\n\nAnswer: None (of the acids tested)\n\nIt's not that acid doesn't do much to help.\n\nALL OF THE ACIDS TESTED CAUSED AVOCADOS TO BECOME MORE BROWN AND TO BECOME BROWN FASTER THAN NO TREATMENT AT ALL\n\nI am not kidding.\n\nMethod\n\nFor acid, I used freshly squeezed lemon juice, freshly squeezed lime juice, distilled white vinegar (diluted to 5% acidity), and Ball brand Fruit Fresh mixed per package instructions, 2 tsp powder to 3 TBS water. Fruit Fresh contains dextrose, ascorbic acid, citric acid and silicon dioxide. According to the label, 1/4 tsp of the powder contains 230% of the US RDA of Vitamin C (ascorbic acid). That roughly translates to the solution I used having 100X the concentration of Vitamin C of lemon juice. I was not able find anything to give me a basis for comparison of citric acid concentration.\n\nI diced 1 avocado and shuffled up the chunks so that no 1 pile had chunks from only 1 part of the fruit. I dropped the chunks into small bowls of the acids, removed the chunks, and allowed to air dry. They remained at room temperature for 24 hours.\n\nI mashed 2 avocados together and put 50 grams of the mash into each of 5 small bowls. I added 1/4 tsp of each individual acid to each bowl, leaving 1 bowl plain. I mixed thoroughly and scooped the mash onto 2 plates, 1 to be refrigerated, and 1 to be left at room temperature. I washed and dried the scoop between changes in acid.\n\nResults\n\nThe diced avocados just gradually became darker over 24 hours, with the vinegar treated fruit the first to show signs of browning, and ultimately the vinegar treated fruit became the darkest. The untreated fruit resisted browning the longest and ultimately browned the least. The lemon juice and lime juice were about tied, they both significantly sped darkening and ultimately became significantly darker than the untreated fruit. The Fruit Fresh barely made any difference, but the slight difference there was, was negative. Fruit Fresh also caused the avocado to become darker and to brown faster, but just barely.\n\nAt 24 hours all of the mashed, unrefrigerated avocado had become equally brown and unappetizing, it just happened faster to the treated avocado. The difference was most dramatic at 6 hours:\n\nIt's not clearly visible in the photo, but the Fruit Fresh treated avocado was ever-so-slightly more brown than the untreated avocado.\n\nAt 6 hours none of the refrigerated, mashed avocado was significantly browning.\n\nAt 24 hours all of the mashed avocado was the worse for wear. On the non-refrigerated side, it looks on this photo like the vinegar treated avocado ultimately fared the best. It actually didn't. I didn't think to snap a picture, but the vinegar treated avocado was the only one to discolor all the way through. The others were still green on the inside, the vinegar treated scoop was slightly browned even on the inside.\n\nThere came a point about 12 hours in that the refrigerated side just stopped browning. It had dried out, leaving it more green than the non-refrigerated side, but no more pleasant. All of the samples browned and dried out fairly equally.\n\nAt 48 hours I had one scoop of mashed avocado left that I cared to eat.\n\nBy adding nothing, keeping it refrigerated and covered in plastic wrap clinging to the surface, so that it had no air at all, this avocado is still fresh, green and ready to eat.\n\nI'll add lime now for flavor, and some cilantro and cumin. Pass the chips.\n\nNote:\n\nI am honored that this answer has been so generously received, but the fact is, it really doesn't answer the question very well. This answer shows what doesn't help. As of 1/8/15 I have added and accepted a new answer based on new experiments that show what does help, it's HERE next to the checkmark.",
+   "source": "https://cooking.stackexchange.com/a/46495",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Jolenealaska."
+  },
+  {
+   "id": "se-answer-bicycles-1981",
+   "register": "casual",
+   "text": "Your understanding is correct. \n\nWhy do people ride them? Some random answers:\n\n- Maintenance is very, very low. You have to keep the tires and chain in good working order and, on a bike you ride on the road, hopefully some form of a brake. That's it.\n\n- On most velodromes, you have to ride a fixed gear bike, so if you race track, you have no choice.\n\n- There is something to be said for how a fixed gear will force you to develop a smoother pedaling style since you simply cannot stop. Due to this, they are somewhat popular for 'off season' training by serious road cyclists.\n\n- (Hesitating to mention this...) There is a certain segment of the population that loves retro and simple things. In addition to being possibly the most efficient people moving device that exists, the fixed gear bicycle can be an important fashion accessory.\n\nHard to get started/Hard to go fast?\n\nYes. Generally someone who has a road worthy fixie will have selected a gear that works well for the terrain and speed that they like to ride at. I've only ridden fixed gear bikes on the track, but I'd imagine for a city fixie, you'd optimize for a fairly low speed but someone who takes these more seriously can answer better.",
+   "source": "https://bicycles.stackexchange.com/a/1981",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: bikesandcode."
+  },
+  {
+   "id": "se-answer-bicycles-1109",
+   "register": "casual",
+   "text": "Speed varies widely by cyclist, depending on fitness, road conditions and traffic. Some of my observations (cruising speed based on a flat, paved road in good condition):\n\n- 20km/h (12.4 mph) - many \"occasional\" cyclists ride around this speed\n\n- 25km/h (15.5 mph) - most commuters\n\n- 30km/h (18.6 mph) - fast commuters, slower roadies\n\n- 35km/h (21.7 mph) - fast roadies\n\n- any faster than that on a long flat and they're probably a racer\n\n(based on who I pass and who passes me when riding around 30km/h)\n\nAverage speed will usually be slower than you think, once traffic stops and hills are factored in, especially over longer distances (like 80km). On my 21km commute I'll hit 30+ on every long stretch I can, but my average still only works out to 24km/h. For longer rides I cruise around 27-28 km/h, which is more sustainable; averaging 22-24 over a very long ride (200km) is a great pace for me.",
+   "source": "https://bicycles.stackexchange.com/a/1109",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: darkcanuck."
+  },
+  {
+   "id": "se-answer-bicycles-9038",
+   "register": "casual",
+   "text": "I found this article which has some statistics on accidents involving wrong-way cycling:\n\nTable 4. Against Traffic Compared to With Traffic\n\n[Italics: Against traffic. Bold: Increased risk when against traffic.]\n\nCategory\nBicyclists\n Observed\nAccidents\n Reported\nRisk\nBicyclists\n Observed\nAccidents\n Reported\nRisk\nRisk\n Ratio\np\n\nAll bicyclists\n423\n33\n2.6\n2553\n56\n0.7\n3.6\n≪0.00001\n\nRoadway\n108\n5\n1.5\n1897\n43\n0.8\n2.0\n\nSidewalk\n315\n28\n3.0\n656\n13\n0.7\n4.5\n<0.00001\n\n[Age] ≤17\n298\n19\n2.1\n1135\n11\n0.3\n6.6\n≪0.00001\n\n[Age] 18+\n125\n14\n3.7\n1418\n45\n1.1\n3.5\n0.0001\n\nFemale\n118\n9\n2.6\n734\n13\n0.6\n4.3\n0.001\n\nMale\n305\n24\n2.6\n1819\n43\n0.8\n3.3\n<0.00001",
+   "source": "https://bicycles.stackexchange.com/a/9038",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Tom77."
+  },
+  {
+   "id": "se-answer-bicycles-51225",
+   "register": "casual",
+   "text": "No. It is safety gear – buy a new one.\n\nThe old helmet might make a good pot for a hanging plant but it is more likely to fail dramatically in your moment of need.\n\nThe straps would probably come right with a soak in water, but the polystychrene is the functional part and it has failed with age. \n\nIt might fill a legal requirement if your location mandates helmet wearing, but it probably won't provide sufficient protection.",
+   "source": "https://bicycles.stackexchange.com/a/51225",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Criggie."
+  },
+  {
+   "id": "se-answer-bicycles-57915",
+   "register": "casual",
+   "text": "Consensus seems to be more and more this:\n\nThe most important part of cycling is not the pedaling, but balancing and steering. Steering is mostly done by leaning (therefore balance) and not by turning the handle bar.\nTraining wheels do not help in learning to balance the bike and actively prevent leaning.\n\nTherefore it might be better to start with a balance bike (no training wheels, no pedals) to learn the essentials and add the easy part of pedaling afterwards.",
+   "source": "https://bicycles.stackexchange.com/a/57915",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: linac."
+  },
+  {
+   "id": "se-answer-bicycles-18714",
+   "register": "casual",
+   "text": "I happened to do just that.\n\nI took an old hand pump and an inner tube to the bath tub. I submerged the pump and pre-filled the tube with water, complete with burping out any air bubbles. With the tube moderately full and free from air, I put it on the rim with the tire. Then the final pressure up.\n\nThe first thing to notice is that the pump operates with lots of resistance (water flows a lot slower than air through those tiny parts).\n\nAs I pushed each stroke of the pump, the resistance was difficult yet constant. I kind of expected the resistance to increase as I pressured up the tire, but it didn't. It was a solid stopping point; halfway through the last stroke, the tire wouldn't take any more water. (I shouldn't have been surprised, water is one of the least compressible substances around!)\n\nNow out for a ride to test this out!\n\nIndeed to carry the bike, the front was a bit heavier (heavier is exactly what most cyclists would not want; but hey, let's see if there are some benefits).\n\nOddly, the bike didn't feel all that different. Just slightly front heavy. But once I got some speed, the steering became really quite stable. A ride through the forest and I could quickly pin point my leans for corners; it was soooo smooth! Like the steering of a motorbike. I assume the extra rotational inertia in the front wheel added to the smoothing gyroscopic effect.\n\nMucking about, I tried a wheelie. It took a bit of getting used to for lifting it up, but once up it was also very very smooth. I was never that good at wheelies, but now I seemed to be able to ride for as long as I wanted. Try balancing a baseball bat with the heavy side down; it's actually much easier with more weight at the top! And the extra gyroscopic effect made it easier to steer the wheelie.\n\nWhen stopped at a light or something, I could pick up the front tire and it would slowly start to rotate on its own.\n\nIt was fun, so I kept it.\n\nThe next phenomenon was a puncture. Sure enough, one day riding on a nice sunny day I felt tiny sprinkles of water. I had a tiny tiny leak and I was actually spraying a very fine stream. The tire hadn't lost much though, so I double timed it to my destination in hopes of avoiding changing in the field. On arrival, the tire seemed really quite full still. When off the bike the tire really wasn't getting flat. I left it. I continued to ride for a week or so. Sometimes the leak would come back; sometimes it would go away.\n\nI'm speculating, as I only did this once, but it occurred to me that with water being incompressible, the small amount of leaking water was very little volume but nearly all of the pressure. The tire was still full and held its shape, but there was no pressure to force the leak when I wasn't on the bike (it was obviously a very small leak).\n\nEventually I had to add some air, now and again (too lazy to put water in, and too curious to see how bad the water/air mix would be). Soon the water/air mix was sloshing inside and causing a lot of resistance, and that became the end of my experiment.\n\nIn the end I did not see any improvement for hill climbs, or maintaining pedal momentum; only wheelies and cornering.",
+   "source": "https://bicycles.stackexchange.com/a/18714",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Michael."
+  },
+  {
+   "id": "se-answer-law-36261",
+   "register": "professional",
+   "text": "This aspect (and many others) of contract law is applicable in the US and various countries of the EU.\n\nNo. The company would incur breach of contract.\n\nThere is no need for a formal contract. The candidate only needs to prove that the company agreed (in writing, orally or clearly through its conduct) to cover or reimburse those expenses and that this elicited a meeting of the minds.\n\nThe agreement would be void if the candidate incurred the expenses despite knowing (via timely notice) that the company changed its mind.\n\nLikewise, if the candidate lied on his CV, the contract (here, the company's agreement to cover the expenses) would be voidable by the company, since the candidate's intentional misrepresentations preclude the aforementioned condition of meeting of the minds.\n\n--Edited on 1/18/2019 to add ...--\n\nPer suggestion by @KRyan, the aspect of void or voidable contract is expanded. But first, two disclaimers are pertinent:\n\n- We need to be mindful that many of the follow-up concerns are either\npremised on or inspired by the situation described in the underlying\nWorkplace SE post. These are somewhat beyond the scope of this Law SE\nquestion but addressed nonetheless, given their relevance as well as the OP's & audience's\ninterest.\n\n- The follow-up hypotheticals [in this Law SE question] and\nclarifications thereto neither speculate nor pass judgment on the\nstranded candidate who asked on Workplace SE. The Workplace SE post\nreflects a company's breach of contract. The subsequent comments here about fraud\nhypotheticals are mostly derivative inquiries beyond what\nis described in Workplace SE. In particular, we do not assume\nwhatsoever that the stranded candidate committed fraud.\n\nThe_Sympathizer commented:\n\nYes, it can be voided on the spot (aka sua sponte).\n\n\"Vigilante\" justice denotes a self-attribution of punitive powers that exclusively belong to the state/government/court, whereas a party's voiding of a contract is the act of foreclosing his losses/exposures with respect to a contract that de facto never existed (such as when that contract was induced by fraud).\n\nI agree that unfortunately that is open to abuse: As a pretext to actually incur breach of contract, a company might allege that the contract was void. That is why (if taken to court) it will be the company's burden to prove that (1) it reasonably relied upon a candidate's representations (2) which were significant and blatantly false (3) given the candidate's knowledge that his lies contravened the job's core requirements.\n\nThat can be quite burdensome. For instance, is the company handing out airfares without first conducting some competent corroborations about the candidate's credentials/skills? If so, one can hardly concede the company's allegation of reasonable reliance. The resulting finding would be that the contract was not voidable by the company, and thus that it is liable for breach of contract.\n\nAlso, belatedly \"informing\" the stranded candidate that the company \"is going in a different direction\" falls short of evidencing that the contract was voidable. That applies even if the candidate performed very poorly in the interview or screening process.\n\nGiven the hardship imposed on a stranded candidate, a company has to be morally and legally very judicious about its method and timing for \"going in a different direction\".\n\nBut absent any representations or [company's] bylaws to the contrary, a company generally does not have the obligation to afford due process to a candidate. The court is the entity with an obligation to enforce due process as provided by law (although many of us in the U.S. have repeatedly experienced the courts' disavowal of due process).\n\n--End of edit on 1/19/2019--\n\nHere, the candidate's consideration is his time and effort to accommodate the company's interest in assessing the candidate's profile at a location that is convenient to the company.",
+   "source": "https://law.stackexchange.com/a/36261",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: I&#241;aki Viggers."
+  },
+  {
+   "id": "se-answer-law-33600",
+   "register": "professional",
+   "text": "As a concrete example, consider Missouri v. Coleman, where Coleman handed a teller a plastic bag and said \"I need you to do me a favor. Put the money in this bag\", and later as the manager approached, said \"Ma'am, stop where you are and don't move any farther\". Coleman was convicted of second degree robbery: but the appeals court found that he had not acted forcibly, so his conviction was overturned. Instead, the court entered a conviction for the lesser offense of stealing which is when one\n\nThe act may also be termed \"theft\", as in Washington state. The thief is acting deceptively and thereby gaining control over property.",
+   "source": "https://law.stackexchange.com/a/33600",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user6726."
+  },
+  {
+   "id": "se-answer-law-30586",
+   "register": "professional",
+   "text": "You don't have enough information.\n\nWhat you have is a feeling. And feelings are a lousy reason to engage in a legal action. \n\nNow, you have a very strong feeling, and that makes it seem to you like the strength of the feeling alters the above advice. Yes, it does. Very strong feelings are an exceptionally terrible reason to engage in a legal action! \n\nI never lose. My superpower is to set aside feelings, gather all the facts, including the ones I don't like, and so doing, know what the judge will say. \n\nWhat you need is more info. For instance, out of your prejudice, you have decided for yourself that \"unaccredited\" is the same thing as \"degree mill\". It isn't. There's a huge gulf between:\n\n- an eccentric university whose brilliant management is too busy actually teaching to play the political games necessary to get an accreditation certificate, and that process may be corrupt in that state. \n\n- This could be especially so if the university largely serves minorities, and the barriers to accreditation are borne out of bigotry. If so, you could blunder your company right into the middle of some other state's discrimination problem. \n\n- a fake college whose solitary purpose is sneak immigrants in to take employment, by misusing student visas.\n\n- a college who uses new media to teach, and their methods are too cutting-edge for the stodgy old accreditation institutions to accept. \n\n- a college who represented themselves as genuine to the students, and indeed made a fair effort to book-teach them, but the person whose job was to secure accreditation didn't know what they were doing, and found an accreditation agency which wasn't genuine. \n\n- Exactly what you presume: a student swaps a huge pile of money for a degree, presumably that pile of money is in the form of a private student loan at stupid interest rates. \n\nIt's likely the person actually did all the real work of college, the accreditation issue is news to them, and if anyone was hoodwinked, it was them.\n\nAll this misses the point: accreditation is not the important issue. What matters is whether the student applied themselves, organized themselves well, did their best, and willfully extracted a good education. A person can \"do the minimum\" all the way through Harvard, and be not half the employee as a go-getter at Boston Community College who exceeded the course material and snuck over to Harvard's library for more. Damn the credentials, you want the successful student. \n\nOh wait, this is the Law SE. Why do you want the successful student? Because you have a fiduciary duty to do what is in the best interest of the company and place good employees. To follow your own Don Quixote crusade against people whose colleges had faulty accreditation, is a conflict of interest.\n\nYou aren't even interested in ascertaining whether this person is a good employee. And that, really, is the bottom line. You (or rather, anyone but you) should be looking at that person's PRs and 360's, and looking at their overall performance for the company. The company's criteria for keeping or replacing should be the probability of finding someone significantly better at about the same pay rate. If this person is an earnest performer, you may have trouble doing that.\n\nIt's that simple. Employees must do what is in the company's best interest.",
+   "source": "https://law.stackexchange.com/a/30586",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Harper - Reinstate Monica."
+  },
+  {
+   "id": "se-answer-law-47459",
+   "register": "professional",
+   "text": "You say:\n\nThis is a cut-and-dried case of compelled speech. Your son is being required to say certain things in public in order to pass this course.\n\nThe Supreme Court has decided that students do not \"shed their constitutional rights to freedom of speech or expression at the schoolhouse gate\". This is subject to the legitimate interests of the school, but it is hard to see how compelled speech on Twitter can be defended as a legitimate interest.\n\nYou also say this is to \"promote the program and the results of the program\". It sounds like the students are being required to say certain things about the course. If your son were to create the account and then post only material critical of the school, such as complaints about compelled speech, would that result in a passing grade? It sounds like it might be an issue.\n\nCompelled speech at school was considered by the Supreme Court in West Virginia State Board of Education v. Barnette (1943), which is the case about students being required to salute the flag. They found that requiring students to salute the flag was unconstitutional.\n\nFrom the judgement itself:\n\nThat is very much the case here. Your son's refusal to make the required public speech is not causing any difficulty for the school authorities.\n\nIn conclusion, your son has made a decision not to create a Twitter account under his own name and say certain things within that account. This is entirely his constitutional right.\n\nYou might consider contacting the American Civil Liberties Union (ACLU), who have a history of engaging in cases like this. The Electronic Frontier Foundation (EFF) might also be interested.\n\nEdit:\n\nZack Lipton in comments below makes the point that much student work can be considered a kind of compelled speech (e.g. \"Write an essay on Hamlet\" or \"Submit an entry to this poetry competition\") and asks how this is different. Its a good question, and I have to say it does suggest that there is a difference of degree rather than kind. However I would argue that posting to an international forum widely used by adults is a different matter to a school assembly, or even a national essay competition. It would also depend a great deal on what has to be posted to get a passing grade.",
+   "source": "https://law.stackexchange.com/a/47459",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Paul Johnson."
+  },
+  {
+   "id": "se-answer-law-33214",
+   "register": "professional",
+   "text": "If the pill contained a harmful or noxious substance, this is battery, which is a crime in Lousiana (\"the intentional administration of a poison or other noxious liquid or substance to another\"). There is a specific crime in LA, battery of a teacher, which is dealt with somewhat more severely than non-teacher battery.\n\nIt is not a crime to observe a crime being committed and not warn the victim, but it is a crime to aid the commission of the crime (for example to help the perp remove the lid, to supply the drug). Under section Title 17, a teacher battered by a student can file a school-system internal complaint which may lead to the student being expelled (this is ultimately covered by district-specific procedure). This is independent of criminal charges.",
+   "source": "https://law.stackexchange.com/a/33214",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user6726."
+  },
+  {
+   "id": "se-answer-law-49156",
+   "register": "professional",
+   "text": "Yes they can\n\nYou are approaching this from the wrong direction. Their right to enforce what you can and can't do doesn't come from radio-spectrum law; it comes from property and contract law.\n\nYou are on their property subject to a license that they give you to be there. One of the terms of that license is that you won't set up or operate a wireless network. No doubt there are other things you are not permitted to do; for example, you may not be able to sell goods and services. If you breach the terms of the license then you are trespassing and they are within their rights to have you removed.\n\nIn addition, if you are a student (or staff), this is probably one of the terms of your contract with the university. If you breach it, they can terminate your candidature (employment).\n\nContracts can impose obligations on you that goes beyond what the law obliges you to do. Indeed, there is no contract if it only requires what is already required.",
+   "source": "https://law.stackexchange.com/a/49156",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Dale M."
+  },
+  {
+   "id": "se-answer-law-31511",
+   "register": "professional",
+   "text": "No. This would not be illegal. \n\nYou are not trespassing or breaking and entering since you have permission to be on the premises, and you are the rightful owner of the guitar so you are not depriving him of property that belongs to him.\n\nIf you did this with the assistance of a law enforcement officer, rather than Bob's family, without a court order describing the property to be retrieved, this would be called a \"civil assist\".\n\nIf the guitar were collateral for a loan, it would be a self-help \"repossession\" (a.k.a. \"repo\") authorized by the Uniform Commercial Code if it could be accomplished without a breach of the peace, and it would not require a court order.\n\nIf you did this pursuant to a court order the case you brought to retrieve the guitar would be called a \"replevin action\" and you would also need to obtain a \"writ of assistance\" to authorize a trespass in the presence of law enforcement to retrieve the guitar.\n\nAlso, Bob would still be be guilty of the crime of theft of the guitar, even though you got it back, because he took it with an intent to permanently deprive you, its owner, of the property that belongs to you. You could also probably sue him for conversion or \"civil theft\" in some jurisdictions, but your damages would be nominal except for punitive or statutory damages under a civil theft statute, because you ultimately got the guitar back, and so you suffered only minimal economic harm.",
+   "source": "https://law.stackexchange.com/a/31511",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: ohwilleke."
+  },
+  {
+   "id": "se-answer-law-33216",
+   "register": "professional",
+   "text": "The school resource officer should be fired for jumping to inept conclusions instead of bothering to conduct at least a minimum of legal research on this. It would have taken him less than 20 minutes to realize that RS 14:38.1 sanctions with imprisonment the intentional mingling of harmful substances with someone's drink.\n\nYes, they are what Louisiana law would call accessories after the fact. They might be sanctioned under RS 14:25 if it can be substantiated that their silence/concealment implies their intent that the girl who mingled the substance \"escape from arrest, trial, conviction or punishment.\" (emphasis added).",
+   "source": "https://law.stackexchange.com/a/33216",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: I&#241;aki Viggers."
+  },
+  {
+   "id": "se-answer-writers-762",
+   "register": "professional",
+   "text": "Show, Don't Tell\n\nThis may very well be the most popular \"rule\" of writing. It refers to the idea that it's better to \"show\" an event as a scene, rather than simply \"telling\" the reader what happened.\n\nIn my opinion, this is mostly sound advice:\n\n- Don't tell us the 5000-year history of your fantasy setting in the prologue. Show it to us throughout the story.\n\n- Don't tell us the protagonist's girlfriend is beautiful. Show us her flowing black hair, her lips perpetually on the verge of smiling, her brown eyes with those eerie golden flecks.\n\n- Don't tell us the thief was nervous. Show us how he has to close his eyes and breathe, just to stop his hands from shaking.\n\nOn the other hand, sometimes there is information that the reader needs to know to understand the story, but forcing that information into a scene would divert the plot or bore the reader to tears.\n\n- Don't show us the Senators explaining to each other how the seat of the US government is Washington D.C. They have no reason to tell each other what they already know. Instead, just tell us.\n\n- Don't show the young wizard taking a tour of the magical staff factory, when he has no business being there. Just tell us that all magical staves are carved from the wood of the whump-whump tree.\n\nMore discussion can be found here.",
+   "source": "https://writers.stackexchange.com/a/762",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: sjohnston."
+  },
+  {
+   "id": "se-answer-writers-27225",
+   "register": "professional",
+   "text": "Actually, most stories that have a specific antagonist depend on the antagonist being stronger than the protagonist, so logically the antagonist should win most of the time -- unless they do something stupid. \n\nWe love to root for underdogs. After all, most of us are underdogs. If the hero was clearly going to win, it would not be much of a story. So what is an author to do?\n\n- Have the hero win anyway\n\n- Have the hero lose heroically\n\n- Have the hero lose realistically\n\nYou will find all of these in literature but in popular works the first is obviously the most common. So the question becomes, under what circumstances is it satisfying to the audience that the hero wins anyway, even though the antagonist should clearly win. \n\nThe key to this question is virtue. Why do we want the hero to win? Because they are more virtuous. Why do we want the antagonist to lose? Because they lack virtue. So the difference between winning and losing must itself rest on virtue. This can take many forms:\n\n- The antagonist loses, despite their advantages, because their signature vice leads them to make a mistake. Not a random mistake, but a mistake that they make for the very reason we hated them in the first place. Because of their cruelty, a henchman rebels against them; because of their treachery, an ally abandons them; because of their arrogance, they leave their flank unguarded; because of their idleness they do not discover the secret that will be their undoing. All of these will seem dreadfully contrived, of course, unless they are seen as the direct result of their faults and the past actions they have taken because of those faults. \n\n- The hero wins because of their signature virtue: because of their courage, they keep fighting when all seems lost; because of their compassion, a minor character they have been good to shows them a secret passage; because of their loyalty, a friend sacrifices himself for them; because of their learning, they discover a secret unknown to the antagonist. Again, all of these will seem dreadfully contrived unless they are the direct result of their established virtues and the past actions they have taken because of those virtues.",
+   "source": "https://writers.stackexchange.com/a/27225",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user16226."
+  },
+  {
+   "id": "se-answer-writers-31968",
+   "register": "professional",
+   "text": "Bollocks. (That's a technical term.) The semicolon is the correct punctuation for a particular kind of sentence structure. So on the face of it, if you want to outlaw something, it should be that sentence structure, not the punctuation that is necessary to it. \n\nBut this is one of those rules like kill all the adverbs. Many writers today do not give sufficient attention to the quality of their prose. They are all about getting their plot down on paper and are negligent of their prose and its effects. One of the most obvious ways this shows up is as the sloppy use of adverbs. But merely cutting out all the adverbs won't make your prose better. And substituting exotic verbs for simple verbs, as some anti-adverb crusaders recommend, won't make it better either. In fact, it will make it more pretentious. If you train yourself to be a good prose stylist, if you pay attention to the quality of your prose as you write, you will use adverbs appropriately where they are needed.\n\nSimilarly, people who don't pay attention to their prose often end up writing convoluted sentences that are hard to read and then try to fix them with punctuation. If you get down to semicolons in this attempt to punctuate a broken sentence it is a good sign your sentence needs to be rewritten. In fact, I would state it as an axiom that if you have any question about how to punctuate a sentence, you should probably rewrite the sentence, and, quite possibly, the entire paragraph. But really great sentences can sometimes require semicolons and taking out all the semicolons will make the great sentences worse but it won't make the bad sentences better. \n\nAny rule that makes an enemy of any part of speech or any punctuation mark is bollocks. Great prose stylists use them all. To determine if an adverb or a semicolon is appropriate in a particular sentence, you have to look at the overall quality of the prose. Adverbs and semicolons may be relatively rare in good prose, but they have their place and are something essential to felicity of expression.",
+   "source": "https://writers.stackexchange.com/a/31968",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: user16226."
+  },
+  {
+   "id": "se-answer-writers-41151",
+   "register": "professional",
+   "text": "You're looking at this from the wrong side. Your goal isn't to include or to represent. Your goal is to tell a story. The story should contain all the elements that it requires, and nothing but the elements it requires. \"Including\" anything that isn't useful to the story in any way is called 'shoehorning', and is not a good practice.\n\nIs your story served in any way by some of the characters following some religion(s) to some extent? Does it add tension where tension is required, does it set up some theme you wish to explore, does it do anything? Then go ahead and include it. If it does nothing for the story, or if the absence of religion does something for the story, then don't have religion.\n\nIt's that simple.",
+   "source": "https://writers.stackexchange.com/a/41151",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Galastel supports GoFundMonica."
+  },
+  {
+   "id": "se-answer-writers-802",
+   "register": "professional",
+   "text": "Give yourself permission to suck.\n\nThat's not to say just write bad stuff, but don't stress about the quality of your writing when you are writing it. Stressing about the quality of the work can keep you from writing and even cause writer's block. You have to accept that what you write won't be perfect at first, but you can fix it when you do your edits and rewrites.",
+   "source": "https://writers.stackexchange.com/a/802",
+   "licence": {
+    "name": "CC BY-SA 2.5",
+    "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Fox Cutter."
+  },
+  {
+   "id": "se-answer-writers-45764",
+   "register": "professional",
+   "text": "If I had to play out this scene from the POV of the protagonist, it would be hard to transition from \"redshirt\" to \"heroine\" in a first person narrative. She - as a person - is the heroine from the start no matter what the reader thinks. Her personality doesn't change.\n\nThat's why I would play this scene out from the monster's point of view.\nFor the monster this is just another night and another prey. It could follow its prey and come to (false) conclusions about how she is just the same as every other prey.\nthen, the monster will be surprised by the magical girl and the chapter ends with its death.",
+   "source": "https://writers.stackexchange.com/a/45764",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Oren_C."
+  },
+  {
+   "id": "se-answer-writers-36838",
+   "register": "professional",
+   "text": "Yes, agnostics and atheists can do anything they want with religious language!\n\nI am another atheist, and a practicing scientist at a university. I don't regard any entity in any religion as real or sacred, and have no problem speaking of them. I know many religious people, including half my extended family, so I am conscious of not offending them, but I don't see any problem with using religious concepts in the same way THEY do: I also don't hold my own atheism sacred, I don't think I have any obligation to only use atheistic language in my life. I'll use the concepts of \"soul,\" \"God\", \"Heaven\", \"Hell,\" \"Angels\" and \"Demons\" whenever they are good shorthand or good description for what I want to say.\n\nShould a person that claims to be a Christian be prohibited from reference to Zeus or Aphrodite or Cupid, Olympus, Valhalla, or the River Styx? Must I believe King Arthur was real to be allowed to refer to Galahad? Must I believe magic exists to say my character was entranced?\n\nYour narrator should feel free to use any language they feel conveys the scene, without apology or explanation of why. It is not a contradiction for an atheist to refer to \"heaven\" in a figurative manner, no more than if they referred to garden fairies or bridge trolls in a figurative manner.",
+   "source": "https://writers.stackexchange.com/a/36838",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Amadeus."
+  },
+  {
+   "id": "se-answer-writers-41287",
+   "register": "professional",
+   "text": "This is a matter of opinion; personally I don't find it sexist. People have genders, and sexual orientations, and they have to mix. \n\nWe stray into sexism when we pile up too many tropes. In your case, you avoid the trope of sexual reward for Edward's effort on two fronts; Lily is his sister, and he doesn't seem oriented toward heterosexual reward anyway. Also, any family member has inherent value to normal people. \n\nShe doesn't have to be \"helpless\", she can fight and perhaps injure her captors. I love the little girl kidnapped in Along Came A Spider, she actually manages to escape, freeing herself and then repeatedly injuring herself loosening boards but continuing her efforts despite this. Although she would have been caught if the hero did not show up in time; I was impressed the writers did not make that little girl just a damsel in distress waiting for a white knight.\n\nDo something similar. A stereotype is a collection of traits, you can break it by letting Lily play against type. Heck, you might make it clear that given another hour or two, she might not have needed Edward to save her at all.",
+   "source": "https://writers.stackexchange.com/a/41287",
+   "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Amadeus."
+  },
+  {
+   "id": "se-answer-expatriates-8875",
+   "register": "professional",
+   "text": "It is correct that you can get by just fine with English, but if you are looking to build relationships with people, you need to work on conversing in their native language.\n\nWith English, you will be able to get through life, buy what you need to buy, and get done what you need to get done. However, you will never become a part of all common life relationships - people know and speak English, but they will have limits expressing themselves, and especially in larger settings will find it bothersome to speak English all the time. For example, if you are at a party, everyone will speak German; if you get into a discussion, they probably will speak English with you. But you miss on all the discussions in German going on around you.\n\nI estimate that less than 5% of Germans are able to express all their interaction needs in English without limitations; all others will just -- more or less -- limit how much and what they talk about accordingly.\n\nOf course, it is easier in cities and gets worse in the countryside. But that is not the point.",
+   "source": "https://expatriates.stackexchange.com/a/8875",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Aganju."
+  },
+  {
+   "id": "se-answer-expatriates-8876",
+   "register": "professional",
+   "text": "As a foreigner having lived in Germany for about 20 years, I would imagine it to be very difficult to cope in everyday life without knowing the German language. For a short visit as a tourist, you can of course get along well with English.\n\nIn Germany, English proficiency varies greatly and depends e.g. on age, education level and to some extent where in Germany the speaker comes from. Younger persons and persons with higher education are more likely to have at least knowledge in English required for casual conversation. Persons who grew up and attended school in East Germany before the German unification, may very well have no knowledge in English at all.\n\nIf you decide to move and settle here, you will at some point most likely need to enter legal contracts (e.g. for tenancy or employment). You can not expect these to be available in English. You can also not take it for granted that you will be able to interact with the authorities in English.",
+   "source": "https://expatriates.stackexchange.com/a/8876",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: jarnbjo."
+  },
+  {
+   "id": "se-answer-expatriates-2520",
+   "register": "professional",
+   "text": "People want to know if you are currently authorized (green card, H1-B, etc.), not if you are eligible to apply. Just because you are eligible, that does not mean that you will get a work permit/visa that allows you to work in the US. The work authorization process in the US is complicated and may require the employer to which you are applying to sponsor your application (H1-B). An answer of \"No\" to this question probably doesn't disqualify you from interviewing, and it tells the interviewer how they will have to work with you and the US government in order to secure your employment should they choose to proceed.\n\nEdited to add after the revision: You should tell your potential advisor/employer that you will need visa sponsorship. Most US academic employers are well aware of the necessary steps and have an entire department dedicated to interfacing with international students and employees and the US government. My university calls this the International Office.",
+   "source": "https://expatriates.stackexchange.com/a/2520",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Bill Barth."
+  },
+  {
+   "id": "se-answer-expatriates-149",
+   "register": "professional",
+   "text": "Essentially, there is no religious freedom in Saudi Arabia, and nobody is likely to openly change - indeed:\n\nAll citizens are considered Muslim by the state (source).\n\nIn 2008, the Vatican tried to get a Catholic Church built in Saudi Arabia, and had discussions with the Saudi government, but the result was that it was not permitted.\n\nSo that brings us to the Christians (including Catholics) that DO exist in the country. There are considered to be more than a million Roman Catholics in the country, as well as from many others.\n\nFrom the above link:\n\nSo, to your question about whether this secret practice is allowed or tolerated? Not so much. They have an entire 'government' organisation - The Saudi Arabian Mutaween (Arabic: مطوعين), or Committee for the Propagation of Virtue and the Prevention of Vice (i.e., the religious police) which prohibits the practice of any religion other than Islam.\n\nThe government also doesn't let clergy of other religions into the country for conducting religious services (naturally this means no Christian baptisms, weddings etc by official clergy legally).\n\nAnd if they find someone practising in their homes? International Christian Concern (ICC) protested what it reported as the 2001 detention of 11 Christians in Saudi Arabia, for practicing their religion in their homes. In June 2004, ICC reported on what it termed a \"pogrom-like\" crackdown by Saudi police on Christians after media reports of Koran desecration in Guantanamo Bay.",
+   "source": "https://expatriates.stackexchange.com/a/149",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Mark Mayo."
+  },
+  {
+   "id": "se-answer-expatriates-252",
+   "register": "professional",
+   "text": "It is possible to build a reasonable credit history and score in about six months, but you have to be careful what you do.\n\n- Try to get a mortgage at a financial institution that has special programs for foreign nationals. You will probably need to make a large down payment (25% or more). On top of that, many banks will offer you an unsecured credit card if you get a mortgage (in that case you can skip step #2)\n\n- Get a secured credit card with a decent limit. Don't be tempted to deposit a very low amount in the secured savings account because your credit limit on the card will be too low. The higher your credit limit, the higher your credit score will be. $5000 or so would be a good start.\n\n- Lease a car with a company like Intl Autosource. They specialize in serving foreign nationals without a credit history. They also report all your payments to the credit bureaus.\n\n- Don't apply for loans, unsecured credit cards or store cards in the first 6 months, even if you get so-called \"pre-approved offers\" in the mail. You will be denied and that will affect your credit score. Also, if you're ever offered a \"savings card\" in a store and they want your social security number: politely decline.\n\n- Don't ever give your social security number unless it's absolutely necessary. For example, when you sign up for a cellular plan with AT&T, they'll ask your SSN and run a credit check. That will affect your score. Simply get a prepaid plan for the first 6 months.\n\n- In stores you will regularly be offered a discount if you sign up for a store card. Don't. They will ask your SSN and run a credit check, impacting your credit score.\n\n- Even if you plan to pay off your credit card every month, try to make a payment before the billing cycle ends because the bank will report the balance to the credit bureaus. You should keep the reported balance below 30% of the credit limit on your card.\n\n- Get an account at creditkarma.com to check on your progress. It's free. The only problem with creditkarma.com is that they only use data from TransUnion. If you want to track your credit reports and scores from the other 2 agencies (Equifax and Experian) you should get an account with them (not free!)\n\n- Pay all your bills on time. Doing that will not build credit history but it will make sure there's no negative information on your credit report.\n\nIf you do all of that, you should have a decent score after about 6 months. At that stage you may consider applying for unsecured credit cards. \n\nEven if you are able to get one or more unsecured credit cards later on, it may not be a bad idea to hang on to it for at least six months. Although FICO sources claim that a closed account still counts to determine your credit history length, there's conflicting information on the different credit bureau websites. Even if it doesn't influence your credit history length, keeping the account open does help to keep your total available credit at a higher level, decreasing your credit utilization and so it helps your score.",
+   "source": "https://expatriates.stackexchange.com/a/252",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: Philippe Leybaert."
+  },
+  {
+   "id": "se-answer-expatriates-693",
+   "register": "professional",
+   "text": "The Simplest Way\n\nSee the note by ppumkin below this answer for what seems like the simplest solution. It wasn't possible at the time I arrived in the UK - though perhaps things have changed. If you have success with that method, please upvote it and note your success.\n\nI'm leaving the remainder of this as an alternative method (especially since I thought it was a neat hack :)\n\nThe Simple Way\n\nSome banks have specific accounts that are designed for your situation. Here are two, but I'm sure there are others.\n\n- Lloyd's Bank \"New to the UK\" account\n\nThese accounts can be opened with just a passport. The major disadvantages are:\n\n- The accounts are expensive relative to a standard account.\n\n- You get fewer benefits than a normal charged-for account.\n\n- You are frequently tied into a year contract.\n\nThe Engineered Way\n\nI found a neat way of resolving this when I moved to the UK:\n\n- Using internet banking, log into your overseas bank account back \"home\".\n\n- Adjust the address on file on your non-UK bank account. In my case this was an electronic process with no requirement for proof of address.\n\n- Once the change in address had gone through, apply for a \"duplicate statement\" from your non-UK bank.\n\n- The duplicate statement will now be delivered to your UK address.\n\nOnce it arrives you now have a bank statement that nicely matches the requirements of for opening a new account in the UK: a bank statement with a UK address on it, albeit from an overseas bank.\n\nIn my case, I then took this duplicate statement to a UK bank and applied for a standard account. They were willing to accept my original bank statement as proof of address, even although it was from an overseas bank.\n\nI'm sure it helped that my original overseas bank was \"HSBC Offshore\", and the bank I was applying at in the UK was \"HSBC UK\". However, you might be able to do the same thing with your bank, if that bank is a recognisable entity to a bank manager in the UK.\n\nI'd also like to echo other respondents to this question: initially, you should consider banking at a branch frequented by other expats if possible. Our immigration lawyers suggested that the HSBC branch closest to the UK Border Agency in Croydon would certify bank statements - while two branches of the bank assured me they would do no such thing (Note that I didn't test this, as it wasn't actually necessary in our case).",
+   "source": "https://expatriates.stackexchange.com/a/693",
+   "licence": {
+    "name": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+   },
+   "note": "Stack Exchange answer, HTML stripped, code and quotes removed. Author: oskarpearson."
+  }
+ ]
+}

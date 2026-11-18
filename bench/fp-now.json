@@ -1,0 +1,302 @@
+{
+ "samples": {
+  "casual": 109,
+  "professional": 41,
+  "technical": 10,
+  "marketing": 22
+ },
+ "anyBlocking": {
+  "casual": 0.009,
+  "professional": 0.024,
+  "technical": 0,
+  "marketing": 0.045
+ },
+ "anyFinding": {
+  "casual": 0.312,
+  "professional": 0.512,
+  "technical": 0.9,
+  "marketing": 0.864
+ },
+ "rules": {
+  "scare-quotes": {
+   "casual": {
+    "any": 0.101,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.171,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   }
+  },
+  "inflated-verb": {
+   "casual": {
+    "any": 0.037,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.122,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.409,
+    "blocking": 0
+   }
+  },
+  "semicolon": {
+   "casual": {
+    "any": 0.073,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.091,
+    "blocking": 0
+   }
+  },
+  "empty-adjective": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0
+   }
+  },
+  "over-qualified": {
+   "casual": {
+    "any": 0.046,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.049,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.136,
+    "blocking": 0
+   }
+  },
+  "not-x-but-y": {
+   "casual": {
+    "any": 0.018,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "hype": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0
+   }
+  },
+  "filler-transition": {
+   "casual": {
+    "any": 0.055,
+    "blocking": 0
+   }
+  },
+  "lecturing": {
+   "casual": {
+    "any": 0.028,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "triad": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.091,
+    "blocking": 0
+   }
+  },
+  "exclamation": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.049,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.5,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.045,
+    "blocking": 0.045
+   }
+  },
+  "ai-vocabulary": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0.009
+   },
+   "technical": {
+    "any": 0.2,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.182,
+    "blocking": 0
+   }
+  },
+  "dash": {
+   "casual": {
+    "any": 0.009,
+    "blocking": 0
+   },
+   "professional": {
+    "any": 0.098,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.3,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.136,
+    "blocking": 0
+   }
+  },
+  "bold-mid-sentence": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.091,
+    "blocking": 0
+   }
+  },
+  "signposting": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.2,
+    "blocking": 0
+   }
+  },
+  "unfilled-placeholder": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0.024
+   }
+  },
+  "tagline": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   }
+  },
+  "uniform-rhythm": {
+   "professional": {
+    "any": 0.122,
+    "blocking": 0
+   },
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.091,
+    "blocking": 0
+   }
+  },
+  "intensifier": {
+   "professional": {
+    "any": 0.049,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.045,
+    "blocking": 0
+   }
+  },
+  "stock-warmth": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "rhetorical-qa": {
+   "professional": {
+    "any": 0.049,
+    "blocking": 0
+   }
+  },
+  "list-everything": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "hedge-stack": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "so-you-can": {
+   "professional": {
+    "any": 0.024,
+    "blocking": 0
+   }
+  },
+  "corporate-excitement": {
+   "technical": {
+    "any": 0.3,
+    "blocking": 0
+   },
+   "marketing": {
+    "any": 0.045,
+    "blocking": 0
+   }
+  },
+  "stock-hook": {
+   "technical": {
+    "any": 0.1,
+    "blocking": 0
+   }
+  },
+  "no-point-of-view": {
+   "marketing": {
+    "any": 0.5,
+    "blocking": 0
+   }
+  },
+  "vague-attribution": {
+   "marketing": {
+    "any": 0.045,
+    "blocking": 0
+   }
+  }
+ }
+}

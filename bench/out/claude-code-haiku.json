@@ -3,7 +3,7 @@
   "via": "claude-cli",
   "model": "claude-cli:haiku",
   "createdAt": "2026-11-18T00:09:12.135Z",
-  "costUsd": 0.050308790000000006,
+  "costUsd": 0.05735079000000002,
   "items": [
     {
       "id": "slack-delay",
@@ -124,6 +124,126 @@
       "id": "event-invite",
       "register": "marketing",
       "text": "Join us for a free online workshop on setting up automated backups for small business websites.\n\n📅 March 12, 5pm GMT\n💻 Online, free to join\n\nLosing your website can cost you customers and sales. In this session, you'll learn how to set up automated backups so your site stays protected without manual effort. Register now and secure your business website."
+    },
+    {
+      "id": "checkin-friend",
+      "register": "casual",
+      "text": "Hey! It's been a while, and I was thinking about you today. I hope things are going well with work and life. Let me know when you're free to catch up, I'd love to hear what you've been up to."
+    },
+    {
+      "id": "dm-late",
+      "register": "casual",
+      "text": "Hey! I'm running about 10 minutes late for dinner, so sorry in advance. Save me a seat! What would you like to drink? I'll grab it when I get there."
+    },
+    {
+      "id": "dm-congrats",
+      "register": "casual",
+      "text": "Hi [Name],\n\nCongratulations on the new job! I'm really happy for you. You've put a lot of hard work into getting here, and the new role sounds like a great next step. I hope you enjoy the new team and the challenges ahead. It was always a pleasure working with you, so let's stay in touch.\n\nBest of luck,\n[Your Name]"
+    },
+    {
+      "id": "dm-party",
+      "register": "casual",
+      "text": "Hey! I'm having a small get-together at my place this Saturday, starting at 7pm, and I'd love for you to come. Nothing fancy, just good company, some snacks, and a few drinks. Let me know if you can make it, and feel free to bring a friend if you'd like. Hope to see you there!"
+    },
+    {
+      "id": "dm-parcel",
+      "register": "casual",
+      "text": "Hi! Quick question: the tracking says my parcel was delivered, but I can't find it anywhere. Did you happen to take it in for me? Thanks so much!"
+    },
+    {
+      "id": "comment-flight-kid",
+      "register": "casual",
+      "text": "Ugh, a whole flight with a crying toddler is rough, and I get why it wore you down. Parents are usually doing everything they can to settle their kid while also dealing with the same cramped seats and stares, so a little patience from the people around them goes a long way. Next time, noise-canceling headphones or asking the crew for a seat change can help you cope."
+    },
+    {
+      "id": "comment-recipe",
+      "register": "casual",
+      "text": "Dense bread usually comes down to a few common culprits, and the good news is they're easy to fix. First, check your yeast: if it's old or your liquid was too hot (above about 120°F/49°C), it may not have risen well. Second, measure flour by weight rather than by cup, since scooping can add 20 percent or more extra flour and make the dough stiff. Third, don't rush the proofing; let the dough double in a warm spot, which can take a couple of hours, and use the poke test (a dent that springs back slowly) to judge when it's ready. Finally, make sure you're kneading long enough to develop gluten, using the windowpane test: stretch a small piece thin enough to see light through it without tearing. Changing one variable at a time will help you pinpoint what's causing the problem."
+    },
+    {
+      "id": "comment-bike",
+      "register": "casual",
+      "text": "Squeaking disc brakes are usually not dangerous on their own. The noise most often comes from contaminated pads, a glazed rotor, a loose caliper bolt, or pads that need bedding in, and a quick fix like cleaning the rotor with isopropyl alcohol, lightly sanding the pad surface, or tightening the mounts often solves it. That said, don't ignore it entirely: if the squeal comes with reduced stopping power, a spongy or grabbing lever, or visible pad wear, inspect the system before riding, since worn pads or a damaged rotor can cause brake failure."
+    },
+    {
+      "id": "comment-friend-ignored",
+      "register": "casual",
+      "text": "Hang in there, but don't read too much into the silence just yet. People ignore messages for all kinds of reasons that have nothing to do with you: they're overwhelmed, they're dealing with something private, they forgot, or they simply don't enjoy texting much. Before you decide what it means, consider sending one short, low-pressure follow-up, something like \"Hey, no rush, just wanted to check in and see how you're doing.\" That gives them an easy way back in without making them feel guilty. If they still don't respond after a reasonable stretch, it's fair to take that as information about where the friendship stands, and to give yourself permission to step back a little. Either way, try not to build a story in your head about what the silence means until you have more to go on."
+    },
+    {
+      "id": "advice-roommate",
+      "register": "casual",
+      "text": "Talk to them directly before you do anything else. Pick a calm moment, not right after you've found the empty container, and keep it about the problem rather than their character. Something like: \"Hey, I've noticed my food keeps disappearing, and it's been adding up. Can we figure out a fix?\" Often people don't realize how much they're taking, or they assume shared food is fair game because nothing was said.\n\nThen propose a clear system. Separate shelves or a bin for each person's groceries is the simplest. Some roommates also split a few shared staples, like oil, spices, and condiments, and each buy their own perishables. If money is tight for one of you, you could talk about splitting a grocery run, but only if you both agree to it.\n\nIf they keep doing it after you've talked, you can be more direct: \"I need you to stop eating my food. If you want something, ask me first, and I'll tell you if I'm okay with it.\" Keep a note of specific incidents if it helps you stay factual.\n\nIf the conversation goes nowhere, check your lease or house agreement for guidance on shared expenses and conflict, and consider involving a mediator or your landlord as a last resort."
+    },
+    {
+      "id": "advice-parent-screen",
+      "register": "casual",
+      "text": "Here's what tends to help. The meltdown isn't defiance so much as a brain that's struggling to switch gears. Screens are designed to be hard to stop, and an 8-year-old's self-control is still developing, so the transition itself is the hard part.\n\nTry warning before the end: \"Screen time ends in 10 minutes, then 5, then 1.\" Give a clear, predictable stopping point, like a timer or a song that means \"done.\" Some kids do better with a choice: \"Do you want to finish this level or save it for tomorrow?\" That gives them a sense of control without changing the rule.\n\nPlan something appealing for right after, like a snack, a game you play together, or a favorite activity. Keep the rule calm and consistent, and skip lectures during the meltdown. Name the feeling (\"It's really hard to stop when you're having fun\") and wait for the storm to pass before talking about it.\n\nIf meltdowns are intense or happen with other transitions too, talking with your pediatrician is a good idea."
+    },
+    {
+      "id": "advice-say-no",
+      "register": "casual",
+      "text": "Saying no gets easier when you stop treating it as rejecting your friend and start treating it as being honest about what you can give.\n\nBegin by pausing before you answer. \"Let me check my schedule and get back to you\" buys you time to decide instead of agreeing out of reflex. Most requests can wait a day.\n\nWhen you do decline, keep it short and warm. \"I can't this time, but I hope it goes well\" is enough. You don't owe a long list of reasons, and over-explaining often invites negotiation.\n\nIt also helps to offer a smaller alternative if one feels right: \"I can't drive you, but I can lend you my car seat\" or \"I can't help move, but I'll bring pizza.\" This shows care without overcommitting.\n\nFinally, remember that friends who respect you will accept a no. Those who push back after a polite refusal are showing you something useful about the friendship. Practice with low-stakes requests first, and the words will come more easily over time."
+    },
+    {
+      "id": "group-dinner",
+      "register": "casual",
+      "text": "Hey everyone! 🍽️ Anyone up for dinner this Friday? I was thinking Trattoria Bella on Main Street. They have great pasta and the patio should be nice if the weather holds up. Let me know if you're in and what time works for you!"
+    },
+    {
+      "id": "dm-thanks",
+      "register": "casual",
+      "text": "Hey [Friend's name],\n\nThank you so much for helping me move last weekend. I couldn't have done it without you! Lugging boxes up those stairs was no small favor, and I really appreciated the energy you brought to it. Let me know when I can return the favor, and the next round of pizza is on me.\n\nThanks again, you're the best.\n\n[Your name]"
+    },
+    {
+      "id": "workplace-raise",
+      "register": "professional",
+      "text": "Yes, it's reasonable to ask for a raise after a year without one, and the best way to do it is to come prepared rather than apologetic.\n\nStart by gathering evidence of your impact. List projects you've finished, problems you've solved, responsibilities you've taken on, and any positive feedback you've received. Put numbers on results where you can, such as time saved, revenue supported, or deadlines met.\n\nNext, research what your role pays. Salary sites, industry surveys, and recruiters can give you a realistic range. Knowing this lets you name a specific figure instead of a vague hope.\n\nWhen you're ready, request a meeting rather than raising it in passing. Try something like: \"I'd like to schedule time to talk about my compensation. Over the past year I've taken on X and Y, and I'd like to discuss adjusting my salary to reflect that.\"\n\nIn the meeting, state your accomplishments, then your number, then stop talking. Silence feels awkward, but it gives your manager room to respond.\n\nIf the answer is no, ask what it would take to earn an increase and when you can revisit it. Get that plan in writing if possible."
+    },
+    {
+      "id": "workplace-credit",
+      "register": "professional",
+      "text": "Your manager taking credit for your work is frustrating, and it can damage your reputation if you stay silent. Start by documenting everything. Keep dated emails, drafts, commit histories, and meeting notes that show you did the work. Save them somewhere your manager can't edit or delete.\n\nNext, make your contributions visible in the normal flow of work. In team meetings, present your own updates, and say \"I built\" or \"I analyzed\" rather than \"we did.\" When your manager shares your work, reply in writing with a short, friendly note, such as: \"Glad the analysis helped. I can walk the leadership team through the methodology if useful.\" This credits you without accusing anyone.\n\nIf it keeps happening, talk to your manager privately. Use facts, not accusations: \"I noticed the Q3 report went to leadership without my name on it. I'd like to be credited for my work going forward.\" Many managers don't realize how it looks, and this gives them a chance to fix it.\n\nIf nothing changes, raise it with a skip-level manager or HR, bringing your documentation. Look for a new role if the pattern continues, and list your accomplishments specifically when you do."
+    },
+    {
+      "id": "workplace-quit",
+      "register": "professional",
+      "text": "Two months is early, but it's not automatically a mistake. Before you resign, separate what's wrong with the job from what's just unfamiliar. New roles often feel chaotic, unclear, or lonely for the first few months, and that discomfort fades for many people. Ask yourself whether the problem is the role itself, your manager, the pay, the workload, or the culture, and whether any of these can be fixed.\n\nIf the problems are serious, such as harassment, illegal or unsafe practices, or a role that was misrepresented to you, leaving sooner is reasonable. Document what happened, and consider talking to HR first.\n\nIf the problems are fixable, raise them directly. Tell your manager what isn't working and what you need, and set a checkpoint in 30 to 60 days to see whether things improve.\n\nIf you do decide to leave, be honest but brief. Give standard notice if you can, and don't burn bridges. Short tenures are common, and most employers won't hold it against you if you can explain it calmly. Before you give notice, make sure you have another job lined up or enough savings to cover a gap."
+    },
+    {
+      "id": "travel-visa",
+      "register": "professional",
+      "text": "It depends on your nationality and whether you leave the secure area.\n\nIf you stay airside, meaning you never pass passport control, most travelers don't need a Schengen visa for a connection. However, citizens of many countries, including India, China, Pakistan, and Nigeria, need an Airport Transit Visa (ATV) to transit through a Schengen airport, even airside. The full list is in Annex IV of EU Regulation 810/2009, so check it against your passport.\n\nIf your connection requires passing passport control, such as changing airports or entering the Schengen area between flights, you will generally need a Schengen visa unless you're exempt.\n\nThe UK has its own transit rules, and some countries outside Europe have different requirements for their airports.\n\nBefore booking, check your airline's requirements and the official embassy or government travel site for your passport. Visa rules change, so verify them close to your travel date. Also check whether the EU's ETIAS travel authorization applies to you."
+    },
+    {
+      "id": "freelance-late",
+      "register": "professional",
+      "text": "Sixty days overdue is a serious delay, but it's still very recoverable. Start with a polite, documented follow-up before escalating.\n\n**1. Send a clear reminder.** Email the client with the invoice number, original due date, amount, and days overdue. Attach a copy of the invoice and ask for a payment date within 5 to 7 business days. Keep the tone friendly and factual.\n\n**2. Ask if something is wrong.** Sometimes invoices get stuck in an approval queue or are sent to the wrong address. Ask whether they received it and whether they need anything from you, like a PO number or a W-9.\n\n**3. Add a late fee if your contract allows it.** If your agreement includes late payment terms, reference them. If it doesn't, you can still mention that you'll pause work until the balance is cleared.\n\n**4. Pause new work.** If the payment still doesn't come, stop starting new tasks until the invoice is settled. Tell the client in writing.\n\n**5. Send a final notice.** Give a firm deadline, such as 10 days, and say you'll pursue collection or small claims court if it isn't paid.\n\n**6. Consider a collection agency or small claims court.** Many jurisdictions allow small claims filings without a lawyer, and some clients pay once they see that step.\n\nKeep every message in writing so you have a clear record."
+    },
+    {
+      "id": "email-colleague-cover",
+      "register": "professional",
+      "text": "Subject: Friday Afternoon Support Shift Coverage\n\nHi [Colleague's Name],\n\nWould you be able to cover my support shift this Friday afternoon? I have a conflict that I can't move, and I'd be grateful for your help. I'm happy to return the favor on a future shift or cover something for you.\n\nLet me know if you can take it, and I'll make sure to send you the handoff notes beforehand.\n\nThanks so much,\n[Your Name]"
+    },
+    {
+      "id": "press-library",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**City Council Announces Expanded Weekend Library Hours**\n\n*Three branches to open on Sundays beginning December 2026*\n\n[CITY NAME], [STATE] – The City Council today announced that three public libraries will open on Sundays beginning in December, expanding weekend access for residents across the city.\n\nBeginning December 6, the Central, Eastside, and Riverside branches will be open from 1:00 p.m. to 5:00 p.m. every Sunday. The added hours respond to residents' requests for more opportunities to visit the library outside the work week, particularly for families, students, and those who are employed during standard business hours.\n\n\"Libraries are among the most valued public spaces in our community, and we are glad to make them more accessible,\" said Council Member [NAME]. \"Sunday hours give residents another chance to read, study, use computers, and attend programs.\"\n\nThe extended schedule is funded through the city's current operating budget and will be reviewed after six months to assess attendance and community use. Patrons can find updated hours at [WEBSITE] or by calling [PHONE NUMBER].\n\nThe remaining library branches will maintain their current schedules.\n\n**Media Contact:**\n[NAME]\n[TITLE], Office of the City Council\n[EMAIL] | [PHONE]\n\n###"
+    },
+    {
+      "id": "press-bus",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**City Transport Department Launches New Night Bus Route Linking Airport and City Centre**\n\n*November 18, 2026*\n\nThe City Transport Department today announced the launch of Route N9, a new overnight bus service connecting the international airport with the city centre. The route will begin operating on December 1, 2026, providing reliable late-night and early-morning transport for travellers, shift workers, and residents.\n\nRoute N9 will run every 30 minutes between 11:30 p.m. and 5:30 a.m., seven days a week. The journey between the airport and the central transit hub takes approximately 45 minutes, with stops at three key points along the way. All buses will be wheelchair accessible and equipped with real-time arrival information.\n\n\"Many people arrive at or depart from the airport outside normal daytime hours, and until now they have had limited affordable options,\" said Director of Transport Maria Lindqvist. \"Route N9 gives them a safe, dependable alternative to expensive taxis, and it supports the many workers who keep our city running through the night.\"\n\nStandard fares will apply, and passengers may use existing day tickets and passes at no additional cost.\n\nTimetables and route maps are available at transport.city.gov/n9 and at all airport information desks. Updates will be posted on the department's official social media channels.\n\n**Media contact:** Press Office, City Transport Department\npressoffice@citytransport.gov\n\n-END-"
+    },
+    {
+      "id": "press-grant",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n18 November 2026\n\n**Government Launches Solar Grant Scheme to Help Small Shops Cut Energy Costs**\n\n*Department of Energy and Climate Action announces funding for independent retailers to install rooftop solar panels*\n\nThe Department of Energy and Climate Action today announced the Small Business Solar Grant Scheme, which will provide up to £15,000 per shop to help independent retailers install solar panels and reduce their electricity bills.\n\nThe scheme is open to businesses with fewer than 50 employees and premises occupying no more than 300 square metres. Eligible shops can use grants to cover up to 50 per cent of installation costs, including panels, inverters, and fitting.\n\n\"Small shops are the heart of our high streets, but rising energy costs put real pressure on their margins,\" said Minister for Energy and Climate Action Sarah Whitcombe. \"This scheme will help local businesses generate their own clean power, keep more money in their tills, and contribute to our national net-zero goals.\"\n\nApplications open on 1 February 2027 through the department's official website. Shopkeepers will be able to access free guidance from accredited installers and energy advisers throughout the process. Priority will be given to businesses in areas with high levels of energy poverty and to shops that are owned by under-represented groups.\n\nThe department expects the programme to support more than 4,000 small retailers over three years.\n\n**Media contact:**\nPress Office, Department of Energy and Climate Action\npress@energyclimate.gov.example\n+44 (0)20 0000 0000\n\n-ENDS-"
+    },
+    {
+      "id": "press-campaign",
+      "register": "marketing",
+      "text": "**FOR IMMEDIATE RELEASE**\n\n**[Agency Name] Launches \"Protect Your Circle\" Campaign to Encourage Seasonal Flu Vaccination**\n\n**[City, Date]** – The [Agency Name] today launched \"Protect Your Circle,\" a public campaign urging residents to get their seasonal flu vaccine before the peak of winter illness season.\n\nInfluenza causes millions of illnesses and thousands of hospitalizations each year in the United States alone. Vaccination remains the most effective way to reduce the risk of severe illness, hospitalization, and death, and it also helps protect those who cannot be vaccinated, including infants, older adults, and people with weakened immune systems.\n\n\"Every person who gets vaccinated helps protect the people around them, from grandparents and newborns to coworkers and classmates,\" said [Name, Title] at [Agency Name]. \"The flu vaccine is safe, widely available, and one of the simplest steps you can take for your family and community.\"\n\nThe campaign will run through [end date] and includes public service announcements, community clinic events, and partnerships with pharmacies, schools, and employers. Residents can find vaccine locations and schedules at [website].\n\nFlu vaccines are available at most pharmacies, doctors' offices, and community health centers, and many insurance plans cover them at no cost. Experts recommend vaccination for everyone six months and older.\n\n**Media Contact:**\n[Name]\n[Phone] | [Email]\n\n###"
     }
   ]
 }
