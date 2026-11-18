@@ -1,4 +1,4 @@
-import { regexHits } from './rules-util.ts';
+import { inDialogue, regexHits } from './rules-util.ts';
 import type { Hit, Rule, RuleContext } from './types.ts';
 
 /**
@@ -157,6 +157,8 @@ function fragmentTriad(ctx: RuleContext): Hit[] {
   const out: Hit[] = [];
   for (const s of ctx.sentences) {
     if (s.words > 9) continue;
+    const para = ctx.paragraphs.find((p) => s.start >= p.start && s.start < p.end);
+    if (inDialogue(ctx.text, para?.start ?? 0, s.start)) continue;
     const parts = s.text.replace(/[.!]\s*$/, '').split(/,\s+(?:and\s+|&\s+)?/);
     if (parts.length !== 3) continue;
     // "Yes, yes, and yes." is emphasis, and a shouted line is someone quoting or joking.
@@ -246,7 +248,7 @@ export const MORE_RULES: Rule[] = [
     id: 'unfilled-placeholder',
     name: 'Unfilled placeholder',
     category: 'format',
-    severity: 'error',
+    severity: 'warning',
     description: 'A template slot left in the text: [Your name], [Client name], [link], [specific feature].',
     why: 'Models fill gaps with brackets and people paste them straight out. It is the fastest way to show a reader a template wrote to them.',
     fix: 'Fill it in with the real detail, or rewrite the sentence so it does not need one.',

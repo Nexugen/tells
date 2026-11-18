@@ -148,7 +148,7 @@ console.log(result.findings, result.human.missing);</code></pre>
 <h2>Benchmark</h2>
 <div class="scroll">${table}</div>
 ${sep}
-<p><b>How often it is wrong.</b> On the benchmark's human samples it raises no warning on 99% of casual texts and 98% of professional ones. On a set fetched later and checked once before any fix, it left alone 98% of casual texts and 77% of professional ones. It flags 57% of model output it hasn't seen, and 96% of what it flags is model output. Most of what it misses is short casual text, where a current model writes much like a person. <a href="https://github.com/Nexugen/tells/blob/main/bench/EVAL.md">False-positive rates per rule</a>.</p>
+<p><b>How often it is wrong.</b> On 881 human texts from sources it had never seen, fetched after tuning stopped and checked once, it raised no warning or error. On the same check it flagged 98% of plain model output of 60 words or more, and 86% of output from prompts that told the model to sound human. One habit alone is only a hint: a warning needs two kinds of evidence. Short casual text is where it is weakest, since a model's text to a friend reads much like a person's. <a href="https://github.com/Nexugen/tells/blob/main/bench/EVAL.md">How it was measured</a>.</p>
 <p class="muted">The tells score counts known rule hits per 100 words. It is not a measure of how human a text sounds, and people trip the rules too. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Full results and caveats</a>.</p>
 
 <h2>API</h2>
@@ -213,6 +213,7 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
       '<div class="stat"><b>' + r.score + '</b><span>known tells per 100 words</span></div>' +
       '<div class="stat"><b class="h-txt">' + h.present.length + '</b><span>human signals present</span></div>' +
       '<div class="stat"><b>' + (h.tooShort ? 'Too short' : strong ? 'Has tells' : 'No tells') + '</b><span>' + (h.tooShort ? 'to judge, under 60 words' : strong ? 'worth a second look' : 'none of the known habits') + '</span></div>' +
+      (h.pattern ? '<div class="stat"><b class="' + (h.pattern.low ? 't-txt' : 'h-txt') + '">' + h.pattern.score + '</b><span>human-pattern score' + (h.pattern.low ? ', reads machine-like' : '') + '</span></div>' : '') +
       (r.registerGuess ? '<div class="stat"><b>' + r.register[0].toUpperCase() + r.register.slice(1) + '</b><span>register, picked from the text</span></div>' : '');
     var d = '';
     if (r.findings.length) {

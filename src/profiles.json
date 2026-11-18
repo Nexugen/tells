@@ -1,219 +1,219 @@
 {
- "version": 1,
+ "version": 2,
  "builtAt": "2026-11-18",
  "samples": {
   "human": {
-   "casual": 71,
-   "professional": 27,
-   "technical": 6,
-   "marketing": 16
+   "casual": 2116,
+   "professional": 1809,
+   "technical": 224,
+   "marketing": 250
   },
   "model": {
-   "casual": 48,
-   "professional": 18,
-   "technical": 12,
-   "marketing": 24
+   "casual": 305,
+   "professional": 245,
+   "technical": 152,
+   "marketing": 173
   }
  },
  "registers": {
   "casual": {
    "specific-number": {
-    "human": 0.21,
-    "model": 0.29
+    "human": 0.39,
+    "model": 0.45
    },
    "named-thing": {
-    "human": 0.39,
-    "model": 0.56
+    "human": 0.84,
+    "model": 0.76
    },
    "time-anchor": {
-    "human": 0.01,
-    "model": 0.27
+    "human": 0.17,
+    "model": 0.35
    },
    "first-hand": {
-    "human": 0,
+    "human": 0.31,
+    "model": 0.53
+   },
+   "stake": {
+    "human": 0.28,
+    "model": 0.22
+   },
+   "aside": {
+    "human": 0.6,
+    "model": 0.47
+   },
+   "contraction": {
+    "human": 0.74,
+    "model": 0.93
+   },
+   "plain-verb": {
+    "human": 0.61,
+    "model": 0.9
+   },
+   "real-question": {
+    "human": 0.28,
+    "model": 0.22
+   },
+   "bursty-rhythm": {
+    "human": 0.53,
+    "model": 0.53
+   },
+   "uneven-paragraphs": {
+    "human": 0.17,
+    "model": 0.48
+   },
+   "concrete-first": {
+    "human": 0.5,
+    "model": 0.47
+   }
+  },
+  "professional": {
+   "specific-number": {
+    "human": 0.43,
+    "model": 0.6
+   },
+   "named-thing": {
+    "human": 0.86,
+    "model": 0.97
+   },
+   "time-anchor": {
+    "human": 0.22,
+    "model": 0.4
+   },
+   "first-hand": {
+    "human": 0.2,
+    "model": 0.18
+   },
+   "stake": {
+    "human": 0.22,
+    "model": 0.09
+   },
+   "aside": {
+    "human": 0.54,
+    "model": 0.31
+   },
+   "contraction": {
+    "human": 0.59,
+    "model": 0.52
+   },
+   "plain-verb": {
+    "human": 0.72,
+    "model": 0.84
+   },
+   "real-question": {
+    "human": 0.26,
     "model": 0.21
+   },
+   "bursty-rhythm": {
+    "human": 0.43,
+    "model": 0.62
+   },
+   "uneven-paragraphs": {
+    "human": 0.38,
+    "model": 0.58
+   },
+   "concrete-first": {
+    "human": 0.47,
+    "model": 0.86
+   }
+  },
+  "technical": {
+   "specific-number": {
+    "human": 0.53,
+    "model": 0.64
+   },
+   "named-thing": {
+    "human": 0.95,
+    "model": 0.94
+   },
+   "time-anchor": {
+    "human": 0.14,
+    "model": 0.04
+   },
+   "first-hand": {
+    "human": 0.25,
+    "model": 0.03
    },
    "stake": {
     "human": 0.13,
     "model": 0.02
    },
    "aside": {
-    "human": 0.3,
-    "model": 0.25
+    "human": 0.71,
+    "model": 0.66
    },
    "contraction": {
-    "human": 0.63,
-    "model": 0.92
+    "human": 0.8,
+    "model": 0.67
    },
    "plain-verb": {
-    "human": 0.41,
-    "model": 0.73
-   },
-   "real-question": {
-    "human": 0.27,
-    "model": 0.29
-   },
-   "bursty-rhythm": {
-    "human": 0.18,
-    "model": 0.5
-   },
-   "uneven-paragraphs": {
-    "human": 0.11,
-    "model": 0.13
-   },
-   "concrete-first": {
-    "human": 0.27,
-    "model": 0.21
-   }
-  },
-  "professional": {
-   "specific-number": {
-    "human": 0.67,
-    "model": 0.72
-   },
-   "named-thing": {
-    "human": 0.78,
-    "model": 1
-   },
-   "time-anchor": {
-    "human": 0.26,
-    "model": 0.39
-   },
-   "first-hand": {
-    "human": 0.22,
-    "model": 0.33
-   },
-   "stake": {
-    "human": 0.04,
-    "model": 0
-   },
-   "aside": {
-    "human": 0.56,
-    "model": 0.22
-   },
-   "contraction": {
-    "human": 0.85,
-    "model": 0.89
-   },
-   "plain-verb": {
-    "human": 0.67,
-    "model": 0.83
-   },
-   "real-question": {
-    "human": 0.15,
-    "model": 0.22
-   },
-   "bursty-rhythm": {
-    "human": 0.56,
-    "model": 0.61
-   },
-   "uneven-paragraphs": {
-    "human": 0.33,
-    "model": 0.5
-   },
-   "concrete-first": {
-    "human": 0.3,
-    "model": 0.5
-   }
-  },
-  "technical": {
-   "specific-number": {
-    "human": 0.67,
-    "model": 0.75
-   },
-   "named-thing": {
-    "human": 1,
-    "model": 1
-   },
-   "time-anchor": {
-    "human": 0.33,
-    "model": 0.17
-   },
-   "first-hand": {
-    "human": 0.33,
-    "model": 0
-   },
-   "stake": {
-    "human": 0,
-    "model": 0
-   },
-   "aside": {
-    "human": 0.17,
-    "model": 0.33
-   },
-   "contraction": {
-    "human": 0.67,
-    "model": 0
-   },
-   "plain-verb": {
-    "human": 0.5,
+    "human": 0.74,
     "model": 0.92
    },
    "real-question": {
-    "human": 0,
-    "model": 0
+    "human": 0.2,
+    "model": 0.06
    },
    "bursty-rhythm": {
-    "human": 0,
-    "model": 0.5
+    "human": 0.25,
+    "model": 0.57
    },
    "uneven-paragraphs": {
-    "human": 0.67,
-    "model": 0
+    "human": 0.3,
+    "model": 0.49
    },
    "concrete-first": {
-    "human": 0.5,
-    "model": 0.83
+    "human": 0.59,
+    "model": 0.43
    }
   },
   "marketing": {
    "specific-number": {
-    "human": 0.94,
-    "model": 0.71
+    "human": 0.56,
+    "model": 0.76
    },
    "named-thing": {
-    "human": 1,
-    "model": 0.67
+    "human": 0.98,
+    "model": 0.92
    },
    "time-anchor": {
-    "human": 0.31,
-    "model": 0.58
+    "human": 0.18,
+    "model": 0.28
    },
    "first-hand": {
-    "human": 0.06,
-    "model": 0.13
+    "human": 0.08,
+    "model": 0.18
    },
    "stake": {
-    "human": 0.06,
-    "model": 0
+    "human": 0.04,
+    "model": 0.01
    },
    "aside": {
-    "human": 0.69,
-    "model": 0
+    "human": 0.33,
+    "model": 0.34
    },
    "contraction": {
-    "human": 0.25,
-    "model": 0.63
-   },
-   "plain-verb": {
-    "human": 0.56,
-    "model": 0.75
-   },
-   "real-question": {
-    "human": 0.06,
-    "model": 0.04
-   },
-   "bursty-rhythm": {
-    "human": 0.13,
-    "model": 0.46
-   },
-   "uneven-paragraphs": {
-    "human": 0.44,
+    "human": 0.42,
     "model": 0.71
    },
-   "concrete-first": {
-    "human": 1,
+   "plain-verb": {
+    "human": 0.42,
     "model": 0.83
+   },
+   "real-question": {
+    "human": 0.08,
+    "model": 0.21
+   },
+   "bursty-rhythm": {
+    "human": 0.21,
+    "model": 0.72
+   },
+   "uneven-paragraphs": {
+    "human": 0.06,
+    "model": 0.79
+   },
+   "concrete-first": {
+    "human": 0.78,
+    "model": 0.82
    }
   }
  }

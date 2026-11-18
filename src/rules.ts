@@ -1,5 +1,5 @@
 import type { Hit, Rule, RuleContext, Sentence } from './types.ts';
-import { regexHits } from './rules-util.ts';
+import { inDialogue, regexHits } from './rules-util.ts';
 import { MORE_RULES } from './rules-more.ts';
 
 const A = `['’]`; // straight or curly apostrophe
@@ -92,8 +92,8 @@ const STOCK_HOOKS = [
 
 const SETUP_REVEAL = [
   "here's the thing", 'here is the thing', 'the kicker', 'the best part?', 'the result?',
-  'the catch?', 'the twist?', 'plot twist', 'turns out', 'guess what', 'the secret?',
-  'the answer?', 'the truth is', 'the reality is', 'the problem?', 'the difference?',
+  'the catch?', 'the twist?', 'plot twist', 'the secret?',
+  'the answer?', 'the problem?', 'the difference?',
   'the real reason?', 'here’s the kicker', "here's the kicker", 'the punchline',
 ];
 
@@ -150,7 +150,8 @@ const ASSISTANT_LEAKS = [
   'here is a revised version', "here's a revised version", 'here is the revised', "here's the revised",
   'here is a draft', "here's a draft", 'here is a rewritten', "here's a rewritten", 'certainly! here',
   'sure! here', 'here is an improved version', "here's an improved version", 'i have rewritten',
-  "i've rewritten", 'below is a', 'below is the',
+  "i've rewritten", 'below is a revised', 'below is the revised', 'below is a draft', 'below is an updated',
+  'below is the updated', 'below is a polished', 'below is a rewritten', 'below is your',
 ];
 
 const HEDGES = [
@@ -201,7 +202,8 @@ const EXPLAINER_STARTS = [
 
 function staccato(ctx: RuleContext): Hit[] {
   const out: Hit[] = [];
-  const ss = ctx.sentences;
+  // Quoted speech is left out: characters talk in fragments.
+  const ss = ctx.sentences.filter((s) => s.text !== s.text.toUpperCase() && !inDialogue(ctx.text, ctx.paragraphs.find((p) => s.start >= p.start && s.start < p.end)?.start ?? 0, s.start));
   let i = 0;
   while (i < ss.length) {
     let j = i;

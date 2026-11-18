@@ -121,8 +121,8 @@ test('registers change severity or switch rules off', () => {
   const text = 'The build passed; the deploy did not.';
   assert.ok(ids(text, 'casual').includes('semicolon'));
   assert.ok(!ids(text, 'technical').includes('semicolon'));
-  assert.equal(lint('Ship it now!!', { register: 'marketing' }).findings[0].severity, 'warning');
-  assert.equal(lint('Ship it now!!', { register: 'casual' }).findings[0].severity, 'info');
+  assert.equal(lint('Ship it now!!', { register: 'marketing', corroborate: 0 }).findings[0].severity, 'warning');
+  assert.equal(lint('Ship it now!!', { register: 'casual', corroborate: 0 }).findings[0].severity, 'info');
 });
 
 test('disable and severity overrides', () => {

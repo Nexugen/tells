@@ -1,0 +1,346 @@
+{
+ "on": "fresh-2",
+ "samples": {
+  "human": 881,
+  "model": 354
+ },
+ "scoreModel": "2026-11-18",
+ "lowLine": 30,
+ "humanFindings": {
+  "blockLabel": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 881
+  },
+  "blockAuto": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 881
+  },
+  "blockDefault": {
+   "warningOrError": 0,
+   "error": 0,
+   "n": 881
+  }
+ },
+ "humanLowScore": 0.0091,
+ "modelFlagged": {
+  "plain": {
+   "n": 225,
+   "rules": 0.2756,
+   "score": 0.9022,
+   "either": 0.9067
+  },
+  "adversarial": {
+   "n": 129,
+   "rules": 0.2016,
+   "score": 0.8605,
+   "either": 0.8605
+  },
+  "plainJudged": {
+   "n": 209,
+   "rules": 0.2967,
+   "score": 0.9713,
+   "either": 0.9761
+  }
+ },
+ "auc": {
+  "all": 0.998,
+  "plain": 0.999,
+  "adversarial": 0.997,
+  "casual": 0.999,
+  "professional": 0.999,
+  "technical": 0.997,
+  "marketing": 1
+ },
+ "calibration": {
+  "ece": 0.013,
+  "bands": [
+   {
+    "band": "0-9",
+    "human": 2,
+    "model": 292,
+    "meanScore": 0.01,
+    "humanShare": 0
+   },
+   {
+    "band": "10-19",
+    "human": 3,
+    "model": 19,
+    "meanScore": 0.14,
+    "humanShare": 0.06
+   },
+   {
+    "band": "20-29",
+    "human": 3,
+    "model": 3,
+    "meanScore": 0.27,
+    "humanShare": 0.27
+   },
+   {
+    "band": "30-39",
+    "human": 3,
+    "model": 5,
+    "meanScore": 0.35,
+    "humanShare": 0.18
+   },
+   {
+    "band": "40-49",
+    "human": 8,
+    "model": 2,
+    "meanScore": 0.45,
+    "humanShare": 0.6
+   },
+   {
+    "band": "50-59",
+    "human": 2,
+    "model": 1,
+    "meanScore": 0.54,
+    "humanShare": 0.43
+   },
+   {
+    "band": "60-69",
+    "human": 7,
+    "model": 1,
+    "meanScore": 0.65,
+    "humanShare": 0.72
+   },
+   {
+    "band": "70-79",
+    "human": 8,
+    "model": 0,
+    "meanScore": 0.76,
+    "humanShare": 1
+   },
+   {
+    "band": "80-89",
+    "human": 13,
+    "model": 2,
+    "meanScore": 0.86,
+    "humanShare": 0.71
+   },
+   {
+    "band": "90-100",
+    "human": 832,
+    "model": 3,
+    "meanScore": 0.99,
+    "humanShare": 0.99
+   }
+  ]
+ },
+ "bySource": {
+  "human:apache": {
+   "n": 215,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.014,
+   "meanScore": 96.2
+  },
+  "human:debian": {
+   "n": 98,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0204,
+   "meanScore": 93.9
+  },
+  "human:globalvoices": {
+   "n": 207,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0,
+   "meanScore": 99.3
+  },
+  "human:gutenberg3": {
+   "n": 211,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0095,
+   "meanScore": 97.7
+  },
+  "human:wikivoyage": {
+   "n": 150,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0067,
+   "meanScore": 97.1
+  },
+  "model:claude-fresh-2": {
+   "n": 354,
+   "warnLabel": 0.2486,
+   "warnAuto": 0.2655,
+   "lowScore": 0.9573,
+   "meanScore": 4.3
+  }
+ },
+ "byRegister": {
+  "casual": {
+   "human": 112,
+   "humanWarn": 0,
+   "humanLow": 0.0089,
+   "model": 153,
+   "modelFlagged": 0.7974
+  },
+  "professional": {
+   "human": 482,
+   "humanWarn": 0,
+   "humanLow": 0.0041,
+   "model": 120,
+   "modelFlagged": 0.9667
+  },
+  "technical": {
+   "human": 270,
+   "humanWarn": 0,
+   "humanLow": 0.0185,
+   "model": 45,
+   "modelFlagged": 0.9556
+  },
+  "marketing": {
+   "human": 17,
+   "humanWarn": 0,
+   "humanLow": 0,
+   "model": 36,
+   "modelFlagged": 0.9444
+  }
+ },
+ "byGenre": {
+  "blog": {
+   "human": 6,
+   "humanWarn": 0,
+   "model": 24,
+   "modelFlagged": 1,
+   "auc": 1
+  },
+  "chat": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 33,
+   "modelFlagged": 0.1818,
+   "auc": null
+  },
+  "comment": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 0.8519,
+   "auc": null
+  },
+  "docs": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 24,
+   "modelFlagged": 1,
+   "auc": null
+  },
+  "email": {
+   "human": 313,
+   "humanWarn": 0,
+   "model": 39,
+   "modelFlagged": 1,
+   "auc": 1
+  },
+  "essay": {
+   "human": 40,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 0.9259,
+   "auc": 0.999
+  },
+  "fiction": {
+   "human": 153,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 0.963,
+   "auc": 0.999
+  },
+  "guidance": {
+   "human": 150,
+   "humanWarn": 0,
+   "model": 0,
+   "modelFlagged": 0,
+   "auc": null
+  },
+  "letter": {
+   "human": 18,
+   "humanWarn": 0,
+   "model": 9,
+   "modelFlagged": 1,
+   "auc": 1
+  },
+  "marketing": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 36,
+   "modelFlagged": 0.9444,
+   "auc": null
+  },
+  "news": {
+   "human": 201,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 0.963,
+   "auc": 1
+  },
+  "qa": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 57,
+   "modelFlagged": 0.9649,
+   "auc": null
+  },
+  "review": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 24,
+   "modelFlagged": 1,
+   "auc": null
+  }
+ },
+ "nonNative": {
+  "n": 0,
+  "warn": 0,
+  "low": 0
+ },
+ "byModel": {
+  "claude-cli:haiku": {
+   "n": 118,
+   "rules": 0.2203,
+   "score": 0.8729,
+   "either": 0.8814
+  },
+  "claude-cli:opus": {
+   "n": 118,
+   "rules": 0.2712,
+   "score": 0.8898,
+   "either": 0.8898
+  },
+  "claude-cli:sonnet": {
+   "n": 118,
+   "rules": 0.2542,
+   "score": 0.8983,
+   "either": 0.8983
+  }
+ },
+ "humanRuleHits": {},
+ "modelRuleHits": {
+  "unfilled-placeholder": 48,
+  "bold-lead": 32,
+  "email-boilerplate": 11,
+  "bold-label-list": 11,
+  "fragment-triad": 9,
+  "emoji": 9,
+  "chatbot-closer": 8,
+  "staccato": 7,
+  "exclamation": 5,
+  "stock-courtesy": 3,
+  "whether-youre": 3,
+  "benefit-cliche": 3,
+  "stock-hook": 2,
+  "parallel-slogan": 2,
+  "hashtag": 2,
+  "generic-example": 1,
+  "empty-adjective": 1,
+  "looking-for-hook": 1,
+  "sycophantic-opener": 1,
+  "validation-opener": 1
+ }
+}

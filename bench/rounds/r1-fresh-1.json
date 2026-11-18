@@ -1,0 +1,354 @@
+{
+ "on": "fresh-1",
+ "samples": {
+  "human": 1092,
+  "model": 414
+ },
+ "scoreModel": "2026-11-18",
+ "lowLine": 28,
+ "humanFindings": {
+  "blockLabel": {
+   "warningOrError": 0.0046,
+   "error": 0,
+   "n": 1092
+  },
+  "blockAuto": {
+   "warningOrError": 0.0046,
+   "error": 0,
+   "n": 1092
+  },
+  "blockDefault": {
+   "warningOrError": 0.0037,
+   "error": 0,
+   "n": 1092
+  }
+ },
+ "humanLowScore": 0.0312,
+ "modelFlagged": {
+  "plain": {
+   "n": 276,
+   "rules": 0.2754,
+   "score": 0.8986,
+   "either": 0.9022
+  },
+  "adversarial": {
+   "n": 138,
+   "rules": 0.1957,
+   "score": 0.8768,
+   "either": 0.9058
+  },
+  "plainJudged": {
+   "n": 257,
+   "rules": 0.2918,
+   "score": 0.965,
+   "either": 0.965
+  }
+ },
+ "auc": {
+  "all": 0.992,
+  "plain": 0.996,
+  "adversarial": 0.984,
+  "casual": 0.996,
+  "professional": 0.986,
+  "technical": 0.999,
+  "marketing": 0.997
+ },
+ "calibration": {
+  "ece": 0.017,
+  "bands": [
+   {
+    "band": "0-9",
+    "human": 11,
+    "model": 354,
+    "meanScore": 0.01,
+    "humanShare": 0.01
+   },
+   {
+    "band": "10-19",
+    "human": 15,
+    "model": 8,
+    "meanScore": 0.14,
+    "humanShare": 0.4
+   },
+   {
+    "band": "20-29",
+    "human": 12,
+    "model": 9,
+    "meanScore": 0.24,
+    "humanShare": 0.32
+   },
+   {
+    "band": "30-39",
+    "human": 8,
+    "model": 2,
+    "meanScore": 0.35,
+    "humanShare": 0.59
+   },
+   {
+    "band": "40-49",
+    "human": 13,
+    "model": 5,
+    "meanScore": 0.44,
+    "humanShare": 0.48
+   },
+   {
+    "band": "50-59",
+    "human": 17,
+    "model": 5,
+    "meanScore": 0.55,
+    "humanShare": 0.55
+   },
+   {
+    "band": "60-69",
+    "human": 27,
+    "model": 2,
+    "meanScore": 0.65,
+    "humanShare": 0.83
+   },
+   {
+    "band": "70-79",
+    "human": 23,
+    "model": 1,
+    "meanScore": 0.75,
+    "humanShare": 0.89
+   },
+   {
+    "band": "80-89",
+    "human": 59,
+    "model": 1,
+    "meanScore": 0.85,
+    "humanShare": 0.95
+   },
+   {
+    "band": "90-100",
+    "human": 906,
+    "model": 5,
+    "meanScore": 0.99,
+    "humanShare": 0.98
+   }
+  ]
+ },
+ "bySource": {
+  "human:gutenberg2": {
+   "n": 270,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0074,
+   "meanScore": 94.7
+  },
+  "human:mozblog": {
+   "n": 154,
+   "warnLabel": 0.026,
+   "warnAuto": 0.026,
+   "lowScore": 0.0455,
+   "meanScore": 88.9
+  },
+  "human:pymail": {
+   "n": 244,
+   "warnLabel": 0.0041,
+   "warnAuto": 0.0041,
+   "lowScore": 0.0412,
+   "meanScore": 90.6
+  },
+  "human:wikibooks": {
+   "n": 174,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.0172,
+   "meanScore": 96.3
+  },
+  "human:wikinews": {
+   "n": 250,
+   "warnLabel": 0,
+   "warnAuto": 0,
+   "lowScore": 0.048,
+   "meanScore": 89.1
+  },
+  "model:claude-fresh-1": {
+   "n": 414,
+   "warnLabel": 0.2488,
+   "warnAuto": 0.2802,
+   "lowScore": 0.9413,
+   "meanScore": 5
+  }
+ },
+ "byRegister": {
+  "casual": {
+   "human": 107,
+   "humanWarn": 0,
+   "humanLow": 0.0189,
+   "model": 177,
+   "modelFlagged": 0.8136
+  },
+  "professional": {
+   "human": 658,
+   "humanWarn": 0.0015,
+   "humanLow": 0.0304,
+   "model": 123,
+   "modelFlagged": 0.9756
+  },
+  "technical": {
+   "human": 263,
+   "humanWarn": 0.0038,
+   "humanLow": 0.038,
+   "model": 69,
+   "modelFlagged": 0.971
+  },
+  "marketing": {
+   "human": 64,
+   "humanWarn": 0.0469,
+   "humanLow": 0.0313,
+   "model": 45,
+   "modelFlagged": 0.9556
+  }
+ },
+ "byGenre": {
+  "blog": {
+   "human": 90,
+   "humanWarn": 0.0111,
+   "model": 27,
+   "modelFlagged": 1,
+   "auc": 1
+  },
+  "chat": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 30,
+   "modelFlagged": 0.2667,
+   "auc": null
+  },
+  "comment": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 42,
+   "modelFlagged": 0.8333,
+   "auc": null
+  },
+  "docs": {
+   "human": 174,
+   "humanWarn": 0,
+   "model": 33,
+   "modelFlagged": 0.9394,
+   "auc": 1
+  },
+  "email": {
+   "human": 244,
+   "humanWarn": 0.0041,
+   "model": 45,
+   "modelFlagged": 1,
+   "auc": 0.982
+  },
+  "essay": {
+   "human": 144,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 0.9259,
+   "auc": 0.981
+  },
+  "fiction": {
+   "human": 72,
+   "humanWarn": 0,
+   "model": 27,
+   "modelFlagged": 1,
+   "auc": 1
+  },
+  "letter": {
+   "human": 54,
+   "humanWarn": 0,
+   "model": 18,
+   "modelFlagged": 0.9444,
+   "auc": 0.999
+  },
+  "marketing": {
+   "human": 64,
+   "humanWarn": 0.0469,
+   "model": 45,
+   "modelFlagged": 0.9556,
+   "auc": 0.997
+  },
+  "news": {
+   "human": 250,
+   "humanWarn": 0,
+   "model": 24,
+   "modelFlagged": 0.9583,
+   "auc": 0.989
+  },
+  "qa": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 78,
+   "modelFlagged": 0.9744,
+   "auc": null
+  },
+  "review": {
+   "human": 0,
+   "humanWarn": 0,
+   "model": 18,
+   "modelFlagged": 0.9444,
+   "auc": null
+  }
+ },
+ "nonNative": {
+  "n": 0,
+  "warn": 0,
+  "low": 0
+ },
+ "byModel": {
+  "claude-cli:haiku": {
+   "n": 138,
+   "rules": 0.2101,
+   "score": 0.8768,
+   "either": 0.8913
+  },
+  "claude-cli:opus": {
+   "n": 138,
+   "rules": 0.2391,
+   "score": 0.8913,
+   "either": 0.9058
+  },
+  "claude-cli:sonnet": {
+   "n": 138,
+   "rules": 0.2971,
+   "score": 0.9058,
+   "either": 0.913
+  }
+ },
+ "humanRuleHits": {
+  "tagline": 3,
+  "benefit-cliche": 3,
+  "empty-adjective": 2,
+  "so-you-can": 2,
+  "hype": 1,
+  "whether-youre": 1,
+  "ai-vocabulary": 1,
+  "hashtag": 1,
+  "exclamation": 1,
+  "stock-courtesy": 1
+ },
+ "modelRuleHits": {
+  "unfilled-placeholder": 51,
+  "bold-lead": 20,
+  "email-boilerplate": 15,
+  "fragment-triad": 11,
+  "bold-label-list": 11,
+  "chatbot-closer": 9,
+  "stock-courtesy": 9,
+  "staccato": 9,
+  "exclamation": 6,
+  "emoji": 5,
+  "parallel-slogan": 5,
+  "slogan-ending": 4,
+  "stock-warmth": 3,
+  "ai-vocabulary": 3,
+  "hashtag": 3,
+  "whether-youre": 3,
+  "benefit-cliche": 3,
+  "stock-hook": 2,
+  "cta-ending": 2,
+  "so-you-can": 1,
+  "assistant-leak": 1,
+  "sycophantic-opener": 1,
+  "setup-reveal": 1,
+  "turn-x-into-y": 1
+ }
+}

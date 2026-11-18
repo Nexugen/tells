@@ -10,7 +10,7 @@ import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
 
-const VERSION = '0.1.0';
+const VERSION = '0.3.0';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 
@@ -28,6 +28,9 @@ Lint options
   --max-score <n>    also fail when known tells per 100 words is above n
   --disable <ids>    comma-separated rule ids to skip
   --plain            treat input as plain text, not markdown
+  --strict           report every rule at its own severity, without corroboration
+                     (by default one habit alone is a hint; see README)
+  --no-score         skip the human-pattern score
 
 Rewrite options
   --register <r>     as above
@@ -40,7 +43,7 @@ Rewrite options
 
 Config
   A .tellsrc.json in the current folder can set register, disable, severity,
-  failOn, maxScore, minSeverity and guidance. Flags win over the file.
+  failOn, maxScore, minSeverity, corroborate and guidance. Flags win over the file.
   Put "tells-ignore" on a line, or wrap a block in <!-- tells-off --> and
   <!-- tells-on -->, to skip it.
 
@@ -61,7 +64,7 @@ function parse(argv: string[]) {
     if (a === '-') rest.push(a);
     else if (a.startsWith('--')) {
       const [k, v] = a.slice(2).split('=', 2);
-      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color'];
+      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color', 'strict', 'no-score'];
       if (v !== undefined) flags[k] = v;
       else if (bool.includes(k)) flags[k] = true;
       else flags[k] = argv[++i] ?? '';
@@ -136,7 +139,10 @@ async function main() {
   const register = asRegister(flags.register ?? cfg.register);
   const disable = [...(cfg.disable ?? []), ...(typeof flags.disable === 'string' ? flags.disable.split(',').map((s) => s.trim()).filter(Boolean) : [])];
   for (const id of disable) if (!RULES.some((r) => r.id === id)) usage(`unknown rule id "${id}"`);
-  const base: LintOptions = { register, disable, severity: cfg.severity, plain: Boolean(flags.plain) || cfg.plain };
+  const base: LintOptions = {
+    register, disable, severity: cfg.severity, plain: Boolean(flags.plain) || cfg.plain,
+    corroborate: flags.strict ? 0 : cfg.corroborate, noScore: Boolean(flags['no-score']) || cfg.noScore,
+  };
 
   if (cmd === 'lint' || cmd === 'check') {
     const files = expand(rest.length ? rest : process.stdin.isTTY ? usage('give a file, a folder, or pipe text in') : ['-']);

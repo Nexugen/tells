@@ -43,8 +43,9 @@ export interface HumanReport {
   register: Register;
   present: SignalPresence[];
   missing: MissingSignal[];
-  /** Signals present, weighted by how much more often people use them than models, 0 to 100. */
   tooShort: boolean;
+  /** The human-pattern score (see score.ts), or null when the text is too short or the score is off. Set by lint(). */
+  pattern?: import('./score.ts').HumanScore | null;
   words: number;
 }
 

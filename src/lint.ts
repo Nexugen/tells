@@ -3,6 +3,7 @@ import { countWords, lineIndex, mask, paragraphs, sentences } from './text.ts';
 import type { Finding, Grade, Hit, LintOptions, LintResult, Register, Rule, RuleContext, Severity } from './types.ts';
 import { humanReport } from './human.ts';
 import { guessRegister } from './register.ts';
+import { humanScore } from './score.ts';
 
 export const SEVERITY_WEIGHT: Record<Severity, number> = { error: 3, warning: 2, info: 1 };
 
@@ -61,10 +62,69 @@ export function lint(text: string, options: LintOptions = {}): LintResult {
   findings.sort((a, b) => a.start - b.start || ORDER[a.severity] - ORDER[b.severity]);
 
   const words = countWords(masked);
+  const pattern = options.noScore ? null : humanScore(text, register, findings);
+  if (options.corroborate !== 0) gate(findings, options.corroborate ?? DEFAULT_CORROBORATE, pattern?.low ?? false, options.severity, 'category', register, (pattern?.score ?? 0) >= HIGH_SCORE);
   const counts: Record<Severity, number> = { error: 0, warning: 0, info: 0 };
   for (const f of findings) counts[f.severity]++;
   const score = slopScore(findings, words);
-  return { findings, words, score, grade: grade(score), counts, human: humanReport(ctx), register, ...(guessed ? { registerGuess: guessed } : {}) };
+  const human = { ...humanReport(ctx), pattern };
+  return { findings, words, score, grade: grade(score), counts, human, register, ...(guessed ? { registerGuess: guessed } : {}) };
+}
+
+/**
+ * Rules that are close to proof on their own: a model talking about itself, a template slot
+ * left in, an opener no person writes to a friend. Everything else is a habit people share
+ * with models, so one of them alone is a hint, not an accusation.
+ */
+export const STRONG_RULES = new Set(['assistant-leak', 'unfilled-placeholder']);
+
+/**
+ * Only a model talking about itself is proof. "Below is the revised schedule", "Here's a draft"
+ * and "I've rewritten my answer" are things people write too, so those are gated like any habit.
+ */
+const STRONG_LEAK = /\b(?:as an ai|as a large language model|i cannot browse|real-time|knowledge cutoff|training data)/i;
+
+const isStrong = (f: Pick<Finding, 'ruleId' | 'match'>, all: Pick<Finding, 'ruleId' | 'match'>[]) => {
+  if (!STRONG_RULES.has(f.ruleId)) return false;
+  if (f.ruleId === 'assistant-leak') return STRONG_LEAK.test(f.match);
+  // One bracketed slot can be an editor's note or an anonymised name; a template leaves several.
+  return new Set(all.filter((x) => x.ruleId === 'unfilled-placeholder').map((x) => x.match.toLowerCase())).size >= 2;
+};
+
+/** Distinct habits a text needs before any of them is reported above a hint. */
+export const DEFAULT_CORROBORATE = 2;
+
+/** At or above this human-pattern score, findings need one more kind of evidence. */
+export const HIGH_SCORE = 90;
+
+/**
+ * Corroboration. A warning or error from a habit rule stands only when the text shows at least
+ * `need` distinct kinds of habit at that level, counting a low human-pattern score as one.
+ * Otherwise those findings drop to hints and say so. Kinds are rule categories by default
+ * (`by: 'category'`), so two rhythm rules on the same clipped dialogue count once; `by: 'rule'`
+ * counts rules. One AI-sounding word is not evidence: ai-vocabulary counts only when two
+ * different words from the list appear. Severities set explicitly in options are left alone.
+ */
+export function gate(findings: Finding[], need: number, lowScore: boolean, explicit?: Record<string, Severity | 'off'>, by: 'rule' | 'category' = 'category', register?: Register, highScore = false) {
+  // Marketing copy by people is full of exclamation marks and stock adjectives, so it takes one more.
+  if (register === 'marketing') need += 1;
+  // A text whose habits read clearly human needs one more kind of evidence, the mirror of a low score counting as one.
+  if (highScore) need += 1;
+  const soft = findings.filter((f) => f.severity !== 'info' && !isStrong(f, findings) && !explicit?.[f.ruleId]);
+  const units = new Set<string>();
+  for (const f of soft) {
+    if (f.ruleId === 'ai-vocabulary') {
+      const distinct = new Set(soft.filter((x) => x.ruleId === 'ai-vocabulary').map((x) => x.match.toLowerCase()));
+      if (distinct.size < 2) continue;
+    }
+    units.add(by === 'rule' ? f.ruleId : f.category);
+  }
+  const evidence = units.size + (lowScore ? 1 : 0);
+  if (evidence >= need) return;
+  for (const f of soft) {
+    f.severity = 'info';
+    f.message += ' (a hint: on its own this is common in human writing too)';
+  }
 }
 
 /**

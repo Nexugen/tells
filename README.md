@@ -4,7 +4,7 @@ A linter for the habits that make text read as AI-written, and for the patterns 
 
 We built it at [Nexugen](https://nexugen.app) because our agents write a lot of text that people read: replies, emails, release notes, captions. We kept fixing the same things by hand: the em dash, the `it's not X, it's Y` line, a closing sentence about the future, the word `seamless`. So we wrote the rules down, and then wrote code that checks them.
 
-It is a style tool. It doesn't try to beat AI detectors, and it can't tell you who wrote something. Human writing trips some rules too (the Go team uses em dashes, and that's fine). A text with no tells isn't proof that it reads well. It only means none of the known habits showed up.
+It is a style tool. It doesn't try to beat AI detectors, and its human-pattern score is a measurement of style, not proof of who wrote something. Human writing trips some rules too (the Go team uses em dashes, and that's fine). A text with no tells isn't proof that it reads well. It only means none of the known habits showed up.
 
 You can try it in a browser at [tells.nexugen.app](https://tells.nexugen.app).
 
@@ -12,7 +12,7 @@ You can try it in a browser at [tells.nexugen.app](https://tells.nexugen.app).
 
 ```sh
 npx tells lint draft.md
-echo "Great question! It's not a tool — it's a movement." | npx tells lint
+echo "Great question! It's not a tool — it's a movement. Our seamless platform empowers teams to unlock their full potential." | npx tells lint
 ```
 
 ```text
@@ -25,21 +25,35 @@ echo "Great question! It's not a tool — it's a movement." | npx tells lint
 <stdin>:1:33  info   Em or en dash [dash]
     "—"
     Write the punctuation the dash stood in for: a comma for an aside, ...
-<stdin>: 9 words, 10 known tells per 100 words (heavy), 1 errors, 0 warnings, 2 info
+<stdin>:1:56  warn   AI vocabulary [ai-vocabulary]
+    "seamless"
+    Use the plain word, or better, the specific fact the word was covering for.
+...
+<stdin>: 19 words, 22 known tells per 100 words (heavy), 1 errors, 3 warnings, 2 info
   human signals  Contractions (2) (too short to judge)
 ```
 
-Linting is plain rules and heuristics, so it needs no model, network or key. A long document takes milliseconds.
+Linting is plain rules, heuristics and a small tree model shipped as JSON, so it needs no network or key. A long document takes milliseconds.
 
 Errors and warnings are the findings we trust. Hints (info) are habits worth a look that people also have, like dashes, and they never fail a check on their own.
 
+One habit on its own is not evidence. People write "Great question!" and "seamless" too, so a warning or error only stands when the text shows at least two different kinds of tell (wording, structure, format and so on), or one kind plus a low human-pattern score. Otherwise it is reported as a hint. Marketing copy needs one more kind, and so does a text whose human-pattern score is 90 or above. A slip that only a template leaves, such as two unfilled `[placeholder]` slots or a model calling itself an AI, always stands. `--strict` (or `corroborate: 0` in the API) turns this off and reports every rule at its own severity.
+
+## The human-pattern score
+
+Texts of 60 words or more also get a human-pattern score from 0 to 100: roughly, the chance that a person wrote the text, judged by how its habits compare with about 9,700 human samples and 2,100 model samples. It is a small gradient-boosted tree model over about 200 measures (function words, punctuation, sentence shape, casual cues and the rule hits), trained on the benchmark's train split and calibrated on its tune split. Layout is stripped first, so a list or a table does not count against a text. Below the line in `src/score-model.json` (about 30) the text reads machine-like, and that counts as one kind of evidence for the rules.
+
+It is a measurement of style, not proof of who wrote something. About 1 to 2% of human texts score under the line, more for old fiction, open-source READMEs and short job ads, and a model told to write like a person scores over it about 14% of the time.
+
 ## How often it is wrong
 
-On the human samples in the benchmark, tells raises no warning or error on 99% of casual texts, 98% of professional ones, all of the technical ones and 96% of the marketing ones. On a set fetched later from other sites and measured once before any fix, it left alone 98% of casual texts and 77% of professional ones. Those misfires are fixed now, but expect professional writing outside the benchmark to land somewhere between those two figures.
+Measured on human and model writing that played no part in building tells. The last held-out set (fresh-2: 881 human texts from five sources the benchmark had never used, and 354 answers from Haiku, Sonnet and Opus to new prompts) was fetched after all tuning stopped and scored once:
 
-It flags 57% of held-out model output, and 96% of what it flags is model output. Most of what it misses is short casual text: a current model asked for a message to a friend writes something close to what a person would, and tells doesn't claim otherwise. Every rule's false-positive rate per register is in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
+- Human texts with a warning or an error: 0 of 881. On the larger locked test split it was 4 of 2,006 (0.2%), one of them an error.
+- Model output of 60 words or more flagged, by a warning, an error or a low human-pattern score: 98% of plain answers and 86% of answers from prompts written to sound human. Counting short texts too, 91% of plain answers.
+- AUC of the human-pattern score: 0.998 overall and 0.997 on the adversarial answers.
 
-Under 60 words, lint doesn't give advice on human signals, because a short text can't show them.
+Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those. Every model was a Claude model, because those were the ones we could run; expect other families to be caught less often until they are in the benchmark. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
 
 ## Before and after
 
@@ -193,9 +207,7 @@ A few samples are house drafts from Nexugen that a person approved. They help th
 
 ## Benchmark
 
-`bench/` asks Haiku, Sonnet and Opus for 48 everyday writing tasks (a text to a friend, a forum reply, a refund email, a PR description, a press release and so on) and compares the answers with 182 licensed human samples written before 2021, plus two more sets kept aside to check for false positives. [bench/EVAL.md](bench/EVAL.md) has the accuracy numbers and [bench/RESULTS.md](bench/RESULTS.md) the per-source scores and caveats.
-
-We also tried a statistical layer on function words, punctuation and rhythm. It separates the benchmark sets well and then flags a plain text message from a real person, because it learns where the samples came from as much as who wrote them. It stays in `bench/` and the package doesn't use it.
+`bench/` holds two benchmarks. The first (v1) is 48 everyday prompts against 182 licensed human samples. The second (v2, `bench/dataset.ts`) has about 10,600 human samples from 31 openly licensed or public sources written before 2022 (email, chat, forums, Q&A, reviews, essays by native and non-native students, fiction, news, guidance, docs and marketing copy) and about 2,500 answers from Haiku, Sonnet and Opus to 1,047 prompts, a third of them written to make the model sound human. Samples are split by group (a mailbox, a site, a book, a prompt topic) into train, tune and a locked test split, and each held-out round is fetched only after the previous one was scored. [bench/EVAL.md](bench/EVAL.md) has the accuracy numbers, [bench/RESULTS.md](bench/RESULTS.md) the per-source scores and caveats, and [DATA-LICENSES.md](DATA-LICENSES.md) the sources and licences.
 
 ```sh
 node --experimental-strip-types bench/run.ts generate --via claude-cli --model haiku
@@ -203,7 +215,10 @@ node --experimental-strip-types bench/run.ts rewrite --via claude-cli --source c
 node --experimental-strip-types bench/run.ts profiles
 node --experimental-strip-types bench/run.ts score
 node --experimental-strip-types bench/fp.ts          # false positives per rule
-node --experimental-strip-types bench/eval.ts        # held-out accuracy
+node --experimental-strip-types bench/eval.ts        # held-out accuracy (v1)
+node --experimental-strip-types bench/v2.ts stats    # v2 dataset by source, register, genre
+node --experimental-strip-types bench/v2.ts train    # retrain the human-pattern score
+node --experimental-strip-types bench/v2.ts report --on tune
 ```
 
 ## Hosted API

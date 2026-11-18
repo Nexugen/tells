@@ -1,0 +1,1069 @@
+{
+ "name": "claude-haiku",
+ "model": "claude-cli:haiku",
+ "createdAt": "2026-11-18T15:55:58.244Z",
+ "items": [
+  {
+   "id": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d#plain",
+   "family": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi Mum, just letting you know I got home safe after the drive. Thanks for checking in. Love you!"
+  },
+  {
+   "id": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d#adv1",
+   "family": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey mum, just got home safe. Traffic was awful the whole way and I'm wiped. Gonna shower and crash. Love you, talk tomorrow x"
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa#plain",
+   "family": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! I've got an old sofa I'm getting rid of. It's comfy and in decent shape. Want it? Happy to drop it off or you can grab it, whatever works for you."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa#adv1",
+   "family": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "hey, you still need a sofa? mine's yours if you want it. it's kind of ugly and i have no idea how we'd get it out of here but it's comfy. no rush, just let me know. i'm wiped, going to bed soon"
+  },
+  {
+   "id": "fresh2:chat:to-a-coworker-saying-you-left-your-badge-at-home#plain",
+   "family": "fresh2:chat:to-a-coworker-saying-you-left-your-badge-at-home",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, heads up: I left my badge at home today, so I won't be able to get into the building on my own. Could you let me in when you get a chance, or let me know if there's someone else I should check with? Thanks!"
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-after-a-bad-first-date#plain",
+   "family": "fresh2:chat:to-a-friend-after-a-bad-first-date",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey, I survived the date. Barely. Remind me never to let someone pick the restaurant based on \"vibes\" again. We spent forty minutes on whether he'd ever been to Ohio, and somehow that was the highlight. Anyway, I'm proud of myself for lasting through dessert. Tell me something good so I can forget this ever happened."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-after-a-bad-first-date#adv5",
+   "family": "fresh2:chat:to-a-friend-after-a-bad-first-date",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "hey, so that was... something. i'm not really sure what happened tbh. he talked about his ex for like 40 min and then left before the food came?? i literally sat there with my salad lol. anyway i'm kinda glad it's over? like i think i'd been dreading it since tuesday. maybe i'm just bad at this. anyway how was your day, did the thing with your mom get sorted or no. call me later if you're up, i need to vent about it more"
+  },
+  {
+   "id": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on#plain",
+   "family": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hi, the heating is back on. Thanks for getting it fixed so quickly. Let me know if anything needs following up. Thanks!"
+  },
+  {
+   "id": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on#adv1",
+   "family": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Hey, just wanted to let you know the heat's back on. It came on around 6 tonight. Thanks for getting someone out here so fast. I was pretty worried about the pipes, so that's a relief. Hope you have a good evening."
+  },
+  {
+   "id": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password#plain",
+   "family": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hey! Hope you're doing well. Could you send me the wifi password when you get a chance? I'm at your place next weekend and my phone keeps dropping the connection. Thanks, and hope everyone's doing great!"
+  },
+  {
+   "id": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password#adv4",
+   "family": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "hey, any chance you could send me the wifi password? my phone keeps dropping off when I'm at your place and it's driving me nuts lol. thanks!"
+  },
+  {
+   "id": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-#plain",
+   "family": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Sales Figures Needed by Thursday\n\nHi [Colleague's Name],\n\nI hope you're doing well. Could you please send me the latest sales figures when you have a moment? I need them by Thursday to prepare for [meeting/report/review].\n\nIf it's easier, a quick export or summary would be great. Let me know if anything is unclear or if you run into any issues getting them to me.\n\nThanks so much for your help.\n\nBest regards,\n[Your Name]"
+  },
+  {
+   "id": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-#adv2",
+   "family": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Subject: Latest sales figures before Thursday\n\nHi [Colleague's name],\n\nI hope your week is going well. Could you send me the latest sales figures when you get a chance? I need them in hand before Thursday so I can finish the report I'm putting together for the team.\n\nIf the full breakdown isn't ready yet, a preliminary total by region would still help. Please let me know if anything is holding things up or if there's a better time for you to share them.\n\nThanks in advance for your help."
+  },
+  {
+   "id": "fresh2:email:to-a-supplier-disputing-an-invoice-that-charges-#plain",
+   "family": "fresh2:email:to-a-supplier-disputing-an-invoice-that-charges-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Invoice Discrepancy: Quantity Billed vs. Quantity Ordered\n\nDear [Supplier Contact Name],\n\nI am writing regarding Invoice [Invoice Number], dated [Invoice Date], in the amount of [Invoice Amount]. The invoice bills us for 40 units under [Purchase Order Number], but our purchase order and delivery records confirm that we ordered and received 30 units.\n\nPlease review the attached invoice and our purchase order. The quantity on the invoice does not match our order, and we are not able to pay for the 10 additional units.\n\nI would appreciate it if you could:\n\n1. Review the quantity on the invoice against our purchase order and delivery records.\n2. Issue a corrected invoice for 30 units, totaling [Corrected Amount].\n3. Confirm the revised invoice by [Date].\n\nIf you have delivery documentation showing that 40 units were shipped, please send it to me so we can resolve the discrepancy. Until this is settled, we will hold payment on the disputed amount of [Disputed Amount] and will pay the undisputed portion of [Undisputed Amount] as scheduled.\n\nThank you for your prompt attention to this matter. Please feel free to contact me at [Your Phone Number] if you would like to discuss it.\n\nBest regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi#plain",
+   "family": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Your Warranty Has Expired – Repair Options Available\n\nDear [Customer Name],\n\nI hope this message finds you well.\n\nWe are writing to let you know that the warranty on your [Product Name] (Serial No. [Serial Number]) expired on [Expiration Date]. We understand this may be disappointing, and we want to make sure you still have a clear path to getting your device back in working order.\n\nWe are happy to offer a repair for your [Product Name] at a discounted rate of **[Repair Price]**. This price covers [parts and labor / diagnostic and repair services] and includes a [X]-day warranty on the repaired components.\n\nIf you would like to proceed, please reply to this email or contact us at [Phone Number]. Once we receive your confirmation, we will arrange shipping or drop-off details and begin the repair process right away.\n\nThis offer is valid until [Offer Expiration Date].\n\nThank you for your continued trust in [Company Name]. Please don't hesitate to reach out if you have any questions.\n\nBest regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi#adv3",
+   "family": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Subject: Your Warranty Coverage and Repair Options\n\nDear [Customer Name],\n\nThank you for being a valued customer. I am writing to let you know that the warranty on your [Product Name], serial number [Serial Number], expired on [Expiration Date]. Our records show that the unit is now outside of coverage.\n\nWe still want to help you get it working again. Our repair service for your unit is $[Repair Price], which includes parts, labor, and a 90-day guarantee on the repaired work. Shipping is free both ways.\n\nIf you would like to move forward, simply reply to this email or call us at [Phone Number]. We can schedule a pickup within two business days of your approval. Please let us know if you have questions about the repair process or the cost.\n\nThank you for your patience and continued trust in [Company Name]. We look forward to hearing from you.\n\nBest regards,\n\n[Your Name]\n[Job Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh2:email:to-a-new-hire-about-their-first-day#plain",
+   "family": "fresh2:email:to-a-new-hire-about-their-first-day",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Welcome to the team! Here's what to expect on your first day\n\nHi [First Name],\n\nWe're thrilled to have you join us as [Job Title] on [Start Date]. Welcome aboard!\n\nHere's what to expect on your first day:\n\n**Arrival and check-in**\nPlease arrive at [Office Address] by [Time]. Ask for [Contact Name] at the front desk, and they'll bring you to your workspace. If you're joining remotely, you'll receive a calendar invite with a video link for our 9:30 a.m. check-in.\n\n**Morning**\n- Welcome coffee with your team at 10:00 a.m.\n- Account and equipment setup with [IT Contact], including your laptop, email, and access to our core tools\n- A short orientation covering our mission, values, and how we work\n\n**Lunch**\nWe'll take you to lunch with your manager, [Manager Name], and a few teammates so you can get to know everyone.\n\n**Afternoon**\n- A walkthrough of your role, goals for your first 30 days, and key projects\n- Introductions to cross-functional partners\n- Time to explore our documentation and get comfortable with your tools\n\n**End of day**\nWrap up around [End Time]. Your manager will check in to answer questions and confirm your plan for tomorrow.\n\n**What to bring**\n- A valid photo ID (required for building access and I-9 verification)\n- Any paperwork from HR that you haven't yet returned\n- A notebook, and any questions you'd like to ask\n\nIf you have questions before your start date, reply to this email or reach out to [HR Contact] at [HR Email or Phone]. We're excited to get started with you.\n\nWarm regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]"
+  },
+  {
+   "id": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action#plain",
+   "family": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Subject:** Meeting Notes and Action Items: [Meeting Topic], [Meeting Date]\n\nHi [Client First Name],\n\nThank you for taking the time to meet on [Meeting Date]. Below are the key notes from our discussion.\n\n**Meeting Notes**\n\n- [Key discussion point or decision]\n- [Key discussion point or decision]\n- [Key discussion point or decision]\n\n**Action Items**\n\n1. **[Action item 1]**: [Brief description of the task]. Owner: [Name]. Due: [Date].\n2. **[Action item 2]**: [Brief description of the task]. Owner: [Name]. Due: [Date].\n\nPlease let me know if I've missed anything or if any of the points above need clarification. I'm happy to set up a follow-up call to review progress.\n\nBest regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]"
+  },
+  {
+   "id": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action#adv4",
+   "family": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Subject: Notes from today + two action items\n\nHi [Client name],\n\nThanks for making time today. Here's a quick recap of what we covered:\n\n- Timeline for the next phase looks good. We're still on track for the [milestone] date.\n- You had questions about the reporting dashboard. We went through how the filters work and agreed on a couple of tweaks.\n- Budget is fine for now, but we should revisit it once the scope is locked.\n\nTwo things to get done before our next call:\n\n1. [Your name]: Send over the updated scope doc with the dashboard changes by [date].\n2. [Client name]: Confirm the list of users who need access to the new reports by [date].\n\nIf I missed anything or you remember it differently, just let me know. Otherwise, talk soon.\n\nThanks,\n[Your name]\n[Your title / company]"
+  },
+  {
+   "id": "fresh2:email:to-your-team-about-the-holiday-rota#plain",
+   "family": "fresh2:email:to-your-team-about-the-holiday-rota",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Holiday Rota: Please Review and Confirm Your Shifts\n\nHi team,\n\nI've finished the holiday rota for the upcoming festive period and it's now ready for review. You can find it in the shared team calendar and the rota spreadsheet.\n\nPlease check your assigned shifts and let me know by Friday, 27 November, if you spot any clashes or have concerns. If you need to swap a shift, please coordinate directly with a colleague and update the spreadsheet once it's agreed, then copy me in.\n\nA few reminders:\n\n- Cover is required across all public holiday dates, so please avoid requesting time off on those days where possible.\n- Requests for annual leave over the holidays should be submitted in the HR system as usual, even if you've already agreed a swap.\n- If you have a personal commitment that makes a shift difficult, let me know as early as you can so we have time to rebalance things fairly.\n\nThanks, everyone, for your flexibility. I know this time of year can be busy, and I really appreciate the effort you put in to keep things running smoothly.\n\nBest regards,\n\n[Your name]"
+  },
+  {
+   "id": "fresh2:email:to-your-team-about-the-holiday-rota#adv1",
+   "family": "fresh2:email:to-your-team-about-the-holiday-rota",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Subject: Holiday rota (sorry, long one)\n\nHi all,\n\nI'm writing this at the end of a very long day, so bear with me if this reads a bit scrambled.\n\nThe holiday rota for December is finally done, or at least done enough that I've stopped staring at it. I've put it in the shared drive under \"Holiday Rota Dec 2026.\" Please check your name and let me know by Friday if anything clashes. I've tried to be fair, but I also had about four different versions open and may have swapped someone's days without meaning to.\n\nA few things I'll just say plainly:\n\n- If you asked for the 24th off, I've tried to give it to you. If you didn't get it, reply and we'll sort it out. I'm not promising anything, but I'll look.\n- Bank holiday cover is the usual mess. Two of you are doing the 25th and 26th, and I'm sorry, I know nobody wants that. I'll owe whoever it is a drink.\n- If you're on call over the break, the phone list is updated in the same folder. Please don't just assume the old number still works.\n\nI know this is a lot of back and forth at a busy time of year. Thanks for being patient with me and with each other. Honestly, it's been a rough few weeks, and you've all made it easier.\n\nGo enjoy the evening. I'm going to.\n\nBest,\n[Your name]"
+  },
+  {
+   "id": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person#plain",
+   "family": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Room Booking Request for 30-Person Workshop\n\nDear [Venue Name] Events Team,\n\nI am writing to request a room booking for a workshop for approximately 30 attendees. I would appreciate your help in confirming availability and pricing.\n\nEvent details:\n- Date: [Preferred date(s)]\n- Time: [Start time] to [End time]\n- Expected attendance: 30 people\n- Room setup: [e.g., classroom-style, theater-style, or roundtable seating]\n- Equipment needs: [e.g., projector, screen, microphone, Wi-Fi, whiteboard]\n- Catering: [Yes/No; if yes, please share available options]\n\nCould you please let me know:\n1. Whether a room of this size is available on the dates above\n2. The rental rate and any minimum booking requirements\n3. Available audiovisual equipment and any associated fees\n4. Your cancellation and deposit policies\n5. The next steps to secure the booking\n\nIf your venue cannot accommodate these dates, I would be grateful for information about alternative dates or other suitable spaces.\n\nThank you for your time. I look forward to hearing from you.\n\nBest regards,\n\n[Your Name]\n[Job Title, Organization]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person#adv3",
+   "family": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Subject: Room Booking Request for 30-Person Workshop\n\nDear [Venue Name] Events Team,\n\nI am writing to ask about booking a room for a one-day workshop for 30 participants. I found your space through your website and believe it could be a good fit.\n\nHere are the details we have so far:\n\n- Expected attendance: 30 people\n- Preferred date: [Date]\n- Preferred time: [Start time] to [End time]\n- Setup needed: Tables and chairs arranged for group work, with a projector and screen\n\nCould you confirm whether the room is available on that date? Also, please send pricing, your catering options, and any minimum booking requirements. Late-morning coffee and lunch would be helpful if you offer them.\n\nIf the date does not work, we are flexible on timing within the same week.\n\nThank you for your time. I look forward to hearing from you.\n\nBest regards,\n\n[Your Name]\n[Organization]\n[Phone Number]\n[Email Address]"
+  },
+  {
+   "id": "fresh2:email:to-a-manager-asking-to-work-from-home-on-fridays#plain",
+   "family": "fresh2:email:to-a-manager-asking-to-work-from-home-on-fridays",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Subject: Request to Work From Home on Fridays\n\nHi [Manager's Name],\n\nI'd like to request permission to work from home on Fridays, beginning [proposed start date]. I've thought through how this would work and believe I can maintain my current level of productivity and responsiveness.\n\nHere's what I'm proposing:\n\n- **Availability:** I'll be online and available on Teams/Slack during regular working hours, and I'll keep my calendar up to date.\n- **Communication:** I'll respond to messages and emails promptly, and I'm happy to join any calls or meetings by video.\n- **Workload:** I'll continue to meet my deadlines and will flag any potential conflicts early.\n- **Flexibility:** If something on the team requires me to be in the office on a particular Friday, I'll be glad to come in with notice.\n\nI'm happy to start with a trial period of [e.g., 6 weeks] so we can review how it's working for the team and make adjustments if needed.\n\nWould you be open to discussing this? I'm glad to talk through any questions or concerns you might have.\n\nThank you for considering my request.\n\nBest regards,\n[Your Name]"
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-rid-of-fruit-flies-in-my-kitchen#plain",
+   "family": "fresh2:qa:how-do-i-get-rid-of-fruit-flies-in-my-kitchen",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Fruit flies usually come from ripe or rotting produce, damp drains, or fermenting liquids. Here's how to get rid of them:\n\n**Remove the source first.** Check fruit bowls, onions, potatoes, and anything overripe. Toss or refrigerate what's rotting. Wipe up spilled juice, soda, and sticky residue.\n\n**Clean drains.** Pour boiling water down sink drains, then scrub the drain opening and disposal rubber gaskets. Fruit flies often breed in the gunk there.\n\n**Set a trap.** Put a few inches of apple cider vinegar or wine in a jar, add a drop of dish soap, and cover the top with plastic wrap. Poke small holes in the wrap. The flies get in but can't get out.\n\n**Keep things covered.** Store fruit in the fridge, and keep trash cans sealed and emptied often.\n\nMost infestations clear up within a week or two once the breeding source is gone. If they keep coming back, look for hidden sources like a forgotten compost bin, recycling, or a drain you haven't cleaned."
+  },
+  {
+   "id": "fresh2:qa:is-it-worth-buying-a-bread-maker#plain",
+   "family": "fresh2:qa:is-it-worth-buying-a-bread-maker",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Honestly, it depends on how much bread you eat and how much you value freshness and control over ingredients.\n\n**It's worth it if:**\n- You go through a loaf or more a week, since store bread gets expensive fast.\n- You want to avoid preservatives, or you're cutting back on sugar, salt, or additives.\n- You enjoy the process. Many people find the hands-off machine satisfying, and it's great for busy households since you can set it to bake while you sleep.\n- You have a dietary need, like gluten-free baking or a specific diet.\n\n**It's probably not worth it if:**\n- You eat bread only occasionally.\n- You have very little counter space.\n- You'd rather knead by hand or use a stand mixer, which gives you more control and often better texture.\n\n**Tips if you buy one:**\n- Start with a basic recipe and get it right before experimenting.\n- Look for a model with a reliable crust setting and a delay timer.\n- Check reviews for loaf size and paddle placement, since paddles can leave a hole in the bottom of the loaf.\n\nIf you tell me how often you eat bread and what kind you like, I can give you a more specific recommendation."
+  },
+  {
+   "id": "fresh2:qa:is-it-worth-buying-a-bread-maker#adv5",
+   "family": "fresh2:qa:is-it-worth-buying-a-bread-maker",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "Honestly depends on how much bread you eat. If you go through a loaf or more a week, yeah, it pays off fast since store bread with decent ingredients is like $5-7 and homemade is maybe $1. Also no preservatives, you control salt and sugar, and the house smells amazing lol. but if you only eat bread like once in a while, skip it, it'll just sit on the counter collecting dust. Mine did that for like 6 months before i actually used it. Also they kinda take up a lot of counter space so think about that. If you're on the fence, check if a friend has one you can try first, or look for a used one at a thrift store or fb marketplace. Basic ones are like $60-100 new. Also the loaves come out kinda squat sometimes and the paddle leaves a hole in the bottom, so dont expect bakery bread every time. Still worth it imo if you'll use it."
+  },
+  {
+   "id": "fresh2:qa:what-is-the-best-way-to-learn-chess-as-an-adult#plain",
+   "family": "fresh2:qa:what-is-the-best-way-to-learn-chess-as-an-adult",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The best way to learn chess as an adult is to combine three habits.\n\nFirst, learn the basics well: how each piece moves, special rules like castling and en passant, and simple checkmate patterns. Use a free course like Chess.com's lessons or Lichess Learn.\n\nSecond, play regularly with a time control of 10 to 15 minutes per side. Games teach you more than almost anything else, and online platforms match you with opponents of similar strength.\n\nThird, review your games. After each one, look for the moment the game turned, then use an engine like Stockfish to check your mistakes. Focus on recurring errors, such as leaving pieces undefended or missing opponent threats.\n\nSolve tactics puzzles daily for 15 to 20 minutes. Pattern recognition improves quickly this way.\n\nFinally, be patient. Adults often progress faster than they expect, but steady practice matters more than long, occasional sessions. Consider a coach or a local club once you're comfortable, since in-person play and feedback can accelerate improvement."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-stop-my-puppy-biting#plain",
+   "family": "fresh2:qa:how-do-i-stop-my-puppy-biting",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Puppy biting is normal, since puppies explore the world with their mouths and are teething. Here's what tends to work:\n\n**Redirect to a toy.** When your puppy mouths you, calmly swap your hand or clothing for a chew toy. Praise them when they bite the toy.\n\n**Say \"ouch\" and pause.** Say a firm \"ouch\" or \"no bite\" in a calm voice, then stop playing for 20 to 30 seconds. Puppies learn that biting makes fun end.\n\n**Don't use hands as toys.** Avoid wiggling fingers or roughhousing with your hands, since this teaches them that hands are for biting.\n\n**Tire them out.** A tired puppy bites less. Provide daily walks, play sessions, and short training games.\n\n**Offer plenty of chew options.** Frozen carrots, rubber chews, and teething toys help with sore gums.\n\n**Be consistent.** Everyone in the household should respond the same way.\n\nMost puppies grow out of biting by about 6 months. If it persists or becomes aggressive, consult a certified trainer or your veterinarian."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-stop-my-puppy-biting#adv3",
+   "family": "fresh2:qa:how-do-i-stop-my-puppy-biting",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Puppy biting is normal, but you can teach your pup to stop. Puppies explore the world with their mouths, and they often bite when they're tired, bored, or teething.\n\nTry these steps:\n\n- **Redirect right away.** When those little teeth land on your hand, swap your hand for a chew toy. Praise your pup when they chew the toy instead.\n- **Stop the play.** If biting continues, stand up, fold your arms, and turn away for about 30 seconds. Attention is a reward, so this teaches that biting ends the fun.\n- **Give plenty of exercise.** A tired puppy bites less. Short walks, fetch, and puzzle toys all help burn energy.\n- **Offer teething relief.** Freeze a wet washcloth or a rubber chew toy. Cold helps sore gums.\n- **Be consistent.** Everyone in the house should respond the same way.\n\nMost puppies grow out of mouthy behavior by about six months. Be patient, and keep rewarding the gentle moments."
+  },
+  {
+   "id": "fresh2:qa:should-i-fix-my-old-phone-or-buy-a-new-one#plain",
+   "family": "fresh2:qa:should-i-fix-my-old-phone-or-buy-a-new-one",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Fixing an old phone is often the smarter choice, especially if the problem is small. Start by checking the cause. A dying battery can usually be replaced for well under the cost of a new phone. A cracked screen is also a common, affordable repair. Before paying for anything, try a few free fixes: back up your data, do a software update, clear storage, close background apps, and reset the phone if it's sluggish.\n\nBuy a new phone if the device no longer receives security updates, since unpatched phones are a real risk. Also consider replacing it if it has frequent crashes, water damage, or a repair cost above roughly half the price of a comparable new or refurbished model. Apps may also stop working on old hardware over time.\n\nIf you do upgrade, a certified refurbished phone often gives you good value with a warranty. Whichever you choose, get a quote from a reputable repair shop first so you can compare costs with confidence."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-keep-basil-alive-indoors#plain",
+   "family": "fresh2:qa:how-do-i-keep-basil-alive-indoors",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Basil is tropical and hates cold, dry air, so give it these basics:\n\n**Light:** Place it in your sunniest window, ideally south- or west-facing. Basil needs 6 or more hours of direct light a day. If you don't have that, use a full-spectrum LED grow light 6 to 12 inches above the plant for 12 to 14 hours daily.\n\n**Water:** Keep the soil evenly moist but never soggy. Water when the top half-inch feels dry, and always use a pot with drainage holes.\n\n**Temperature:** Keep it between 65 and 80°F (18 to 27°C). Keep it away from cold drafts, doors, and heating vents.\n\n**Harvest often:** Pinch off the top sets of leaves just above a pair of leaves. This keeps the plant bushy and delays flowering. Pinch off any flower buds as soon as they appear.\n\n**Feed lightly:** Use a diluted liquid fertilizer every 2 to 4 weeks during active growth.\n\n**Humidity:** Mist occasionally or group it with other plants if your air is very dry.\n\nWith good light and regular trimming, your basil should keep producing for months."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-keep-basil-alive-indoors#adv3",
+   "family": "fresh2:qa:how-do-i-keep-basil-alive-indoors",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Basil loves warmth and light, so start by putting your pot in the sunniest window you have, ideally south-facing. Aim for at least six hours of direct light a day. If your windows fall short, a grow light placed 6 to 12 inches above the plant works well, run for 12 to 14 hours.\n\nWater when the top inch of soil feels dry. Pour until it drains out the bottom, then empty the saucer so the roots don't sit in water. Basil hates soggy soil, but it also hates going bone dry.\n\nKeep it away from cold drafts, heating vents, and chilly glass in winter. Basil wilts fast in temperatures below 50 degrees Fahrenheit.\n\nPinch off the top set of leaves just above a pair of side leaves. This keeps the plant bushy and stops it from flowering, which makes the leaves taste bitter. Harvest often, and never take more than a third of the plant at once.\n\nFinally, give it a little air circulation. A small fan on low helps prevent mildew. Happy growing!"
+  },
+  {
+   "id": "fresh2:qa:what-should-i-do-if-my-boss-keeps-changing-deadl#plain",
+   "family": "fresh2:qa:what-should-i-do-if-my-boss-keeps-changing-deadl",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Frequent deadline changes are frustrating, but you can often manage them. Start by asking your boss for clarity: \"Just to confirm, is this the new deadline, and what should I deprioritize to hit it?\" This makes the tradeoff visible without sounding resistant.\n\nNext, keep a simple written record. When a deadline shifts, send a short follow-up such as \"Confirming the project is now due Friday instead of Wednesday.\" That creates a reference point and helps if priorities get questioned later.\n\nIf changes are constant, look for patterns. Are they driven by a specific client, a particular leader, or unclear goals? Raising this in a one-on-one can help: \"I want to deliver well on these. Could we agree on how urgent changes get communicated, so I can plan better?\"\n\nFinally, protect your capacity. Avoid absorbing every shift silently, since that often leads to burnout. If the pattern continues despite your efforts, talk with your manager's manager or HR about workload and planning."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-better-at-public-speaking#plain",
+   "family": "fresh2:qa:how-do-i-get-better-at-public-speaking",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Practice often, and start small. Speak to a mirror, record yourself, or give short talks to friends before tackling bigger audiences. Each session builds comfort.\n\nPrepare thoroughly, but don't memorize word for word. Know your main points well enough to explain them in your own words, and practice your opening until it feels automatic. A strong start calms nerves.\n\nFocus on your audience rather than your fear. Make eye contact, speak to one person at a time, and remember they want you to succeed. Pausing is powerful, so don't rush to fill silences.\n\nWatch your pace and volume. Many nervous speakers talk too fast, so slow down deliberately and project your voice.\n\nGet feedback. Join a group like Toastmasters, where you'll get regular, supportive critiques in a low-pressure setting.\n\nFinally, reframe nerves as excitement. Your body responds the same way to both, so telling yourself \"I'm excited\" can improve your performance."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-better-at-public-speaking#adv0",
+   "family": "fresh2:qa:how-do-i-get-better-at-public-speaking",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "Honestly the only thing that really worked for me was joining Toastmasters, and even then it took like 4 months before I stopped sweating through my shirt. Before that I'd practice in the car, which sounds dumb but you can't hide from yourself in a car.\n\nStuff that helped more than the generic \"just practice\" advice:\n\n- Record yourself on your phone, even a 2-minute talk. Watching it back is painful but you'll spot the \"um\"s and the way you rock side to side.\n- Don't memorize word for word. Memorize the first sentence and last sentence, and know your 3 main points. If you blank you can just say the point again in different words.\n- Pause way more than feels normal. Like double what you think. Nobody notices the silence except you.\n- Find one friendly face in the crowd and talk to them for a sentence or two, then move on.\n\nAlso the nerves don't really go away, they just stop mattering after you've done it like 10 times. Good luck, it gets less awful."
+  },
+  {
+   "id": "fresh2:qa:why-does-my-java-app-use-so-much-memory#plain",
+   "family": "fresh2:qa:why-does-my-java-app-use-so-much-memory",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Java apps often look like they use too much memory because the JVM reserves far more than it actively needs. Several things can cause this:\n\n1. **Heap sizing:** The JVM grows the heap up to `-Xmx` (or 1/4 of physical RAM by default) and rarely shrinks it. Garbage that hasn't been collected yet still counts toward usage.\n\n2. **Non-heap memory:** Metaspace (class metadata), thread stacks (about 1 MB per thread), code cache (JIT output), and direct buffers all sit outside the heap. Libraries that generate classes at runtime, such as Spring, Hibernate, or Groovy, can push Metaspace very high.\n\n3. **Container limits:** In Docker or Kubernetes, older JVMs may ignore cgroup limits. Use `-XX:+UseContainerSupport` (default in modern JDKs) or set `-XX:MaxRAMPercentage`.\n\n4. **Memory leaks:** Static collections, unclosed resources, listeners that are never removed, or caches with no eviction policy keep objects reachable.\n\n**To diagnose:**\n- Run `jcmd <pid> VM.native_memory summary` (start the JVM with `-XX:NativeMemoryTracking=summary`).\n- Use `jmap -histo:live <pid>` to find the biggest object types.\n- Take a heap dump with `jmap -dump:live,format=b,file=heap.hprof <pid>` and analyze it in Eclipse MAT or VisualVM.\n- Watch GC behavior with `-Xlog:gc*`.\n\nIf the heap plateaus after GC, the usage is probably just sizing. If it keeps climbing, look for a leak. Share your JVM flags and the output of `jcmd ... VM.native_memory` for more specific help."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-undo-the-last-git-commit-but-keep-my-ch#plain",
+   "family": "fresh2:qa:how-do-i-undo-the-last-git-commit-but-keep-my-ch",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Use `git reset --soft HEAD~1`. It removes the commit but leaves your changes staged, so they're ready to recommit.\n\n```bash\ngit reset --soft HEAD~1\n```\n\nIf you want the changes unstaged instead, use mixed mode, which is the default:\n\n```bash\ngit reset HEAD~1\n```\n\nEither way, your working-tree files stay exactly as they were.\n\nTo make changes to the commit message or contents instead of just undoing it, use:\n\n```bash\ngit commit --amend\n```\n\nAvoid `git reset --hard HEAD~1` unless you want to discard the changes too.\n\nIf you've already pushed the commit, rewriting history will require a force push, so coordinate with anyone else working on the branch first. A safer alternative for shared branches is `git revert HEAD`, which creates a new commit that undoes the previous one."
+  },
+  {
+   "id": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem#plain",
+   "family": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "A **mutex** (mutual exclusion lock) allows only one thread to access a resource at a time. It has an ownership concept: only the thread that locked it can unlock it. Its purpose is protecting a critical section, so that shared data is never modified by two threads at once.\n\nA **semaphore** is a counter-based signaling mechanism. It allows up to N threads to access a resource concurrently, where N is the initial count. Threads call `wait()` (or `P`/`acquire`) to decrement the count and block if it's zero, and `signal()` (or `V`/`release`) to increment it. Any thread can signal, not just the one that waited, so semaphores work well for coordination between threads or processes, such as producer-consumer queues or limiting a connection pool.\n\nKey differences:\n\n- **Ownership:** Mutexes have an owner; semaphores don't.\n- **Count:** Mutexes are binary (locked or unlocked); semaphores are integer counters.\n- **Use case:** Mutexes provide mutual exclusion; semaphores provide signaling and resource counting.\n\nA binary semaphore (count of 1) looks like a mutex, but it lacks ownership, so it isn't a substitute. Use a mutex to protect data, and a semaphore to signal events or limit concurrency."
+  },
+  {
+   "id": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem#adv1",
+   "family": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "ok sorry this is probably obvious to everyone but I've been staring at a deadlock for like 3 hours and my brain is mush. so my understanding is:\n\nmutex = a lock. one thread grabs it, does its thing, releases it. the key bit is that only the thread that locked it can unlock it. that's the \"ownership\" thing people keep mentioning.\n\nsemaphore = a counter. you start it at N, each wait() decrements it, each signal() increments it, and if it hits 0 you block. any thread can signal, not just the one that waited. so it's more like \"up to N things can use this at once\" (connection pool, that kind of thing).\n\nand a binary semaphore (count of 1) is NOT the same as a mutex even though they look alike, because of the ownership thing again. which apparently bit whoever wrote the code I'm debugging lol.\n\nanyway if I'm wrong about any of this someone please correct me, I'm going to bed. thanks 🙏"
+  },
+  {
+   "id": "fresh2:qa:why-is-my-rest-api-slow-under-load#plain",
+   "family": "fresh2:qa:why-is-my-rest-api-slow-under-load",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Slowdowns under load usually come from a few common bottlenecks. Start by measuring:\n\n1. **Find the bottleneck.** Check CPU, memory, and I/O on the server during load. Use APM tools or profilers (py-spy, async-profiler, pprof) to see where time goes.\n\n2. **Database queries.** This is the most common cause. Look for N+1 queries, missing indexes, and `SELECT *` on large tables. Enable slow query logs and run `EXPLAIN` on suspect queries.\n\n3. **Connection pool exhaustion.** If requests wait for DB connections, latency spikes. Size the pool to match your DB's capacity, not your request concurrency.\n\n4. **Blocking calls.** Synchronous HTTP calls to other services, file I/O, or CPU-heavy work inside request handlers tie up workers. Move them to async tasks or queues.\n\n5. **No caching.** Cache expensive, rarely changing responses with Redis or HTTP caching headers (`Cache-Control`, `ETag`).\n\n6. **Unbounded responses.** Endpoints returning thousands of rows without pagination slow down under load. Add pagination and limit payload size.\n\n7. **Too few workers.** Check that your app server (gunicorn, uvicorn, Node cluster, etc.) has enough workers for the cores available.\n\n8. **Missing timeouts and retries.** Slow downstream services can cascade. Set timeouts and circuit breakers.\n\nRun a load test with k6 or wrk while profiling, and share the profiler output and slow query log if you want more specific help."
+  },
+  {
+   "id": "fresh2:qa:should-i-learn-vue-or-react-first#plain",
+   "family": "fresh2:qa:should-i-learn-vue-or-react-first",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Learn React first, unless you have a specific reason to pick Vue.\n\nReact has the larger job market, so it's more useful if you want employment. Its ecosystem is also bigger, with more tutorials, libraries, and answers on Stack Overflow. Once you know React, the concepts (components, props, state, hooks, rendering) transfer to other frameworks.\n\nVue is often easier to start with. Its single-file components keep HTML, JS, and CSS together, and its docs are widely praised. If you're a beginner who wants quick wins and a gentler learning curve, Vue is a fine choice. Learning it well is still valuable, and it's used in many companies, especially in Asia and parts of Europe.\n\nSome practical advice:\n\n- Pick one and build a few small projects before switching.\n- Learn plain JavaScript (ES6+, promises, async/await, array methods) first. Both frameworks depend on it.\n- Use the official docs. Vue's guide and React's new docs are both good.\n\nIf you tell us your goal (job, side projects, hobby) and your background, we can give a more specific recommendation."
+  },
+  {
+   "id": "fresh2:qa:why-does-my-css-grid-overflow-on-small-screens#plain",
+   "family": "fresh2:qa:why-does-my-css-grid-overflow-on-small-screens",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Likely causes:**\n\n1. **Fixed-width tracks.** Columns like `grid-template-columns: 300px 300px 300px` never shrink, so the grid overflows once the viewport is narrower than the total width.\n\n2. **Grid items won't shrink below their content.** Grid items default to `min-width: auto`, so a long word, image, or `<pre>` block can force its track wider than the `1fr` you expected. Fix this with `min-width: 0` on the item, or by using `minmax(0, 1fr)` for the track.\n\n3. **Unbreakable content.** URLs, long code strings, and images without constraints keep their intrinsic width. Try `overflow-wrap: anywhere;` and `img { max-width: 100%; height: auto; }`.\n\n**Responsive fixes:**\n\n```css\n.grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));\n  gap: 1rem;\n}\n\n.grid > * {\n  min-width: 0;\n}\n```\n\nThe `min(100%, 250px)` part matters: a plain `minmax(250px, 1fr)` still overflows when the viewport is narrower than 250px, because the minimum is fixed.\n\nIf you still see overflow, check the layout in DevTools. Hover over the grid's children to see which element is wider than its track, and make sure the page has no `width` set in pixels on a parent."
+  },
+  {
+   "id": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po#plain",
+   "family": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# postcode-validator\n\nA fast, dependency-free library for validating and normalizing postcodes from over 200 countries. It checks each postcode against its country's format rules, so `SW1A 1AA`, `90210`, and `1000 AB` are accepted while `ABCDE` and `12-3456` are rejected. Normalization returns a consistent form, such as uppercasing letters and inserting the standard separator, so you can store and compare postcodes reliably.\n\nUse it to clean up address forms, validate shipping data, or enrich records before they reach your database."
+  },
+  {
+   "id": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po#adv2",
+   "family": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Postcode Validator is a lightweight library for checking whether a string is a well-formed postal code. It supports the formats used across many countries, so you can confirm user input before it reaches your database, a shipping API, or a payment form. Each validator checks the length, character set, and positional rules for its country, and returns a clear result so your application can decide how to respond. Whether you are building a checkout flow, cleaning a customer list, or verifying addresses at a point of entry, the library gives you a fast, dependency-free check that catches common typos and malformed values early."
+  },
+  {
+   "id": "fresh2:docs:a-changelog-entry-for-version-0-9-of-a-cli-that-#plain",
+   "family": "fresh2:docs:a-changelog-entry-for-version-0-9-of-a-cli-that-",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "## [0.9] - 2026-11-18\n\n### Added\n- `sync` command to push local dotfiles to the configured remote and pull changes from it.\n- `status` command that shows which tracked files differ from the remote copy.\n- Support for ignoring files with glob patterns in the config file.\n\n### Changed\n- Conflicting changes now stop the sync and list the affected files instead of overwriting either side.\n- Symlinks are preserved during sync rather than being copied as regular files.\n\n### Fixed\n- Dotfiles in nested directories are no longer skipped when the parent directory is excluded.\n- Incorrect file permissions are no longer applied to files restored on a new machine."
+  },
+  {
+   "id": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work#plain",
+   "family": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# On-Call Handover\n\nThis page describes how on-call responsibility passes from one engineer to the next. A good handover keeps incidents from falling through the cracks, avoids repeating investigations, and makes sure the incoming engineer starts with the context they need.\n\n## Scope\n\nThis process applies to every engineer on a primary or secondary on-call rotation. It covers handovers at the end of each shift, handovers when someone goes off rotation mid-week, and handovers to a backup who is covering unexpectedly.\n\n## Roles\n\n- **Outgoing on-call:** The engineer currently holding the pager. Responsible for writing the handover summary and walking through open items.\n- **Incoming on-call:** The engineer taking over the pager. Responsible for reading the handover, asking questions, and confirming they have taken over.\n- **Shift lead (if applicable):** Resolves disagreements about priority and confirms that the handover happened.\n\n## When Handover Happens\n\n- At the scheduled rotation time, typically Monday 10:00 local time for weekly rotations.\n- Early, if the outgoing engineer is unwell, traveling, or otherwise unable to cover. In that case, notify the shift lead and the incoming engineer as soon as possible.\n- At the end of a major incident that spans the rotation boundary. The incident commander should coordinate the handover, not just the on-call engineer.\n\n## Before the Handover\n\nThe outgoing engineer should prepare the following at least 30 minutes before the rotation change:\n\n1. **Update the handover doc.** Use the template below and copy it into the on-call log for the current rotation.\n2. **Review open alerts and tickets.** Close anything resolved. For anything still open, note its current state and next step.\n3. **Check silences and maintenance windows.** List any active silences, scheduled changes, or deploys that may fire alerts during the next shift.\n4. **Review recent pages.** Note any alert that fired repeatedly, was acknowledged without action, or was a false positive. Flag alerts that need tuning.\n5. **Confirm access.** Make sure the incoming engineer has access to the pager app, dashboards, runbooks, and any production tooling they may need.\n\n## Handover Template\n\n```\n## On-call handover: [Outgoing] → [Incoming]\nDate/time: YYYY-MM-DD HH:MM [timezone]\n\n### Active incidents\n- [Incident ID / link]: status, impact, current action, next step, who to contact\n\n### Open tickets or investigations\n- [Ticket link]: summary, current hypothesis, blocker if any\n\n### Recent pages (last shift)\n- [Alert name] × [count]: outcome (resolved / false positive / needs follow-up)\n\n### Scheduled changes in the next shift\n- [Deploy / maintenance / migration]: time, owner, rollback plan\n\n### Silences and suppressions\n- [Alert or service]: reason, expiry\n\n### Things to watch\n- Known flaky alerts, services under elevated load, customer escalations pending\n\n### Notes\n- Anything else the incoming engineer should know\n```\n\n## During the Handover\n\nThe handover should be a short live conversation, 10 to 15 minutes, followed by written confirmation.\n\n1. The outgoing engineer walks through the handover document, starting with active incidents.\n2. The incoming engineer asks questions. Questions are expected and should not be treated as criticism.\n3. Both engineers confirm which open items transfer to the incoming engineer. Items not explicitly transferred remain with the outgoing engineer until they confirm otherwise.\n4. The incoming engineer verifies they can receive pages by sending a test notification or checking the paging app.\n\n## Confirming the Handover\n\nThe handover is complete when:\n\n- The incoming engineer has acknowledged in the on-call channel: \"Taking over on-call from [name].\"\n- The paging system shows the incoming engineer as primary.\n- The outgoing engineer has posted a link to the handover doc in the on-call channel.\n\nUntil these three things happen, the outgoing engineer remains responsible for pages.\n\n## After the Handover\n\n- The outgoing engineer remains reachable for at least 24 hours for questions about their shift, unless they are off work.\n- The incoming engineer owns all new pages and any transferred items.\n- Any item the incoming engineer cannot resolve should be escalated to the shift lead, not left for the outgoing engineer to pick up informally.\n\n## Common Problems\n\n- **Missing context:** The most frequent issue is an incident that was in progress but not mentioned. Prevention: check the incident channel and open tickets during preparation, not from memory.\n- **Silent transfers:** Work that was assumed to be handed over but never confirmed. Prevention: transfer items by name in the live conversation.\n- **Alert fatigue carried forward:** Noisy alerts that everyone knows to ignore but nobody fixes. Prevention: flag them in the handover and file a tuning ticket.\n- **Handover skipped under pressure:** Usually during a live incident. Prevention: the incident commander decides when a handover can be deferred, and the reason is recorded.\n\n## Related Pages\n\n- Escalation policy\n- Incident response process\n- Paging and alert routing\n- Runbook index"
+  },
+  {
+   "id": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work#adv5",
+   "family": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "# On-call handover\n\n**Owner:** SRE team (?)\n**Last updated:** 2026-11-18\n**Status:** DRAFT - not reviewed\n\n---\n\n## What this is\n\nHandover is the thing we do when on-call switches from one person to the next. Usually Monday 10am, sometimes whenever someone's swapped. We need to get better at this, people keep saying the handover was \"fine\" and then something breaks at 3am that was obviously in somebody's head.\n\nTODO: check if the rotation is still weekly or if we moved to the 4-day thing Priya mentioned\n\n## Who does what\n\n- **Outgoing on-call** - writes the handover note, walks through open stuff in the sync\n- **Incoming on-call** - reads the note before the sync, asks questions, confirms they have pager access and VPN working\n- **Team lead** - nominally in charge of making sure it happens, in practice nobody checks\n\n## The handover note\n\nPut it in the `#oncall-handover` channel AND in the wiki under `oncall/handovers/YYYY-MM-DD`. (we had a thing where people only posted in slack and then it got lost, so both)\n\nShould include:\n\n- Open incidents or anything still \"monitoring\"\n- Alerts that fired in the last rotation that aren't resolved or were silenced\n- Silences currently active and when they expire (** these are the ones that bite us **)\n- Any deploys in flight or scheduled during the rotation\n- Customer tickets that need follow-up\n- Weird stuff. \"The billing cron took 40 min on Tuesday, not sure why\" counts.\n\nTemplate is in `oncall/_template.md` but honestly most people don't use it. Probably should.\n\n## The sync\n\n15 minutes, usually. Go through the note, incoming person asks questions. Don't skip this even if it feels redundant. Last time someone skipped it we didn't find out about the staging cert expiring until it expired.\n\n## Pager and access checks\n\nIncoming on-call should verify before the handover is considered done:\n\n- [ ] Pager app is installed and notifications work (test page from the schedule tool)\n- [ ] VPN works from home network AND from phone hotspot\n- [ ] Can log into the status page admin\n- [ ] Has prod read access, and break-glass creds are where the doc says (the doc link is broken, see below)\n- [ ] Knows where the runbooks are. (they're in three places, we need to consolidate, see ticket OPS-412)\n\n## Things that go wrong\n\n- Outgoing person is already on a plane / offline and the note is thin\n- Silences nobody remembers creating\n- Incoming person assumes something was handled when it wasn't\n- Handover happens in a DM and then the DM is basically lost\n- \"I'll write it up after standup\" -> never written up\n\n## Open questions\n\n- Should handover be async-only for people in different timezones? Kenji thinks yes, I don't know.\n- Do we need a formal sign-off or is \"yep got it\" enough\n- What do we do when the outgoing person was paged overnight and is exhausted. Can they skip the sync? Someone should decide this.\n- Break-glass doc link is 404, need to find the new location\n\n## Related\n\n- Runbook index (outdated, probably)\n- Escalation policy\n- Post-incident review process (not really linked to handover but should be)\n\n<!-- TODO: add screenshot of the pager schedule once I figure out how to export it -->"
+  },
+  {
+   "id": "fresh2:docs:a-bug-report-for-a-calendar-app-that-shows-event#plain",
+   "family": "fresh2:docs:a-bug-report-for-a-calendar-app-that-shows-event",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Title:** Events display one hour late after daylight saving time change\n\n**Severity:** High\n**Priority:** P1\n**Component:** Calendar display / time zone handling\n**Affects:** All users in time zones that observe daylight saving time\n\n**Summary**\nAfter the clocks change (both the spring-forward and fall-back transitions), events appear one hour later than their scheduled time. Events created before the transition are shown at the wrong local time, and the displayed time does not match the time shown in the device's clock or in other calendar applications.\n\n**Steps to Reproduce**\n1. Set the device time zone to a zone that observes DST (e.g., America/New_York).\n2. Create an event for a time shortly after the upcoming transition, such as 9:00 AM the day after the change.\n3. Advance the system clock or wait until the DST transition occurs.\n4. Open the calendar and view the event.\n\n**Expected Result**\nThe event remains at 9:00 AM local time after the transition, because recurring and local-time events should keep their wall-clock time.\n\n**Actual Result**\nThe event is displayed at 10:00 AM local time. The offset appears to be fixed at the time of creation (or at the UTC offset in effect when the event was saved) rather than recalculated for the local time zone.\n\n**Additional Details**\n- The problem appears to affect events stored as absolute UTC timestamps without a time zone identifier. Events stored with an explicit IANA time zone may behave differently; this has not been verified.\n- Recurring events are also affected. Every occurrence after the transition is offset by one hour.\n- The bug occurs on both transitions, though the fall-back case may also produce duplicate or missing entries.\n\n**Environment**\n- App version: [fill in]\n- OS and version: [fill in]\n- Device time zone: [fill in]\n- Calendar sync source (e.g., Google, iCloud, Exchange, local): [fill in]\n\n**Suggested Investigation**\n- Check whether event times are converted using the offset stored at creation time instead of the time zone rules in effect for the event date.\n- Verify that recurring event expansion uses the local time zone rules for each occurrence.\n- Confirm that the time zone database used by the app is current.\n\n**Workaround**\nRestarting the app or re-saving the event sometimes corrects the displayed time, but this is not reliable."
+  },
+  {
+   "id": "fresh2:docs:a-short-description-of-a-feature-flag-system-for#plain",
+   "family": "fresh2:docs:a-short-description-of-a-feature-flag-system-for",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Feature Flag System\n\nFeature flags let us turn functionality on or off at runtime without deploying new code. Each flag is a named switch, such as `new-checkout-flow`, that the application checks before running a given code path. Flags let us ship code behind a switch, test it in production with a small group of users, gradually roll it out, and disable it instantly if something breaks.\n\n**How it works:**\n- **Define:** Create a flag in the flag management service with a unique name, a description, and a default value.\n- **Check:** In code, evaluate the flag (for example, `if flags.isEnabled(\"new-checkout-flow\", user)`) and branch accordingly.\n- **Target:** Rules decide who sees the feature, based on user ID, account, region, or percentage of traffic.\n- **Clean up:** Once a feature is fully rolled out, remove the flag check and delete the flag. Stale flags add complexity.\n\n**Guidelines:**\n- Keep flag checks close to the entry point of a feature, not scattered through the codebase.\n- Make sure the code works with the flag both on and off.\n- Treat flags as temporary. Name them clearly and set an owner and removal date.\n- Don't put secrets or sensitive configuration in flags."
+  },
+  {
+   "id": "fresh2:docs:a-short-description-of-a-feature-flag-system-for#adv1",
+   "family": "fresh2:docs:a-short-description-of-a-feature-flag-system-for",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Okay so. Feature flags. You'll hear about them constantly, so here's the short version before I forget what I was going to say.\n\nThey're just if-statements that live outside the code. Wrap a new thing in a flag, deploy it, and it's off until someone flips it on in the dashboard. That's the whole trick. Ship dark, turn on for 5% of users, watch the graphs, go to 100%, or yell and turn it off. No redeploy. Mostly.\n\nA few things that will bite you:\n\n- The flag service is a dependency now. If it's down, we fall back to the default value in code, so always check what that default is before you assume something's on.\n- Flags pile up. Every flag you add is a branch someone has to remember to delete. Delete your flag after it's fully rolled out. Nobody does this. Be the exception. There's a ticket on the board about the 40 old ones and it's not getting better on its own.\n- Don't put secrets or per-user permissions in flags. Those belong in the auth system. Flags are for \"is this feature ready,\" not \"is this person allowed.\"\n- Test both sides. If you only test with the flag on, the flag-off path is a surprise waiting for a Tuesday night.\n- Flag names are permanent-ish. Pick something that says what it does, not `new_checkout_v2_final_FINAL`.\n\nIf you're stuck, ask in the platform channel. Someone who has been here longer than me will know which flag is secretly load-bearing."
+  },
+  {
+   "id": "fresh2:comment:about-a-plan-to-close-a-local-post-office#plain",
+   "family": "fresh2:comment:about-a-plan-to-close-a-local-post-office",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Losing this post office would hit people who can least afford the trip. Seniors who don't drive, small business owners who mail invoices and supplies, and residents without reliable internet all depend on this counter. The nearest alternative is several miles away, and the USPS has not explained how people will get there without a car or how a longer trip will fit into their week. Before the board approves anything, it should publish a real plan that shows travel times, hours at the replacement location, and what happens to package pickup and passport services.\n\nCost savings are a fair concern, but a building closure is not the only way to save money. Reduced hours, a shared counter inside a local business, or a community meeting to review the numbers would all be better starting points. Once a post office closes, it almost never reopens, and the town will be left with a permanent loss. I urge officials to hold public hearings, release the financial data behind the decision, and consider options that keep a postal presence in the neighborhood."
+  },
+  {
+   "id": "fresh2:comment:about-rising-train-fares#plain",
+   "family": "fresh2:comment:about-rising-train-fares",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Rising train fares have become impossible to ignore for anyone who commutes or travels regularly. Fares have climbed well above inflation in many places, while service reliability has not kept pace. Riders are paying more for trains that are often delayed, overcrowded, or cut back on weekends and evenings. Those who can least afford higher costs, like shift workers, students, and people in lower-income neighborhoods, end up absorbing the biggest burden, and many are pushed toward driving or go without.\n\nTransit agencies say fare increases are necessary to cover rising operating costs and make up for lost ridership since the pandemic. That argument has some weight, but it doesn't justify raising prices on a product that is getting worse. Before asking riders to pay more, officials should show what the extra money is buying: more frequent trains, better maintenance, and expanded routes. Lawmakers also need to step up with dedicated funding so agencies aren't forced to choose between fare hikes and service cuts every budget cycle."
+  },
+  {
+   "id": "fresh2:comment:about-rising-train-fares#adv3",
+   "family": "fresh2:comment:about-rising-train-fares",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Rising fares are getting harder to ignore. My commute cost went up again this year, and the service hasn't gotten any better. Trains are late more often than not, and the cars are crowded during rush hour. Riders are paying more for less, and nobody at the agency seems to be losing sleep over it.\n\nIf the goal is to get people out of their cars, raising prices is a strange way to go about it. Make the trains reliable and clean, and people will pay for them. Right now it feels like the agency is squeezing the people who have no other option."
+  },
+  {
+   "id": "fresh2:comment:about-a-new-cycle-lane-on-your-street#plain",
+   "family": "fresh2:comment:about-a-new-cycle-lane-on-your-street",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Here's a comment you could post:\n\nI live on this street and have watched traffic here for years, so I'm glad to see the new cycle lane finally going in. Cars have been speeding past parked delivery vans and school drop-offs with very little room for anyone on a bike, and it was only a matter of time before someone got hurt. Separating bikes from traffic should make the road safer for cyclists, drivers, and pedestrians alike, and it may also calm the speeding that makes crossing here so stressful for families with kids.\n\nThat said, I hope the council follows up with clear signage and enforcement so drivers and delivery workers don't keep stopping in the lane. Some of the early construction has been slow and the detours have been confusing, but I'd rather put up with a few months of disruption for a street that works better for everyone in the long run."
+  },
+  {
+   "id": "fresh2:comment:about-a-school-banning-homework#plain",
+   "family": "fresh2:comment:about-a-school-banning-homework",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Honestly, I think this is a bold move that's long overdue. Homework has become a second shift for many kids, eating into evenings, family time, sleep, and the hobbies that actually build curiosity. The research on homework's benefits is far weaker than its defenders suggest, especially in the elementary years, and too often it measures compliance rather than learning. If a school can get the same results through focused in-class practice and reading at home, that's a win for students and parents alike. Let's see how the policy works in practice before we judge it, but I'd rather see schools experiment like this than keep assigning worksheets out of habit."
+  },
+  {
+   "id": "fresh2:comment:about-a-supermarket-removing-self-checkouts#plain",
+   "family": "fresh2:comment:about-a-supermarket-removing-self-checkouts",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Good riddance to the self-checkout machines. They were sold as a way to speed things up, but in practice I spend more time waiting for an attendant to clear an \"unexpected item in bagging area\" error than I ever saved by skipping the cashier. Meanwhile, the stores quietly cut staff, and the work just got shifted onto customers who now do the scanning, bagging, and troubleshooting for free. Bringing back actual cashiers means more people with jobs and fewer frustrated shoppers jabbing at a touchscreen while the line behind them grows.\n\nI understand the cost pressures behind the change, and self-checkout does have a place for small baskets and simple purchases. But the chains that rolled these out aggressively should own the tradeoff instead of calling it progress. Some of us would happily pay a few cents more per item for a human who can check an ID, fix a bad barcode, or just say good morning. If this move means the store is finally listening to customers, I hope it sticks."
+  },
+  {
+   "id": "fresh2:comment:about-a-supermarket-removing-self-checkouts#adv1",
+   "family": "fresh2:comment:about-a-supermarket-removing-self-checkouts",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "I don't care what they say about \"convenience\" anymore. I've spent my whole shift on my feet and the one thing I wanted was to grab a bag of salad and go home. Now I have to wait behind a guy with a cart full of cereal, a woman arguing with the cashier about a coupon, and a teenager who keeps scanning the same yogurt. The self-checkouts were the only reason I could get out of there before nine. If the store's going to take them out, at least tell us where the extra lanes are going to be, because it's already a mess at the registers.\n\nMaybe I'm just tired. I know the people who run these places are watching the numbers, and I know the machines jam and ask for help every third item. But somebody has to pay for those extra cashiers, and it's usually whoever's standing in line at 8pm with a headache. Anyway, I hope it works out. I'm going to bed."
+  },
+  {
+   "id": "fresh2:comment:about-a-city-getting-a-new-football-stadium#plain",
+   "family": "fresh2:comment:about-a-city-getting-a-new-football-stadium",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Finally, a stadium that won't make us wait twenty years for the next game day. The city has been talking about a new ground for as long as I can remember, so it's good to see shovels actually going in the dirt. Yes, it's expensive, and I expect the council to hear plenty about the budget at every meeting. But a modern venue will bring match-day spending to local bars, restaurants, and hotels, and it gives the youth clubs a proper home instead of the muddy pitches they've been sharing. Let's hope the builders stay on schedule."
+  },
+  {
+   "id": "fresh2:comment:about-a-city-getting-a-new-football-stadium#adv3",
+   "family": "fresh2:comment:about-a-city-getting-a-new-football-stadium",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Finally, a stadium that doesn't look like it was designed by a committee of accountants. Yes, the price tag is big, and yes, some of us are still wondering where the money is coming from. But the people who pushed for this have a point: a stadium brings in game-day crowds, keeps local restaurants busy, and gives the downtown area a reason to stay lively after work. Build it right, hire local crews, and we might actually get something we can be proud of.\n\nI'll be the first to say it. Let's hold the city to its promises on traffic, parking, and the public money involved. If they do, this could be a good deal for everyone. If they don't, well, we'll be the ones reading about it in the paper."
+  },
+  {
+   "id": "fresh2:blog:about-your-first-year-running-a-small-bakery#plain",
+   "family": "fresh2:blog:about-your-first-year-running-a-small-bakery",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# One Year of Flour, Failure, and Early Mornings\n\nA year ago, I unlocked the door of a narrow storefront with a dented oven, three mixing bowls, and a hope that people would show up for sourdough. Today I can tell you that they did, though not always when I expected.\n\nThe first month taught me that a bakery runs on the clock. My alarm rang at 3:30 a.m., and I learned to love the quiet hour when the streets were empty and the dough was doing exactly what I asked of it. I also learned that dough does not care how tired you are.\n\nSome lessons came from mistakes. I underestimated how many cinnamon rolls a Saturday would sell and watched a line of disappointed customers stare at empty trays. I overpriced my baguettes and underpriced my scones. I burned a full batch of focaccia the week a health inspector visited. Each error cost money, but each one made the next morning a little smoother.\n\nThe best moments were not in the spreadsheets. They were the regulars who asked about my kids, the college student who said my rye reminded her of her grandmother's, and the neighbor who brought me tomatoes from her garden in exchange for a loaf.\n\nI am not yet profitable in the way my accountant wants me to be. My hands are cracked, my back aches, and I still sleep less than I should. But when I flip the sign to \"Open\" each morning, I feel something I never felt in my old office job: that I made something real with my own hands.\n\nYear two starts Monday. I've already started the starter."
+  },
+  {
+   "id": "fresh2:blog:about-your-first-year-running-a-small-bakery#adv2",
+   "family": "fresh2:blog:about-your-first-year-running-a-small-bakery",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Our Bakery Turns One\n\nA year ago I unlocked the front door of a narrow storefront with flour on my hands and no real idea what I was doing. I had baked at home for friends for a decade, but nothing prepared me for the 4 a.m. alarm, the oven that runs hot for no reason I can explain, or the discovery that a sourdough starter needs more attention than most houseplants.\n\nThe first month was mostly quiet. I sold out of cardamom buns by nine on opening day, then sat in the empty room wondering if I had made a terrible mistake. Regulars came slowly. A retired mail carrier started buying a loaf every Thursday. Two students found the morning scones and told everyone they knew. Word of mouth turned out to be the only advertising that really worked.\n\nWinter taught me to lean on bread. Customers wanted something warm to carry home, and the rye and country loaves sold better than anything with frosting. I started watching the weather the way a farmer does, adjusting dough timing for humid afternoons and cold mornings.\n\nThe hardest lesson was learning to say no. I wanted to offer everything, from croissants to custom wedding cakes, but my small oven and tiny staff could not keep up. Cutting the menu to twelve items made the bakery better, and it let me sleep a little more.\n\nNow the ovens are warm before the sun comes up, and the first tray of buns still goes out the door before nine. The flour dust on the windowsill has become its own kind of record, and I have stopped apologizing for how tired I am."
+  },
+  {
+   "id": "fresh2:blog:about-walking-the-length-of-a-canal#plain",
+   "family": "fresh2:blog:about-walking-the-length-of-a-canal",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Four Hundred Miles on the Water's Edge\n\nNobody tells you that the towpath is the best part of the journey. You expect the locks, the lift bridges, the slow green water. What you don't expect is how quickly the city falls away. Within an hour of leaving the last row of brick warehouses, you're walking beside a ribbon of still water, hearing nothing but birdsong and your own boots on gravel.\n\nThe canal keeps its own schedule. Narrowboats drift by at walking pace, their owners lifting a hand in greeting. Every few miles a lock waits, and you crank the gates open yourself, watching the water sink or rise a few feet while a heron stands motionless on the far bank, unbothered by your progress.\n\nDays blur into a rhythm: wake early, walk until your feet complain, eat lunch on a bench beside a pub garden, walk again. Towns appear and disappear. You learn which bakeries open at seven and which pubs serve a decent pint at four. You stop checking your phone because there's rarely a signal, and you don't miss it.\n\nSomewhere around the midpoint, the landscape opens into farmland and the canal narrows to a thread between hedgerows. Mist sits on the water at dawn. Cows watch you pass without interest.\n\nBy the final week, your body has adapted, and so has your sense of time. Four hundred miles is an abstraction until you've counted it in blisters, sunsets, and locks. When you finally reach the sea lock and see the wide grey horizon, the feeling isn't triumph exactly. It's quieter than that: a sense that you've been carried, one slow step at a time, by something far older and more patient than yourself."
+  },
+  {
+   "id": "fresh2:blog:about-getting-back-into-drawing#plain",
+   "family": "fresh2:blog:about-getting-back-into-drawing",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Picking Up the Pencil Again\n\nI used to draw every day. Then life got busy, the sketchbook slid under a pile of mail, and for years the only thing I drew was the occasional grocery list doodle. Last month I finally opened that sketchbook again, and it felt like running into an old friend who had no idea I'd been gone.\n\nThe first drawings were rough. My lines wobbled, my proportions were off, and my hand cramped after ten minutes. I had to remind myself that this was expected. Skills don't disappear entirely, but they do go quiet, and they need coaxing back.\n\nSo I set a small goal: one sketch a day, no longer than fifteen minutes. Some days it was a coffee mug. Some days it was the view from my window or a hand I'd propped up on the desk. I stopped trying to make each drawing good and focused on making each one honest.\n\nSomething shifted after about two weeks. The wobbly lines started to feel deliberate. I noticed shapes I'd overlooked before, like how light pools on a curved surface or how a shadow changes color near an edge. Drawing trained my eyes to slow down, and I found myself paying more attention to the ordinary world again.\n\nIf you've been away from drawing for a while, here's what helped me:\n\n- **Keep it short.** Fifteen minutes is easier to start than an afternoon.\n- **Draw what's in front of you.** You don't need a perfect subject.\n- **Don't erase the bad ones.** Flipping back through the pages shows how far you've come.\n- **Expect discomfort.** The awkward phase is part of the process.\n\nI'm not sure where this will lead. Maybe it's just a daily habit that quiets my mind. But I've already filled three pages, and that's enough reason to keep going."
+  },
+  {
+   "id": "fresh2:blog:about-getting-back-into-drawing#adv2",
+   "family": "fresh2:blog:about-getting-back-into-drawing",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Picking up a pencil again after years away felt strange at first. My hand remembered the motions, but my eye had grown lazy. Lines wobbled. Proportions drifted. I kept flipping back to the first sketchbook page I had filled as a teenager, half embarrassed and half curious about what I used to notice.\n\nSo I started small. Ten minutes a morning, before the coffee got cold and before the inbox could pull me in. I drew whatever sat on the kitchen table: a chipped mug, a pair of reading glasses, the shadow of a plant across the wall. Nothing was meant to be good. The point was to look longer than I usually do.\n\nThat slower looking turned out to be the real gift. Drawing forces you to notice where a curve bends or where light pools in a corner, details you would otherwise skim past a hundred times a day. Some mornings the sketch still falls apart, and I have learned to turn the page and move on without much fuss.\n\nI have also stopped waiting for the perfect block of free time. A rough sketch on the back of an envelope counts just as much as a finished piece in a proper book. The habit matters more than any single drawing.\n\nIf you have been meaning to start again, my advice is simple. Pick an ordinary object near you, set a timer for ten minutes, and begin. You may be surprised by how much you still remember."
+  },
+  {
+   "id": "fresh2:blog:about-a-family-recipe-you-finally-got-right#plain",
+   "family": "fresh2:blog:about-a-family-recipe-you-finally-got-right",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# The Gravy That Finally Made It Right\n\nFor fifteen years, my grandmother's gravy lived in my head as a rough memory: butter, flour, a splash of something from a dusty bottle, and a patience I never seemed to have. Every Thanksgiving, mine came out either pale and pasty or lumpy enough to hide a fork in.\n\nThis year I decided to stop guessing.\n\nI started by calling my aunt, who remembered that Grandma never rushed the roux. \"Cook it until it smells like toast,\" she said. So I did, stirring the butter and flour over medium heat for nearly ten minutes, until the color deepened to the shade of a copper penny. That was the first thing I'd been getting wrong.\n\nThe second was the liquid. I had been dumping in cold broth all at once, and the flour clumped instantly. This time I warmed the stock first and added it a ladle at a time, whisking until each addition went silky before adding the next.\n\nThe third was the mystery splash. It turned out to be a few spoonfuls of the drippings from the roasting pan, strained and stirred in just before serving. Suddenly the gravy tasted like the one I remembered: savory, deep, a little bit like home.\n\nWhen my father took his first spoonful at the table, he went quiet, then reached for the boat again without saying a word. That was the verdict I'd been waiting fifteen years to hear.\n\nSome recipes don't come from cookbooks. They come from paying attention, asking the right questions, and finally slowing down long enough to get them right."
+  },
+  {
+   "id": "fresh2:blog:about-a-family-recipe-you-finally-got-right#adv1",
+   "family": "fresh2:blog:about-a-family-recipe-you-finally-got-right",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "Okay, it's almost eleven and I just scraped the last of the dishes, so this is going to be short. I finally got my grandmother's pierogi dough right. Twelve years of trying, and tonight it just worked.\n\nFor the record, her recipe card says \"flour, water, a little of this, enough until it feels right.\" Thanks, Grandma. Very helpful.\n\nI tried it my way for years. Too much flour, so the dough cracked at the edges. Too little, so it tore when I pinched the seams. Last month I called my aunt, who said the secret was the sour cream, not the water. I didn't believe her. I was wrong, and I'm not going to be insufferable about it, but she should know.\n\nTonight I let the dough rest for a full hour, which I always skipped because I was impatient and hungry. It came out soft and stretchy, like it was waiting for me to stop rushing. The filling was potato and farmer's cheese, cooked down with plenty of onion until the kitchen smelled like my childhood. My partner ate six and said nothing, which from them is a standing ovation.\n\nI don't have a grand lesson. Maybe just this: some recipes need you to be patient long enough to catch up to them.\n\nI'm going to bed now. The dough is in the fridge, and tomorrow I'm making the second batch and doing it right."
+  },
+  {
+   "id": "fresh2:blog:about-volunteering-at-a-food-bank#plain",
+   "family": "fresh2:blog:about-volunteering-at-a-food-bank",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Four Hours That Filled My Heart\n\nLast Saturday I traded my usual sleep-in for a hairnet and a pair of borrowed gloves at the Riverside Community Food Bank. I didn't know what to expect. I pictured a quiet room full of dusty cans. Instead, I found a loud, warm warehouse buzzing with people who had clearly done this a hundred times before.\n\nMy first job was sorting donated produce. Bruised apples went one way, good oranges another, and anything questionable into the compost bin. It sounds simple, but I quickly learned how much food gets thrown away before it ever reaches a family. Our team rescued pallets of perfectly edible carrots that a grocery store had nearly tossed.\n\nLater, I worked the pantry line, bagging groceries for families who came through in a steady stream. Many were parents with young kids. Some were seniors on fixed incomes. A few were people who had never imagined needing help until life pulled the rug out from under them. Nearly everyone said thank you, and a few shared small stories that stayed with me long after I drove home.\n\nWhat struck me most was how ordinary it all was. The volunteers weren't saints. They were retirees, teenagers fulfilling service hours, nurses on day off, and neighbors who simply wanted to help. Together, they kept the shelves stocked.\n\nIf you've been thinking about volunteering but feel unsure, here's my advice: just show up. You don't need special skills, only a few free hours and a willingness to work alongside strangers. I'm already signed up for next month, and I suspect I'll leave with a full heart again."
+  },
+  {
+   "id": "fresh2:essay:social-media-does-more-harm-than-good-to-teenage#plain",
+   "family": "fresh2:essay:social-media-does-more-harm-than-good-to-teenage",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Does Social Media Do More Harm Than Good to Teenagers?\n\nSocial media has become a central part of adolescent life. Platforms promise connection, creativity, and information, yet critics link them to rising anxiety, depression, and disrupted sleep. Whether they do more harm than good depends on how we weigh these outcomes and which teenagers we consider. The evidence suggests that social media is neither pure poison nor pure benefit. Its effects are more harmful for some young people, particularly through heavy use and addictive design, and more beneficial for others.\n\nThe case for harm is substantial. Researchers such as Jean Twenge have documented correlations between heavy social media use and the rise in teen depression since the early 2010s. Features like infinite scrolling, algorithmic feeds, and visible like counts encourage compulsive checking. Cyberbullying follows students beyond the school day, and constant exposure to curated images can damage self-esteem, especially among girls. Many teenagers report losing sleep to late-night scrolling, and sleep loss itself worsens mood and concentration.\n\nYet dismissing social media entirely ignores real benefits. For LGBTQ teenagers, rural adolescents, and those with rare medical conditions, online communities can offer acceptance and support unavailable locally. Platforms let young people share creative work, learn new skills, and access news and educational material. Many teens use social media to maintain friendships, which can strengthen social bonds. Researchers like Amy Orben have cautioned that the average effects of social media on well-being are often small, and that how teens use these platforms may matter more than how much time they spend on them.\n\nUltimately, social media does more harm than good for some teenagers and more good than harm for others. The more useful question is whether these platforms are designed and used responsibly. Stronger privacy protections, age-appropriate design standards, digital literacy education, and open family conversations about intentional use could tilt the balance toward benefit. Until then, the most defensible conclusion is that social media's harms are concentrated among vulnerable and heavy users, while its benefits are more widely shared. That distinction makes a blanket verdict unwise."
+  },
+  {
+   "id": "fresh2:essay:cities-should-ban-cars-from-their-centres#plain",
+   "family": "fresh2:essay:cities-should-ban-cars-from-their-centres",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Should Cities Ban Cars from Their Centres?\n\nCity centres are the heart of urban life, yet they are often choked by traffic, dominated by parked vehicles, and hostile to pedestrians. Banning cars from these areas offers a bold answer to these problems, and the case for it is strong.\n\nThe most compelling argument concerns health and safety. Vehicle emissions are a major source of air pollution, linked to asthma, heart disease, and premature death. Traffic collisions also kill and injure thousands of pedestrians and cyclists every year. Removing cars from dense districts would reduce both risks, protecting the people who live, work, and shop there.\n\nCar-free zones also make economic and social sense. Pedestrianised streets have repeatedly boosted footfall for local businesses, and cities such as Copenhagen and Barcelona have shown that reclaiming road space for people creates lively public squares, cafes, and markets. Less space is needed for parking, freeing land for housing, parks, and community use.\n\nCritics raise serious objections. Disabled residents, the elderly, and delivery drivers may depend on cars, and a ban could isolate them or harm small businesses that rely on passing trade. Some argue that bans simply push traffic and parking into surrounding neighbourhoods, shifting the burden rather than solving it. These concerns deserve real answers, not dismissal.\n\nA middle path can address them. Cities can exempt residents with disabilities, permit deliveries during set hours, and invest heavily in public transport, cycling routes, and accessible alternatives before or alongside a ban. Phased implementation and consultation with local businesses can build support and allow adjustments.\n\nOn balance, cities should ban most private cars from their centres, paired with strong public transport and carefully designed exemptions. The benefits to health, safety, and urban vitality are substantial, and the problems critics identify can be managed through thoughtful planning rather than used as reasons to preserve the status quo."
+  },
+  {
+   "id": "fresh2:essay:cities-should-ban-cars-from-their-centres#adv0",
+   "family": "fresh2:essay:cities-should-ban-cars-from-their-centres",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "Should cities ban cars from their centres? I used to think the answer was obviously yes, mostly because I hate circling the block in Bologna looking for a spot that doesn't exist. But the more I read about this, the less sure I am, and the messy parts are the interesting bit.\n\nThe case for a ban is pretty strong. Pontevedra in Galicia pedestrianised most of its old town in the late 1990s, and by most accounts its traffic deaths dropped and people started actually sitting in the squares. Ghent did something similar around its medieval core, and the cafés didn't die, which is what everyone had predicted. Cars also take up absurd amounts of space for what they do. A row of parked cars holds maybe a dozen people's worth of metal, sitting still for 23 hours a day.\n\nBut a ban isn't really a ban on cars. It's a ban on the car you own sitting outside your flat. Who gets hurt? Plumbers with tools, the old man on the fourth floor walk-up who can't carry a fridge up the stairs, deliveries, the family whose kid needs to get to the hospital at 2 a.m. Paris has been doing a version of this, and the reaction from taxi drivers and shopkeepers in the Marais was loud. Some of them had a point about footfall, even if the numbers are contested.\n\nThen there's the question of where the traffic goes. Push it all to the ring road and you've made the outer districts worse, and those are usually where poorer people live. London's congestion charge cut traffic in the centre, but the evidence on whether it helped the outer boroughs is mixed. I went looking for a clean answer and didn't find one.\n\nSo my view, for what it's worth, is yes to most of it, but sequence it. Get the trams, buses and bike lanes running first, then close the streets, and exempt the people who genuinely need a car. A flat ban on day one feels like a fight the city will lose. A phased one, with the boring infrastructure already in place, seems much more likely to stick."
+  },
+  {
+   "id": "fresh2:essay:school-should-teach-personal-finance#plain",
+   "family": "fresh2:essay:school-should-teach-personal-finance",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Should Schools Teach Personal Finance?\n\nEvery year, millions of students graduate with diplomas but little understanding of how to manage the money they will earn. They may know the causes of the Civil War or how to solve quadratic equations, yet they cannot explain how compound interest works, how a credit score is calculated, or why a retirement account matters. Schools should require personal finance education because financial decisions shape nearly every adult's life, and the classroom is the most equitable place to build that knowledge.\n\nThe stakes are high. Young adults face decisions about student loans, credit cards, car purchases, housing, and investing, often with no guidance beyond what their families happen to know. Families with financial expertise can pass that knowledge down, but many families cannot. A required course levels the playing field, ensuring that a student's future does not depend entirely on the money habits of the household they were born into.\n\nCritics argue that schools are already overloaded and that financial literacy belongs at home. Yet many parents struggle with the same concepts, and time spent at home is not guaranteed to produce lessons. Others worry that adding a course means removing something else. This concern is legitimate, but personal finance can be woven into math classes through lessons on percentages, interest, and budgeting, so it does not require sacrificing core content.\n\nResearch on the effects of financial education is mixed, and some studies find that the benefits fade over time unless lessons are practical and timely. This is an argument for better design, not for abandoning the subject. Courses that teach students to build a real budget, compare loan offers, and understand paychecks and taxes tend to produce more lasting results than abstract lectures.\n\nUltimately, schools exist to prepare students for adult life. Few skills matter more to that life than the ability to manage money wisely. A thoughtfully designed personal finance requirement would give every student the tools to make informed choices, avoid costly mistakes, and build security for the future. Schools should teach it."
+  },
+  {
+   "id": "fresh2:essay:school-should-teach-personal-finance#adv0",
+   "family": "fresh2:essay:school-should-teach-personal-finance",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "# Should Schools Teach Personal Finance?\n\nMy sophomore year I took a required life skills class that was supposed to cover budgeting, taxes, and credit. We spent three weeks on the stock market, which I still don't really understand, and one afternoon on a worksheet about balancing a checkbook that nobody has used since maybe 1998. Our teacher, Mr. Feeney, kept apologizing for it. He wasn't a bad teacher. The curriculum just wanted us to learn everything in one semester.\n\nI think schools should teach personal finance, but not the way most of them do, and that's the part people skip when they argue about it.\n\nThe case for it is pretty obvious to me. My cousin signed up for a store card at a Target register to get 15 percent off that day's purchase, then paid close to 30 percent interest for two years because nobody had explained what APR meant. My uncle still thinks his 401(k) is a savings account. Most people learn this stuff by getting burned, and the burn is expensive. If one semester keeps somebody from one bad car loan, that's worth a few weeks of class time.\n\nThe counterargument has teeth, though. Teachers are already stretched thin. Every year someone proposes a new required course, and something else gets cut, usually music or the one elective that was actually fun. And personal finance depends so much on circumstance. A kid whose parents talk about mortgages at dinner gets a different education than a kid whose mom is working two jobs and hiding the bills. A worksheet can't fix that, and a lot of the people pushing these mandates seem to think it can.\n\nStill, I'd rather have the required class than not. Skip the stock market unit, or at least make it about not putting rent money into anything with a dog on the logo. Teach the boring stuff: how compound interest works against you on a balance, what a credit score actually measures, why an emergency fund matters more than you think at nineteen. Keep it short, keep it required, and pair it with something real, like every student opening an actual bank account before they graduate."
+  },
+  {
+   "id": "fresh2:essay:space-exploration-is-worth-the-money#plain",
+   "family": "fresh2:essay:space-exploration-is-worth-the-money",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Is Space Exploration Worth the Money?**\n\nEvery year, governments spend billions of dollars looking outward, and every year someone asks whether that money would do more good on Earth. The question deserves a serious answer, and I believe the answer is yes, space exploration is worth the cost.\n\nThe most obvious objection is that poverty, disease, and climate change are urgent, and space programs divert resources from them. This argument has force. Yet budgets for space are small compared with other government spending. NASA's annual budget is well under one percent of U.S. federal spending. Choosing to fund a telescope does not usually mean choosing against a hospital. Moreover, many of the problems space programs address are themselves Earth problems. Satellites track hurricanes, measure rising sea levels, monitor deforestation, and guide farmers in planting decisions. Climate science depends heavily on data gathered from orbit.\n\nSpace research has also produced practical technologies that reach ordinary life. Water purification systems, improved medical imaging, scratch-resistant lenses, and GPS navigation all trace back in part to work done for spaceflight. Such benefits are often unpredictable, which is precisely why basic exploration matters. Nobody knew that studying distant light would lead to better cancer detection, or that a navigation system built for missiles would one day guide delivery drivers.\n\nBeyond practical returns, exploration answers fundamental questions. Are we alone? How did the solar system form? Could life exist on Europa or Mars? Discoveries like the thousands of exoplanets found in recent decades have transformed our understanding of our place in the universe. Human curiosity has always driven progress, and space is the frontier that tests it most.\n\nFinally, space programs create something harder to measure: international cooperation and inspiration. The International Space Station has operated for decades with partners who might otherwise have little reason to work together. Students who watch a rover land on Mars often pursue careers in science and engineering.\n\nSpace exploration is not free, and it should face scrutiny. But its costs are modest, its benefits are real, and its promise is profound. A society that stops looking up risks losing both its knowledge and its ambition."
+  },
+  {
+   "id": "fresh2:essay:space-exploration-is-worth-the-money#adv5",
+   "family": "fresh2:essay:space-exploration-is-worth-the-money",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "Is space exploration worth the money? I think it is, but I know alot of people disagree. Every time NASA asks for more funding somebody brings up the homeless and the potholes and asks why we are launching rockets instead. Those are fair points. Still, I dont think the choice is really between space and everything else.\n\nFirst, the money is not as big as people think. NASA gets around half a percent of the federal budget. Thats less than what Americans spend on pet food every year (I looked this up somewhere, not sure exactly where). For that small amount we get weather satellites that help farmers and warn people about hurricanes, GPS that everyone uses without thinking about it, and medical stuff that came out of research for spaceflight.\n\nSecond, exploration makes us learn things we would never learn otherwise. Nobody planned for Teflon or memory foam to come from space programs but they did. The reason is that when you have to solve a problem that nobody has solved before, you end up inventing things. Thats kind of the whole point.\n\nThird, there is the question of what happens if we stop. Eventually the sun gets hotter and asteroids keep coming. If we never leave Earth we are kind of putting all our eggs in one basket, and a basket that cant be replaced. I know thats a dramatic way to put it but I think it is true.\n\nSome people will say we should fix problems here first. I get it. But problems on Earth have always been there and we have never fully fixed them, so waiting until everything is perfect means we never go. Money for space is not taken from hungry kids. Its a different budget line, and arguing about it is mostly a way to avoid the bigger decisions about taxes and spending.\n\nSo yes, I think its worth it. It inspires kids to go into science, it pays off in technology, and it keeps humans looking outward instead of only at our own problems. The cost is real but so is what we get back."
+  },
+  {
+   "id": "fresh2:essay:students-should-be-paid-for-good-grades#adv5",
+   "family": "fresh2:essay:students-should-be-paid-for-good-grades",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "Should Students Be Paid for Good Grades?\n\nThis is a question that a lot of people have thought about, and I think there are good reasons on both sides. On one hand, grades are supposed to measure how much a student has learned, and if we pay for them, we might be giving money for something that isn't really the point of school. On the other hand, a lot of students work really hard and get good grades, and it seems unfair that they don't get anything for it.\n\nThe main argument for paying students is that it would motivate them. Some kids don't see a reason to try in school, especially if the subject seems boring or hard. If they knew that a good grade meant money, they might push themselves harder. It could also help students from poorer families who have to work part-time jobs and don't have as much time to study. Getting paid could take some of that pressure off.\n\nBut there are problems with this idea. If students are only working for money, they might stop caring about actually learning the material. They might cheat more often, or just memorize things for a test and forget them right after. Also, paying for grades could make school feel like a business instead of a place to grow. Teachers might also feel pressure to give higher grades so that the school doesn't have to pay out as much money.\n\nAnother problem is that not everyone starts at the same level. Some students have tutors, quiet homes, and parents who help them, so it might be easier for them to earn money. That might make the gap between rich and poor students even bigger.\n\nIn my opinion, paying students for grades is not a good idea. School should be about learning for its own sake. Instead of paying for grades, schools should find other ways to motivate students, like better teaching, more interesting classes, and support for students who are struggling. Money might work in the short term, but it probably wouldn't create people who love learning."
+  },
+  {
+   "id": "fresh2:essay:students-should-be-paid-for-good-grades#plain",
+   "family": "fresh2:essay:students-should-be-paid-for-good-grades",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Should Students Be Paid for Good Grades?\n\nGrades are supposed to measure learning, yet many students experience them as a currency. Paying students for good grades would make that currency literal. Although the idea is tempting as a motivator, it would do more harm than good.\n\nThe strongest argument for payment is that it rewards effort. Students from struggling schools or unstable homes often work harder for less reward, and a cash incentive could recognize that persistence. Financial pressure also pushes many students toward part-time jobs that eat into study time. If grades earned money, some students might find studying more worthwhile than working.\n\nHowever, paying for grades would shift the purpose of education from understanding to earning. Students would learn to ask, \"Will this be on the test?\" rather than \"Why does this matter?\" Curiosity, which often leads to the deepest learning, rarely survives when every lesson carries a price tag. Research on extrinsic rewards, including studies by psychologists such as Edward Deci, suggests that external payment can reduce intrinsic motivation over time.\n\nPayment would also distort honesty. When money depends on a grade, the temptation to cheat, pressure teachers to inflate scores, and encourage students to avoid difficult courses all increase. A student who takes an easy class to protect a paycheck is making a rational choice that undermines their own education.\n\nFinally, the system would be unfair in a different way. Students with more natural ability or better preparation would earn more, while those who need the most help would have the least to gain. Paying for grades might reward advantage rather than effort.\n\nA better approach would support students directly. Schools can offer tutoring, flexible schedules, and financial aid that reduces the need for work, all without tying money to a letter on a transcript. These measures address the real barriers students face while keeping grades focused on what they are meant to represent: learning."
+  },
+  {
+   "id": "fresh2:fiction:about-a-woman-who-inherits-a-failing-cinema#plain",
+   "family": "fresh2:fiction:about-a-woman-who-inherits-a-failing-cinema",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The letter from the solicitor arrived on a Tuesday, between a catalogue for orthopaedic shoes and a notice about the bins. Nell read it standing at the kitchen counter, then read it again sitting down, as though posture might change what it said. It didn't. Her aunt Vivienne was dead. The Marlowe Picture House, all four hundred and twelve seats of it, was now hers.\n\nShe had not set foot in the place in nineteen years.\n\n\"You'll sell it,\" her husband said that evening, not unkindly, already reaching for the calculator app on his phone. \"Thirty grand, maybe forty if the roof's sound. Then we finally fix the boiler.\"\n\nNell said nothing. She was thinking about the smell of the lobby, popcorn and damp velvet and the faint sweetness of the projector's cooling oil. She was thinking about Vivienne's hands, always cold, always ink-stained, pressing a ticket stub into Nell's palm at age seven and saying, *Everything you'll ever need to know about people is in who comes back for the second show.*\n\nThe next morning Nell drove across the county in the rain. The Marlowe sat at the end of Church Street, its green awning faded to the colour of old limes, its marquee letters missing so that it advertised only *ARL WE* and then, improbably, *OPEN*. Someone had written the second word by hand in white paint, and the paint was new.\n\nShe stood on the pavement with the key heavy in her coat pocket and looked up at the sign. Behind her, a bus sighed to a stop.\n\nThe key turned stiffly. Inside, the air was cold and still, and it held the faint, unmistakable scent of someone who had been sweeping recently.\n\nNell stepped into the dark, and the doors closed softly behind her."
+  },
+  {
+   "id": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen#plain",
+   "family": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The gate at the end of Marion's driveway still sticks in the same place, and she still has to lift it with her hip to make it swing. She noticed this the first morning she was back, standing in her dressing gown with a mug going cold in her hand, watching the wrought iron scrape its old groove in the gravel. Twenty years, and some things had simply decided not to change.\n\nThe house next door was different. The hedge that had once separated the two gardens had been cut down to a neat row of knee-high stumps, and in its place stood a fence of pale, new timber that someone had stained a color Marion would have called optimistic. Beyond it, a child's bicycle lay on its side in the grass, its pink bell catching the light.\n\nShe had come back to sort out her mother's things. That was the reason she gave the solicitor, the estate agent, and the woman at the corner shop who had asked, kindly, whether she was \"one of the Hallorans.\" Marion had said yes, she supposed she was, and had not explained that she had grown up here, had left at nineteen with a single suitcase and a vow, and had sent Christmas cards to her mother every year that were never once returned with anything but a short, dutiful reply.\n\nShe had not expected to see Ruth Ashdown again. Ruth had been the reason for the vow, though neither of them had ever said so out loud. There had been a summer, a argument at the bottom of the garden, a word spoken that could not be taken back, and then two decades of silence conducted across a shared fence line.\n\nThe kettle clicked off inside. Marion turned to go back in, and that was when she heard the back door of the other house open."
+  },
+  {
+   "id": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen#adv2",
+   "family": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "The gate at the end of the lane had always stuck, and Margaret Dunphy had never once managed to lift it without swearing. She heard it groan now, and then she heard the careful, deliberate click of it being lowered again, which meant her neighbour had seen her coming and had decided to wait.\n\nHarold Pike stood on the other side of the fence line with a rake in both hands, the way a man holds a rifle he has no intention of using. His hair had gone white. So had hers, though she had stopped noticing hers years ago, the way you stop noticing a stain on a sofa you have always owned.\n\nTwenty years. Neither of them had kept an exact count, but they both knew the number. It had begun over a dead oak tree that came down in a storm and landed across both properties, and over who should pay to have it cut away, and over a few sharp words said in the road that had hardened into a silence neither one wanted to be first to break.\n\nThe wind moved through the poplars along the boundary. Somewhere behind her, a car door shut, and a dog barked twice and gave up.\n\nMargaret had rehearsed this moment in the kitchen that morning, standing at the sink with her coffee going cold. She had planned a greeting, something light about the weather. Now, looking at his face, which was older and more tired than she had let herself imagine, the rehearsed words seemed ridiculous, like a speech for a funeral of someone neither of them had truly liked.\n\nShe set her hand on the top bar of the gate.\n\n\"Your tomatoes,\" she said finally. \"They're still coming up over the wall, you know. Every August.\"\n\nHarold's shoulders moved, something between a laugh and a breath caught too long.\n\n\"I know,\" he said. \"I've been meaning to do something about that.\""
+  },
+  {
+   "id": "fresh2:fiction:set-on-the-last-bus-of-the-night#plain",
+   "family": "fresh2:fiction:set-on-the-last-bus-of-the-night",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The last bus left the depot at 12:40, and Marisol was the only passenger who had stepped aboard it on purpose.\n\nThe driver didn't look up from his newspaper when the doors folded shut behind her. He just tapped the fare reader with two fingers, the way you'd greet someone you'd known for years, and the machine chirped its small, forgiving note. The interior lights hummed. Half of them were dead, so the bus moved through a series of dim islands, each one swallowing her for a few seconds before releasing her into the dark.\n\nShe chose the seat near the back, the one with the torn vinyl that had been patched with silver tape. Nobody had ever argued with her about it. Over the years she had learned that the seat you chose on the last bus said more about you than anything you might tell a stranger.\n\nOutside, the city was closing its eyes. Shutters rolled down over bakeries and phone repair shops. A single neon sign buzzed its way through the word PHARMACY, and then the window slid past it and the word was gone. Rain had started somewhere around the stadium and now ran in thin, slanted lines across the glass, bending the streetlights into long amber smears.\n\nThe bus lurched onto the viaduct. Below, the rail yards stretched out in rows of shadowed freight cars, silent as sleeping animals.\n\nMarisol pulled her coat tighter and reached into the pocket where the envelope still sat, its corner soft from handling. She had read the letter four times since Tuesday. She did not need to read it again. But her fingers kept finding it anyway, the way a tongue keeps finding a chipped tooth.\n\nAcross the aisle, an old man was asleep with his chin on his chest, a paper grocery bag wedged between his shoes. Two rows ahead, a young couple shared earbuds, their heads tilted together, laughing at something neither of them said aloud.\n\nThe driver turned a corner too quickly, and the bag at the old man's feet slid an inch toward the aisle.\n\nMarisol watched it settle, and she thought, not for the first time that week, that everything was about to change."
+  },
+  {
+   "id": "fresh2:fiction:set-on-the-last-bus-of-the-night#adv4",
+   "family": "fresh2:fiction:set-on-the-last-bus-of-the-night",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "ok so this is kind of a dumb thing to post about but i keep thinking about it. last bus of the night on the 14, the one that loops out past the hospital. i was the only one on it except for this guy in the back who was asleep with his forehead on the window. i didnt really look at him much at first. you dont, right? you just kind of assume everyone on the last bus has a reason to be there and its not your business.\n\nit was raining but not hard, just that annoying mist that gets everything wet without you noticing till your jacket is soaked. driver had the radio on really low, some old station playing stuff i half recognized. he kept glancing at me in the mirror like he was waiting for me to say something. i didnt. i had my earbuds in but nothing was playing, which i guess was its own kind of weird.\n\nanyway we pulled up at the stop by the laundromat and nobody got on. the doors opened anyway and the driver just sat there for like ten seconds. then he said, to nobody really, \"you ever notice how this stop is always empty at this hour?\" and i said yeah i guess. and he said \"not always\" and then closed the doors and pulled out.\n\ni honestly dont know why that stuck with me. probably nothing lol. maybe he was just really tired. but the guy in the back woke up right then and i saw his face in the window reflection and he was looking straight at me, not at the road, not at anything, just me. he didnt look scared or angry. he looked like someone who'd been waiting for a bus that wasnt coming, you know?"
+  },
+  {
+   "id": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish#plain",
+   "family": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "The first thing Teodor noticed was that the perch was still moving its gills, which meant it had been dead for only a minute, maybe two. He had been standing on the wet planks of the pier since before sunrise, bored and cold, when his line gave a hard tug and then went slack. He hauled it in expecting a weed or a boot. Instead, a fat yellow-bellied perch came flopping over the rail, and when his grandfather's bait knife slit its belly open, something hard clicked against the blade.\n\nHe held it up to the gray light. A key. Small, brass, the color of old pennies, with a bow shaped like a clover and teeth worn smooth at the tips.\n\n\"Gross,\" said his sister Maren from the bench behind him, not looking up from her book. \"Throw it back.\"\n\n\"It's a key.\"\n\n\"It's a fish guts key.\"\n\nHe rinsed it in the bucket of seawater, and the brass came up bright, almost warm, as if it had been lying in the sun instead of the belly of a fish. He turned it over. Stamped into the shank were letters so faint he had to tilt it toward the sky to read them: *H.V.* and beneath those, a small carved anchor.\n\nTheir grandfather had kept a locked tin box on the top shelf of the boathouse for as long as Teodor could remember. Nobody ever said what was inside. Every summer someone asked, and every summer Grandfather only smiled and said, \"When it's time.\"\n\nTeodor looked at the perch, then at the key, then at the long gray line of the boathouse roof at the end of the pier.\n\nHe wrapped the key in his handkerchief and put it in his pocket, where it sat heavy and cold against his leg for the rest of the morning, pressing reminders into him with every step he took toward the water's edge."
+  },
+  {
+   "id": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish#adv1",
+   "family": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "text": "I'm writing this at the kitchen table because I told myself I'd put something down before I forgot it. It's almost one in the morning, and I've already forgotten most of today. So here goes, in no particular order.\n\nOwen found the key in a fish. A bluegill, off the end of the dock. He should have thrown it back, but he's nine, and everything that comes out of the lake belongs to him. I was on the phone with the insurance people, the third call that week, when I heard him yelling my name the way he does when he's either hurt or has won something. It was neither. He was holding the fish up by the lip, dripping, grinning like he'd invented fish.\n\n\"It was in its stomach,\" he said. \"Like treasure.\"\n\nI told him fish don't eat keys. He said this one did. I didn't have the energy to argue. I rinsed the key under the spigot and turned it over a few times. It's old, unmarked, with a bow shaped like a clover and two notches on the bit, which is more than most keys have.\n\nI put it on the windowsill above the sink. It's still there. I keep looking at it the way you'd look at a bill you haven't opened.\n\nDinner was fish sticks. Nobody mentioned the bluegill. Owen fell asleep on the couch with his shoes on, and I didn't have the heart to wake him, so I took them off one at a time and set them by the door, side by side, the way his mother used to.\n\nI don't know what the key opens. I don't know what I'm supposed to do with a thing like that. I just know it's been a long day, and somewhere in that lake there's a fish with nothing in its stomach at all."
+  },
+  {
+   "id": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose#plain",
+   "family": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**The Interpreter's Small Mercies**\n\nMarguerite had interpreted for the Ministry of Labor for nineteen years, and in all that time no one had ever caught her lying. She considered this the quiet achievement of her life.\n\nThe room smelled of radiator dust and wet wool. Across the steel table sat Mr. Oduya, a welder from Lagos with a bandaged thumb, and beside him a clerk named Hendricks, who had not looked up from his tablet since the hearing began. Hendricks wanted to know why Oduya had left his last position. Oduya answered in the careful Yoruba of a man who had rehearsed in the bathroom mirror. His supervisor had docked his pay for a missed shift, the shift he missed because his daughter was in the hospital with pneumonia.\n\nMarguerite felt the familiar hinge in her chest, the small place where words turned.\n\n\"He says he was careless,\" she said in English. \"He says it won't happen again.\"\n\nOduya's eyes flicked to her face. He did not know enough English to catch the lie, but he knew faces, and something in hers made him go still.\n\nHendricks typed. \"Good. Ask him about the injury.\"\n\nShe asked. Oduya, thinking he had been asked whether the thumb had healed, answered at length: the hot iron, the foreman who had sworn at him in front of the crew, the hour he had spent in a parking lot afterward because he could not make himself drive home and tell his wife the rent was late again.\n\nMarguerite translated perhaps a third of it. \"He says the thumb is healing.\"\n\nIt was not the first time she had done this, and she told herself it was not the worst. Interpreters chose words all day long. Every sentence was a decision about what to carry across and what to leave on the riverbank. She had simply decided, long ago, that the riverbank was where cruelty belonged, and that a man's shame should not be typed into a file that would follow him for the rest of his life.\n\nHendricks sighed and tapped a key. \"Fine. Tell him we'll need the supervisor's statement.\"\n\nMarguerite turned to Oduya and, in Yoruba, said the thing she had not been asked to say. *Keep your head down. You did nothing wrong. Your daughter is well.*\n\nHe blinked, and for the first time that morning, he nodded."
+  },
+  {
+   "id": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose#adv3",
+   "family": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "Marisol had been translating the same letter for three days, and by the third afternoon she knew she was going to lie.\n\nThe letter came from Tomás Reyes, a fisherman in a coastal town she had never visited, written in a looping hand that slanted uphill. His daughter, Inés, had left for the city eleven years ago. Now the old man was dying, and he wanted her to come home. The letter said so in plain Spanish, without apology or fuss. *Ven a casa, mija. Ya no tengo fuerzas para esperar.*\n\nCome home, my girl. I no longer have the strength to wait.\n\nMarisol typed the sentence into the document and stopped. The cursor blinked. Outside her apartment window, a delivery truck backed up with a long, rising beep, and somewhere below, a dog barked at it.\n\nThe agency paid by the page. It paid well, which was why she had taken the job, and why she could not afford to lose it. But the agency also expected accuracy, and accuracy was the one thing she had decided to abandon.\n\nShe had her reasons. Inés Reyes was the client's sister, or so the cover note said. The client was a law firm in Houston handling an inheritance dispute over a boat, a strip of waterfront, and a bank account nobody wanted to split. Marisol had read enough of the file to see what would happen if the old man's words arrived in English exactly as written. The sentence would become evidence. Evidence of abandonment. Evidence of a father who had waited, and of a daughter who had not come.\n\nSo she would soften it. Not much. Just enough.\n\nShe deleted *Ya no tengo fuerzas* and typed something else. Her hands were steady. That surprised her."
+  },
+  {
+   "id": "fresh2:news:about-a-library-fine-amnesty#plain",
+   "family": "fresh2:news:about-a-library-fine-amnesty",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Library Announces Fine Amnesty Week, Hundreds of Overdue Books Expected to Return**\n\nPatrons with overdue library cards can breathe a little easier this month. The Maple Hollow Public Library announced Monday that it will waive all outstanding late fees during its two-week Fine Amnesty, running from November 24 through December 7.\n\n\"Late fees have kept too many people away from the library,\" said Director Angela Reyes at a press briefing Monday morning. \"Someone who owes twelve dollars on a book they meant to return months ago shouldn't feel they can't come back. We want those books home, and we want our neighbors back in the building.\"\n\nUnder the program, cardholders can return overdue items without paying fines, and accounts blocked because of unpaid fees will be reinstated. Items must be returned in reasonable condition. Materials that are lost or heavily damaged will still need to be paid for or replaced.\n\nThe library estimates that more than 400 items have been overdue for over three months. Staff say similar amnesty programs in neighboring towns have recovered a large share of missing titles within the first week.\n\nThe amnesty coincides with the library's holiday schedule. Branch hours will be extended on Tuesday and Thursday evenings until 8 p.m. during the event. Returns can be made at the main branch on Oak Street, the Eastside branch, or through the outdoor book drop at City Hall.\n\nResidents with questions can call the library's information desk or visit the website for a full list of eligible items and returns."
+  },
+  {
+   "id": "fresh2:news:about-a-heatwave-closing-schools-early#plain",
+   "family": "fresh2:news:about-a-heatwave-closing-schools-early",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Heat Wave Forces Early Dismissal for Maplewood Schools**\n\nMAPLEWOOD — Temperatures climbing past 102 degrees prompted the Maplewood Unified School District to dismiss students early at all campuses Tuesday, the district announced Monday evening.\n\nClasses at Maplewood Elementary, Lincoln Middle School, and Ridgeview High School will end at 1:00 p.m. Buses will run on modified schedules, and students who ride them should expect pickup times to shift by roughly 90 minutes. After-school programs and athletic practices have been canceled for the day.\n\n\"Our first priority is keeping children safe,\" said Superintendent Linda Matthews. \"Many of our classrooms, especially those in older buildings, don't have adequate air conditioning. We made this decision with student health in mind.\"\n\nThe National Weather Service has issued an excessive heat warning for the region through Thursday. Forecasters expect overnight lows to remain above 80 degrees, which health officials say limits the body's ability to recover from daytime heat.\n\nParents are encouraged to pick up children promptly and to check on elderly neighbors and anyone without air conditioning. The county's cooling centers at the Maplewood Public Library and Eastside Community Center will remain open from 10 a.m. to 8 p.m. through Thursday.\n\nStudents at Ridgeview High will have access to water stations on campus until dismissal. Staff will also distribute bottled water and electrolyte drinks at all bus stops.\n\nThe district says it will reassess conditions Wednesday morning and will post updates on its website and social media accounts."
+  },
+  {
+   "id": "fresh2:news:about-a-heatwave-closing-schools-early#adv4",
+   "family": "fresh2:news:about-a-heatwave-closing-schools-early",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "**Re: Heat wave closing schools early tomorrow??**\n\nPosted by dustyfenceposts\n\nDid anyone else get the text from the district this afternoon? Looks like they're closing all the elementary and middle schools at 11:30 tomorrow because of the heat. High's supposed to hit 104 and the forecast says it won't drop much overnight. High school gets out at 1 for the same reason.\n\nMy kid's school doesn't have working AC in two of the classrooms (they've been \"looking into it\" since last spring), so honestly I'm kind of relieved. Last week the thermometer in her room read 91 at 2 p.m. and she came home with a headache.\n\nNot everyone's thrilled though. My neighbor works at the hospital and has to find childcare on short notice, and I saw someone in the Facebook group saying the district should've called it earlier. Fair point, I guess, since the rec center and library both have AC and kids would've been better off there than baking in a bus line.\n\nMayor's office said the city opened the community center on Route 9 as a cooling station from noon to 8 tomorrow, and they're handing out free water bottles. Pretty sure they'll be out of water by 3, so go early if you need it.\n\nAnyway, if you're driving past the high school tomorrow, don't bother stopping. The parking lot's already closed for the bus repair.\n\nStay cool, y'all."
+  },
+  {
+   "id": "fresh2:news:about-a-village-shop-saved-by-residents#plain",
+   "family": "fresh2:news:about-a-village-shop-saved-by-residents",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Village Shop Saved by Community Effort**\n\n*Hollow Brook, November 18, 2026*\n\nThe last shop in Hollow Brook will stay open after residents raised more than £85,000 in just four months to buy the building and keep its doors open.\n\nThe Hollow Brook Stores, a general store and post office counter run by the Pemberton family for three decades, was due to close in January when owners announced their retirement. Without a buyer, the village faced a 12-mile round trip to the nearest supermarket, a loss that residents said would hit older people and families without cars the hardest.\n\n\"We realised it wasn't just about buying milk,\" said Margaret Ince, 71, who chairs the newly formed Brook Community Society. \"It's where we pick up parcels, where the school notices go up, and where people check on each other.\"\n\nThe campaign drew support from 412 residents, roughly three-quarters of the village's households. Donations ranged from £5 to £10,000, and a summer quiz night, a bake sale, and a sponsored walk along the river each contributed to the total. The county council provided a £20,000 rural enterprise grant.\n\nUnder the new arrangement, the shop will be run by a volunteer committee alongside a part-time manager, Daniel Okafor, who previously worked at a store in the neighbouring town. He plans to extend opening hours and add a small café corner by spring.\n\nFormer owner Alan Pemberton, who attended Monday's public meeting, said he was delighted. \"Thirty years behind that counter, and I never expected the village to do this. It's a good feeling.\"\n\nThe society will hold its first annual general meeting at the village hall on 3 December. The shop reopens under its new ownership on 1 January."
+  },
+  {
+   "id": "fresh2:news:about-a-village-shop-saved-by-residents#adv5",
+   "family": "fresh2:news:about-a-village-shop-saved-by-residents",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "**VILLAGE SHOP SAVED BY RESIDENTS**\n\nby [reporter name]\n\nHOLBROOK MILL — Resdients of this small village have raised enough money to keep the only shop open, after it was set to close at the end of the month. The shop, which has been on Church Lane since 1952 (or 1954?? check), sells groceries, post, and the odd bag of coal in winter.\n\nThe owner, Margaret Fenwick, 71, said she had decided to retire and couldnt find a buyer. \"I didnt want to just lock the door and walk away,\" she said. \"People here have been coming in for their milk and paper for longer than most of them have been alive.\"\n\nSo the village got together. A committee of about 12 volunteers formed in September and ran a fundraiser at the village hall, which raised around £41,000 (confirm with treasurer). A community share scheme was also set up, and 198 households signed up to buy shares. [NUMBER CHECK]\n\nThe shop will reopen as a community-owned cooperative on 1 December. Volunteers will work shifts behind the counter, and the committee says it hopes to add a small café area and a book swap \"if we have the space.\"\n\nParish council chair Tom Adeyemi said the result was \"frankly better than I expected.\" He added that the group still needs about 20 more volunteers for weekend cover.\n\nFenwick will stay on for two weeks to train new staff. \"Im not going anywhere yet,\" she said, laughing. \"Ask me again in January.\"\n\nThe shop's opening hours will be 7am to 8pm daily, though the committee says these may change. [ASK TOM ABOUT SUNDAYS]\n\nAnyone wanting to volunteer can contact the parish office. More on the cooperative's first AGM later this week."
+  },
+  {
+   "id": "fresh2:news:about-a-new-night-bus-route#plain",
+   "family": "fresh2:news:about-a-new-night-bus-route",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**City Launches Night Bus Route to Serve Late-Shift Workers**\n\nRiverside Transit officials cut the ribbon Monday on the Route 47 Night Owl, a new bus line running from downtown to the Eastgate industrial park every hour between 11 p.m. and 5 a.m. The service, which begins its regular schedule Wednesday, is designed to help hospital staff, warehouse employees, and restaurant workers who have struggled to get home after their shifts.\n\n\"For years, people have told us they either pay for a rideshare they can't afford or walk home alone in the dark,\" said Transit Director Maria Delgado. \"Route 47 gives them a reliable, affordable option.\"\n\nThe route stops at Mercy General Hospital, the Central Station transfer hub, and 12 other locations along Oak Avenue and Harbor Road. Fares match standard daytime rates, and riders can transfer to other routes at Central Station.\n\nThe city funded the pilot program with a $1.2 million state grant, which covers the first two years of operation. Council members said they will review ridership figures next spring to decide whether to make the service permanent.\n\nSeveral residents at Monday's launch welcomed the change. Hospital nurse James Okafor, who has worked overnight shifts for six years, said he often waited more than an hour for a late bus. \"Knowing it comes every hour makes a huge difference,\" he said.\n\nTransit officials urged riders to download the Riverside Transit app for real-time arrival times. Schedules and route maps are also posted at all stops and on the agency's website."
+  },
+  {
+   "id": "fresh2:news:about-a-new-night-bus-route#adv2",
+   "family": "fresh2:news:about-a-new-night-bus-route",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "Riverton Transit will launch a new night bus route on Monday, connecting downtown workers, hospital staff, and university students with neighborhoods that have long lacked late-evening service. The Route 19 Owl will run every 30 minutes from 10 p.m. to 3 a.m. daily, linking Central Station with Eastgate Medical Center, the Harbor District, and the Ashford Commons apartment complex.\n\nCity officials said the service responds to repeated requests from residents and labor advocates who said many shift workers were forced to rely on expensive rideshares or long walks after dark. \"For nurses finishing a twelve hour shift at two in the morning, a reliable ride home is a matter of safety, not convenience,\" said Transit Director Maria Ellison at a press briefing Tuesday.\n\nThe pilot program is funded for one year through a combination of state transportation grants and a modest allocation from the city budget. Fares will match regular daytime rates, and riders can transfer to other routes at no added cost. Buses will be equipped with additional lighting and an automated stop announcement system.\n\nTransit planners expect ridership to be modest at first but say early surveys show strong interest. Riders can find the full schedule on the transit authority's website or by calling the customer line. Officials will review ridership data after six months and decide whether to expand service to weekends or additional neighborhoods.\n\nLocal business owners in the Harbor District welcomed the change. Several late-night restaurants and convenience stores said they hope the route will bring customers who might otherwise stay home after 10 p.m."
+  },
+  {
+   "id": "fresh2:news:about-a-stolen-statue-being-returned#plain",
+   "family": "fresh2:news:about-a-stolen-statue-being-returned",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Bronze Eagle Returns to Riverside Park After Two Years Missing**\n\nRIVERSIDE, Ohio - The bronze eagle statue that once stood at the entrance of Riverside Park is back where it belongs, nearly two years after it was stolen in the early hours of a December morning.\n\nPolice announced Tuesday that the 300-pound sculpture was recovered from a storage unit on the outskirts of town. Detectives say a tip from a local scrap dealer led them to the unit, where the statue had been hidden under a tarp among stacked lumber and old appliances.\n\n\"We never gave up on this case, and neither did the community,\" said Detective Maria Lopez. \"Residents kept asking about the eagle, and that pressure helped keep our investigators focused.\"\n\nThe statue, created in 1958 by local sculptor Harold Brenner, was a gift to the city from the Riverside Historical Society. It was removed from its granite pedestal sometime between midnight and dawn, leaving only bolts behind. Its disappearance prompted a community fundraising drive that raised $12,000 for restoration.\n\nTwo suspects, both 34-year-old men from the county, have been charged with theft and criminal damage. Their names have not been released pending arraignment.\n\nParks Director Janet Morrow said the eagle will undergo a full inspection before being reinstalled. Minor damage to one wing is expected, though officials say the piece is largely intact.\n\nA rededication ceremony is scheduled for Saturday at 10 a.m. at the park's main gate. Mayor Thomas Reed is expected to speak, and the Historical Society will unveil a new plaque honoring Brenner's work.\n\n\"It's a good day for Riverside,\" Reed said. \"This eagle has been watching over our park for more than sixty years, and we're glad to have it watching again.\""
+  },
+  {
+   "id": "fresh2:news:about-a-stolen-statue-being-returned#adv0",
+   "family": "fresh2:news:about-a-stolen-statue-being-returned",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "**Bronze Heron Back on Its Pedestal in Millbrook Falls**\n\n*Millbrook Falls Courier, Staff Report*\n\nThe bronze heron that vanished from the Dorrance Street fountain in March is back, although nobody will say exactly how or where it turned up. Police confirmed Tuesday that the 140-pound statue was found Monday morning wrapped in a moving blanket behind the loading dock of the old Ferris Hardware building on Quarry Road, about four miles from where it was taken.\n\n\"It was just sitting there, like someone set it down and meant to come back,\" said Denise Ocampo, who manages the building's loading bay and called 911 around 6:40 a.m. \"The blanket still had a Hooper's Moving tag on it. Hooper's went out of business in 2019.\"\n\nThe heron was reported missing March 14, when a city crew arrived to clean the fountain and found the base bolts cut and the pedestal empty. The statue was installed in 1962 to honor the town's first mayor, Walter Dorrance, and city officials estimated its scrap value at roughly $9,000, though they said it was never the sort of thing anyone could easily sell.\n\nPolice Sgt. Ray Halvorsen said no arrests have been made. \"We have a few leads, and we're asking anybody who saw a van or pickup on Quarry Road the week of March 14 to call us,\" he said at a brief news conference outside city hall, where the statue was still under a tarp.\n\nThe city plans to reinstall the heron next month after the base is repaired. Parks director Louise Tran said the fountain will probably run again by Memorial Day, \"assuming the pump gets the parts it needs, which, don't ask me, it's been a whole thing.\"\n\nAnyone with information is asked to contact the Millbrook Falls Police non-emergency line."
+  },
+  {
+   "id": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha#plain",
+   "family": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Hand-Knitted Wool Hat\n\nStay warm in style with this cozy hand-knitted wool hat, crafted stitch by stitch for comfort and durability. Made from soft, breathable wool, it provides reliable warmth through cold mornings, snowy walks, and winter commutes without feeling heavy or itchy.\n\nThe classic ribbed brim hugs the head snugly and keeps out chill, while the relaxed crown offers a flattering, easy fit for most head sizes. Each hat is knit by hand, so subtle variations in texture make every piece one of a kind.\n\nFeatures:\n- 100% natural wool for warmth and natural moisture-wicking\n- Hand-knitted for a soft, comfortable feel\n- Double-layer ribbed brim for a snug, secure fit\n- One-size-fits-most design\n- Versatile neutral color that pairs with any winter wardrobe\n\nCare: Hand wash cold with a mild wool detergent, reshape, and lay flat to dry."
+  },
+  {
+   "id": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha#adv4",
+   "family": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv4",
+   "adversarial": true,
+   "text": "Okay so I finally finished this hat and I'm pretty happy with it. It's hand-knitted from 100% wool, worsted weight, so it's warm but not bulky. Fits most adults, stretchy ribbed brim so it doesn't slide off. I did a simple 2x2 rib around the edge and then stockinette for the body, with a little crown decrease at the top. Took me about three evenings. Only real complaint is I had to frog it once because I miscounted the decreases, but it's fine now. Wool's soft enough that it doesn't itch on my neck, which is my big test. Happy to make another one in a different color if people are interested, just message me."
+  },
+  {
+   "id": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon#adv3",
+   "family": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv3",
+   "adversarial": true,
+   "text": "# Paws & Suds Dog Grooming\n\n**Gentle grooming for dogs of every size.**\n\n[Book an Appointment]\n\n---\n\n## Clean, calm, and cared for\n\nYour dog deserves a groomer who listens. At Paws & Suds, we take our time, work at your dog's pace, and treat every visit like it matters. Because it does.\n\nBath. Brush. Trim. Nails. Ears. We handle it all in one visit.\n\n---\n\n## Our Services\n\n**Full Groom**\nBath, blow-dry, haircut, nail trim, ear cleaning, and a bandana to finish. Starting at $65.\n\n**Bath & Brush**\nWarm bath, deep brushing, nail trim, and a quick tidy around the face and paws. Starting at $45.\n\n**Puppy's First Groom**\nA short, low-stress visit to help young dogs learn that grooming is safe and even fun. Starting at $35.\n\n**Special Needs Care**\nExtra time and patience for senior dogs, anxious dogs, and dogs with sensitive skin. Ask us about pricing.\n\n---\n\n## Why Pet Parents Choose Us\n\n- **Small batches.** We book only a few dogs at a time, so no one gets rushed.\n- **Gentle products.** We use plant-based shampoos and skip the harsh fragrances.\n- **Certified groomers.** Our team has years of hands-on training and ongoing education.\n- **Text updates.** We send a photo and a note when your dog is ready for pickup.\n\n---\n\n## What Our Customers Say\n\n> \"My anxious rescue actually wagged when we pulled in. That says everything.\"\n> **Maria T., Oakwood**\n\n> \"They fixed matting my last groomer couldn't touch. Gentle and honest.\"\n> **James L., Riverside**\n\n---\n\n## Visit Us\n\n**Paws & Suds Dog Grooming**\n482 Maple Street\nSpringfield, IL 62704\n\n**Hours**\nMonday to Friday: 8 a.m. to 6 p.m.\nSaturday: 9 a.m. to 4 p.m.\nSunday: Closed\n\n**Phone:** (217) 555-0142\n\n[Book an Appointment] [Get Directions]\n\n---\n\n*Paws & Suds Dog Grooming. Clean dogs, happy families.*"
+  },
+  {
+   "id": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon#plain",
+   "family": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pawsh Dog Grooming | Gentle Grooming for Happy Dogs</title>\n  <meta name=\"description\" content=\"Pawsh Dog Grooming offers bath, haircut, nail, and spa services for dogs of all sizes in a calm, stress-free environment.\">\n  <style>\n    :root {\n      --cream: #fdf8f0;\n      --sky: #7fb8d4;\n      --sky-dark: #4f8fb0;\n      --peach: #f7c9a7;\n      --ink: #2e3a46;\n      --muted: #6b7785;\n      --white: #ffffff;\n    }\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    html { scroll-behavior: smooth; }\n    body {\n      font-family: \"Segoe UI\", Helvetica, Arial, sans-serif;\n      color: var(--ink);\n      background: var(--cream);\n      line-height: 1.6;\n    }\n    a { color: inherit; text-decoration: none; }\n    img { max-width: 100%; display: block; }\n    .container { width: min(1100px, 92%); margin: 0 auto; }\n\n    /* Header */\n    header {\n      position: sticky;\n      top: 0;\n      background: var(--white);\n      box-shadow: 0 2px 10px rgba(0,0,0,0.06);\n      z-index: 100;\n    }\n    .nav {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      padding: 1rem 0;\n    }\n    .logo { font-size: 1.5rem; font-weight: 700; color: var(--sky-dark); }\n    .logo span { color: var(--peach); }\n    .nav-links { display: flex; gap: 1.5rem; list-style: none; }\n    .nav-links a:hover { color: var(--sky-dark); }\n    .btn {\n      display: inline-block;\n      padding: 0.75rem 1.5rem;\n      border-radius: 999px;\n      font-weight: 600;\n      transition: transform 0.15s, background 0.2s;\n    }\n    .btn:hover { transform: translateY(-2px); }\n    .btn-primary { background: var(--sky-dark); color: var(--white); }\n    .btn-primary:hover { background: var(--sky); }\n    .btn-outline { border: 2px solid var(--sky-dark); color: var(--sky-dark); }\n\n    /* Hero */\n    .hero {\n      background: linear-gradient(135deg, var(--sky) 0%, var(--peach) 100%);\n      color: var(--white);\n      padding: 6rem 0;\n      text-align: center;\n    }\n    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1rem; }\n    .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; }\n    .hero .btn-primary { background: var(--white); color: var(--sky-dark); }\n    .hero .btn-primary:hover { background: var(--cream); }\n\n    /* Sections */\n    section { padding: 4.5rem 0; }\n    section h2 {\n      text-align: center;\n      font-size: 2.2rem;\n      margin-bottom: 0.5rem;\n    }\n    .subtitle {\n      text-align: center;\n      color: var(--muted);\n      margin-bottom: 3rem;\n    }\n\n    /* Services */\n    .grid {\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));\n      gap: 1.75rem;\n    }\n    .card {\n      background: var(--white);\n      padding: 2rem;\n      border-radius: 16px;\n      box-shadow: 0 4px 16px rgba(0,0,0,0.05);\n      text-align: center;\n    }\n    .card .icon { font-size: 2.5rem; margin-bottom: 1rem; }\n    .card h3 { margin-bottom: 0.5rem; color: var(--sky-dark); }\n    .card .price { font-weight: 700; margin-top: 1rem; color: var(--ink); }\n\n    /* About */\n    .about { background: var(--white); }\n    .about-inner {\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n      gap: 3rem;\n      align-items: center;\n    }\n    .about-image {\n      background: linear-gradient(135deg, var(--peach), var(--sky));\n      border-radius: 20px;\n      height: 360px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      font-size: 6rem;\n    }\n    .about p { margin-bottom: 1rem; color: var(--muted); }\n\n    /* Testimonials */\n    .testimonial {\n      font-style: italic;\n    }\n    .testimonial .author {\n      display: block;\n      margin-top: 1rem;\n      font-style: normal;\n      font-weight: 600;\n      color: var(--sky-dark);\n    }\n\n    /* Booking CTA */\n    .cta {\n      background: var(--sky-dark);\n      color: var(--white);\n      text-align: center;\n      border-radius: 24px;\n      padding: 3.5rem 2rem;\n    }\n    .cta h2 { color: var(--white); }\n    .cta p { margin-bottom: 2rem; opacity: 0.9; }\n    .cta .btn-primary { background: var(--white); color: var(--sky-dark); }\n\n    /* Hours & Contact */\n    .info-grid {\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n      gap: 2rem;\n    }\n    .info-box {\n      background: var(--white);\n      padding: 2rem;\n      border-radius: 16px;\n      box-shadow: 0 4px 16px rgba(0,0,0,0.05);\n    }\n    .info-box h3 { margin-bottom: 1rem; color: var(--sky-dark); }\n    .info-box ul { list-style: none; }\n    .info-box li { padding: 0.4rem 0; border-bottom: 1px solid #eee; }\n\n    /* Footer */\n    footer {\n      background: var(--ink);\n      color: #cfd8e0;\n      padding: 2.5rem 0;\n      text-align: center;\n      font-size: 0.95rem;\n    }\n    footer .logo { color: var(--white); margin-bottom: 0.5rem; display: inline-block; }\n\n    /* Responsive */\n    @media (max-width: 760px) {\n      .nav-links { display: none; }\n      .about-inner, .info-grid { grid-template-columns: 1fr; }\n      .hero { padding: 4rem 0; }\n    }\n  </style>\n</head>\n<body>\n\n  <header>\n    <div class=\"container nav\">\n      <a href=\"#\" class=\"logo\">Pawsh<span>.</span></a>\n      <ul class=\"nav-links\">\n        <li><a href=\"#services\">Services</a></li>\n        <li><a href=\"#about\">About</a></li>\n        <li><a href=\"#reviews\">Reviews</a></li>\n        <li><a href=\"#visit\">Visit Us</a></li>\n      </ul>\n      <a href=\"#book\" class=\"btn btn-primary\">Book Now</a>\n    </div>\n  </header>\n\n  <main>\n    <!-- Hero -->\n    <section class=\"hero\">\n      <div class=\"container\">\n        <h1>Gentle Grooming for Happy Tails</h1>\n        <p>A calm, judgment-free salon where every dog is treated like the VIP they are. Baths, cuts, and spa days with love.</p>\n        <a href=\"#book\" class=\"btn btn-primary\">Book an Appointment</a>\n      </div>\n    </section>\n\n    <!-- Services -->\n    <section id=\"services\">\n      <div class=\"container\">\n        <h2>Our Services</h2>\n        <p class=\"subtitle\">Tailored care for puppies, seniors, and everyone in between.</p>\n        <div class=\"grid\">\n          <div class=\"card\">\n            <div class=\"icon\">🛁</div>\n            <h3>Bath &amp; Brush</h3>\n            <p>Warm, gentle bath with premium shampoo, blow-dry, and a full brush-out.</p>\n            <p class=\"price\">From $45</p>\n          </div>\n          <div class=\"card\">\n            <div class=\"icon\">✂️</div>\n            <h3>Full Groom</h3>\n            <p>Bath, haircut in your chosen style, ear cleaning, nail trim, and finishing spritz.</p>\n            <p class=\"price\">From $75</p>\n          </div>\n          <div class=\"card\">\n            <div class=\"icon\">🐾</div>\n            <h3>Nail &amp; Paw Care</h3>\n            <p>Quick, careful nail trims, paw pad tidying, and a soothing paw balm.</p>\n            <p class=\"price\">From $20</p>\n          </div>\n          <div class=\"card\">\n            <div class=\"icon\">🌸</div>\n            <h3>Spa Package</h3>\n            <p>Our signature treatment: oatmeal bath, de-shedding, teeth brushing, and a bandana.</p>\n            <p class=\"price\">From $95</p>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- About -->\n    <section id=\"about\" class=\"about\">\n      <div class=\"container about-inner\">\n        <div class=\"about-image\">🐶</div>\n        <div>\n          <h2 style=\"text-align:left;\">Patient Hands, Happy Pups</h2>\n          <p>Pawsh was founded in 2018 by certified groomers who believed grooming should be a positive experience for dogs and their owners. Our salon is designed to be quiet and low-stress, with separate spaces for nervous pups and a cage-free drying area.</p>\n          <p>Every groomer is certified, insured, and trained in low-stress handling. We never rush, and we always communicate with you before and after every visit.</p>\n          <a href=\"#book\" class=\"btn btn-outline\">Meet Our Team</a>\n        </div>\n      </div>\n    </section>\n\n    <!-- Reviews -->\n    <section id=\"reviews\">\n      <div class=\"container\">\n        <h2>What Our Customers Say</h2>\n        <p class=\"subtitle\">Real words from real dog parents.</p>\n        <div class=\"grid\">\n          <div class=\"card testimonial\">\n            <p>\"My anxious rescue used to shake at the groomer. The team at Pawsh had him relaxed and wagging in minutes.\"</p>\n            <span class=\"author\">— Jordan M.</span>\n          </div>\n          <div class=\"card testimonial\">\n            <p>\"The best haircut my doodle has ever had. They listened to exactly what I wanted and sent photos at pickup.\"</p>\n            <span class=\"author\">— Priya K.</span>\n          </div>\n          <div class=\"card testimonial\">\n            <p>\"Our 14-year-old beagle gets the senior spa treatment every month. He comes home sleepy and happy every time.\"</p>\n            <span class=\"author\">— Tom and Linda R.</span>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- Booking CTA -->\n    <section id=\"book\">\n      <div class=\"container\">\n        <div class=\"cta\">\n          <h2>Ready for a Fresh Cut?</h2>\n          <p>Openings fill up fast. Book online in under two minutes, or give us a call.</p>\n          <a href=\"tel:+15555550123\" class=\"btn btn-primary\">Call (555) 555-0123</a>\n        </div>\n      </div>\n    </section>\n\n    <!-- Visit Us -->\n    <section id=\"visit\">\n      <div class=\"container\">\n        <h2>Visit Us</h2>\n        <p class=\"subtitle\">Walk-ins welcome when space allows. Appointments recommended.</p>\n        <div class=\"info-grid\">\n          <div class=\"info-box\">\n            <h3>Hours</h3>\n            <ul>\n              <li>Monday – Friday: 8:00 AM – 6:00 PM</li>\n              <li>Saturday: 9:00 AM – 5:00 PM</li>\n              <li>Sunday: 10:00 AM – 3:00 PM</li>\n            </ul>\n          </div>\n          <div class=\"info-box\">\n            <h3>Location &amp; Contact</h3>\n            <ul>\n              <li>123 Maple Street, Springfield</li>\n              <li>Phone: (555) 555-0123</li>\n              <li>Free parking in front of the salon</li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <footer>\n    <div class=\"container\">\n      <a href=\"#\" class=\"logo\">Pawsh<span>.</span></a>\n      <p>Gentle grooming for dogs of all sizes.</p>\n      <p>&copy; 2026 Pawsh Dog Grooming. All rights reserved.</p>\n    </div>\n  </footer>\n\n</body>\n</html>\n```"
+  },
+  {
+   "id": "fresh2:marketing:a-launch-announcement-for-a-meditation-app#plain",
+   "family": "fresh2:marketing:a-launch-announcement-for-a-meditation-app",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "# Introducing Stillwater: Calm, Wherever Your Day Takes You\n\nToday we're launching Stillwater, a meditation app built for busy people who want a calmer mind without a complicated routine.\n\nMost meditation apps ask you to set aside 30 minutes, find the perfect quiet room, and commit to a rigid program. Stillwater works differently. It fits into the moments you already have: the five minutes before a meeting, the walk to the train, the wind-down before sleep.\n\n**What's inside Stillwater:**\n\n- **Guided sessions from 3 to 30 minutes** on focus, stress, sleep, and difficult emotions, led by teachers with years of practice.\n- **Adaptive daily check-ins** that suggest a session based on how you're feeling, so you're never stuck choosing.\n- **Quiet timers** with gentle chimes and no notifications, so your practice stays yours.\n- **Offline listening** for flights, commutes, and places with weak signal.\n- **Progress that encourages, not pressures.** Stillwater tracks your consistency, but it never shames you for missing a day.\n\n**Available today** on iOS and Android, with a free tier that includes a 7-day introductory series. Stillwater Plus unlocks the full library and offline downloads for a monthly or annual subscription.\n\nWe built Stillwater because we believed calm should be something you can reach for anytime, not something you have to schedule around. We hope it helps you find a little more stillness in your day.\n\n**Download Stillwater today**, and take your first breath with us."
+  },
+  {
+   "id": "fresh2:marketing:an-email-for-a-bookshop-s-summer-reading-club#plain",
+   "family": "fresh2:marketing:an-email-for-a-bookshop-s-summer-reading-club",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Subject: Join Our Summer Reading Club: Read, Discover, Celebrate!**\n\nDear [Reader's Name],\n\nSummer is the perfect season for diving into a great book, and we'd love for you to join us for the [Year] Summer Reading Club at [Bookshop Name]!\n\n**How It Works**\n\n1. **Sign up** at the front counter, online at [website], or by replying to this email.\n2. **Pick up your reading log** and choose your first book from our Summer Club table.\n3. **Read at your own pace** and log each book you finish.\n4. **Return your log** by [date] to claim your prizes.\n\n**What You'll Get**\n\n- A free tote bag for signing up\n- A stamp in your reading log for every book you finish\n- Entry into our end-of-summer prize drawing for gift cards and bookshop credit\n- Invitations to exclusive author chats and story time events\n- 10% off all purchases during the club period\n\n**Special Events This Summer**\n\n- **[Date]:** Kickoff party with snacks, games, and book recommendations\n- **[Date]:** Author visit with [Author Name]\n- **[Date]:** Mid-summer book swap in the store courtyard\n- **[Date]:** Closing celebration and prize drawing\n\nWhether you're a lifelong reader or someone looking to rediscover the joy of books, this club is for you. Kids, teens, and adults are all welcome, and we have reading lists for every age and interest.\n\nSpaces in our events are limited, so we recommend signing up early. Stop by the shop, call us at [phone number], or visit [website] to register.\n\nHappy reading!\n\nWarmly,\n\n[Your Name]\n[Title], [Bookshop Name]\n[Address]\n[Phone] | [Email] | [Website]"
+  },
+  {
+   "id": "fresh2:marketing:a-facebook-ad-for-a-driving-school#plain",
+   "family": "fresh2:marketing:a-facebook-ad-for-a-driving-school",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Get Road-Ready with Confidence!\n\nDreaming of the freedom of the open road? Our certified driving school makes learning to drive safe, simple, and stress-free.\n\n✅ Patient, certified instructors\n✅ Flexible lesson times, including evenings and weekends\n✅ Modern, dual-control training vehicles\n✅ Test preparation and pass guarantee*\n✅ Beginner, teen, and refresher courses\n\nYour first lesson is on us! Book your free trial drive today.\n\n👉 Tap \"Book Now\" or call [Phone Number]\n\n*Terms apply. See studio for details."
+  },
+  {
+   "id": "fresh2:marketing:a-facebook-ad-for-a-driving-school#adv0",
+   "family": "fresh2:marketing:a-facebook-ad-for-a-driving-school",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "Tired of your kid getting the \"I'll think about it\" look every time you hand them the keys? 😩\n\nWe're **Keller Road Driving School** in Dayton (the strip mall by the Kroger on Stanley Ave, next to the nail place that's always packed). We've been teaching teens and adults since 2009, so yes, we've seen every kind of nervous stall at the Meijer lot.\n\n**What you get:**\n- 6 hrs behind the wheel, with the same instructor every time (Denise has been here 14 yrs and will not let you roll through a stop sign, sorry)\n- 30 hrs classroom, Tues/Thurs 6–9pm or Saturdays 8am–2pm\n- Parallel parking practice on our actual cones in our lot, not a simulator\n- Highway merging on I-675 once you're ready, not before\n\n**$489** for the full package. Payment plan is $99 down, rest over 4 months, no interest, no credit check. We take cash, card, or you can Venmo us (@kellerroaddrive, not the old handle, that one got hacked lol)\n\nSpots fill up fast before school lets out and again right before the holidays. We have 3 openings for the December 2 start and honestly I'm not sure we'll get more before January.\n\nMessage us here or call **(937) 555-0148**. Ask for Marcy, she'll hold a spot for you for 48 hrs with no deposit.\n\nOh, and the coffee in the lobby is terrible. Bring your own."
+  },
+  {
+   "id": "fresh2:marketing:a-listing-for-a-two-bedroom-flat-to-rent#plain",
+   "family": "fresh2:marketing:a-listing-for-a-two-bedroom-flat-to-rent",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**2-Bedroom Flat to Rent**\n\n**Price:** £1,350 per month (excluding bills)\n**Deposit:** 5 weeks' rent\n**Available:** Now\n\nBright and well-presented two-bedroom flat on the second floor of a well-maintained period building, offering comfortable living in a convenient location.\n\n**Key features**\n- Two double bedrooms, with fitted wardrobes in the master\n- Spacious reception room with large windows and plenty of natural light\n- Modern fitted kitchen with oven, hob, fridge/freezer, and washing machine\n- Family bathroom with bath and overhead shower\n- Separate WC\n- Gas central heating and double glazing\n- Private storage cupboard and shared bin store\n- Pets considered on application\n\n**Location**\nWithin a short walk of local shops, cafés, and supermarkets, with regular bus routes into the city centre. The nearest train station is around 10 minutes on foot.\n\n**Terms**\n- Minimum tenancy: 12 months\n- Council tax band C (tenant responsibility)\n- Energy Performance Certificate rating: C\n- References and right-to-rent checks required\n\n**Viewings:** Contact us to arrange a viewing at a time that suits you."
+  },
+  {
+   "id": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale#plain",
+   "family": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Tagline options**\n\n- Bright, bold, and built to be shared.\n- Hop-forward. Easy-drinking. Ready when you are.\n- Crisp citrus, clean finish, zero pretense.\n\n**Product description (menu / website)**\n\nOur new Pale Ale pours golden and clear, with a bright aroma of grapefruit, tangerine, and fresh pine. Dry-hopped for a juicy punch, it finishes crisp and clean, so every sip makes you want the next one. It's the pale ale we kept reaching for, and now it's yours.\n\n**Short description (taps, shelf talkers)**\n\nGolden, citrusy, and crisp. Hop-forward without the bitterness.\n\n**Can or bottle copy**\n\nNEW PALE ALE\nBright hops. Clean finish. Made to be poured with friends.\n5.4% ABV | 35 IBU\n\n**Social media posts**\n\n1. Our new Pale Ale is officially on tap. Grapefruit and pine, big flavor, zero fuss. Come grab a pint.\n2. Some beers are for sipping. This one's for the whole afternoon. New Pale Ale, now pouring.\n3. Dry-hopped, crisp, and ready for patio season. Find it at the taproom today."
+  },
+  {
+   "id": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale#adv5",
+   "family": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "**NEW PALE ALE — coming soon!!**\n\nok so we finally did it. after like 4 months of brewing trials (and a few that we just dumped, don't ask) we have a pale ale we're actually happy with. its called Tuesday Pale because thats when we brewed the batch that worked. hop-forward but not in your face about it. citra and mosaic mostly, some amarillo prob? [CHECK HOP BILL WITH DAN]\n\nwhat it tastes like: bright, kind of juicy? orange peel and a little pine up front, then a soft malty backbone so it doesnt feel thin. finishes dry and clean, so you want another sip. around 5.4% abv, which is easy to drink a few of without feeling like a whole thing.\n\nits a pale ale so it goes with basically everything. tacos, burgers, the sad leftover pizza at 11pm. we think its perfect on the patio when its hot out but honestly it works in november too (we are drinking it right now and its raining).\n\navailable starting friday in 4-pack cans and on draft at the taproom. limited run so grab it while you can. we'll probably make more but no promises lol\n\ncome by, sit at the bar, tell us what you think. we read every comment.\n\ncheers!! 🍻\n\n*(more copy later, need to write the hop section and fix the headline — maybe \"Tuesday Pale\" is too weird?)*"
+  },
+  {
+   "id": "fresh2:marketing:a-short-promo-for-a-community-theatre-play#plain",
+   "family": "fresh2:marketing:a-short-promo-for-a-community-theatre-play",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Come Down to Riverside Hall!**\n\nThe Millbrook Community Players proudly present *The Last Lantern*, a heartfelt comedy about a small-town family, one stubborn lighthouse, and the secret that could save their harbor.\n\nFriday through Sunday, December 4–6, 7:30 PM | Sunday matinee at 2:00 PM\nRiverside Hall, 118 Harbor Street\n\nTickets are $12 for adults and $8 for students and seniors, available at the door or at millbrookplayers.org. Bring the whole family, grab a cookie at intermission, and stay for the talkback after Sunday's matinee.\n\n*The Last Lantern*: a story worth gathering around."
+  },
+  {
+   "id": "fresh2:review:of-a-budget-airline-flight#plain",
+   "family": "fresh2:review:of-a-budget-airline-flight",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Flying Budget Air: A Mixed Bag\n\nI booked a $39 one-way flight on Budget Air, and the price was the best part of the experience. The seat pitch was tight, and my knees found the seat in front of me uncomfortably quickly. Extras added up fast: a carry-on bag cost $45, and a bottle of water at the back of the cabin was $5.\n\nThe crew was friendly and efficient, moving through the aisle with a smile even during a crowded boarding process. The flight departed and landed roughly on time, which I appreciated.\n\nCleanliness was acceptable, though the tray table had a sticky residue. Overall, I would fly with them again for a short trip, but only if I traveled light and came prepared with my own snacks."
+  },
+  {
+   "id": "fresh2:review:of-a-budget-airline-flight#adv5",
+   "family": "fresh2:review:of-a-budget-airline-flight",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "text": "Flew Spirit (or whatever they're called now lol) from Fort Lauderdale to Chicago last week and honestly it was fine?? Seat was like 2 inches from the guy in front and it didnt recline at all so i just sat there. They charged me 60 bucks for a carry on which, ok, expected that, but then the bag thing at the gate was a whole other $75 and the lady was not nice about it. Plane was on time tho, which i guess counts for something. Snack was a $9 bag of pretzels and i didnt have cash so i just didnt eat. Would i fly them again? prob if its like $40 total, maybe not if i have to pay for everything. Also the seat cushion smelled weird. Three stars i guess, mostly because we landed early and the crew was actually chill."
+  },
+  {
+   "id": "fresh2:review:of-a-pizza-place-that-changed-owners#plain",
+   "family": "fresh2:review:of-a-pizza-place-that-changed-owners",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Tony's Slice House: New Owners, Same Great Pizza (Mostly)**\n\nWhen Tony's changed hands last spring, I worried the new owners would ruin the place. They didn't. The crust still has that perfect char on the bottom, and the sauce remains bright and slightly sweet. The new menu adds a few inventive pies, including a fig and prosciutto special that's worth ordering. Service has improved too: the staff is friendlier, and the wait is shorter. My only complaint is the dining room, which feels a bit too polished now. I miss the old checkered tablecloths and the jukebox. Still, I'll gladly trade some nostalgia for a better pie. Four stars, and I'll be back this Friday."
+  },
+  {
+   "id": "fresh2:review:of-a-pizza-place-that-changed-owners#adv0",
+   "family": "fresh2:review:of-a-pizza-place-that-changed-owners",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "text": "Went back to Tony's on Delancey after the new owners took over in the spring. I was nervous. The old place had sticky booths, and the guy at the register always forgot my extra mushrooms. The new folks painted the walls a weird sage green I'm still not sold on, and the jukebox is gone. But the crust is the same. The waitress said they kept the old starter. The margherita was a little floppy in the middle, the pepperoni was great, and the cheese pull was obscene. Garlic knots came out lukewarm and I didn't say anything. Three stars for now. Will update if the sauce changes. Parking is still a nightmare."
+  },
+  {
+   "id": "fresh2:review:of-a-cheap-bluetooth-speaker#plain",
+   "family": "fresh2:review:of-a-cheap-bluetooth-speaker",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Quick Review: Budget Bluetooth Speaker\n\nI was skeptical of a speaker this cheap, but it has earned a permanent spot on my kitchen counter. Setup took under a minute: I held the power button, paired it with my phone, and it reconnected automatically every time after that. Sound is surprisingly full for its size, with clear mids and vocals, though the bass is thin and it distorts if you push the volume past about 80 percent. The battery lasts roughly eight hours at moderate volume, which is more than I expected. It is splash-resistant rather than waterproof, so I would not take it into the pool, but it handled a few kitchen spills without trouble. The buttons feel a bit flimsy, and the included charging cable is short. For casual listening, podcasts, and background music, it offers excellent value. Audiophiles should look elsewhere, but for under thirty dollars, this speaker delivers far more than it costs."
+  },
+  {
+   "id": "fresh2:review:of-a-cheap-bluetooth-speaker#adv2",
+   "family": "fresh2:review:of-a-cheap-bluetooth-speaker",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "text": "For under twenty dollars, this little Bluetooth speaker punches above its weight. Pairing took about five seconds, and it stayed connected across most of my living room without dropping out. It is thin on bass, so listeners who love deep low end will want something larger, but vocals and podcasts come through clear and crisp at moderate volume. Pushing it to full volume introduces some rattle and distortion, so I recommend keeping it around seventy percent. The battery lasts roughly eight hours on a charge, which covers a full day of casual use. The body feels light and plastic, yet it survived two accidental drops without a scratch. The buttons are slightly stiff but responsive. Overall, it is a dependable pick for desk use, kitchen counters, or a backyard gathering where portability matters more than audio depth."
+  },
+  {
+   "id": "fresh2:review:of-a-hotel-breakfast#plain",
+   "family": "fresh2:review:of-a-hotel-breakfast",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Breakfast at the Harbor View Hotel**\n\nThe breakfast spread at the Harbor View Hotel exceeded expectations. Fresh fruit, including ripe melon and berries, sat beside warm scrambled eggs, crispy bacon, and a selection of pastries that were flaky and buttery. The made-to-order omelet station was a highlight, and the staff were quick to refill coffee and clear tables. The dining room was bright and quiet, with views of the water that made lingering over a second cup easy. The only drawback was a short wait for a table during the busiest hour around 8:30. Juice options were limited to orange and apple. Overall, it was a satisfying start to the day and good value for the quality offered."
+  },
+  {
+   "id": "fresh2:review:of-a-language-course#plain",
+   "family": "fresh2:review:of-a-language-course",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "**Review: Conversational Spanish for Beginners**\n\nThis course offers a practical, well-paced introduction to Spanish. Each lesson combines short video explanations with interactive exercises, and the focus on everyday conversation makes it easy to start speaking early. Pronunciation drills are a highlight, with clear audio that helps learners hear subtle differences in vowel sounds and the rolled \"r.\" Grammar is introduced gradually, and the review quizzes reinforce new material well. The main drawback is the limited feedback on written assignments, which left me unsure whether my sentences were correct. Vocabulary sometimes repeats without enough new content. Overall, it is an excellent choice for absolute beginners who want confidence in real-life conversations, though learners seeking detailed grammar explanations may need to supplement it with a textbook."
+  },
+  {
+   "id": "fresh2:letter:to-a-friend-you-lost-touch-with#plain",
+   "family": "fresh2:letter:to-a-friend-you-lost-touch-with",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Dear Sam,\n\nI came across your name the other day while looking through old photos, and I realized how long it's been since we last talked. I'm sorry for letting the years slip by. Life got busy, and somehow every \"I should write\" turned into \"next week.\"\n\nI think about our summers at the lake often: the terrible campfire coffee, the night we got lost driving back and laughed until we cried, and the way you always knew exactly what to say when things felt heavy. I still have the mixtape you made me, though the cassette player it belonged to is long gone.\n\nA lot has changed since then. I moved to a smaller city last spring, picked up painting again, and recently adopted a grumpy orange cat who has opinions about everything. I'd love to hear what your life looks like now: the work you're proud of, the people you're close to, and whether you still hate cilantro.\n\nNo pressure to reply right away. I just wanted you to know I'm thinking of you, and that I'd really like to catch up, over coffee or a phone call, whichever feels easier.\n\nWith warmth and a little embarrassment about the gap,\n\nAlex"
+  },
+  {
+   "id": "fresh2:letter:to-your-future-self-in-ten-years#plain",
+   "family": "fresh2:letter:to-your-future-self-in-ten-years",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Dear Future Me,\n\nTen years from now, I hope you still remember how it felt to write this, sitting in a quiet room in late 2026, unsure what the next decade would bring.\n\nI hope you're kinder to yourself than I've been lately. I hope you've learned that rest isn't something you earn after finishing everything, and that the list will never be empty, so you should stop waiting for it to be.\n\nI hope you still call the people who matter most, even when it's inconvenient. Pick up the phone. Show up. Nobody remembers the perfect deadline, but they remember who was there.\n\nI hope you've kept some curiosity alive, that you're still reading things that surprise you and still asking questions you can't answer yet. I hope you've changed your mind about something important, because that means you kept growing.\n\nAnd I hope you're not chasing a version of success that looks good from the outside but feels hollow within. Measure your days by what you gave, what you learned, and whether you laughed.\n\nWhatever you're doing now, I hope it's meaningful, and that you're at peace with the path that brought you there.\n\nWith hope,\nMe, in 2026"
+  },
+  {
+   "id": "fresh2:letter:thanking-a-nurse-who-looked-after-your-father#plain",
+   "family": "fresh2:letter:thanking-a-nurse-who-looked-after-your-father",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "text": "Dear Nurse [Name],\n\nI am writing to thank you for the care you gave my father during his time under your watch. Words feel inadequate for what you did for him and for our family, but I hope you will accept them as a sincere expression of our gratitude.\n\nFrom the first day, you treated him with dignity and patience. You took the time to listen to him, to explain what was happening, and to answer the questions he was too tired or too proud to ask. On the hardest nights, when he was frightened and in pain, your calm presence made a real difference. He felt safe with you, and that meant a great deal to him.\n\nYou also cared for us. When we were overwhelmed, you guided us gently, kept us informed, and reassured us that we were not alone. Your kindness gave us strength during a very difficult time.\n\nNurses like you carry an enormous responsibility, often with little recognition. Please know that your compassion was seen and deeply appreciated. You made a lasting impression on my father, and on me.\n\nThank you for everything you did for him, and for us.\n\nWith heartfelt gratitude,\n\n[Your Name]"
+  }
+ ]
+}

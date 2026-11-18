@@ -105,4 +105,12 @@ export interface LintOptions {
   extraRules?: Rule[];
   /** Treat input as plain text instead of markdown (code fences and headings are not special). */
   plain?: boolean;
+  /** Skip the human-pattern score. */
+  noScore?: boolean;
+  /**
+   * Distinct habit rules (a low human-pattern score counts as one) a text needs before habit
+   * findings are reported as warnings or errors. Default 2. 0 turns corroboration off, so every
+   * rule reports at its own severity.
+   */
+  corroborate?: number;
 }

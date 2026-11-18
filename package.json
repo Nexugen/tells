@@ -1,6 +1,6 @@
 {
   "name": "tells",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rule-based linter, CLI, CI check, and an optional model-backed rewrite.",
   "license": "MIT",
   "type": "module",

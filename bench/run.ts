@@ -350,7 +350,12 @@ ${shape}
 - **Paragraph variation:** like sentence variation, across paragraphs.
 - **Shared openings and closings:** share of samples in a set that start or end with the same three words as another sample in that set. High values point to templates.
 `;
-  writeFileSync(join(here, 'RESULTS.md'), md);
+  // Keep the hand-written v2 section at the top of RESULTS.md; this command owns the v1 part.
+  const resultsPath = join(here, 'RESULTS.md');
+  const marker = '## v1 benchmark';
+  const prev = existsSync(resultsPath) ? readFileSync(resultsPath, 'utf8') : '';
+  const head = prev.includes(marker) ? prev.slice(0, prev.indexOf(marker)) + marker + '\n\nThe rest of this page is written by `node --experimental-strip-types bench/run.ts score` and covers the 48-prompt v1 benchmark.\n\n' : '';
+  writeFileSync(resultsPath, head ? head + md.replace('# Results\n', '').replace(/\n## /g, '\n### ') : md);
   console.log(md);
 }
 

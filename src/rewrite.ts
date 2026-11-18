@@ -78,7 +78,9 @@ const RANK: Record<Severity, number> = { error: 0, warning: 1, info: 2 };
  */
 export async function rewrite(text: string, options: RewriteOptions = {}): Promise<RewriteResult> {
   const register: Register = options.register === 'auto' ? guessRegister(text).register : (options.register ?? 'professional');
-  options = { ...options, register };
+  // A rewrite is asked for, so it targets every tell at its own severity, without the
+  // corroboration that keeps lint() from accusing a text over one habit.
+  options = { ...options, register, corroborate: options.corroborate ?? 0 };
   const minSeverity = options.minSeverity ?? 'warning';
   const model = options.model ?? anthropic();
   const before = lint(text, options);

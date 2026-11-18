@@ -4,3 +4,4 @@ dist
 *.log
 bench/out/raw-*
 .tells-api-data
+__pycache__/

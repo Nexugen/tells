@@ -181,6 +181,8 @@ export function claudeCli(options: ClaudeCliOptions = {}): Model {
               reject(new ModelError(`claude CLI exited with ${code}${why ? `: ${why}` : ''}`, true));
             }
           });
+          // If the CLI exits before reading its input, the write fails; the close handler reports why.
+          child.stdin.on('error', () => {});
           child.stdin.end(req.prompt);
         });
         let j: { result?: string; is_error?: boolean; total_cost_usd?: number; usage?: { input_tokens?: number; output_tokens?: number } };

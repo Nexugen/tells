@@ -1,0 +1,1068 @@
+{
+ "version": 1,
+ "round": 2,
+ "prompts": [
+  {
+   "id": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d#plain",
+   "family": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to your mum saying you got home safe after the drive."
+  },
+  {
+   "id": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d#adv1",
+   "family": "fresh2:chat:to-your-mum-saying-you-got-home-safe-after-the-d",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a text to your mum saying you got home safe after the drive. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa#plain",
+   "family": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to a friend asking if they want your old sofa."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa#adv1",
+   "family": "fresh2:chat:to-a-friend-asking-if-they-want-your-old-sofa",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a text to a friend asking if they want your old sofa. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:chat:to-a-coworker-saying-you-left-your-badge-at-home#plain",
+   "family": "fresh2:chat:to-a-coworker-saying-you-left-your-badge-at-home",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to a coworker saying you left your badge at home."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-after-a-bad-first-date#plain",
+   "family": "fresh2:chat:to-a-friend-after-a-bad-first-date",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to a friend after a bad first date."
+  },
+  {
+   "id": "fresh2:chat:to-a-friend-after-a-bad-first-date#adv5",
+   "family": "fresh2:chat:to-a-friend-after-a-bad-first-date",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a text to a friend after a bad first date. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on#plain",
+   "family": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to your landlord saying the heating is back on."
+  },
+  {
+   "id": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on#adv1",
+   "family": "fresh2:chat:to-your-landlord-saying-the-heating-is-back-on",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a text to your landlord saying the heating is back on. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password#plain",
+   "family": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a text to a cousin asking for their wifi password."
+  },
+  {
+   "id": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password#adv4",
+   "family": "fresh2:chat:to-a-cousin-asking-for-their-wifi-password",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a text to a cousin asking for their wifi password. Write like a regular person on a forum, not like a writer."
+  },
+  {
+   "id": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-#plain",
+   "family": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email asking a colleague for the latest sales figures before Thursday."
+  },
+  {
+   "id": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-#adv2",
+   "family": "fresh2:email:asking-a-colleague-for-the-latest-sales-figures-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a work email asking a colleague for the latest sales figures before Thursday. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:email:to-a-supplier-disputing-an-invoice-that-charges-#plain",
+   "family": "fresh2:email:to-a-supplier-disputing-an-invoice-that-charges-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a supplier disputing an invoice that charges for 40 units instead of 30."
+  },
+  {
+   "id": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi#plain",
+   "family": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a customer explaining their warranty has expired but offering a repair price."
+  },
+  {
+   "id": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi#adv3",
+   "family": "fresh2:email:to-a-customer-explaining-their-warranty-has-expi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a work email to a customer explaining their warranty has expired but offering a repair price. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:email:to-a-new-hire-about-their-first-day#plain",
+   "family": "fresh2:email:to-a-new-hire-about-their-first-day",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a new hire about their first day."
+  },
+  {
+   "id": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action#plain",
+   "family": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a client sending meeting notes and two action items."
+  },
+  {
+   "id": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action#adv4",
+   "family": "fresh2:email:to-a-client-sending-meeting-notes-and-two-action",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a work email to a client sending meeting notes and two action items. Write like a regular person on a forum, not like a writer."
+  },
+  {
+   "id": "fresh2:email:to-your-team-about-the-holiday-rota#plain",
+   "family": "fresh2:email:to-your-team-about-the-holiday-rota",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to your team about the holiday rota."
+  },
+  {
+   "id": "fresh2:email:to-your-team-about-the-holiday-rota#adv1",
+   "family": "fresh2:email:to-your-team-about-the-holiday-rota",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a work email to your team about the holiday rota. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person#plain",
+   "family": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a venue asking to book a room for a 30-person workshop."
+  },
+  {
+   "id": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person#adv3",
+   "family": "fresh2:email:to-a-venue-asking-to-book-a-room-for-a-30-person",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a work email to a venue asking to book a room for a 30-person workshop. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:email:to-a-manager-asking-to-work-from-home-on-fridays#plain",
+   "family": "fresh2:email:to-a-manager-asking-to-work-from-home-on-fridays",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a work email to a manager asking to work from home on Fridays."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-rid-of-fruit-flies-in-my-kitchen#plain",
+   "family": "fresh2:qa:how-do-i-get-rid-of-fruit-flies-in-my-kitchen",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I get rid of fruit flies in my kitchen?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:is-it-worth-buying-a-bread-maker#plain",
+   "family": "fresh2:qa:is-it-worth-buying-a-bread-maker",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Is it worth buying a bread maker?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:is-it-worth-buying-a-bread-maker#adv5",
+   "family": "fresh2:qa:is-it-worth-buying-a-bread-maker",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"Is it worth buying a bread maker?\" Write a helpful reply of up to 170 words. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:qa:what-is-the-best-way-to-learn-chess-as-an-adult#plain",
+   "family": "fresh2:qa:what-is-the-best-way-to-learn-chess-as-an-adult",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"What is the best way to learn chess as an adult?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-stop-my-puppy-biting#plain",
+   "family": "fresh2:qa:how-do-i-stop-my-puppy-biting",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I stop my puppy biting?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-stop-my-puppy-biting#adv3",
+   "family": "fresh2:qa:how-do-i-stop-my-puppy-biting",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"How do I stop my puppy biting?\" Write a helpful reply of up to 170 words. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:qa:should-i-fix-my-old-phone-or-buy-a-new-one#plain",
+   "family": "fresh2:qa:should-i-fix-my-old-phone-or-buy-a-new-one",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"Should I fix my old phone or buy a new one?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-keep-basil-alive-indoors#plain",
+   "family": "fresh2:qa:how-do-i-keep-basil-alive-indoors",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I keep basil alive indoors?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-keep-basil-alive-indoors#adv3",
+   "family": "fresh2:qa:how-do-i-keep-basil-alive-indoors",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"How do I keep basil alive indoors?\" Write a helpful reply of up to 170 words. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:qa:what-should-i-do-if-my-boss-keeps-changing-deadl#plain",
+   "family": "fresh2:qa:what-should-i-do-if-my-boss-keeps-changing-deadl",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"What should I do if my boss keeps changing deadlines?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-better-at-public-speaking#plain",
+   "family": "fresh2:qa:how-do-i-get-better-at-public-speaking",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Someone asks online: \"How do I get better at public speaking?\" Write a helpful reply of up to 170 words."
+  },
+  {
+   "id": "fresh2:qa:how-do-i-get-better-at-public-speaking#adv0",
+   "family": "fresh2:qa:how-do-i-get-better-at-public-speaking",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Someone asks online: \"How do I get better at public speaking?\" Write a helpful reply of up to 170 words. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:qa:why-does-my-java-app-use-so-much-memory#plain",
+   "family": "fresh2:qa:why-does-my-java-app-use-so-much-memory",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"Why does my Java app use so much memory?\""
+  },
+  {
+   "id": "fresh2:qa:how-do-i-undo-the-last-git-commit-but-keep-my-ch#plain",
+   "family": "fresh2:qa:how-do-i-undo-the-last-git-commit-but-keep-my-ch",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"How do I undo the last git commit but keep my changes?\""
+  },
+  {
+   "id": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem#plain",
+   "family": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"What is the difference between a mutex and a semaphore?\""
+  },
+  {
+   "id": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem#adv1",
+   "family": "fresh2:qa:what-is-the-difference-between-a-mutex-and-a-sem",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Answer on a programming forum, under 200 words: \"What is the difference between a mutex and a semaphore?\" Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:qa:why-is-my-rest-api-slow-under-load#plain",
+   "family": "fresh2:qa:why-is-my-rest-api-slow-under-load",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"Why is my REST API slow under load?\""
+  },
+  {
+   "id": "fresh2:qa:should-i-learn-vue-or-react-first#plain",
+   "family": "fresh2:qa:should-i-learn-vue-or-react-first",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"Should I learn Vue or React first?\""
+  },
+  {
+   "id": "fresh2:qa:why-does-my-css-grid-overflow-on-small-screens#plain",
+   "family": "fresh2:qa:why-does-my-css-grid-overflow-on-small-screens",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer on a programming forum, under 200 words: \"Why does my CSS grid overflow on small screens?\""
+  },
+  {
+   "id": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po#plain",
+   "family": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the README intro for a library that validates postcodes."
+  },
+  {
+   "id": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po#adv2",
+   "family": "fresh2:docs:the-readme-intro-for-a-library-that-validates-po",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write the README intro for a library that validates postcodes. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:docs:a-changelog-entry-for-version-0-9-of-a-cli-that-#plain",
+   "family": "fresh2:docs:a-changelog-entry-for-version-0-9-of-a-cli-that-",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a changelog entry for version 0.9 of a CLI that syncs dotfiles."
+  },
+  {
+   "id": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work#plain",
+   "family": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a wiki page explaining how on-call handover works."
+  },
+  {
+   "id": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work#adv5",
+   "family": "fresh2:docs:a-wiki-page-explaining-how-on-call-handover-work",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a wiki page explaining how on-call handover works. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:docs:a-bug-report-for-a-calendar-app-that-shows-event#plain",
+   "family": "fresh2:docs:a-bug-report-for-a-calendar-app-that-shows-event",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a bug report for a calendar app that shows events an hour late after the clocks change."
+  },
+  {
+   "id": "fresh2:docs:a-short-description-of-a-feature-flag-system-for#plain",
+   "family": "fresh2:docs:a-short-description-of-a-feature-flag-system-for",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short description of a feature flag system for new engineers."
+  },
+  {
+   "id": "fresh2:docs:a-short-description-of-a-feature-flag-system-for#adv1",
+   "family": "fresh2:docs:a-short-description-of-a-feature-flag-system-for",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a short description of a feature flag system for new engineers. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:comment:about-a-plan-to-close-a-local-post-office#plain",
+   "family": "fresh2:comment:about-a-plan-to-close-a-local-post-office",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about a plan to close a local post office. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-rising-train-fares#plain",
+   "family": "fresh2:comment:about-rising-train-fares",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about rising train fares. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-rising-train-fares#adv3",
+   "family": "fresh2:comment:about-rising-train-fares",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a comment on a news site about rising train fares. One or two paragraphs. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:comment:about-a-new-cycle-lane-on-your-street#plain",
+   "family": "fresh2:comment:about-a-new-cycle-lane-on-your-street",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about a new cycle lane on your street. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-a-school-banning-homework#plain",
+   "family": "fresh2:comment:about-a-school-banning-homework",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about a school banning homework. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-a-supermarket-removing-self-checkouts#plain",
+   "family": "fresh2:comment:about-a-supermarket-removing-self-checkouts",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about a supermarket removing self-checkouts. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-a-supermarket-removing-self-checkouts#adv1",
+   "family": "fresh2:comment:about-a-supermarket-removing-self-checkouts",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a comment on a news site about a supermarket removing self-checkouts. One or two paragraphs. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:comment:about-a-city-getting-a-new-football-stadium#plain",
+   "family": "fresh2:comment:about-a-city-getting-a-new-football-stadium",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a comment on a news site about a city getting a new football stadium. One or two paragraphs."
+  },
+  {
+   "id": "fresh2:comment:about-a-city-getting-a-new-football-stadium#adv3",
+   "family": "fresh2:comment:about-a-city-getting-a-new-football-stadium",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a comment on a news site about a city getting a new football stadium. One or two paragraphs. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:blog:about-your-first-year-running-a-small-bakery#plain",
+   "family": "fresh2:blog:about-your-first-year-running-a-small-bakery",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about your first year running a small bakery. About 250 words."
+  },
+  {
+   "id": "fresh2:blog:about-your-first-year-running-a-small-bakery#adv2",
+   "family": "fresh2:blog:about-your-first-year-running-a-small-bakery",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a blog post about your first year running a small bakery. About 250 words. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:blog:about-walking-the-length-of-a-canal#plain",
+   "family": "fresh2:blog:about-walking-the-length-of-a-canal",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about walking the length of a canal. About 250 words."
+  },
+  {
+   "id": "fresh2:blog:about-getting-back-into-drawing#plain",
+   "family": "fresh2:blog:about-getting-back-into-drawing",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about getting back into drawing. About 250 words."
+  },
+  {
+   "id": "fresh2:blog:about-getting-back-into-drawing#adv2",
+   "family": "fresh2:blog:about-getting-back-into-drawing",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a blog post about getting back into drawing. About 250 words. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:blog:about-a-family-recipe-you-finally-got-right#plain",
+   "family": "fresh2:blog:about-a-family-recipe-you-finally-got-right",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about a family recipe you finally got right. About 250 words."
+  },
+  {
+   "id": "fresh2:blog:about-a-family-recipe-you-finally-got-right#adv1",
+   "family": "fresh2:blog:about-a-family-recipe-you-finally-got-right",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a blog post about a family recipe you finally got right. About 250 words. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:blog:about-volunteering-at-a-food-bank#plain",
+   "family": "fresh2:blog:about-volunteering-at-a-food-bank",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a blog post about volunteering at a food bank. About 250 words."
+  },
+  {
+   "id": "fresh2:essay:social-media-does-more-harm-than-good-to-teenage#plain",
+   "family": "fresh2:essay:social-media-does-more-harm-than-good-to-teenage",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether social media does more harm than good to teenagers."
+  },
+  {
+   "id": "fresh2:essay:cities-should-ban-cars-from-their-centres#plain",
+   "family": "fresh2:essay:cities-should-ban-cars-from-their-centres",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether cities should ban cars from their centres."
+  },
+  {
+   "id": "fresh2:essay:cities-should-ban-cars-from-their-centres#adv0",
+   "family": "fresh2:essay:cities-should-ban-cars-from-their-centres",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a 350-word essay for a class on whether cities should ban cars from their centres. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:essay:school-should-teach-personal-finance#plain",
+   "family": "fresh2:essay:school-should-teach-personal-finance",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether school should teach personal finance."
+  },
+  {
+   "id": "fresh2:essay:school-should-teach-personal-finance#adv0",
+   "family": "fresh2:essay:school-should-teach-personal-finance",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a 350-word essay for a class on whether school should teach personal finance. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:essay:space-exploration-is-worth-the-money#plain",
+   "family": "fresh2:essay:space-exploration-is-worth-the-money",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether space exploration is worth the money."
+  },
+  {
+   "id": "fresh2:essay:space-exploration-is-worth-the-money#adv5",
+   "family": "fresh2:essay:space-exploration-is-worth-the-money",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a 350-word essay for a class on whether space exploration is worth the money. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:essay:students-should-be-paid-for-good-grades#plain",
+   "family": "fresh2:essay:students-should-be-paid-for-good-grades",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 350-word essay for a class on whether students should be paid for good grades."
+  },
+  {
+   "id": "fresh2:essay:students-should-be-paid-for-good-grades#adv5",
+   "family": "fresh2:essay:students-should-be-paid-for-good-grades",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a 350-word essay for a class on whether students should be paid for good grades. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:fiction:about-a-woman-who-inherits-a-failing-cinema#plain",
+   "family": "fresh2:fiction:about-a-woman-who-inherits-a-failing-cinema",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about a woman who inherits a failing cinema."
+  },
+  {
+   "id": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen#plain",
+   "family": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about two neighbours who have not spoken in twenty years."
+  },
+  {
+   "id": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen#adv2",
+   "family": "fresh2:fiction:about-two-neighbours-who-have-not-spoken-in-twen",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story about two neighbours who have not spoken in twenty years. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:fiction:set-on-the-last-bus-of-the-night#plain",
+   "family": "fresh2:fiction:set-on-the-last-bus-of-the-night",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story set on the last bus of the night."
+  },
+  {
+   "id": "fresh2:fiction:set-on-the-last-bus-of-the-night#adv4",
+   "family": "fresh2:fiction:set-on-the-last-bus-of-the-night",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story set on the last bus of the night. Write like a regular person on a forum, not like a writer."
+  },
+  {
+   "id": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish#plain",
+   "family": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about a boy who finds a key in a fish."
+  },
+  {
+   "id": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish#adv1",
+   "family": "fresh2:fiction:about-a-boy-who-finds-a-key-in-a-fish",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story about a boy who finds a key in a fish. Sound like a tired person writing at the end of a long day."
+  },
+  {
+   "id": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose#plain",
+   "family": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening 300 words of a short story about a translator who mistranslates on purpose."
+  },
+  {
+   "id": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose#adv3",
+   "family": "fresh2:fiction:about-a-translator-who-mistranslates-on-purpose",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write the opening 300 words of a short story about a translator who mistranslates on purpose. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:news:about-a-library-fine-amnesty#plain",
+   "family": "fresh2:news:about-a-library-fine-amnesty",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a library fine amnesty."
+  },
+  {
+   "id": "fresh2:news:about-a-heatwave-closing-schools-early#plain",
+   "family": "fresh2:news:about-a-heatwave-closing-schools-early",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a heatwave closing schools early."
+  },
+  {
+   "id": "fresh2:news:about-a-heatwave-closing-schools-early#adv4",
+   "family": "fresh2:news:about-a-heatwave-closing-schools-early",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a 250-word local news report about a heatwave closing schools early. Write like a regular person on a forum, not like a writer."
+  },
+  {
+   "id": "fresh2:news:about-a-village-shop-saved-by-residents#plain",
+   "family": "fresh2:news:about-a-village-shop-saved-by-residents",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a village shop saved by residents."
+  },
+  {
+   "id": "fresh2:news:about-a-village-shop-saved-by-residents#adv5",
+   "family": "fresh2:news:about-a-village-shop-saved-by-residents",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a 250-word local news report about a village shop saved by residents. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:news:about-a-new-night-bus-route#plain",
+   "family": "fresh2:news:about-a-new-night-bus-route",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a new night bus route."
+  },
+  {
+   "id": "fresh2:news:about-a-new-night-bus-route#adv2",
+   "family": "fresh2:news:about-a-new-night-bus-route",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a 250-word local news report about a new night bus route. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:news:about-a-stolen-statue-being-returned#plain",
+   "family": "fresh2:news:about-a-stolen-statue-being-returned",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word local news report about a stolen statue being returned."
+  },
+  {
+   "id": "fresh2:news:about-a-stolen-statue-being-returned#adv0",
+   "family": "fresh2:news:about-a-stolen-statue-being-returned",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a 250-word local news report about a stolen statue being returned. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha#plain",
+   "family": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a product description for a hand-knitted wool hat."
+  },
+  {
+   "id": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha#adv4",
+   "family": "fresh2:marketing:a-product-description-for-a-hand-knitted-wool-ha",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a product description for a hand-knitted wool hat. Write like a regular person on a forum, not like a writer."
+  },
+  {
+   "id": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon#plain",
+   "family": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a homepage for a dog grooming salon."
+  },
+  {
+   "id": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon#adv3",
+   "family": "fresh2:marketing:a-homepage-for-a-dog-grooming-salon",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a homepage for a dog grooming salon. Use American spelling, plain words, and at least one sentence fragment."
+  },
+  {
+   "id": "fresh2:marketing:a-launch-announcement-for-a-meditation-app#plain",
+   "family": "fresh2:marketing:a-launch-announcement-for-a-meditation-app",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a launch announcement for a meditation app."
+  },
+  {
+   "id": "fresh2:marketing:an-email-for-a-bookshop-s-summer-reading-club#plain",
+   "family": "fresh2:marketing:an-email-for-a-bookshop-s-summer-reading-club",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email for a bookshop's summer reading club."
+  },
+  {
+   "id": "fresh2:marketing:a-facebook-ad-for-a-driving-school#plain",
+   "family": "fresh2:marketing:a-facebook-ad-for-a-driving-school",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a Facebook ad for a driving school."
+  },
+  {
+   "id": "fresh2:marketing:a-facebook-ad-for-a-driving-school#adv0",
+   "family": "fresh2:marketing:a-facebook-ad-for-a-driving-school",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a Facebook ad for a driving school. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:marketing:a-listing-for-a-two-bedroom-flat-to-rent#plain",
+   "family": "fresh2:marketing:a-listing-for-a-two-bedroom-flat-to-rent",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a listing for a two-bedroom flat to rent."
+  },
+  {
+   "id": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale#plain",
+   "family": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write copy for a craft brewery's new pale ale."
+  },
+  {
+   "id": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale#adv5",
+   "family": "fresh2:marketing:copy-for-a-craft-brewery-s-new-pale-ale",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write copy for a craft brewery's new pale ale. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:marketing:a-short-promo-for-a-community-theatre-play#plain",
+   "family": "fresh2:marketing:a-short-promo-for-a-community-theatre-play",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short promo for a community theatre play."
+  },
+  {
+   "id": "fresh2:review:of-a-budget-airline-flight#plain",
+   "family": "fresh2:review:of-a-budget-airline-flight",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a budget airline flight. About 120 words."
+  },
+  {
+   "id": "fresh2:review:of-a-budget-airline-flight#adv5",
+   "family": "fresh2:review:of-a-budget-airline-flight",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a review of a budget airline flight. About 120 words. Make it read like a first draft that was never edited."
+  },
+  {
+   "id": "fresh2:review:of-a-pizza-place-that-changed-owners#plain",
+   "family": "fresh2:review:of-a-pizza-place-that-changed-owners",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a pizza place that changed owners. About 120 words."
+  },
+  {
+   "id": "fresh2:review:of-a-pizza-place-that-changed-owners#adv0",
+   "family": "fresh2:review:of-a-pizza-place-that-changed-owners",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a review of a pizza place that changed owners. About 120 words. Write it so nobody could tell it came from an AI. Be specific and a little messy."
+  },
+  {
+   "id": "fresh2:review:of-a-cheap-bluetooth-speaker#plain",
+   "family": "fresh2:review:of-a-cheap-bluetooth-speaker",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a cheap Bluetooth speaker. About 120 words."
+  },
+  {
+   "id": "fresh2:review:of-a-cheap-bluetooth-speaker#adv2",
+   "family": "fresh2:review:of-a-cheap-bluetooth-speaker",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a review of a cheap Bluetooth speaker. About 120 words. No bullet points, no bold, no dashes, no sign-off, and no summary at the end."
+  },
+  {
+   "id": "fresh2:review:of-a-hotel-breakfast#plain",
+   "family": "fresh2:review:of-a-hotel-breakfast",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a hotel breakfast. About 120 words."
+  },
+  {
+   "id": "fresh2:review:of-a-language-course#plain",
+   "family": "fresh2:review:of-a-language-course",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a review of a language course. About 120 words."
+  },
+  {
+   "id": "fresh2:letter:to-a-friend-you-lost-touch-with#plain",
+   "family": "fresh2:letter:to-a-friend-you-lost-touch-with",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a letter to a friend you lost touch with. About 200 words."
+  },
+  {
+   "id": "fresh2:letter:to-your-future-self-in-ten-years#plain",
+   "family": "fresh2:letter:to-your-future-self-in-ten-years",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a letter to your future self in ten years. About 200 words."
+  },
+  {
+   "id": "fresh2:letter:thanking-a-nurse-who-looked-after-your-father#plain",
+   "family": "fresh2:letter:thanking-a-nurse-who-looked-after-your-father",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a letter thanking a nurse who looked after your father. About 200 words."
+  }
+ ]
+}

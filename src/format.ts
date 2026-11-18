@@ -18,6 +18,7 @@ export function formatText(file: string, text: string, result: LintResult, opts:
   if (h) {
     const present = h.present.map((p) => `${p.name} (${p.count})`).join(', ');
     lines.push(`  ${c('32', 'human signals')}  ${present || 'none found'}${h.tooShort ? ' (too short to judge)' : ''}`);
+    if (h.pattern) lines.push(`  ${c(h.pattern.low ? '31' : '32', 'human-pattern score')}  ${h.pattern.score} of 100${h.pattern.low ? `, under ${h.pattern.lowLine}: reads machine-like` : ''}`);
     for (const m of h.missing) {
       lines.push(`  ${c('35', 'missing')}  ${m.name}. ${m.message}`);
       lines.push(`    ${m.add}`);

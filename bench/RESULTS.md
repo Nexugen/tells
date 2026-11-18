@@ -1,5 +1,120 @@
 # Results
 
+## v2 benchmark
+
+Built with `bench/v2.ts`. The accuracy numbers and how they were measured are in `EVAL.md`; this page has the data and the per-source results. Saved reports are in `bench/rounds/`.
+
+### The data
+
+Human samples were all written before 2022 and come from openly licensed or public sources (see `DATA-LICENSES.md`). Model samples are answers from Claude Haiku, Sonnet and Opus to the prompts in `bench/prompts-v2.json` and each round's `prompts.json`. "Non-native" marks writers known to be learning English (ELLIPSE, and PERSUADE essays by English learners). Sources marked fresh-2 are the final held-out round.
+
+| Source | Samples | Casual | Professional | Technical | Marketing | Non-native | Genres |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| stackexchange | 1175 | 575 | 393 | 207 | 0 | 0 | qa, comment |
+| enron | 900 | 298 | 602 | 0 | 0 | 0 | email |
+| gutenberg | 727 | 196 | 531 | 0 | 0 | 0 | essay, letter, fiction |
+| hn | 600 | 546 | 0 | 54 | 0 | 0 | comment |
+| ellipse | 528 | 91 | 437 | 0 | 0 | 528 | student-essay |
+| persuade | 510 | 0 | 510 | 0 | 0 | 41 | student-essay |
+| wikitalk | 504 | 434 | 70 | 0 | 0 | 0 | comment |
+| reddit | 500 | 500 | 0 | 0 | 0 | 0 | forum |
+| blogs | 500 | 500 | 0 | 0 | 0 | 0 | blog |
+| jobs | 400 | 0 | 129 | 0 | 271 | 0 | marketing |
+| sms | 400 | 400 | 0 | 0 | 0 | 0 | chat |
+| amazon | 400 | 400 | 0 | 0 | 0 | 0 | review |
+| stackexchange-v1 | 367 | 297 | 70 | 0 | 0 | 0 | qa, comment |
+| govuk | 329 | 0 | 309 | 0 | 20 | 0 | news, guidance |
+| wine | 300 | 0 | 0 | 0 | 300 | 0 | review |
+| oss | 284 | 0 | 74 | 154 | 56 | 0 | marketing, blog, docs |
+| gutenberg2 | 270 | 73 | 197 | 0 | 0 | 0 | essay, fiction, letter |
+| wikinews | 250 | 0 | 250 | 0 | 0 | 0 | news |
+| pymail | 244 | 34 | 0 | 210 | 0 | 0 | email |
+| apache (fresh-2) | 215 | 23 | 0 | 192 | 0 | 0 | email |
+| gutenberg3 (fresh-2) | 211 | 69 | 142 | 0 | 0 | 0 | fiction, essay, letter |
+| globalvoices (fresh-2) | 207 | 0 | 207 | 0 | 0 | 0 | news, blog |
+| wikibooks | 174 | 0 | 121 | 53 | 0 | 0 | docs |
+| oss2 | 158 | 0 | 0 | 37 | 121 | 0 | marketing, docs |
+| mozblog | 154 | 0 | 90 | 0 | 64 | 0 | blog, marketing |
+| wikivoyage (fresh-2) | 150 | 0 | 133 | 0 | 17 | 0 | guidance |
+| debian (fresh-2) | 98 | 20 | 0 | 78 | 0 | 0 | email |
+| gov.uk | 20 | 0 | 8 | 0 | 12 | 0 | guidance |
+| go.dev | 19 | 0 | 5 | 8 | 6 | 0 | blog |
+| blog.rust-lang.org | 10 | 0 | 4 | 2 | 4 | 0 | blog |
+| model: claude-v2 | 1582 | 680 | 392 | 250 | 260 | 0 | chat, email, qa, docs, comment, forum, blog, essay, letter, fiction, news, guidance, marketing, review |
+| model: claude-fresh-1 | 414 | 177 | 123 | 69 | 45 | 0 | chat, email, qa, docs, comment, blog, essay, fiction, news, marketing, review, letter |
+| model: claude-fresh-2 (fresh-2) | 354 | 153 | 120 | 45 | 36 | 0 | chat, email, qa, docs, comment, blog, essay, fiction, news, marketing, review, letter |
+| model: claude-v1 | 144 | 60 | 36 | 18 | 30 | 0 | mixed |
+
+In all, 10,604 human samples (9,723 in the pool, 881 held out in round 2) and 2,494 model samples.
+
+### Read these with care
+
+- The human sets are published writing. Private messages are only represented by Enron, the Python, Apache and Debian mailing lists and SMS.
+- Stack Exchange, Wikipedia and Gutenberg texts can include quotations of other writers. They were kept, because people quote in real writing too.
+- PERSUADE and ELLIPSE give no per-essay date. The date field is an upper bound.
+- Every model is a Claude model, answering through Claude Code's print mode with no system prompt beyond the task.
+- The human-pattern score was trained on the train split, so the pool's train numbers are not evidence of anything. Use tune, test and the held-out rounds.
+
+### Locked test split, by source
+
+| Source | Texts | With a warning or error | Low score | Mean score |
+| --- | ---: | ---: | ---: | ---: |
+| human:amazon | 96 | 0.0% | 3.1% | 94.7 |
+| human:blogs | 104 | 1.0% | 4.8% | 91 |
+| human:ellipse | 72 | 0.0% | 0.0% | 99.4 |
+| human:enron | 186 | 0.0% | 1.6% | 94.4 |
+| human:gov.uk | 20 | 0.0% | 10.0% | 89.9 |
+| human:govuk | 84 | 0.0% | 0.0% | 98.6 |
+| human:gutenberg | 157 | 0.0% | 0.6% | 98.3 |
+| human:gutenberg2 | 36 | 0.0% | 0.0% | 98.4 |
+| human:hn | 114 | 0.0% | 0.9% | 96.7 |
+| human:jobs | 84 | 0.0% | 1.2% | 93 |
+| human:mozblog | 44 | 0.0% | 2.3% | 95.1 |
+| human:oss | 2 | 0.0% | 0.0% | 72.5 |
+| human:oss2 | 40 | 0.0% | 2.5% | 90.8 |
+| human:persuade | 102 | 0.0% | 1.0% | 97.8 |
+| human:pymail | 45 | 2.2% | 6.7% | 91.2 |
+| human:reddit | 93 | 0.0% | 3.2% | 94.8 |
+| human:sms | 54 | 0.0% | n/a | n/a |
+| human:stackexchange | 361 | 0.5% | 2.2% | 96.1 |
+| human:stackexchange-v1 | 82 | 0.0% | 2.6% | 91.9 |
+| human:wikibooks | 24 | 0.0% | 0.0% | 99 |
+| human:wikinews | 55 | 0.0% | 1.8% | 95.9 |
+| human:wikitalk | 105 | 0.0% | 0.0% | 98.3 |
+| human:wine | 46 | 0.0% | 0.0% | 87.4 |
+| model:claude-fresh-1 | 54 | 18.5% | 97.7% | 2.6 |
+| model:claude-v1 | 36 | 38.9% | 92.0% | 5.6 |
+| model:claude-v2 | 310 | 31.9% | 95.1% | 4 |
+
+### Held-out round 2, by source
+
+| Source | Texts | With a warning or error | Low score | Mean score |
+| --- | ---: | ---: | ---: | ---: |
+| human:apache | 215 | 0.0% | 1.4% | 96.2 |
+| human:debian | 98 | 0.0% | 2.0% | 93.9 |
+| human:globalvoices | 207 | 0.0% | 0.0% | 99.3 |
+| human:gutenberg3 | 211 | 0.0% | 0.9% | 97.7 |
+| human:wikivoyage | 150 | 0.0% | 0.7% | 97.1 |
+| model:claude-fresh-2 | 354 | 24.9% | 95.7% | 4.3 |
+
+### Held-out round 1, by source (round-1 model)
+
+| Source | Texts | With a warning or error | Low score | Mean score |
+| --- | ---: | ---: | ---: | ---: |
+| human:gutenberg2 | 270 | 0.0% | 0.7% | 94.7 |
+| human:mozblog | 154 | 2.6% | 4.5% | 88.9 |
+| human:pymail | 244 | 0.4% | 4.1% | 90.6 |
+| human:wikibooks | 174 | 0.0% | 1.7% | 96.3 |
+| human:wikinews | 250 | 0.0% | 4.8% | 89.1 |
+| model:claude-fresh-1 | 414 | 24.9% | 94.1% | 5 |
+
+A mean score near 100 means the texts read clearly human to the score. Old fiction, open-source READMEs and job ads sit lowest among the human sources.
+
+## v1 benchmark
+
+The rest of this page is written by `node --experimental-strip-types bench/run.ts score` and covers the 48-prompt v1 benchmark.
+
+
 Generated by `node --experimental-strip-types bench/run.ts score`. Raw numbers are in `results.json`. Every sample is cut to its first 150 words or so (at a sentence end) before scoring, so long human posts and short model replies are compared on the same footing.
 
 Read these with care:
@@ -9,7 +124,7 @@ Read these with care:
 - The model set is the 48 everyday jobs in `prompts.json`, six per register, answered by each model through Claude Code's print mode with a plain system prompt.
 - Both sets are small. Differences of a few points are noise.
 
-## Can the patterns tell people from models?
+### Can the patterns tell people from models?
 
 A logistic regression on the features below (known tells, which human signals are present and how often, and the shape measures), trained on 120 human and 102 model samples and tested on 62 human and 42 model samples it never saw. Model answers are split by prompt, so no prompt appears on both sides.
 
@@ -18,7 +133,7 @@ A logistic regression on the features below (known tells, which human signals ar
 
 This shows the two sets differ in measurable ways. It does not make the analyzer a detector: the human set is a narrow kind of writing, and a model told to write like these samples would close much of the gap.
 
-## Before and after rewrite
+### Before and after rewrite
 
 Held-out prompts only. The human-pattern probability is the classifier's output above, averaged. Rewrites ran with the defaults: warnings and errors fixed, info-level hints (such as `bold-overuse`) left alone, and up to two flat sentences per text reworked toward missing signals.
 
@@ -30,7 +145,7 @@ Held-out prompts only. The human-pattern probability is the classifier's output 
 
 The rewrite cuts known tells by about a third for the Sonnet and Opus sets and by three quarters for Haiku. Much of what is left is info-level bold and emoji, which the defaults leave alone. It moves the human-pattern probability much less, and that is expected: the signals that separate people from models most here (asides, first-hand detail, an opinion with a stake) need facts the draft doesn't have, and the rewrite is not allowed to invent them. Where one would help, it leaves a bracketed placeholder for the writer, and a placeholder counts as a tell (`unfilled-placeholder`) until someone fills it in.
 
-## Known tells
+### Known tells
 
 | Source | Samples | Known tells per 100 words | Casual | Professional | Technical | Marketing | With an error | No known tells | Most common |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
@@ -42,7 +157,7 @@ The rewrite cuts known tells by about a third for the Sonnet and Opus sets and b
 | claude-code-sonnet+tells (claude-cli:sonnet, rewritten by claude-cli:haiku) | 24 | 3.1 | 5.7 | 2.6 | 2.3 | 1.7 | 3 | 12 | bold-overuse (16), bold-lead (11), unfilled-placeholder (6), label-opener (2), list-everything (2) |
 | claude-code-sonnet (claude-cli:sonnet) | 48 | 6.4 | 5.9 | 7.4 | 2.3 | 8.7 | 5 | 13 | bold-overuse (40), bold-lead (37), unfilled-placeholder (13), stock-warmth (12), emoji (11) |
 
-## Human signals
+### Human signals
 
 Share of samples where each signal appears at least once.
 
@@ -56,7 +171,7 @@ Share of samples where each signal appears at least once.
 | claude-code-sonnet+tells (claude-cli:sonnet, rewritten by claude-cli:haiku) | 58% | 75% | 42% | 21% | 0% | 8% | 75% | 71% | 13% | 42% | 42% | 75% |
 | claude-code-sonnet (claude-cli:sonnet) | 52% | 75% | 42% | 19% | 2% | 17% | 81% | 71% | 17% | 54% | 40% | 50% |
 
-## Shape
+### Shape
 
 Measurements, not grades.
 

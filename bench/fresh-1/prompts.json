@@ -1,0 +1,1248 @@
+{
+ "version": 1,
+ "round": 1,
+ "prompts": [
+  {
+   "id": "fresh1:chat:to-your-brother-asking-if-he-can-pick-up-mum-fro#plain",
+   "family": "fresh1:chat:to-your-brother-asking-if-he-can-pick-up-mum-fro",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to your brother asking if he can pick up mum from the station on Friday."
+  },
+  {
+   "id": "fresh1:chat:to-a-friend-saying-the-concert-tickets-sold-out-#plain",
+   "family": "fresh1:chat:to-a-friend-saying-the-concert-tickets-sold-out-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to a friend saying the concert tickets sold out in four minutes."
+  },
+  {
+   "id": "fresh1:chat:to-your-flatmate-about-the-washing-machine-leaki#plain",
+   "family": "fresh1:chat:to-your-flatmate-about-the-washing-machine-leaki",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to your flatmate about the washing machine leaking again."
+  },
+  {
+   "id": "fresh1:chat:to-your-flatmate-about-the-washing-machine-leaki#adv2",
+   "family": "fresh1:chat:to-your-flatmate-about-the-washing-machine-leaki",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Send a WhatsApp message to your flatmate about the washing machine leaking again. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:chat:to-a-group-of-friends-proposing-a-picnic-if-the-#plain",
+   "family": "fresh1:chat:to-a-group-of-friends-proposing-a-picnic-if-the-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to a group of friends proposing a picnic if the rain stops."
+  },
+  {
+   "id": "fresh1:chat:to-a-group-of-friends-proposing-a-picnic-if-the-#adv0",
+   "family": "fresh1:chat:to-a-group-of-friends-proposing-a-picnic-if-the-",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Send a WhatsApp message to a group of friends proposing a picnic if the rain stops. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:chat:to-a-friend-who-just-had-a-baby#plain",
+   "family": "fresh1:chat:to-a-friend-who-just-had-a-baby",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to a friend who just had a baby."
+  },
+  {
+   "id": "fresh1:chat:to-your-partner-asking-what-to-cook-tonight#plain",
+   "family": "fresh1:chat:to-your-partner-asking-what-to-cook-tonight",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to your partner asking what to cook tonight."
+  },
+  {
+   "id": "fresh1:chat:to-an-old-classmate-who-messaged-you-after-ten-y#plain",
+   "family": "fresh1:chat:to-an-old-classmate-who-messaged-you-after-ten-y",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to an old classmate who messaged you after ten years."
+  },
+  {
+   "id": "fresh1:chat:to-your-neighbour-asking-them-to-move-their-car#plain",
+   "family": "fresh1:chat:to-your-neighbour-asking-them-to-move-their-car",
+   "genre": "chat",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Send a WhatsApp message to your neighbour asking them to move their car."
+  },
+  {
+   "id": "fresh1:email:asking-a-printer-for-a-quote-on-500-flyers#plain",
+   "family": "fresh1:email:asking-a-printer-for-a-quote-on-500-flyers",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email asking a printer for a quote on 500 flyers."
+  },
+  {
+   "id": "fresh1:email:asking-a-printer-for-a-quote-on-500-flyers#adv4",
+   "family": "fresh1:email:asking-a-printer-for-a-quote-on-500-flyers",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Draft an email asking a printer for a quote on 500 flyers. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:email:telling-a-client-their-order-shipped-late-becaus#plain",
+   "family": "fresh1:email:telling-a-client-their-order-shipped-late-becaus",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email telling a client their order shipped late because of a strike at the port."
+  },
+  {
+   "id": "fresh1:email:inviting-a-guest-speaker-to-a-school-careers-day#plain",
+   "family": "fresh1:email:inviting-a-guest-speaker-to-a-school-careers-day",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email inviting a guest speaker to a school careers day."
+  },
+  {
+   "id": "fresh1:email:inviting-a-guest-speaker-to-a-school-careers-day#adv2",
+   "family": "fresh1:email:inviting-a-guest-speaker-to-a-school-careers-day",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Draft an email inviting a guest speaker to a school careers day. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:email:asking-hr-how-many-holiday-days-carry-over-to-ne#plain",
+   "family": "fresh1:email:asking-hr-how-many-holiday-days-carry-over-to-ne",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email asking HR how many holiday days carry over to next year."
+  },
+  {
+   "id": "fresh1:email:following-up-after-a-sales-call-with-a-dental-pr#plain",
+   "family": "fresh1:email:following-up-after-a-sales-call-with-a-dental-pr",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email following up after a sales call with a dental practice."
+  },
+  {
+   "id": "fresh1:email:turning-down-a-job-offer-you-accepted-last-week#plain",
+   "family": "fresh1:email:turning-down-a-job-offer-you-accepted-last-week",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email turning down a job offer you accepted last week."
+  },
+  {
+   "id": "fresh1:email:turning-down-a-job-offer-you-accepted-last-week#adv0",
+   "family": "fresh1:email:turning-down-a-job-offer-you-accepted-last-week",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Draft an email turning down a job offer you accepted last week. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:email:asking-a-landlord-to-return-a-deposit#plain",
+   "family": "fresh1:email:asking-a-landlord-to-return-a-deposit",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email asking a landlord to return a deposit."
+  },
+  {
+   "id": "fresh1:email:asking-a-landlord-to-return-a-deposit#adv3",
+   "family": "fresh1:email:asking-a-landlord-to-return-a-deposit",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Draft an email asking a landlord to return a deposit. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:email:telling-a-team-the-office-move-is-delayed-until-#plain",
+   "family": "fresh1:email:telling-a-team-the-office-move-is-delayed-until-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email telling a team the office move is delayed until March."
+  },
+  {
+   "id": "fresh1:email:telling-a-team-the-office-move-is-delayed-until-#adv5",
+   "family": "fresh1:email:telling-a-team-the-office-move-is-delayed-until-",
+   "genre": "email",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Draft an email telling a team the office move is delayed until March. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:email:requesting-a-meeting-with-your-child-s-teacher#plain",
+   "family": "fresh1:email:requesting-a-meeting-with-your-child-s-teacher",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email requesting a meeting with your child's teacher."
+  },
+  {
+   "id": "fresh1:email:thanking-a-mentor-after-a-promotion#plain",
+   "family": "fresh1:email:thanking-a-mentor-after-a-promotion",
+   "genre": "email",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Draft an email thanking a mentor after a promotion."
+  },
+  {
+   "id": "fresh1:qa:how-do-i-stop-my-glasses-fogging-up-with-a-mask#plain",
+   "family": "fresh1:qa:how-do-i-stop-my-glasses-fogging-up-with-a-mask",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"How do I stop my glasses fogging up with a mask?\""
+  },
+  {
+   "id": "fresh1:qa:why-does-my-sourdough-not-rise-in-winter#plain",
+   "family": "fresh1:qa:why-does-my-sourdough-not-rise-in-winter",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Why does my sourdough not rise in winter?\""
+  },
+  {
+   "id": "fresh1:qa:is-it-worth-fixing-a-ten-year-old-washing-machin#plain",
+   "family": "fresh1:qa:is-it-worth-fixing-a-ten-year-old-washing-machin",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Is it worth fixing a ten-year-old washing machine?\""
+  },
+  {
+   "id": "fresh1:qa:how-do-i-get-my-cat-to-stop-waking-me-at-5am#plain",
+   "family": "fresh1:qa:how-do-i-get-my-cat-to-stop-waking-me-at-5am",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"How do I get my cat to stop waking me at 5am?\""
+  },
+  {
+   "id": "fresh1:qa:how-do-i-get-my-cat-to-stop-waking-me-at-5am#adv4",
+   "family": "fresh1:qa:how-do-i-get-my-cat-to-stop-waking-me-at-5am",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Answer this question from a forum, in under 180 words: \"How do I get my cat to stop waking me at 5am?\" Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:qa:what-should-i-pack-for-a-week-of-hiking-in-scotl#plain",
+   "family": "fresh1:qa:what-should-i-pack-for-a-week-of-hiking-in-scotl",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"What should I pack for a week of hiking in Scotland?\""
+  },
+  {
+   "id": "fresh1:qa:how-do-you-clean-a-burnt-saucepan#plain",
+   "family": "fresh1:qa:how-do-you-clean-a-burnt-saucepan",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"How do you clean a burnt saucepan?\""
+  },
+  {
+   "id": "fresh1:qa:can-i-plant-tulip-bulbs-in-december#plain",
+   "family": "fresh1:qa:can-i-plant-tulip-bulbs-in-december",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Can I plant tulip bulbs in December?\""
+  },
+  {
+   "id": "fresh1:qa:can-i-plant-tulip-bulbs-in-december#adv0",
+   "family": "fresh1:qa:can-i-plant-tulip-bulbs-in-december",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Can I plant tulip bulbs in December?\" Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:qa:how-do-i-make-friends-after-moving-to-a-new-coun#plain",
+   "family": "fresh1:qa:how-do-i-make-friends-after-moving-to-a-new-coun",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"How do I make friends after moving to a new country?\""
+  },
+  {
+   "id": "fresh1:qa:why-does-my-violin-sound-scratchy#plain",
+   "family": "fresh1:qa:why-does-my-violin-sound-scratchy",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Why does my violin sound scratchy?\""
+  },
+  {
+   "id": "fresh1:qa:why-does-my-violin-sound-scratchy#adv3",
+   "family": "fresh1:qa:why-does-my-violin-sound-scratchy",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Why does my violin sound scratchy?\" Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:qa:is-it-rude-to-recline-your-seat-on-a-plane#plain",
+   "family": "fresh1:qa:is-it-rude-to-recline-your-seat-on-a-plane",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Is it rude to recline your seat on a plane?\""
+  },
+  {
+   "id": "fresh1:qa:is-it-rude-to-recline-your-seat-on-a-plane#adv1",
+   "family": "fresh1:qa:is-it-rude-to-recline-your-seat-on-a-plane",
+   "genre": "qa",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Answer this question from a forum, in under 180 words: \"Is it rude to recline your seat on a plane?\" Type it the way you would on your phone, quickly, without polishing."
+  },
+  {
+   "id": "fresh1:qa:why-is-my-postgres-query-not-using-the-index-i-a#plain",
+   "family": "fresh1:qa:why-is-my-postgres-query-not-using-the-index-i-a",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Why is my Postgres query not using the index I added?\""
+  },
+  {
+   "id": "fresh1:qa:what-is-the-difference-between-tcp-and-udp-for-a#plain",
+   "family": "fresh1:qa:what-is-the-difference-between-tcp-and-udp-for-a",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"What is the difference between TCP and UDP for a game server?\""
+  },
+  {
+   "id": "fresh1:qa:should-i-store-images-in-the-database-or-in-obje#plain",
+   "family": "fresh1:qa:should-i-store-images-in-the-database-or-in-obje",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Should I store images in the database or in object storage?\""
+  },
+  {
+   "id": "fresh1:qa:should-i-store-images-in-the-database-or-in-obje#adv4",
+   "family": "fresh1:qa:should-i-store-images-in-the-database-or-in-obje",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Should I store images in the database or in object storage?\" Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:qa:why-does-my-kubernetes-pod-keep-restarting#plain",
+   "family": "fresh1:qa:why-does-my-kubernetes-pod-keep-restarting",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Why does my Kubernetes pod keep restarting?\""
+  },
+  {
+   "id": "fresh1:qa:is-it-bad-to-use-git-push-force-on-my-own-branch#plain",
+   "family": "fresh1:qa:is-it-bad-to-use-git-push-force-on-my-own-branch",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Is it bad to use git push --force on my own branch?\""
+  },
+  {
+   "id": "fresh1:qa:is-it-bad-to-use-git-push-force-on-my-own-branch#adv0",
+   "family": "fresh1:qa:is-it-bad-to-use-git-push-force-on-my-own-branch",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Is it bad to use git push --force on my own branch?\" Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:qa:what-does-a-502-bad-gateway-from-nginx-usually-m#plain",
+   "family": "fresh1:qa:what-does-a-502-bad-gateway-from-nginx-usually-m",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"What does a 502 Bad Gateway from nginx usually mean?\""
+  },
+  {
+   "id": "fresh1:qa:what-does-a-502-bad-gateway-from-nginx-usually-m#adv5",
+   "family": "fresh1:qa:what-does-a-502-bad-gateway-from-nginx-usually-m",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"What does a 502 Bad Gateway from nginx usually mean?\" Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:qa:how-do-i-make-my-bash-script-stop-on-the-first-e#plain",
+   "family": "fresh1:qa:how-do-i-make-my-bash-script-stop-on-the-first-e",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"How do I make my bash script stop on the first error?\""
+  },
+  {
+   "id": "fresh1:qa:why-does-my-python-list-change-when-i-modify-a-c#plain",
+   "family": "fresh1:qa:why-does-my-python-list-change-when-i-modify-a-c",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Why does my Python list change when I modify a copy?\""
+  },
+  {
+   "id": "fresh1:qa:why-does-my-python-list-change-when-i-modify-a-c#adv3",
+   "family": "fresh1:qa:why-does-my-python-list-change-when-i-modify-a-c",
+   "genre": "qa",
+   "register": "technical",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Answer this question on a developer forum, in under 200 words: \"Why does my Python list change when I modify a copy?\" Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:docs:the-opening-section-of-a-readme-for-a-tiny-tool-#plain",
+   "family": "fresh1:docs:the-opening-section-of-a-readme-for-a-tiny-tool-",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the opening section of a README for a tiny tool that renames photos by the date they were taken."
+  },
+  {
+   "id": "fresh1:docs:release-notes-for-version-3-1-of-a-markdown-edit#plain",
+   "family": "fresh1:docs:release-notes-for-version-3-1-of-a-markdown-edit",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write release notes for version 3.1 of a Markdown editor: adds tables, fixes a crash on paste, drops Windows 7."
+  },
+  {
+   "id": "fresh1:docs:release-notes-for-version-3-1-of-a-markdown-edit#adv5",
+   "family": "fresh1:docs:release-notes-for-version-3-1-of-a-markdown-edit",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write release notes for version 3.1 of a Markdown editor: adds tables, fixes a crash on paste, drops Windows 7. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:docs:a-short-explanation-for-a-wiki-of-how-the-team-r#plain",
+   "family": "fresh1:docs:a-short-explanation-for-a-wiki-of-how-the-team-r",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short explanation for a wiki of how the team reviews database migrations."
+  },
+  {
+   "id": "fresh1:docs:a-short-explanation-for-a-wiki-of-how-the-team-r#adv2",
+   "family": "fresh1:docs:a-short-explanation-for-a-wiki-of-how-the-team-r",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a short explanation for a wiki of how the team reviews database migrations. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:docs:a-github-issue-describing-a-bug-where-the-search#plain",
+   "family": "fresh1:docs:a-github-issue-describing-a-bug-where-the-search",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a GitHub issue describing a bug where the search box ignores accented letters."
+  },
+  {
+   "id": "fresh1:docs:a-github-issue-describing-a-bug-where-the-search#adv2",
+   "family": "fresh1:docs:a-github-issue-describing-a-bug-where-the-search",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a GitHub issue describing a bug where the search box ignores accented letters. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:docs:the-help-text-for-a-since-flag-that-filters-log-#plain",
+   "family": "fresh1:docs:the-help-text-for-a-since-flag-that-filters-log-",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the help text for a --since flag that filters log lines by time."
+  },
+  {
+   "id": "fresh1:docs:the-help-text-for-a-since-flag-that-filters-log-#adv3",
+   "family": "fresh1:docs:the-help-text-for-a-since-flag-that-filters-log-",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write the help text for a --since flag that filters log lines by time. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:docs:an-incident-note-about-a-cache-that-served-stale#plain",
+   "family": "fresh1:docs:an-incident-note-about-a-cache-that-served-stale",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an incident note about a cache that served stale prices for 20 minutes."
+  },
+  {
+   "id": "fresh1:docs:an-incident-note-about-a-cache-that-served-stale#adv0",
+   "family": "fresh1:docs:an-incident-note-about-a-cache-that-served-stale",
+   "genre": "docs",
+   "register": "technical",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write an incident note about a cache that served stale prices for 20 minutes. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:comment:about-whether-it-is-worth-learning-to-drive-in-a#plain",
+   "family": "fresh1:comment:about-whether-it-is-worth-learning-to-drive-in-a",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about whether it is worth learning to drive in a big city. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-whether-it-is-worth-learning-to-drive-in-a#adv5",
+   "family": "fresh1:comment:about-whether-it-is-worth-learning-to-drive-in-a",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread about whether it is worth learning to drive in a big city. One or two paragraphs. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:comment:about-the-best-cheap-meal-you-know-how-to-cook#plain",
+   "family": "fresh1:comment:about-the-best-cheap-meal-you-know-how-to-cook",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about the best cheap meal you know how to cook. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-whether-audiobooks-count-as-reading#plain",
+   "family": "fresh1:comment:about-whether-audiobooks-count-as-reading",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about whether audiobooks count as reading. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-whether-audiobooks-count-as-reading#adv3",
+   "family": "fresh1:comment:about-whether-audiobooks-count-as-reading",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread about whether audiobooks count as reading. One or two paragraphs. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:comment:replying-to-someone-who-says-nobody-needs-a-desk#plain",
+   "family": "fresh1:comment:replying-to-someone-who-says-nobody-needs-a-desk",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread replying to someone who says nobody needs a desktop computer any more. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:replying-to-someone-who-says-nobody-needs-a-desk#adv4",
+   "family": "fresh1:comment:replying-to-someone-who-says-nobody-needs-a-desk",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread replying to someone who says nobody needs a desktop computer any more. One or two paragraphs. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:comment:about-a-teacher-who-was-unfair-to-you#plain",
+   "family": "fresh1:comment:about-a-teacher-who-was-unfair-to-you",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about a teacher who was unfair to you. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-a-teacher-who-was-unfair-to-you#adv4",
+   "family": "fresh1:comment:about-a-teacher-who-was-unfair-to-you",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread about a teacher who was unfair to you. One or two paragraphs. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:comment:about-switching-careers-at-40#plain",
+   "family": "fresh1:comment:about-switching-careers-at-40",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about switching careers at 40. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-the-oddest-thing-you-found-in-a-second-han#plain",
+   "family": "fresh1:comment:about-the-oddest-thing-you-found-in-a-second-han",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about the oddest thing you found in a second-hand book. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-the-oddest-thing-you-found-in-a-second-han#adv0",
+   "family": "fresh1:comment:about-the-oddest-thing-you-found-in-a-second-han",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread about the oddest thing you found in a second-hand book. One or two paragraphs. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:comment:about-whether-people-should-still-send-christmas#plain",
+   "family": "fresh1:comment:about-whether-people-should-still-send-christmas",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a reply in a discussion thread about whether people should still send Christmas cards. One or two paragraphs."
+  },
+  {
+   "id": "fresh1:comment:about-whether-people-should-still-send-christmas#adv5",
+   "family": "fresh1:comment:about-whether-people-should-still-send-christmas",
+   "genre": "comment",
+   "register": "casual",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a reply in a discussion thread about whether people should still send Christmas cards. One or two paragraphs. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:blog:about-the-first-time-you-tried-sea-swimming-in-w#plain",
+   "family": "fresh1:blog:about-the-first-time-you-tried-sea-swimming-in-w",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about the first time you tried sea swimming in winter. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-clearing-out-your-late-grandfather-s-shed#plain",
+   "family": "fresh1:blog:about-clearing-out-your-late-grandfather-s-shed",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about clearing out your late grandfather's shed. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-a-month-without-a-smartphone#plain",
+   "family": "fresh1:blog:about-a-month-without-a-smartphone",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about a month without a smartphone. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-a-month-without-a-smartphone#adv0",
+   "family": "fresh1:blog:about-a-month-without-a-smartphone",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a short personal blog entry about a month without a smartphone. Around 250 words. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:blog:about-learning-to-knit-from-videos#plain",
+   "family": "fresh1:blog:about-learning-to-knit-from-videos",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about learning to knit from videos. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-learning-to-knit-from-videos#adv1",
+   "family": "fresh1:blog:about-learning-to-knit-from-videos",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a short personal blog entry about learning to knit from videos. Around 250 words. Type it the way you would on your phone, quickly, without polishing."
+  },
+  {
+   "id": "fresh1:blog:about-the-allotment-you-took-over-this-spring#plain",
+   "family": "fresh1:blog:about-the-allotment-you-took-over-this-spring",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about the allotment you took over this spring. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-getting-lost-in-tokyo#plain",
+   "family": "fresh1:blog:about-getting-lost-in-tokyo",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short personal blog entry about getting lost in Tokyo. Around 250 words."
+  },
+  {
+   "id": "fresh1:blog:about-getting-lost-in-tokyo#adv3",
+   "family": "fresh1:blog:about-getting-lost-in-tokyo",
+   "genre": "blog",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a short personal blog entry about getting lost in Tokyo. Around 250 words. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:essay:whether-students-should-wear-uniforms#plain",
+   "family": "fresh1:essay:whether-students-should-wear-uniforms",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether students should wear uniforms."
+  },
+  {
+   "id": "fresh1:essay:whether-students-should-wear-uniforms#adv0",
+   "family": "fresh1:essay:whether-students-should-wear-uniforms",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a school essay of about 350 words arguing whether students should wear uniforms. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:essay:whether-zoos-should-exist#plain",
+   "family": "fresh1:essay:whether-zoos-should-exist",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether zoos should exist."
+  },
+  {
+   "id": "fresh1:essay:whether-homework-should-be-banned-in-primary-sch#plain",
+   "family": "fresh1:essay:whether-homework-should-be-banned-in-primary-sch",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether homework should be banned in primary school."
+  },
+  {
+   "id": "fresh1:essay:whether-voting-should-be-compulsory#plain",
+   "family": "fresh1:essay:whether-voting-should-be-compulsory",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether voting should be compulsory."
+  },
+  {
+   "id": "fresh1:essay:whether-voting-should-be-compulsory#adv2",
+   "family": "fresh1:essay:whether-voting-should-be-compulsory",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write a school essay of about 350 words arguing whether voting should be compulsory. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:essay:whether-video-games-can-be-art#plain",
+   "family": "fresh1:essay:whether-video-games-can-be-art",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether video games can be art."
+  },
+  {
+   "id": "fresh1:essay:whether-video-games-can-be-art#adv1",
+   "family": "fresh1:essay:whether-video-games-can-be-art",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write a school essay of about 350 words arguing whether video games can be art. Type it the way you would on your phone, quickly, without polishing."
+  },
+  {
+   "id": "fresh1:essay:whether-the-school-day-should-be-shorter#plain",
+   "family": "fresh1:essay:whether-the-school-day-should-be-shorter",
+   "genre": "essay",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a school essay of about 350 words arguing whether the school day should be shorter."
+  },
+  {
+   "id": "fresh1:fiction:about-a-postman-who-reads-one-letter-too-many#plain",
+   "family": "fresh1:fiction:about-a-postman-who-reads-one-letter-too-many",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story about a postman who reads one letter too many."
+  },
+  {
+   "id": "fresh1:fiction:set-in-a-power-station-during-a-blackout#plain",
+   "family": "fresh1:fiction:set-in-a-power-station-during-a-blackout",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story set in a power station during a blackout."
+  },
+  {
+   "id": "fresh1:fiction:about-twin-sisters-who-swap-lives-for-a-day#plain",
+   "family": "fresh1:fiction:about-twin-sisters-who-swap-lives-for-a-day",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story about twin sisters who swap lives for a day."
+  },
+  {
+   "id": "fresh1:fiction:about-twin-sisters-who-swap-lives-for-a-day#adv1",
+   "family": "fresh1:fiction:about-twin-sisters-who-swap-lives-for-a-day",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv1",
+   "adversarial": true,
+   "prompt": "Write the first 300 words of a story about twin sisters who swap lives for a day. Type it the way you would on your phone, quickly, without polishing."
+  },
+  {
+   "id": "fresh1:fiction:about-an-old-man-teaching-a-crow-to-talk#plain",
+   "family": "fresh1:fiction:about-an-old-man-teaching-a-crow-to-talk",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story about an old man teaching a crow to talk."
+  },
+  {
+   "id": "fresh1:fiction:about-a-lift-that-stops-between-floors-with-thre#plain",
+   "family": "fresh1:fiction:about-a-lift-that-stops-between-floors-with-thre",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story about a lift that stops between floors with three strangers inside."
+  },
+  {
+   "id": "fresh1:fiction:about-a-lift-that-stops-between-floors-with-thre#adv4",
+   "family": "fresh1:fiction:about-a-lift-that-stops-between-floors-with-thre",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write the first 300 words of a story about a lift that stops between floors with three strangers inside. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:fiction:about-a-village-where-it-has-not-rained-in-a-yea#plain",
+   "family": "fresh1:fiction:about-a-village-where-it-has-not-rained-in-a-yea",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the first 300 words of a story about a village where it has not rained in a year."
+  },
+  {
+   "id": "fresh1:fiction:about-a-village-where-it-has-not-rained-in-a-yea#adv0",
+   "family": "fresh1:fiction:about-a-village-where-it-has-not-rained-in-a-yea",
+   "genre": "fiction",
+   "register": "professional",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write the first 300 words of a story about a village where it has not rained in a year. Write this so that an AI detector would be sure a person wrote it."
+  },
+  {
+   "id": "fresh1:news:about-a-ferry-service-cancelled-for-a-week-by-st#plain",
+   "family": "fresh1:news:about-a-ferry-service-cancelled-for-a-week-by-st",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word news story about a ferry service cancelled for a week by storms."
+  },
+  {
+   "id": "fresh1:news:about-a-school-that-switched-to-a-four-day-week#plain",
+   "family": "fresh1:news:about-a-school-that-switched-to-a-four-day-week",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word news story about a school that switched to a four-day week."
+  },
+  {
+   "id": "fresh1:news:about-a-school-that-switched-to-a-four-day-week#adv4",
+   "family": "fresh1:news:about-a-school-that-switched-to-a-four-day-week",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a 250-word news story about a school that switched to a four-day week. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:news:about-a-town-opening-its-first-public-swimming-p#plain",
+   "family": "fresh1:news:about-a-town-opening-its-first-public-swimming-p",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word news story about a town opening its first public swimming pool in fifty years."
+  },
+  {
+   "id": "fresh1:news:about-a-town-opening-its-first-public-swimming-p#adv4",
+   "family": "fresh1:news:about-a-town-opening-its-first-public-swimming-p",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a 250-word news story about a town opening its first public swimming pool in fifty years. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:news:about-a-hospital-car-park-charging-scheme-being-#plain",
+   "family": "fresh1:news:about-a-hospital-car-park-charging-scheme-being-",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word news story about a hospital car park charging scheme being scrapped."
+  },
+  {
+   "id": "fresh1:news:about-a-record-turnout-at-a-regional-book-festiv#plain",
+   "family": "fresh1:news:about-a-record-turnout-at-a-regional-book-festiv",
+   "genre": "news",
+   "register": "professional",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a 250-word news story about a record turnout at a regional book festival."
+  },
+  {
+   "id": "fresh1:news:about-a-record-turnout-at-a-regional-book-festiv#adv5",
+   "family": "fresh1:news:about-a-record-turnout-at-a-regional-book-festiv",
+   "genre": "news",
+   "register": "professional",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a 250-word news story about a record turnout at a regional book festival. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:marketing:website-copy-for-a-mobile-bike-repair-van#plain",
+   "family": "fresh1:marketing:website-copy-for-a-mobile-bike-repair-van",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write website copy for a mobile bike repair van."
+  },
+  {
+   "id": "fresh1:marketing:website-copy-for-a-mobile-bike-repair-van#adv3",
+   "family": "fresh1:marketing:website-copy-for-a-mobile-bike-repair-van",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write website copy for a mobile bike repair van. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:marketing:a-product-listing-for-a-hand-thrown-ceramic-teap#plain",
+   "family": "fresh1:marketing:a-product-listing-for-a-hand-thrown-ceramic-teap",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a product listing for a hand-thrown ceramic teapot."
+  },
+  {
+   "id": "fresh1:marketing:a-launch-post-for-a-budgeting-app-for-students#plain",
+   "family": "fresh1:marketing:a-launch-post-for-a-budgeting-app-for-students",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a launch post for a budgeting app for students."
+  },
+  {
+   "id": "fresh1:marketing:an-email-announcing-a-cinema-s-new-loyalty-card#plain",
+   "family": "fresh1:marketing:an-email-announcing-a-cinema-s-new-loyalty-card",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write an email announcing a cinema's new loyalty card."
+  },
+  {
+   "id": "fresh1:marketing:a-short-ad-for-a-weekend-sourdough-course#plain",
+   "family": "fresh1:marketing:a-short-ad-for-a-weekend-sourdough-course",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a short ad for a weekend sourdough course."
+  },
+  {
+   "id": "fresh1:marketing:the-about-page-for-a-small-translation-agency#plain",
+   "family": "fresh1:marketing:the-about-page-for-a-small-translation-agency",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write the about page for a small translation agency."
+  },
+  {
+   "id": "fresh1:marketing:the-about-page-for-a-small-translation-agency#adv2",
+   "family": "fresh1:marketing:the-about-page-for-a-small-translation-agency",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv2",
+   "adversarial": true,
+   "prompt": "Write the about page for a small translation agency. Use British spelling and a dry sense of humour. No em dashes."
+  },
+  {
+   "id": "fresh1:marketing:a-social-post-announcing-a-vegan-bakery-s-second#plain",
+   "family": "fresh1:marketing:a-social-post-announcing-a-vegan-bakery-s-second",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a social post announcing a vegan bakery's second shop."
+  },
+  {
+   "id": "fresh1:marketing:a-social-post-announcing-a-vegan-bakery-s-second#adv5",
+   "family": "fresh1:marketing:a-social-post-announcing-a-vegan-bakery-s-second",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a social post announcing a vegan bakery's second shop. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:marketing:app-store-copy-for-a-bird-identification-app#plain",
+   "family": "fresh1:marketing:app-store-copy-for-a-bird-identification-app",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write app store copy for a bird identification app."
+  },
+  {
+   "id": "fresh1:marketing:app-store-copy-for-a-bird-identification-app#adv3",
+   "family": "fresh1:marketing:app-store-copy-for-a-bird-identification-app",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write app store copy for a bird identification app. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:marketing:a-newsletter-intro-for-a-garden-centre-s-autumn-#plain",
+   "family": "fresh1:marketing:a-newsletter-intro-for-a-garden-centre-s-autumn-",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a newsletter intro for a garden centre's autumn sale."
+  },
+  {
+   "id": "fresh1:marketing:a-newsletter-intro-for-a-garden-centre-s-autumn-#adv5",
+   "family": "fresh1:marketing:a-newsletter-intro-for-a-garden-centre-s-autumn-",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "adv5",
+   "adversarial": true,
+   "prompt": "Write a newsletter intro for a garden centre's autumn sale. Do not sound like ChatGPT or Claude in any way."
+  },
+  {
+   "id": "fresh1:marketing:a-landing-page-for-an-invoicing-tool-for-plumber#plain",
+   "family": "fresh1:marketing:a-landing-page-for-an-invoicing-tool-for-plumber",
+   "genre": "marketing",
+   "register": "marketing",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a landing page for an invoicing tool for plumbers."
+  },
+  {
+   "id": "fresh1:review:of-an-electric-toothbrush#plain",
+   "family": "fresh1:review:of-an-electric-toothbrush",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a customer review of an electric toothbrush. Around 120 words."
+  },
+  {
+   "id": "fresh1:review:of-a-greek-restaurant-that-was-too-loud#plain",
+   "family": "fresh1:review:of-a-greek-restaurant-that-was-too-loud",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a customer review of a Greek restaurant that was too loud. Around 120 words."
+  },
+  {
+   "id": "fresh1:review:of-a-guided-kayak-tour#plain",
+   "family": "fresh1:review:of-a-guided-kayak-tour",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a customer review of a guided kayak tour. Around 120 words."
+  },
+  {
+   "id": "fresh1:review:of-a-co-working-space#plain",
+   "family": "fresh1:review:of-a-co-working-space",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a customer review of a co-working space. Around 120 words."
+  },
+  {
+   "id": "fresh1:review:of-a-children-s-book-about-dinosaurs#plain",
+   "family": "fresh1:review:of-a-children-s-book-about-dinosaurs",
+   "genre": "review",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a customer review of a children's book about dinosaurs. Around 120 words."
+  },
+  {
+   "id": "fresh1:review:of-a-children-s-book-about-dinosaurs#adv3",
+   "family": "fresh1:review:of-a-children-s-book-about-dinosaurs",
+   "genre": "review",
+   "register": "casual",
+   "variant": "adv3",
+   "adversarial": true,
+   "prompt": "Write a customer review of a children's book about dinosaurs. Around 120 words. Short sentences only. No lists, no headings, no sign-off."
+  },
+  {
+   "id": "fresh1:letter:to-your-grandmother-about-your-first-job#plain",
+   "family": "fresh1:letter:to-your-grandmother-about-your-first-job",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a handwritten-style letter to your grandmother about your first job. About 200 words."
+  },
+  {
+   "id": "fresh1:letter:to-a-friend-in-prison#plain",
+   "family": "fresh1:letter:to-a-friend-in-prison",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a handwritten-style letter to a friend in prison. About 200 words."
+  },
+  {
+   "id": "fresh1:letter:to-a-neighbour-who-is-moving-away#plain",
+   "family": "fresh1:letter:to-a-neighbour-who-is-moving-away",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a handwritten-style letter to a neighbour who is moving away. About 200 words."
+  },
+  {
+   "id": "fresh1:letter:to-a-neighbour-who-is-moving-away#adv4",
+   "family": "fresh1:letter:to-a-neighbour-who-is-moving-away",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "adv4",
+   "adversarial": true,
+   "prompt": "Write a handwritten-style letter to a neighbour who is moving away. About 200 words. Leave in a typo or two and one sentence that trails off, like a real draft."
+  },
+  {
+   "id": "fresh1:letter:to-your-old-school-on-its-centenary#plain",
+   "family": "fresh1:letter:to-your-old-school-on-its-centenary",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "plain",
+   "adversarial": false,
+   "prompt": "Write a handwritten-style letter to your old school on its centenary. About 200 words."
+  },
+  {
+   "id": "fresh1:letter:to-your-old-school-on-its-centenary#adv0",
+   "family": "fresh1:letter:to-your-old-school-on-its-centenary",
+   "genre": "letter",
+   "register": "casual",
+   "variant": "adv0",
+   "adversarial": true,
+   "prompt": "Write a handwritten-style letter to your old school on its centenary. About 200 words. Write this so that an AI detector would be sure a person wrote it."
+  }
+ ]
+}
