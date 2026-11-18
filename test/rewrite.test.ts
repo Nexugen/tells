@@ -73,11 +73,11 @@ test('clean text makes no model call', async () => {
 });
 
 test('info-level hints are left alone unless asked for', async () => {
-  const text = 'Your export is ready!';
+  const text = 'Your export is ready!!';
   assert.equal(lint(text).findings[0].severity, 'info');
-  const res = await rewrite(text, { model: fake({ 'Your export is ready!': 'Your export is ready.' }) });
+  const res = await rewrite(text, { model: fake({ 'Your export is ready!!': 'Your export is ready.' }) });
   assert.equal(res.text, text);
-  const res2 = await rewrite(text, { minSeverity: 'info', model: fake({ 'Your export is ready!': 'Your export is ready.' }) });
+  const res2 = await rewrite(text, { minSeverity: 'info', model: fake({ 'Your export is ready!!': 'Your export is ready.' }) });
   assert.equal(res2.text, 'Your export is ready.');
 });
 

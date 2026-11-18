@@ -3,6 +3,7 @@ import { lint } from './lint.ts';
 import { getRule } from './rules.ts';
 import { mask, sentences } from './text.ts';
 import { getSignal, signalContext } from './human.ts';
+import { guessRegister } from './register.ts';
 import type { Finding, LintOptions, LintResult, Register, Severity } from './types.ts';
 import { anthropic, ModelError, type Model } from './model.ts';
 
@@ -76,7 +77,8 @@ const RANK: Record<Severity, number> = { error: 0, warning: 1, info: 2 };
  * surrounding context, and a few human examples in the same register.
  */
 export async function rewrite(text: string, options: RewriteOptions = {}): Promise<RewriteResult> {
-  const register: Register = options.register ?? 'professional';
+  const register: Register = options.register === 'auto' ? guessRegister(text).register : (options.register ?? 'professional');
+  options = { ...options, register };
   const minSeverity = options.minSeverity ?? 'warning';
   const model = options.model ?? anthropic();
   const before = lint(text, options);

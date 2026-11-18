@@ -2,6 +2,7 @@ import { RULES, regexHits } from './rules.ts';
 import { countWords, lineIndex, mask, paragraphs, sentences } from './text.ts';
 import type { Finding, Grade, Hit, LintOptions, LintResult, Register, Rule, RuleContext, Severity } from './types.ts';
 import { humanReport } from './human.ts';
+import { guessRegister } from './register.ts';
 
 export const SEVERITY_WEIGHT: Record<Severity, number> = { error: 3, warning: 2, info: 1 };
 
@@ -13,7 +14,8 @@ export function severityFor(rule: Rule, register: Register, overrides?: Record<s
 
 /** Find AI writing tells in `text`. Pure and synchronous: no network, no model. */
 export function lint(text: string, options: LintOptions = {}): LintResult {
-  const register = options.register ?? 'professional';
+  const guessed = options.register === 'auto' ? guessRegister(text) : undefined;
+  const register: Register = guessed ? guessed.register : ((options.register as Register | undefined) ?? 'professional');
   const masked = mask(text, options.plain);
   const paras = paragraphs(masked);
   const ctx: RuleContext = { text, masked, paragraphs: paras, sentences: sentences(masked, paras), register };
@@ -62,7 +64,7 @@ export function lint(text: string, options: LintOptions = {}): LintResult {
   const counts: Record<Severity, number> = { error: 0, warning: 0, info: 0 };
   for (const f of findings) counts[f.severity]++;
   const score = slopScore(findings, words);
-  return { findings, words, score, grade: grade(score), counts, human: humanReport(ctx) };
+  return { findings, words, score, grade: grade(score), counts, human: humanReport(ctx), register, ...(guessed ? { registerGuess: guessed } : {}) };
 }
 
 /**

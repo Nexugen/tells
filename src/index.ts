@@ -4,6 +4,9 @@ export type { RewriteOptions, RewriteResult, Change, Suggestion, Rejected } from
 export { SIGNALS, detectSignals, humanReport, signalContext, getSignal } from './human.ts';
 export type { HumanSignal, HumanReport } from './human.ts';
 export { textSignals, sharedTemplates } from './signals.ts';
+export { guessRegister } from './register.ts';
+export type { RegisterGuess } from './register.ts';
+export { MIN_WORDS } from './human.ts';
 export { RULES, getRule, AI_VOCABULARY } from './rules.ts';
 export { EXEMPLARS, exemplarsFor } from './exemplars.ts';
 export type { Exemplar } from './exemplars.ts';

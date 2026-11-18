@@ -121,8 +121,8 @@ test('registers change severity or switch rules off', () => {
   const text = 'The build passed; the deploy did not.';
   assert.ok(ids(text, 'casual').includes('semicolon'));
   assert.ok(!ids(text, 'technical').includes('semicolon'));
-  assert.equal(lint('Ship it now!', { register: 'marketing' }).findings[0].severity, 'warning');
-  assert.equal(lint('Ship it now!', { register: 'casual' }).findings[0].severity, 'info');
+  assert.equal(lint('Ship it now!!', { register: 'marketing' }).findings[0].severity, 'warning');
+  assert.equal(lint('Ship it now!!', { register: 'casual' }).findings[0].severity, 'info');
 });
 
 test('disable and severity overrides', () => {
@@ -138,7 +138,7 @@ test('score, grade and the CI gate', () => {
   const r = lint('Great question! We leverage robust AI — seamlessly.');
   assert.equal(r.grade, 'heavy');
   assert.ok(fails(r));
-  const soft = lint('Your export is ready!');
+  const soft = lint('Your export is ready!!');
   assert.ok(!fails(soft));
   assert.ok(fails(soft, { failOn: 'info' }));
   assert.ok(fails(soft, { maxScore: 0 }));

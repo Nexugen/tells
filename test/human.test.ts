@@ -36,7 +36,8 @@ test('lint reports both sides', () => {
   const r = lint('Great question! We leverage robust tooling to streamline workflows.', { register: 'professional' });
   assert.ok(r.findings.length > 0);
   assert.ok(Array.isArray(r.human.present) && Array.isArray(r.human.missing));
-  assert.equal(typeof r.human.signalScore, 'number');
+  assert.equal(r.human.tooShort, true);
+  assert.equal(r.human.signalScore, null);
 });
 
 test('shape metrics: bursty text has a higher sentence-length spread', () => {

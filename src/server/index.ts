@@ -138,9 +138,10 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     return data.text;
   };
 
-  const registerFrom = (data: Record<string, unknown>): Register | undefined => {
+  const registerFrom = (data: Record<string, unknown>): Register | 'auto' | undefined => {
     if (data.register === undefined) return undefined;
-    if (!REGISTERS.includes(data.register as Register)) throw new HttpError(400, 'bad_register', `register must be one of ${REGISTERS.join(', ')}.`);
+    if (data.register === 'auto') return 'auto';
+    if (!REGISTERS.includes(data.register as Register)) throw new HttpError(400, 'bad_register', `register must be auto or one of ${REGISTERS.join(', ')}.`);
     return data.register as Register;
   };
 
@@ -184,7 +185,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       const ip = clientIp(req);
       const key = req.headers.authorization ? keyFrom(req) : undefined;
       if (key && store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
-      if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `That was the last free try for today. POST /v1/keys for a free key with ${cfg.keyDailyRewrites} rewrites a day.`);
+      if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `You've used today's free tries. A free key gives you ${cfg.keyDailyRewrites} rewrites a day.`);
       const data = await body(req, cfg.rewriteMaxChars);
       const text = textFrom(data, cfg.rewriteMaxChars);
       const register = registerFrom(data);

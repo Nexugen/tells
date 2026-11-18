@@ -76,10 +76,12 @@ textarea:focus, input:focus, button:focus-visible, select:focus { outline: 2px s
 select, input, button { font: inherit; font-size: 15px; border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; background: var(--bg); color: var(--fg); }
 button { background: var(--accent); color: var(--bg); border-color: var(--accent); cursor: pointer; font-weight: 600; }
 button[disabled] { opacity: .5; cursor: default; }
+button.ghost { background: transparent; color: var(--fg); border-color: var(--line); font-weight: 500; }
 input { min-width: 0; flex: 1 1 200px; }
 .out { white-space: pre-wrap; word-wrap: break-word; padding: 12px; border: 1px dashed var(--line); border-radius: 8px; min-height: 60px; line-height: 1.7; }
 mark { color: inherit; border-radius: 3px; padding: 0 1px; }
 mark.t { background: var(--tell-bg); box-shadow: inset 0 -2px 0 var(--tell); }
+mark.i { background: transparent; box-shadow: inset 0 -2px 0 var(--tell); }
 mark.h { background: var(--human-bg); box-shadow: inset 0 -2px 0 var(--human); }
 .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--muted); margin: 8px 0; }
 .legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
@@ -109,14 +111,16 @@ footer { margin-top: 64px; color: var(--muted); font-size: 14px; }
   <textarea id="text" spellcheck="false">${esc(SAMPLE)}</textarea>
   <div class="row">
     <select id="register" aria-label="Register">
+      <option value="auto" selected>Auto</option>
       <option value="casual">Casual</option>
-      <option value="professional" selected>Professional</option>
+      <option value="professional">Professional</option>
       <option value="technical">Technical</option>
       <option value="marketing">Marketing</option>
     </select>
     <button id="rewrite" ${opts.rewriteOn ? '' : 'disabled'}>Rewrite flagged sentences</button>
-    <input id="key" placeholder="Free key (optional)" autocomplete="off" aria-label="API key">
+    <button id="getkey" type="button" class="ghost">Get a free key</button>
   </div>
+  <p class="muted" id="keynote" hidden></p>
   <p class="muted" id="rwnote">${opts.rewriteOn ? `${opts.anonTries} free rewrites a day without a key, ${opts.keyDaily} with one.` : 'Rewrite is off right now. Lint still works.'}</p>
   <div class="legend"><span class="lt">AI tell</span><span class="lh">Human signal</span></div>
   <div class="out" id="out" aria-live="polite"></div>
@@ -158,7 +162,29 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
   var $ = function (id) { return document.getElementById(id); };
   var text = $('text'), out = $('out'), stats = $('stats'), details = $('details'), reg = $('register');
   var timer = null, seq = 0;
-  try { var k = localStorage.getItem('tells-key'); if (k) $('key').value = k; } catch (e) {}
+  var key = '';
+  try { key = localStorage.getItem('tells-key') || ''; } catch (e) {}
+  function showKey() {
+    var g = $('getkey'), n = $('keynote');
+    if (key) { g.hidden = true; n.hidden = false; n.textContent = 'Your free key is saved in this browser.'; }
+  }
+  showKey();
+  $('getkey').addEventListener('click', function () {
+    var g = this, n = $('keynote');
+    g.disabled = true;
+    fetch('/v1/keys', { method: 'POST' })
+      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        g.disabled = false;
+        n.hidden = false;
+        if (r.error) { n.textContent = r.error.message; return; }
+        key = r.key;
+        try { localStorage.setItem('tells-key', key); } catch (e) {}
+        n.textContent = 'Done. Your key is saved in this browser and gives you ' + r.dailyRewrites + ' rewrites a day.';
+        g.hidden = true;
+      })
+      .catch(function () { g.disabled = false; n.hidden = false; n.textContent = 'Could not get a key just now. Try again shortly.'; });
+  });
 
   function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
@@ -168,7 +194,7 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
       p.spans.forEach(function (s) { for (var i = s.start; i < s.end; i++) { marks[i] = 'h'; tips[i] = 'Human signal: ' + p.name; } });
     });
     r.findings.forEach(function (f) {
-      for (var i = f.start; i < f.end; i++) { marks[i] = 't'; tips[i] = f.name + '. ' + f.fix; }
+      for (var i = f.start; i < f.end; i++) { marks[i] = f.severity === 'info' ? 'i' : 't'; tips[i] = f.name + '. ' + f.fix; }
     });
     var html = '', cur = null, tip = null, buf = '';
     function flush() { if (!buf) return; html += cur ? '<mark class="' + cur + '" title="' + esc(tip) + '">' + esc(buf) + '</mark>' : esc(buf); buf = ''; }
@@ -180,11 +206,15 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
     flush();
     out.innerHTML = html || '<span class="muted">Nothing to check.</span>';
     var h = r.human || { present: [], missing: [], signalScore: 0 };
+    var hints = r.findings.filter(function (f) { return f.severity === 'info'; }).length, strong = r.findings.length - hints;
     stats.innerHTML =
-      '<div class="stat"><b class="t-txt">' + r.findings.length + '</b><span>tells found</span></div>' +
+      '<div class="stat"><b class="t-txt">' + strong + '</b><span>' + (strong === 1 ? 'tell' : 'tells') + (hints ? ', plus ' + hints + (hints === 1 ? ' minor hint' : ' minor hints') : '') + '</span></div>' +
       '<div class="stat"><b>' + r.score + '</b><span>known tells per 100 words</span></div>' +
       '<div class="stat"><b class="h-txt">' + h.present.length + '</b><span>human signals present</span></div>' +
-      '<div class="stat"><b>' + h.signalScore + '</b><span>signal score out of 100</span></div>';
+      (h.tooShort
+        ? '<div class="stat"><b>Too short</b><span>to judge under ' + 60 + ' words</span></div>'
+        : '<div class="stat"><b>' + h.signalScore + '</b><span>signal score out of 100</span></div>') +
+      (r.registerGuess ? '<div class="stat"><b>' + r.register[0].toUpperCase() + r.register.slice(1) + '</b><span>register, picked from the text</span></div>' : '');
     var d = '';
     if (r.findings.length) {
       var seen = {};
@@ -213,8 +243,7 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
   reg.addEventListener('change', check);
 
   $('rewrite').addEventListener('click', function () {
-    var btn = this, key = $('key').value.trim(), note = $('rwnote');
-    try { if (key) localStorage.setItem('tells-key', key); } catch (e) {}
+    var btn = this, note = $('rwnote');
     btn.disabled = true; note.textContent = 'Rewriting the flagged sentences.';
     var headers = { 'content-type': 'application/json' };
     if (key) headers.authorization = 'Bearer ' + key;
@@ -222,7 +251,11 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
       .then(function (r) { return r.json(); })
       .then(function (r) {
         btn.disabled = false;
-        if (r.error) { note.textContent = r.error.message; return; }
+        if (r.error) {
+          note.textContent = r.error.message;
+          if (r.error.code === 'try_limit' && !key) { note.textContent += ' Press "Get a free key" to keep going.'; $('getkey').focus(); }
+          return;
+        }
         text.value = r.text;
         var n = r.changes.length;
         note.textContent = n ? n + (n === 1 ? ' sentence' : ' sentences') + ' changed. Score ' + r.before.score + ' to ' + r.after.score + '.' + (r.suggestions && r.suggestions.length ? ' Fill in the bracketed placeholders with real details.' : '') : 'Nothing needed changing.';

@@ -290,6 +290,22 @@ function staticTriads(ctx: RuleContext): Hit[] {
   return out;
 }
 
+const TO_READER = /\b(?:you|your|you're|you've|you'd|you'll|yours|ya|u)\b/i;
+const PLEASANTRY = /^(?:hope|thanks|thank|cheers|let me know|talk soon|see you|see ya|anyway|lol|haha|take care|miss you|love|xx|best|bye|ok|okay|sure|great|cool|nice|congrats)\b/i;
+const STOP = new Set(['that', 'this', 'what', 'when', 'where', 'which', 'with', 'have', 'been', 'does', 'they', 'there', 'their', 'from', 'about', 'just', 'really', 'going', 'into', 'than', 'then', 'them', 'were', 'will', "what's", "it's", "that's"]);
+
+function exclamations(ctx: RuleContext): Hit[] {
+  const hits = regexHits(/(?<=[\p{L}\p{N})])!+(?=\s|$|["'”’)])/gu, ctx.masked);
+  if (!hits.length) return [];
+  const words = Math.max(1, ctx.paragraphs.reduce((a, p) => a + p.words, 0));
+  const doubled = hits.filter((h) => h.end - h.start > 1);
+  // One or two in a message is how people write. Flag a doubled "!!" anywhere, and a habit
+  // of them: how many it takes depends on the register.
+  const limit = { casual: 3, professional: 2, marketing: 2, technical: 1 }[ctx.register];
+  const dense = hits.length >= limit && (ctx.register !== 'casual' || hits.length / words >= 1 / 30);
+  return dense ? hits : doubled;
+}
+
 function rhetoricalQA(ctx: RuleContext): Hit[] {
   const out: Hit[] = [];
   const ss = ctx.sentences;
@@ -297,11 +313,25 @@ function rhetoricalQA(ctx: RuleContext): Hit[] {
     const q = ss[i];
     const a = ss[i + 1];
     if (!q.text.endsWith('?') || q.words > 9 || !sameParagraph(ctx, q, a)) continue;
-    const staged = /^(?:why|what|how|so what|the result|the answer|the catch|the problem|the best part|want to know|ever wonder(?:ed)?)\b/i.test(q.text.replace(/^\W+/, ''));
-    const answer = /^(?:because|simple|easy|it'?s simple|the answer|here'?s|short answer|well,|turns out|it turns out|that'?s where|enter\b)/i.test(a.text.replace(/^\W+/, '').replace(/’/g, "'"));
-    // "No signal? No problem." A two- or three-word question answered by a fragment.
-    const snap = q.words <= 3 && a.words <= 3 && /[.!]$/.test(a.text);
-    if ((staged && (answer || a.words <= 4)) || snap) out.push({ start: q.start, end: a.end });
+    const qt = q.text.replace(/^\W+/, '').replace(/’/g, "'");
+    const at = a.text.replace(/^\W+/, '').replace(/’/g, "'");
+    // "No signal? No problem." A two- or three-word question answered by a fragment that echoes it.
+    const qWords = new Set(qt.toLowerCase().match(/[a-z']+/g) ?? []);
+    const echoes = (at.toLowerCase().match(/[a-z']+/g) ?? []).some((w) => qWords.has(w)) || /^(?:no|zero|none|nope|not)\b/i.test(at);
+    const snap = q.words <= 3 && a.words <= 3 && /[.!]$/.test(a.text) && echoes && !PLEASANTRY.test(at);
+    if (snap) {
+      out.push({ start: q.start, end: a.end });
+      continue;
+    }
+    // A question asked of the reader is a real question, and casual writing asks plenty of them.
+    if (ctx.register === 'casual' || TO_READER.test(qt)) continue;
+    const staged = /^(?:why|what|how|so what|the result|the answer|the catch|the problem|the best part|want to know|ever wonder(?:ed)?)\b/i.test(qt);
+    if (!staged) continue;
+    const answer = /^(?:because|simple|easy|it's simple|the answer|here's|short answer|well,|turns out|it turns out|that's where|enter\b)/i.test(at);
+    // The short follow-up only counts when it answers: it restates a word from the question.
+    const content = (w: string) => w.length >= 4 && !STOP.has(w);
+    const restates = (at.toLowerCase().match(/[a-z']+/g) ?? []).filter(content).some((w) => qWords.has(w));
+    if (answer || (a.words <= 4 && restates && !PLEASANTRY.test(at))) out.push({ start: q.start, end: a.end });
   }
   return out;
 }
@@ -766,14 +796,14 @@ const BASE_RULES: Rule[] = [
     category: 'punctuation',
     severity: 'info',
     registers: { casual: 'info', marketing: 'warning' },
-    description: 'An exclamation mark in prose.',
-    why: 'Generated copy uses them to fake enthusiasm. Calm text sounds more sure of itself.',
+    description: 'Exclamation marks used as a habit: "!!", or more than the register usually has (three in a short casual message, two in an email or on a landing page, any in technical prose).',
+    why: 'One "Congrats!" is normal. Generated copy uses them on every line to fake enthusiasm.',
     fix: 'Use a full stop. If the sentence needs the exclamation to land, it needs a better detail.',
     example: {
-      before: 'Your export is ready!',
-      after: 'Your export is ready.',
+      before: 'Your export is ready! Download it now!',
+      after: 'Your export is ready. It is under Settings, then Exports.',
     },
-    detect: { kind: 'pattern', pattern: /(?<=[\p{L}\p{N})])!+(?=\s|$|["'”’)])/gu },
+    detect: { kind: 'heuristic', summary: 'A doubled "!!", or at least 3 (casual, and 1 per 30 words), 2 (professional, marketing) or 1 (technical) exclamation marks.', run: exclamations },
   },
   {
     id: 'emoji',

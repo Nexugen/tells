@@ -86,12 +86,17 @@ export interface LintResult {
   counts: Record<Severity, number>;
   /** Human signals present in the text, and the ones its register usually has but this text lacks. */
   human: import('./human.ts').HumanReport;
+  /** The register the text was checked against. */
+  register: Register;
+  /** Present when the register was 'auto'. */
+  registerGuess?: import('./register.ts').RegisterGuess;
 }
 
 export type Grade = 'clean' | 'light' | 'noticeable' | 'heavy';
 
 export interface LintOptions {
-  register?: Register;
+  /** 'auto' guesses it from the text (see guessRegister). Default 'professional'. */
+  register?: Register | 'auto';
   /** Rule ids to skip. */
   disable?: string[];
   /** Per-rule severity overrides. */

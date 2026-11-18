@@ -44,7 +44,10 @@ export interface HumanReport {
   present: SignalPresence[];
   missing: MissingSignal[];
   /** Signals present, weighted by how much more often people use them than models, 0 to 100. */
-  signalScore: number;
+  /** null when the text is too short to judge. */
+  signalScore: number | null;
+  tooShort: boolean;
+  words: number;
 }
 
 interface Profile {
@@ -278,6 +281,9 @@ const REGISTER_WORDS: Record<Register, string> = {
   marketing: 'marketing writing',
 };
 
+/** Texts shorter than this get no signal score and no missing-signal advice. */
+export const MIN_WORDS = 60;
+
 export function humanReport(ctx: RuleContext): HumanReport {
   const present = detectSignals(ctx);
   const have = new Set(present.map((p) => p.id));
@@ -304,7 +310,9 @@ export function humanReport(ctx: RuleContext): HumanReport {
       });
     }
   }
-  return { register: ctx.register, present, missing, signalScore: total ? Math.round((got / total) * 100) : 0 };
+  // Under this many words the shares say little about one text, so the report says so instead of scoring.
+  const tooShort = words < MIN_WORDS;
+  return { register: ctx.register, present, missing: tooShort ? [] : missing, signalScore: total && !tooShort ? Math.round((got / total) * 100) : null, tooShort, words };
 }
 
 const pct = (x: number) => `${Math.round(x * 100)}%`;
