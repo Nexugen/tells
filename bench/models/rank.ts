@@ -37,7 +37,7 @@ export const LABELS: Record<string, { label: string; provider: string }> = {
   'gpt-6.2-sol': { label: 'GPT-6.2 Sol', provider: 'OpenAI' },
   'gpt-6.1-terra': { label: 'GPT-6.1 Terra', provider: 'OpenAI' },
   'gpt-6-luna': { label: 'GPT-6 Luna', provider: 'OpenAI' },
-  'gemini-4-hydrogen': { label: 'Gemini 4 Hydrogen', provider: 'Google' },
+  'gemini-4-hydrogen': { label: 'Gemini 4 Hydrogen (API)', provider: 'Google' },
   'gemini-3.8-flash': { label: 'Gemini 3.8 Flash', provider: 'Google' },
   'Gemini app (gemini.google.com)': { label: 'Gemini (app)', provider: 'Google' },
 };

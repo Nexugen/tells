@@ -3,6 +3,59 @@
  "tellsVersion": "0.4.2",
  "models": [
   {
+   "label": "Gemini 4 Hydrogen (API)",
+   "provider": "Google",
+   "n": 17,
+   "withWarning": {
+    "v": 58.8,
+    "lo": 35.3,
+    "hi": 82.4
+   },
+   "per100": {
+    "v": 1.85,
+    "lo": 1.12,
+    "hi": 2.44
+   },
+   "score": {
+    "v": 0.6,
+    "lo": 0.3,
+    "hi": 1.1
+   },
+   "machineLike": {
+    "v": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "nScored": 17,
+   "top": [
+    {
+     "id": "bold-label-list",
+     "name": "Bold-label bullets",
+     "share": 53
+    },
+    {
+     "id": "listicle-intro",
+     "name": "List announcement",
+     "share": 18
+    },
+    {
+     "id": "ai-vocabulary",
+     "name": "AI vocabulary",
+     "share": 12
+    },
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 12
+    },
+    {
+     "id": "exclamation",
+     "name": "Exclamation mark",
+     "share": 6
+    }
+   ]
+  },
+  {
    "label": "Gemini (app)",
    "provider": "Google",
    "n": 89,

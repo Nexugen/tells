@@ -27,7 +27,7 @@ export const MODELS_TEXT = {
     'tells checked each answer with no options, as the web page does. The register (casual, professional, technical, marketing) is guessed from the text.',
   ],
   sizes: [
-    'Gemini was asked through the Gemini app at gemini.google.com, one new chat per request, so its answers are what people get there. It answered 89 of the 108. GPT-6.2 Sol answered through the API, and the Claude models through Claude Code with the same system prompt.',
+    'Gemini was asked through the Gemini app at gemini.google.com, one new chat per request, so its answers are what people get there. It answered 89 of the 108. Gemini 4 Hydrogen is the same family through Google\'s API, on a free tier that allows 20 requests a day, so its row grows each day until it reaches 108. GPT-6.2 Sol answered through the API, and the Claude models through Claude Code with the same system prompt.',
   ],
   bias: [],
 };
