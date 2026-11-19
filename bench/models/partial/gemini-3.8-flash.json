@@ -1,0 +1,95 @@
+{
+ "name": "gemini-3.8-flash",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "system": "You are a helpful assistant.",
+ "createdAt": "2026-11-19T06:18:08.545Z",
+ "costUsd": 0,
+ "items": [
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Moving to a new country is an exciting adventure, but it can also be overwhelming without a clear plan. To make the transition as smooth as possible, break your preparation down into key phases:\n\n---\n\n### Phase 1: Legalities & Admin (6–12 Months Before)\n*   **Visas and Permits:** This is your top priority. Research work permits, digital nomad visas, student visas, or residency requirements. Start this early, as government processing times can be notoriously slow.\n*   **Check Passport Validity:** Most countries require your passport to be valid for at least 6 months beyond your planned stay, but ideally, ensure you have several years left to avoid renewing it abroad.\n*   **Apostille & Legalize Documents:** Many countries require birth certificates, marriage certificates, and university degrees to be translated and \"apostilled\" (internationally certified) before they will recognize them.\n*   **Pet Relocation:** If moving with pets, start immediately. Many countries require microchips, specific vaccinations, rabies titer blood tests, and health certificates months in advance to avoid quarantine.\n\n---\n\n### Phase 2: Finances & Healthcare (3–6 Months Before)\n*   **Sort Out Taxes:** Understand your tax obligations in both your home country and your destination (e.g., U.S. citizens must file taxes regardless of where they live). Consult an expat tax specialist if needed.\n*   **International Banking:** \n    *   Notify your local banks that you are moving abroad so your cards aren't frozen for fraud.\n    *   Set up multi-currency accounts like **Wise** or **Revolut** to transfer money between currencies with low fees.\n*   **Health Insurance & Prescriptions:**\n    *   Determine how the local healthcare system works (public vs. private).\n    *   Purchase international health or expat travel insurance to cover you until you are registered locally.\n    *   Request a 3- to 6-month supply of prescription medications and get copies of your medical and dental records.\n\n---\n\n### Phase 3: Belongings & Logistics (1–3 Months Before)\n*   **Declutter Aggressively:** The golden rule of international moving: *Sell, donate, or discard as much as possible.* Shipping large furniture is often more expensive than buying new items upon arrival.\n*   **Decide on Shipping vs. Luggage:** \n    *   If taking only clothes and personal items, consider paying for extra airline baggage or using services like *SendMyBag*.\n    *   If shipping household goods, get multiple quotes from international moving companies.\n*   **Driver’s License:** Get an **International Driving Permit (IDP)** from your home country before you leave. Check if your new country allows you to exchange your license or if you will need to retake the test.\n*   **Cancel Subscriptions & Leases:** Give notice on your rental lease, gym memberships, utilities, and domestic mobile plans.\n\n---\n\n### Phase 4: Arrival Prep (1 Month Before)\n*   **Book Temporary Housing:** Book an Airbnb or serviced apartment for at least the first 2–4 weeks. It is rarely a good idea to sign a long-term lease without seeing the property and the neighborhood in person.\n*   **Phone Plan Strategy:** Make sure your phone is **unlocked** by your carrier so you can pop in a local SIM card (or an eSIM via apps like Airalo) as soon as you land.\n*   **Prepare an \"Essential Documents\" Binder:** Keep physical and digital copies (saved securely in cloud storage) of:\n    *   Passport and visa approvals\n    *   Housing reservations and flight tickets\n    *   Medical records and vaccination proof\n    *   Employment contracts or proof of funds\n\n---\n\n### Phase 5: Cultural & Mental Preparation\n*   **Learn the Basics of the Language:** Even if you aren't fluent, learning polite phrases (hello, please, thank you, where is...) shows respect and immediately endears you to locals.\n*   **Download Local Apps:** Find out what the locals use for:\n    *   Public transit (e.g., Citymapper)\n    *   Ride-sharing (Uber, Grab, Bolt, etc.)\n    *   Food delivery and grocery apps\n    *   Local messaging apps (e.g., WhatsApp, WeChat, Line)\n*   **Connect with Expats & Locals:** Join local expat Facebook groups, Reddit communities, or Meetup.com groups for your new city. You can ask specific questions about neighborhoods, utility setups, and daily life.\n*   **Prepare for Culture Shock:** Understand that after the initial \"honeymoon phase,\" frustration and homesickness are completely normal. Give yourself grace and time to adapt to a different pace of life.",
+   "usage": {
+    "input": 18,
+    "output": 1930,
+    "reasoning": 918
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The first and most critical step in preparing for an international move is managing the administrative requirements. You should secure the appropriate visa well in advance, as the process can take months and often requires extensive documentation like background checks, medical clearances, and proof of income. Ensure your passport is valid for at least a year beyond your travel dates, and make multiple physical and digital copies of important documents such as birth certificates, marriage licenses, and academic transcripts. It is also important to research the tax implications of living abroad, notify your bank of your relocation to prevent frozen accounts, and look into opening a local bank account or using an international money transfer service.\n\nHandling the physical logistics comes next, which begins with downsizing your belongings. Moving items across borders is expensive and often unnecessary, so sell, donate, or store anything you can replace cheaply upon arrival. When it comes to healthcare, obtain your medical records, secure an adequate supply of any prescription medications, and purchase comprehensive international health insurance until you are eligible for the local system. For housing, it is usually best to book temporary accommodation for the first month rather than signing a long-term lease remotely, as this allows you to explore neighborhoods and inspect properties in person before committing.\n\nFinally, you must prepare mentally and culturally for the transition. Learning at least the basics of the local language will make daily tasks like grocery shopping and commuting much easier, while also showing respect to the local residents. Research local laws, social customs, and etiquette to avoid cultural misunderstandings and to help you blend in more smoothly. It is normal to experience culture shock and feelings of isolation early on, so join online community groups for both locals and expatriates before you leave to ask practical questions and start building a support network before your arrival.",
+   "usage": {
+    "input": 33,
+    "output": 960,
+    "reasoning": 609
+   }
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#plain",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Cleaning a cast iron pan is much simpler than most people think. The main goal is to protect the **seasoning** (the baked-on oil that makes it non-stick) and **prevent rust**.\n\nHere is the step-by-step method for everyday cleaning, plus how to handle stubborn messes.\n\n---\n\n### Everyday Cleaning (The 4-Step Method)\n\nClean the pan shortly after cooking, while it is still warm (not scorching hot).\n\n1. **Wash:** \n   * Rinse with hot water. \n   * Use a stiff-bristle brush, a non-scratch sponge, or a dedicated cast iron chainmail scrubber to remove food. \n   * *Myth buster:* **A drop of mild dish soap is totally fine.** Modern dish soaps do not contain lye and will not strip properly polymerized seasoning. Just avoid harsh, citrus-based soaps or heavy degreasers.\n\n2. **Dry immediately and completely:** \n   * Never let cast iron drip-dry (it will rust). \n   * Wipe it thoroughly with a dish towel or paper towel. \n   * **Best practice:** Place the pan on the stove over low heat for 1–2 minutes to evaporate any trapped moisture.\n\n3. **Oil (Maintenance):** \n   * While the pan is still slightly warm, add a few drops of neutral cooking oil with a high smoke point (vegetable, canola, or grapeseed oil). \n   * Rub the oil all over the inside and outside of the pan with a paper towel.\n\n4. **Wipe it out:** \n   * Use a clean paper towel to buff the pan thoroughly until it looks dry and matte, not glossy. If you leave too much oil, it will turn sticky the next time you use it.\n\n---\n\n### How to Clean Stuck-On or Burnt Food\n\nIf hot water and a sponge aren't doing the job, **do not reach for steel wool.** Try these methods instead:\n\n* **The Coarse Salt Scrub:** Pour a handful of coarse kosher salt into the dry pan. Use a folded paper towel or a rag to scrub the salt against the stuck-on bits. The salt acts as a gentle, non-damaging abrasive. Dump the salt, rinse with water, and proceed to dry and oil.\n* **The Simmer Trick:** Pour about an inch of water into the pan and bring it to a gentle simmer on the stove for 3–5 minutes. Use a flat-edged wooden spoon or spatula to easily scrape away the softened bits. Dump the water, then wash, dry, and oil as usual.\n\n---\n\n### The Cardinal Rules (What NEVER to Do)\n\n1. **Never put it in the dishwasher:** It will ruin the seasoning and turn the pan bright orange with rust.\n2. **Never let it soak in the sink:** Prolonged exposure to water causes rust quickly.\n3. **Never pour cold water into a screaming-hot pan:** The extreme temperature shift (thermal shock) can crack or warp the iron. Let it cool down to warm first.",
+   "usage": {
+    "input": 16,
+    "output": 1366,
+    "reasoning": 719
+   }
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#prose",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Start cleaning the pan while it is still warm from cooking, or let it cool slightly so it is safe to handle without burning yourself. Run hot water over the surface and scrub it with a stiff-bristle dish brush, a non-abrasive sponge, or a chainmail scrubber. Contrary to popular myth, using a few drops of mild dish soap will not ruin the seasoned coating, though you should avoid harsh detergents and metal scouring pads. For stubborn, stuck-on food, pour a handful of coarse kosher salt into the pan with a splash of warm water to create an abrasive paste, scrub until the residue lifts, and rinse it completely.\n\nNever let a cast iron pan soak in the sink or air-dry on a rack, as lingering moisture causes rust to form very quickly. Once the pan is washed, dry it immediately and thoroughly with a clean towel or paper towels. To ensure every microscopic trace of water has evaporated, place the pan on the stovetop over low heat for two or three minutes until it is hot to the touch and completely dry. \n\nWhile the pan is still warm from the burner, apply a very small drop of a neutral cooking oil, like canola, grapeseed, or vegetable oil, to the surface. Use a paper towel to rub the oil evenly across the entire interior, and then use a fresh, dry paper towel to buff it out until the surface looks matte rather than wet or greasy. Let the pan cool down completely before putting it away, and store it in a dry cupboard with a paper towel placed inside to protect the finish if you stack other cookware on top.",
+   "usage": {
+    "input": 31,
+    "output": 913,
+    "reasoning": 588
+   }
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#plain",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "In simple terms, **inflation means that prices are going up, and your money buys less than it used to.**\n\nThink of it like this:\n\n### The Candy Bar Example\nImagine you have a **$10 bill**. \n* **Last year**, candy bars cost **$1 each**. You could buy **10 candy bars**.\n* **This year**, inflation happens. Candy bars now cost **$2 each**. \n* Your $10 bill didn't change, but now it can only buy **5 candy bars**. \n\nThe money in your pocket didn't disappear, but its **purchasing power** (what it can actually buy) shrank. \n\n---\n\n### What causes it?\nInflation usually happens for three main reasons:\n\n1. **High Demand (\"Too much money chasing too few goods\"):** If suddenly everyone wants to buy a bicycle, but the stores only have a few, the stores will raise the prices. \n2. **Rising Costs:** If it becomes more expensive to make things (for example, if gas gets pricier, it costs more to ship food to the grocery store), companies will raise prices to cover their costs.\n3. **More Money in Circulation:** If the government prints a lot of new money, there is more cash floating around. When money is everywhere, it becomes less valuable, so it takes more of it to buy things.\n\n---\n\n### Is inflation always bad?\n* **A little bit is normal and healthy:** Economists actually like to see a tiny bit of inflation (about 2% a year). It encourages people to buy things *now* rather than wait, which keeps businesses running and people employed.\n* **A lot is bad:** If prices go up too fast, and your paycheck doesn't go up at the same speed, it gets harder to afford basic things like rent, groceries, and gas.",
+   "usage": {
+    "input": 13,
+    "output": 1152,
+    "reasoning": 758
+   }
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#prose",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Inflation is the gradual increase in the prices of everyday goods and services over time. When inflation happens, every dollar you have buys a smaller percentage of an item than it used to. In other words, your money does not physically disappear, but its purchasing power shrinks. For example, if a cup of coffee costs two dollars today, but a few years from now that exact same cup costs three dollars, inflation is the reason why.\n\nThis price increase usually happens because of shifts in supply and demand. If a lot of people want to buy a certain product, but there is not enough of it to go around, sellers can raise their prices because buyers are willing to pay extra. Prices also go up when it becomes more expensive for businesses to make things, such as when the costs of raw materials, shipping, or worker wages rise. Additionally, when there is a large increase in the amount of money circulating throughout the economy, each individual dollar tends to feel less valuable, pushing prices higher across the board.\n\nA small amount of inflation is actually considered normal and healthy for an economy because it encourages people to buy and invest rather than hoard their cash. However, when inflation rises too quickly, it creates challenges for ordinary households. If the cost of food, rent, and gasoline climbs faster than people's paychecks, families have to spend more of their income just to cover the basics, leaving less money for savings or unexpected expenses.",
+   "usage": {
+    "input": 28,
+    "output": 913,
+    "reasoning": 626
+   }
+  }
+ ],
+ "modelVersion": "gemini-3.8-flash"
+}

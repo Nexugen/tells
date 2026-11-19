@@ -65,8 +65,20 @@ In all, 14,497 human samples (12,793 in the pool, 881 held out in round 2 and 82
 - IRC samples are one person's consecutive lines. A person's chat turn is how they typed it, but a run of lines is not always one thought.
 - Stack Exchange, Wikipedia and Gutenberg texts can include quotations of other writers. They were kept, because people quote in real writing too.
 - PERSUADE and ELLIPSE give no per-essay date. The date field is an upper bound.
-- Every model is a Claude model, answering through Claude Code's print mode with no system prompt beyond the task.
+- Every model in the pool is a Claude model, answering through Claude Code's print mode with no system prompt beyond the task. GPT and Gemini answers to the everyday requests are scored below (Other providers) but are not in the pool.
 - The human-pattern score was trained on the train split, so the pool's train numbers are not evidence of anything. Use tune, test and the held-out rounds.
+
+### Other providers (tells 0.4.2)
+
+The same 108 everyday requests answered by GPT-6.2 Sol (108 answers) and Gemini 4 Hydrogen (17, all advice: free-tier limit), next to Claude Haiku, Sonnet and Opus 5.5 (108 each). Scored with the shipped 0.4.1 score and rules. Full output in `bench/models/ranking.json`; the method, the bias check and the retraining result are in [EVAL.md](EVAL.md). The ranking is also at https://tells.nexugen.app/models.
+
+| Model | Answers | With a warning | Warnings per 100 words | Human-pattern score | Under the line |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Gemini 4 Hydrogen | 17 | 59% (35 to 82) | 1.85 (1.12 to 2.44) | 0.6 (0.3 to 1.1) | 100% (100 to 100) |
+| Claude Sonnet 5.5 | 108 | 56% (47 to 66) | 1.20 (0.89 to 1.54) | 0.5 (0.0 to 1.4) | 99% (97 to 100) |
+| Claude Haiku 5.5 | 108 | 50% (41 to 59) | 1.13 (0.82 to 1.46) | 1.3 (0.2 to 2.8) | 98% (95 to 100) |
+| Claude Opus 5.5 | 108 | 56% (47 to 66) | 1.01 (0.73 to 1.35) | 0.6 (0.2 to 1.1) | 99% (97 to 100) |
+| GPT-6.2 Sol | 108 | 32% (23 to 41) | 0.74 (0.51 to 0.99) | 10.0 (5.9 to 15.0) | 86% (79 to 92) |
 
 ### Everyday assistant answers (tells 0.3.3)
 

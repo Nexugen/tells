@@ -60,7 +60,7 @@ Measured on human and model writing that played no part in building tells. The l
 - Ordinary chat-assistant answers to everyday requests (advice, how-tos, LinkedIn posts, emails), none used for building: 98% of 186 flagged, 55% with a warning that stands; of 12 plain-prose answers in the default ChatGPT voice, 11 get a warning.
 - On a probe of 831 human texts about GPT-3, AI, apps and startups from 2020 to 2022, plus lowercase posts and IRC chat, 1.6% scored under the line, down from 3.0% in tells 0.3.0.
 
-Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those in round 2. Every model was a Claude model, because those were the ones we could run; expect other families to be caught less often until they are in the benchmark. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
+Under 60 words there is no score and only the rules speak, so a short text from a model to a friend is usually left alone: tells flagged 18% of those in round 2. Most model answers in the benchmark are from Claude. GPT-6.2 Sol answers are caught less often (86% under the score's line against 98% to 99% for Claude, on the same everyday requests), because the score learned its sense of machine-made text from Claude; see the model ranking below. The per-register and per-source numbers are in [bench/EVAL.md](bench/EVAL.md). If it flags your own ordinary writing, please open an issue with the text.
 
 ## Before and after
 
@@ -244,6 +244,16 @@ It counts habits we know about, and nothing else. A text can score 0 and still b
 The rewrite step learns what to do from real writing, not only from the rules. `src/exemplars.ts` has short passages in each register from sources with clear licences: Stack Overflow answers (CC BY-SA), the Go blog (CC BY 4.0), the Rust blog (MIT or Apache 2.0) and GOV.UK (Open Government Licence). Each sample records its author, link and licence, and `npx tells exemplars` lists them. See [DATA-LICENSES.md](DATA-LICENSES.md).
 
 A few samples are house drafts from Nexugen that a person approved. They help the rewrite, but they're marked so the benchmark never counts them as human.
+
+## Model ranking
+
+How AI-sounding is each model's everyday writing? GPT-6.2 Sol, Gemini 4 Hydrogen and Claude Haiku, Sonnet and Opus 5.5 answered the same 108 everyday requests with the system prompt "You are a helpful assistant.", and tells checked every answer. Warnings per 100 words, most first: Gemini 4 Hydrogen 1.85 (17 answers, all advice, because of a free-tier limit), Claude Sonnet 1.20, Claude Haiku 1.13, Claude Opus 1.01, GPT-6.2 Sol 0.74. The table, intervals, most common tells per model and a check for bias toward Claude are at [tells.nexugen.app/models](https://tells.nexugen.app/models) and in [bench/EVAL.md](bench/EVAL.md). The answers are in `bench/models/out/`. Adding a new model takes one command:
+
+```sh
+OPENAI_API_KEY=... node --experimental-strip-types bench/models/rank.ts add --provider openai --model <model-id>
+GEMINI_API_KEY=... node --experimental-strip-types bench/models/rank.ts add --provider gemini --model <model-id> --gap 13
+node --experimental-strip-types bench/models/rank.ts      # rescore every model, write bench/models/ranking.json and src/model-ranking.json
+```
 
 ## Benchmark
 

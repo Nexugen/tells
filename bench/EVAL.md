@@ -1,6 +1,6 @@
 # Accuracy
 
-Two benchmarks live in `bench/`. The v2 benchmark is the current one. Round 3 (tells 0.3.2) is at the top; rounds 1 and 2 (tells 0.3.0) and the v1 numbers (tells 0.2) are kept below for comparison.
+Two benchmarks live in `bench/`. The v2 benchmark is the current one. The model ranking (tells 0.4.2) and the everyday answers (0.3.3) are at the top, then round 3 (tells 0.3.2); rounds 1 and 2 (tells 0.3.0) and the v1 numbers (tells 0.2) are kept below for comparison.
 
 ## What is measured
 
@@ -17,6 +17,54 @@ A text counts as **about AI, apps or tech** when it uses three or more words suc
 - **Held-out rounds** are fetched from sources and prompts not in the pool, after tuning stops, and scored exactly once with a model frozen beforehand (`bench/rounds/`, with the model and a hash of the code).
 - **The probe** (`bench/v2.ts probe`) is present-day-topic human writing that is never trained on: HN comments from 2020 and 2021 found by searching for GPT-3, Copilot, AI, apps and startups; GitHub issue comments on AI and app projects from 2020 to Oct 2022; Reddit posts from tech and business subreddits and lowercase posts; and chat from Ubuntu's IRC channels. It is human only, so it measures how often real writing about these subjects is called machine-like.
 - About a third of the prompts are adversarial: the model is told to sound like a person, avoid dashes and lists, type in lowercase like a chat app, write as a tired or non-native writer, or fool a detector.
+
+## Other providers: the model ranking (tells 0.4.2)
+
+### What was measured
+
+GPT-6.2 Sol (OpenAI) and Gemini 4 Hydrogen (Google) answered the 108 everyday requests in `bench/everyday/prompts.json` with the same system prompt the Claude answers had ("You are a helpful assistant."), default temperature, one answer each. GPT ran with `max_completion_tokens` 600 and `reasoning_effort` low (no answer was cut; one that spent all 600 tokens thinking and came back empty was asked again with 1,500). Claude Haiku, Sonnet and Opus 5.5 are the answers already in `bench/everyday/out`, from Claude Code's print mode on 18 Nov. Each answer was checked with `lint()` and no options. `bench/models/rank.ts` reports, per model, the share of answers with a warning or error, warnings and errors per 100 words, the mean human-pattern score (60+ words) and the share under the low line, each with a 95% bootstrap interval (2,000 resamples, fixed seed). The answers are in `bench/models/out/`, and `bench/models/rank.ts add --provider openai --model <id>` answers the requests with a new model and reruns the ranking.
+
+Gemini's free tier allows 20 requests a day per model: Gemini 4 Hydrogen answered 17, all of them advice requests, and Gemini 3.8 Flash 6 (kept in `bench/models/partial/`, not ranked). Gemini 4 Argon, Carbon and Neon refused every request twice ("exceeded your current quota": the free tier has no quota for them). GPT-6.2 Astra, GPT-6.1 Terra and GPT-6 Luna were stopped after 15, 18 and 26 answers when the OpenAI budget was cut to $1.50; their answers are in `bench/models/partial/` and are used below only as extra unseen GPT text. Estimated OpenAI spend, from token counts at list prices (Astra $8/$40, Sol $2/$10, Terra $1/$5, Luna $0.10/$0.50 per million tokens in/out): $0.51 in all, $0.24 of it for the 108 Sol answers.
+
+### Results
+
+| Model | Answers | With a warning | Warnings per 100 words | Human-pattern score | Under the line |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Gemini 4 Hydrogen | 17 | 59% (35 to 82) | 1.85 (1.12 to 2.44) | 0.6 (0.3 to 1.1) | 100% (100 to 100) |
+| Claude Sonnet 5.5 | 108 | 56% (47 to 66) | 1.20 (0.89 to 1.54) | 0.5 (0.0 to 1.4) | 99% (97 to 100) |
+| Claude Haiku 5.5 | 108 | 50% (41 to 59) | 1.13 (0.82 to 1.46) | 1.3 (0.2 to 2.8) | 98% (95 to 100) |
+| Claude Opus 5.5 | 108 | 56% (47 to 66) | 1.01 (0.73 to 1.35) | 0.6 (0.2 to 1.1) | 99% (97 to 100) |
+| GPT-6.2 Sol | 108 | 32% (23 to 41) | 0.74 (0.51 to 0.99) | 10.0 (5.9 to 15.0) | 86% (79 to 92) |
+
+Rules alone (no score in the corroboration gate, every rule at its own severity), share of answers with a finding: Gemini 4 Hydrogen 65%, Sonnet 63%, Opus 62%, Haiku 54%, GPT-6.2 Sol 36%. On the 62 held-out prompts (the test half, which no version of the score was trained on) the order is the same. On the 17 advice requests Gemini answered, answers with a warning: Gemini 10, Opus 8, Haiku 7, Sonnet 6, GPT-6.2 Sol 2. GPT-6.2 Sol's 24 answers at default reasoning effort and its low-effort answers to the same 24 requests got a warning equally often (4 each).
+
+Most common warnings, share of answers: Gemini 4 Hydrogen bold-label-list 53%, listicle-intro 18%, ai-vocabulary 12%, bold-lead 12%. Claude: unfilled-placeholder 16% to 23%, bold-lead 10% to 16%, bold-label-list 11% to 15%. GPT-6.2 Sol: unfilled-placeholder 16%, bold-lead 13%, corporate-excitement 5%. GPT writes shorter answers (median 171 words against 311 to 357 for Claude and 459 for Gemini).
+
+### The bias check
+
+Until this round every model answer in the benchmark came from Claude, and four rules (`reassurance-frame`, `listicle-intro`, `ordinal-sequence`, `upbeat-close`) were written in 0.3.3 by reading Claude's dev-half answers to these same requests. That could flatter GPT and Gemini (a habit only they have may have no rule) or count against Claude (rules shaped around its habits).
+
+- **Rules written from Claude:** they gave a warning on 6.5% to 13% of Claude answers, 0.9% of GPT-6.2 Sol answers and 24% of Gemini 4 Hydrogen answers. They do not explain Claude ranking above GPT.
+- **The score is Claude-shaped.** It calls 86% of GPT-6.2 Sol answers machine-like (mean score 10) against 98% to 99% for Claude (means 0.5 to 1.3). Plain explanations are where it slips: 6 of 16 GPT explanations scored 41 or more. This is the clearest sign that tells, as built, is easier on GPT than on Claude. It does not move the ranking, which is decided by the warnings, but GPT's detection rate below is lower for this reason.
+
+### Training on the new answers
+
+The dev half of the GPT-6.2 Sol and Gemini answers (53 answers of 60+ words between them) joined the train split (`TELLS_TRAIN_OTHERS=1` in `bench/dataset.ts`), split by prompt family like the Claude everyday answers, so no request has answers in both train and the held-out half. The score was retrained with `bench/v2.ts train` and the same settings (the default settings reproduce the shipped 0.4.1 model byte for byte, apart from its date).
+
+| | Shipped model | Retrained with GPT and Gemini |
+| --- | ---: | ---: |
+| Held-out GPT-6.2 Sol answers (62) under the line | 85.7% | 85.7% |
+| Held-out GPT-6.2 Sol mean score | 11.5 | 10.3 |
+| Held-out GPT-6.2 Sol flagged (warning or low score) | 85.5% | 85.5% |
+| Unseen GPT-6.2 Astra, GPT-6.1 Terra, GPT-6 Luna answers flagged (59) | 100% | 100% |
+| Held-out Gemini 4 Hydrogen answers flagged (10) | 100% | 100% |
+| Human texts with a warning or error, locked test split | 3 of 2,552 | 5 of 2,552 |
+| Human texts under the line, test split | 1.0% | 1.4% |
+| Human texts with a warning or error, tune / fresh-3 / v1 false-positive set | 4 of 2,768 / 0 of 823 / 0 of 182 | 4 of 2,768 / 0 of 823 / 0 of 182 |
+| Probe (831 human texts) under the line; tech texts | 1.6%; 1.2% | 1.8%; 2.9% |
+| Low line | 17 | 19 |
+
+Detection on held-out GPT and Gemini answers did not improve, and human writing fared slightly worse, so the retrained score was **not shipped**. 0.4.2 keeps the 0.4.1 score and rules; only the site, the benchmark data and the ranking are new. Fifty-odd answers are too few to teach the score a second family. The next step is more GPT answers in more genres, and a rule for the plain-explanation shape, which tells still cannot point at.
 
 ## Everyday assistant answers (tells 0.3.3)
 
@@ -56,7 +104,7 @@ On the human probe, 1.6% scored under the line, as in 0.3.2.
 
 - A plain, correct explanation (why the sky is blue, compound interest) has no habit to point at; only the score catches it, so it shows "Reads AI-written" with no highlighted sentence.
 - A stock LinkedIn job announcement still scores 96 and keeps its tells as hints, because a high score asks for one more kind of evidence. Short LinkedIn-style posts by people score high too, and we have not found a feature that splits them.
-- Every model is still a Claude model. The plain-prose set imitates the ChatGPT default voice; real GPT and Gemini output is not in the benchmark yet.
+- Every model was still a Claude model in 0.3.3. Real GPT and Gemini answers were added in 0.4.2 (see above); they are scored and ranked but not trained on.
 
 ## Round 3: present-day human writing (tells 0.3.2)
 

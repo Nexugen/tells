@@ -1,0 +1,1528 @@
+{
+  "name": "openai-gpt-6.2-sol",
+  "provider": "openai",
+  "model": "gpt-6.2-sol",
+  "system": "You are a helpful assistant.",
+  "settings": {
+    "max_completion_tokens": 600,
+    "reasoning_effort": "low"
+  },
+  "createdAt": "2026-11-19T06:22:27.861Z",
+  "costUsd": 0.238808,
+  "items": [
+    {
+      "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#plain",
+      "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Start with three things: **confirm your right to live and work there, set a realistic budget, and arrange somewhere to stay when you arrive.** Those decisions shape the rest of the move.\n\n### Before you leave\n- **Check immigration rules on official government websites.** Confirm visa processing times, whether you can work on arrival, what permits family members need, and whether you must register after entering. Avoid nonrefundable bookings until your visa is approved.\n- **Gather documents while they’re easy to get.** Check passport validity and collect birth or marriage certificates, medical and vaccination records, prescriptions, and school or professional records. Check which documents need certified translations or authentication, and keep secure copies you can access abroad.\n- **Budget for setup costs, not just the flight.** Include temporary housing, a rental deposit, shipping, health coverage, and a cushion in case your first paycheck or permanent housing takes longer than expected. Check how the move may affect your taxes and keep a backup way to access money.\n- **Plan for the first few weeks.** Book temporary housing if you can, so you can see neighborhoods and rentals in person before committing. Confirm when health coverage starts and check whether your medications can legally be brought into the country. If you’re bringing children or pets, check school enrollment and pet import rules early.\n\n### After you arrive\nHandle anything with a deadline first: address registration, residence permits, and tax or social insurance IDs, as applicable. Then set up a phone, banking, and healthcare. Keep your passport, entry documents, essential medication, and first-night address in your carry-on rather than in shipped luggage.\n\nIf you share **where you’re moving from and to, your target date, and whether it’s for work, study, or family**, I can turn this into a country-specific timeline.",
+      "usage": {
+        "input": 27,
+        "output": 372,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#prose",
+      "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Start by checking the destination country’s official immigration website. Confirm what visa or residence permit you need, whether it lets you work, and what you’ll need to do after arrival. Gather documents such as your passport, birth certificate, medical records, and proof of employment or savings. Check whether any need certified translations or authentication before you leave, when they’re often easier to arrange.\n\nMake a budget for the first few months, including temporary housing, a rental deposit, transport, health insurance, and a cushion in case your first paycheck is delayed. If you don’t know the area, book a short stay rather than committing to a long lease from abroad. Before you go, make sure you can access your money and receive bank verification codes overseas, and check how you’ll refill any regular prescriptions.\n\nPlan your first week before you leave. Know how you’ll get from the airport or station to your accommodation, which appointments or registrations have deadlines, and how you’ll get a local phone number. Save your address, key documents, and emergency contacts somewhere you can reach offline. Once the essentials are handled, give yourself time to settle in. A language class, a hobby group, or even a regular visit to the same café can help a new place start to feel familiar.",
+      "usage": {
+        "input": 42,
+        "output": 257,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#plain",
+      "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Your goal in week one isn’t to prove you know everything. It’s to learn what matters, meet the people you’ll work with, and agree on what to tackle first.\n\n- **Ask your manager what success looks like.** Try: “What would make this a good first week? What should I be able to do on my own by the end of the month?”\n- **Get to know your immediate teammates.** Ask what they work on, where your roles overlap, and how they prefer to handle quick questions.\n- **Keep a running set of notes.** Record names, acronyms, useful links, and open questions. Group nonurgent questions for a check-in, but speak up right away if you’re blocked.\n- **Learn how the team works.** Notice where decisions get made, what belongs in chat versus email, and when people expect updates. If a process seems odd, ask why it exists before suggesting a change.\n- **Aim for one small, useful contribution.** Ask your manager or a teammate for a task that helps the team while teaching you how the work gets done.\n- **Close the week with a quick recap.** Tell your manager what you learned, flag anything still blocking you, and confirm your top priority for next week.\n\nIf you forget a name or need to ask a question twice, don’t sweat it. Being curious and following through matters more than looking like you’ve already settled in.",
+      "usage": {
+        "input": 29,
+        "output": 294,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#prose",
+      "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "In your first few days, focus on learning how the team works rather than trying to prove yourself. Ask your manager what a good first week looks like, what to prioritize, and how they prefer to get updates. Keep a running note of names, acronyms, and questions so you can look things up later or bring a few questions to your next check-in.\n\nMake an effort to meet the people you’ll work with most. A simple “What are you working on, and where might our work overlap?” can tell you more than a formal introduction. Pay attention to which conversations happen in chat, which need a meeting, and where decisions are written down.\n\nIf you have room, look for one small, useful task you can finish by Friday. It’s a low-pressure way to learn the workflow and get feedback. At the end of the week, check in with your manager about what you’ve learned, anything you’re blocked on, and what to tackle next. You don’t need to have it all figured out; knowing who to ask and what to do next is a good start.",
+      "usage": {
+        "input": 44,
+        "output": 222,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-get-better-sleep#plain",
+      "family": "everyday:advice:how-can-i-get-better-sleep",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with a **consistent wake-up time**, even after a rough night. Get some outdoor light soon after you wake, and give yourself enough time to sleep—most adults need 7–9 hours.\n\nA few other changes worth trying:\n\n- **Stop caffeine at least 6 hours before bed.** If you’re sensitive to it, try making lunch your cutoff.\n- **Give yourself a wind-down period.** Dim the lights and spend the last 30–60 minutes doing something calm. Keep your bedroom cool, dark, and quiet.\n- **Go to bed when you’re sleepy.** If you’re lying awake and getting frustrated, get up and do something quiet in dim light. Return when you feel sleepy, rather than watching the clock.\n- **Avoid using alcohol as a sleep aid.** It can make you drowsy at first but disrupt sleep later in the night.\n\nIf sleep trouble persists or affects your daytime functioning, talk with a healthcare professional. **Cognitive behavioral therapy for insomnia (CBT-I)** is a first-line treatment for chronic insomnia. Loud snoring, gasping during sleep, or significant daytime sleepiness are also worth getting checked.\n\nIs your main issue falling asleep, staying asleep, or waking up tired even after enough hours?",
+      "usage": {
+        "input": 23,
+        "output": 259,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-get-better-sleep#prose",
+      "family": "everyday:advice:how-can-i-get-better-sleep",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by getting up at about the same time every day, even after a rough night. Get some daylight soon after waking, and give yourself enough time for sleep—most adults need seven to nine hours. Go to bed when you feel sleepy rather than trying to force an early bedtime.\n\nMake the last hour before bed quieter. Dim the lights, put aside work or anything that gets you keyed up, and keep your room cool, dark, and quiet. If you drink caffeine, try stopping at least six hours before bedtime, or earlier if you’re sensitive to it. Alcohol can make you feel sleepy at first but disrupt sleep later in the night.\n\nIf you’re lying awake and getting frustrated, get out of bed and do something quiet in dim light, then return when you feel sleepy. Try not to watch the clock. If sleep problems persist or affect how you function during the day, talk with a healthcare professional. Cognitive behavioral therapy for insomnia is a first-line treatment for ongoing insomnia, and loud snoring, gasping during sleep, or marked daytime sleepiness are reasons to ask about sleep apnea.",
+      "usage": {
+        "input": 38,
+        "output": 224,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#plain",
+      "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Before adopting a dog, ask yourself: **Can I meet this dog’s needs on an ordinary workday, not just on a good weekend?** The right match matters more than breed or appearance.\n\n- **Time and routine.** Dogs need daily exercise, bathroom breaks, companionship, and training. Puppies need especially frequent supervision and potty breaks. If you work long shifts or travel often, make a realistic plan for a walker, sitter, or other help.\n- **Budget.** The adoption fee is just the start. Price out food, routine vet care, parasite prevention, and any grooming, training, or boarding you’ll need. Plan for emergency vet bills with savings, insurance, or both.\n- **Housing and household.** Confirm your lease rules and any pet fees or restrictions. Make sure everyone in the home agrees on who does what. If you have children or other pets, ask how the dog has behaved around them and how to manage introductions.\n- **The dog’s individual needs.** Ask the shelter or foster what they’ve actually observed: How does the dog handle being alone, walking on leash, or meeting other animals? Ask about medical needs, any bite history or guarding around food and toys, and what’s still unknown. An adult dog with a known foster history may be a more predictable fit than a puppy.\n- **The first few weeks.** Set up a quiet resting spot, keep the routine predictable, and introduce visitors and other pets gradually. Arrange a vet visit, confirm the microchip registration, and use reward-based training. Don’t judge the fit solely by the first day; behavior can change as a dog settles in.\n\nIf you’re unsure, ask whether the rescue offers **foster-to-adopt** and what support it provides after adoption. Before you commit, make a concrete plan for a typical weekday, your next trip, and an unexpected vet bill.",
+      "usage": {
+        "input": 25,
+        "output": 385,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#prose",
+      "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Think about what life with a dog would look like on your busiest day, not just your best day. Dogs need daily exercise, bathroom breaks, companionship, and training. A puppy usually needs more supervision and more frequent trips outside, while an adult dog may have a more established routine. Check your housing rules and think about who will care for the dog when you work late, travel, or get sick.\n\nBudget beyond the adoption fee. Food, supplies, routine vet visits, and parasite prevention add up, and you may also need to pay for grooming, training, or boarding. Have a plan for unexpected vet bills, whether that’s savings or pet insurance. Make sure everyone in your household agrees on the adoption and knows who will handle the daily care.\n\nChoose a dog whose needs fit your household rather than going by looks or breed alone. Ask the shelter or foster carer what they’ve observed about the dog’s energy level, medical history, and behavior around children, other pets, and when left alone. They may not know everything, so meet the dog and ask whether a trial or foster-to-adopt period is available if you’re unsure.\n\nOnce you bring the dog home, keep the first few days quiet and predictable. Give them a safe place to rest, start a simple routine, and schedule a vet visit to review their records and care needs. Some dogs settle in quickly and others take weeks or longer, so don’t judge the fit by the first day alone.",
+      "usage": {
+        "input": 40,
+        "output": 299,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#plain",
+      "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with a small buffer, not a big savings goal. If you’re living paycheck to paycheck, even $25 set aside can help you avoid an overdraft or cover a small surprise.\n\n1. **Plan from payday to payday.** On payday, write down your balance and what you’ll need before the next check: rent and bills due, groceries, transportation, and minimum debt payments. This tells you what you can safely set aside.\n2. **Save a small amount only if it fits.** If there’s $5 left after essentials, move it to a separate, no-fee savings account or a savings bucket in your banking app. Start manually if your income varies; an automatic transfer isn’t worth an overdraft fee.\n3. **If there’s nothing left, don’t force it.** If bills come due before your paycheck, ask whether you can change a due date. If essentials consistently cost more than you bring in, focus first on closing that gap: check for utility or grocery assistance, ask about hardship plans, or review recurring bills for a cost you can cut without creating a bigger problem.\n4. **Build in steps.** Try $25, then $100, then enough to cover a week of essentials. If you use the money for an unexpected expense, it did its job. Start rebuilding when you can.\n\nA good first move today: list everything that needs to be paid before your next payday. That will help you see whether your next step is saving a few dollars or freeing up room first.",
+      "usage": {
+        "input": 29,
+        "output": 313,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#prose",
+      "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by looking at what has to be paid before your next paycheck, rather than trying to build a whole monthly budget at once. Set aside enough for essentials like rent, food, utilities, and getting to work. If there’s a little left, move an amount you’re confident you won’t need back—even $5—into a separate, no-fee savings account. Skip the transfer if it might cause an overdraft or leave you short on a bill.\n\nMake your first goal small enough to reach. A $50 cushion won’t cover every emergency, but it could keep a surprise expense from turning into a late fee or another charge on your credit card. If you need to spend the money on an actual surprise, that’s what it’s there for. Start building it back up when you can.\n\nIf there’s consistently nothing left, don’t force yourself to save. Look for one change that could give you some breathing room: ask whether a bill’s due date can move closer to payday, check whether you qualify for grocery or utility assistance, or see if a recurring bill can be lowered. The first win may be getting through a pay period without falling further behind.",
+      "usage": {
+        "input": 44,
+        "output": 239,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#plain",
+      "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "A good work-from-home routine makes it clear **what to work on, when you’re available, and when you’re done**.\n\n- **Pick one must-finish task.** Before opening email or chat, write down a concrete result for the day: “Send the first draft,” not “Work on the proposal.”\n- **Protect one focus block.** Put 45–90 minutes on your calendar during your best-energy window. Silence nonurgent notifications and keep your phone out of reach. If your job is interruption-heavy, start with 25 minutes.\n- **Set expectations about replies.** If your role allows it, check messages between focus blocks instead of continuously. Let teammates know how to reach you when something is genuinely urgent.\n- **Take breaks away from your desk.** A short walk or lunch in another room gives you a real break rather than just a different screen.\n- **End with a five-minute shutdown.** Note where you stopped, write down tomorrow’s first step, and close your work apps. You don’t need a separate office for this to work.\n\nStart with just the first two for a week. Judge the experiment by whether you finished more of the work that mattered, not whether you spent more time at your desk.",
+      "usage": {
+        "input": 26,
+        "output": 256,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#prose",
+      "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Start each day by deciding what would make it feel productive. Pick one task that matters most and give it a block of time on your calendar. If you can, do it before opening email or chat. If you need to be reachable, let coworkers know when you’ll be heads-down and how to reach you for anything urgent.\n\nMake it easier to focus than to get distracted. Put your phone out of reach, close tabs you don’t need, and keep a scrap of paper nearby for chores or ideas that pop into your head. When you take a break, step away from the screen. A short walk or lunch away from your desk can help you come back with more energy than checking another app.\n\nGive the workday a clear ending. Take five minutes to note what you finished and write down the first thing you’ll do tomorrow. Then close your laptop or put your work materials away. If a routine isn’t working, change one thing at a time and judge it by whether you’re finishing meaningful work, not by how many hours you spend at your desk.",
+      "usage": {
+        "input": 41,
+        "output": 217,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#plain",
+      "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with the behavior you want to change, not the coworker’s personality. “They keep interrupting me in meetings” gives you something concrete to address; “they’re difficult” doesn’t.\n\n- **Address it privately if it feels safe.** Name what happened, explain the impact, and make a specific request: “In today’s meeting, I didn’t get to finish explaining the timeline. Next time, can you let me finish before we discuss concerns?” Give them a chance to share their perspective, too.\n- **Set a boundary in the moment.** A calm “I’d like to finish my point, then I’m happy to hear yours” can be more useful than waiting for a bigger conversation. If the issue is missed handoffs or changing expectations, confirm who owns what and by when in writing.\n- **Escalate a pattern, not a personality clash.** If the problem continues, bring a few factual examples to your manager, explain how it affects the work, and ask for a specific change. If it involves harassment, discrimination, threats, or retaliation, you don’t have to confront the coworker first; use an appropriate reporting channel.\n\nYou don’t have to get them to like you or agree with your interpretation. The goal is a workable professional relationship. What are they doing that’s making your work harder?",
+      "usage": {
+        "input": 26,
+        "output": 275,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#prose",
+      "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by getting specific about what’s making the relationship difficult. Are they interrupting you, missing deadlines, or sending messages that come across as dismissive? Focus on what they do and how it affects your work, rather than trying to figure out their motives. That makes it easier to decide what needs to change.\n\nIf it feels safe, bring it up privately at a calm moment. Name one example and make a concrete request: “When the deadline changed yesterday, I didn’t find out until after I’d sent the draft. Could you message me directly next time?” Then give them a chance to explain. Sometimes the issue is a mismatch in expectations, and a small agreement about how you’ll work together can help.\n\nIf the behavior continues, keep a factual record of what happened and how it affected the work. Bring it to your manager with a clear request, such as help clarifying responsibilities or setting expectations for communication. If you’re dealing with harassment, discrimination, or threats, you don’t have to confront the coworker first; use an appropriate reporting channel. The goal isn’t to make them like you. It’s to make the working relationship manageable and respectful.",
+      "usage": {
+        "input": 41,
+        "output": 238,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:tips-for-a-long-haul-flight#plain",
+      "family": "everyday:advice:tips-for-a-long-haul-flight",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "A few small choices make a long-haul flight much more comfortable:\n\n- **Pick your seat for how you fly.** Choose an aisle if you like to get up often, or a window if you want to lean against the wall and sleep.\n- **Keep the essentials under the seat.** Pack an eye mask, earplugs or headphones, a warm layer, a charging cable, any medications you’ll need, and a snack. Download entertainment before boarding.\n- **Sleep with your destination in mind.** If it’s nighttime there, try to sleep on board. If it’s daytime, stay awake when you can. After landing, get some daylight and aim for a local bedtime.\n- **Move regularly.** Walk the aisle every couple of hours while awake when it’s safe, and do ankle circles or calf raises in your seat. If you have a history of blood clots or recently had surgery, ask your clinician about precautions before flying.\n- **Drink water and go easy on alcohol.** Bring an empty bottle to refill after security. If you’re trying to sleep, skip caffeine in the hours before.\n- **Plan for arrival.** Save your hotel address and transit directions offline, and keep a toothbrush and a change of underwear in your carry-on in case your checked bag is delayed.",
+      "usage": {
+        "input": 24,
+        "output": 267,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:tips-for-a-long-haul-flight#prose",
+      "family": "everyday:advice:tips-for-a-long-haul-flight",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Pack a small kit you can reach without opening the overhead bin: headphones or earplugs, an eye mask, a warm layer, lip balm, and any medication you’ll need. Download entertainment before you leave, and bring an empty water bottle to fill after security. If you like to get up often, pick an aisle seat; if you’re hoping to sleep, a window seat gives you something to lean against.\n\nOnce you board, set your clock to your destination’s time and use it as a rough guide for when to sleep. Drink water regularly, go easy on alcohol, and save caffeine for when you want to be awake. Get up and walk every couple of hours when it’s safe, and flex your ankles and calves while seated.\n\nAfter landing, try to eat and sleep on local time. If you arrive during the day, spend some time outdoors and aim to stay awake until a reasonable local bedtime. If you’re too tired to function, take a short nap rather than sleeping through the afternoon.",
+      "usage": {
+        "input": 39,
+        "output": 206,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-make-friends-as-an-adult#plain",
+      "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "A reliable way to make friends as an adult is to **see the same people regularly, then invite someone you click with to do something specific.** You don’t have to be especially outgoing; seeing each other again takes some of the pressure off each conversation.\n\n1. **Pick one recurring thing you’d enjoy anyway.** A walking group, volunteer shift, class, game night, or lunch with coworkers can all work. Choose something that fits your schedule so you can show up most weeks.\n2. **Build on the last conversation.** “How did that interview go?” or “Did you end up trying that restaurant?” is an easy way to go from recognizing someone to getting to know them.\n3. **Make a small, concrete invitation.** Try: “I’m grabbing coffee after class next week. Want to join?” Or text someone you already like: “Hey, it’s been a while. Want to take a walk Saturday?”\n4. **Give it time, but look for reciprocity.** One declined invitation usually doesn’t tell you much. If someone repeatedly declines without suggesting another time, put your energy elsewhere. Look for people who seem glad to see you, ask questions back, or make time to meet.\n\nIf you’re not sure where to start, think of one person you already enjoy talking to but rarely see. Sending them a specific invitation this week may be easier than starting from scratch.",
+      "usage": {
+        "input": 25,
+        "output": 289,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-make-friends-as-an-adult#prose",
+      "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The easiest way to make friends as an adult is to put yourself somewhere you’ll see the same people regularly. Pick something you’d enjoy even if you didn’t make a friend right away: a weekly class, a volunteer shift, a walking group, or a game night. Give it a few visits. It’s easier to start a conversation when you recognize someone and have something in common to talk about.\n\nWhen you enjoy talking to someone, make a small, specific invitation. “I’m getting coffee after class next week. Want to join?” is easier to answer than “We should hang out sometime.” You can do the same with people you already know a little, like a coworker you enjoy chatting with or a neighbor you keep running into.\n\nDon’t read too much into one declined invitation. Adults are busy, and a scheduling conflict isn’t necessarily a lack of interest. Over time, look for people who make an effort too: they suggest another day, ask how you’re doing, or reach out on their own. Friendship usually grows through ordinary moments repeated over time, not one perfect conversation.",
+      "usage": {
+        "input": 40,
+        "output": 224,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#plain",
+      "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with the job description. Pick the three things the employer seems to care about most, and prepare a concrete example that shows you can do each one. That’s usually more useful than memorizing answers to a long list of interview questions.\n\n1. **Prepare a short introduction.** For “Tell me about yourself,” aim for about a minute: what you do now, one or two relevant experiences, and why this role is a logical next step.\n2. **Build a small bank of stories.** Think of a success, a challenge, a mistake you learned from, and a time you worked through a disagreement. Use **STAR** (Situation, Task, Action, Result) to keep each answer focused. Spend most of your time on what *you* did and what changed as a result.\n3. **Research the team and company.** Know what they do, who they serve, and what genuinely interests you about the role. Prepare two or three questions, such as “What would success look like in the first three months?” or “What’s the biggest challenge this person will help solve?”\n4. **Practice out loud.** Ask a friend to run a mock interview or record yourself. Listen for answers that take too long to get to the point or make claims without examples. Practice the key points, not a script.\n5. **Sort out logistics the day before.** Confirm the time and format, test your camera and mic or plan your route, and keep your résumé and a few notes handy.\n\nIf you only have 30 minutes, spend 10 reviewing the job description, 15 practicing two relevant stories aloud, and 5 writing questions for the interviewer.",
+      "usage": {
+        "input": 25,
+        "output": 343,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#prose",
+      "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by reading the job description and picking out the three things the employer seems to care about most. For each one, think of a specific example that shows what you can do. Research the company enough to explain, in your own words, why you want this role there. A detail about the team’s work will sound more genuine than a generic compliment.\n\nPractice answering “Tell me about yourself” and “Why are you interested in this role?” out loud. For questions about past experience, briefly explain the situation, focus on what you did, and say what happened as a result. Don’t memorize a script; practice enough that you can tell the story naturally, even if the interviewer asks the question a different way.\n\nPrepare a couple of questions you genuinely want answered, such as “What would a strong first three months look like?” or “What’s the biggest challenge the team is facing right now?” The day before, confirm the time and location or test the video link. During the interview, it’s fine to pause before answering or ask for clarification. You’re there to show what you can do and to find out whether the job is a good fit for you.",
+      "usage": {
+        "input": 40,
+        "output": 238,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-stop-procrastinating#plain",
+      "family": "everyday:advice:how-can-i-stop-procrastinating",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Make the first step small enough that you can do it even when you don’t feel ready.\n\n1. **Pick one task and name the next action.** Not “work on the report,” but “open the document and write three rough bullet points.”\n2. **Set a 10-minute timer.** Put your phone out of reach and give yourself permission to stop when the timer goes off. The goal is to start, not to finish.\n3. **If you still avoid it, identify what’s in the way.** If the task is unclear, write down the first question you need answered. If you’re worried about doing it badly, make a deliberately rough first draft. If you’re exhausted, take a real break and decide when you’ll come back.\n\nBefore you stop, leave yourself a note with the next action. That way, tomorrow you can start without having to figure out where you left off.",
+      "usage": {
+        "input": 23,
+        "output": 188,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-can-i-stop-procrastinating#prose",
+      "family": "everyday:advice:how-can-i-stop-procrastinating",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Make the first step small enough that you can do it even when you don’t feel ready. Instead of “write the report,” try “open the document and write one rough sentence.” Set a timer for five minutes and give yourself permission to stop when it rings. The goal is to practice starting, not to finish everything in one sitting.\n\nIf you still keep putting it off, ask what makes the task hard to start. If it’s unclear, decide what “done” looks like. If you’re worried about doing it badly, make a rough first pass that no one else has to see. If you keep reaching for your phone, put it in another room before you sit down. Addressing the specific obstacle usually helps more than telling yourself to try harder.\n\nPick one thing you’ve been avoiding and decide exactly when you’ll take that first step: “After lunch, I’ll sit at my desk and work on it for five minutes.” If you miss that window, pick another one instead of writing off the day. Getting back to the task is a skill you can practice, too.",
+      "usage": {
+        "input": 38,
+        "output": 222,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:what-are-some-ways-to-reduce-stress#plain",
+      "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "If you’re feeling stressed right now, start small: take a few slow, comfortable breaths, unclench your jaw and shoulders, and ask yourself, “What’s one thing I can do next?” You don’t have to solve everything at once.\n\nA few other things to try:\n\n- **Move a little.** A short walk, some gentle stretching, or dancing to one song can help you reset.\n- **Get it out of your head.** Write down what’s weighing on you. Pick one thing to act on and one thing you can postpone, delegate, or drop.\n- **Talk to someone you trust.** Tell them whether you’d like advice, practical help, or just someone to listen.\n- **Make room for recovery.** Take short breaks before you’re exhausted, keep a regular sleep schedule where possible, and notice whether caffeine makes you feel more on edge.\n- **Address the source when you can.** If the same demand keeps wearing you down, asking for help, setting a boundary, or renegotiating a deadline may do more than another relaxation exercise.\n\nPick one that feels doable today. If stress keeps interfering with sleep, work, or relationships, a healthcare professional or therapist can help you figure out what’s driving it and what support might help.",
+      "usage": {
+        "input": 24,
+        "output": 262,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:what-are-some-ways-to-reduce-stress#prose",
+      "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "When stress spikes, try slowing your breathing for a minute or two, letting each exhale be a little longer than the inhale. A short walk, a stretch, or a few minutes away from your screen can also help you settle enough to decide what to do next.\n\nIf you’re overwhelmed by everything you have to do, write it down and pick one small step you can take now. It can help to ask what can wait, what you can say no to, and what someone else could help with. Talking to a friend can make things feel less isolating, even if they don’t have a solution.\n\nOver time, regular sleep, meals, and movement can make stress easier to manage. Start with one change that fits your day rather than turning stress relief into another chore. If stress is sticking around or interfering with sleep, work, or relationships, consider talking with a healthcare professional or counselor.",
+      "usage": {
+        "input": 39,
+        "output": 184,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#plain",
+      "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Start with walking, then mix in short, easy jogs. Your first goal is to finish feeling like you could do a little more—not to run a mile or hit a certain pace.\n\n1. **Find a comfortable starting point.** Walk for 5–15 minutes, three days a week. If five minutes feels like enough, start there. Build up until a 20-minute walk feels comfortable.\n2. **Try your first run-walk session.** Walk for 5 minutes to warm up. Then jog gently for 20–30 seconds and walk for 90 seconds. Repeat 5 times, then finish with a few minutes of easy walking. Jog slowly enough that you can still speak in full sentences.\n3. **Repeat before you add more.** Leave a rest day between run-walk sessions. Once the same workout feels comfortable for several outings, add one repeat *or* make the jogs a little longer. There’s no need to do both at once.\n\nComfortable shoes and a flat route are enough to get started. Mild muscle soreness can happen, but don’t push through sharp or worsening pain. Stop and seek urgent medical help if you develop chest pain, feel faint, or have severe shortness of breath. If you have a heart or lung condition or already experience symptoms with light activity, ask a clinician before adding jogging.",
+      "usage": {
+        "input": 27,
+        "output": 278,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#prose",
+      "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Start with a 10- to 15-minute walk at a comfortable pace, two or three times a week. If that feels like too much, start with five minutes. For the first week or two, just get used to moving regularly. You don’t need to run on day one.\n\nOnce you can walk briskly for 20 minutes and feel fine the next day, try adding short jogs. Walk for five minutes to warm up, then jog gently for 20 to 30 seconds and walk for two minutes. Repeat that a few times and finish with an easy walk. Keep the jog slow enough that you can still speak in full sentences, and take a day off between runs.\n\nRepeat the same routine until it feels comfortable, then make the jogs a little longer or add one more interval. There’s no rush to run without walking. Some mild muscle soreness is normal, but stop if you get sharp pain, chest pain, feel faint, or have unusual trouble breathing. If you have a heart or lung condition or symptoms when you walk, check with a healthcare professional before adding jogging.",
+      "usage": {
+        "input": 42,
+        "output": 225,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#plain",
+      "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Ask in writing—by email, text, or your landlord’s maintenance portal—so you have a record. Say what’s broken, when it started, and how it’s affecting you. Include a photo if it helps, and ask when someone can come by.\n\n**Template:**\n\n> Hi [Landlord’s name], I’m writing to request a repair in [unit/address]. The [item] has been [describe the problem] since [date]. Could you let me know when someone can come by to fix it? I’m available [times], or we can arrange another time. Thanks, [Your name]\n\nFor an urgent issue like an active leak, call the emergency maintenance number first, then follow up in writing. If a routine request goes unanswered, reply to your original message so the date and details stay in one place.",
+      "usage": {
+        "input": 26,
+        "output": 172,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#prose",
+      "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Ask in writing so you both have a record. Say what needs fixing, when you noticed it, and how it’s affecting you. If a photo would help show the problem, attach one. Ask when someone can come by rather than leaving the timing open-ended.\n\nHi [Landlord’s name], I’m writing about [problem] in my unit at [address or unit number]. I first noticed it on [date], and it’s [briefly explain the impact]. Could you please arrange a repair and let me know when someone can come by? I’m available [times], but I can coordinate another time if needed. Thanks, [Your name].\n\nIf the problem is urgent, say why in the first sentence and call the emergency maintenance number if your building has one. If it’s not urgent and you don’t hear back after a few days, reply to your original message and ask for an update.",
+      "usage": {
+        "input": 41,
+        "output": 186,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-plan-a-budget-wedding#plain",
+      "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "The easiest way to save on a wedding is to **set your spending limit and guest list before you book a venue**. A smaller guest list cuts food, drinks, rentals, and sometimes the venue cost itself.\n\n1. **Set an all-in budget.** Count only money you and any contributors have committed. Set aside about 10% for surprises, and track deposits and final payment dates in a simple spreadsheet.\n2. **Pick two or three priorities.** If what matters most is good food and photos with your family, spend there. Keep invitations, flowers, and favors simple—or skip them.\n3. **Compare venues by total cost, not rental fee.** Ask for a written quote that includes catering minimums, tables and chairs, staffing, cleanup, taxes, and service charges. A restaurant with a private room may cost less than a bare hall once you add rentals.\n4. **Get creative with timing and format.** Price a brunch, Sunday lunch, or off-season date. A courthouse ceremony followed by a restaurant meal can feel special without requiring a full day of vendors.\n5. **Cut whole expenses before trying to DIY them.** Digital invitations, no favors, and a shorter photography package can save more time and money than making dozens of decorations. If you DIY, choose things you can finish well before the wedding.\n\nFor example, if your cap is **$6,000**, reserve **$600** for surprises. If the ceremony, attire, photography, and other fixed costs come to **$1,800**, you have **$3,600** for the reception. For **40 guests**, that’s **$90 per guest all-in** for the space, food, drinks, and fees—a useful number to bring when asking for quotes.\n\nIf you share your approximate budget, guest count, and location, I can help you sketch a realistic budget and decide what to book first.",
+      "usage": {
+        "input": 24,
+        "output": 390,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-plan-a-budget-wedding#prose",
+      "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with what you can comfortably afford, not what a wedding is “supposed” to cost. If family is contributing, confirm how much before you book anything. Decide together what matters most to you, whether that’s a great meal, photos you’ll keep for years, or having everyone you love in the room. Set aside a little of your budget for surprises so a last-minute expense doesn’t throw everything off.\n\nMake a rough guest list before looking at venues. A smaller wedding can save money on food, drinks, rentals, and even the size of the room you need. Compare the total cost of each venue, not just the rental fee: a community hall may look cheaper until you add tables, chairs, linens, and cleanup. If you’re flexible on timing, ask about off-season dates or a Sunday brunch.\n\nKeep the details simple. Digital invitations, an outfit you buy secondhand or off the rack, and a venue that already looks good without much decorating can all save money without making the day feel less special. Track quotes, deposits, and due dates in one place, and ask for an all-in price before signing a contract. Before taking on a DIY project, price the supplies and think about who’ll actually have time to do it in the week before the wedding.",
+      "usage": {
+        "input": 39,
+        "output": 262,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#plain",
+      "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Make reading **easy to start and fun to come back to**. A good first step: let each kid pick something they actually want to read, then spend 10 minutes reading together after dinner or before bed.\n\n- **Follow their interests, not a reading list.** Comics, joke books, sports biographies, and books about their favorite games all count. Let them abandon a book they don’t like.\n- **Keep reading aloud, even after they can read on their own.** Pick a story they’re excited to hear, and don’t turn it into a quiz. Older kids might enjoy listening to an audiobook with you in the car.\n- **Put books where they’ll reach for them.** A few library books by the couch or in the car can get more use than a full bookshelf in another room.\n- **Let them see you reading for pleasure.** During those 10 minutes, pick up something you want to read, too.\n\nIf a child enjoys stories but avoids reading independently, ask what makes it hard. They may need a more appealing book, an easier one, or help with a skill that’s making reading feel like work.\n\nHow old are your kids, and what do they like doing when they get to choose?",
+      "usage": {
+        "input": 26,
+        "output": 254,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#prose",
+      "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+      "genre": "advice",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Make reading easy to start and let your kids choose what counts. Leave a few books where they already hang out, and let them pick what to bring home from the library. Comics, joke books, sports biographies, and rereading an old favorite all count. If a book isn’t clicking, let them drop it and try another.\n\nGive reading a regular spot in the day without turning it into a chore. Ten minutes after dinner or a chapter at bedtime is enough to start. Read aloud even if they can read on their own, or sit nearby with a book of your own. If they like a story, talk about the funny or surprising bits rather than quizzing them on what happened.\n\nIf a child keeps avoiding books, get curious about why. They might be bored by the choices, tired at bedtime, or working so hard to decode the words that they can’t enjoy the story. Try a different topic, an easier book, or an audiobook you can listen to together. If reading itself consistently seems hard, ask their teacher what they’re noticing.",
+      "usage": {
+        "input": 41,
+        "output": 216,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#plain",
+      "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "1. **Wash with warm water and a little dish soap.** Use a sponge or stiff nylon brush. Mild dish soap won’t harm a well-seasoned cast iron pan.\n2. **Loosen stuck-on food.** Simmer a little water in the pan for a few minutes, then scrape gently with a wooden spatula.\n3. **Dry it completely.** Towel it off, then put it over low heat for a minute or two to evaporate any remaining moisture.\n4. **Oil it lightly if it looks dry.** Rub a few drops of neutral cooking oil over the inside, then buff it with a paper towel until the pan looks nearly dry. Too much oil can leave it sticky.\n\nAvoid soaking the pan or putting it in the dishwasher; both can promote rust.",
+      "usage": {
+        "input": 25,
+        "output": 164,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#prose",
+      "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Wash your cast iron pan with warm water and a brush or non-scratch sponge. A little dish soap is fine. If food is stuck, simmer a little water in the pan for a few minutes, then loosen the bits with a wooden spatula. Avoid soaking the pan or putting it in the dishwasher.\n\nDry it right away with a towel, then set it over low heat for a minute or two to evaporate any remaining moisture. If the surface looks dry or dull, rub in a few drops of cooking oil and wipe it off with a paper towel until the pan no longer looks greasy.",
+      "usage": {
+        "input": 40,
+        "output": 123,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-change-a-flat-tyre#plain",
+      "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "**First, get somewhere safe.** Pull as far out of traffic as possible onto firm, level ground. Turn on your hazard lights, set the parking brake, and put the car in Park (or in first gear if it’s a manual). If you can’t get well clear of traffic or the ground is soft or sloped, call roadside assistance rather than trying to change the tyre.\n\n1. **Get the spare, jack, and wheel wrench.** Check your owner’s manual for the correct jacking point and any instructions for the spare. If you have a wheel chock, place it at the wheel diagonally opposite the flat.\n2. **Loosen the wheel nuts before lifting.** Turn each nut anticlockwise about half a turn. Don’t remove them yet.\n3. **Jack up the car.** Position the jack at the specified lifting point and raise the car until the flat tyre just clears the ground. Never put any part of your body under a car supported only by a jack.\n4. **Swap the wheels.** Remove the nuts and pull the flat wheel straight off. Fit the spare and thread the nuts by hand to avoid cross-threading.\n5. **Lower and tighten.** Lower the car until the spare touches the ground and won’t turn. Snug the nuts in a criss-cross pattern, then lower the car fully and remove the jack. Tighten the nuts in the same pattern to the torque specified in the manual. If you don’t have a torque wrench, have the torque checked as soon as possible.\n6. **Check the spare before driving.** Check its pressure if you can. If it’s a temporary spare, follow the speed and distance limits on its label or in the manual, and get the flat tyre repaired or replaced promptly.",
+      "usage": {
+        "input": 24,
+        "output": 367,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-change-a-flat-tyre#prose",
+      "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Pull over somewhere firm, level and well away from traffic. Turn on your hazard lights, set the parking brake and put the car in Park, or in first gear if it’s a manual. If you can’t get far enough from traffic or the ground is soft or sloped, call roadside assistance rather than trying to change the tyre there.\n\nGet the spare, jack and wheel wrench. If you have a wheel chock, place it against the wheel diagonally opposite the flat. Loosen the wheel nuts about half a turn while the tyre is still on the ground. Check your owner’s manual for the correct jacking point, then raise the car until the flat tyre clears the ground. Never put any part of your body under a car supported only by a jack.\n\nRemove the nuts and pull the flat wheel off. Fit the spare and screw the nuts on by hand. Lower the car until the tyre just touches the ground, then tighten the nuts in a criss-cross pattern. Lower the car fully, remove the jack and tighten the nuts to the torque specified in your manual. If you don’t have a torque wrench, have the nuts checked as soon as you can.\n\nIf you’re using a temporary spare, follow the speed and distance limits printed on it or given in the manual, and get the flat tyre repaired or replaced promptly.",
+      "usage": {
+        "input": 39,
+        "output": 273,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-start-a-vegetable-garden#plain",
+      "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start small: a 4-by-4-foot bed or a few containers is enough for your first vegetable garden.\n\n1. **Find a sunny spot.** Most vegetables grow best with at least 6 hours of direct sun. If you get less, start with leafy greens like lettuce or Swiss chard.\n2. **Prepare the soil.** For an in-ground bed, mix compost into the top few inches of soil. For containers, use potting mix and make sure the pots have drainage holes.\n3. **Pick three or four vegetables you like to eat.** Radishes, lettuce, and bush beans are easy to sow directly. For tomatoes, buying a young plant is usually easier than starting from seed.\n4. **Plant at the right time.** Lettuce and radishes prefer cool weather. Wait until after your local last spring frost to plant beans and tomatoes, and follow the seed packet or plant tag for spacing.\n5. **Check the soil regularly.** Water when the top inch feels dry, soaking the soil rather than just wetting the surface. Containers dry out faster than garden beds, so check them daily in hot weather.\n\nAn easy first setup is **a pot of lettuce and radishes in cool weather, followed by bush beans or a patio tomato once it warms up**. If you share your region and whether you’re planting in a yard or in pots, I can suggest what to plant now.",
+      "usage": {
+        "input": 24,
+        "output": 292,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-start-a-vegetable-garden#prose",
+      "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start small. A sunny spot with at least six hours of direct sunlight and easy access to water is ideal. A small garden bed or a few pots with drainage holes is enough for your first season. Mix compost into the soil if you’re planting in the ground, and use potting mix rather than garden soil for containers.\n\nGrow a few vegetables you already like to eat. Lettuce, radishes, and peas are good choices for cool weather, while bush beans and cherry tomatoes do well once it warms up. Check a local planting calendar to see when to start. Beans and radishes are easy to sow directly, while buying a tomato seedling can give you a head start. Follow the spacing directions on the seed packet or plant tag, even if the plants look tiny at first.\n\nKeep the soil evenly moist while seeds sprout and seedlings settle in. Once plants are established, check the soil with your finger and water thoroughly when it feels dry an inch or two down. A thin layer of mulch can help hold in moisture and keep weeds down. Check on the garden every few days, pick vegetables as they ripen, and make a note of what grew well so you know what to plant again.",
+      "usage": {
+        "input": 39,
+        "output": 245,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-learn-a-new-language-fast#plain",
+      "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "The fastest way to learn a language is to **practice the conversations you actually want to have**, rather than trying to learn the whole language at once.\n\n**Start with a goal you can test.** For example: “In four weeks, I want to order food, ask for directions, and have a five-minute conversation about myself.” Then build your practice around those situations.\n\n**Spend 45 minutes a day like this:**\n- **10 minutes — Recall useful phrases.** Try saying “Could you repeat that?” or “I’m looking for…” from memory before checking the answer. Learn phrases you can reuse, not just isolated words.\n- **15 minutes — Listen to something short you mostly understand.** Use a beginner dialogue with a transcript. Listen once without reading, check what you missed, then replay it and say a few lines aloud.\n- **20 minutes — Speak.** Role-play with a tutor or language partner, or record yourself answering a prompt. Ask for feedback on one or two recurring mistakes, then try the same conversation again.\n\nOnce a week, **do a task without notes**: introduce yourself, order a meal in a role-play, or tell someone what you did yesterday. If you get stuck, those missing phrases become next week’s study material.\n\nYou can make noticeable progress in a few weeks on familiar topics. Fluency takes longer, but you don’t need to wait for it to start having real conversations.",
+      "usage": {
+        "input": 25,
+        "output": 294,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-learn-a-new-language-fast#prose",
+      "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Pick one thing you want to do in the language, like order food, chat with a friend, or get through a work call. Learn the phrases you’ll actually need for that situation. Whole phrases are more useful at first than isolated words: “Could you say that again?” helps you keep a conversation going while you’re still learning.\n\nPractice a little every day. Take a short clip with a transcript, listen once, read along, then replay it and say a few lines out loud. Later, try to recall those lines without looking. Spend most of your time on material you can mostly understand, so you can pick up new words from context instead of pausing every few seconds.\n\nStart speaking before you feel ready. Have a short conversation with a tutor or language partner, notice where you get stuck, and learn how to say what you were reaching for. Then try the same conversation again a few days later. Being able to say something you couldn’t say last week is a better measure of progress than how many lessons you’ve finished.",
+      "usage": {
+        "input": 40,
+        "output": 212,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-set-up-a-home-network#plain",
+      "family": "everyday:howto:how-do-i-set-up-a-home-network",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "For most homes, the setup is simple: **internet service → modem or fiber terminal → Wi‑Fi router → your devices**. If your internet provider gave you a gateway (a modem and router in one box), you don’t need a separate router.\n\n1. **Connect the equipment.** If you have a separate router, connect an Ethernet cable from the modem or fiber terminal to the router’s **WAN** or **Internet** port. Turn on the modem or fiber terminal and wait for it to come online, then turn on the router. If you have a gateway, follow your provider’s activation instructions.\n2. **Put the router in a good spot.** Place it centrally, out in the open, and off the floor. Avoid closets and metal cabinets.\n3. **Set up and secure Wi‑Fi.** Use the router’s app or the setup address printed on its label. Choose a network name and a long, unique Wi‑Fi password. Use **WPA3-Personal** if your devices support it, or **WPA2-Personal (AES)** for older devices. Change the router’s admin password if it still uses a default, and enable automatic firmware updates if available.\n4. **Connect your devices.** Join the new Wi‑Fi network on phones and laptops. For devices that stay put, like a desktop or game console, Ethernet to a router **LAN** port is usually more reliable. Set up a guest network if you want visitors to have internet access without access to your other devices.\n5. **Test where you’ll actually use it.** Check the connection near the router and in rooms farther away. If it’s fast nearby but weak in another room, try moving the router before buying anything. If that doesn’t help, consider a mesh system or a wired access point.\n\nIf you’re adding your own router to an ISP gateway, put the new router in **access point mode** if you want the gateway to keep managing the network. If you want your new router to manage it instead, check whether the gateway supports **bridge mode** or **IP passthrough**. This avoids having both boxes act as routers.",
+      "usage": {
+        "input": 25,
+        "output": 443,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-set-up-a-home-network#prose",
+      "family": "everyday:howto:how-do-i-set-up-a-home-network",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "If your internet provider gave you a device that combines a modem and a Wi-Fi router, you can use it on its own. If you have a separate router, connect an Ethernet cable from the modem or fiber box to the router’s port labeled WAN or Internet. Put the router in a central, open spot if you can, rather than in a cabinet or behind a TV.\n\nFollow the router’s setup guide to open its app or settings page. Give your Wi-Fi network a name you’ll recognize and set a strong, unique password. Choose WPA3 security if your devices support it, or WPA2 if they don’t. If the router has a separate administrator password, change it from the default, and turn on automatic firmware updates if available.\n\nConnect your phones, computers, and other devices to the new Wi-Fi network. For devices that stay put, such as a desktop computer or game console, an Ethernet cable to one of the router’s LAN ports can give you a steadier connection. Test the Wi-Fi in the rooms where you’ll use it most. If the signal is weak, try moving the router before buying extra equipment. You can also turn on a guest network so visitors can get online without joining your main network.",
+      "usage": {
+        "input": 40,
+        "output": 251,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-write-a-good-cv#plain",
+      "family": "everyday:howto:how-do-i-write-a-good-cv",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A good CV makes it easy for a hiring manager to see **what you can do, where you’ve done it, and why it matters for this role**. Start with the job description, then put your strongest relevant evidence near the top.\n\n### Use a simple structure\n\n- **Contact details:** Name, email, phone number, city or region, and a LinkedIn or portfolio link if it adds value.\n- **Profile (optional):** Two or three lines about your experience and what you bring to the role. Skip it if it would just say you’re “hardworking and motivated.”\n- **Experience:** List your most recent role first. Include your title, employer, dates, and a few bullets showing what you accomplished.\n- **Education and skills:** Include relevant qualifications, tools, languages, or certifications. If you’re early in your career, relevant coursework, projects, or volunteering can provide evidence just as well as paid work.\n\n### Write bullets that show results\n\nInstead of listing duties, explain what you did and what changed. For example:\n\n> **Vague:** Responsible for weekly sales reports.  \n> **Stronger:** Automated weekly sales reports in Excel, cutting preparation time from three hours to 45 minutes.\n\nUse numbers when you can verify them. If you don’t have metrics, describe the scope or outcome: who used your work, what problem it solved, or what you delivered.\n\n### Tailor it before you send it\n\nPick the three or four most important requirements in the job ad. For each one you meet, check that your CV gives a clear example. Use the employer’s terminology where it accurately describes your experience, and trim details that distract from your strongest evidence.\n\nKeep the layout easy to scan: clear headings, consistent dates, and readable type. For most non-academic roles, one or two pages is a useful target; academic CVs follow different conventions and are typically longer. Follow the employer’s file-format instructions and double-check your contact details, dates, and links.\n\nIf you share the role you’re applying for and a draft with personal details removed, I can help you decide what to highlight and sharpen your bullet points.",
+      "usage": {
+        "input": 24,
+        "output": 440,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-write-a-good-cv#prose",
+      "family": "everyday:howto:how-do-i-write-a-good-cv",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A good CV makes it easy for someone to see why you’re a fit for the role. Read the job description before you write, then give the most space to the experience and skills that match what the employer needs. Put your name and contact details at the top, and present your work experience and education in reverse chronological order. If you’re early in your career, relevant coursework, projects, or volunteering can help show what you can do.\n\nDescribe what you achieved, not just what you were responsible for. Instead of writing “Responsible for onboarding,” try “Created a training guide that helped new hires handle routine support requests independently.” Use numbers when they add useful context and you can back them up. You don’t need a metric for everything; a clear description of what changed because of your work is often enough.\n\nKeep the layout simple, the dates consistent, and the wording direct. Cut details that don’t help the reader assess your fit, and follow any length or file-format instructions in the job posting. Before submitting, check your spelling, contact details, and links. If possible, ask someone to skim the CV and tell you what stood out. If they miss your strongest qualification, move it closer to the top.",
+      "usage": {
+        "input": 39,
+        "output": 248,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-make-sourdough-bread#plain",
+      "family": "everyday:howto:how-do-i-make-sourdough-bread",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "## A simple sourdough loaf\n\nYou’ll need an **active sourdough starter**. Use it when it’s bubbly and has roughly doubled after feeding. If you don’t have one yet, you can get some from a friend or bakery, or grow your own from flour and water.\n\n### Ingredients\n- 500 g bread flour\n- 350 g water\n- 100 g active starter\n- 10 g fine salt\n\n### Steps\n1. **Mix.** Stir the starter into the water, then add the flour and salt. Mix until no dry flour remains. Cover and rest for 30 minutes.\n2. **Fold.** With a damp hand, pull one edge of the dough up and fold it over the center. Turn the bowl and repeat on all four sides. Do three sets of folds, about 30 minutes apart.\n3. **Let it rise.** Keep the dough covered at room temperature until it looks puffy, has bubbles along the sides, and has grown by about half. In a warm kitchen, this often takes 4–6 hours **from mixing**, including the time spent folding. A cooler kitchen can take longer.\n4. **Shape and chill.** Turn the dough onto a lightly floured counter and shape it into a tight round. Place it seam-side up in a bowl lined with a well-floured kitchen towel. Cover and refrigerate for 8–16 hours.\n5. **Bake.** Preheat a Dutch oven at **450°F (230°C)** for 30 minutes. Turn the cold dough onto baking parchment, slash the top with a sharp blade, and lower it into the pot. Bake **25 minutes covered**, then **20–25 minutes uncovered**, until deeply golden brown.\n6. **Cool.** Let the loaf cool on a rack for at least an hour before slicing so the crumb has time to set.\n\n**The best beginner tip:** Watch the dough, not the clock. If it still looks dense after the suggested rise time, give it longer before shaping.",
+      "usage": {
+        "input": 25,
+        "output": 420,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-make-sourdough-bread#prose",
+      "family": "everyday:howto:how-do-i-make-sourdough-bread",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start with an active sourdough starter. Feed it and wait until it’s bubbly and has roughly doubled in size, usually 4 to 8 hours. Mix 100 grams of starter with 350 grams of room-temperature water, then stir in 500 grams of bread flour until no dry patches remain. Let the dough rest for 30 minutes, then work in 10 grams of fine salt with damp hands.\n\nOver the next 2 hours, stretch and fold the dough every 30 minutes: lift one edge, fold it over the center, and repeat on all four sides. Then leave it covered until it looks puffy, has bubbles along the edges, and has grown by about half. That might take 4 to 7 hours total from when you mixed the dough, including the folds. Go by how the dough looks rather than by the clock.\n\nTurn the dough onto a lightly floured counter and shape it into a round by gently pulling it toward you to tighten the surface. Put it seam-side up in a bowl lined with a well-floured kitchen towel, cover it, and refrigerate overnight.\n\nThe next day, preheat a lidded Dutch oven at 450°F (230°C) for about 30 minutes. Turn the cold dough out onto parchment, make a shallow slash across the top with a sharp blade, and carefully lower it into the hot pot. Bake covered for 25 minutes, then uncovered for another 20 to 25 minutes, until the crust is deep golden brown. Let it cool on a rack for at least an hour before slicing so the inside has time to set.",
+      "usage": {
+        "input": 40,
+        "output": 330,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-start-a-podcast#plain",
+      "family": "everyday:howto:how-do-i-start-a-podcast",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by recording a short pilot before you buy gear or design cover art. You’ll learn more from listening to 10 minutes of your own show than from planning 10 episodes.\n\n1. **Define the show in one sentence.** Fill in: “A podcast for ___ that helps them ___.” Then write three episode titles. If those come easily, you have a premise you can build on.\n2. **Choose a format you can sustain.** Solo episodes are easiest to schedule; interviews bring in other perspectives but take more coordination. Pick a realistic cadence, even if it’s just twice a month.\n3. **Record a pilot.** Use your phone or a USB mic in a quiet, furnished room. Make a bullet-point outline, record a short episode, and listen back with headphones. Is the voice clear? Does the opening give listeners a reason to keep going?\n4. **Edit lightly and get feedback.** Trim dead air and distracting mistakes. Send the pilot to two people in your intended audience and ask, “Where did you lose interest?” and “Would you listen to another episode?”\n5. **Publish and share.** Choose a podcast host that generates an RSS feed, upload your first episode and cover art, then submit the feed to directories like Apple Podcasts and Spotify. Share the episode with people who would genuinely find it useful or entertaining.\n\n**Do this today:** Write your one-sentence premise and record a five-minute test. It doesn’t have to be good enough to publish—just good enough to learn from.",
+      "usage": {
+        "input": 23,
+        "output": 314,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:howto:how-do-i-start-a-podcast#prose",
+      "family": "everyday:howto:how-do-i-start-a-podcast",
+      "genre": "howto",
+      "register": "casual",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Start by deciding who your podcast is for and what they’ll get from listening. Try describing it in one sentence: “Each week, I help first-time gardeners figure out what to plant and how to keep it alive.” Then pick a format you can keep up with, whether that’s short solo episodes, interviews, or conversations with a co-host. Sketch out your first three episodes to see if the idea has room to grow.\n\nRecord a short practice episode before buying gear. A phone or a basic USB microphone in a quiet, furnished room is enough to start. Listen back with headphones and check whether your voice is clear, the pace feels natural, and the opening gives people a reason to keep listening. Edit out distractions, but don’t worry about making every sentence perfect.\n\nWhen you’re ready to publish, choose a name, write a short description, and make cover art that’s readable at thumbnail size. A podcast hosting service will store your episodes and give you an RSS feed, which you can submit to apps like Apple Podcasts and Spotify. Share the first episode with a few people who fit your intended audience and ask what held their attention or where they lost interest. Use that feedback to improve the next episode, and choose a publishing schedule you can realistically sustain.",
+      "usage": {
+        "input": 38,
+        "output": 256,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:explain-inflation-in-simple-terms#plain",
+      "family": "everyday:explain:explain-inflation-in-simple-terms",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Inflation means prices are rising overall, so the same amount of money buys less than it used to.\n\nFor example, if a basket of groceries cost $100 last year and the same items cost $105 this year, the price of that basket rose by 5%. Economists measure inflation by tracking a much wider mix of things people buy, such as food, rent, and gas. Not every price has to rise for there to be inflation.\n\nInflation can happen when people want to buy more than businesses can supply, or when it becomes more expensive for businesses to make and deliver things.\n\nOne important distinction: **When inflation slows, prices are usually still going up—just more slowly.**",
+      "usage": {
+        "input": 22,
+        "output": 143,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:explain-inflation-in-simple-terms#prose",
+      "family": "everyday:explain:explain-inflation-in-simple-terms",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Inflation means that prices are rising overall. If a bag of groceries cost $50 last year and the same groceries cost $55 today, you need more money to buy the same things. Another way to put it is that each dollar buys a little less than it used to.\n\nInflation doesn’t mean every price goes up at the same rate. Rent might rise while electronics get cheaper. When people say inflation is 3%, they mean the cost of a typical mix of goods and services rose about 3% over the past year.\n\nPrices can rise when people want to buy more than businesses can supply, or when it gets more expensive for businesses to make and deliver things. And when inflation slows down, that usually doesn’t mean prices fall. It means they’re still rising, just more slowly.",
+      "usage": {
+        "input": 37,
+        "output": 164,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#plain",
+      "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "The main difference is **when you get the tax break**. A traditional IRA may give you a tax deduction now; a Roth IRA gives you tax-free qualified withdrawals later.\n\n| | Traditional IRA | Roth IRA |\n|---|---|---|\n| **Contributions** | May be tax-deductible. Your income and whether you or your spouse has a workplace retirement plan can affect the deduction. | Not tax-deductible. Your income can limit whether you can contribute directly. |\n| **Withdrawals** | Generally taxed as ordinary income, except for amounts attributable to nondeductible contributions. | You can withdraw your direct contributions anytime without tax or penalty. Earnings are tax-free when withdrawal requirements are met. |\n| **Required withdrawals** | Required minimum distributions generally apply once you reach the applicable age. | No required minimum distributions during the original owner's lifetime. |\n\n**Rule of thumb:** If you qualify for the traditional IRA deduction and expect a lower tax rate in retirement, a traditional IRA may be the better fit. If you expect a higher tax rate in retirement or value being able to access your contributions without tax or penalty, a Roth IRA may be more appealing.\n\nYou can contribute to both in the same year if eligible, but they share one annual contribution limit.",
+      "usage": {
+        "input": 29,
+        "output": 259,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#prose",
+      "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "The main difference is when you pay taxes. With a traditional IRA, you may be able to deduct your contributions now, and withdrawals in retirement are generally taxed as income. With a Roth IRA, you contribute money you’ve already paid taxes on, but qualified withdrawals, including investment earnings, are tax-free.\n\nYour income can limit how much you can contribute directly to a Roth IRA. With a traditional IRA, you can generally contribute if you have eligible earned income, but your ability to deduct the contribution can depend on your income and whether you or your spouse is covered by a workplace retirement plan. Traditional IRAs also require you to start taking withdrawals at a certain age; Roth IRAs don’t require withdrawals during the original owner’s lifetime.\n\nA Roth IRA may make more sense if you expect your tax rate to be higher in retirement than it is now. A traditional IRA may make more sense if you can take the deduction today and expect a lower tax rate when you withdraw the money.",
+      "usage": {
+        "input": 44,
+        "output": 199,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:why-is-the-sky-blue#plain",
+      "family": "everyday:explain:why-is-the-sky-blue",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The sky looks blue because air molecules scatter blue light more strongly than red light. Sunlight contains all the colors of the visible spectrum, and as it passes through the atmosphere, scattered blue light reaches your eyes from all directions—not just from where the Sun is.\n\nAt sunrise and sunset, sunlight travels through more atmosphere. More of the blue light is scattered out of the direct path, so the Sun and the sky near it can look orange or red.",
+      "usage": {
+        "input": 22,
+        "output": 93,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:why-is-the-sky-blue#prose",
+      "family": "everyday:explain:why-is-the-sky-blue",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Sunlight looks white, but it contains all the colors of the rainbow. When it enters Earth’s atmosphere, it bumps into tiny molecules in the air, which scatter some of the light in different directions. Blue light scatters much more readily than red light, so when you look away from the Sun, blue light reaches your eyes from all across the sky.\n\nViolet light scatters even more than blue, but our eyes are less sensitive to violet, so the sky looks blue rather than violet.\n\nAt sunrise and sunset, sunlight travels through more air before reaching you. Much of the blue light gets scattered out of that direct path, leaving more reds and oranges in the light you see near the Sun.",
+      "usage": {
+        "input": 37,
+        "output": 144,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-machine-learning#plain",
+      "family": "everyday:explain:what-is-machine-learning",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Machine learning is a branch of artificial intelligence in which computers learn patterns from data rather than relying on hand-written rules for every situation. They use those patterns to make predictions, recognize things, or generate content.\n\nFor example, instead of writing a list of rules for spotting spam, you can train a machine learning model on emails labeled “spam” or “not spam.” The model learns which patterns tend to distinguish the two, then uses them to classify new emails. A good model works well on examples it hasn’t seen before, not just the ones it trained on.",
+      "usage": {
+        "input": 21,
+        "output": 116,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-machine-learning#prose",
+      "family": "everyday:explain:what-is-machine-learning",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Machine learning is a way of getting computers to learn patterns from examples instead of writing a rule for every situation. For instance, rather than listing every clue that an email might be spam, you can train a system on emails labeled “spam” or “not spam” so it learns which clues tend to matter.\n\nDuring training, the system builds a model, which is a mathematical representation of the patterns it finds. The model can then make predictions about new examples it hasn’t seen before. A spam filter, for instance, can use what it learned from past emails to decide where to put a new message.\n\nThe goal is to learn patterns that hold up on new examples, not just to memorize the training data. That’s why models are tested on data they didn’t train on. Even a model that does well in testing can make mistakes, especially when it encounters situations that are very different from its training examples.",
+      "usage": {
+        "input": 36,
+        "output": 185,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:how-does-compound-interest-work#plain",
+      "family": "everyday:explain:how-does-compound-interest-work",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Compound interest is **interest earned on both your original money and the interest you’ve already earned**. That means your balance can grow by a little more each year, even if the interest rate stays the same.\n\nSuppose you deposit **$1,000** at **5% interest, compounded annually**, and leave it untouched:\n\n| Year | Interest earned that year | End-of-year balance |\n|---|---:|---:|\n| 1 | $50.00 | $1,050.00 |\n| 2 | $52.50 | $1,102.50 |\n| 3 | $55.13 | $1,157.63 |\n\nIn year 2, you earn 5% of **$1,050**, not just 5% of the original $1,000. That extra $2.50 is interest on the interest from year 1. With **simple interest**, by contrast, you’d earn $50 each year.\n\nThe same effect can work against you on debt: if unpaid interest is added to what you owe, future interest can be charged on that larger balance.",
+      "usage": {
+        "input": 22,
+        "output": 231,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:how-does-compound-interest-work#prose",
+      "family": "everyday:explain:how-does-compound-interest-work",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Compound interest means you earn interest on both the money you started with and the interest you’ve already earned. When interest is added to your balance, the next round of interest is calculated on that larger amount.\n\nFor example, if you put $1,000 in an account that earns 5% interest each year, you’ll earn $50 in the first year. If you leave that money in the account, you’ll start the second year with $1,050. This time, 5% earns you $52.50, bringing your balance to $1,102.50.\n\nThe longer you leave the money alone, the more those extra earnings can add up. Compounding can also work against you when you borrow: if unpaid interest is added to what you owe, you can end up paying interest on that interest too.",
+      "usage": {
+        "input": 37,
+        "output": 170,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-causes-jet-lag#plain",
+      "family": "everyday:explain:what-causes-jet-lag",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Jet lag happens when you cross time zones faster than your body’s internal clock can adjust. Your surroundings may say it’s bedtime, but your body may still be on your departure city’s schedule. That mismatch can make it hard to sleep at night, stay alert during the day, or feel hungry at local mealtimes.\n\nLight is the main cue that resets your internal clock. Adjusting is often harder after flying east because your body has to shift to an earlier bedtime, which is generally harder than staying up later.",
+      "usage": {
+        "input": 21,
+        "output": 107,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-causes-jet-lag#prose",
+      "family": "everyday:explain:what-causes-jet-lag",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Jet lag happens when you cross time zones faster than your body clock can adjust. You might arrive somewhere at noon while your body still thinks it’s the middle of the night. That mismatch can leave you sleepy during the day, wide awake at bedtime, or hungry at odd hours.\n\nLight is the main cue your body clock uses to stay in sync with the day. After you travel, you’re exposed to daylight and darkness at different times than your body expects. It usually takes several days for your sleep, alertness, and other daily rhythms to adapt.\n\nJet lag tends to be worse when you cross more time zones. Flying east is often harder than flying west because most people find it easier to stay up later than to fall asleep earlier. A long flight can make you tired even if you don’t cross time zones, but that’s travel fatigue rather than jet lag.",
+      "usage": {
+        "input": 36,
+        "output": 177,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:explain-how-vaccines-work#plain",
+      "family": "everyday:explain:explain-how-vaccines-work",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Vaccines train your immune system to recognize a germ before you encounter the real thing.\n\nA vaccine shows your immune system a harmless piece of a germ, a weakened or inactivated version of it, or instructions for your cells to briefly make one of its pieces. Your immune system responds by making **antibodies**, which can help block the germ, and forming **memory cells** that remember what to look for.\n\nIf you encounter the germ later, those memory cells help your immune system respond faster. That can prevent an infection altogether or make the illness less severe. Protection takes time to develop, and some vaccines need more than one dose or a booster to build or restore it.",
+      "usage": {
+        "input": 21,
+        "output": 139,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:explain-how-vaccines-work#prose",
+      "family": "everyday:explain:explain-how-vaccines-work",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Vaccines teach your immune system to recognize a germ before you encounter it. Depending on the vaccine, it might contain a harmless piece of the germ, a weakened or inactivated version of it, or instructions that briefly tell your cells how to make a recognizable piece of it.\n\nYour immune system responds by making antibodies and forming memory cells. If you later encounter the real germ, those defenses can respond much faster. Sometimes that stops an infection from taking hold. Even if you do get infected, the faster response can make you less likely to become seriously ill.\n\nProtection takes time to build and can fade, which is why some vaccines need more than one dose or a booster. A sore arm, tiredness, or a mild fever after vaccination can be signs of your immune system responding, but having no side effects doesn’t mean the vaccine didn’t work.",
+      "usage": {
+        "input": 36,
+        "output": 173,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#plain",
+      "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A **credit score** is a number that estimates how likely you are to repay borrowed money on time. It’s calculated from information in your credit reports, such as your payment history, how much of your available credit you use, and how long you’ve had credit. In the U.S., most commonly used scores range from **300 to 850**.\n\nIt matters because lenders use it, along with factors like your income and existing debt, to decide **whether to approve you for a loan or credit card and what interest rate to offer**. A higher score can help you qualify for a lower rate, which can save you money over the life of a loan.\n\nYou don’t have just one credit score: different scoring models and credit bureaus can produce different numbers. If you’re looking to improve yours, two good places to start are **paying bills on time and keeping credit card balances low relative to your limits**.",
+      "usage": {
+        "input": 27,
+        "output": 190,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#prose",
+      "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+      "genre": "explain",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A credit score is a number that estimates how likely you are to repay money you borrow. It’s based on information in your credit reports, such as whether you pay bills on time, how much of your available credit you use, and how long you’ve had credit accounts. You can have more than one score because different lenders and scoring companies calculate it in different ways.\n\nLenders use credit scores to help decide whether to approve you for a credit card, car loan, or mortgage and what interest rate to offer. A higher score can help you qualify for a lower rate, which can save you money over the life of a loan. Your score isn’t the only thing lenders look at, though. They may also consider your income and how much debt you already have.\n\nPaying on time and keeping credit card balances low relative to your limits can help build or maintain a good score. Checking your own credit score won’t lower it.",
+      "usage": {
+        "input": 42,
+        "output": 190,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "I’m excited to share that I’ve joined **[Company]** as a **Product Manager**!\n\nWhat drew me to product management is the work that happens before anything gets built: listening to customers, figuring out which problems are worth solving, and helping a team make the hard calls about what to do next.\n\nMy first priority is to listen. I’m looking forward to hearing what customers wish were easier, learning how the team works, and understanding the decisions that shaped the product so far.\n\nThank you to everyone who offered advice, made an introduction, or cheered me on along the way. I’m grateful for your support and excited to get to work with the team at [Company].",
+      "usage": {
+        "input": 31,
+        "output": 142,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "I’m excited to share that I’ve started a new role as a product manager!\n\nWhat drew me to product management is the chance to spend time with customers, understand what’s getting in their way, and work with a team to make things better. For now, I’m focused on listening, learning how the team works, and getting to know the people we build for.\n\nI’m grateful to the colleagues and mentors who helped me get here, and to my new teammates for making me feel welcome. I’m looking forward to what we’ll build together.",
+      "usage": {
+        "input": 46,
+        "output": 114,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A year ago, I thought my job as a founder was to have answers. A year in, I think it’s mostly about figuring out which questions are worth answering.\n\nA few lessons I’m taking into year two:\n\n**1. Ask what people do, not what they’d do.** “Would you use this?” is easy to answer politely. “How did you handle this the last time it happened?” tells me what the problem actually costs someone in time, money, or frustration.\n\n**2. Make the next decision smaller.** When I catch myself going in circles, I ask: What could I learn this week that would change my mind? That usually gives me a better next step than another hour of thinking.\n\n**3. Leave room to notice what’s working.** A full calendar can make a week feel productive. The better test is whether I can point to something that got clearer, got simpler, or got into someone’s hands.\n\nI still like having answers. I’m just less attached to having them before I’ve done the work to find out.\n\nIf you’re a founder, what did you learn in year one that you still use today?",
+      "usage": {
+        "input": 31,
+        "output": 238,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A year into being a founder, I’ve changed my mind about what a productive week looks like. Early on, I wanted something to show for every week: a feature shipped, a plan finished, a decision made. Now I think a conversation that convinces me not to build something can be just as valuable. It’s harder to point to, but it can save weeks of work.\n\nI’ve also learned to ask for help before I have a tidy version of the problem. I used to wait until I could explain exactly where I was stuck. By then, I’d often spent days going in circles. Saying “Here’s what I’m seeing, and here’s what I don’t understand yet” has led to better conversations than showing up with a polished explanation.\n\nThe biggest adjustment has been getting comfortable making decisions I might revisit. I don’t need to pretend I’m certain. I do need to be clear about why I’m choosing something, what I expect to happen, and what would make me change my mind.\n\nI’m going into year two with fewer fixed ideas about how things should go, and a better sense of what to pay attention to. I’ll take that trade.",
+      "usage": {
+        "input": 46,
+        "output": 241,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "We shipped **[Project Name]**! 🎉\n\nThis was a big milestone for our team, but what I’m proudest of is how we got there: people asked hard questions early, jumped in when a teammate got stuck, and kept sweating the details even when the finish line was in sight.\n\nThank you to everyone who helped build, test, and launch this—and to the partners who gave us honest feedback along the way. The work is better because of you.\n\nI’m excited to see what **[Project Name]** makes possible for **[customers/users]**. For today, though, I want to pause and give the team its due. You did it.",
+      "usage": {
+        "input": 29,
+        "output": 141,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "We shipped! This was a big project for our team, and I’m proud of what we built together.\n\nWhat stands out to me isn’t just the launch. It’s how people showed up for each other along the way: asking the hard questions early, jumping in when someone hit a roadblock, and taking care of the small details that made the final result better.\n\nTo everyone who helped get this over the line, thank you. I hope you take a moment to enjoy seeing your work out in the world. You earned it.",
+      "usage": {
+        "input": 44,
+        "output": 111,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "I was recently laid off from my role at [Company], and I’m looking for my next opportunity in [field].\n\nI’m proud of the work I did there, especially [a project, accomplishment, or problem you helped solve]. I’ll miss the people I worked with, and I’m grateful for what I learned from them.\n\nI’m looking for [target role or two] positions where I can use my experience in [key skill or specialty] to [the kind of work you’d like to do]. I’m open to [location, remote, or hybrid].\n\nIf you know a team that’s hiring or someone you think I should talk to, I’d appreciate a lead or an introduction. And if we haven’t caught up in a while, I’d love to hear from you.\n\n#OpenToWork",
+      "usage": {
+        "input": 30,
+        "output": 167,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "I was recently laid off, and I’m looking for my next role. It’s tough to say goodbye to work I cared about and people I enjoyed working with. I’m grateful for what we built together and for everything I learned along the way.\n\nFor my next role, I’d love to join a team where I can solve practical problems, learn from my colleagues, and do work that makes a difference for the people using it.\n\nIf you know of an opening that might be a good fit, I’d love to hear from you. A message or an introduction would mean a lot. And if we haven’t talked in a while, I’d be happy to reconnect.",
+      "usage": {
+        "input": 45,
+        "output": 138,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The best design in the room isn’t always the one that gets built. It’s the one people understand well enough to question, improve, and maintain.\n\nThat’s why soft skills matter in engineering.\n\n- **Clear communication** helps a team agree on what “done” means before anyone starts building.\n- **Active listening** helps you catch the constraint a teammate mentioned in passing—the one that changes the design.\n- **Good judgment in disagreement** lets you challenge a proposal without making the person who wrote it feel like they have to defend it.\n- **Empathy** reminds you to leave enough context for the person debugging your code six months from now.\n\nNone of this replaces technical depth. It’s how technical depth becomes useful to people beyond your own desk.\n\nOne habit worth trying: in your next design review, explain not just what you chose, but what would make you change your mind. It gives your teammates a concrete way to help you make the design better.\n\n#Engineering #Communication #Teamwork",
+      "usage": {
+        "input": 29,
+        "output": 204,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The best engineering decision I’ve seen in a meeting wasn’t a clever technical fix. It was someone asking, “What problem are we actually trying to solve?” Two teams had been arguing about implementation for half an hour. It turned out they were working toward different goals.\n\nThat’s why I don’t think of communication, listening, and giving feedback as extras. They’re part of how engineering gets done. A design review goes better when people can disagree without getting defensive. An incident is easier to resolve when someone feels comfortable saying, “I don’t know yet, but here’s what I’ve checked.”\n\nTechnical skill helps us find good answers. The ability to listen, explain our reasoning, and change our minds helps us find those answers together.",
+      "usage": {
+        "input": 44,
+        "output": 152,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#plain",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "I’m excited to share that I’ve earned my **[Certification Name]** from **[Issuing Organization]**!\n\nOne takeaway from the experience: a good analysis starts with a clear question, not a dashboard. Working through practice projects helped me get better at cleaning messy data, spotting patterns, and explaining what the results mean—and what they don’t.\n\nNext, I’m looking forward to applying those skills to real-world problems and sharing some of my work here. If you work in data analytics, I’d love to hear: what’s one skill you wish you’d focused on earlier?\n\n#DataAnalytics #ProfessionalDevelopment #Certification",
+      "usage": {
+        "input": 29,
+        "output": 130,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#prose",
+      "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+      "genre": "linkedin",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "I’m happy to share that I’ve earned a certification in data analytics!\n\nOne of my biggest takeaways was that good analysis starts long before you build a chart. It starts with asking a clear question, checking what the data can actually tell you, and being honest about what’s still uncertain. I also gained practice turning findings into something other people can understand and act on.\n\nI’m looking forward to putting these skills to work on real projects and learning from others in the field. If you work in analytics, I’d love to hear what helped you most when you were starting out.",
+      "usage": {
+        "input": 44,
+        "output": 120,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#plain",
+      "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Subject: Day off request for next Friday\n\nHi [Manager’s Name],\n\nCould I take next Friday, November 27, off? I’ll make sure any time-sensitive work is handled before then.\n\nThanks,  \n[Your Name]",
+      "usage": {
+        "input": 30,
+        "output": 50,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#prose",
+      "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Hi [Manager’s Name],\n\nI’d like to take next Friday, November 27, off. Would that work for the team?\n\nI’ll make sure any urgent work is wrapped up or handed off before I’m out. Thanks for considering my request.\n\nBest,\n[Your Name]",
+      "usage": {
+        "input": 45,
+        "output": 60,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#plain",
+      "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Subject: Project delivery update\n\nHi [Client Name],\n\nI’m writing to let you know that we’ll need one additional week to complete the project. Our revised delivery date is [new date].\n\nI’m sorry for the delay and for any disruption it causes to your plans. I’ll keep you updated on our progress and let you know right away if anything changes. If the new date affects a deadline on your end, please let me know so we can discuss what we can share ahead of delivery.\n\nBest,  \n[Your Name]",
+      "usage": {
+        "input": 31,
+        "output": 110,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#prose",
+      "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Hi [Client Name],\n\nI wanted to let you know that we’ll need one more week to complete the project. The new delivery date is [new date].\n\nI’m sorry for the delay and for any disruption this causes to your plans. I’ll keep you updated on our progress and let you know promptly if anything changes.\n\nThanks for your understanding. If the revised date affects anything on your end, please let me know so we can talk through what would help.\n\nBest,\n[Your Name]",
+      "usage": {
+        "input": 46,
+        "output": 102,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#plain",
+      "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "**Subject:** Thank you for the interview — [Job Title]\n\nHi [Interviewer’s Name],\n\nThank you for taking the time to speak with me about the [Job Title] position. I especially enjoyed hearing about [specific project or topic you discussed]. Our conversation made me even more excited about the role and the opportunity to bring my experience in [relevant skill] to your team.\n\nPlease let me know if I can share any additional information as you make your decision. I look forward to hearing from you.\n\nBest,  \n[Your Name]",
+      "usage": {
+        "input": 26,
+        "output": 113,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#prose",
+      "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Hi [Interviewer’s Name],\n\nThank you for taking the time to speak with me about the [Role] position. I especially enjoyed hearing about [specific topic from the interview]. Our conversation made me even more excited about the opportunity to join your team and bring my experience in [relevant skill or area] to the role.\n\nI’d be happy to share any additional information that would be helpful as you make your decision. Thanks again for your time and consideration. I look forward to hearing from you.\n\nBest,\n[Your Name]",
+      "usage": {
+        "input": 41,
+        "output": 110,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#plain",
+      "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+      "genre": "email",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "**Subject: Security Deposit Return — [Rental Address]**\n\nHi [Landlord’s Name],\n\nI’m writing to follow up on the security deposit for [Rental Address]. I moved out on [Move-Out Date] and returned the keys on [Date].\n\nCould you let me know when I can expect the deposit to be returned? Please send it to the forwarding address below. If any deductions are being made, please include an itemized breakdown.\n\n[Your Name]  \n[Forwarding Address]\n\nThanks for your help,  \n[Your Name]",
+      "usage": {
+        "input": 28,
+        "output": 112,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#prose",
+      "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+      "genre": "email",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Hi [Landlord’s Name],\n\nI’m writing to ask for the return of my security deposit for [rental address]. I moved out on [date] and returned the keys. Could you let me know when I can expect the deposit back?\n\nYou can mail the deposit to [forwarding address]. If you’re withholding any portion, please send me an itemized breakdown of the deductions.\n\nThanks for your help.\n\nBest,\n[Your Name]",
+      "usage": {
+        "input": 43,
+        "output": 93,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#plain",
+      "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "**Subject:** Re: Meeting Invitation\n\nHi [Name],\n\nThank you for inviting me. Unfortunately, I won’t be able to attend. If there’s anything you’d like my input on beforehand, please feel free to send it my way.\n\nI appreciate you thinking of me.\n\nBest,  \n[Your Name]",
+      "usage": {
+        "input": 25,
+        "output": 66,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#prose",
+      "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Hi [Name],\n\nThanks for inviting me. I won’t be able to attend, but I appreciate you thinking of me.\n\nIf there’s anything you’d like my input on beforehand, feel free to send it my way. I hope the meeting goes well.\n\nBest,\n[Your Name]",
+      "usage": {
+        "input": 40,
+        "output": 61,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#plain",
+      "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "**Subject: Hello from your new [Job Title]**\n\nHi team,\n\nI’m [Your Name], and I’m excited to be joining you as [Job Title]. Before coming to [Company], I worked on [brief description of your previous role or experience]. I’m looking forward to bringing that experience to the team and learning how you work together.\n\nA little about me outside of work: I enjoy [hobby or interest]. I’d love to get to know you, so feel free to say hello on [Slack/Teams] or grab a coffee with me sometime.\n\nSee you soon,  \n[Your Name]",
+      "usage": {
+        "input": 26,
+        "output": 128,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#prose",
+      "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+      "genre": "email",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "Hi everyone,\n\nI’m [Your Name], and I’m excited to be joining the team as [Your Role]. A little about me: I’m coming from [Previous Team or Company], where I worked on [Brief Description of Your Work]. I’m looking forward to bringing that experience to this role and learning from all of you.\n\nOver the next few weeks, I’d love to hear what you’re working on and how I can help. If there’s anything you wish you’d known when you first joined, I’d love to hear that, too.\n\nThanks for the warm welcome. I’m looking forward to meeting you all!\n\n[Your Name]",
+      "usage": {
+        "input": 41,
+        "output": 134,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#plain",
+      "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+      "genre": "article",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "# What a Year of Journaling Taught Me\n\nI started journaling because I wanted to remember more of my life. A year later, I’m surprised by what I’m glad I wrote down. It’s not the big decisions I spent pages agonizing over. It’s the evening a friend stayed on the phone while I folded laundry, or the first morning it was warm enough to drink my coffee outside.\n\nReading back also showed me how often I mistook a bad day for a verdict. One Tuesday, I wrote that I was tired of everything. On Wednesday, my entire entry was about a sandwich I’d made with the good bread. The sandwich didn’t solve anything, but I’m glad it made the record.\n\nI missed plenty of days. At first, I’d open the notebook after a week away and feel obliged to explain the gap. Eventually, I learned to skip the apology and start with whatever had happened that morning.\n\nI still don’t write every day. But I notice more while I’m living it. Sometimes, halfway through a perfectly ordinary afternoon, I think: I want to remember this.",
+      "usage": {
+        "input": 36,
+        "output": 228,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#prose",
+      "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+      "genre": "article",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "When I started journaling, I thought I’d end up with a record of the big things that happened that year. Instead, I wrote a lot about being tired, putting off phone calls, and feeling better after going for a walk. The big things are in there too, but the small stuff taught me more about how I actually spend my days.\n\nReading old entries, I noticed how often I’d written “for no reason” after describing a bad mood. Sometimes the reason was right there on the page: I’d skipped lunch, said yes to something I didn’t want to do, or spent all afternoon rehearsing a conversation that took five minutes. I still do those things. I just catch myself a little sooner now.\n\nI also got less precious about what counted as journaling. Some nights I wrote three pages. Other nights I wrote one sentence and went to bed. A year later, I’m glad I kept both kinds of entries. It turns out a sentence like “We ate peaches over the sink” can bring back a whole day I would’ve sworn I’d forgotten.",
+      "usage": {
+        "input": 51,
+        "output": 222,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-first-person-article-about-switching-car#prose",
+      "family": "everyday:article:write-a-first-person-article-about-switching-car",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "At 35, I took my first coding class at the kitchen table after work. I’d spent more than a decade in operations, where people came to me when a shipment went missing or a spreadsheet stopped making sense. Now I was spending an entire evening trying to figure out why a button wouldn’t work. The hardest part wasn’t finding the time to learn. It was going from being someone people asked for help to someone who needed it constantly.\n\nMy first project was a small tool that flagged duplicate orders in a spreadsheet. I built it because checking those orders by hand was a Friday afternoon chore I hated. The first version flagged two legitimate orders from the same customer, which was exactly the kind of mistake I knew to look for from my old job. Fixing it made me realize I wasn’t starting from scratch. I was learning a new way to solve problems I already understood.\n\nThe job search took longer than I’d hoped. In one interview, I blanked on a question about a piece of code I’d written myself. In another, I spent most of the conversation talking about how I’d decide whether a feature was ready for the people who actually had to use it. That was the interview that got me my first tech job. The starting salary was lower than what I’d been making, and I went over the numbers more than once before I said yes.\n\nA few months into the job, a colleague showed me how to fix a bug I’d been staring at all morning. Later that week, she asked me to help her untangle a confusing request from another department. We drew out the process on a whiteboard, and I spotted a handoff nobody had accounted for. It felt good to be useful in a way I recognized. It also felt good, finally, not to mind being the person who asked for help.",
+      "usage": {
+        "input": 45,
+        "output": 372,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#plain",
+      "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "## What I Kept\n\nI thought minimalism would make my apartment look better. Mostly, it made getting out the door easier.\n\nI started with the pile by the front door: shoes I never wore, unopened mail, a tote bag full of smaller tote bags. Once I cleared it, I put a little dish there for my keys. It’s been months since I’ve had to check yesterday’s pants five minutes before leaving.\n\nI still have too many mugs. One has a chipped handle, and another is so big the coffee goes cold before I finish it. I like them both. The longer I do this, the less interested I am in owning the fewest things possible. I’d rather be able to find my keys, make a cup of coffee, and get on with my morning.",
+      "usage": {
+        "input": 30,
+        "output": 164,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#prose",
+      "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "I thought minimalism would start with a dramatic weekend of clearing things out. Instead, it started with my kitchen drawer. I pulled out three spatulas, realized I always reached for the same one, and put the other two in a donation bag. The next morning, I opened the drawer and found what I wanted without having to dig. That small thing felt better than I expected.\n\nI’ve gotten better at noticing what I actually use, but I still keep things that don’t earn their space in any practical way. There’s a chipped mug I could easily replace. It’s also the mug I reach for on slow Saturday mornings, so it stays.\n\nThe biggest change is that I pause before bringing something home. Sometimes I still buy it. Other times I realize I liked it perfectly well on the shelf and don’t need to find a place for it in my life.",
+      "usage": {
+        "input": 45,
+        "output": 178,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#plain",
+      "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+      "genre": "article",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "# A Little Walk Goes a Long Way\n\nA daily walk is one of the simplest ways to feel better. It doesn’t require a gym membership or a change of clothes, and it can fit into a lunch break or the quiet stretch after dinner.\n\nOver time, regular walking can support heart health, build stamina, and help you sleep better. Some benefits are more immediate: a walk can lift your mood, ease stress, or give you space to think away from a screen.\n\nStart with ten minutes at a comfortable pace. Pick a route you enjoy or pair your walk with something you already do, like finishing your morning coffee. You don’t need to hit a step goal. The best walk is one you’ll want to take again tomorrow.",
+      "usage": {
+        "input": 29,
+        "output": 152,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#prose",
+      "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+      "genre": "article",
+      "register": "professional",
+      "variant": "test",
+      "adversarial": false,
+      "text": "A daily walk is a simple way to move more and take a break from whatever’s demanding your attention. You don’t need special gear or a scenic route. A loop around the block or a ten-minute walk at lunch is enough to get started.\n\nOver time, regular walking can support heart health, build stamina, and help you sleep better. It can also give your mood a lift. On a busy day, stepping outside for a few minutes can help you come back to your work feeling a little less scattered.\n\nThe best walk is one that fits into your day. Try walking after dinner, taking an errand on foot, or calling a friend while you stroll. Start with a pace and distance that feel comfortable. It’s easier to keep going when the walk feels like a welcome break rather than another chore.",
+      "usage": {
+        "input": 44,
+        "output": 166,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#plain",
+      "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "# How to Stay Motivated While Learning to Code\n\nLearning to code can feel slow because progress doesn’t always look like a finished project. Sometimes it looks like finally understanding an error message that stumped you yesterday. That counts.\n\n**Build something you want to use.** A quiz for your friends or a script that renames your photos can make practice feel worthwhile. Start with the smallest version that works. A quiz with three questions teaches you more than an ambitious app you never start.\n\n**Give each session one clear goal.** Instead of “learn JavaScript,” try “make this button change the text.” A goal you can finish in 20 minutes makes it easier to sit down and gives you a clear win when you’re done.\n\n**Keep a record of what clicked.** Write down one thing you learned or one bug you fixed. When you feel stuck, look back at your notes. Problems that once took an hour may now take five minutes, and it’s easy to miss that kind of progress.\n\nYou don’t have to feel motivated every time you practice. Before you stop, leave yourself a specific next step. “Check why the score resets” is a much easier place to pick up than “keep learning to code.”",
+      "usage": {
+        "input": 30,
+        "output": 252,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#prose",
+      "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Learning to code is easier to stick with when you have a reason to open your editor. Pick a small project you’d actually use, like a page that tracks the books you’ve read. Start with the simplest version: show one book on the page. Adding a second book tomorrow is a better goal than trying to build an entire app tonight.\n\nOn days when you’re stuck, make the task smaller. Instead of “fix this bug,” try “figure out why this button does nothing.” Even if you don’t solve it, write down what you ruled out and what you’ll try next. That note makes it easier to come back, and it reminds you that debugging counts as progress.\n\nDon’t let a missed day turn into a reason to quit. A routine you can return to matters more than a perfect streak. Every so often, revisit something you built a few weeks ago. A line of code you once had to look up might now make sense at a glance. That’s progress you can see.",
+      "usage": {
+        "input": 45,
+        "output": 205,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#plain",
+      "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The first time I traveled alone, I ate dinner at 5:15 because I was too nervous to walk into a busy restaurant and ask for a table for one.\n\nThe waiter didn’t blink. He sat me by the window, brought me a little basket of bread, and went back to folding napkins. I’d spent half the afternoon worrying about a conversation that lasted four seconds.\n\nThe next morning, I missed my bus. At home, this would have put me in a terrible mood. But the next one wasn’t coming for forty minutes, and there was a bakery across the street, so I bought a pastry I couldn’t pronounce and ate it on a bench. I still remember the powdered sugar all down the front of my shirt. I couldn’t tell you what I’d been in such a hurry to see.\n\nThere were moments I wished I’d brought someone. I took a picture of a dog asleep in a bookstore window and sent it to my sister, who replied, “That’s you in every museum.” I laughed out loud on the sidewalk. A woman passing me smiled, probably assuming I was on the phone.\n\nOn my last night, I went back to the same restaurant at eight. The window table was taken, so I sat at the bar. I ordered dessert without doing that thing where I ask if anyone else wants to split it first.\n\nI’d go alone again. I’d also bring my sister. Mostly, I’m glad I know I don’t have to wait for her to get time off.",
+      "usage": {
+        "input": 29,
+        "output": 311,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#prose",
+      "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "The first time I traveled alone, I nearly called my sister from the airport just to ask what she thought I should have for lunch. I’d spent weeks worrying about missing a train or losing my passport. I hadn’t thought about how strange it would feel to make a hundred tiny decisions without someone beside me saying, “Yeah, that sounds good.”\n\nMy first night, I ate dinner too early in a nearly empty restaurant. I kept picking up my phone, even though nobody had texted. The next morning, I went out for coffee and ended up at a flea market, where I spent an hour looking through old postcards. I bought one someone had written but never mailed. By the time I left, I realized I hadn’t checked the time once. Usually I’m the person asking everyone if they’re ready to go.\n\nI still got lonely. One evening I saw a dog refuse to cross the street until its owner picked it up, and I wished my sister had been there to see it. I called her later and told her about the dog and the postcard. She asked what I was doing the next day. I said I didn’t know yet, and for the first time on the trip, that felt like a good answer.",
+      "usage": {
+        "input": 44,
+        "output": 252,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#plain",
+      "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Bring a warm, natural touch to your kitchen with this bamboo cutting board. The smooth surface is ideal for chopping vegetables, slicing fruit, or mincing herbs, and the natural bamboo grain looks right at home on the table when you’re serving cheese and crackers.\n\nHand-wash with mild soap and dry promptly. Avoid soaking or putting it in the dishwasher.",
+      "usage": {
+        "input": 26,
+        "output": 74,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#prose",
+      "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Slice fruit, chop vegetables, or serve cheese and crackers on this bamboo cutting board. Its smooth surface gives you a sturdy place to prep ingredients, while the warm tones and natural grain look right at home on the table.\n\nFor everyday care, wash it by hand with warm, soapy water and dry it promptly. An occasional coat of food-grade mineral oil can help keep the bamboo from drying out.",
+      "usage": {
+        "input": 41,
+        "output": 83,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-a-short-description-for-a-meditation-app#plain",
+      "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Take a moment to breathe. Explore guided meditations, simple breathing exercises, and soothing sleep sounds. Whether you have two minutes or twenty, find a practice that fits your day.",
+      "usage": {
+        "input": 25,
+        "output": 39,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-a-short-description-for-a-meditation-app#prose",
+      "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "Take a few minutes to slow down and breathe. With guided meditations, simple breathing exercises, and gentle wind-down sessions, this app makes it easy to find a quiet moment in your day.\n\nStart with a five-minute break or settle in for a longer session before bed. Whether you’re new to meditation or coming back to it, you can go at your own pace.",
+      "usage": {
+        "input": 40,
+        "output": 78,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#plain",
+      "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "We’re open! ☕ Come grab a coffee, find your favorite seat, and make yourself at home. We can’t wait to learn your usual. 🤎\n\n📍 [Coffee Shop Name] · [Address]",
+      "usage": {
+        "input": 27,
+        "output": 48,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#prose",
+      "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "We’re opening our doors! Come by for a good cup of coffee, a little break in your day, and a chance to say hello to the folks behind the counter.\n\nBring a friend or swing by on your own. Order your usual, try something new, or grab a seat and stay awhile. We can’t wait to meet you. ☕",
+      "usage": {
+        "input": 42,
+        "output": 74,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#plain",
+      "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "## About Our Bakery\n\nWe’re a small neighborhood bakery with a soft spot for crusty bread, buttery pastries, and the kind of cookies that rarely make it all the way home.\n\nWe bake in small batches, making the everyday favorites you come back for and leaving a little room for something new. Whether you’re picking up a loaf for dinner, bringing a box of treats to a friend, or just stopping in for a moment to yourself, we’re glad you’re here.\n\nCome on in and see what’s fresh from the oven.",
+      "usage": {
+        "input": 26,
+        "output": 111,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#prose",
+      "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+      "genre": "product",
+      "register": "marketing",
+      "variant": "test",
+      "adversarial": false,
+      "text": "We’re a small neighborhood bakery with a soft spot for crusty bread, flaky pastries, and cookies with chewy centers. We bake in small batches throughout the morning, so there’s always something coming out of the oven.\n\nOur menu changes with the seasons, but you’ll usually find a few familiar favorites alongside whatever we’re excited to bake that week. Some days that’s a berry galette; other days it’s a loaf we’ve been tinkering with until the crust is just right.\n\nStop by for a loaf to take home or a pastry to eat on the way. We’re happy to tell you what just came out of the oven.",
+      "usage": {
+        "input": 41,
+        "output": 132,
+        "reasoning": 0
+      }
+    },
+    {
+      "id": "everyday:article:write-a-first-person-article-about-switching-car#plain",
+      "family": "everyday:article:write-a-first-person-article-about-switching-car",
+      "genre": "article",
+      "register": "professional",
+      "variant": "dev",
+      "adversarial": false,
+      "text": "# I Switched Careers Into Tech at 35. The Hardest Part Was Being New Again.\n\nOn my first morning as a junior developer, I spent forty minutes trying to get the company’s app to run on my laptop. Then I spent another twenty deciding whether I’d been stuck long enough to ask for help.\n\nIn my old job in operations, people came to me when something broke. I knew which spreadsheet was lying, which supplier would pick up before eight, and which “quick question” meant I should cancel lunch. Now I was composing a message that said, essentially, *I followed the instructions and nothing happened.* I rewrote it three times.\n\nMy teammate replied in two minutes. The instructions were out of date.\n\n## I didn’t quit my job and spend six months finding myself\n\nI had rent. I had a modest savings account that I wanted to keep modestly intact. So I started with a free programming course after work and gave myself permission to stop if I hated it.\n\nSome nights, I did hate it. I once lost an entire Thursday to a missing bracket. But I liked the feeling of making something I could actually use. One of my first projects was a script that cleaned up a weekly report at work. It saved me about fifteen minutes, which was less time than I’d spent explaining to my partner why it wasn’t working. The next week, though, I got those fifteen minutes back. And the week after that.\n\nThat little script told me more about whether I’d enjoy the work than any number of videos about becoming a developer. I liked taking an annoying task apart, figuring out which bits needed to happen in what order, and making the whole thing a little less annoying.\n\n## My old career wasn’t a detour\n\nAt first, I wrote my résumé as if I’d sprung into existence the day I learned JavaScript. My projects went at the top; nearly a decade of work got squeezed into a few lines at the bottom. I thought hiring managers wanted proof that I was technical, so I hid most of the evidence that I knew how to work.\n\nIn the interview that led to my first offer, the hiring manager asked how I handled vague requests. I told her about a manager who’d asked for a “better inventory report.” After watching him use the old one, I realized he didn’t need more data. He needed to know, before he placed an order on Fridays, which items were about to run out.\n\nWe spent more time talking about that report than we did about my portfolio. Months later, on the job, I caught myself doing the same thing: asking a colleague to show me what she did on a Tuesday morning instead of asking her to describe the feature she wanted. I was still slow at reading unfamiliar code. I was already good at that conversation.\n\n## Being a beginner got less embarrassing\n\nThere were real trade-offs. I took a pay cut. I had less say over my work. It was strange to be the person who needed a walkthrough after years of being the person who gave one. What helped wasn’t becoming fearless about asking questions. It was getting better at asking them: *Here’s what I expected. Here’s what happened. Here’s what I’ve tried.*\n\nA few months in, another new developer messaged me because she couldn’t get the app to run. I recognized the error. I sent her the fix, then opened the setup guide and corrected the instructions I’d stumbled over on my first day.\n\nIt wasn’t a big technical achievement. But I remember how pleased I was to make that edit. I’d spent so much time wondering when I’d stop being the new person that I hadn’t noticed I’d already become someone who could make the next person’s first morning easier.",
+      "usage": {
+        "input": 30,
+        "output": 764,
+        "reasoning": 0
+      },
+      "note": "first try spent all 600 tokens on reasoning and came back empty; answered on a second try with max_completion_tokens 1500"
+    }
+  ],
+  "modelVersion": "gpt-6.2-sol"
+}

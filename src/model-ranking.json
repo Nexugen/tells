@@ -1,0 +1,271 @@
+{
+ "date": "2026-11-19",
+ "tellsVersion": "0.4.2",
+ "models": [
+  {
+   "label": "Gemini 4 Hydrogen",
+   "provider": "Google",
+   "n": 17,
+   "withWarning": {
+    "v": 58.8,
+    "lo": 35.3,
+    "hi": 82.4
+   },
+   "per100": {
+    "v": 1.85,
+    "lo": 1.12,
+    "hi": 2.44
+   },
+   "score": {
+    "v": 0.6,
+    "lo": 0.3,
+    "hi": 1.1
+   },
+   "machineLike": {
+    "v": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "nScored": 17,
+   "top": [
+    {
+     "id": "bold-label-list",
+     "name": "Bold-label bullets",
+     "share": 53
+    },
+    {
+     "id": "listicle-intro",
+     "name": "List announcement",
+     "share": 18
+    },
+    {
+     "id": "ai-vocabulary",
+     "name": "AI vocabulary",
+     "share": 12
+    },
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 12
+    },
+    {
+     "id": "exclamation",
+     "name": "Exclamation mark",
+     "share": 6
+    }
+   ]
+  },
+  {
+   "label": "Claude Sonnet 5.5",
+   "provider": "Anthropic",
+   "n": 108,
+   "withWarning": {
+    "v": 56.5,
+    "lo": 47.2,
+    "hi": 65.7
+   },
+   "per100": {
+    "v": 1.2,
+    "lo": 0.89,
+    "hi": 1.54
+   },
+   "score": {
+    "v": 0.5,
+    "lo": 0,
+    "hi": 1.4
+   },
+   "machineLike": {
+    "v": 99.1,
+    "lo": 97.2,
+    "hi": 100
+   },
+   "nScored": 107,
+   "top": [
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 16
+    },
+    {
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 16
+    },
+    {
+     "id": "bold-label-list",
+     "name": "Bold-label bullets",
+     "share": 15
+    },
+    {
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
+     "share": 6
+    },
+    {
+     "id": "fragment-triad",
+     "name": "Three-fragment sentence",
+     "share": 6
+    }
+   ]
+  },
+  {
+   "label": "Claude Haiku 5.5",
+   "provider": "Anthropic",
+   "n": 108,
+   "withWarning": {
+    "v": 50,
+    "lo": 40.7,
+    "hi": 59.3
+   },
+   "per100": {
+    "v": 1.13,
+    "lo": 0.82,
+    "hi": 1.46
+   },
+   "score": {
+    "v": 1.3,
+    "lo": 0.2,
+    "hi": 2.8
+   },
+   "machineLike": {
+    "v": 98.1,
+    "lo": 95.3,
+    "hi": 100
+   },
+   "nScored": 107,
+   "top": [
+    {
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 23
+    },
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 14
+    },
+    {
+     "id": "bold-label-list",
+     "name": "Bold-label bullets",
+     "share": 11
+    },
+    {
+     "id": "whether-youre",
+     "name": "\"Whether you're a X or a Y\"",
+     "share": 7
+    },
+    {
+     "id": "chatbot-closer",
+     "name": "Chatbot closer",
+     "share": 6
+    }
+   ]
+  },
+  {
+   "label": "Claude Opus 5.5",
+   "provider": "Anthropic",
+   "n": 108,
+   "withWarning": {
+    "v": 56.5,
+    "lo": 47.2,
+    "hi": 65.7
+   },
+   "per100": {
+    "v": 1.01,
+    "lo": 0.73,
+    "hi": 1.35
+   },
+   "score": {
+    "v": 0.6,
+    "lo": 0.2,
+    "hi": 1.1
+   },
+   "machineLike": {
+    "v": 99.1,
+    "lo": 97.2,
+    "hi": 100
+   },
+   "nScored": 108,
+   "top": [
+    {
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 21
+    },
+    {
+     "id": "bold-label-list",
+     "name": "Bold-label bullets",
+     "share": 13
+    },
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 10
+    },
+    {
+     "id": "hashtag",
+     "name": "Hashtags",
+     "share": 7
+    },
+    {
+     "id": "listicle-intro",
+     "name": "List announcement",
+     "share": 6
+    }
+   ]
+  },
+  {
+   "label": "GPT-6.2 Sol",
+   "provider": "OpenAI",
+   "n": 108,
+   "withWarning": {
+    "v": 31.5,
+    "lo": 23.1,
+    "hi": 40.7
+   },
+   "per100": {
+    "v": 0.74,
+    "lo": 0.51,
+    "hi": 0.99
+   },
+   "score": {
+    "v": 10,
+    "lo": 5.9,
+    "hi": 15
+   },
+   "machineLike": {
+    "v": 86,
+    "lo": 79,
+    "hi": 92
+   },
+   "nScored": 100,
+   "top": [
+    {
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 16
+    },
+    {
+     "id": "bold-lead",
+     "name": "Bold lead-ins",
+     "share": 13
+    },
+    {
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
+     "share": 5
+    },
+    {
+     "id": "hashtag",
+     "name": "Hashtags",
+     "share": 2
+    },
+    {
+     "id": "whether-youre",
+     "name": "\"Whether you're a X or a Y\"",
+     "share": 2
+    }
+   ]
+  }
+ ]
+}

@@ -391,7 +391,8 @@ console.log(result.findings, result.human.missing);</code></pre>
   <div class="fig"><b>${B.freshAuc}</b><span>AUC of the human-pattern score, same set</span></div>
   <div class="fig"><b>${B.testFlagged}</b><span>of ${B.testHuman} human texts in the locked test split got a warning or error</span></div>
 </div>
-<p class="muted">Limits: texts under 60 words are judged by the rules alone, every model tested was a Claude model, and answers from prompts that asked the model to write like a person were caught about ${B.adversarialFlagged} of the time. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Method, data and per-source results</a>.</p>
+<p>How do Claude, GPT and Gemini compare? See <a href="/models">the tells model ranking</a>: the same everyday requests, answered by each model and checked by tells.</p>
+<p class="muted">Limits: texts under 60 words are judged by the rules alone, most model answers in the benchmark come from Claude, and answers from prompts that asked the model to write like a person were caught about ${B.adversarialFlagged} of the time. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Method, data and per-source results</a>.</p>
 
 <h2>API</h2>
 <pre><code>curl -s https://tells.nexugen.app/v1/lint -d '{"text":"Great question! It is robust."}'

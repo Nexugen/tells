@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import type { AddressInfo } from 'node:net';
@@ -271,5 +271,33 @@ test('use-case page copy passes tells, and each listed habit fires on that page\
     assert.ok(u.habits.length >= 4 && u.habits.length <= 6, u.path);
     const sample = lint(u.sample, { register: u.register });
     assert.ok(sample.findings.length >= 3, `${u.path} sample shows findings`);
+  }
+});
+
+test('the model ranking page is served, indexable, in the sitemap, linked from home, and its copy passes tells', async () => {
+  const { modelsCopy } = await import('../src/server/models-page.ts');
+  const { lint } = await import('../src/lint.ts');
+  const ranking = JSON.parse(readFileSync(new URL('../src/model-ranking.json', import.meta.url), 'utf8')) as { models: { label: string; n: number }[] };
+  const s = await setup();
+  try {
+    const res = await fetch(`${s.url}/models`);
+    assert.equal(res.status, 200);
+    const html = await res.text();
+    assert.ok(html.includes('<link rel="canonical" href="https://tells.nexugen.app/models">'));
+    assert.ok(html.includes('meta name="description"') && !/noindex/.test(html));
+    assert.ok(!html.includes('—'), 'no em dash');
+    assert.ok(!/linter/i.test(html), 'tells is not called a linter');
+    assert.ok(ranking.models.length >= 5);
+    for (const m of ranking.models) assert.ok(html.includes(m.label) && m.n > 0, m.label);
+    assert.ok((await (await fetch(`${s.url}/sitemap.xml`)).text()).includes('<loc>https://tells.nexugen.app/models</loc>'));
+    assert.ok((await (await fetch(`${s.url}/`)).text()).includes('href="/models"'));
+  } finally {
+    s.close();
+  }
+  const copy = modelsCopy();
+  assert.ok(!/—/.test(copy));
+  for (const register of ['auto', 'professional'] as const) {
+    const bad = lint(copy, { register }).findings.filter((f) => f.severity !== 'info');
+    assert.deepEqual(bad.map((f) => `${f.ruleId}: ${copy.slice(f.start, f.end)}`), [], `/models copy (${register})`);
   }
 });

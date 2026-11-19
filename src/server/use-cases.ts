@@ -280,9 +280,9 @@ ${pageScript(opts)}
 </html>`;
 }
 
-/** sitemap.xml for the home page and every use-case page. */
+/** sitemap.xml for the home page, every use-case page and the model ranking. */
 export function sitemapXml(site: string): string {
-  const urls = ['/', ...USE_CASES.map((u) => u.path)];
+  const urls = ['/', ...USE_CASES.map((u) => u.path), '/models'];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((p) => `  <url><loc>${site}${p}</loc></url>`).join('\n')}

@@ -1,0 +1,375 @@
+{
+ "name": "openai-gpt-6-luna",
+ "provider": "openai",
+ "model": "gpt-6-luna",
+ "system": "You are a helpful assistant.",
+ "createdAt": "2026-11-19T06:18:08.591Z",
+ "costUsd": 0.004541,
+ "items": [
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Moving abroad is easier when you treat it as a project with deadlines. The details vary by destination, so confirm requirements with that country’s official government sources and your own government’s travel advice.\n\n### 1. Confirm you can live and work there\n- Research visa or residency options, eligibility, fees, processing times, and work rights.\n- Check rules for bringing a spouse, children, or pets.\n- Don’t make irreversible plans until you understand the visa timeline and conditions.\n\n### 2. Organize important documents\nCheck whether you’ll need a passport with enough validity, birth or marriage certificates, diplomas, medical and vaccination records, and police or background checks. Find out if documents need certified translations, notarization, or an apostille. Keep secure digital copies and carry essential originals separately.\n\n### 3. Plan your finances\n- Estimate upfront costs and several months of living expenses.\n- Check how you’ll access money, open a local bank account, and transfer funds.\n- Learn about taxes in both countries, pension or retirement arrangements, and whether you’ll need to file tax returns back home.\n- Keep an emergency fund and a way to access it if your cards or phone stop working.\n\n### 4. Sort out healthcare and insurance\nResearch the local healthcare system, eligibility and enrollment rules, prescription availability, and whether your current medications are legal there. Arrange appropriate health or travel insurance for the transition period, and get copies of key medical records.\n\n### 5. Find housing and understand daily life\nLearn typical rents, deposits, utilities, transport, local costs, and neighborhood safety. If possible, arrange temporary accommodation first and inspect long-term housing in person. Research phone service, internet, driving rules, and how to get around.\n\n### 6. Handle work, school, and practical logistics\nConfirm employment terms and work authorization. If you have children, look into school enrollment and records. Decide what to sell, store, or ship; check customs rules before sending belongings. Arrange pet vaccinations, permits, and transport well in advance.\n\n### 7. Prepare for the transition\nLearn basic local phrases and customs, join reputable community groups, and make a plan for staying in touch with people at home. Before leaving, update your address where needed, manage subscriptions and bills, and set up secure access to your email, banking, and two-factor authentication abroad.\n\n### A simple timeline\n- **Several months ahead:** visa, job, finances, documents, healthcare, schools or pets.\n- **One to two months ahead:** housing, shipping, insurance, banking, and appointments.\n- **Final weeks:** confirm bookings, pack documents and essentials, and share your itinerary with someone you trust.\n- **First week there:** register with local authorities if required, arrange a SIM and transport, confirm healthcare access, and locate your country’s embassy or consulate.\n\nA destination-specific checklist can catch important differences—especially around visas, taxes, healthcare, and customs.",
+   "usage": {
+    "input": 27,
+    "output": 681,
+    "reasoning": 75
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-moving-to-a-new-country",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Start by researching the country’s immigration rules and confirming what visa or residence permit you need. Check how long applications take and what documents are required, such as birth or marriage certificates, educational records, or police clearances. Keep copies of important documents in secure digital storage and bring any originals you may need. If you’re moving for work or study, confirm the terms, start date, and any requirements with your employer or school.\n\nMake a realistic budget for the move and your first few months, including travel, housing deposits, insurance, taxes, and everyday expenses. Compare banking options and learn how you’ll access money when you arrive. Arrange temporary or permanent housing, and decide what to bring, sell, store, or ship. Check customs rules before sending belongings, especially for medication, food, pets, or valuable items.\n\nLook into healthcare, required vaccinations, prescription rules, and whether you need health insurance before you arrive. Find out how to stay connected, such as setting up a phone plan or eSIM, and learn how local transport works. Research everyday customs, laws, language basics, and how to register for services such as utilities or local identification. If you have children or pets, plan their schooling, travel, and paperwork well in advance.\n\nBefore leaving, notify relevant banks, insurers, government agencies, and service providers, and make a plan for mail and important accounts. Keep a small arrival fund and copies of key contacts and documents accessible during travel. Give yourself time to adjust: practical tasks, language, and social connections can take longer than expected, so having a flexible plan and someone to contact for help can make the transition easier.",
+   "usage": {
+    "input": 42,
+    "output": 381,
+    "reasoning": 42
+   }
+  },
+  {
+   "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#plain",
+   "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Congratulations on the new job! A few things can make the first week easier:\n\n- **Learn what success looks like.** Ask your manager what they’d like you to focus on in your first 30–90 days and what’s most important this week.\n- **Take notes.** Write down names, processes, tools, and questions so you don’t have to rely on memory.\n- **Ask questions early.** It’s normal not to know how things work yet. Try grouping non-urgent questions so you’re not interrupting constantly.\n- **Meet people and learn how they work.** A friendly introduction and a little curiosity go a long way. Notice who handles what and how the team communicates.\n- **Understand the basics.** Find out about schedules, communication norms, decision-making, and where to go for help.\n- **Don’t rush to prove yourself.** Listen, observe, and check your understanding before making big changes or commitments.\n- **Keep your manager in the loop.** Share what you’ve learned, flag blockers, and ask for feedback—especially if priorities are unclear.\n- **Be patient with yourself.** Feeling a bit overwhelmed is common; settling in takes time.",
+   "usage": {
+    "input": 29,
+    "output": 284,
+    "reasoning": 32
+   }
+  },
+  {
+   "id": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job#prose",
+   "family": "everyday:advice:give-me-some-tips-for-my-first-week-at-a-new-job",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "In your first week, focus on learning how things work rather than proving you can do everything at once. Pay attention to how your team communicates, what people consider urgent, and where to find key information. It’s completely normal to ask questions, especially if you’ve tried to find the answer first.\n\nKeep brief notes on names, processes, tools, and follow-up tasks. When someone explains something important, repeat back your understanding or ask what a good result should look like. This can prevent misunderstandings and show that you’re listening.\n\nMake an effort to get to know your coworkers, but don’t feel you need to impress everyone immediately. Be friendly, reliable, and curious, and follow through on small commitments. At the end of each day, take a few minutes to note what you learned and what you want to clarify next.",
+   "usage": {
+    "input": 44,
+    "output": 195,
+    "reasoning": 19
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-get-better-sleep#plain",
+   "family": "everyday:advice:how-can-i-get-better-sleep",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A few habits make a real difference for many people:\n\n- **Keep a steady schedule:** Go to bed and wake up at roughly the same time every day, including weekends. Most adults need **7–9 hours**.\n- **Get daylight and movement:** Spend time outside in the morning and be physically active during the day. Avoid strenuous exercise right before bed if it keeps you alert.\n- **Cut off stimulants:** Try avoiding caffeine for at least **8 hours before bed**; some people need longer. Nicotine can also interfere with sleep.\n- **Go easy on alcohol and late meals:** Alcohol may make you drowsy but often disrupts sleep later in the night. Avoid heavy meals close to bedtime.\n- **Make the room sleep-friendly:** Keep it dark, quiet, and comfortably cool. Put screens away or dim them during the last part of the evening.\n- **Create a wind-down routine:** Do something relaxing for 20–30 minutes, such as reading, a warm shower, or calm breathing.\n- **If you can’t sleep, don’t force it:** If you’re awake and frustrated for a while, get up and do something quiet in dim light. Return to bed when sleepy. Try to keep the bed associated with sleep rather than scrolling or working.\n- **Use naps thoughtfully:** If naps make nighttime sleep harder, skip them or keep them short and early in the afternoon.\n\nIf sleep problems happen **three or more nights a week for several months**, ask a healthcare professional about **cognitive behavioral therapy for insomnia (CBT-I)**, which is often the first-choice treatment. Seek advice sooner if you snore loudly, gasp or choke during sleep, feel dangerously sleepy during the day, or have another symptom that concerns you.",
+   "usage": {
+    "input": 23,
+    "output": 468,
+    "reasoning": 103
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-get-better-sleep#prose",
+   "family": "everyday:advice:how-can-i-get-better-sleep",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Try to keep the same wake-up time every day, including weekends. Get some natural light and movement during the day, especially in the morning, and give yourself a calm wind-down period before bed. A quiet, dark, cool bedroom can also make it easier to sleep.\n\nAvoid caffeine late in the day, and know that alcohol may make you sleepy at first but can disrupt sleep later in the night. If you nap, keep it brief and earlier in the day. In bed, try not to watch the clock; if you’re awake and getting frustrated, get up for a quiet activity in dim light and return when you feel sleepy.\n\nIf poor sleep continues for several weeks or affects your daytime functioning, talk with a healthcare professional. Persistent insomnia, loud snoring or gasping during sleep, and strong urges to move your legs at night can have treatable causes.",
+   "usage": {
+    "input": 38,
+    "output": 235,
+    "reasoning": 52
+   }
+  },
+  {
+   "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#plain",
+   "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Adopting a dog can be wonderful, but it’s a long-term commitment—often **10–15 years or more**. Before you decide, consider:\n\n### Your time and routine\nDogs need daily feeding, exercise, attention, and training. Puppies and some newly adopted dogs may also need frequent bathroom breaks and close supervision. Think about work hours, travel, and who will care for the dog when you’re away.\n\n### The ongoing cost\nBudget for food, routine vet care, vaccinations, parasite prevention, grooming, supplies, training, boarding or pet sitting, and emergencies. Pet insurance or an emergency savings fund can help with unexpected veterinary bills.\n\n### The dog that fits your life\nMatch on **energy level, adult size, temperament, grooming needs, and health—not appearance alone**. A high-energy dog may need substantial exercise and enrichment; a shy or reactive dog may need a quieter home and extra training. Adult dogs can be a good option if you want a clearer sense of size and personality, though they still need time to settle in.\n\n### Your home and household\nCheck your lease, insurance rules, and local regulations. Consider allergies, children, roommates, other pets, stairs, yard access, and whether everyone in the household is ready to participate in care. A fenced yard doesn’t replace walks or companionship.\n\n### Training and adjustment\nA newly adopted dog may need days or weeks to decompress and longer to feel fully at home. Be patient, keep the first few weeks predictable, and use reward-based training. Ask about any known fears, separation issues, bite history, or behavior around children and other animals.\n\n### Health and adoption details\nAsk the shelter or rescue about the dog’s medical records, vaccines, spay/neuter status, medications, behavior assessment, known history, and any return or post-adoption support. Arrange a vet visit soon after adoption. If adopting a puppy, ask about expected adult size, vaccination schedule, socialization, and the time required for house-training.\n\n### Before bringing the dog home\nHave food, bowls, a leash and properly fitted collar or harness, ID tag, bed, safe toys, waste bags, and a secure place for the dog to rest. Plan how you’ll introduce them to people and pets, and decide in advance who handles daily care and expenses.\n\nA useful final test: **Would your household still be able to care for this dog if your schedule, housing, or finances changed?** If you’re unsure, fostering first can help you learn what dog ownership is like.",
+   "usage": {
+    "input": 25,
+    "output": 589,
+    "reasoning": 67
+   }
+  },
+  {
+   "id": "everyday:advice:what-should-i-know-before-adopting-a-dog#prose",
+   "family": "everyday:advice:what-should-i-know-before-adopting-a-dog",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Adopting a dog is a long-term commitment, often lasting 10–15 years or more. Dogs need daily attention, exercise, companionship, training, and routine veterinary care. Think honestly about your schedule, travel, housing, energy level, and who will care for the dog if your circumstances change. The costs go beyond the adoption fee and food: plan for preventive care, medications, grooming, supplies, training, boarding, and unexpected medical bills.\n\nChoose a dog whose needs and temperament fit your life, rather than focusing only on appearance or age. Ask the shelter or rescue about the dog’s behavior, health, history, comfort around children or other animals, and any known fears or training needs. A puppy may require intensive supervision and house-training, while an adult dog’s habits may be more established; either can be a good match. If you already have pets, ask how introductions should be handled.\n\nBefore bringing a dog home, make sure everyone in the household agrees and understands their role. Check that your housing allows dogs, prepare a safe space, and get basic supplies such as a suitable leash, collar or harness, food and water bowls, and a bed. Arrange a veterinary appointment soon after adoption, and ask for the dog’s medical records and guidance on vaccinations, parasite prevention, identification, and spaying or neutering.\n\nGive the dog time to settle in. A new home can be overwhelming, and behavior may change as the dog becomes more comfortable. Keep early routines calm and predictable, use patient, reward-based training, and supervise interactions with people and animals. Ask the shelter, rescue, veterinarian, or a qualified trainer for help if you’re unsure how to manage a health or behavior concern.",
+   "usage": {
+    "input": 40,
+    "output": 400,
+    "reasoning": 47
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#plain",
+   "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Living paycheck to paycheck makes saving hard—it isn’t a failure of willpower. Start with a small cushion, and first make sure the plan doesn’t leave you short on essentials.\n\n1. **Get a clear picture of one pay cycle.** Write down take-home pay, bills and due dates, and what you need for food, transport, medication, and other essentials. A notes app is enough.\n2. **Choose a tiny, realistic first goal.** Even $5 or $10 per paycheck counts. If that would mean missing a bill or using a credit card for necessities, don’t force it yet.\n3. **Move it on payday.** Put the amount in a separate, easy-to-access savings account—or set an automatic transfer. Make it small enough that you can keep it up.\n4. **Build a starter buffer.** Aim first for $100, then perhaps one week of essential expenses. Use it for genuine surprises, and refill it when you can.\n5. **Look for breathing room without cutting essentials.** Check for unused subscriptions, ask providers about lower rates or hardship plans, and see whether you qualify for food, housing, utility, or other assistance. If your budget is still short after essentials, the issue may be income or costs—not your spending habits.\n\nIf you have overdue bills, overdraft fees, or high-interest debt, prioritize keeping housing, utilities, food, and transport covered; a small emergency cushion can help prevent another costly setback. If you share your approximate take-home pay, pay schedule, and main bills, I can help sketch a realistic plan.",
+   "usage": {
+    "input": 29,
+    "output": 532,
+    "reasoning": 200
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck#prose",
+   "family": "everyday:advice:how-do-i-start-saving-money-when-i-live-paycheck",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Living paycheck to paycheck can make saving feel impossible, so start with an amount small enough that it won’t leave you short— even $5 or $10 from each paycheck counts. If you can, move it to a separate savings account on payday, before it gets mixed in with spending money. The first goal can simply be a small cushion for an unexpected expense, rather than a big savings target.\n\nFor a couple of weeks, note what comes in and what goes out, including small purchases and bills that come only occasionally. This can help you spot a change that feels manageable, such as adjusting one subscription or setting aside a little each paycheck for an upcoming bill. If there’s no room to cut spending, that isn’t a personal failure; your income and essential costs may simply be too tight right now.\n\nTry to avoid saving so much that you have to borrow it back before payday. Consistency matters more than the amount, and you can increase it later when your situation allows. If you’re regularly short on essentials, look into local food, housing, utility, or benefits assistance; freeing up money for basic needs can be the first step toward building savings.",
+   "usage": {
+    "input": 44,
+    "output": 318,
+    "reasoning": 76
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#plain",
+   "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "A productive work-from-home day usually comes from making work easier to start—and easier to stop.\n\n- **Set a simple start routine.** Get dressed, make coffee, or take a short walk; use the same cue to begin work each day.\n- **Choose your priorities early.** Write down the one to three outcomes that matter most today, then tackle the hardest one during your highest-energy hours.\n- **Time-block focused work.** Reserve a few distraction-free blocks for demanding tasks. Batch email and messages instead of checking them constantly.\n- **Create a work zone.** It doesn’t need to be a separate room, but a consistent, comfortable spot can help your brain switch into work mode.\n- **Make distractions harder.** Silence nonessential notifications, keep your phone out of reach, and tell people at home when you’re unavailable.\n- **Take real breaks.** Step away from your screen, move around, and eat away from your desk when possible. Short breaks can help you sustain focus.\n- **Stay connected deliberately.** Use brief check-ins or ask questions early rather than losing time to confusion or isolation.\n- **End the workday on purpose.** Note what you finished, identify tomorrow’s first task, and close your work apps. This helps prevent work from spreading into the evening.\n\nTry these for a week and keep the few habits that make the biggest difference for your role and energy.",
+   "usage": {
+    "input": 26,
+    "output": 357,
+    "reasoning": 62
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-be-more-productive-working-from-home#prose",
+   "family": "everyday:advice:how-can-i-be-more-productive-working-from-home",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Set a consistent start and finish time, and begin the day by choosing the few tasks that matter most. Break bigger tasks into smaller steps, and work on one thing at a time. Short, focused work periods with brief breaks can make it easier to stay engaged.\n\nCreate a workspace that helps you focus, even if it’s just a particular chair or clear spot at the table. Keep distractions out of reach where you can, and let the people you live with know when you need uninterrupted time. If messages and email keep pulling your attention away, check them at set times rather than constantly.\n\nTake real breaks, move around, and make time for lunch away from your workspace. At the end of the day, note what you finished and what you’ll start with tomorrow, then close your work tabs or put away your equipment. A clear stopping routine helps work feel more manageable and protects your time off.",
+   "usage": {
+    "input": 41,
+    "output": 214,
+    "reasoning": 25
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#plain",
+   "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Dealing with a difficult coworker usually works best when you focus on specific behavior and its impact—not on labeling the person.\n\n1. **Get clear on the problem.** What are they doing, how often, and how does it affect your work? Separate observable facts from assumptions about their motives.\n2. **Address it directly if it feels safe.** Choose a calm, private moment and be specific:  \n   *“When the project changes are made without telling me, I can’t keep my part on schedule. Could you loop me in before making changes?”*\n3. **Set practical boundaries.** Keep communication professional, clarify responsibilities and deadlines in writing, and avoid getting pulled into gossip or arguments.\n4. **Keep a factual record** if the behavior continues: dates, what happened, who was present, and the work impact. Save relevant messages, following your workplace’s policies.\n5. **Escalate when needed.** If a direct conversation doesn’t help—or the behavior involves bullying, discrimination, retaliation, threats, or safety concerns—talk with your manager, HR, or another appropriate resource. Bring examples and say what outcome you’re seeking.\n\nYou don’t have to solve their personality; aim to protect your work and make expectations clear. If you share what they’re doing and whether you’ve already tried addressing it, I can help you plan what to say.",
+   "usage": {
+    "input": 26,
+    "output": 329,
+    "reasoning": 41
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-deal-with-a-difficult-coworker#prose",
+   "family": "everyday:advice:how-do-i-deal-with-a-difficult-coworker",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Try to focus on specific behaviors rather than labeling the person as difficult. Notice what happens, how it affects your work, and what you’d like to change. When it feels safe and appropriate, talk privately and calmly: describe the behavior, explain its impact, and make a clear request. For example, “When priorities change without telling me, I miss deadlines. Could you let me know when a change comes up?”\n\nKeep communication professional and brief, especially if conversations tend to become tense. Set reasonable boundaries, confirm important agreements in writing, and keep a factual record of repeated incidents. You don’t need to win every disagreement; focus on what’s needed to get the work done.\n\nIf the behavior continues, affects your ability to work, or involves bullying or discrimination, speak with your manager or HR. Share concrete examples and explain what support or change you’re seeking. In the meantime, look after your own stress and get perspective from someone you trust without turning the situation into workplace gossip.",
+   "usage": {
+    "input": 41,
+    "output": 246,
+    "reasoning": 39
+   }
+  },
+  {
+   "id": "everyday:advice:tips-for-a-long-haul-flight#plain",
+   "family": "everyday:advice:tips-for-a-long-haul-flight",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Here are a few ways to make a long-haul flight easier:\n\n**Before you go**\n- Wear loose, comfortable layers; cabins can feel chilly.\n- Pack essentials in your personal item: medication, toothbrush, wipes, lip balm, moisturizer, headphones, chargers, and a change of underwear or shirt.\n- Download films, music, podcasts, books, and your airline’s app before leaving.\n- If you can choose a seat, an aisle makes it easier to get up; a window is better for leaning against and avoiding interruptions.\n- Set your watch to the destination’s time zone and start shifting your sleep schedule a little beforehand if practical.\n\n**On the flight**\n- Drink water regularly, and go easy on alcohol and caffeine—they can disrupt sleep and leave you feeling worse.\n- Get up and walk when you can. While seated, flex your ankles and move your legs now and then.\n- Use an eye mask, earplugs or noise-cancelling headphones, and a neck pillow if they help you rest.\n- Bring snacks you enjoy, since meal timing and options can be unpredictable.\n- Keep valuables and anything you’ll need during the flight within reach, but out of the aisle.\n\n**After landing**\n- Get daylight and follow local meal and sleep times to adjust to the new time zone.\n- Give yourself a little time to stretch and move around after the flight.\n\nIf you have a history of blood clots, significant circulation problems, or another relevant medical condition, ask a clinician whether you need extra precautions for the flight.",
+   "usage": {
+    "input": 24,
+    "output": 383,
+    "reasoning": 64
+   }
+  },
+  {
+   "id": "everyday:advice:tips-for-a-long-haul-flight#prose",
+   "family": "everyday:advice:tips-for-a-long-haul-flight",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Wear comfortable, loose layers and shoes that are easy to slip off. Cabin temperatures can vary, so bring a warm layer and a sleep mask, earplugs or noise-canceling headphones. Keep essentials such as medication, a toothbrush, lip balm and a change of underwear in your personal item in case your checked bag is delayed.\n\nDrink water regularly, and go easy on alcohol and excess caffeine, which can leave you feeling more dehydrated or make it harder to sleep. Get up to stretch or walk when it’s safe, and move your ankles and legs while seated. Compression socks may help with swelling on especially long flights; ask a clinician whether they’re right for you if you have health concerns.\n\nSet your watch to your destination’s time and try to eat and sleep in line with it. A short nap can help, but avoid sleeping through the whole flight if it would make adjusting harder. Download entertainment, music or podcasts beforehand, and bring a snack you know you’ll enjoy. A refillable water bottle is handy once you’re through security.",
+   "usage": {
+    "input": 39,
+    "output": 241,
+    "reasoning": 21
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-make-friends-as-an-adult#plain",
+   "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Making friends as an adult is often less about finding “your people” instantly and more about creating **repeated, low-pressure chances to get to know the same people**.\n\n- **Start with places you’ll return to:** a weekly class, sports league, volunteering, book club, choir, hobby group, or regular meetup. Repetition makes conversation easier.\n- **Use the connections you already have:** reach out to a coworker, neighbor, acquaintance, or an old friend. A simple “Want to grab coffee sometime?” is enough.\n- **Make small invitations:** after chatting a few times, try something specific: “I’m getting lunch after class—want to come?” Specific plans are easier to say yes to than “We should hang out.”\n- **Follow up and be consistent:** send a message after meeting, suggest another plan, and show up regularly. Closeness usually grows through ordinary time together, not one perfect conversation.\n- **Let it be a little awkward:** many people are glad someone else made the first move, even if they seem shy or busy. If someone declines, you can try once more later; if they don’t reciprocate, put your energy elsewhere.\n\nA manageable goal could be: **join one recurring activity and invite one person to do something each week for a month.** You don’t need to become instantly outgoing—you just need to give connection enough chances to develop.",
+   "usage": {
+    "input": 25,
+    "output": 366,
+    "reasoning": 72
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-make-friends-as-an-adult#prose",
+   "family": "everyday:advice:how-do-i-make-friends-as-an-adult",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Making friends as an adult often takes more intention than it did at school, because you may not see the same people every day. Start by choosing activities you genuinely enjoy—like a class, sports group, volunteer shift, book club, or regular community event—and show up consistently. Familiarity gives conversations room to grow.\n\nWhen you meet someone you like, make a small, specific invitation rather than waiting for them to suggest something: “Want to get coffee after this?” or “Would you like to go for a walk next weekend?” It’s normal for a few invitations not to turn into a friendship, so try not to treat a no or a slow reply as a verdict on you.\n\nFriendship usually builds through small steps: remembering details, checking in, sharing a little about yourself, and making time again. Aim for mutual interest rather than trying to impress someone. It can feel awkward at first, but many adults are hoping to make friends too and are relieved when someone else takes the initiative.",
+   "usage": {
+    "input": 40,
+    "output": 248,
+    "reasoning": 39
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A good interview preparation plan has five parts:\n\n1. **Understand the role**\n   - Read the job description closely and note the skills and responsibilities that come up most.\n   - Prepare examples that show you can do those things.\n\n2. **Research the employer**\n   - Learn what the organization does, who it serves, and any recent news or priorities.\n   - Think about why the role and organization interest you.\n\n3. **Practice your answers**\n   - Prepare a brief introduction covering your background, strengths, and what you’re looking for.\n   - Rehearse common questions such as “Why this role?”, “What’s a strength you bring?”, and “Tell me about a challenge you handled.”\n   - For experience-based questions, use **STAR**: describe the **Situation**, **Task**, **Action**, and **Result**. Keep examples specific and honest.\n\n4. **Prepare questions for them**\n   - Ask about the role’s priorities, how success is measured, the team, or what the first few months might look like.\n   - Avoid asking questions you could easily answer from the employer’s website.\n\n5. **Sort out the practical details**\n   - Choose professional, role-appropriate clothes.\n   - Confirm the time, location or video link, interviewer’s name, and travel or technology setup.\n   - Bring copies of your résumé if it’s in person. For a virtual interview, test your camera, microphone, and internet beforehand.\n\nOn the day, arrive or sign in a little early, listen carefully, and take a moment to think before answering. Afterward, send a brief thank-you note that refers to something you discussed and restates your interest.",
+   "usage": {
+    "input": 25,
+    "output": 382,
+    "reasoning": 34
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Research the organization, the role, and the people you’ll meet. Review the job description and think about how your experience matches its main needs. Prepare a few examples that show what you’ve accomplished, how you handle challenges, and what you learned. Use specific details where you can, such as the results of a project or the size of a team you worked with.\n\nPractice answering common questions aloud, especially “Tell me about yourself,” “Why do you want this job?” and questions about your strengths or challenges. Keep your answers focused, and connect them to the role. Prepare a few thoughtful questions for the interviewer about the work, the team, or what success looks like.\n\nBefore the interview, confirm the time, location or video link, and who you’ll be meeting. Choose appropriate clothing, allow extra time for travel or test your video and audio, and bring anything you may need. Afterward, send a brief thank-you message that refers to something you discussed and reiterates your interest.",
+   "usage": {
+    "input": 40,
+    "output": 250,
+    "reasoning": 41
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#plain",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Procrastination is often less about laziness and more about a task feeling unclear, unpleasant, overwhelming, or risky. Try this simple approach:\n\n1. **Make the next step tiny and specific.** Instead of “work on the report,” write “open the document and draft three rough bullet points.”\n2. **Commit to just five minutes.** You’re allowed to stop when the timer ends. Starting is often the hardest part.\n3. **Choose a start time and place.** “At 9:00, at my desk, I’ll work on the first paragraph” is more useful than “I’ll do it later.”\n4. **Reduce friction and distractions.** Put the materials you need within reach; silence notifications or block distracting sites for one short work session.\n5. **Aim for a rough first version.** You can improve imperfect work; you can’t improve a blank page.\n6. **Notice what you’re avoiding.** If the task feels stressful, confusing, or boring, address that directly—ask for clarification, break it down further, or plan a small reward afterward.\n\nFor right now, pick one task and write down the **smallest visible action** you can take. Then do it for five minutes.\n\nIf procrastination is seriously affecting your life despite trying strategies, it may be connected to stress, anxiety, depression, ADHD, or another issue; a clinician can help you figure out what’s behind it.",
+   "usage": {
+    "input": 23,
+    "output": 377,
+    "reasoning": 75
+   }
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#prose",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Procrastination often comes from feeling overwhelmed, unsure where to start, or worried about doing a task badly. Instead of waiting to feel motivated, make the next step very small and specific: open the document, write one rough sentence, or spend five minutes gathering what you need. Starting is often easier when you’re not asking yourself to finish everything at once.\n\nSet a short timer and work only until it ends. Put your phone out of reach, close unrelated tabs, and make the task easier to begin by preparing what you need beforehand. If the task feels vague, define what “done for now” would look like. A small, clear target can turn a looming project into something manageable.\n\nNotice what you’re feeling when you avoid the task, without judging yourself. If you’re anxious, aim for an imperfect first draft; if you’re tired, take a real break and choose a smaller step. When you slip, restart with the next small action rather than trying to make up for lost time. Regular, modest progress is more useful than waiting for the perfect burst of motivation.",
+   "usage": {
+    "input": 38,
+    "output": 282,
+    "reasoning": 56
+   }
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#plain",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Here are some practical ways to reduce stress:\n\n- **Slow your breathing:** Inhale gently for 4 seconds, then exhale for 6 seconds. Repeat for a minute or two.\n- **Move a little:** Take a short walk, stretch, or do another activity you enjoy. Even a few minutes can help you reset.\n- **Break things into smaller steps:** Write down what’s on your mind, choose one manageable next action, and focus on that.\n- **Take a brief screen or task break:** Step outside, get some water, or look away from your screen for a few minutes.\n- **Protect basics:** Regular meals, enough sleep, and less caffeine—especially later in the day—can make stress easier to handle.\n- **Talk to someone:** Sharing what’s bothering you with a trusted person can help you feel less alone and see options more clearly.\n- **Set a boundary:** If possible, say no, ask for help, or postpone something that isn’t urgent.\n\nFor a quick reset, try naming **five things you see, four things you feel, and three things you hear**. If stress is persistent, overwhelming, or disrupting daily life, consider talking with a health professional.",
+   "usage": {
+    "input": 24,
+    "output": 326,
+    "reasoning": 72
+   }
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#prose",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Slow your breathing for a minute or two: inhale gently through your nose, then exhale a little more slowly. A short walk, stretching, or stepping outside can also help release tension and give your mind a break.\n\nIf stress is coming from a lot of demands, choose one small next step rather than trying to solve everything at once. Taking brief breaks, getting enough sleep, and limiting caffeine or constant news and notifications may also make stress easier to manage.\n\nTalking with someone you trust can help you feel less alone and sort through what’s weighing on you. If stress is persistent, interfering with daily life, or feels overwhelming, consider speaking with a health professional.",
+   "usage": {
+    "input": 39,
+    "output": 193,
+    "reasoning": 51
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#plain",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Start by **walking, then add short, easy jogs**. You don’t need to be fit first.\n\n### A simple first two weeks\nDo this **3 times a week**, with a rest day between sessions:\n\n1. Walk easily for 5 minutes.\n2. Alternate **1 minute of gentle jogging with 2 minutes of walking**, 6–8 times.\n3. Walk easily for 5 minutes to cool down.\n\nJog slowly enough that you could speak in short sentences. If that feels too hard, shorten the jogs or walk the whole time. Each week, you can gradually add a little jogging and reduce the walking—there’s no need to rush toward continuous running.\n\n### A few helpful basics\n- Wear comfortable shoes and choose a flat, familiar route.\n- Take rest days; walking on other days is fine.\n- Stop if you feel sharp or worsening pain, dizziness, chest pain, or unusual shortness of breath. Ordinary muscle tiredness is different from pain that changes how you move.\n- If you have a medical condition, have been inactive for a long time, or are unsure whether exercise is safe for you, check with a healthcare professional first.\n\nThe best pace is one you can repeat consistently. A short, easy session counts.",
+   "usage": {
+    "input": 27,
+    "output": 355,
+    "reasoning": 90
+   }
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#prose",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Start by making walking a habit. Walk at a comfortable pace for 20–30 minutes a few times a week, and gradually add time if it feels manageable. If you have a health condition, have been told to limit exercise, or are unsure whether running is safe for you, check with a healthcare professional first.\n\nWhen walking feels comfortable, try alternating short periods of easy jogging with walking—for example, jog for one minute, then walk for two minutes, and repeat for about 20 minutes. Do this two or three times a week, with a rest day between sessions. Keep the jog slow enough that you could speak in short sentences, and add running time gradually rather than trying to go farther or faster each time.\n\nWear comfortable shoes, choose a safe route, and begin each session with a few minutes of easy walking. Some muscle tiredness is normal, but stop if you feel sharp pain, dizziness, chest pain, or unusual shortness of breath. The best pace is one that lets you finish feeling like you could have done a little more.",
+   "usage": {
+    "input": 42,
+    "output": 280,
+    "reasoning": 59
+   }
+  }
+ ],
+ "modelVersion": "gpt-6-luna"
+}

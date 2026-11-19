@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { anthropic, claudeCli, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
 import { landingPage, SITE } from './page.ts';
 import { USE_CASES, useCasePage, sitemapXml, robotsTxt } from './use-cases.ts';
+import { MODELS_PATH, modelsPage } from './models-page.ts';
 import { BADGE_SVG } from './badge.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
@@ -94,7 +95,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   const pageOpts = { rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites };
   const page = landingPage(pageOpts);
   /** Server-rendered HTML pages by path: the home page and one page per kind of writing. */
-  const pages = new Map<string, string>([['/', page], ...USE_CASES.map((u): [string, string] => [u.path, useCasePage(u, pageOpts)])]);
+  const pages = new Map<string, string>([['/', page], ...USE_CASES.map((u): [string, string] => [u.path, useCasePage(u, pageOpts)]), [MODELS_PATH, modelsPage()]]);
   const textFiles = new Map<string, { type: string; body: string }>([
     ['/sitemap.xml', { type: 'application/xml; charset=utf-8', body: sitemapXml(SITE) }],
     ['/robots.txt', { type: 'text/plain; charset=utf-8', body: robotsTxt(SITE) }],
@@ -184,7 +185,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       name: 'tells',
       about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['GET /', ...USE_CASES.map((u) => `GET ${u.path}`), 'GET /sitemap.xml', 'GET /robots.txt', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', ...USE_CASES.map((u) => `GET ${u.path}`), 'GET /models', 'GET /sitemap.xml', 'GET /robots.txt', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
       voice: 'POST /v1/voice with {"samples": [...]} returns a voice profile; nothing is stored. Pass it back as "voice" to /v1/rewrite or /v1/voice/match.',
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),

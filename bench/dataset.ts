@@ -107,7 +107,11 @@ export function loadAll(): Sample[] {
   // Plain chat-assistant answers to everyday requests: the dev half trains, the test half is the regression set (bench/everyday.ts).
   const dev = new Set((existsSync(join(here, 'everyday', 'prompts.json')) ? JSON.parse(readFileSync(join(here, 'everyday', 'prompts.json'), 'utf8')).prompts : []).filter((p: { variant: string }) => p.variant === 'dev').map((p: { id: string }) => p.id));
   const everyday = modelSets(join(here, 'everyday', 'out'), false).filter((s) => dev.has(s.id.slice(s.id.indexOf(':') + 1))).map((s) => ({ ...s, source: 'claude-everyday', split: 'train' as Split }));
-  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...topic, ...everyday, ...spent];
+  // The same everyday requests answered by other providers' models (bench/models/out): the dev half trains, the test half is held out (bench/models/rank.ts).
+  // Off by default: trained in, they raised human false warnings on the locked test split (3 to 5 of 2,552) and did not
+  // raise detection on held-out GPT answers (EVAL.md, "Other providers"). TELLS_TRAIN_OTHERS=1 turns them on to try again.
+  const others = process.env.TELLS_TRAIN_OTHERS !== '1' ? [] : modelSets(join(here, 'models', 'out'), false).filter((s) => dev.has(s.id.slice(s.id.indexOf(':') + 1))).map((s) => ({ ...s, source: `${s.model!.startsWith('gemini') ? 'gemini' : s.model!.startsWith('gpt') ? 'openai' : 'other'}-everyday`, split: 'train' as Split }));
+  const all = [...v1Human(), ...v2Human(), ...modelSets(join(here, 'out'), true), ...modelSets(join(here, 'out-v2'), false), ...topic, ...everyday, ...others, ...spent];
   // Drop exact duplicates and texts too short to judge.
   const seen = new Set<string>();
   return all.filter((s) => {
