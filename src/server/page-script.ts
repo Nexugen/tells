@@ -39,7 +39,7 @@ export function pageScript(opts: PageOpts, o: { home?: boolean } = {}): string {
     if (n) {
       num.textContent = n > 9 ? '9+' : n;
       $('headline').textContent = n === 1 ? '1 thing gives this away' : n + ' things give this away';
-      $('sub').textContent = 'Tap a marked phrase to see why, and what to write instead.';
+      $('sub').textContent = (low && !short ? 'Overall it also reads machine-made. ' : (short ? '' : 'Apart from these, it reads like a person. ')) + 'Tap a marked phrase to see why, and what to write instead.';
     } else if (low && !short) {
       num.className = 'num soft'; num.textContent = '?';
       $('headline').textContent = 'This reads a little machine-made';

@@ -99,7 +99,7 @@ export async function callTool(name: string, args: Record<string, unknown>, back
       ...(r.voice ? { styleMatch: { before: (r.voice as { before: { score: number } }).before.score, after: (r.voice as { after: { score: number } }).after.score } } : {}),
       ...(r.kept ? { note: String(r.kept) } : {}),
     };
-    const head = changes.length ? `Changed ${changes.length} ${changes.length === 1 ? 'sentence' : 'sentences'}.` : r.voice ? 'Rewritten in the voice.' : 'Nothing needed changing.';
+    const head = changes.length ? `Changed ${changes.length} ${changes.length === 1 ? 'sentence' : 'sentences'}.` : r.voice ? 'Rewritten in the voice.' : 'No sentence had a specific habit to fix, so the text is unchanged. If check_text said it reads machine-like overall, the fix is in the whole draft: rewrite it yourself with the writer\'s own specifics (names, numbers, what happened), plainer structure and uneven sentence lengths, or build_voice from their samples and call fix_text with that voice.';
     return { content: [{ type: 'text', text: `${head}${out.placeholders.length ? ` Fill in: ${out.placeholders.join(', ')}.` : ''}\n\n${r.text}` }], structuredContent: out };
   }
   if (name === 'build_voice') {
