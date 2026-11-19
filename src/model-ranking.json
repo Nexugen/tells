@@ -1,42 +1,42 @@
 {
  "date": "2026-11-19",
- "tellsVersion": "0.4.2",
+ "tellsVersion": "0.5.0",
  "models": [
   {
    "label": "Gemini 4 Hydrogen (API)",
    "provider": "Google",
-   "n": 17,
+   "n": 26,
    "withWarning": {
-    "v": 58.8,
-    "lo": 35.3,
-    "hi": 82.4
+    "v": 61.5,
+    "lo": 42.3,
+    "hi": 80.8
    },
    "per100": {
-    "v": 1.85,
-    "lo": 1.12,
+    "v": 1.86,
+    "lo": 1.2,
     "hi": 2.44
    },
    "score": {
-    "v": 0.6,
-    "lo": 0.3,
-    "hi": 1.1
+    "v": 6.7,
+    "lo": 2.1,
+    "hi": 13
    },
    "machineLike": {
-    "v": 100,
-    "lo": 100,
-    "hi": 100
+    "v": 84.6,
+    "lo": 69.2,
+    "hi": 96.2
    },
-   "nScored": 17,
+   "nScored": 26,
    "top": [
     {
      "id": "bold-label-list",
      "name": "Bold-label bullets",
-     "share": 53
+     "share": 42
     },
     {
-     "id": "listicle-intro",
-     "name": "List announcement",
-     "share": 18
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 19
     },
     {
      "id": "ai-vocabulary",
@@ -49,9 +49,9 @@
      "share": 12
     },
     {
-     "id": "exclamation",
-     "name": "Exclamation mark",
-     "share": 6
+     "id": "listicle-intro",
+     "name": "List announcement",
+     "share": 12
     }
    ]
   },
