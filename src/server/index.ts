@@ -159,6 +159,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     try {
       const u = (JSON.parse(readFileSync(cfg.usageFile, 'utf8')) as { claude?: { pct?: unknown; resetsAt?: unknown } }).claude;
       const pct = Number(u?.pct);
+      if (Number(u?.resetsAt) && Date.now() > Number(u?.resetsAt)) return false; // window already reset; the file just hasn't caught up
       if (cfg.usageIgnoreUntil && Number(u?.resetsAt) <= cfg.usageIgnoreUntil && Date.now() < cfg.usageIgnoreUntil + 60_000) return false;
       return !Number.isFinite(pct) || pct >= cfg.usageMaxPct;
     } catch {
