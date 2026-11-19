@@ -1,0 +1,812 @@
+{
+ "name": "gemini-app",
+ "provider": "Google",
+ "model": "Gemini app (gemini.google.com)",
+ "system": "(app default)",
+ "createdAt": "2026-11-19T08:20:00Z",
+ "costUsd": 0,
+ "items": [
+  {
+   "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#plain",
+   "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: PTO Request \u2013 Friday, [Date]\n\nHi [Manager's Name],\n\nI would like to request a day of paid time off next Friday, [Date], for a personal commitment.\n\nBefore I head out, I will make sure that [Project/Task A] is wrapped up and that [Colleague's Name] is briefed on anything that might come up while I am away. I will also update my out-of-office status and remain reachable by phone in case of an urgent issue.\n\nPlease let me know if this works on your end, and I will go ahead and log the request in the system.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#plain",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "**Inflation** is the gradual rise in prices over time, which means each dollar (or unit of currency) buys a little less than it used to.\n\nThink of it like this: if a cup of coffee cost $2 ten years ago and costs $4 today, the coffee hasn't doubled in size\u2014the purchasing power of your money has been cut in half.\n\n**Why does it happen?**\n\n* **Too much demand:** When people want to buy more goods and services than businesses can supply, sellers raise prices.\n* **Higher production costs:** When raw materials, energy, or wages get more expensive, companies pass those costs on to customers.\n* **More money in circulation:** When the supply of money grows faster than the economy produces new goods, each unit of currency becomes slightly less valuable.\n\nA small, steady amount of inflation (usually around 2% a year) is considered healthy because it encourages people and businesses to spend and invest rather than hoard cash. It becomes a problem when prices jump too fast for wages to keep up, squeezing everyday budgets."
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#plain",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Clean a cast iron pan right after cooking while it is still warm\u2014never soak it in the sink or put it in the dishwasher, as both strip the seasoning and cause rust.\n\n1. **Scrape off stuck food:** Wipe out excess oil and crumbs with a paper towel, wooden spatula, or nylon scraper. For stubborn bits, scrub with a little warm water and a stiff brush or chainmail scrubber (avoid steel wool unless you plan to re-season the pan). A tiny drop of mild dish soap is fine if needed, though warm water alone usually works.\n2. **Rinse and dry immediately:** Rinse with warm water, then towel-dry thoroughly.\n3. **Heat to evaporate moisture:** Place the pan on a burner over low heat for 2\u20133 minutes until completely bone-dry.\n4. **Apply a thin coat of oil:** Rub half a teaspoon of neutral, high-smoke-point oil (like canola, grapeseed, or vegetable oil) over the entire interior with a paper towel, then wipe it out with a clean dry towel until the surface looks matte rather than greasy."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Excited to share that I\u2019ve joined [Company Name] as a Product Manager!\n\nOver the past few years, I\u2019ve loved working at the intersection of user problems, engineering trade-offs, and business strategy\u2014and I couldn't be more thrilled to bring that energy to a team tackling [briefly mention company mission or product area, e.g., modernizing healthcare workflows / building smarter developer tools].\n\nHuge thank you to [Name/Recruiter/Hiring Manager] and everyone I met during the interview process for making the transition so welcoming. Right now, I\u2019m focused on listening, learning the codebase and customer pain points, and getting up to speed with the team.\n\nIf you\u2019re working in [industry/space] or just want to connect, my inbox is always open!\n\n#ProductManagement #NewRole #TechCareers #Product"
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#plain",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Built for Everyday Prep\u2014Gentle on Knives, Tough on Wear**\n\nUpgrade your kitchen counter with our sustainably harvested Moso bamboo cutting board. Engineered with a dense, cross-laminated grain, it resists deep knife scars and warping while protecting the sharp edge of your chef\u2019s blades better than glass or plastic alternatives.\n\n* **Mess-Free Juice Groove:** A deep perimeter channel catches meat juices and fruit runoff before they reach your countertop.\n* **Reversible Design:** Use the grooved side for carving roasts and slicing juicy produce, and flip to the flat side for chopping herbs, rolling dough, or serving charcuterie.\n* **Easy to Carry & Clean:** Built-in side handles make transferring ingredients from counter to stove effortless, and the naturally non-porous surface washes clean with warm soapy water in seconds.\n\n**Dimensions:** 17\" \u00d7 11.5\" \u00d7 0.75\" | **Care:** Hand wash only; condition monthly with food-grade mineral oil."
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#plain",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Effective interview preparation comes down to connecting your past track record directly to the specific problems the company needs solved right now.\n\n1. **Deconstruct the job description:** Highlight the top 3\u20134 core skills or outcomes they keep repeating. Every story you tell should tie back to those priorities.\n2. **Research the company beyond the homepage:** Check recent product launches, press releases, earnings notes, or leadership interviews so you understand their current challenges and market position.\n3. **Prepare 5\u20136 STAR stories:** Outline clear examples using **S**ituation, **T**ask, **A**ction, and **R**esult covering a major win, a failure or mistake, a cross-team conflict, and a tight deadline. Quantify your results wherever possible.\n4. **Practice out loud:** Rehearse a crisp, 60-second answer to *\"Tell me about yourself\"* that covers where you've been, what you do best, and why this specific role makes sense next.\n5. **Write thoughtful questions for them:** Ask things that reveal how the team operates, such as *\"What does success look like in the first 90 days?\"* or *\"What is the biggest bottleneck the team is trying to solve right now?\"*\n6. **Handle logistics early:** Test your camera, mic, and lighting the day before for remote interviews, or map your commute with a 20-minute buffer for in-person meetings."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#prose",
+   "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "When I started journaling every morning a year ago, I expected to end up with a neat collection of profound insights and life-changing epiphanies. Instead, my first three months were mostly complaints about being tired, endless to-do lists, and half-finished sentences. I almost quit in April because it felt repetitive, until I realized that the repetition itself was the point.\n\nLooking back through those notebooks now, the biggest surprise is how much my brain exaggerates problems until I put them on paper. A vague sense of dread that kept me awake at night usually shrank to two manageable sentences once I forced myself to write down what I was actually worried about. Flipping back across several weeks also exposed habits I never noticed in the moment, like how my worst moods almost always followed three consecutive days of skipping workouts or staying up too late.\n\nAt the same time, the entries I value most today are not the ones about major milestones or career stress, but the small snapshots of ordinary days. Reading a quick note about a funny conversation over dinner, a rainy walk, or a book that kept me hooked brings back the texture of a week I would have completely forgotten otherwise. You do not need a fancy notebook or a thirty-minute morning ritual to get something out of writing things down, because five messy minutes with a cheap pen is enough to clear the static out of your head."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of#prose",
+   "family": "everyday:email:write-an-email-to-my-manager-asking-for-a-day-of",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: PTO Request \u2013 Friday, [Date]\n\nHi [Manager's Name],\n\nI would like to request a day of paid time off next Friday, [Date], to take care of a personal commitment.\n\nBefore I head out on Thursday evening, I will make sure that [Project/Task Name] is wrapped up and that [Colleague's Name] is briefed on anything that might come up while I am away. I will also update my calendar and out-of-office message, and I can be reached by phone if anything urgent arises.\n\nPlease let me know if this works for you, and I will submit the request in the portal right away.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:explain-inflation-in-simple-terms#prose",
+   "family": "everyday:explain:explain-inflation-in-simple-terms",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Inflation is the gradual rise in prices across an economy over time, which means each dollar buys a little less than it used to. If a cup of coffee cost two dollars ten years ago and costs four dollars today, the coffee has not doubled in size or quality; instead, the purchasing power of your money has been cut in half.\n\nThis usually happens for a few straightforward reasons. When people want to buy more goods and services than businesses can quickly supply, sellers can raise prices. Prices also climb when the cost of making things goes up, such as higher energy bills, shipping rates, or wages, because companies pass those expenses along to customers. Additionally, if the overall supply of money in an economy grows faster than the output of real goods, each unit of currency becomes slightly less valuable.\n\nA small, steady amount of inflation, typically around two percent a year, is generally considered healthy because it encourages people and businesses to spend and invest rather than leave cash sitting idle. It becomes a serious problem when prices rise faster than paychecks grow, quietly squeezing what everyday households can afford."
+  },
+  {
+   "id": "everyday:howto:how-do-i-clean-a-cast-iron-pan#prose",
+   "family": "everyday:howto:how-do-i-clean-a-cast-iron-pan",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The best time to clean a cast iron pan is right after cooking while it is still warm, never soaking it in the sink or putting it in the dishwasher since prolonged water exposure strips the seasoning and causes rust. Start by wiping out excess oil and food scraps with a paper towel or wooden spatula. If anything is stuck to the surface, scrub it gently with warm water and a stiff nylon brush or chainmail scrubber, avoiding harsh metal scouring pads unless you want to strip and re-season the pan from scratch.\n\nOnce the food residue is gone, rinse the pan briefly with warm water and dry it immediately with a clean dish towel. To make sure no hidden moisture remains in the pores of the metal, place the pan back on the stove over low heat for two or three minutes until it is completely bone-dry.\n\nWhile the pan is still warm from the burner, add about half a teaspoon of a neutral, high-smoke-point oil like canola, grapeseed, or vegetable oil. Rub it across the entire interior with a paper towel, then take a fresh dry paper towel and wipe away as much of the oil as possible until the surface looks matte rather than wet or sticky, which keeps the pan protected until your next meal."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-starting-a-new-job-a",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "I am excited to share that I have joined [Company Name] as a Product Manager. Over the past few years, I have loved working at the intersection of customer problems, engineering trade-offs, and business strategy, and I could not be more thrilled to bring that focus to a team tackling [briefly describe the company mission or product area].\n\nA huge thank you to [Hiring Manager/Recruiter Name] and everyone I met throughout the interview process for making the transition so smooth and welcoming. Right now, my main priority is listening closely, learning the product inside and out, and digging into customer feedback alongside the engineering and design teams.\n\nIf you are building in the [industry/domain] space or simply want to connect and swap notes on product management, feel free to reach out anytime."
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#prose",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Upgrade your daily kitchen prep with a cutting board crafted from sustainably harvested Moso bamboo. Engineered with a dense, cross-laminated grain, it resists deep knife scars and warping while remaining gentle enough to keep your chef's blades sharp far longer than glass, stone, or hard plastic boards.\n\nThoughtful details make everyday cooking cleaner and easier. A deep perimeter juice groove catches runoff from roasts, tomatoes, and citrus before it spills onto your counter, while flipping the board over gives you a smooth, flat surface ideal for chopping herbs, rolling dough, or serving charcuterie. Integrated side handles let you carry chopped ingredients straight from the counter to the stove without awkward balancing.\n\nMeasuring 17 by 11.5 inches with a sturdy three-quarter-inch profile, this board gives you plenty of workspace without feeling bulky in the sink. Simply wash it by hand with warm soapy water after use and condition it occasionally with food-grade mineral oil to keep the finish rich for years."
+  },
+  {
+   "id": "everyday:advice:how-do-i-prepare-for-a-job-interview#prose",
+   "family": "everyday:advice:how-do-i-prepare-for-a-job-interview",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Start by breaking down the job description to identify the three or four core skills or business outcomes the company mentions most often. Pair that with some focused research beyond their homepage, checking recent product launches, press releases, or leadership interviews so you understand what challenges they are navigating right now. Every story you bring into the conversation should connect your past work directly to what they need solved today.\n\nNext, prepare five or six concise examples from your previous roles that illustrate a major accomplishment, a mistake you learned from, a disagreement with a teammate, and a project delivered under a tight deadline. Structure each story around the situation, your specific actions, and the measurable result, and practice delivering a crisp sixty-second summary of your background so you start strong.\n\nFinally, write down three or four genuine questions to ask the interviewer about how the team operates, such as what success looks like in the first ninety days or what bottlenecks are currently slowing them down. Handle practical details the day before by testing your camera and microphone for video calls or planning your commute with plenty of buffer time so you arrive calm and focused."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-article-about-switching-car#plain",
+   "family": "everyday:article:write-a-first-person-article-about-switching-car",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Starting Over at 35: What Switching Careers Into Tech Really Looked Like**\n\nAt 35, I had a steady job, a mortgage, and a decade of experience in an industry I no longer wanted to be in. Every time I thought about pivoting into software development, a loud voice in my head reminded me that I was competing against 22-year-old computer science grads who had been coding since high school.\n\nIt took me six months just to stop talking myself out of trying. Once I finally committed, I realized that changing careers in your mid-thirties isn't about pretending you're starting from scratch\u2014it's about pairing new technical skills with the professional judgment you already have.\n\nHere is what actually moved the needle during my transition:\n\n* **Protecting one non-negotiable hour a day:** With a full-time job and family responsibilities, weekend marathons never lasted. Coding from 6:00 AM to 7:00 AM before checking email or messages gave me 350+ hours of focused practice over a year.\n* **Building real, messy projects instead of hoarding certificates:** Nobody asked to see my course completion badges. What got me interviews was a small inventory tool I built to solve an actual bottleneck at my old job\u2014complete with bugs I had to debug and explain.\n* **Leaning into my \"non-tech\" background:** Once I landed interviews, my previous career stopped being a liability. Knowing how to talk to frustrated clients, scope ambiguous requests, and manage deadlines set me apart from candidates who had only ever written code in a classroom.\n\nLanding my first junior engineering role meant taking a temporary pay cut and getting comfortable feeling like the least experienced person in the room again. Eighteen months later, I've caught up to my old salary, and I wake up genuinely energized by the problems I get to solve. If you're worried you're too late, remember that the next five years will pass either way\u2014you might as well spend them building toward work you actually want to do."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#plain",
+   "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Timeline Update \u2013 [Project Name]\n\nHi [Client's Name],\n\nI\u2019m writing to give you an early update on the delivery timeline for [Project Name]. Due to [brief, honest reason\u2014e.g., an unexpected integration issue with the third-party API / additional QA needed on the checkout flow], we need to push our final delivery date back by one week, from [Original Date] to [New Date].\n\nWe want to make sure the final build is thoroughly tested and meets the quality standards we agreed on rather than rushing an incomplete handoff. Here is our updated schedule for the final stretch:\n\n* **[Date]:** Complete [specific milestone/fix]\n* **[Date]:** Internal QA and staging review\n* **[New Date]:** Final delivery and handoff\n\nNo action is needed from your side right now, and this adjustment will not affect the agreed project budget. Please let me know if you have any questions or if you'd like to hop on a quick call to walk through the updated plan.\n\nBest regards,\n\n[Your Name]\n\n[Your Title]"
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#plain",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The main difference between a **Traditional IRA** and a **Roth IRA** is **when you pay taxes** on your money.\n\n| Feature | Traditional IRA | Roth IRA |\n| --- | --- | --- |\n| **When you pay taxes** | **Later** (in retirement when you withdraw) | **Now** (contributions are made with after-tax dollars) |\n| **Upfront tax break** | Contributions may be tax-deductible today | No tax deduction today |\n| **Investment growth** | Tax-deferred until withdrawal | Completely tax-free |\n| **Withdrawals in retirement** | Taxed as ordinary income | Tax-free (if age 59\u00bd+ and account is 5+ years old) |\n| **Early withdrawal of contributions** | Usually triggers taxes + 10% penalty | Can withdraw original contributions anytime tax- and penalty-free |\n| **Income limits** | Anyone with earned income can contribute (deductibility phases out at higher incomes if covered by a workplace plan) | Direct contributions phase out above certain income thresholds |\n| **Required Minimum Distributions (RMDs)** | Mandatory starting at age 73 | None during your lifetime |\n\n**Which one makes more sense?**\n\n* **Traditional IRA:** Often better if you are in a high tax bracket today and expect to be in a lower tax bracket in retirement.\n* **Roth IRA:** Often better if you are early in your career, expect your tax rate to be higher in the future, or want tax-free flexibility in retirement."
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#plain",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Pull well off the road onto a flat, solid surface away from traffic, turn on your hazard lights, and engage the parking brake before starting.\n\n1. **Gather your tools:** Take out the spare tyre, jack, lug wrench, and wheel wedges (chocks) from your boot. Place wedges behind and in front of the tyre diagonally opposite the flat to keep the car from rolling.\n2. **Loosen the lug nuts:** Remove the hubcap or wheel cover if needed. Use the lug wrench to turn each lug nut counter-clockwise about a quarter to half turn\u2014just enough to break the resistance while the tyre is still on the ground. Do not remove them yet.\n3. **Jack up the vehicle:** Position the jack under the reinforced metal jack point on the vehicle frame near the flat tyre (check your owner's manual if unsure). Raise the car until the flat tyre is about 6 inches (15 cm) off the ground.\n4. **Remove the flat tyre:** Unscrew the lug nuts completely, pull the flat tyre straight toward you off the wheel studs, and lay it flat on the ground so it cannot roll away.\n5. **Mount the spare tyre:** Line up the holes in the spare tyre with the wheel studs and push it firmly onto the hub. Thread the lug nuts back on by hand until snug.\n6. **Lower and tighten:** Lower the car until the spare tyre touches the ground but doesn't bear the vehicle's full weight yet. Tighten the lug nuts firmly with the wrench in a **star (crisscross) pattern** so the wheel seats evenly. Lower the car completely, remove the jack, and give each lug nut one final check.\n\n*Note: Temporary \"donut\" spares are usually rated for a maximum speed of 50 mph (80 km/h) and short distances\u2014get the flat repaired or replaced as soon as possible.*"
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "One year ago, I left a predictable paycheck to start [Company Name]. Looking back at the past 12 months, almost nothing went according to our original pitch deck\u2014and that turned out to be a good thing.\n\nThree lessons that hit hardest in Year 1:\n\n1. **Distribution is harder than product.** Building something people like is only half the battle. Figuring out a repeatable way to reach them without burning through cash takes just as much engineering and experimentation.\n2. **Customer behavior beats customer compliments.** Early on, I mistook \"That's a cool idea\" for demand. The only real validation is someone paying for it, integrating it into their workflow, or complaining loudly when it goes down.\n3. **Speed of iteration is your only unfair advantage.** As a small team, you can't outspend incumbents, but you can talk to a user at 10:00 AM and ship a fix by 4:00 PM.\n\nGrateful to our early users who trusted a rough v1, and to everyone who offered candid feedback along the way. Onto Year 2!\n\n#Founders #Startups #Entrepreneurship #LessonsLearned"
+  },
+  {
+   "id": "everyday:product:write-a-short-description-for-a-meditation-app#plain",
+   "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Quiet the noise in just five minutes a day.**\n\n[App Name] offers practical, no-nonsense guided meditations, breathing exercises, and sleep soundscapes designed for busy minds. Whether you need to reset between meetings, unwind after a long day, or build a steady mindfulness habit without the jargon, press play and find your calm anytime, anywhere."
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#plain",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Procrastination is rarely a time-management issue\u2014it\u2019s usually an emotional reaction to a task that feels overwhelming, boring, or unclear. Lowering the friction to start works far better than waiting for motivation.\n\n* **Shrink the starting line (The 5-Minute Rule):** Tell yourself you only have to work on the task for five minutes, and you have full permission to stop after that. Starting removes the mental dread, and momentum usually carries you past the five-minute mark.\n* **Define the physical next action:** \"Work on presentation\" is vague and easy to avoid. \"Open slide deck and write three bullet points for slide 2\" tells your brain exactly what to do.\n* **Remove easy escapes before you begin:** Put your phone in another room, close unrelated browser tabs, and log out of distracting apps *before* you sit down to work so staying on task takes less willpower.\n* **Time-box instead of aiming for perfection:** Set a 25-minute timer with the explicit goal of producing a rough, ugly first draft. Separating creation from editing eliminates perfectionism paralysis.\n* **Set up your workspace the night before:** Leave the document open, the notebook on your desk, or your running shoes by the door so the path of least resistance leads straight into the habit."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-article-about-switching-car#prose",
+   "family": "everyday:article:write-a-first-person-article-about-switching-car",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "At thirty-five, I had a steady job, a mortgage, and a decade of experience in an industry I no longer wanted to be in. Every time I thought about pivoting into software development, a loud voice in my head reminded me that I was competing against twenty-two-year-old computer science graduates who had been coding since high school. It took me six months just to stop talking myself out of trying, until I realized that switching careers in your mid-thirties is not about pretending you are starting from zero, but about pairing new technical skills with the professional judgment you already have.\n\nOnce I committed, consistency mattered far more than intensity. With a full-time job and family obligations, weekend study marathons never lasted, so I protected one non-negotiable hour every morning from six to seven before checking messages. Over a year, that quiet routine added up to more than three hundred hours of focused practice. Instead of collecting course completion certificates, I spent that time building a small inventory tool to solve an actual bottleneck at my old job, complete with messy bugs I had to debug and explain during interviews.\n\nWhen I finally started talking to hiring managers, my previous career stopped feeling like a liability and became my clearest differentiator. Knowing how to calm down a frustrated client, scope an ambiguous request, and hit a deadline set me apart from candidates who had only ever written code in a classroom. Landing my first junior engineering role meant taking a temporary pay cut and getting comfortable feeling like the least experienced person in the room again, yet eighteen months later I had caught up to my old salary and finally felt energized by the problems on my desk."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-client-saying-the-project-wi#prose",
+   "family": "everyday:email:write-an-email-to-a-client-saying-the-project-wi",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Timeline Update \u2013 [Project Name]\n\nHi [Client's Name],\n\nI am writing to give you an early update on our delivery schedule for [Project Name]. Due to an unexpected integration issue with [mention specific component or reason], we need to move our final handoff date back by one week, from [Original Date] to [New Date].\n\nRather than rushing through quality assurance and risking bugs in production, we want to use this extra week to test everything thoroughly and ensure the final deliverable meets the standards we agreed on. We are on track to finish the remaining technical fixes by [Milestone Date], complete full staging review by [Review Date], and deliver the finished project on [New Date].\n\nNothing is required from your team at this stage, and this adjustment will not affect your project budget. Please let me know if you have any questions or if you would like to jump on a quick call to walk through the updated schedule.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#prose",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The fundamental difference between a traditional IRA and a Roth IRA comes down to when you pay income taxes on your retirement savings. With a traditional IRA, you typically get an upfront tax break because your contributions may be tax-deductible in the year you make them, and your investments grow tax-deferred until retirement. However, when you withdraw that money later in life, every dollar you take out is taxed as ordinary income.\n\nA Roth IRA flips that tax timing around. You fund a Roth IRA with money you have already paid income taxes on, so there is no tax deduction today. In exchange, your investments grow completely tax-free, and as long as you are at least fifty-nine-and-a-half and have held the account for five years, every withdrawal you make in retirement is entirely free of federal income tax.\n\nThere are also a few practical differences in rules and flexibility. Roth IRAs allow you to withdraw your original contributions at any time without taxes or penalties, have no required minimum distributions during your lifetime, and restrict direct contributions once your income passes certain thresholds. Traditional IRAs allow anyone with earned income to contribute regardless of how much they make, though tax deductibility phases out at higher incomes if you have a workplace retirement plan, and they require you to begin taking minimum withdrawals starting at age seventy-three."
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#prose",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Before touching any tools, pull well off the road onto a flat, solid surface away from moving traffic, switch on your hazard lights, and engage the parking brake. Take your spare tyre, jack, lug wrench, and wheel wedges out of the boot, and place the wedges snugly in front of and behind the tyre diagonally opposite the flat so the vehicle cannot roll while it is lifted.\n\nRemove the hubcap if your wheel has one, then use the lug wrench to loosen each lug nut by turning it counter-clockwise about a quarter to half turn while the tyre is still resting firmly on the ground. Once the resistance is broken, place the jack under the reinforced metal jack point on the frame near the flat tyre, consulting your owner's manual if you are unsure of the exact spot, and crank the jack until the flat tyre is lifted about six inches off the ground.\n\nUnscrew the loosened lug nuts the rest of the way, pull the flat tyre straight off the wheel studs, and lay it flat on the ground so it cannot roll into traffic. Slide the spare tyre onto the studs, thread the lug nuts back on by hand until they are snug, and lower the vehicle until the spare touches the pavement without carrying the car's full weight. Tighten the lug nuts firmly in a crisscross star pattern so the wheel seats evenly, lower the car completely, and give each nut one final check before stowing your gear and driving carefully to a repair shop."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "One year ago, I walked away from a predictable paycheck to start [Company Name]. Looking back over the past twelve months, almost nothing unfolded the way our original pitch deck predicted, and that turned out to be the best thing that could have happened to us.\n\nThe biggest surprise of my first year was realizing that distribution is every bit as hard as building the product itself. Creating something useful only gets you halfway; finding a repeatable way to put it in front of the right customers without burning through your runway requires just as much creativity and discipline. Along the way, I also learned to separate polite compliments from real demand, because enthusiastic feedback means very little until someone is willing to pay for the product or complains the moment it goes offline.\n\nIf there is one edge a small team holds over established competitors, it is speed of iteration. We could never outspend larger companies, but we could talk to a customer in the morning and ship a fix by late afternoon. I am deeply grateful to the early users who trusted an imperfect first version and shared honest feedback, and I am energized for everything ahead in year two."
+  },
+  {
+   "id": "everyday:product:write-a-short-description-for-a-meditation-app#prose",
+   "family": "everyday:product:write-a-short-description-for-a-meditation-app",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Quiet the mental noise in as little as five minutes a day. [App Name] brings together practical guided meditations, simple breathing exercises, and calming sleep soundscapes designed specifically for busy schedules and restless minds.\n\nWhether you need a quick reset between back-to-back meetings, a gentle way to unwind before bed, or help building a consistent mindfulness routine without complicated jargon, [App Name] meets you right where you are. Just put on your headphones, press play, and find a calmer headspace anytime you need it."
+  },
+  {
+   "id": "everyday:advice:how-can-i-stop-procrastinating#prose",
+   "family": "everyday:advice:how-can-i-stop-procrastinating",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Procrastination is rarely a pure time-management problem; most of the time it is an emotional response to a task that feels overwhelming, tedious, or ambiguous. Because waiting around for motivation almost never works, the most effective strategy is to shrink the friction required just to get started. Tell yourself you only have to work on the task for five minutes with full permission to stop afterward, since crossing that initial threshold usually dissolves the dread and lets momentum take over.\n\nIt also helps to break vague goals down into concrete physical actions before you sit down to work. Writing \"work on presentation\" on a to-do list invites avoidance, whereas writing \"open the slide deck and draft three bullet points for the opening slide\" gives your brain an unmistakable starting point. At the same time, remove easy escape routes ahead of time by putting your phone in another room and closing unrelated browser tabs so staying focused does not require constant willpower.\n\nFinally, give yourself permission to make an ugly first draft by setting a twenty-five-minute timer focused solely on getting ideas out rather than polishing them. Separating creation from editing removes the pressure of perfectionism, and setting up your workspace the night before ensures that the easiest thing to do the next morning is dive straight in."
+  },
+  {
+   "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#plain",
+   "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**What Getting Rid of Half My Stuff Actually Changed (And What It Didn't)**\n\nTwo years ago, moving into a smaller apartment forced me to confront how much stuff I had accumulated without thinking. I spent three weekends donating boxes of unworn clothes, selling duplicates of kitchen gadgets, and clearing out drawers full of cables for devices I hadn't owned since 2016.\n\nI went into it expecting some kind of instant, Zen-like transformation. What actually happened was quieter\u2014and much more practical:\n\n* **Decision fatigue dropped noticeably.** Opening a closet where everything actually fits and gets worn turned getting dressed from a 10-minute annoyance into a 30-second routine.\n* **Cleaning took half the time.** Fewer surfaces covered in clutter meant tidying up the apartment went from a Saturday chore to a 15-minute reset.\n* **I stopped impulse-buying.** Once you realize how much effort it takes to get rid of something, you think twice before bringing a cheap \"deal\" through the front door.\n\nMinimalism didn't magically solve my stress or turn my living room into an empty white box. I still keep plenty of books, board games, and hobby gear I genuinely love. The real shift wasn't owning as little as possible\u2014it was making sure the things taking up space in my home were actually earning their keep."
+  },
+  {
+   "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#plain",
+   "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Thank you \u2013 [Job Title] interview\n\nHi [Interviewer's Name],\n\nThank you for taking the time to speak with me earlier today about the [Job Title] role at [Company Name]. I really enjoyed learning more about [mention a specific topic, project, or challenge discussed during the interview] and hearing how the team approaches [specific goal/workflow].\n\nOur conversation reinforced how excited I am about the opportunity to bring my background in [key relevant skill/experience] to help [Company Name] with [specific outcome they care about].\n\nPlease don't hesitate to reach out if there is any additional information I can provide as you move through the next steps. Thanks again for your time and consideration.\n\nBest regards,\n\n[Your Name]\n\n[Your Phone Number]"
+  },
+  {
+   "id": "everyday:explain:why-is-the-sky-blue#plain",
+   "family": "everyday:explain:why-is-the-sky-blue",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The sky looks blue because of how Earth's atmosphere scatters sunlight\u2014a process called **Rayleigh scattering**.\n\n1. **Sunlight contains all colors:** Although sunlight looks white, it is actually a mix of all the colors of the rainbow, each traveling as a wave with a different length. Red light travels in long, lazy waves, while blue and violet light travel in much shorter, tighter waves.\n2. **The atmosphere acts like a filter:** As sunlight enters Earth's atmosphere, it collides with tiny gas molecules (mostly nitrogen and oxygen). Longer wavelengths like red, orange, and yellow pass straight through these gases with very little interference.\n3. **Blue light scatters in every direction:** Shorter blue waves hit the gas molecules and bounce off in all directions across the sky. When you look up during the day, you are seeing that scattered blue light coming from everywhere overhead.\n\n*(Bonus: Violet light actually scatters even more than blue, but our eyes are much more sensitive to blue, and some violet light is absorbed in the upper atmosphere\u2014so the sky appears blue rather than purple. At sunset, sunlight travels through much more atmosphere, scattering away most of the blue light before it reaches you and leaving behind reds and oranges.)*"
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-vegetable-garden#plain",
+   "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Start small\u2014a single 4\u00d74-foot raised bed or a few large patio pots is far easier to manage and more productive than a huge plot that gets overrun by weeds.\n\n1. **Pick a sunny spot:** Choose a location that gets at least **6\u20138 hours of direct sunlight** per day and is close to a hose or water source.\n2. **Choose your setup:** Use raised beds, large containers (at least 12\u201318 inches deep with drainage holes), or an in-ground plot cleared of grass and weeds.\n3. **Invest in good soil:** Fill beds or pots with a mix of quality topsoil, compost, and organic matter rather than heavy clay or bagged dirt alone. Good drainage and nutrients do 80% of the work.\n4. **Start with easy, high-reward crops:** Buy starter seedlings from a local nursery rather than starting everything from seed. Reliable beginner picks include cherry tomatoes, bush beans, lettuce, zucchini, radishes, and herbs like basil.\n5. **Plant after your last frost:** Check your local average last spring frost date before putting warm-weather crops (like tomatoes and peppers) outside.\n6. **Water deeply and mulch:** Water at the base of the plants early in the morning whenever the top inch of soil feels dry, and spread 2 inches of straw or shredded leaves around plants to lock in moisture and block weeds."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Huge shoutout to our team for officially shipping [Project/Feature Name] today! \ud83d\ude80\n\nOver the past [X weeks/months], this group tackled [briefly mention a key challenge, e.g., complex legacy migrations, tight deadlines, dozens of customer interviews] and turned an ambitious idea into a live product that's already helping users [key benefit/outcome].\n\nProjects like this don't happen without serious cross-functional grit\u2014massive credit to [Tag Teammates/Teams, e.g., engineering, design, QA, and support] for sweating every detail, catching edge cases late at night, and keeping the user experience front and center.\n\nProud of what we built together, and excited to see how our customers put it to work!\n\n#Teamwork #ProductLaunch #Engineering #ShipIt"
+  },
+  {
+   "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#plain",
+   "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The espresso machine is warmed up, the pastries are out of the oven, and our doors are officially open! \u2615\ud83e\udd50\n\nCome say hi, grab your morning pour-over, and make yourself at home at [Coffee Shop Name]. We\u2019re pouring from [Opening Time] to [Closing Time] at [Street Address]\u2014first 50 guests today get a free drip coffee on us!\n\n#NewInTown #CoffeeShopOpening #SpecialtyCoffee #LocalCafe #[City]Coffee"
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#plain",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Effective stress reduction combines quick techniques that calm your nervous system in the moment with daily habits that raise your overall resilience.\n\n**Quick resets (under 5 minutes):**\n\n* **Extend your exhales:** Try the physiological sigh (two quick inhales through the nose followed by one long, slow exhale through the mouth) for 4\u20135 rounds to immediately slow your heart rate.\n* **Change your physical environment:** Step outside into natural light or walk around the block without your phone to interrupt rumination loops.\n* **Brain-dump onto paper:** Write down everything swirling in your head and circle the single item you can actually act on today.\n\n**Daily habits that prevent burnout:**\n\n* **Move your body regularly:** Even a brisk 20-minute daily walk burns off excess cortisol and improves sleep quality.\n* **Protect hard boundaries:** Set a clear end time for checking work messages and keep the last 45 minutes before bed screen-free.\n* **Cut back on late caffeine and alcohol:** Both quietly disrupt deep sleep, leaving your baseline stress tolerance much lower the next day.\n* **Stay connected:** Venting to a trusted friend or talking through a problem out loud often shrinks it down to size faster than trying to think your way out alone."
+  },
+  {
+   "id": "everyday:article:write-a-short-first-person-blog-post-about-my-ex#prose",
+   "family": "everyday:article:write-a-short-first-person-blog-post-about-my-ex",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Two years ago, moving into a smaller apartment forced me to confront how much stuff I had accumulated without really noticing. I spent three weekends donating boxes of unworn clothes, selling duplicate kitchen gadgets, and clearing out drawers full of charging cables for devices I had not owned in years.\n\nI went into the process expecting some kind of instant, Zen-like transformation, but what actually happened was much quieter and more practical. Opening a closet where every item actually fits and gets worn turned getting dressed from a morning annoyance into a thirty-second routine, and cleaning the apartment went from a Saturday chore to a fifteen-minute reset because there was so little clutter covering the surfaces. Just as importantly, realizing how much effort it took to haul things away cured my habit of impulse-buying cheap bargains I did not need.\n\nMinimalism did not magically eliminate stress from my life or turn my living room into a sterile white box. I still keep plenty of books, board games, and hobby gear that I genuinely enjoy using. For me, the real shift was never about owning the fewest possible possessions, but about making sure the things taking up space in my home were actually earning their keep."
+  },
+  {
+   "id": "everyday:email:write-an-email-following-up-after-a-job-intervie#prose",
+   "family": "everyday:email:write-an-email-following-up-after-a-job-intervie",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Thank you \u2013 [Job Title] interview\n\nHi [Interviewer's Name],\n\nThank you for taking the time to speak with me earlier today about the [Job Title] position at [Company Name]. I really enjoyed learning more about [mention a specific project or topic you discussed] and hearing how your team approaches [specific goal or challenge].\n\nOur conversation reinforced how excited I am about the opportunity to bring my experience in [relevant skill or background] to help the team with [key objective]. Please let me know if there is any additional information I can share as you move through the next steps of the process.\n\nThank you again for your time and consideration, and I hope to speak with you soon.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:why-is-the-sky-blue#prose",
+   "family": "everyday:explain:why-is-the-sky-blue",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The sky looks blue because of the way Earth's atmosphere interacts with sunlight, a phenomenon scientists call Rayleigh scattering. Although sunlight looks white to our eyes, it is actually a blend of all the colors of the rainbow, and each color travels through space as a wave of a different length. Red and yellow light move in long, gentle waves, while blue and violet light travel in much shorter, tighter waves.\n\nWhen sunlight enters Earth's atmosphere, it collides with billions of tiny gas molecules, primarily nitrogen and oxygen. Because red, orange, and yellow wavelengths are relatively long, they pass straight through most of these gas molecules with very little interference. The shorter blue waves, however, crash directly into the gas molecules and scatter in every direction across the upper atmosphere.\n\nWhen you look up during a clear day, you are seeing that scattered blue light bouncing down toward your eyes from every part of the sky. Violet light actually scatters even more strongly than blue, but some of it is absorbed high in the atmosphere and human eyes are much more sensitive to blue, which is why the sky appears blue rather than purple."
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-vegetable-garden#prose",
+   "family": "everyday:howto:how-do-i-start-a-vegetable-garden",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The smartest way to start a vegetable garden is to keep it small, since a single four-by-four-foot raised bed or a cluster of large patio pots is far easier to care for than a sprawling plot that quickly gets overrun by weeds. Choose a spot in your yard or balcony that receives at least six to eight hours of direct sunlight each day and sits close enough to a hose or tap that watering never feels like a chore.\n\nOnce you have picked your location, fill your bed or containers with a rich blend of quality topsoil and compost rather than heavy native clay or plain dirt, because loose, nutrient-dense soil with good drainage does most of the heavy lifting for healthy roots. Rather than starting everything from tiny seeds, visit a local nursery for sturdy starter seedlings of easy, high-yield crops like cherry tomatoes, bush beans, lettuce, zucchini, and basil, making sure to wait until after your area's last spring frost before planting warm-weather varieties outdoors.\n\nAfter planting, water the soil deeply at the base of the stems early in the morning whenever the top inch feels dry to the touch, rather than spraying the leaves late at night. Adding a two-inch layer of straw or shredded leaves around your plants will lock in moisture, keep soil temperatures steady, and block most weeds before they even sprout."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-celebrating-my-team-shippi",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "I want to give a huge shoutout to our team for officially shipping [Project/Feature Name] today. Over the past few months, this group navigated complex technical trade-offs, tight timelines, and rounds of customer feedback to turn an ambitious concept into a live product that is already making a real difference for our users.\n\nLaunches like this only happen when people across functions pull in the same direction, and I am especially grateful to everyone in engineering, design, quality assurance, and customer support who sweated the small details and kept the user experience front and center right up to the finish line.\n\nI could not be prouder of what we built together, and I am excited to watch how our customers put it to work in the weeks ahead."
+  },
+  {
+   "id": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop#prose",
+   "family": "everyday:product:write-an-instagram-caption-for-a-new-coffee-shop",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The espresso machine is dialed in, the fresh pastries are out of the oven, and our doors are officially open. Whether you need a quick morning pour-over on your commute or a cozy corner to settle into for the afternoon, we would love to welcome you in.\n\nCome visit us at [Street Address] today from [Opening Time] to [Closing Time] and say hello to the team. To celebrate opening day, the first fifty guests through the door get a complimentary drip coffee on the house."
+  },
+  {
+   "id": "everyday:advice:what-are-some-ways-to-reduce-stress#prose",
+   "family": "everyday:advice:what-are-some-ways-to-reduce-stress",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Managing stress effectively works best when you combine quick ways to calm your body in the moment with steady daily habits that prevent overwhelm from building up in the first place. When you feel acute tension rising, changing your breathing pattern is one of the fastest ways to signal safety to your nervous system; taking two quick inhales through your nose followed by a long, slow exhale through your mouth for just four or five rounds can noticeably lower your heart rate within a minute. Stepping outside for a brief walk without your phone or dumping every anxious thought onto a sheet of paper can also interrupt mental loops before they spiral.\n\nOver the long term, physical basics quietly govern how well you handle everyday pressure. Regular movement, even a brisk twenty-minute walk each day, helps burn off excess stress hormones and deepens your sleep, while cutting back on afternoon caffeine and evening alcohol prevents hidden disruptions to your rest. Setting clear boundaries around when you stop checking work messages and carving out time to talk openly with a trusted friend will also keep small frustrations from turning into chronic burnout."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#plain",
+   "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "**Why a Simple Daily Walk Is Still the Most Underrated Health Habit**\n\nIn a fitness culture obsessed with high-intensity intervals, wearable recovery scores, and complicated training splits, walking often gets dismissed as \"just getting from point A to point B.\" Yet if you look at what actually moves the needle for long-term health, a daily 30-minute walk is remarkably hard to beat.\n\nHere is what happens when you make walking a non-negotiable part of your day:\n\n* **It protects your heart and metabolism without wrecking your joints:** Brisk walking lowers blood pressure, improves insulin sensitivity, and supports cardiovascular health without the injury risk or recovery debt of high-impact workouts.\n* **A 10-minute walk after meals flattens blood sugar spikes:** Taking a short stroll right after lunch or dinner helps your muscles absorb glucose immediately, preventing that heavy afternoon energy crash.\n* **It clears mental clutter:** Walking creates a steady, rhythmic pace that reduces cortisol and unlocks divergent thinking\u2014which is why so many writers, engineers, and thinkers solve their thorniest problems on foot rather than staring at a screen.\n* **It is sustainable for decades:** The best exercise routine is the one you don't quit when life gets busy. You don't need a gym membership, special gear, or extra recovery time\u2014just a decent pair of shoes and a front door.\n\nYou don't have to hit an arbitrary 10,000-step target on day one. Start with a 15-minute loop after dinner or take your next phone call while pacing outside\u2014consistency will do the rest."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#plain",
+   "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+   "genre": "email",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Subject: Security Deposit Return \u2013 [Your Former Address, Unit #]\n\nHi [Landlord's Name],\n\nI hope you\u2019re doing well. I\u2019m following up regarding the return of my $[Amount] security deposit for [Your Former Address, Unit #], which I vacated on [Move-Out Date].\n\nAs documented during our move-out walkthrough on [Walkthrough Date], the apartment was left clean and in good condition with no damage beyond normal wear and tear, and all keys were returned. Under [State/Local Law, if applicable, e.g., local tenancy guidelines], security deposits are typically returned within [X] days of move-out.\n\nCould you please confirm when the check or transfer was sent, or let me know when I can expect to receive it? If you are mailing a check, please send it to my forwarding address below:\n\n[Your New Street Address]\n\n[City, State, ZIP Code]\n\nThank you for your help, and please let me know if you need any additional information from me.\n\nBest regards,\n\n[Your Name]\n\n[Your Phone Number]"
+  },
+  {
+   "id": "everyday:explain:what-is-machine-learning#plain",
+   "family": "everyday:explain:what-is-machine-learning",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Machine learning** is a branch of artificial intelligence where computers learn to recognize patterns and make decisions from data, rather than following step-by-step rules programmed by a human.\n\nIn traditional software, a programmer writes explicit instructions: *\"If an email contains the words 'free lottery' and comes from an unknown sender, mark it as spam.\"* With machine learning, you instead feed an algorithm thousands of examples of real emails and spam emails, and the system figures out the subtle patterns on its own to classify new messages it has never seen before.\n\n**The three main ways machines learn:**\n\n* **Supervised learning:** The model trains on labeled examples (e.g., thousands of photos tagged \"cat\" or \"dog\") until it can accurately label new images.\n* **Unsupervised learning:** The model explores unlabeled data to find hidden groupings or anomalies on its own (e.g., grouping shoppers with similar buying habits or spotting unusual credit card activity).\n* **Reinforcement learning:** The model learns through trial and error in an environment, receiving rewards for good actions and penalties for bad ones (e.g., learning to play chess or control a robotic arm).\n\nYou already use machine learning every day\u2014it powers voice assistants, movie and music recommendations, fraud alerts on your bank card, and medical imaging tools."
+  },
+  {
+   "id": "everyday:howto:how-do-i-learn-a-new-language-fast#plain",
+   "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The fastest way to learn a language is to prioritize **active communication and high-frequency vocabulary** from day one, rather than spending months memorizing grammar tables before ever speaking.\n\n1. **Master the top 500\u20131,000 most common words first:** In almost every language, the 1,000 most frequently used words make up roughly 80% of everyday conversation. Use a spaced-repetition flashcard app (like Anki) for 15 minutes a day to lock them in.\n2. **Start speaking in Week 1:** Book short, low-pressure sessions with a native tutor (on platforms like iTalki or Preply) right away. Making mistakes out loud early kills the fear of sounding silly and forces your brain to retrieve words actively.\n3. **Learn phrases in context, not isolated words:** Instead of memorizing individual verbs, learn useful chunks like *\"Could you repeat that more slowly?\"* or *\"I'm looking for...\"* so you can build real sentences immediately.\n4. **Flood your daily routine with comprehensible input:** Switch your phone's interface language, listen to beginner podcasts during your commute, and watch familiar shows dubbed in your target language with matching subtitles.\n5. **Aim for 30 minutes daily over 3-hour weekend cram sessions:** Daily contact keeps new neural pathways warm; even 15 minutes of listening over breakfast plus 15 minutes of speaking or flashcards beats a single marathon study session once a week."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Like many folks across the industry this week, my role at [Company Name] was impacted by recent restructuring, so I\u2019m officially back on the job market.\n\nWhile it\u2019s never easy to say goodbye to a great team, I\u2019m genuinely proud of what we accomplished during my [X years/months] there\u2014especially [mention 1\u20132 concrete highlights, e.g., leading the launch of X, scaling Y, or improving Z metric].\n\nI\u2019m now looking for my next role as a **[Target Role, e.g., Senior Product Designer / Backend Engineer / Marketing Manager]**, where I can bring strong experience in:\n\n* [Core Skill/Strength 1]\n* [Core Skill/Strength 2]\n* [Core Skill/Strength 3]\n\nI\u2019m open to [remote / hybrid in City] opportunities and would love to connect with hiring managers, founders, or peers in the space. If you know of an open role\u2014or even just want to grab a virtual coffee\u2014please feel free to reach out or drop a comment below. Likes and shares are always appreciated!\n\n#OpenToWork #Hiring #[YourIndustry] #[YourRole]"
+  },
+  {
+   "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#plain",
+   "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "**Small-Batch Baking, Made From Scratch Every Morning**\n\n[Bakery Name] started with a simple belief: good bread and pastries shouldn't be rushed. Every morning at 4:00 AM, our ovens fire up to bake naturally leavened sourdough, flaky laminated croissants, and seasonal tarts using locally milled flour, cultured butter, and real ingredients you can pronounce.\n\nWhat began as a weekend farmers' market stall in [Year] has grown into a neighborhood gathering spot on [Street/Neighborhood Name]\u2014but our approach hasn't changed. We still mix by hand, ferment our doughs for 24 to 36 hours for deeper flavor, and pull fresh trays from the oven throughout the morning until we sell out.\n\nWhether you're stopping in for a warm cinnamon roll and an espresso on your way to work or picking up a crusty country loaf for Sunday dinner, we're glad you're here."
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#plain",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The biggest mistake beginners make is trying to run nonstop on day one, getting winded in two minutes, and assuming they \"aren't built for running.\" Start with **walk-run intervals** so your heart, lungs, and joints adapt gradually without injury.\n\n1. **Get fitted for real running shoes:** Visit a local running store and get a basic pair of cushioned trainers that fit comfortably\u2014worn-out sneakers are the #1 cause of beginner shin splints and knee pain.\n2. **Use the Couch-to-5K walk-run method (Weeks 1\u20132):** Start with a 5-minute brisk walk to warm up, then alternate **1 minute of slow jogging** with **2 minutes of walking** for 20 minutes total, finishing with a 5-minute cool-down walk. Repeat 3 times a week with a rest day in between.\n3. **Run slower than you think you should:** Keep a \"conversational pace\"\u2014if you can't speak a full sentence out loud without gasping, slow down to a shuffle. Speed comes months later; endurance comes first.\n4. **Progress gradually:** Each week, slightly increase your jogging intervals and shorten your walking breaks until you can comfortably jog for 20\u201330 minutes straight (usually around week 8).\n5. **Respect rest days:** Your muscles and tendons get stronger *between* workouts, not during them. Soreness in your calves or quads is normal early on, but sharp joint pain is a signal to take an extra rest day."
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa#prose",
+   "family": "everyday:article:write-a-short-blog-post-about-the-benefits-of-wa",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "In a fitness culture obsessed with high-intensity workouts, wearable recovery scores, and complicated training schedules, walking is often dismissed as mere transportation rather than real exercise. Yet when you look at what reliably improves long-term health without burning you out, a daily thirty-minute walk is remarkably hard to beat.\n\nOn a physical level, brisk walking strengthens your heart, lowers blood pressure, and improves how your body processes blood sugar without putting heavy impact stress on your knees and hips. Even a ten-minute stroll right after lunch or dinner prompts your muscles to absorb glucose immediately, smoothing out post-meal energy crashes and supporting metabolic health over time.\n\nJust as valuable is what a daily walk does for your mind. Stepping away from screens into a steady, rhythmic pace lowers stress hormones and gives your brain room to untangle problems in the background, which is why so many writers and thinkers do their best problem-solving on foot. Best of all, walking requires no gym membership, special equipment, or extra recovery time, making it one of the few health habits you can genuinely sustain for decades."
+  },
+  {
+   "id": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos#prose",
+   "family": "everyday:email:write-an-email-to-a-landlord-asking-for-my-depos",
+   "genre": "email",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Subject: Security Deposit Return \u2013 [Your Former Address, Unit #]\n\nHi [Landlord's Name],\n\nI hope you are doing well. I am writing to follow up on the return of my $[Amount] security deposit for [Your Former Address, Unit #], which I vacated on [Move-Out Date].\n\nAs noted during our move-out inspection on [Walkthrough Date], the property was left clean and in good condition with no damage beyond normal wear and tear, and all keys were returned. Since it has now been [Number] days since my lease ended, I wanted to check in on the status of the refund.\n\nCould you please let me know when the deposit was issued or when I can expect to receive it? If you are sending a check by mail, please forward it to my new address at [Your New Street Address, City, State, ZIP Code]. Thank you for your time, and please let me know if you need anything else from my end.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:what-is-machine-learning#prose",
+   "family": "everyday:explain:what-is-machine-learning",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Machine learning is a branch of artificial intelligence in which computers learn to recognize patterns and make predictions directly from data rather than following step-by-step instructions written by a human programmer. In traditional software, a developer has to anticipate every scenario and code explicit rules, such as flagging an email as spam only if it contains specific banned phrases. With machine learning, you instead feed a system thousands of examples of real emails and spam messages, allowing the software to discover subtle statistical patterns on its own and apply them to brand-new messages it has never encountered.\n\nDepending on the problem, engineers train these systems in a few different ways. Sometimes a model learns from labeled examples, such as studying thousands of medical scans tagged by doctors until it can spot early signs of disease on its own. Other times, a model explores massive piles of unlabeled data to uncover hidden groupings, such as identifying unusual credit card purchases that might signal fraud, or learns through trial and error by receiving digital rewards whenever it makes a successful move in a game or simulation.\n\nAlthough the underlying math can be complex, machine learning already sits quietly behind dozens of everyday tools. It is what enables voice assistants to understand spoken words, helps streaming platforms suggest shows you might enjoy, filters junk mail out of your inbox, and powers modern translation apps."
+  },
+  {
+   "id": "everyday:howto:how-do-i-learn-a-new-language-fast#prose",
+   "family": "everyday:howto:how-do-i-learn-a-new-language-fast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The fastest way to learn a new language is to focus on high-frequency vocabulary and real conversation from the very first week, rather than spending months memorizing abstract grammar rules before ever speaking. In almost every language, the one thousand most common words account for roughly eighty percent of everyday speech, so spending fifteen minutes a day reviewing those core words and practical phrases with a spaced-repetition flashcard app builds a usable foundation remarkably quickly.\n\nAt the same time, start speaking out loud with a native tutor or conversation partner as early as possible, even when you only know a few dozen words. Making mistakes in a low-pressure setting removes the fear of sounding awkward and trains your brain to retrieve vocabulary under real-time conditions. Pair those speaking sessions with daily passive immersion by listening to beginner podcasts during your commute and watching familiar shows in your target language with matching subtitles so your ear adapts to natural rhythm and pronunciation.\n\nConsistency matters far more than occasional marathon study sessions. Practicing for thirty focused minutes every single day keeps new vocabulary fresh in your memory and builds momentum far faster than cramming for three hours once a week."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-being-laid-off-and-l",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Like many peers across the industry this week, my position at [Company Name] was eliminated as part of a broader restructuring, so I am officially exploring new opportunities. While saying goodbye to a talented team is never easy, I am proud of what we built together over the past [X years/months], particularly leading [mention a key project or achievement].\n\nI am now looking for my next role as a [Target Role Title], where I can contribute my background in [key area 1], [key area 2], and [key area 3]. I am open to both remote positions and hybrid roles in [City], and I thrive on teams that value clear communication, ownership, and practical problem-solving.\n\nIf you know of an opening that might be a strong fit, or if you are simply open to connecting and swapping notes, please feel free to reach out directly. Any introductions, leads, or shares within your network would mean a great deal."
+  },
+  {
+   "id": "everyday:product:write-the-about-section-for-a-small-bakery-websi#prose",
+   "family": "everyday:product:write-the-about-section-for-a-small-bakery-websi",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "[Bakery Name] began with a simple conviction that great bread and pastries should never be rushed. Every morning at four o'clock, our ovens fire up to bake naturally leavened sourdough loaves, flaky laminated croissants, and seasonal fruit tarts made from locally milled flour, cultured butter, and honest ingredients you can recognize.\n\nWhat started as a small weekend stall at the local farmers' market in [Year] has grown into a warm neighborhood gathering spot on [Street/Neighborhood Name], yet our craft remains unchanged. We still mix our doughs in small batches, let them ferment slowly for up to thirty-six hours to develop rich flavor, and pull fresh trays from the oven throughout the morning until the shelves are empty.\n\nWhether you are stopping in for a warm cinnamon roll and an espresso before work or picking up a crusty country loaf for Sunday dinner with family, we are grateful to share our table with you."
+  },
+  {
+   "id": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised#prose",
+   "family": "everyday:advice:how-do-i-start-running-if-i-have-never-exercised",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The most common mistake new runners make is heading out the door and trying to run nonstop on their first day, getting completely winded within two minutes, and assuming they are simply not built for running. Instead, begin with structured walk-run intervals that give your heart, lungs, and joints time to adapt gradually. Start by visiting a running store to get fitted for a proper pair of cushioned athletic shoes, since worn-out everyday sneakers are the leading cause of beginner shin splints and knee soreness.\n\nFor your first couple of weeks, aim for three twenty-five-minute sessions per week with a rest day in between each workout. Begin every session with a five-minute brisk walk to warm up your muscles, then alternate one minute of easy jogging with two minutes of walking for fifteen to twenty minutes before finishing with a slow cool-down walk. Keep your jogging pace slow enough that you could comfortably speak a full sentence out loud without gasping for air, because building aerobic endurance always comes before worrying about speed.\n\nEach week, gradually extend the jogging segments and shorten the walking breaks until you can run comfortably for twenty to thirty minutes without stopping, which usually takes about eight weeks. Pay close attention to how your body recovers, honoring your rest days so your tendons and muscles can rebuild stronger between sessions."
+  },
+  {
+   "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#plain",
+   "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**How to Stay Motivated When Learning to Code Gets Hard**\n\nEvery self-taught programmer hits the same wall. The first few weeks feel thrilling\u2014you print `\"Hello, World!\"`, build a basic webpage, and watch things respond to your commands. Then you hit the \"desert of despair\": tutorials stop holding your hand, error messages stop making sense, and every bug takes three hours to fix.\n\nStaying motivated through that middle stretch isn't about superhuman willpower\u2014it's about changing how you structure your learning.\n\n* **Switch from passive tutorials to tiny personal projects early:** Following along with a 20-hour video course creates the illusion of progress without teaching you how to solve problems alone. As soon as you know the basics, build something small you actually care about\u2014a workout tracker, a budget splitter, or a script that automates a boring task.\n* **Keep a \"wins and solved bugs\" log:** When you're stuck on an error, it's easy to feel like you haven't learned anything. Writing down one thing you figured out or fixed each day gives you undeniable proof that you're moving forward.\n* **Shrink your daily goal so you never break the chain:** Aiming for four hours of coding after work leads to guilt and burnout. Committing to just 30 focused minutes a day keeps the habit alive on busy days\u2014and once you open your editor, you'll often keep going anyway.\n* **Normalize feeling stuck:** Senior engineers don't stop getting error messages; they just get better at reading documentation, isolating variables, and Googling the right questions. Getting stuck isn't a sign you lack talent\u2014it *is* the job.\n\nYou don't need to master an entire framework this month. Focus on solving the single bug in front of you today, and let those small victories stack up."
+  },
+  {
+   "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#plain",
+   "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Re: [Meeting Subject] \u2013 [Date]\n\nHi [Organizer's Name],\n\nThank you for inviting me to [Meeting Subject] on [Date]. Unfortunately, I won\u2019t be able to attend due to [a scheduling conflict / competing project deadlines this week].\n\nIf there are specific points you\u2019d like my input on ahead of time, please feel free to send them over and I\u2019d be happy to share my notes via email. Otherwise, I\u2019ll look forward to catching up on the recap or notes afterward.\n\nThanks for understanding, and I hope the session goes well!\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:how-does-compound-interest-work#plain",
+   "family": "everyday:explain:how-does-compound-interest-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Compound interest** is when you earn interest not only on your original money (the principal), but also on the interest you\u2019ve already earned. In short, it\u2019s **interest earning interest**, which causes your money to grow at an accelerating rate over time.\n\n**Simple vs. Compound Interest (Example):**\nImagine you invest **$1,000** at a **10% annual return**:\n\n* **Year 1:** You earn 10% of $1,000 = **$100**. Your balance is now **$1,100**.\n* **Year 2:** You earn 10% of $1,100 = **$110** (not just $100). Your balance is now **$1,210**.\n* **Year 3:** You earn 10% of $1,210 = **$121**. Your balance is now **$1,331**.\n* **Year 30:** Without adding another cent, that $1,000 grows to **$17,449**\u2014over 17 times your starting amount.\n\n**Why time matters most:**\nBecause growth builds on top of previous growth, **starting early beats investing larger amounts later**. Someone who invests $200/month from age 25 to 35 and stops completely can end up with more money at age 65 than someone who invests $200/month every single year from age 35 to 65.\n\n*(Note: Compound interest works in reverse with debt\u2014unpaid credit card balances compound against you just as fast.)*"
+  },
+  {
+   "id": "everyday:howto:how-do-i-set-up-a-home-network#plain",
+   "family": "everyday:howto:how-do-i-set-up-a-home-network",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Setting up a reliable home network takes about 20 minutes once you have your internet service activated, a modem, and a Wi-Fi router (or a single modem-router combo unit).\n\n1. **Place your equipment centrally:** Put the modem and router in an open, central spot off the floor\u2014away from thick concrete walls, microwaves, and metal cabinets that block Wi-Fi signals.\n2. **Connect the modem to your internet line:** Plug the coaxial cable (cable internet), phone line (DSL), or fiber Ethernet cable from the wall outlet into the modem's input port, then plug the modem into power and wait 2\u20133 minutes until the status lights turn solid.\n3. **Connect the router to the modem:** Run an Ethernet cable from the modem's LAN/Internet port into the router's **WAN/Internet** port (usually colored differently from the other ports), then power on the router. *(Skip this step if your ISP gave you a single all-in-one gateway box.)*\n4. **Access the router settings:** Connect your phone or laptop to the default Wi-Fi network printed on the router's sticker, then open the router's companion app or type its IP address (often `192.168.1.1` or `192.168.0.1`) into a web browser.\n5. **Secure and customize your Wi-Fi:**\n* Change the default **admin login password** for the router itself.\n* Create a custom **Wi-Fi network name (SSID)** and a strong **WPA3** (or WPA2) password.\n* Enable automatic **firmware updates** so security patches install on their own.\n\n\n6. **Connect your devices and test:** Reconnect your devices using your new Wi-Fi password and run a quick speed test in the rooms furthest from the router (add a mesh node or Ethernet switch if you have dead zones)."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Early in my engineering career, I thought getting promoted was purely about writing cleaner, faster code than everyone else.\n\nA few years later, it\u2019s clear that the biggest bottlenecks in software rarely happen inside an IDE\u2014they happen between people.\n\nThe best engineers I\u2019ve worked with stand out because of how they communicate, not just what they ship:\n\n* **Writing clear RFCs and PR descriptions** that save five teammates an hour of guesswork.\n* **Translating technical trade-offs into business impact** so product and leadership can make smart calls without getting lost in jargon.\n* **Giving direct, empathetic code reviews** that improve the codebase without bruising egos.\n* **Flagging risks early** instead of quietly hero-coding through the weekend to hide a slipping deadline.\n\nStrong technical fundamentals get you in the door, but clarity, curiosity, and trust are what multiply the output of an entire engineering team.\n\nWhat\u2019s one non-technical skill that has made the biggest difference in your engineering career?\n\n#SoftwareEngineering #TechLeadership #EngineeringCulture #CareerGrowth"
+  },
+  {
+   "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#plain",
+   "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Always put repair requests **in writing** (email or your tenant portal\u2014even if you call first) so there is a clear, dated paper trail if the issue escalates or comes up during deposit return later.\n\n* **Send the request promptly:** Report leaks, appliance breakdowns, or electrical issues as soon as you spot them so you can't be blamed for secondary damage (like water rot from a slow drip).\n* **Be specific and attach photos or video:** State the exact room, what is broken, when it started, and include clear photos or a 10-second video clip so the landlord knows whether to send a plumber, electrician, or handyman on the first visit.\n* **Note any safety or habitability impact:** Mention calmly if the issue affects heating, hot water, locks, or electrical safety, as those usually carry legal urgency.\n* **Offer clear access windows:** Let them know which days/times work for a technician to enter, or confirm whether they have permission to enter with their key while you're at work.\n* **Keep the tone polite and matter-of-fact:** Treat it as a shared goal to protect their property\u2014friendly, clear requests almost always get faster responses than confrontational ones."
+  },
+  {
+   "id": "everyday:article:write-a-short-article-about-how-to-stay-motivate#prose",
+   "family": "everyday:article:write-a-short-article-about-how-to-stay-motivate",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Almost everyone teaching themselves to code hits the exact same wall. The first few weeks feel thrilling as you print your first lines of text, style a basic webpage, and watch the screen respond to your commands. Eventually, though, the beginner tutorials stop holding your hand, error messages stop making sense, and a single broken feature can eat up an entire evening. Staying motivated through that frustrating middle stretch has very little to do with willpower and everything to do with changing how you structure your practice.\n\nThe fastest way to rebuild momentum is to step away from passive video courses and start building tiny, imperfect projects of your own as early as possible. Watching a twenty-hour tutorial creates the illusion of progress without teaching you how to think through a problem from scratch, whereas building something small you actually care about\u2014like a simple budget splitter or a workout tracker\u2014gives every new concept an immediate purpose. Keeping a quick daily log of bugs you solved or concepts that finally clicked also provides tangible proof that you are advancing on days when your code refuses to cooperate.\n\nIt also helps to shrink your daily commitment so you never break the habit when life gets busy. Aiming for four hours of study after a long workday almost guarantees burnout, while committing to thirty focused minutes a day keeps the mental gears turning and often leads to longer sessions once you get into a rhythm. Above all, remind yourself that feeling stuck is not a sign that you lack talent; experienced engineers run into broken code every single day, and learning how to stay calm while reading documentation and isolating a bug is the core skill you are really practicing."
+  },
+  {
+   "id": "everyday:email:write-an-email-declining-a-meeting-invitation-po#prose",
+   "family": "everyday:email:write-an-email-declining-a-meeting-invitation-po",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Re: [Meeting Subject] \u2013 [Date]\n\nHi [Organizer's Name],\n\nThank you for inviting me to [Meeting Subject] on [Date]. Unfortunately, I will not be able to join due to a scheduling conflict with another project commitment at that time.\n\nIf there are any specific topics where you would like my perspective beforehand, please feel free to send them my way and I will gladly share my thoughts by email. Otherwise, I will look forward to catching up on the meeting notes afterward.\n\nThank you for understanding, and I hope you have a productive session.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:how-does-compound-interest-work#prose",
+   "family": "everyday:explain:how-does-compound-interest-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Compound interest is what happens when you earn interest not only on the original sum of money you saved or invested, but also on all the interest that money has already generated. Instead of growing in a straight, steady line, your balance snowballs over time because each cycle's earnings become part of the new base that earns interest in the next cycle.\n\nTo see how this works in practice, imagine investing one thousand dollars at an annual return of ten percent. After the first year, you earn one hundred dollars, bringing your total to eleven hundred dollars. In the second year, you earn ten percent on that entire eleven hundred dollars rather than just your starting deposit, giving you one hundred and ten dollars in growth and a balance of twelve hundred and ten dollars. Left untouched for thirty years at that same rate, your original thousand dollars would grow to more than seventeen thousand dollars without you adding another cent.\n\nBecause each year's growth builds directly on top of the previous year's gains, time is the most powerful ingredient in compounding. Starting early with modest amounts routinely beats investing much larger sums later in life, though it is worth remembering that compound interest works in reverse on high-interest debt, causing unpaid credit card balances to snowball just as quickly against you."
+  },
+  {
+   "id": "everyday:howto:how-do-i-set-up-a-home-network#prose",
+   "family": "everyday:howto:how-do-i-set-up-a-home-network",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Setting up a home network takes about twenty minutes once your internet service is active and you have a modem and a Wi-Fi router on hand. Begin by choosing a central, open spot in your home off the floor, keeping the equipment away from thick concrete walls, metal cabinets, and microwaves that can weaken wireless signals. Connect the coaxial, phone, or fiber cable from your wall outlet into the modem's input port, plug the modem into power, and wait two or three minutes until the status lights settle into a solid glow.\n\nIf your modem and router are separate devices, run an Ethernet cable from the modem's output port into the router's dedicated internet or WAN port, then plug the router into power and give it a couple of minutes to boot up. Next, connect a phone or laptop to the default Wi-Fi network printed on the back or bottom of the router, and open either the manufacturer's mobile app or a web browser pointed at the router's setup address.\n\nInside the settings menu, replace the factory admin password with a strong password of your own, create a custom Wi-Fi network name and WPA3 or WPA2 wireless password, and turn on automatic firmware updates so your network stays protected against security flaws. Once you save those changes and reconnect your devices using your new credentials, test your connection in the rooms furthest from the router to confirm you have solid coverage throughout the house."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-why-soft-skills-matt",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Early in my engineering career, I assumed growth came down almost entirely to writing faster, cleaner code than everyone else. A few years on, it has become clear that the biggest bottlenecks on a software team rarely happen inside a code editor; they happen in the gaps between people.\n\nThe engineers who make the biggest impact stand out just as much for how they communicate as for what they build. Writing a clear design document or pull request description can save five teammates an hour of guesswork, while translating complex technical trade-offs into plain business terms helps product managers and leaders make smart decisions without getting lost in jargon. Just as importantly, giving thoughtful, empathetic code reviews and flagging schedule risks early builds the kind of trust that keeps an entire team moving smoothly.\n\nStrong technical fundamentals will always get you through the door, but clarity, curiosity, and collaboration are what truly multiply a team's output."
+  },
+  {
+   "id": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something#prose",
+   "family": "everyday:advice:how-do-i-ask-my-landlord-to-fix-something",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Whenever something breaks in your rental, put your request in writing through email or your property's online portal so there is a clear, dated record of when you reported the problem. Even if you call first for an urgent issue, sending a quick written follow-up protects you from being blamed for secondary damage later on and creates a helpful paper trail if questions ever come up around your security deposit.\n\nKeep your message polite, specific, and practical so the landlord can act on it without back-and-forth questions. State which room the issue is in, describe what is happening and when it started, and attach clear photos or a short video clip so they know whether to dispatch a plumber, electrician, or general handyman on the first visit. If the problem affects essential utilities like heat, hot water, locks, or electrical safety, note that calmly so they understand the urgency.\n\nFinally, make scheduling easy by offering a few windows when you are home to let a technician in, or let them know whether you authorize maintenance staff to enter with a spare key while you are out. Framing the request as a shared interest in keeping their property in good shape almost always leads to a faster, smoother repair."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#plain",
+   "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**What My First Solo Trip Taught Me About Being Alone**\n\nThree days before my first solo flight, I seriously considered canceling the whole trip. Sitting at a restaurant table for one or navigating a foreign train station without someone to double-check the platform felt strangely intimidating\u2014like I was about to fail a test nobody else was grading.\n\nWithin 24 hours of landing, that nervousness turned into the most freeing feeling I've ever experienced.\n\nHere is what surprised me most about traveling alone for the first time:\n\n* **Nobody is watching you as closely as you think.** The first time I ordered dinner alone with a book, I felt self-conscious for about four minutes. Then I realized every other person in the restaurant was completely absorbed in their own conversation\u2014and eating at my own pace without negotiating where to go was weirdly peaceful.\n* **You actually talk to people.** When you travel with a friend or partner, you carry a self-contained bubble everywhere you go. Alone, you're naturally more open\u2014I ended up having great conversations with a museum guard, a family on a regional train, and two other solo travelers at a walking tour.\n* **Small hiccups lose their drama.** When I missed a bus connection on day three, there was nobody to argue with or blame. I grabbed a coffee, checked the next timetable, and figured it out in ten minutes\u2014and walked away realizing I'm way more resourceful than I gave myself credit for.\n\nTraveling with people you love is wonderful, but doing a trip completely on your own terms\u2014waking up when you want, lingering for an hour in a random neighborhood caf\u00e9, skipping the famous landmark if you're tired\u2014is something everyone should experience at least once."
+  },
+  {
+   "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#plain",
+   "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Hello from [Your Name] \u2013 Excited to join the team!\n\nHi everyone,\n\nI\u2019m thrilled to be joining [Company/Department Name] today as your new [Job Title]!\n\nBefore coming on board here, I spent the last [X years] at [Previous Company/Background], where I worked on [briefly describe 1\u20132 relevant focus areas, e.g., scaling backend payment APIs / leading customer onboarding campaigns]. I\u2019m really excited to bring that experience to [Team Name] and help tackle [mention an upcoming goal or project].\n\nOutside of work, you can usually find me [1\u20132 light personal details, e.g., testing out new espresso recipes, hiking with my dog, or playing weekend tennis].\n\nOver the next couple of weeks, I\u2019d love to set up brief 15-minute intro chats to learn what everyone is working on and how I can best support the team. In the meantime, feel free to say hi on [Slack/Teams] or drop by my desk!\n\nBest regards,\n\n[Your Name]\n\n[Your Title]"
+  },
+  {
+   "id": "everyday:explain:what-causes-jet-lag#plain",
+   "family": "everyday:explain:what-causes-jet-lag",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Jet lag** happens when you fly rapidly across multiple time zones and your body\u2019s internal clock falls out of sync with the local day-night schedule at your destination.\n\nDeep inside your brain is a master pacemaker (the **suprachiasmatic nucleus**) that regulates your **circadian rhythm**\u2014a roughly 24-hour cycle controlling when you feel sleepy or alert, when your body releases hormones like melatonin and cortisol, and even when your digestive system expects food.\n\n**Why flying disrupts it:**\n\n* **Your internal clock adjusts slowly:** While a plane can carry you across eight time zones in ten hours, your circadian rhythm can typically only shift by about **1 to 1.5 hours per day**.\n* **Light cues conflict with your biology:** Your brain uses sunlight entering your eyes to reset its clock. When you land in a new time zone, sunlight is hitting you at hours your body still thinks are the middle of the night.\n* **Traveling east feels worse than traveling west:** Flying west lengthens your day, which aligns better with the human body\u2019s natural tendency to run slightly longer than 24 hours. Flying east shortens your day, forcing you to try falling asleep hours earlier than your brain is ready.\n\nBecause both your sleep drive and your digestion are still running on your home time zone, you end up wide awake at 3:00 AM, exhausted at noon, and hungry at odd hours until daylight exposure gradually resets your internal clock."
+  },
+  {
+   "id": "everyday:howto:how-do-i-write-a-good-cv#plain",
+   "family": "everyday:howto:how-do-i-write-a-good-cv",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A strong CV makes it effortless for a recruiter to see your relevant impact within the first **6\u201310 seconds** of scanning.\n\n1. **Tailor it to the target role:** Mirror the key skills and terminology from the job description in your summary and top bullet points rather than sending an identical generic CV everywhere.\n2. **Keep the layout clean and scannable:** Use a single-column format, clear section headings, standard fonts (10\u201311 pt), and plenty of white space. Keep it to **1 page** if you have under 7\u201310 years of experience (or 2 pages max for senior/academic roles).\n3. **Lead with a sharp 2\u20133 line summary:** State your current title, years of relevant experience, core specialty, and biggest measurable strength\u2014skip vague clich\u00e9s like *\"hardworking team player.\"*\n4. **Write achievement bullets, not job descriptions:** Start each bullet with a strong action verb and show **what you did + how you did it + the measurable result** (e.g., *\"Redesigned checkout flow, reducing cart abandonment by 18% and adding $240K in annual revenue\"* instead of *\"Responsible for website UX\"*).\n5. **Put your strongest proof near the top:** List experience in reverse chronological order, and place your Skills or Certifications section where it reinforces your core fit (near the top for technical roles, or below Experience for leadership roles).\n6. **Proofread ruthlessly and export as PDF:** Eliminate typos, check that dates and formatting align cleanly, and save as a PDF so fonts and margins don't shift on another computer."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Excited to share that I\u2019ve officially earned my **[Certification Name, e.g., Google Data Analytics / Microsoft Certified: Power BI Data Analyst]** certification! \ud83d\udcca\n\nOver the past [X weeks/months], I dove deep into cleaning messy datasets, writing complex SQL queries, building interactive dashboards, and\u2014most importantly\u2014turning raw numbers into clear recommendations stakeholders can actually act on.\n\nOne big takeaway from the capstone project: the cleanest visualization in the world doesn't matter if you haven't framed the right business question first.\n\nGrateful to [mention mentor, study group, or program if applicable] for the support along the way. Looking forward to putting these tools to work on real-world data problems!\n\n#DataAnalytics #DataScience #ContinuousLearning #SQL #CareerGrowth"
+  },
+  {
+   "id": "everyday:advice:how-do-i-plan-a-budget-wedding#plain",
+   "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The biggest driver of wedding costs is **guest count**, because nearly every major expense\u2014venue size, catering, rentals, invitations, and bar tabs\u2014scales directly per head.\n\n* **Set a hard ceiling first and pick your top 2 priorities:** Decide on your maximum total number before touring venues, then pick the two elements you care about most (e.g., great food and photography) and cut aggressively everywhere else.\n* **Trim the guest list early:** Cutting 30 guests at $100\u2013$150 per head immediately saves $3,000\u2013$4,500 without sacrificing the quality of the experience for the people closest to you.\n* **Choose an off-peak date or non-traditional venue:** Getting married on a Friday, Sunday, or between November and March often cuts venue fees by 20\u201340%. Public parks, community halls, restaurants, and family backyards also beat traditional wedding halls on price.\n* **Simplify food and drinks:** Buffet or family-style catering costs less than plated service, and serving beer, wine, and one signature cocktail instead of a full open liquor bar can cut bar costs in half.\n* **Skip low-impact extras:** Guests rarely remember wedding favors, elaborate paper programs, chair covers, or multi-tier fondant cakes (a small cutting cake paired with sheet cake from the kitchen tastes identical for a fraction of the price).\n* **Track every quote in one spreadsheet:** Include taxes, service charges, and vendor tips (often an extra 20\u201325% on top of base quotes) so there are no surprises in the final month."
+  },
+  {
+   "id": "everyday:article:write-a-first-person-post-about-traveling-solo-f#prose",
+   "family": "everyday:article:write-a-first-person-post-about-traveling-solo-f",
+   "genre": "article",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Three days before my first solo trip, I seriously considered canceling the whole flight. The thought of sitting at a restaurant table for one or figuring out an unfamiliar train station without someone beside me to double-check the platform felt strangely intimidating, almost like I was about to fail a social test nobody else was grading. Within twenty-four hours of landing, though, that nervousness gave way to the most freeing feeling I have ever experienced.\n\nWhat surprised me most was how quickly the self-consciousness disappeared. The first time I ordered dinner alone with a book in hand, I felt awkward for about four minutes before realizing that everyone else in the room was completely absorbed in their own evening. Even better, traveling without a companion dissolved the invisible social bubble you carry when you are with a friend, leading to genuine conversations with a museum guard, a family sharing a train compartment, and fellow travelers on a neighborhood walking tour.\n\nWhen I missed a bus connection on the third afternoon, there was nobody to argue with or blame; I simply bought a coffee, checked the next timetable, and sorted it out in ten minutes. Traveling with people you love is wonderful, yet spending a few days moving entirely at your own pace\u2014lingering in a quiet caf\u00e9 or skipping a crowded landmark on a whim\u2014gives you a quiet confidence you carry home long after unpacking."
+  },
+  {
+   "id": "everyday:email:write-an-email-introducing-myself-to-a-new-team#prose",
+   "family": "everyday:email:write-an-email-introducing-myself-to-a-new-team",
+   "genre": "email",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Subject: Hello from [Your Name] \u2013 Excited to join the team!\n\nHi everyone,\n\nI am excited to be joining [Company/Department Name] today as your new [Job Title]. Before coming on board here, I spent the past [X years] at [Previous Company], where I focused on [briefly mention your previous work area], and I am looking forward to bringing that experience to help the team with [upcoming goal or project].\n\nOutside of work, I enjoy [mention one or two casual hobbies, such as hiking, cooking, or reading], and I am always happy to swap local coffee or restaurant recommendations.\n\nOver the next couple of weeks, I would love to set up short intro chats to hear what everyone is working on and learn how I can best contribute. In the meantime, please feel free to reach out anytime on [Slack/Teams] or stop by to say hello.\n\nBest regards,\n\n[Your Name]"
+  },
+  {
+   "id": "everyday:explain:what-causes-jet-lag#prose",
+   "family": "everyday:explain:what-causes-jet-lag",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Jet lag occurs when you fly quickly across several time zones and leave your body's internal clock out of sync with the local day and night schedule at your destination. Deep inside your brain sits a master timekeeper that governs your circadian rhythm, a roughly twenty-four-hour biological cycle that tells you when to feel alert or sleepy, regulates hormone release, and even controls when your digestive system expects meals.\n\nWhile a commercial airplane can carry you across eight time zones in half a day, your internal biological clock adjusts much more slowly, typically shifting by only an hour or ninety minutes per day. Because your brain relies heavily on natural sunlight entering your eyes to calibrate itself, landing in a new time zone exposes you to bright daylight at hours your body still believes are the middle of the night.\n\nThis mismatch tends to feel noticeably worse when flying east than when flying west. Traveling west lengthens your day, which aligns comfortably with the human body's natural tendency to run on a cycle slightly longer than twenty-four hours, whereas flying east compresses your day and forces you to try sleeping hours before your brain is ready. Until repeated exposure to local daylight gradually resets your clock, you are left wide awake in the middle of the night and exhausted during the afternoon."
+  },
+  {
+   "id": "everyday:howto:how-do-i-write-a-good-cv#prose",
+   "family": "everyday:howto:how-do-i-write-a-good-cv",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A strong CV makes it easy for a recruiter or hiring manager to spot your relevant value within the first few seconds of scanning. Start by tailoring the document to the specific role you want, echoing the core skills and terminology from the job posting rather than sending the exact same generic file to every company. Keep the visual layout clean and uncluttered with a single-column design, readable standard fonts, and generous margins, aiming for a single page if you have under ten years of experience or two pages at most for senior roles.\n\nOpen with a brief two- or three-sentence summary that states your title, years of experience, core specialty, and strongest professional achievement, skipping vague filler phrases like hardworking team player. Under your work history, list roles in reverse chronological order and write bullet points that focus on measurable outcomes rather than passive job duties. Instead of merely stating what you were responsible for, describe the specific action you took and the concrete result it produced, using numbers, percentages, or time saved wherever possible.\n\nFinally, place your skills or certifications where they best reinforce your qualifications, and proofread every line carefully to catch spelling errors or inconsistent date formatting. Export the finished document as a PDF so your spacing and fonts stay intact regardless of what device the recruiter opens it on."
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-getting-a-certificat",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "I am excited to share that I have officially earned my [Certification Name] certification. Over the past few months, I spent my evenings and weekends diving into data cleaning, writing SQL queries, building interactive dashboards, and learning how to turn messy spreadsheets into clear insights that teams can actually act on.\n\nThe biggest lesson from completing the final capstone project was realizing that even the sharpest chart means very little if you have not framed the right business question first. Taking the time to understand what decision a stakeholder needs to make changes everything about how you explore and present the numbers.\n\nI am grateful to everyone who offered encouragement and feedback along the way, and I am looking forward to applying these skills to real-world analytics challenges ahead."
+  },
+  {
+   "id": "everyday:advice:how-do-i-plan-a-budget-wedding#prose",
+   "family": "everyday:advice:how-do-i-plan-a-budget-wedding",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The single biggest lever for keeping a wedding affordable is your guest count, because nearly every major expense\u2014from venue capacity and catering to rentals and invitations\u2014multiplies directly per person. Before touring venues or booking vendors, sit down together to set a firm overall spending ceiling and choose the two elements you care about most, such as great food and a talented photographer, so you can invest thoughtfully there while cutting back everywhere else. Trimming even twenty or thirty guests from the list often saves thousands of dollars right away while keeping the celebration intimate.\n\nChoosing an off-peak date or an unconventional setting can dramatically lower your fixed costs as well. Hosting your wedding on a Friday, a Sunday, or during quieter winter months routinely reduces venue fees compared to peak Saturday evenings, while public parks, community halls, favorite restaurants, or a family backyard offer plenty of charm without expensive venue minimums. You can stretch your catering budget further by opting for buffet or family-style dining instead of plated courses, and by serving beer, wine, and a single signature drink rather than a full open liquor bar.\n\nFinally, skip traditional extras that guests barely notice, such as printed ceremony programs, chair covers, and personalized party favors, and consider serving a small decorative cake for photos alongside sheet cake sliced in the kitchen. Track every vendor quote in a shared spreadsheet\u2014making sure to factor in taxes, service fees, and gratuities from the beginning\u2014so you stay comfortably within budget right up to the wedding day."
+  },
+  {
+   "id": "everyday:explain:explain-how-vaccines-work#plain",
+   "family": "everyday:explain:explain-how-vaccines-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "A **vaccine** works like a safe training drill for your immune system\u2014it teaches your body how to recognize and defeat a dangerous germ *before* you ever catch the actual disease.\n\n1. **Introducing a harmless preview:** A vaccine contains a weakened, inactivated, or tiny harmless piece of a virus or bacteria (or the genetic blueprint to make one harmless surface protein, as in mRNA vaccines). It cannot cause the full-blown illness.\n2. **Your immune system practices its defense:** Even though the vaccine ingredient is harmless, your immune system treats it as an intruder. White blood cells respond by producing custom **antibodies** (proteins that lock onto the germ) and activating **T-cells** (which destroy infected cells).\n3. **Creating long-term immune memory:** Once the drill is over, your body keeps a team of **memory cells** on standby for years\u2014sometimes for life.\n4. **Fast response to real exposure:** If the real virus or bacteria enters your body later, those memory cells recognize it immediately and launch a rapid, overwhelming antibody response before the germ has time to multiply and make you seriously sick.\n\n*(Note: Mild side effects like a sore arm or low-grade fever after a shot aren't signs of the illness\u2014they're proof that your immune system is actively running the training exercise.)*"
+  },
+  {
+   "id": "everyday:howto:how-do-i-make-sourdough-bread#plain",
+   "family": "everyday:howto:how-do-i-make-sourdough-bread",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Making sourdough bread relies on a live **sourdough starter** (fermented flour and water) instead of commercial yeast, and takes about **24 hours** from mixing to slicing (mostly hands-off resting time).\n\n**Basic Country Loaf Ingredients:**\n\n* 100 g active, bubbly sourdough starter (fed 4\u20138 hours earlier)\n* 350 g warm water\n* 500 g bread flour\n* 10 g fine sea salt\n\n**Step-by-Step Process:**\n\n1. **Mix (Autolyse):** Whisk the starter and warm water together until milky, then stir in the flour until no dry patches remain. Cover and rest for **30\u201345 minutes**.\n2. **Add salt & stretch-and-folds (Bulk Fermentation):** Sprinkle the salt over the dough with a splash of water and pinch it in. Over the next **3\u20134 hours** at room temperature, perform 4 sets of \"stretch and folds\" spaced 30 minutes apart (grab one edge of the dough, stretch it up, and fold it over the center, rotating the bowl 4 times). Let the dough rest until it grows by ~50\u201375% and looks puffy with small bubbles.\n3. **Shape:** Turn the dough onto a lightly floured counter, gently shape it into a tight round ball (boule) or oval (batard) by pulling it toward you to build surface tension, and place it seam-side up into a floured proofing basket (or towel-lined bowl).\n4. **Cold proof overnight:** Cover the basket and refrigerate for **12\u201316 hours** to develop flavor and make the dough easy to score.\n5. **Bake in a Dutch oven:** Preheat your oven with a covered Dutch oven inside to **450\u00b0F (230\u00b0C)** for 30 minutes. Flip the cold dough onto parchment paper, slash the top \u00bd-inch deep with a sharp razor or knife (scoring), and carefully lower it into the hot pot.\n* Bake **covered for 20 minutes** (traps steam for a crisp crust and oven spring).\n* Remove the lid and bake **uncovered for 20\u201325 minutes** until deep golden brown.\n\n\n6. **Cool completely:** Rest the loaf on a wire rack for at least **1\u20132 hours** before slicing\u2014cutting while hot releases steam and makes the crumb gummy."
+  },
+  {
+   "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#plain",
+   "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The fastest way to turn kids into readers is to make reading feel like **entertainment and choice**, never a chore or homework assignment.\n\n* **Let them choose their own books\u2014without judgment:** Graphic novels, comic books, Guinness World Records, joke books, and audiobooks all count as real reading. A kid devouring a comic series builds vocabulary and reading stamina far faster than a kid forced through a \"classic\" they hate.\n* **Keep books within arm's reach everywhere:** Leave baskets of books in the living room, car, and beside their bed so picking up a book is just as effortless as grabbing a tablet.\n* **Keep reading aloud together\u2014even after they can read solo:** Reading a chapter book aloud at bedtime lets kids enjoy richer stories above their independent reading level and turns books into warm family bonding time.\n* **Model reading yourself:** Kids copy what they see. When they regularly see you reading a physical book or e-reader to relax instead of scrolling on a phone, reading registers as a normal, enjoyable adult habit.\n* **Make weekly library trips a fun ritual:** Let them walk out with a stack of 10 books they picked themselves\u2014with zero pressure to finish any book they lose interest in after 20 pages."
+  },
+  {
+   "id": "everyday:explain:explain-how-vaccines-work#prose",
+   "family": "everyday:explain:explain-how-vaccines-work",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "A vaccine works like a safe training exercise for your immune system, teaching your body how to recognize and fight off a dangerous germ before you ever encounter the real disease. Instead of exposing you to a full-strength virus or bacterium, a vaccine introduces a weakened, inactivated, or tiny harmless piece of the germ, or the genetic instructions for your cells to temporarily make a single harmless surface protein from it. Because it cannot cause the actual illness, your body can study the threat safely.\n\nEven though the vaccine ingredient is harmless, your immune system treats it as an unfamiliar invader and launches a practice defense. Specialized white blood cells respond by creating custom antibodies that lock onto the target and activating immune cells trained to clear out infected tissue. Once this training drill wraps up, your body keeps a dedicated reserve of memory cells on standby for years, and sometimes for the rest of your life.\n\nIf the real virus or bacterium ever enters your body in the future, those memory cells recognize it immediately and trigger a rapid, targeted antibody response before the germ can multiply and make you seriously ill. Mild side effects like a sore arm or brief fatigue after getting a shot are simply signs that your immune system is actively building that protection."
+  },
+  {
+   "id": "everyday:howto:how-do-i-make-sourdough-bread#prose",
+   "family": "everyday:howto:how-do-i-make-sourdough-bread",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Making sourdough bread relies on a live sourdough starter of fermented flour and water rather than commercial yeast, and typically spans about twenty-four hours of mostly hands-off resting time. Start by whisking one hundred grams of bubbly, active starter with three hundred and fifty grams of warm water until milky, then stir in five hundred grams of bread flour until no dry patches remain. Cover the bowl and let the dough rest for about thirty to forty-five minutes so the flour can fully absorb the water.\n\nNext, sprinkle ten grams of sea salt over the dough with a splash of water and pinch it in thoroughly. Over the next three to four hours at room temperature, perform four gentle sets of stretches and folds spaced thirty minutes apart by grabbing one edge of the dough, pulling it upward, and folding it over the center as you rotate the bowl. Once the dough looks puffy and has risen by roughly half to three-quarters of its original volume, turn it onto a lightly floured counter, shape it into a tight round or oval loaf, and place it seam-side up in a floured proofing basket to chill in the refrigerator overnight for twelve to sixteen hours.\n\nWhen you are ready to bake, preheat your oven with a covered Dutch oven inside to four hundred and fifty degrees Fahrenheit for thirty minutes. Flip the chilled dough onto a sheet of parchment paper, slash the top half an inch deep with a sharp blade so it can expand cleanly, and carefully lower it into the hot pot. Bake covered for twenty minutes to trap steam for a crisp crust, then remove the lid and bake for another twenty to twenty-five minutes until the loaf is deep golden brown, allowing it to cool completely on a wire rack for at least an hour before slicing."
+  },
+  {
+   "id": "everyday:advice:how-do-i-get-my-kids-to-read-more#prose",
+   "family": "everyday:advice:how-do-i-get-my-kids-to-read-more",
+   "genre": "advice",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "The most reliable way to help kids fall in love with reading is to treat it as pure entertainment and personal choice rather than a daily chore or homework assignment. Let them pick whatever grabs their curiosity without judgment, whether that means graphic novels, comic books, joke collections, or audiobooks. A child who devours a comic series is still building vocabulary, comprehension, and reading stamina, whereas forcing them through a classic novel they find boring only teaches them to avoid books.\n\nMaking books effortless to reach around the house also makes a big difference. Keep small baskets of books in the living room, in the backseat of the car, and right beside their bed so picking up a story is just as convenient as reaching for a screen. Even after your kids know how to read independently, continuing to read a chapter book aloud together at bedtime lets them experience richer stories above their current reading level and associates books with warm, unhurried family time.\n\nFinally, let your kids see you reading for pleasure yourself, since children naturally mirror the habits of the adults around them. Turning a weekly trip to the local library into a fun routine\u2014where they can load up a bag with whatever catches their eye and abandon any book that fails to hook them after twenty pages\u2014keeps curiosity at the center of the habit."
+  },
+  {
+   "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#plain",
+   "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A **credit score** is a three-digit number (typically ranging from **300 to 850** in the US, such as a FICO or VantageScore) that summarizes how reliably you borrow and repay money. Lenders use it as a quick snapshot to predict how likely you are to pay back a loan on time.\n\n**What goes into a credit score:**\n\n* **Payment history (~35%):** Whether you pay bills on time\u2014even one 30-day late payment can drop your score noticeably.\n* **Credit utilization (~30%):** How much of your available credit you\u2019re currently using (keeping credit card balances below 30%\u2014and ideally under 10%\u2014of your limit helps most).\n* **Length of credit history (~15%):** How long your oldest and average accounts have been open.\n* **Credit mix (~10%):** Handling different types of credit, such as credit cards alongside an auto or student loan.\n* **New credit inquiries (~10%):** How frequently you apply for new credit in a short window.\n\n**Why it matters in real life:**\nA higher credit score (generally **740+**) saves you tens of thousands of dollars over your lifetime and opens doors beyond just loans:\n\n* **Lower interest rates:** You qualify for much cheaper rates on mortgages, car loans, and credit cards.\n* **Easier approvals:** Landlords check credit before approving apartment leases, and utility or cell phone providers may waive security deposits for applicants with strong credit.\n* **Better insurance and job checks:** In many states, insurers factor credit-based scores into auto and home premiums, and some employers check credit reports for roles involving financial responsibility."
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-podcast#plain",
+   "family": "everyday:howto:how-do-i-start-a-podcast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "You don\u2019t need a soundproof studio to launch a great podcast\u2014a quiet closet, a decent USB microphone, and a clear topic are enough to publish your first episode.\n\n1. **Define your concept and format:** Pick a specific topic and audience, decide whether the show will be solo, co-hosted, or interview-based, and choose a consistent episode length (20\u201340 minutes is the sweet spot for most shows) and release schedule.\n2. **Get basic recording gear:** Buy a reliable dynamic USB microphone (like the **Samson Q2U** or **Audio-Technica ATR2100x**, around $70\u2013$100), closed-back headphones, and a simple pop filter. Dynamic mics reject background room echo much better than condenser mics.\n3. **Record in a soft, quiet room:** Record in a bedroom with curtains, carpet, or a closet full of clothes to absorb echo, and keep your mouth 3\u20134 inches from the mic.\n4. **Edit your audio:** Use free software like **Audacity** or **GarageBand** (or **Riverside / Descript** for remote interviews and text-based editing) to trim long pauses, remove mistakes, and balance volume levels.\n5. **Create cover art and intro music:** Design clean, readable 3000\u00d73000 px cover art (in Canva) and grab royalty-free intro music so your show looks and sounds polished.\n6. **Upload to a podcast host and distribute:** Sign up for a podcast hosting platform (such as **Buzzsprout**, **Spotify for Podcasters**, or **Transistor**), upload your MP3 file, and submit your RSS feed once to Apple Podcasts, Spotify, and YouTube\u2014after that, new episodes publish automatically everywhere."
+  },
+  {
+   "id": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter#prose",
+   "family": "everyday:explain:what-is-a-credit-score-and-why-does-it-matter",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "A credit score is a three-digit number, typically ranging from three hundred to eight hundred and fifty, that summarizes your track record of borrowing and repaying money. Banks, credit card issuers, and lenders use it as a quick way to gauge how reliable you are and how likely you are to pay back a loan on time based on your past financial habits.\n\nYour score is calculated from information in your credit reports, with the heaviest weight placed on whether you pay your bills on time and how much of your available credit card limits you are currently using. Keeping balances low relative to your limits and maintaining a long history of on-time payments steadily pushes your score upward, while missed payments, maxed-out cards, or frequent applications for new credit pull it down.\n\nIn everyday life, a strong credit score saves significant money and removes financial friction. Borrowers with higher scores qualify for lower interest rates on mortgages, auto loans, and credit cards, which can easily save tens of thousands of dollars over time. Beyond borrowing, landlords routinely check credit when reviewing apartment applications, utility and phone companies often waive security deposits for applicants with solid credit, and insurers in many areas use credit-based metrics when pricing auto and home policies."
+  },
+  {
+   "id": "everyday:howto:how-do-i-start-a-podcast#prose",
+   "family": "everyday:howto:how-do-i-start-a-podcast",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Launching a podcast is far simpler than most beginners expect, and you do not need a professional studio to sound great. Start by defining a clear topic, target listener, and repeatable format\u2014such as solo episodes, co-hosted discussions, or guest interviews\u2014along with a realistic publishing schedule you can stick to every week or two. Invest in a basic dynamic USB microphone, which naturally blocks out room echo far better than a laptop mic, pair it with a set of headphones, and record in a quiet room with soft furnishings like curtains, carpet, or a closet full of clothes to keep your voice crisp.\n\nOnce you have recorded your first episode, bring the audio file into free editing software like Audacity or GarageBand\u2014or a browser-based tool like Riverside or Descript if you are recording guests remotely\u2014to trim out long pauses, cut false starts, and level the volume. Put together clean square cover art with large, readable text and add a brief royalty-free intro track so your show makes a strong first impression.\n\nTo get your episodes onto major listening apps, upload your finished audio file to a dedicated podcast hosting platform such as Buzzsprout, Transistor, or Spotify for Podcasters. Your host generates an RSS feed that you submit once to Apple Podcasts, Spotify, and other directories, and from that point forward, every new episode you upload will distribute automatically across every platform."
+  }
+ ],
+ "label": "Gemini (app)"
+}

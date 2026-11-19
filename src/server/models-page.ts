@@ -27,7 +27,7 @@ export const MODELS_TEXT = {
     'tells checked each answer with no options, as the web page does. The register (casual, professional, technical, marketing) is guessed from the text.',
   ],
   sizes: [
-    'Not every model answered all 108. Gemini ran on a free tier that allows 20 requests a day per model. Gemini 4 Hydrogen answered 17 before the limit, all of them advice requests, so its row is advice only. Gemini 3.8 Flash answered 6, too few to rank, and Gemini 4 Argon, Carbon and Neon are not on the free tier. GPT-6.2 Sol answered all 108. GPT-6.2 Astra, GPT-6.1 Terra and GPT-6 Luna were stopped after 15 to 26 answers to stay within budget, so they are not ranked.',
+    'Gemini was asked through the Gemini app at gemini.google.com, one new chat per request, so its answers are what people get there. It answered 89 of the 108. GPT-6.2 Sol answered through the API, and the Claude models through Claude Code with the same system prompt.',
   ],
   bias: [],
 };

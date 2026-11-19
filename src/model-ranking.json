@@ -3,54 +3,54 @@
  "tellsVersion": "0.4.2",
  "models": [
   {
-   "label": "Gemini 4 Hydrogen",
+   "label": "Gemini (app)",
    "provider": "Google",
-   "n": 17,
+   "n": 89,
    "withWarning": {
-    "v": 58.8,
-    "lo": 35.3,
-    "hi": 82.4
+    "v": 44.9,
+    "lo": 34.8,
+    "hi": 55.1
    },
    "per100": {
-    "v": 1.85,
-    "lo": 1.12,
-    "hi": 2.44
+    "v": 1.34,
+    "lo": 0.93,
+    "hi": 1.8
    },
    "score": {
-    "v": 0.6,
-    "lo": 0.3,
-    "hi": 1.1
+    "v": 10,
+    "lo": 6.3,
+    "hi": 14.1
    },
    "machineLike": {
-    "v": 100,
-    "lo": 100,
-    "hi": 100
+    "v": 83,
+    "lo": 75,
+    "hi": 90.9
    },
-   "nScored": 17,
+   "nScored": 88,
    "top": [
+    {
+     "id": "unfilled-placeholder",
+     "name": "Unfilled placeholder",
+     "share": 27
+    },
     {
      "id": "bold-label-list",
      "name": "Bold-label bullets",
-     "share": 53
+     "share": 16
     },
     {
-     "id": "listicle-intro",
-     "name": "List announcement",
-     "share": 18
+     "id": "chatbot-closer",
+     "name": "Chatbot closer",
+     "share": 9
     },
     {
-     "id": "ai-vocabulary",
-     "name": "AI vocabulary",
-     "share": 12
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
+     "share": 8
     },
     {
      "id": "bold-lead",
      "name": "Bold lead-ins",
-     "share": 12
-    },
-    {
-     "id": "exclamation",
-     "name": "Exclamation mark",
      "share": 6
     }
    ]
