@@ -29,9 +29,7 @@ export const MODELS_TEXT = {
   sizes: [
     'Not every model answered all 108. Gemini ran on a free tier that allows 20 requests a day per model. Gemini 4 Hydrogen answered 17 before the limit, all of them advice requests, so its row is advice only. Gemini 3.8 Flash answered 6, too few to rank, and Gemini 4 Argon, Carbon and Neon are not on the free tier. GPT-6.2 Sol answered all 108. GPT-6.2 Astra, GPT-6.1 Terra and GPT-6 Luna were stopped after 15 to 26 answers to stay within budget, so they are not ranked.',
   ],
-  bias: [
-    'Most of the model writing tells learned from came from Claude. We checked that this isn\'t what puts Claude above GPT, and the full checks are in the benchmark notes on GitHub.',
-  ],
+  bias: [],
 };
 
 const pct = (e: Est) => `${Math.round(e.v)}%`;
@@ -95,9 +93,6 @@ ${tops}
 ${MODELS_TEXT.method.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 ${MODELS_TEXT.sizes.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 <p>The answers and the script are in the <a href="https://github.com/Nexugen/tells/tree/main/bench/models">repository</a>. A new model takes one command to add.</p>
-
-<h2>A note on fairness</h2>
-${MODELS_TEXT.bias.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 
 <h2>Check your own writing</h2>
 <ul class="uses-list">
