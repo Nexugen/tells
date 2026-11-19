@@ -49,6 +49,8 @@ export interface ServerConfig {
   /** Optional JSON file shaped like {"claude":{"pct":N}}; rewrite pauses at or above usageMaxPct. */
   usageFile?: string;
   usageMaxPct: number;
+  /** Ignore the usage gate while the file's window resets at or before this time (ms). Lets one window run past the limit. */
+  usageIgnoreUntil?: number;
 }
 
 export function configFromEnv(env = process.env): ServerConfig {
@@ -72,6 +74,7 @@ export function configFromEnv(env = process.env): ServerConfig {
     anonRewritesPerIp: num('TELLS_ANON_REWRITES_PER_IP', 3),
     usageFile: env.TELLS_USAGE_FILE || undefined,
     usageMaxPct: num('TELLS_USAGE_MAX_PCT', 85),
+    usageIgnoreUntil: env.TELLS_USAGE_IGNORE_UNTIL ? Number(env.TELLS_USAGE_IGNORE_UNTIL) || undefined : undefined,
   };
 }
 
@@ -128,7 +131,9 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   const accountBusy = () => {
     if (!cfg.usageFile) return false;
     try {
-      const pct = Number((JSON.parse(readFileSync(cfg.usageFile, 'utf8')) as { claude?: { pct?: unknown } }).claude?.pct);
+      const u = (JSON.parse(readFileSync(cfg.usageFile, 'utf8')) as { claude?: { pct?: unknown; resetsAt?: unknown } }).claude;
+      const pct = Number(u?.pct);
+      if (cfg.usageIgnoreUntil && Number(u?.resetsAt) <= cfg.usageIgnoreUntil && Date.now() < cfg.usageIgnoreUntil + 60_000) return false;
       return !Number.isFinite(pct) || pct >= cfg.usageMaxPct;
     } catch {
       return true; // cannot tell, so do not risk it
