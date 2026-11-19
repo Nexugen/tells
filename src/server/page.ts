@@ -10,7 +10,7 @@ export const SITE = 'https://tells.nexugen.app';
 export const CHROME_STORE_URL = '';
 
 /** The line about the team behind tells, shown small in the footer of the home page and /developers. */
-export const NEXUGEN_LINE = 'Nexugen builds web and mobile apps, takes care of the app store side, and finds customers for them.';
+export const NEXUGEN_LINE = 'Nexugen is where businesses build their own web and mobile apps, put them on the app stores and find customers.';
 /** A second line for that block. Leave empty until the Nexugen platform really checks its apps and outreach emails with tells; then set it to:
  *  'Nexugen checks the writing in every app it builds and every outreach email with tells.' */
 export const NEXUGEN_USES_TELLS = 'Nexugen uses tells on the writing its AI does for you: app pages, outreach emails, social captions and film scripts. Your own words are never changed.';
@@ -298,7 +298,7 @@ export function siteHeader(current = ''): string {
 /** Why we built tells, shown on the home page and at the top of /developers. */
 export const WHY_COPY = {
   title: 'Why we built it',
-  text: 'At Nexugen we build web and mobile apps for businesses and write the emails that find them customers. Our AI kept writing like AI, so we built tells to catch it. Then we made it free for everyone.',
+  text: 'On Nexugen, businesses build their own web and mobile apps and find customers, and its AI writes a lot of the words. That AI kept writing like AI, so we built tells to catch it. Then we made it free for everyone.',
 };
 
 /** The small "from the team behind Nexugen" block. */
