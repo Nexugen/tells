@@ -2,8 +2,9 @@
 import BENCH from '../bench-figures.json' with { type: 'json' };
 // Voice figures, written by bench/voice.ts --write.
 import VOICE from '../voice-figures.json' with { type: 'json' };
+import type { Register } from '../types.ts';
 
-const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+export const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
 const BADGE_MD = '[![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)';
 const BADGE_HTML = '<a href="https://tells.nexugen.app"><img src="https://tells.nexugen.app/badge.svg" alt="Linted with tells" height="20"></a>';
@@ -14,18 +15,8 @@ We leverage robust AI to seamlessly streamline your workflow. No setup. No fees.
 
 Hope this helps! Let me know if you have any questions.`;
 
-/** The landing page served at /. One request, no external assets. */
-export function landingPage(opts: { rewriteOn: boolean; anonTries: number; keyDaily: number }): string {
-  const B = BENCH;
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>tells</title>
-<meta name="description" content="Find the habits that make text read as AI-written, see the human patterns it has or lacks, and fix only the sentences that need it.">
-<style>
-:root {
+/** Shared CSS for every page. */
+export const STYLE = `:root {
   --bg: #fbfaf7; --fg: #1b1b1a; --muted: #6b6a65; --line: #e3e0d8; --panel: #ffffff;
   --tell: #b42318; --tell-bg: #fde7e4; --human: #146c43; --human-bg: #dff3e7; --accent: #1b1b1a; --code: #f2f0ea;
   --shadow: 0 1px 2px rgba(0,0,0,.06);
@@ -92,38 +83,43 @@ footer nav { display: flex; gap: 16px; }
 .snip-head span { font-size: 14px; color: var(--muted); }
 .snip-head button { font-size: 13px; padding: 4px 10px; }
 .snip pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
-</style>
-</head>
-<body>
-<main>
-<h1>tells</h1>
-<p class="lede">Find the habits that make text read as AI-written, see which human patterns it has or lacks, and fix only the sentences that need it. Open source, by <a href="https://nexugen.app">Nexugen</a>.</p>
+.uses-nav { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
+footer nav { flex-wrap: wrap; }
+.use h1 { font-size: clamp(32px, 6.5vw, 52px); }
+.crumb { font-size: 15px; margin: 0 0 20px; color: var(--muted); }
+ol.habits { padding-left: 22px; margin: 8px 0; } ol.habits li { margin: 0 0 14px; } ol.habits b { display: block; } ol.habits .ex { display: block; color: var(--muted); font-style: italic; }
+.uses-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 8px 0 0; list-style: none; }
+.uses-list a { display: inline-block; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; background: var(--panel); text-decoration: none; font-size: 15px; }
+.uses-list a:hover { border-color: var(--fg); }
+`;
 
-<div class="panel" id="try">
-  <label for="text" class="muted">Paste a draft</label>
-  <textarea id="text" spellcheck="false">${esc(SAMPLE)}</textarea>
+export interface PageOpts { rewriteOn: boolean; anonTries: number; keyDaily: number }
+
+/** The paste box, register picker, rewrite button and results area. Ids are what pageScript expects. */
+export function checkerPanel(opts: PageOpts, c: { sample: string; register: 'auto' | Register; label: string }): string {
+  return `<div class="panel" id="try">
+  <label for="text" class="muted">${esc(c.label)}</label>
+  <textarea id="text" spellcheck="false">${esc(c.sample)}</textarea>
   <div class="row">
     <select id="register" aria-label="Register">
-      <option value="auto" selected>Auto</option>
-      <option value="casual">Casual</option>
-      <option value="professional">Professional</option>
-      <option value="technical">Technical</option>
-      <option value="marketing">Marketing</option>
+${(['auto', 'casual', 'professional', 'technical', 'marketing'] as const).map((r) => `      <option value="${r}"${r === c.register ? ' selected' : ''}>${r[0].toUpperCase() + r.slice(1)}</option>`).join('\n')}
     </select>
     <button id="rewrite" ${opts.rewriteOn ? '' : 'disabled'}>Rewrite flagged sentences</button>
     <button id="getkey" type="button" class="ghost">Get a free key</button>
   </div>
   <p class="muted" id="keynote" hidden></p>
-  <p class="muted" id="rwnote">${opts.rewriteOn ? `${opts.anonTries} free rewrites a day without a key, ${opts.keyDaily} with one.` : 'Rewrite is off right now. Lint still works.'}</p>
+  <p class="muted" id="rwnote">${opts.rewriteOn ? `${opts.anonTries} free rewrites a day without a key, ${opts.keyDaily} with one.` : 'Rewrite is off right now. Checking still works.'}</p>
   <div class="legend"><span class="lt">AI tell</span><span class="lh">Human signal</span></div>
   <div class="out" id="out" aria-live="polite"></div>
   <div class="stats" id="stats"></div>
   <div id="details"></div>
 </div>
+`;
+}
 
-<h2>Sound like you</h2>
-<p>A draft can pass every check and still not sound like the person who will sign it. Paste ten or more things one person wrote (messages, posts, emails), separated by a line with three dashes. tells measures how they write: sentence lengths, punctuation, casing, the small words they lean on, how they open and close, what they never do. Then it can rewrite the draft above in that voice, keeping every fact and adding none.</p>
-<div class="panel" id="voice">
+/** The voice panel: learn a voice from samples, then rewrite the draft in it. */
+export function voicePanel(opts: PageOpts): string {
+  return `<div class="panel" id="voice">
   <label for="samples" class="muted">Samples of one person's writing, separated by ---</label>
   <textarea id="samples" spellcheck="false" placeholder="first sample&#10;---&#10;second sample&#10;---&#10;..."></textarea>
   <div class="row">
@@ -134,59 +130,32 @@ footer nav { display: flex; gap: 16px; }
   <p class="muted" id="voicenote">About 1,500 words of samples works best. The profile stays in this page; the server does not keep your samples.</p>
   <div id="voiceout"></div>
 </div>
-<p class="muted">From the command line: <code>tells voice build samples/*.txt -o voice.json</code>, then <code>tells rewrite draft.md --voice voice.json</code>. Tested on ${VOICE.authors} public-domain authors: a held-out passage was closest to its own author's profile ${VOICE.attribution} of the time (chance is ${VOICE.chance}), and it outscored other people's writing with an AUC of ${VOICE.aucVsOtherHumans}. <a href="https://github.com/Nexugen/tells/blob/main/bench/VOICE.md">How it is measured</a>.</p>
+`;
+}
 
-<h2>Install</h2>
-<pre><code>npm i @nexugen/tells</code></pre>
-<p>The command it installs is <code>tells</code>. To try it without installing:</p>
-<pre><code>npx @nexugen/tells lint draft.md</code></pre>
-<p>In a project that has it:</p>
-<pre><code>npx tells lint docs/ --ci --fail-on warning
-npx tells rewrite draft.md --write</code></pre>
-<p>In code:</p>
-<pre><code>import { lint, rewrite } from '@nexugen/tells';
-const result = lint(draft, { register: 'casual' });
-console.log(result.findings, result.human.missing);</code></pre>
-<p>In CI, inline on the pull request:</p>
-<pre><code>- run: npx @nexugen/tells lint docs/ --format github --ci</code></pre>
+/** Pages that check one kind of writing, linked from every footer. */
+export const USE_LINKS: { path: string; label: string }[] = [
+  { path: '/cover-letter', label: 'Check a cover letter' },
+  { path: '/linkedin-post', label: 'Check a LinkedIn post' },
+  { path: '/cold-email', label: 'Check a cold email' },
+  { path: '/essay', label: 'Check an essay' },
+  { path: '/email', label: 'Check an email' },
+  { path: '/resume', label: 'Check a resume' },
+  { path: '/bio', label: 'Check a bio' },
+];
 
-<h2>Two sides</h2>
-<p>tells looks for two things. <span class="t-txt">Tells</span> are habits to remove: dashes, contrast frames, closing slogans, stock openers, generic examples, a summary line at the end of every paragraph. <span class="h-txt">Human signals</span> are patterns people use far more than models: specific numbers, names and dates, first-hand detail, asides, an opinion with something at stake, uneven rhythm.</p>
-<p>The rewrite works toward the signals as well as away from the tells, and it never makes things up. When a detail would help and your draft does not have it, you get a marked gap in square brackets to fill in yourself.</p>
-
-<h2>Benchmark</h2>
-<p>We tested it on ${B.humanSamples} human samples written before 2022, from about ${B.sources} sources, and ${B.modelSamples} answers from Claude Haiku, Sonnet and Opus to ${B.prompts} prompts in ${B.genres} genres. A third of the prompts told the model to sound like a person. The human set includes chat, lowercase typing and writing about AI, apps and business, so the score judges style, not subject. The final check used a held-out set that tells had never seen, fetched after tuning stopped and scored once.</p>
-<div class="figures">
-  <div class="fig"><b>${B.freshHumanFlagged}</b><span>of ${B.freshHuman} human texts in the held-out set got a warning or error</span></div>
-  <div class="fig"><b>${B.freshPlainFlagged}</b><span>of plain AI text of 60 words or more flagged, same set</span></div>
-  <div class="fig"><b>${B.freshAuc}</b><span>AUC of the human-pattern score, same set</span></div>
-  <div class="fig"><b>${B.testFlagged}</b><span>of ${B.testHuman} human texts in the locked test split got a warning or error</span></div>
-</div>
-<p class="muted">Limits: texts under 60 words are judged by the rules alone, every model tested was a Claude model, and answers from prompts that asked the model to write like a person were caught about ${B.adversarialFlagged} of the time. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Method, data and per-source results</a>.</p>
-
-<h2>API</h2>
-<pre><code>curl -s https://tells.nexugen.app/v1/lint -d '{"text":"Great question! It is robust."}'
-curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
-<p class="muted">Lint is free with no key. Endpoints are listed at <a href="/v1">/v1</a>.</p>
-
-<h2>Badge</h2>
-<p>If your docs or README pass tells, you can say so.</p>
-<div class="badge-show"><img src="/badge.svg" alt="Linted with tells" width="102" height="20"></div>
-<div class="snip">
-  <div class="snip-head"><span>Markdown</span><button type="button" class="ghost copy" data-for="badge-md">Copy</button></div>
-  <pre><code id="badge-md">${esc(BADGE_MD)}</code></pre>
-</div>
-<div class="snip">
-  <div class="snip-head"><span>HTML</span><button type="button" class="ghost copy" data-for="badge-html">Copy</button></div>
-  <pre><code id="badge-html">${esc(BADGE_HTML)}</code></pre>
-</div>
-
-<footer>
+export function siteFooter(withUses = true): string {
+  return `<footer>
+${withUses ? `  <nav aria-label="Check your writing" class="uses-nav">${USE_LINKS.map((u) => `<a href="${u.path}">${esc(u.label)}</a>`).join('')}</nav>
+` : ''}
   <span>tells is open source, made by <a href="https://nexugen.app">Nexugen</a>. MIT licence.</span>
   <nav aria-label="Project links"><a href="https://github.com/Nexugen/tells">GitHub</a><a href="https://www.npmjs.com/package/@nexugen/tells">npm</a></nav>
-</footer>
-</main>
-<script>
+</footer>`;
+}
+
+/** The page's script: live check, rewrite, free key, voice. Works with whatever panels are on the page. */
+export function pageScript(opts: PageOpts): string {
+  return `<script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var text = $('text'), out = $('out'), stats = $('stats'), details = $('details'), reg = $('register');
@@ -340,7 +309,110 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
   });
   check();
 })();
-</script>
+</script>`;
+}
+
+export const SITE = 'https://tells.nexugen.app';
+
+/** Canonical, description, Open Graph and JSON-LD for one page. */
+export function headMeta(m: { title: string; description: string; path: string; name?: string }): string {
+  const url = SITE + m.path;
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: m.name ?? 'tells',
+    url,
+    description: m.description,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'Nexugen', url: 'https://nexugen.app' },
+  };
+  return `<title>${esc(m.title)}</title>
+<meta name="description" content="${esc(m.description)}">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="tells">
+<meta property="og:title" content="${esc(m.title)}">
+<meta property="og:description" content="${esc(m.description)}">
+<meta property="og:url" content="${url}">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+}
+
+/** The landing page served at /. One request, no external assets. */
+export function landingPage(opts: PageOpts): string {
+  const B = BENCH;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+${headMeta({ title: 'tells', description: 'Find the habits that make text read as AI-written, see the human patterns it has or lacks, and fix only the sentences that need it.', path: '/' })}
+<style>
+${STYLE}</style>
+</head>
+<body>
+<main>
+<h1>tells</h1>
+<p class="lede">Find the habits that make text read as AI-written, see which human patterns it has or lacks, and fix only the sentences that need it. Open source, by <a href="https://nexugen.app">Nexugen</a>.</p>
+
+${checkerPanel(opts, { sample: SAMPLE, register: 'auto', label: 'Paste a draft' })}
+<h2>Sound like you</h2>
+<p>A draft can pass every check and still not sound like the person who will sign it. Paste ten or more things one person wrote (messages, posts, emails), separated by a line with three dashes. tells measures how they write: sentence lengths, punctuation, casing, the small words they lean on, how they open and close, what they never do. Then it can rewrite the draft above in that voice, keeping every fact and adding none.</p>
+${voicePanel(opts)}
+<p class="muted">From the command line: <code>tells voice build samples/*.txt -o voice.json</code>, then <code>tells rewrite draft.md --voice voice.json</code>. Tested on ${VOICE.authors} public-domain authors: a held-out passage was closest to its own author's profile ${VOICE.attribution} of the time (chance is ${VOICE.chance}), and it outscored other people's writing with an AUC of ${VOICE.aucVsOtherHumans}. <a href="https://github.com/Nexugen/tells/blob/main/bench/VOICE.md">How it is measured</a>.</p>
+
+<h2>Install</h2>
+<pre><code>npm i @nexugen/tells</code></pre>
+<p>The command it installs is <code>tells</code>. To try it without installing:</p>
+<pre><code>npx @nexugen/tells lint draft.md</code></pre>
+<p>In a project that has it:</p>
+<pre><code>npx tells lint docs/ --ci --fail-on warning
+npx tells rewrite draft.md --write</code></pre>
+<p>In code:</p>
+<pre><code>import { lint, rewrite } from '@nexugen/tells';
+const result = lint(draft, { register: 'casual' });
+console.log(result.findings, result.human.missing);</code></pre>
+<p>In CI, inline on the pull request:</p>
+<pre><code>- run: npx @nexugen/tells lint docs/ --format github --ci</code></pre>
+
+<h2>Two sides</h2>
+<p>tells looks for two things. <span class="t-txt">Tells</span> are habits to remove: dashes, contrast frames, closing slogans, stock openers, generic examples, a summary line at the end of every paragraph. <span class="h-txt">Human signals</span> are patterns people use far more than models: specific numbers, names and dates, first-hand detail, asides, an opinion with something at stake, uneven rhythm.</p>
+<p>The rewrite works toward the signals as well as away from the tells, and it never makes things up. When a detail would help and your draft does not have it, you get a marked gap in square brackets to fill in yourself.</p>
+
+<h2>Benchmark</h2>
+<p>We tested it on ${B.humanSamples} human samples written before 2022, from about ${B.sources} sources, and ${B.modelSamples} answers from Claude Haiku, Sonnet and Opus to ${B.prompts} prompts in ${B.genres} genres. A third of the prompts told the model to sound like a person. The human set includes chat, lowercase typing and writing about AI, apps and business, so the score judges style, not subject. The final check used a held-out set that tells had never seen, fetched after tuning stopped and scored once.</p>
+<div class="figures">
+  <div class="fig"><b>${B.freshHumanFlagged}</b><span>of ${B.freshHuman} human texts in the held-out set got a warning or error</span></div>
+  <div class="fig"><b>${B.freshPlainFlagged}</b><span>of plain AI text of 60 words or more flagged, same set</span></div>
+  <div class="fig"><b>${B.freshAuc}</b><span>AUC of the human-pattern score, same set</span></div>
+  <div class="fig"><b>${B.testFlagged}</b><span>of ${B.testHuman} human texts in the locked test split got a warning or error</span></div>
+</div>
+<p class="muted">Limits: texts under 60 words are judged by the rules alone, every model tested was a Claude model, and answers from prompts that asked the model to write like a person were caught about ${B.adversarialFlagged} of the time. <a href="https://github.com/Nexugen/tells/blob/main/bench/RESULTS.md">Method, data and per-source results</a>.</p>
+
+<h2>API</h2>
+<pre><code>curl -s https://tells.nexugen.app/v1/lint -d '{"text":"Great question! It is robust."}'
+curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
+<p class="muted">Lint is free with no key. Endpoints are listed at <a href="/v1">/v1</a>.</p>
+
+<h2>Badge</h2>
+<p>If your docs or README pass tells, you can say so.</p>
+<div class="badge-show"><img src="/badge.svg" alt="Linted with tells" width="102" height="20"></div>
+<div class="snip">
+  <div class="snip-head"><span>Markdown</span><button type="button" class="ghost copy" data-for="badge-md">Copy</button></div>
+  <pre><code id="badge-md">${esc(BADGE_MD)}</code></pre>
+</div>
+<div class="snip">
+  <div class="snip-head"><span>HTML</span><button type="button" class="ghost copy" data-for="badge-html">Copy</button></div>
+  <pre><code id="badge-html">${esc(BADGE_HTML)}</code></pre>
+</div>
+
+${siteFooter()}
+</main>
+${pageScript(opts)}
 </body>
 </html>`;
 }

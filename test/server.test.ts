@@ -222,3 +222,54 @@ test('voice: built from samples, nothing stored, usable for match and rewrite', 
     server.close();
   }
 });
+
+test('use-case pages are served, titled, indexable and listed in the sitemap', async () => {
+  const { USE_CASES } = await import('../src/server/use-cases.ts');
+  const s = await setup();
+  try {
+    const sitemap = await fetch(`${s.url}/sitemap.xml`);
+    assert.equal(sitemap.status, 200);
+    assert.match(sitemap.headers.get('content-type') ?? '', /xml/);
+    const map = await sitemap.text();
+    assert.ok(map.includes('<loc>https://tells.nexugen.app/</loc>'));
+    const robots = await (await fetch(`${s.url}/robots.txt`)).text();
+    assert.match(robots, /Sitemap: https:\/\/tells\.nexugen\.app\/sitemap\.xml/);
+    const home = await (await fetch(`${s.url}/`)).text();
+    assert.equal(USE_CASES.length, 7);
+    for (const u of USE_CASES) {
+      const res = await fetch(`${s.url}${u.path}`);
+      assert.equal(res.status, 200, u.path);
+      const html = await res.text();
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
+      assert.ok(title.length > 10 && title.includes(u.h1.replace(/'/g, '&#39;')), `${u.path} title: ${title}`);
+      assert.ok(html.includes(`<link rel="canonical" href="https://tells.nexugen.app${u.path}">`), u.path);
+      assert.ok(html.includes('og:title') && html.includes('application/ld+json') && html.includes('meta name="description"'), u.path);
+      assert.ok(html.includes('id="text"') && html.includes('id="samples"') && html.includes('/v1/lint'), `${u.path} has the checker`);
+      assert.ok(!html.includes('—'), `${u.path} has no em dash`);
+      assert.ok(map.includes(`<loc>https://tells.nexugen.app${u.path}</loc>`), `${u.path} in sitemap`);
+      assert.ok(home.includes(`href="${u.path}"`), `${u.path} linked from home`);
+    }
+    const slash = await fetch(`${s.url}/essay/`, { redirect: 'manual' });
+    assert.equal(slash.status, 301);
+    assert.equal(slash.headers.get('location'), '/essay');
+    assert.equal((await fetch(`${s.url}/essay`, { method: 'HEAD' })).status, 200);
+  } finally {
+    s.close();
+  }
+});
+
+test('use-case page copy passes tells, and each listed habit fires on that page\'s sample', async () => {
+  const { USE_CASES, useCaseCopy } = await import('../src/server/use-cases.ts');
+  const { lint } = await import('../src/lint.ts');
+  for (const u of USE_CASES) {
+    const copy = useCaseCopy(u);
+    assert.ok(!/—/.test(copy), u.path);
+    for (const register of ['auto', u.register] as const) {
+      const bad = lint(copy, { register }).findings.filter((f) => f.severity !== 'info');
+      assert.deepEqual(bad.map((f) => `${f.ruleId}: ${copy.slice(f.start, f.end)}`), [], `${u.path} copy (${register})`);
+    }
+    assert.ok(u.habits.length >= 4 && u.habits.length <= 6, u.path);
+    const sample = lint(u.sample, { register: u.register });
+    assert.ok(sample.findings.length >= 3, `${u.path} sample shows findings`);
+  }
+});

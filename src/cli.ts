@@ -11,7 +11,7 @@ import { REGISTERS, type LintOptions, type Register, type Severity } from './typ
 import { anthropic, claudeCli } from './model.ts';
 import { buildVoice, checkVoice, splitSamples, styleMatch, type VoiceProfile } from './voice.ts';
 
-const VERSION = '0.4.0';
+const VERSION = '0.4.1';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 

@@ -5,7 +5,8 @@ import { rewrite } from '../rewrite.ts';
 import { rulesAsJson } from '../serialize.ts';
 import { readFileSync } from 'node:fs';
 import { anthropic, claudeCli, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
-import { landingPage } from './page.ts';
+import { landingPage, SITE } from './page.ts';
+import { USE_CASES, useCasePage, sitemapXml, robotsTxt } from './use-cases.ts';
 import { BADGE_SVG } from './badge.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
@@ -90,7 +91,14 @@ export function estimateCostUsd(chars: number, model: string): number {
 export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Store } = {}): Server {
   const store = deps.store ?? new Store(cfg.dataDir);
   const model = deps.model ?? (cfg.backend === 'cli' ? claudeCli({ model: cfg.model, configDir: cfg.cliConfigDir }) : anthropic({ model: cfg.model }));
-  const page = landingPage({ rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites });
+  const pageOpts = { rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites };
+  const page = landingPage(pageOpts);
+  /** Server-rendered HTML pages by path: the home page and one page per kind of writing. */
+  const pages = new Map<string, string>([['/', page], ...USE_CASES.map((u): [string, string] => [u.path, useCasePage(u, pageOpts)])]);
+  const textFiles = new Map<string, { type: string; body: string }>([
+    ['/sitemap.xml', { type: 'application/xml; charset=utf-8', body: sitemapXml(SITE) }],
+    ['/robots.txt', { type: 'text/plain; charset=utf-8', body: robotsTxt(SITE) }],
+  ]);
 
   /** True when the shared model account is busy enough that rewrites should wait. */
   const accountBusy = () => {
@@ -176,7 +184,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       name: 'tells',
       about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['GET /', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', ...USE_CASES.map((u) => `GET ${u.path}`), 'GET /sitemap.xml', 'GET /robots.txt', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
       voice: 'POST /v1/voice with {"samples": [...]} returns a voice profile; nothing is stored. Pass it back as "voice" to /v1/rewrite or /v1/voice/match.',
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),
@@ -277,14 +285,25 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   return createServer(async (req, res) => {
     const path = (req.url ?? '/').split('?')[0];
     if (req.method === 'OPTIONS') return send(res, 204, null);
-    if (req.method === 'GET' && path === '/') {
+    const isGet = req.method === 'GET' || req.method === 'HEAD';
+    if (isGet && path.length > 1 && path.endsWith('/') && pages.has(path.replace(/\/+$/, ''))) {
+      res.writeHead(301, { location: path.replace(/\/+$/, '') });
+      return void res.end();
+    }
+    const file = isGet ? textFiles.get(path) : undefined;
+    if (file) {
+      res.writeHead(200, { 'content-type': file.type, 'cache-control': 'public, max-age=3600', 'x-content-type-options': 'nosniff' });
+      return void res.end(req.method === 'HEAD' ? undefined : file.body);
+    }
+    const html = isGet ? pages.get(path) : undefined;
+    if (html !== undefined) {
       res.writeHead(200, {
         'content-type': 'text/html; charset=utf-8',
         'cache-control': 'public, max-age=300',
         'x-content-type-options': 'nosniff',
         'content-security-policy': "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
       });
-      return void res.end(page);
+      return void res.end(req.method === 'HEAD' ? undefined : html);
     }
     if ((req.method === 'GET' || req.method === 'HEAD') && path === '/badge.svg') {
       res.writeHead(200, {
