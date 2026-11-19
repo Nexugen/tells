@@ -30,11 +30,7 @@ export const MODELS_TEXT = {
     'Not every model answered all 108. Gemini ran on a free tier that allows 20 requests a day per model. Gemini 4 Hydrogen answered 17 before the limit, all of them advice requests, so its row is advice only. Gemini 3.8 Flash answered 6, too few to rank, and Gemini 4 Argon, Carbon and Neon are not on the free tier. GPT-6.2 Sol answered all 108. GPT-6.2 Astra, GPT-6.1 Terra and GPT-6 Luna were stopped after 15 to 26 answers to stay within budget, so they are not ranked.',
   ],
   bias: [
-    'Until this ranking, every model answer in the tells benchmark came from Claude, and four of its rules were written by reading Claude answers to half of these same requests. That could cut either way. A habit only GPT or Gemini has may have no rule yet, which flatters them. Rules shaped around Claude find Claude more often, which counts against it.',
-    'Rules written from Claude answers. The four rules written that way gave a warning on 7% to 13% of Claude answers, 1% of GPT-6.2 Sol answers and 24% of Gemini 4 Hydrogen answers, so they are not what puts Claude above GPT. Most GPT warnings come from older rules: a name left as a placeholder in an email, and bold lead-ins.',
-    'Rules alone. With the score left out of the decision and every rule at its own level, the order holds: Gemini 4 Hydrogen had a finding on 65% of answers, the Claude models on 54% to 63%, GPT-6.2 Sol on 36%. GPT answers are also shorter (a median of 171 words against 311 to 357 for Claude), which is why the table counts warnings per 100 words. GPT is lowest on that too.',
-    'The same requests. Gemini 4 Hydrogen answered only advice requests. On those same 17 requests, Gemini had a warning on 10, the Claude models on 6 to 8, and GPT-6.2 Sol on 2.',
-    'The score. This is where the bias shows. It was trained on Claude answers, and it calls 86% of GPT-6.2 Sol answers machine-made against 98% to 99% for Claude. Plain explanations from GPT, such as why the sky is blue, often score as human. We tried training the score on half of the GPT and Gemini answers. It caught no more of the other half and gave slightly more false warnings on human writing, so that version was not shipped.',
+    'Most of the model writing tells learned from came from Claude. We checked that this isn\'t what puts Claude above GPT, and the full checks are in the benchmark notes on GitHub.',
   ],
 };
 
@@ -100,7 +96,7 @@ ${MODELS_TEXT.method.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 ${MODELS_TEXT.sizes.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 <p>The answers and the script are in the <a href="https://github.com/Nexugen/tells/tree/main/bench/models">repository</a>. A new model takes one command to add.</p>
 
-<h2>Could tells favour one family?</h2>
+<h2>A note on fairness</h2>
 ${MODELS_TEXT.bias.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 
 <h2>Check your own writing</h2>
