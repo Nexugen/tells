@@ -1,7 +1,7 @@
 {
   "name": "@nexugen/tells",
-  "version": "0.4.2",
-  "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rules, a human-pattern score, a CLI, a CI check, and an optional model-backed rewrite.",
+  "version": "0.5.0",
+  "description": "Find the tells that make AI-written text read like AI, and fix only those spans. Rules, a human-pattern score, a CLI, a CI check, an MCP server for AI assistants, and an optional model-backed rewrite.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -28,12 +28,13 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p tsconfig.json && node dist/cli.js rules --json > dist/rules.json && chmod +x dist/cli.js",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p extension/tsconfig.json",
     "test": "node --test --experimental-strip-types test/*.test.ts",
-    "lint:self": "node --experimental-strip-types src/cli.ts lint README.md DATA-LICENSES.md deploy/README.md --register technical --ci --fail-on warning",
+    "lint:self": "node --experimental-strip-types src/cli.ts lint README.md DATA-LICENSES.md deploy/README.md connectors/chatgpt-gpt.md extension/store/listing.md --register technical --ci --fail-on warning",
     "serve": "node dist/server/index.js",
     "bench": "node --experimental-strip-types bench/run.ts",
-    "prepublishOnly": "npm run build && npm test && npm run lint:self"
+    "prepublishOnly": "npm run build && npm test && npm run lint:self",
+    "build:extension": "node extension/build.mjs"
   },
   "keywords": [
     "ai",
@@ -46,7 +47,8 @@
     "agent",
     "slop",
     "em-dash",
-    "cli"
+    "cli",
+    "mcp"
   ],
   "homepage": "https://tells.nexugen.app",
   "repository": {
@@ -71,6 +73,7 @@
   "devDependencies": {
     "@anthropic-ai/sdk": "^1.10.0",
     "@types/node": "^22.20.5",
+    "esbuild": "^0.25.12",
     "typescript": "^5.9.3"
   }
 }

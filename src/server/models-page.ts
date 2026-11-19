@@ -1,7 +1,7 @@
 // /models: how AI-sounding each model's everyday writing is, measured with tells. The numbers come
 // from src/model-ranking.json, written by bench/models/rank.ts; the words around them are below.
 import RANKING from '../model-ranking.json' with { type: 'json' };
-import { esc, headMeta, siteFooter, STYLE, USE_LINKS } from './page.ts';
+import { esc, pageHead, siteFooter, siteHeader, USE_LINKS } from './page.ts';
 
 interface Est { v: number; lo: number; hi: number }
 export interface RankedModel { label: string; provider: string; n: number; nScored: number; withWarning: Est; per100: Est; score: Est; machineLike: Est; top: { id: string; name: string; share: number }[] }
@@ -50,23 +50,14 @@ export function modelsPage(): string {
     <td class="n">${m.score.v.toFixed(1)}<small>${range(m.score, 1)}</small></td>
   </tr>`).join('\n');
   const tops = R.models.map((m) => `  <li><b>${esc(m.label)}</b>${m.top.length ? m.top.map((t) => `${esc(t.name)} (${t.share}%)`).join(', ') : 'No warning came up in more than one answer.'}</li>`).join('\n');
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${headMeta({ title: TITLE, description: DESCRIPTION, path: MODELS_PATH, name: 'tells model ranking' })}
-<style>
-${STYLE}
+  return `${pageHead({ title: TITLE, description: DESCRIPTION, path: MODELS_PATH, name: 'tells model ranking', css: `
 .rank { overflow-x: auto; margin: 16px 0 8px; }
 .rank table { min-width: 560px; }
 .rank small { display: block; font-size: 12px; color: var(--muted); }
 ol.tops li { margin: 0 0 10px; } ol.tops b { display: block; }
-</style>
-</head>
-<body>
+` })}
+${siteHeader(MODELS_PATH)}
 <main class="use">
-<p class="crumb"><a href="/">tells</a></p>
 <h1>${esc(H1)}</h1>
 <p class="lede">${esc(LEDE)}</p>
 <p class="muted">Measured ${esc(R.date)} with tells ${esc(R.tellsVersion)}. Sorted by warnings per 100 words, most first.</p>

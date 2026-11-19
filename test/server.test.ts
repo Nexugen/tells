@@ -169,7 +169,7 @@ test('the badge is a cached SVG, and the page shows it with copyable snippets', 
     const svg = await res.text();
     assert.match(svg, /^<svg /);
     assert.ok(svg.includes('linted with') && svg.includes('>tells<'));
-    const page = await (await fetch(`${s.url}/`)).text();
+    const page = await (await fetch(`${s.url}/developers`)).text();
     assert.ok(page.includes('<img src="/badge.svg"'));
     assert.ok(page.includes('[![Linted with tells](https://tells.nexugen.app/badge.svg)](https://tells.nexugen.app)'));
     assert.ok(page.includes('&lt;img src=&quot;https://tells.nexugen.app/badge.svg&quot;'));

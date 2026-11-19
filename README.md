@@ -206,6 +206,24 @@ const model = fromFunction('my-model', async ({ system, prompt, maxTokens }) => 
 await rewrite(draft, { model });
 ```
 
+## Use it in Claude or ChatGPT
+
+tells is also an MCP server with three tools: `check_text` (each flagged phrase with its offsets, why it stands out and what to write instead), `fix_text` (only the flagged sentences, optionally in a voice from `build_voice`) and `build_voice`.
+
+The hosted one needs no sign in. In Claude, add a custom connector with the address `https://tells.nexugen.app/mcp`; in ChatGPT, turn on developer mode and create a connector with the same address and no authentication. In Claude Code:
+
+```sh
+claude mcp add --transport http tells https://tells.nexugen.app/mcp
+```
+
+To run it on your own machine over stdio instead, so checking never leaves it, put this in Claude Desktop's config:
+
+```json
+{ "mcpServers": { "tells": { "command": "npx", "args": ["-y", "@nexugen/tells", "mcp"] } } }
+```
+
+Locally, `fix_text` uses `ANTHROPIC_API_KEY` when it is set (or the Claude Code CLI with `TELLS_MODEL_BACKEND=cli`) and the hosted API when it is not. For a custom GPT, import [`/openapi.json`](https://tells.nexugen.app/openapi.json) as an action; [connectors/chatgpt-gpt.md](connectors/chatgpt-gpt.md) has the rest.
+
 ## Sound like a person you know
 
 A draft can have no tells at all and still not sound like the person who will sign it. A voice profile fixes that part. You give tells samples of one person's writing (messages, posts, emails), it measures how they write, and `rewrite` can then turn a whole draft into that voice. Every fact stays and none are added.
@@ -275,7 +293,11 @@ node --experimental-strip-types bench/v2.ts topicout  # leave the AI, apps and t
 
 ## Hosted API
 
-There is a small HTTP server in `src/server` with the same lint and rewrite, and a page at `/` with a live checker. `POST /v1/voice` with `{"samples": [...]}` returns a voice profile, and `POST /v1/rewrite` and `POST /v1/voice/match` take one back as `"voice"`. The server never stores samples or profiles: you send the profile with each request. Lint is free with no key. Rewrite gives a few free tries per address, more with a free key, and stops at a daily cap on calls and on spend for the whole server. Self-host it with `npm run build && npm run serve`. Settings are in [deploy/README.md](deploy/README.md).
+There is a small HTTP server in `src/server` with the same lint and rewrite, a page at `/` with the checker (installable on phones, with a share target), the developer material at `/developers`, the MCP server at `/mcp` and an OpenAPI description at `/openapi.json`. `POST /v1/voice` with `{"samples": [...]}` returns a voice profile, and `POST /v1/rewrite` and `POST /v1/voice/match` take one back as `"voice"`. The server never stores samples or profiles: you send the profile with each request. Lint is free with no key. Rewrite gives a few free tries per address, more with a free key, and stops at a daily cap on calls and on spend for the whole server. Self-host it with `npm run build && npm run serve`. Settings are in [deploy/README.md](deploy/README.md).
+
+## Browser extension
+
+`extension/` holds a Chrome extension that underlines tells as you type in Gmail, LinkedIn, X, Slack and Notion, and on any other page when you turn it on there. It bundles the checker, so checking runs in the browser with no network. Build it with `npm run build:extension`, then load `extension/build` unpacked from chrome://extensions. Google Docs draws text on a canvas, so it is not supported.
 
 ## Contributing
 

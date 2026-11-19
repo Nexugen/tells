@@ -2,7 +2,8 @@
 // The habits listed on each page are the rules that fired most on AI-written samples of that kind of writing.
 import BENCH from '../bench-figures.json' with { type: 'json' };
 import type { Register } from '../types.ts';
-import { checkerPanel, esc, headMeta, pageScript, siteFooter, STYLE, USE_LINKS, voicePanel, type PageOpts } from './page.ts';
+import { checkerPanel, esc, pageHead, siteFooter, siteHeader, USE_LINKS, type PageOpts } from './page.ts';
+import { pageScript } from './page-script.ts';
 
 export interface Habit {
   /** Rule id in src/rules*.ts that finds it. */
@@ -222,31 +223,20 @@ export const useCaseFor = (path: string) => byPath.get(path);
 
 /** The words a person reads on a use-case page, without the sample in the box. Used to check the copy with tells itself. */
 export function useCaseCopy(u: UseCase): string {
-  return [u.h1, u.lede, u.description, ...u.habits.map((h) => `${h.name}. ${h.text}`), ...(u.notes ?? []), BOX_NOTE, HABITS_INTRO, CANT_DO, VOICE_INTRO, u.label].join('\n\n');
+  return [u.h1, u.lede, u.description, ...u.habits.map((h) => `${h.name}. ${h.text}`), ...(u.notes ?? []), BOX_NOTE, HABITS_INTRO, CANT_DO, u.label].join('\n\n');
 }
 
-const BOX_NOTE = 'The example in the box was written by AI. Replace it with yours. Marked lines show what to change, and the rewrite button fixes only those.';
+const BOX_NOTE = 'The example in the box was written by AI. Replace it with yours. Marked lines show what to change, and Fix it rewrites only those.';
 const HABITS_INTRO = 'These came up most when we ran AI-written examples of this kind of writing through tells.';
 
 const CANT_DO = `tells looks for habits that show up far more often in AI-written text than in writing by people. People have these habits too, so a marked line does not prove AI wrote it, and a clean result does not prove a person did. In its last held-out test, ${BENCH.freshHumanFlagged} of ${BENCH.freshHuman} texts by people got a warning, but no test covers every writer. Use it to make your own writing sound more like you. Please do not use it to accuse anyone.`;
 
-const VOICE_INTRO = 'Paste ten or more things you wrote yourself, such as messages, posts or emails, with a line of three dashes between them. tells learns how you write and can rewrite the draft above in your voice, keeping every fact and adding none.';
 
 export function useCasePage(u: UseCase, opts: PageOpts): string {
   const others = USE_LINKS.filter((l) => l.path !== u.path);
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-${headMeta({ title: u.title, description: u.description, path: u.path, name: `tells: ${u.h1}` })}
-<style>
-${STYLE}
-</style>
-</head>
-<body>
+  return `${pageHead({ title: u.title, description: u.description, path: u.path, name: `tells: ${u.h1}` })}
+${siteHeader()}
 <main class="use">
-<p class="crumb"><a href="/">tells</a></p>
 <h1>${esc(u.h1)}</h1>
 <p class="lede">${esc(u.lede)}</p>
 
@@ -259,10 +249,6 @@ ${checkerPanel(opts, { sample: u.sample, register: u.register, label: u.label })
 ${u.habits.map((h) => `  <li><b>${esc(h.name)}</b>${h.examples.length ? `<span class="ex">${h.examples.map((e) => `“${esc(e)}”`).join(', ')}</span> ` : ''}${esc(h.text)}</li>`).join('\n')}
 </ol>
 ${(u.notes ?? []).map((n) => `<p>${esc(n)}</p>`).join('\n')}
-
-<h2>Sound like you</h2>
-<p>${esc(VOICE_INTRO)}</p>
-${voicePanel(opts)}
 
 <h2>What tells can't do</h2>
 <p>${esc(CANT_DO)}</p>
@@ -282,7 +268,7 @@ ${pageScript(opts)}
 
 /** sitemap.xml for the home page, every use-case page and the model ranking. */
 export function sitemapXml(site: string): string {
-  const urls = ['/', ...USE_CASES.map((u) => u.path), '/models'];
+  const urls = ['/', ...USE_CASES.map((u) => u.path), '/models', '/developers', '/privacy'];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((p) => `  <url><loc>${site}${p}</loc></url>`).join('\n')}

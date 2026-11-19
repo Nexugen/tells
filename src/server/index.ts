@@ -3,9 +3,14 @@ import { fileURLToPath } from 'node:url';
 import { lint } from '../lint.ts';
 import { rewrite } from '../rewrite.ts';
 import { rulesAsJson } from '../serialize.ts';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { anthropic, claudeCli, ANTHROPIC_PRICES, DEFAULT_ANTHROPIC_MODEL, ModelError, type Model } from '../model.ts';
-import { landingPage, SITE } from './page.ts';
+import { SITE } from './page.ts';
+import { landingPage } from './home.ts';
+import { DEVELOPERS_PATH, developersPage } from './developers-page.ts';
+import { PRIVACY_PATH, privacyPage } from './privacy-page.ts';
+import { openApi, webManifest } from './openapi.ts';
+import { handleMcpMessage, MCP_VERSION, type McpBackend } from '../mcp.ts';
 import { USE_CASES, useCasePage, sitemapXml, robotsTxt } from './use-cases.ts';
 import { MODELS_PATH, modelsPage } from './models-page.ts';
 import { BADGE_SVG } from './badge.ts';
@@ -95,11 +100,29 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   const pageOpts = { rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites };
   const page = landingPage(pageOpts);
   /** Server-rendered HTML pages by path: the home page and one page per kind of writing. */
-  const pages = new Map<string, string>([['/', page], ...USE_CASES.map((u): [string, string] => [u.path, useCasePage(u, pageOpts)]), [MODELS_PATH, modelsPage()]]);
+  const pages = new Map<string, string>([['/', page], ['/share', page], ...USE_CASES.map((u): [string, string] => [u.path, useCasePage(u, pageOpts)]), [MODELS_PATH, modelsPage()], [DEVELOPERS_PATH, developersPage()], [PRIVACY_PATH, privacyPage()]]);
   const textFiles = new Map<string, { type: string; body: string }>([
     ['/sitemap.xml', { type: 'application/xml; charset=utf-8', body: sitemapXml(SITE) }],
     ['/robots.txt', { type: 'text/plain; charset=utf-8', body: robotsTxt(SITE) }],
+    ['/openapi.json', { type: 'application/json; charset=utf-8', body: JSON.stringify(openApi(MCP_VERSION), null, 1) }],
+    ['/manifest.webmanifest', { type: 'application/manifest+json; charset=utf-8', body: JSON.stringify(webManifest(), null, 1) }],
   ]);
+  /** Files from public/: icons and the service worker. Read once at start. */
+  const publicDir = new URL('../../public/', import.meta.url);
+  const assets = new Map<string, { type: string; body: Buffer; cache: string }>();
+  for (const [path, type, cache] of [
+    ['/sw.js', 'text/javascript; charset=utf-8', 'no-cache'],
+    ['/favicon.svg', 'image/svg+xml', 'public, max-age=86400'],
+    ['/icons/icon-192.png', 'image/png', 'public, max-age=86400'],
+    ['/icons/icon-512.png', 'image/png', 'public, max-age=86400'],
+    ['/icons/icon-maskable-512.png', 'image/png', 'public, max-age=86400'],
+    ['/icons/apple-touch-icon.png', 'image/png', 'public, max-age=86400'],
+  ] as const) {
+    const file = new URL(path.slice(1), publicDir);
+    if (existsSync(file)) assets.set(path, { type, body: readFileSync(file), cache });
+  }
+  assets.set('/apple-touch-icon.png', assets.get('/icons/apple-touch-icon.png')!);
+  assets.set('/favicon.ico', assets.get('/icons/icon-192.png')!);
 
   /** True when the shared model account is busy enough that rewrites should wait. */
   const accountBusy = () => {
@@ -180,12 +203,81 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     return key;
   };
 
+  const rewriteAllowed = (ip: string, key: string | undefined) => {
+    if (cfg.rewriteOff) throw new HttpError(503, 'rewrite_off', 'Free rewrites are switched off right now. Lint still works.');
+    if (key && store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
+    if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `You've used today's free tries. A free key gives you ${cfg.keyDailyRewrites} rewrites a day.`);
+  };
+
+  /** One rewrite with every cap applied. Shared by POST /v1/rewrite and the fix_text tool. */
+  const rewriteFor = async (ip: string, key: string | undefined, data: Record<string, unknown>) => {
+      rewriteAllowed(ip, key);
+      const text = textFrom(data, cfg.rewriteMaxChars);
+      const register = registerFrom(data);
+      const minSeverity = ['error', 'warning', 'info'].includes(String(data.minSeverity)) ? (data.minSeverity as Severity) : undefined;
+      const voice = voiceFrom(data);
+      const polish = data.polish === true;
+      const before = lint(text, { register });
+      if (!voice && before.findings.length === 0 && before.human.missing.length === 0) return { text, changes: [], suggestions: [], before, after: before, model: null, costUsd: 0 };
+
+      if (accountBusy()) throw new HttpError(503, 'busy', 'Rewrite is busy, try later. Lint still works.');
+      if (store.callsToday() + (voice ? 4 : 2) > cfg.dailyCalls) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
+      // A voice rewrite sends the profile and rewrites the whole draft: up to two whole-draft calls and two span calls.
+      const estimate = voice ? estimateCostUsd(text.length + 6000, cfg.model) * 4 : estimateCostUsd(text.length, cfg.model) * 2;
+      const { spendUsd, reservedUsd } = store.spendToday();
+      if (spendUsd + reservedUsd + estimate > cfg.dailySpendUsd) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
+      store.reserve(estimate);
+      let settled = false;
+      try {
+        const res = await rewrite(text, { register, minSeverity, model, voice, polish });
+        store.settle(estimate, res.costUsd || estimate, { key, ip: key ? undefined : ip, calls: res.calls });
+        settled = true;
+        return { text: res.text, changes: res.changes, suggestions: res.suggestions, rejected: res.rejected.length, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6, ...(res.voice ? { voice: res.voice, kept: res.rejected.length && res.text === text ? 'unchanged: the rewrite did not keep every fact' : undefined } : {}) };
+      } catch (err) {
+        if (err instanceof ModelError) {
+          process.stderr.write(`tells-api: model error: ${err.message.slice(0, 200)}\n`);
+          throw new HttpError(502, 'model_error', 'The rewrite model failed. Try again shortly.');
+        }
+        throw err;
+      } finally {
+        if (!settled) store.settle(estimate, 0, { calls: 1 });
+      }
+    };
+
+  /** The MCP tools run with the same limits as the API. */
+  const mcpBackend = (req: IncomingMessage): McpBackend => {
+    const ip = clientIp(req);
+    let key: string | undefined;
+    return {
+      check: (text, register) => {
+        limitLint(ip);
+        if (text.length > cfg.lintMaxChars) throw new Error(`Text is limited to ${cfg.lintMaxChars} characters here.`);
+        return lint(text, { register });
+      },
+      fix: async (args) => {
+        if (key === undefined && req.headers.authorization) key = keyFrom(req);
+        try {
+          return await rewriteFor(ip, key, args as Record<string, unknown>);
+        } catch (err) {
+          if (err instanceof HttpError) throw new Error(err.message);
+          throw err;
+        }
+      },
+      buildVoice: (samples, name) => {
+        limitLint(ip);
+        if (samples.length > 200) throw new Error('Up to 200 samples.');
+        if (samples.reduce((a, x) => a + x.length, 0) > SAMPLES_MAX_CHARS) throw new Error(`Samples are limited to ${SAMPLES_MAX_CHARS} characters in all here.`);
+        return buildVoice(samples, { name }) as unknown as Record<string, unknown>;
+      },
+    };
+  };
+
   const routes: Record<string, (req: IncomingMessage) => Promise<unknown>> = {
     'GET /v1': async () => ({
       name: 'tells',
       about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['GET /', ...USE_CASES.map((u) => `GET ${u.path}`), 'GET /models', 'GET /sitemap.xml', 'GET /robots.txt', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', ...USE_CASES.map((u) => `GET ${u.path}`), 'GET /models', 'GET /developers', 'GET /privacy', 'GET /openapi.json', 'POST /mcp', 'GET /sitemap.xml', 'GET /robots.txt', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
       voice: 'POST /v1/voice with {"samples": [...]} returns a voice profile; nothing is stored. Pass it back as "voice" to /v1/rewrite or /v1/voice/match.',
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),
@@ -233,40 +325,9 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       if (cfg.rewriteOff) throw new HttpError(503, 'rewrite_off', 'Free rewrites are switched off right now. Lint still works.');
       const ip = clientIp(req);
       const key = req.headers.authorization ? keyFrom(req) : undefined;
-      if (key && store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
-      if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `You've used today's free tries. A free key gives you ${cfg.keyDailyRewrites} rewrites a day.`);
+      rewriteAllowed(ip, key);
       const data = await body(req, cfg.rewriteMaxChars + VOICE_MAX_CHARS);
-      const text = textFrom(data, cfg.rewriteMaxChars);
-      const register = registerFrom(data);
-      const minSeverity = ['error', 'warning', 'info'].includes(String(data.minSeverity)) ? (data.minSeverity as Severity) : undefined;
-      const voice = voiceFrom(data);
-      const polish = data.polish === true;
-
-      const before = lint(text, { register });
-      if (!voice && before.findings.length === 0 && before.human.missing.length === 0) return { text, changes: [], suggestions: [], before, after: before, model: null, costUsd: 0 };
-
-      if (accountBusy()) throw new HttpError(503, 'busy', 'Rewrite is busy, try later. Lint still works.');
-      if (store.callsToday() + (voice ? 4 : 2) > cfg.dailyCalls) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
-      // A voice rewrite sends the profile and rewrites the whole draft: up to two whole-draft calls and two span calls.
-      const estimate = voice ? estimateCostUsd(text.length + 6000, cfg.model) * 4 : estimateCostUsd(text.length, cfg.model) * 2;
-      const { spendUsd, reservedUsd } = store.spendToday();
-      if (spendUsd + reservedUsd + estimate > cfg.dailySpendUsd) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
-      store.reserve(estimate);
-      let settled = false;
-      try {
-        const res = await rewrite(text, { register, minSeverity, model, voice, polish });
-        store.settle(estimate, res.costUsd || estimate, { key, ip: key ? undefined : ip, calls: res.calls });
-        settled = true;
-        return { text: res.text, changes: res.changes, suggestions: res.suggestions, rejected: res.rejected.length, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6, ...(res.voice ? { voice: res.voice, kept: res.rejected.length && res.text === text ? 'unchanged: the rewrite did not keep every fact' : undefined } : {}) };
-      } catch (err) {
-        if (err instanceof ModelError) {
-          process.stderr.write(`tells-api: model error: ${err.message.slice(0, 200)}\n`);
-          throw new HttpError(502, 'model_error', 'The rewrite model failed. Try again shortly.');
-        }
-        throw err;
-      } finally {
-        if (!settled) store.settle(estimate, 0, { calls: 1 });
-      }
+      return rewriteFor(ip, key, data);
     },
   };
 
@@ -275,12 +336,65 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     res.writeHead(status, {
       'content-type': 'application/json; charset=utf-8',
       'access-control-allow-origin': '*',
-      'access-control-allow-headers': 'authorization, content-type',
+      'access-control-allow-headers': 'authorization, content-type, mcp-protocol-version, mcp-session-id, last-event-id',
+      'access-control-expose-headers': 'mcp-session-id',
       'access-control-allow-methods': 'GET, POST, OPTIONS',
       'cache-control': 'no-store',
       'x-content-type-options': 'nosniff',
     });
     res.end(json);
+  };
+
+  const htmlHeaders = {
+    'content-type': 'text/html; charset=utf-8',
+    'x-content-type-options': 'nosniff',
+    'content-security-policy': "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+  };
+
+  // Text shared from another app on a phone (the web app manifest's share_target) arrives as a form post.
+  const share = async (req: IncomingMessage, res: ServerResponse) => {
+    let shared = '';
+    try {
+      const chunks: Buffer[] = [];
+      let size = 0;
+      for await (const c of req) { size += (c as Buffer).length; if (size > cfg.lintMaxChars * 4) break; chunks.push(c as Buffer); }
+      const form = new URLSearchParams(Buffer.concat(chunks).toString('utf8'));
+      shared = [form.get('title'), form.get('text'), form.get('url')].filter((x) => x && x.trim()).join('\n\n').slice(0, cfg.lintMaxChars);
+    } catch {
+      shared = '';
+    }
+    res.writeHead(200, { ...htmlHeaders, 'cache-control': 'no-store' });
+    res.end(landingPage(pageOpts, shared));
+  };
+
+  // MCP over Streamable HTTP, stateless: every POST carries one JSON-RPC message (or a batch) and gets JSON back.
+  const mcp = async (req: IncomingMessage, res: ServerResponse) => {
+    if (req.method === 'OPTIONS') return send(res, 204, null);
+    if (req.method !== 'POST') {
+      res.writeHead(405, { allow: 'POST, OPTIONS', 'content-type': 'application/json', 'access-control-allow-origin': '*' });
+      return void res.end(JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32000, message: 'This MCP server is stateless: send JSON-RPC with POST.' } }));
+    }
+    let data: unknown;
+    try {
+      const chunks: Buffer[] = [];
+      let size = 0;
+      for await (const c of req) {
+        size += (c as Buffer).length;
+        if (size > (cfg.lintMaxChars + VOICE_MAX_CHARS + SAMPLES_MAX_CHARS) * 4) throw new Error('too large');
+        chunks.push(c as Buffer);
+      }
+      data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+    } catch {
+      return send(res, 400, { jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error.' } });
+    }
+    const backend = mcpBackend(req);
+    const msgs = Array.isArray(data) ? data : [data];
+    const replies = (await Promise.all(msgs.map((m) => handleMcpMessage(m, backend)))).filter((r): r is object => r !== null);
+    if (!replies.length) {
+      res.writeHead(202, { 'access-control-allow-origin': '*' });
+      return void res.end();
+    }
+    send(res, 200, Array.isArray(data) ? replies : replies[0]);
   };
 
   return createServer(async (req, res) => {
@@ -291,6 +405,13 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       res.writeHead(301, { location: path.replace(/\/+$/, '') });
       return void res.end();
     }
+    const asset = isGet ? assets.get(path) : undefined;
+    if (asset) {
+      res.writeHead(200, { 'content-type': asset.type, 'cache-control': asset.cache, 'x-content-type-options': 'nosniff' });
+      return void res.end(req.method === 'HEAD' ? undefined : asset.body);
+    }
+    if (path === '/mcp') return mcp(req, res);
+    if (req.method === 'POST' && path === '/share') return share(req, res);
     const file = isGet ? textFiles.get(path) : undefined;
     if (file) {
       res.writeHead(200, { 'content-type': file.type, 'cache-control': 'public, max-age=3600', 'x-content-type-options': 'nosniff' });
@@ -298,12 +419,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     }
     const html = isGet ? pages.get(path) : undefined;
     if (html !== undefined) {
-      res.writeHead(200, {
-        'content-type': 'text/html; charset=utf-8',
-        'cache-control': 'public, max-age=300',
-        'x-content-type-options': 'nosniff',
-        'content-security-policy': "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
-      });
+      res.writeHead(200, { ...htmlHeaders, 'cache-control': 'public, max-age=300' });
       return void res.end(req.method === 'HEAD' ? undefined : html);
     }
     if ((req.method === 'GET' || req.method === 'HEAD') && path === '/badge.svg') {

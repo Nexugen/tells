@@ -10,8 +10,10 @@ import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
 import { buildVoice, checkVoice, splitSamples, styleMatch, type VoiceProfile } from './voice.ts';
+import { createInterface } from 'node:readline';
+import { handleMcpMessage, localBackend } from './mcp.ts';
 
-const VERSION = '0.4.2';
+const VERSION = '0.5.0';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 
@@ -23,6 +25,7 @@ Usage
   tells voice match <v.json> <file|->   how close a text is to a voice (0 to 100)
   tells rules [--json]                 list the rules
   tells exemplars [--register r]       list the human examples and their licences
+  tells mcp                            run as an MCP server over stdio (Claude Desktop, Claude Code)
 
 Lint options
   --register <r>     auto | casual | professional | technical | marketing (default auto: picked from the text)
@@ -61,6 +64,11 @@ Config
   failOn, maxScore, minSeverity, corroborate and guidance. Flags win over the file.
   Put "tells-ignore" on a line, or wrap a block in <!-- tells-off --> and
   <!-- tells-on -->, to skip it.
+
+MCP
+  Checking and voice run locally. fix_text uses ANTHROPIC_API_KEY when set (or
+  TELLS_MODEL_BACKEND=cli), and otherwise the public API at TELLS_API
+  (default https://tells.nexugen.app), sending a key from TELLS_KEY if set.
 
 Exit codes: 0 ok, 1 check failed (with --ci) or rewrite error, 2 bad usage.`;
 
@@ -305,6 +313,8 @@ async function main() {
     return;
   }
 
+  if (cmd === 'mcp') return mcpStdio();
+
   if (cmd === 'exemplars') {
     const reg = asRegister(flags.register);
     const list = EXEMPLARS.filter((e) => !reg || reg === 'auto' || e.register === reg);
@@ -314,6 +324,55 @@ async function main() {
   }
 
   usage(`unknown command "${cmd}"`);
+}
+
+/** `tells mcp`: newline-delimited JSON-RPC on stdin and stdout. Logs go to stderr only. */
+async function mcpStdio() {
+  const api = (process.env.TELLS_API ?? 'https://tells.nexugen.app').replace(/\/+$/, '');
+  const local = Boolean(process.env.ANTHROPIC_API_KEY) || process.env.TELLS_MODEL_BACKEND === 'cli';
+  const backend = localBackend(
+    async (args) => {
+      let voice: VoiceProfile | undefined;
+      if (args.voice !== undefined) {
+        checkVoice(args.voice);
+        voice = args.voice;
+      }
+      if (local) {
+        const model = process.env.TELLS_MODEL_BACKEND === 'cli' ? claudeCli({ configDir: process.env.TELLS_CLI_CONFIG_DIR }) : anthropic({});
+        const res = await rewrite(args.text, { register: args.register, model, voice, polish: args.polish });
+        return { ...res, kept: res.voice && res.rejected.length && res.text === args.text ? 'unchanged: the rewrite did not keep every fact' : undefined } as unknown as Record<string, unknown>;
+      }
+      const res = await fetch(`${api}/v1/rewrite`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', ...(process.env.TELLS_KEY ? { authorization: `Bearer ${process.env.TELLS_KEY}` } : {}) },
+        body: JSON.stringify({ text: args.text, register: args.register, voice, polish: args.polish }),
+      });
+      const j = (await res.json()) as Record<string, unknown> & { error?: { message: string } };
+      if (j.error) throw new Error(j.error.message);
+      return j;
+    },
+    (samples, name) => buildVoice(samples, { name }) as unknown as Record<string, unknown>,
+  );
+  const rl = createInterface({ input: process.stdin, crlfDelay: Infinity });
+  const pending = new Set<Promise<void>>();
+  for await (const line of rl) {
+    if (!line.trim()) continue;
+    let msg: unknown;
+    try {
+      msg = JSON.parse(line);
+    } catch {
+      process.stdout.write(JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error.' } }) + '\n');
+      continue;
+    }
+    const p = (async () => {
+      const msgs = Array.isArray(msg) ? msg : [msg];
+      const out = (await Promise.all(msgs.map((m) => handleMcpMessage(m, backend)))).filter((r) => r !== null);
+      if (out.length) process.stdout.write(JSON.stringify(Array.isArray(msg) ? out : out[0]) + '\n');
+    })().catch((err) => void process.stderr.write(`tells mcp: ${(err as Error).message}\n`));
+    pending.add(p);
+    void p.finally(() => pending.delete(p));
+  }
+  await Promise.all(pending);
 }
 
 main().catch((err) => {

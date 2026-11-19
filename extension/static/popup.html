@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tells</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <span class="brand">tells</span>
+  <label class="switch"><input type="checkbox" id="enabled" checked> <span>Underline as I type</span></label>
+</header>
+<main>
+  <label for="text" class="sr">Your writing</label>
+  <textarea id="text" placeholder="Paste anything you wrote."></textarea>
+  <div class="row">
+    <button id="check" type="button">Check</button>
+    <button id="grab" type="button" class="ghost">Use the text I'm writing</button>
+  </div>
+  <section id="result" hidden>
+    <h2 id="headline"></h2>
+    <div id="out" class="out"></div>
+    <ol id="list" class="list"></ol>
+    <div class="row">
+      <button id="fix" type="button">Fix it</button>
+      <button id="voicebtn" type="button" class="ghost">Sound like me</button>
+    </div>
+    <p id="note" class="note"></p>
+  </section>
+  <section id="voice" hidden>
+    <h2>Make it sound like you</h2>
+    <p class="muted">Paste a few things you wrote yourself, with a blank line between each one. About 600 words in all.</p>
+    <textarea id="samples"></textarea>
+    <div class="row"><button id="learn" type="button">Learn my style</button><span id="wc" class="muted">0 of 600 words</span></div>
+    <p id="voicenote" class="note"></p>
+  </section>
+  <div id="saved" class="saved" hidden><span>Your style is saved in this browser.</span><button id="forget" type="button" class="link">Forget it</button></div>
+</main>
+<footer>
+  <p>Checking happens on your computer. Fix and Sound like me send the text in this box to tells.nexugen.app, only when you press them.</p>
+  <p><button id="here" type="button" class="link">Underline on this page too</button> <a href="https://tells.nexugen.app/privacy" target="_blank" rel="noopener">Privacy</a></p>
+</footer>
+<script src="popup.js"></script>
+</body>
+</html>

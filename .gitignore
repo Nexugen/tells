@@ -5,3 +5,5 @@ dist
 bench/out/raw-*
 .tells-api-data
 __pycache__/
+extension/build
+extension/build-test
