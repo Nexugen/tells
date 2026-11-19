@@ -13,7 +13,7 @@ export const CHROME_STORE_URL = '';
 export const NEXUGEN_LINE = 'Nexugen builds web and mobile apps, takes care of the app store side, and finds customers for them.';
 /** A second line for that block. Leave empty until the Nexugen platform really checks its apps and outreach emails with tells; then set it to:
  *  'Nexugen checks the writing in every app it builds and every outreach email with tells.' */
-export const NEXUGEN_USES_TELLS = '';
+export const NEXUGEN_USES_TELLS = 'Nexugen uses tells on the writing its AI does for you: app pages, outreach emails, social captions and film scripts. Your own words are never changed.';
 
 export const SAMPLE = `Great question! In today's fast-paced world, it's not just a tool, it's a movement.
 
