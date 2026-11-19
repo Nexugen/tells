@@ -16,6 +16,10 @@ import { MODELS_PATH, modelsPage } from './models-page.ts';
 import { BADGE_SVG } from './badge.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
+import { PAGE_EVENTS, Stats, statsJson } from './stats.ts';
+import { statsPage } from './stats-page.ts';
+import { timingSafeEqual } from 'node:crypto';
+import { join } from 'node:path';
 import { buildVoice, checkVoice, styleMatch, type VoiceProfile } from '../voice.ts';
 
 /** Largest voice profile accepted inline, in characters of JSON. */
@@ -51,6 +55,10 @@ export interface ServerConfig {
   usageMaxPct: number;
   /** Ignore the usage gate while the file's window resets at or before this time (ms). Lets one window run past the limit. */
   usageIgnoreUntil?: number;
+  /** Token for /stats and /stats.json. Without one both stay closed. */
+  statsToken?: string;
+  /** Where the daily stats files go. Defaults to <dataDir>/stats. */
+  statsDir?: string;
 }
 
 export function configFromEnv(env = process.env): ServerConfig {
@@ -75,6 +83,8 @@ export function configFromEnv(env = process.env): ServerConfig {
     usageFile: env.TELLS_USAGE_FILE || undefined,
     usageMaxPct: num('TELLS_USAGE_MAX_PCT', 85),
     usageIgnoreUntil: env.TELLS_USAGE_IGNORE_UNTIL ? Number(env.TELLS_USAGE_IGNORE_UNTIL) || undefined : undefined,
+    statsToken: env.TELLS_STATS_TOKEN || undefined,
+    statsDir: env.TELLS_STATS_DIR || undefined,
   };
 }
 
@@ -97,8 +107,24 @@ export function estimateCostUsd(chars: number, model: string): number {
   return (inputTokens * price.input + outputTokens * price.output) / 1e6;
 }
 
-export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Store } = {}): Server {
+export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Store; stats?: Stats } = {}): Server {
   const store = deps.store ?? new Store(cfg.dataDir);
+  const stats = deps.stats ?? new Stats(cfg.statsDir ?? join(cfg.dataDir, 'stats'), { ownHost: new URL(SITE).hostname });
+  const siteOrigin = new URL(SITE).origin;
+  /** Where a request came from, for the counts: the site, the browser extension or anything else (the API). */
+  const sourceOf = (req: IncomingMessage) => {
+    const o = String(req.headers.origin ?? '');
+    if (o === siteOrigin) return 'site';
+    if (/^(chrome|moz|safari-web)-extension:\/\//.test(o)) return 'extension';
+    return 'api';
+  };
+  const statsAllowed = (req: IncomingMessage, query: string) => {
+    if (!cfg.statsToken) return false;
+    const auth = req.headers.authorization ?? '';
+    const given = auth.startsWith('Bearer ') ? auth.slice(7).trim() : new URLSearchParams(query).get('token') ?? '';
+    const a = Buffer.from(given), b = Buffer.from(cfg.statsToken);
+    return a.length === b.length && timingSafeEqual(a, b);
+  };
   const model = deps.model ?? (cfg.backend === 'cli' ? claudeCli({ model: cfg.model, configDir: cfg.cliConfigDir }) : anthropic({ model: cfg.model }));
   const pageOpts = { rewriteOn: !cfg.rewriteOff, anonTries: cfg.anonRewritesPerIp, keyDaily: cfg.keyDailyRewrites };
   const page = landingPage(pageOpts);
@@ -257,13 +283,18 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       check: (text, register) => {
         limitLint(ip);
         if (text.length > cfg.lintMaxChars) throw new Error(`Text is limited to ${cfg.lintMaxChars} characters here.`);
+        stats.event('check_mcp');
         return lint(text, { register });
       },
       fix: async (args) => {
         if (key === undefined && req.headers.authorization) key = keyFrom(req);
         try {
-          return await rewriteFor(ip, key, args as Record<string, unknown>);
+          const r = await rewriteFor(ip, key, args as Record<string, unknown>);
+          stats.event('fix_mcp');
+          if (args.voice) stats.event('voice_rewrite');
+          return r;
         } catch (err) {
+          stats.fixFailed(err instanceof HttpError ? err.code : 'internal');
           if (err instanceof HttpError) throw new Error(err.message);
           throw err;
         }
@@ -272,7 +303,9 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
         limitLint(ip);
         if (samples.length > 200) throw new Error('Up to 200 samples.');
         if (samples.reduce((a, x) => a + x.length, 0) > SAMPLES_MAX_CHARS) throw new Error(`Samples are limited to ${SAMPLES_MAX_CHARS} characters in all here.`);
-        return buildVoice(samples, { name }) as unknown as Record<string, unknown>;
+        const v = buildVoice(samples, { name }) as unknown as Record<string, unknown>;
+        stats.event('voice_build');
+        return v;
       },
     };
   };
@@ -292,6 +325,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       const data = await body(req, cfg.lintMaxChars);
       const text = textFrom(data, cfg.lintMaxChars);
       const disable = Array.isArray(data.disable) ? data.disable.filter((x): x is string => typeof x === 'string') : undefined;
+      stats.event(`check_${sourceOf(req)}`);
       return lint(text, { register: registerFrom(data), disable, plain: data.plain === true });
     },
     // Builds a profile from the samples in the request and returns it. The samples are not stored or logged.
@@ -303,7 +337,9 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       if (samples.length > 200) throw new HttpError(413, 'too_many', 'Up to 200 samples.');
       if (samples.reduce((a, s) => a + s.length, 0) > SAMPLES_MAX_CHARS) throw new HttpError(413, 'too_long', `Samples are limited to ${SAMPLES_MAX_CHARS} characters in all here.`);
       try {
-        return buildVoice(samples, { name: typeof data.name === 'string' ? data.name.slice(0, 80) : undefined });
+        const v = buildVoice(samples, { name: typeof data.name === 'string' ? data.name.slice(0, 80) : undefined });
+        stats.event('voice_build');
+        return v;
       } catch (err) {
         throw new HttpError(400, 'not_enough', (err as Error).message);
       }
@@ -313,12 +349,15 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       const data = await body(req, cfg.lintMaxChars + VOICE_MAX_CHARS);
       const voice = voiceFrom(data);
       if (!voice) throw new HttpError(400, 'missing_voice', 'Send the profile from POST /v1/voice as "voice".');
-      return styleMatch(textFrom(data, cfg.lintMaxChars), voice, { polish: data.polish === true });
+      const m = styleMatch(textFrom(data, cfg.lintMaxChars), voice, { polish: data.polish === true });
+      stats.event('voice_match');
+      return m;
     },
     'POST /v1/keys': async (req) => {
       const ip = clientIp(req);
       if (store.keysIssuedToday(ip) >= cfg.keysPerIpPerDay) throw new HttpError(429, 'key_limit', 'This address already has its free keys for today.');
       const key = store.issueKey(ip);
+      stats.event('key_issued');
       return { key, dailyRewrites: cfg.keyDailyRewrites, note: 'Keep this key. It is shown once and stored only as a hash.' };
     },
     'GET /v1/usage': async (req) => {
@@ -327,12 +366,28 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       return { rewritesToday: used, dailyRewrites: cfg.keyDailyRewrites, remaining: Math.max(0, cfg.keyDailyRewrites - used) };
     },
     'POST /v1/rewrite': async (req) => {
-      if (cfg.rewriteOff) throw new HttpError(503, 'rewrite_off', 'Free rewrites are switched off right now. Lint still works.');
-      const ip = clientIp(req);
-      const key = req.headers.authorization ? keyFrom(req) : undefined;
-      rewriteAllowed(ip, key);
-      const data = await body(req, cfg.rewriteMaxChars + VOICE_MAX_CHARS);
-      return rewriteFor(ip, key, data);
+      try {
+        if (cfg.rewriteOff) throw new HttpError(503, 'rewrite_off', 'Free rewrites are switched off right now. Lint still works.');
+        const ip = clientIp(req);
+        const key = req.headers.authorization ? keyFrom(req) : undefined;
+        rewriteAllowed(ip, key);
+        const data = await body(req, cfg.rewriteMaxChars + VOICE_MAX_CHARS);
+        const r = await rewriteFor(ip, key, data);
+        stats.event(`fix_${sourceOf(req)}`);
+        if (data.voice) stats.event('voice_rewrite');
+        return r;
+      } catch (err) {
+        stats.fixFailed(err instanceof HttpError ? err.code : 'internal');
+        throw err;
+      }
+    },
+    // The page reports a few things only it can see, such as being added to the home screen. Names only, from a fixed list.
+    'POST /v1/event': async (req) => {
+      limitLint(clientIp(req));
+      const data = await body(req, 200);
+      if (typeof data.event !== 'string' || !PAGE_EVENTS.has(data.event)) throw new HttpError(400, 'bad_event', 'Unknown event.');
+      stats.event(data.event);
+      return { ok: true };
     },
   };
 
@@ -368,6 +423,7 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     } catch {
       shared = '';
     }
+    stats.event('share');
     res.writeHead(200, { ...htmlHeaders, 'cache-control': 'no-store' });
     res.end(landingPage(pageOpts, shared));
   };
@@ -394,6 +450,10 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     }
     const backend = mcpBackend(req);
     const msgs = Array.isArray(data) ? data : [data];
+    for (const m of msgs as { method?: unknown; params?: { name?: unknown } }[]) {
+      if (m?.method === 'tools/call') stats.mcpTool(String(m.params?.name ?? ''));
+      else if (m?.method === 'initialize') stats.event('mcp_initialize');
+    }
     const replies = (await Promise.all(msgs.map((m) => handleMcpMessage(m, backend)))).filter((r): r is object => r !== null);
     if (!replies.length) {
       res.writeHead(202, { 'access-control-allow-origin': '*' });
@@ -403,9 +463,22 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
   };
 
   return createServer(async (req, res) => {
-    const path = (req.url ?? '/').split('?')[0];
+    const [path, query = ''] = (req.url ?? '/').split('?', 2) as [string, string?];
     if (req.method === 'OPTIONS') return send(res, 204, null);
     const isGet = req.method === 'GET' || req.method === 'HEAD';
+    if (isGet && (path === '/stats' || path === '/stats.json')) {
+      if (!statsAllowed(req, query)) {
+        res.writeHead(401, { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' });
+        return void res.end('Unauthorized\n');
+      }
+      const report = statsJson(stats);
+      if (path === '/stats.json') {
+        res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex', 'x-content-type-options': 'nosniff' });
+        return void res.end(JSON.stringify(report, null, 1));
+      }
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'x-robots-tag': 'noindex', 'referrer-policy': 'no-referrer', 'x-content-type-options': 'nosniff', 'content-security-policy': "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" });
+      return void res.end(statsPage(report));
+    }
     if (isGet && path.length > 1 && path.endsWith('/') && pages.has(path.replace(/\/+$/, ''))) {
       res.writeHead(301, { location: path.replace(/\/+$/, '') });
       return void res.end();
@@ -424,6 +497,12 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     }
     const html = isGet ? pages.get(path) : undefined;
     if (html !== undefined) {
+      // Count real page loads only: not HEAD, not prefetches, not the service worker filling its cache.
+      const dest = req.headers['sec-fetch-dest'];
+      const purpose = String(req.headers['sec-purpose'] ?? req.headers.purpose ?? '');
+      if (req.method === 'GET' && (!dest || dest === 'document') && !/prefetch|prerender/.test(purpose)) {
+        stats.view({ path, query, referer: typeof req.headers.referer === 'string' ? req.headers.referer : undefined, ip: clientIp(req), ua: String(req.headers['user-agent'] ?? '') });
+      }
       res.writeHead(200, { ...htmlHeaders, 'cache-control': 'public, max-age=300' });
       return void res.end(req.method === 'HEAD' ? undefined : html);
     }
@@ -452,12 +531,14 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const cfg = configFromEnv();
   const store = new Store(cfg.dataDir);
-  const server = createApp(cfg, { store });
+  const stats = new Stats(cfg.statsDir ?? join(cfg.dataDir, 'stats'), { ownHost: new URL(SITE).hostname });
+  const server = createApp(cfg, { store, stats });
   server.listen(cfg.port, cfg.host, () => {
     process.stdout.write(`tells-api listening on http://${cfg.host}:${cfg.port} (rewrite ${cfg.rewriteOff ? 'off' : `on, ${cfg.backend}:${cfg.model}, ${cfg.dailyCalls} calls a day`})\n`);
   });
   const stop = () => {
     store.flush();
+    stats.close();
     server.close(() => process.exit(0));
   };
   process.on('SIGTERM', stop);

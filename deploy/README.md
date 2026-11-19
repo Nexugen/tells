@@ -31,6 +31,10 @@ With `TELLS_MODEL_BACKEND=cli`, rewrite runs `claude -p` with tools, MCP servers
 
 Keys are capped at 3 per address per day. `TELLS_REWRITE_OFF=1` switches rewrite off and leaves lint running.
 
+## Counts
+
+The server keeps daily totals in `<data dir>/stats/YYYY-MM-DD.json`: page views by page, referring domain, `utm_source`, phone or computer, and how many checks, fixes, voice profiles and MCP tool calls came in. Visitors are counted with a hash of address and user agent salted with a random value that stays in memory and changes every UTC day, so nobody can be followed from one day to the next. No text, address, user agent or full URL is written. Set `TELLS_STATS_TOKEN` to open `/stats` and `/stats.json` (send it as `Authorization: Bearer <token>` or `?token=`). Without it both answer 401.
+
 ## Installing
 
 `deploy/install.sh` shows every step it would take. Run it with `--yes` to do them: build, test, copy to `/opt/tells`, install the systemd unit `tells-api`, add an nginx site for `tells.nexugen.app` on the existing wildcard certificate, then check `/health`.

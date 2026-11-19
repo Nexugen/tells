@@ -7,7 +7,12 @@ export const PRIVACY_UPDATED = '19 November 2026';
 /** The policy as [heading, paragraphs]. Kept as data so the tests can check it with tells. */
 export const PRIVACY: [string, string[]][] = [
   ['The short version', [
-    'tells has no accounts, no ads, no tracking and no analytics. We do not sell or share anything about you. What you paste is used to answer your request and then dropped. It is not saved on our side.',
+    'tells has no accounts, no ads and no cookies. We count visits and uses in aggregate, so we know how many people came, from which site and which pages they read, but nothing that identifies you or follows you from one day to the next. We do not sell or share anything about you. What you paste is used to answer your request and then dropped. It is not saved on our side.',
+  ]],
+  ['What we count', [
+    'For each day the server adds up page views per page, the site that sent you there (only its name, such as linkedin.com, never the full link), the utm_source tag if a link carries one, and whether the device is a phone or a computer. It also counts how many checks, fixes and style profiles were made, and through which route: the website, the API or an assistant connector.',
+    'To count visitors without counting the same person twice, the server makes a one-way hash of your address and browser name, mixed with a random value that is kept only in memory and replaced every day. The hash is never written to disk and the daily value is never saved, so nobody, including us, can link a visit today to one tomorrow. Only the day\'s totals are stored.',
+    'These counts never include your text, your address, your browser details or the full address of a page. There are no cookies, no tracking pixels and no outside analytics scripts.',
   ]],
   ['Checking your writing', [
     'On the website, pressing Check sends your text to our server at tells.nexugen.app. The server checks it in memory, sends back the result and keeps nothing. The same goes for the API and the connectors for Claude and ChatGPT.',
@@ -37,7 +42,7 @@ export function privacyCopy(): string {
 }
 
 export function privacyPage(): string {
-  return `${pageHead({ title: 'Privacy | tells', description: 'What tells does with your text on the website, the API, the assistant connectors and the browser extension. Short version: nothing is kept.', path: PRIVACY_PATH, name: 'tells privacy policy' })}
+  return `${pageHead({ title: 'Privacy | tells', description: 'What tells does with your text on the website, the API, the assistant connectors and the browser extension. Short version: your text is never kept, and visits are only counted in aggregate.', path: PRIVACY_PATH, name: 'tells privacy policy' })}
 ${siteHeader()}
 <main class="use">
 <h1>Privacy</h1>

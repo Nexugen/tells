@@ -202,8 +202,8 @@ test('voice: built from samples, nothing stored, usable for match and rewrite', 
     const voice = await built.json();
     assert.equal(voice.format, 'tells-voice');
     store.flush();
-    const { readdirSync, readFileSync } = await import('node:fs');
-    for (const f of readdirSync(dir)) assert.ok(!readFileSync(join(dir, f), 'utf8').includes('the logo is still wrong'), 'samples must not be stored');
+    const { readdirSync, readFileSync, statSync } = await import('node:fs');
+    for (const f of readdirSync(dir, { recursive: true }) as string[]) if (statSync(join(dir, f)).isFile()) assert.ok(!readFileSync(join(dir, f), 'utf8').includes('the logo is still wrong'), 'samples must not be stored');
 
     assert.equal((await post(`${url}/v1/voice`, { samples: ['too short'] })).status, 400);
     const m = await post(`${url}/v1/voice/match`, { text: 'okay the logo is fixed now. can you check the cache? i think its fine', voice });

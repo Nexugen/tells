@@ -293,6 +293,7 @@ ${o.home ? `
   $('phonex').addEventListener('click', function () { phone.hidden = true; store('tells-phone-hint', '1'); });
   setTimeout(function () { if (!deferred && phone.hidden) showPhone(ios ? 'Add tells to your phone: tap Share, then Add to Home Screen.' : 'Add tells to your phone: open the browser menu, then Add to Home screen.', false); }, 5000);
 ` : ''}
+  window.addEventListener('appinstalled', function () { post('/v1/event', { event: 'pwa_install' }).catch(function () {}); });
   if ('serviceWorker' in navigator) window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 })();
 </script>`;
