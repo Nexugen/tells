@@ -1,5 +1,7 @@
 // Benchmark figures shown on the page, written by bench/figures.ts from the saved round reports (bench/rounds/).
 import BENCH from '../bench-figures.json' with { type: 'json' };
+// Voice figures, written by bench/voice.ts --write.
+import VOICE from '../voice-figures.json' with { type: 'json' };
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
@@ -118,6 +120,21 @@ footer nav { display: flex; gap: 16px; }
   <div class="stats" id="stats"></div>
   <div id="details"></div>
 </div>
+
+<h2>Sound like you</h2>
+<p>A draft can pass every check and still not sound like the person who will sign it. Paste ten or more things one person wrote (messages, posts, emails), separated by a line with three dashes. tells measures how they write: sentence lengths, punctuation, casing, the small words they lean on, how they open and close, what they never do. Then it can rewrite the draft above in that voice, keeping every fact and adding none.</p>
+<div class="panel" id="voice">
+  <label for="samples" class="muted">Samples of one person's writing, separated by ---</label>
+  <textarea id="samples" spellcheck="false" placeholder="first sample&#10;---&#10;second sample&#10;---&#10;..."></textarea>
+  <div class="row">
+    <button id="buildvoice" type="button">Learn this voice</button>
+    <label class="muted"><input type="checkbox" id="polish" checked style="flex:none;min-width:0"> clean up capitals and apostrophes</label>
+    <button id="voicerewrite" type="button" class="ghost" disabled>Rewrite the draft in this voice</button>
+  </div>
+  <p class="muted" id="voicenote">About 1,500 words of samples works best. The profile stays in this page; the server does not keep your samples.</p>
+  <div id="voiceout"></div>
+</div>
+<p class="muted">From the command line: <code>tells voice build samples/*.txt -o voice.json</code>, then <code>tells rewrite draft.md --voice voice.json</code>. Tested on ${VOICE.authors} public-domain authors: a held-out passage was closest to its own author's profile ${VOICE.attribution} of the time (chance is ${VOICE.chance}), and it outscored other people's writing with an AUC of ${VOICE.aucVsOtherHumans}. <a href="https://github.com/Nexugen/tells/blob/main/bench/VOICE.md">How it is measured</a>.</p>
 
 <h2>Install</h2>
 <pre><code>npm i @nexugen/tells</code></pre>
@@ -275,6 +292,40 @@ curl -s -X POST https://tells.nexugen.app/v1/keys</code></pre>
         text.value = r.text;
         var n = r.changes.length;
         note.textContent = n ? n + (n === 1 ? ' sentence' : ' sentences') + ' changed. Score ' + r.before.score + ' to ' + r.after.score + '.' + (r.suggestions && r.suggestions.length ? ' Fill in the bracketed placeholders with real details.' : '') : 'Nothing needed changing.';
+        check();
+      })
+      .catch(function () { btn.disabled = false; note.textContent = 'Rewrite failed. Try again shortly.'; });
+  });
+  var voice = null;
+  $('buildvoice').addEventListener('click', function () {
+    var btn = this, note = $('voicenote');
+    var samples = $('samples').value.split(/^\s*---+\s*$/m).map(function (x) { return x.trim(); }).filter(Boolean);
+    btn.disabled = true; note.textContent = 'Measuring ' + samples.length + ' samples.';
+    fetch('/v1/voice', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ samples: samples }) })
+      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        btn.disabled = false;
+        if (r.error) { note.textContent = r.error.message; return; }
+        voice = r;
+        $('voicerewrite').disabled = ${opts.rewriteOn ? 'false' : 'true'};
+        note.textContent = 'Voice learned from ' + r.samples + ' samples and ' + r.words + ' words.';
+        $('voiceout').innerHTML = '<ul class="list">' + r.summary.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>';
+      })
+      .catch(function () { btn.disabled = false; note.textContent = 'Could not reach tells. Try again.'; });
+  });
+  $('voicerewrite').addEventListener('click', function () {
+    if (!voice) return;
+    var btn = this, note = $('voicenote');
+    btn.disabled = true; note.textContent = 'Rewriting the draft in this voice.';
+    var headers = { 'content-type': 'application/json' };
+    if (key) headers.authorization = 'Bearer ' + key;
+    fetch('/v1/rewrite', { method: 'POST', headers: headers, body: JSON.stringify({ text: text.value, register: reg.value, voice: voice, polish: $('polish').checked }) })
+      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        btn.disabled = false;
+        if (r.error) { note.textContent = r.error.message; return; }
+        text.value = r.text;
+        note.textContent = r.kept ? 'Left the draft as it was: the rewrite did not keep every fact.' : 'Style match ' + r.voice.before.score + ' to ' + r.voice.after.score + ' out of 100. The draft above is updated.';
         check();
       })
       .catch(function () { btn.disabled = false; note.textContent = 'Rewrite failed. Try again shortly.'; });

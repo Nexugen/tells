@@ -16,3 +16,6 @@ export { rulesAsJson } from './serialize.ts';
 export { formatText, formatGithub } from './format.ts';
 export { REGISTERS } from './types.ts';
 export type * from './types.ts';
+export { buildVoice, styleMatch, voiceVector, voiceDistance, checkVoice, splitSamples, labelFor, VOICE_KEYS, MIN_VOICE_WORDS, MIN_VOICE_SAMPLES } from './voice.ts';
+export type { VoiceProfile, VoiceHabits, StyleMatch, BuildVoiceOptions, MatchOptions } from './voice.ts';
+export { voiceRewrite, factProblems } from './voice-rewrite.ts';

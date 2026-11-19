@@ -9,6 +9,12 @@ import { landingPage } from './page.ts';
 import { BADGE_SVG } from './badge.ts';
 import { REGISTERS, type Register, type Severity } from '../types.ts';
 import { Store } from './store.ts';
+import { buildVoice, checkVoice, styleMatch, type VoiceProfile } from '../voice.ts';
+
+/** Largest voice profile accepted inline, in characters of JSON. */
+const VOICE_MAX_CHARS = 40_000;
+/** Largest set of samples accepted by POST /v1/voice, in characters. */
+const SAMPLES_MAX_CHARS = 60_000;
 
 export interface ServerConfig {
   port: number;
@@ -146,6 +152,17 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
     return data.register as Register;
   };
 
+  const voiceFrom = (data: Record<string, unknown>): VoiceProfile | undefined => {
+    if (data.voice === undefined || data.voice === null) return undefined;
+    if (JSON.stringify(data.voice).length > VOICE_MAX_CHARS) throw new HttpError(413, 'voice_too_large', `A voice profile is limited to ${VOICE_MAX_CHARS} characters here.`);
+    try {
+      checkVoice(data.voice);
+    } catch (err) {
+      throw new HttpError(400, 'bad_voice', (err as Error).message);
+    }
+    return data.voice;
+  };
+
   const keyFrom = (req: IncomingMessage) => {
     const auth = req.headers.authorization ?? '';
     const key = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
@@ -159,7 +176,8 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       name: 'tells',
       about: 'Finds the habits that make text read as AI-written and the human patterns it lacks. Lint is free with no key. Rewrite gives a few free tries a day, more with a free key.',
       source: 'https://github.com/Nexugen/tells',
-      endpoints: ['GET /', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      endpoints: ['GET /', 'GET /badge.svg', 'POST /v1/lint', 'POST /v1/voice', 'POST /v1/voice/match', 'POST /v1/keys', 'POST /v1/rewrite', 'GET /v1/usage', 'GET /v1/rules', 'GET /health'],
+      voice: 'POST /v1/voice with {"samples": [...]} returns a voice profile; nothing is stored. Pass it back as "voice" to /v1/rewrite or /v1/voice/match.',
     }),
     'GET /health': async () => ({ ok: true, rewrite: !cfg.rewriteOff }),
     'GET /v1/rules': async () => rulesAsJson(),
@@ -169,6 +187,27 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       const text = textFrom(data, cfg.lintMaxChars);
       const disable = Array.isArray(data.disable) ? data.disable.filter((x): x is string => typeof x === 'string') : undefined;
       return lint(text, { register: registerFrom(data), disable, plain: data.plain === true });
+    },
+    // Builds a profile from the samples in the request and returns it. The samples are not stored or logged.
+    'POST /v1/voice': async (req) => {
+      limitLint(clientIp(req));
+      const data = await body(req, SAMPLES_MAX_CHARS);
+      const samples = Array.isArray(data.samples) ? data.samples.filter((x): x is string => typeof x === 'string') : [];
+      if (!samples.length) throw new HttpError(400, 'missing_samples', 'Send samples of one person\'s writing as "samples", an array of strings.');
+      if (samples.length > 200) throw new HttpError(413, 'too_many', 'Up to 200 samples.');
+      if (samples.reduce((a, s) => a + s.length, 0) > SAMPLES_MAX_CHARS) throw new HttpError(413, 'too_long', `Samples are limited to ${SAMPLES_MAX_CHARS} characters in all here.`);
+      try {
+        return buildVoice(samples, { name: typeof data.name === 'string' ? data.name.slice(0, 80) : undefined });
+      } catch (err) {
+        throw new HttpError(400, 'not_enough', (err as Error).message);
+      }
+    },
+    'POST /v1/voice/match': async (req) => {
+      limitLint(clientIp(req));
+      const data = await body(req, cfg.lintMaxChars + VOICE_MAX_CHARS);
+      const voice = voiceFrom(data);
+      if (!voice) throw new HttpError(400, 'missing_voice', 'Send the profile from POST /v1/voice as "voice".');
+      return styleMatch(textFrom(data, cfg.lintMaxChars), voice, { polish: data.polish === true });
     },
     'POST /v1/keys': async (req) => {
       const ip = clientIp(req);
@@ -187,26 +226,29 @@ export function createApp(cfg: ServerConfig, deps: { model?: Model; store?: Stor
       const key = req.headers.authorization ? keyFrom(req) : undefined;
       if (key && store.rewritesToday(key) >= cfg.keyDailyRewrites) throw new HttpError(429, 'key_daily_cap', `This key has used its ${cfg.keyDailyRewrites} free rewrites for today (UTC).`);
       if (!key && store.anonRewritesToday(ip) >= cfg.anonRewritesPerIp) throw new HttpError(429, 'try_limit', `You've used today's free tries. A free key gives you ${cfg.keyDailyRewrites} rewrites a day.`);
-      const data = await body(req, cfg.rewriteMaxChars);
+      const data = await body(req, cfg.rewriteMaxChars + VOICE_MAX_CHARS);
       const text = textFrom(data, cfg.rewriteMaxChars);
       const register = registerFrom(data);
       const minSeverity = ['error', 'warning', 'info'].includes(String(data.minSeverity)) ? (data.minSeverity as Severity) : undefined;
+      const voice = voiceFrom(data);
+      const polish = data.polish === true;
 
       const before = lint(text, { register });
-      if (before.findings.length === 0 && before.human.missing.length === 0) return { text, changes: [], suggestions: [], before, after: before, model: null, costUsd: 0 };
+      if (!voice && before.findings.length === 0 && before.human.missing.length === 0) return { text, changes: [], suggestions: [], before, after: before, model: null, costUsd: 0 };
 
       if (accountBusy()) throw new HttpError(503, 'busy', 'Rewrite is busy, try later. Lint still works.');
-      if (store.callsToday() + 2 > cfg.dailyCalls) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
-      const estimate = estimateCostUsd(text.length, cfg.model) * 2; // two calls at most
+      if (store.callsToday() + (voice ? 4 : 2) > cfg.dailyCalls) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
+      // A voice rewrite sends the profile and rewrites the whole draft: up to two whole-draft calls and two span calls.
+      const estimate = voice ? estimateCostUsd(text.length + 6000, cfg.model) * 4 : estimateCostUsd(text.length, cfg.model) * 2;
       const { spendUsd, reservedUsd } = store.spendToday();
       if (spendUsd + reservedUsd + estimate > cfg.dailySpendUsd) throw new HttpError(503, 'global_daily_cap', 'Free rewrites are used up for today (UTC). Lint still works.');
       store.reserve(estimate);
       let settled = false;
       try {
-        const res = await rewrite(text, { register, minSeverity, model });
+        const res = await rewrite(text, { register, minSeverity, model, voice, polish });
         store.settle(estimate, res.costUsd || estimate, { key, ip: key ? undefined : ip, calls: res.calls });
         settled = true;
-        return { text: res.text, changes: res.changes, suggestions: res.suggestions, rejected: res.rejected.length, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6 };
+        return { text: res.text, changes: res.changes, suggestions: res.suggestions, rejected: res.rejected.length, before: res.before, after: res.after, model: res.model, costUsd: Math.round(res.costUsd * 1e6) / 1e6, ...(res.voice ? { voice: res.voice, kept: res.rejected.length && res.text === text ? 'unchanged: the rewrite did not keep every fact' : undefined } : {}) };
       } catch (err) {
         if (err instanceof ModelError) {
           process.stderr.write(`tells-api: model error: ${err.message.slice(0, 200)}\n`);

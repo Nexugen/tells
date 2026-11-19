@@ -178,3 +178,47 @@ test('the badge is a cached SVG, and the page shows it with copyable snippets', 
     s.close();
   }
 });
+
+// A synthetic writer for the voice endpoints.
+const VOICE_SAMPLES = Array.from({ length: 30 }, (_, i) =>
+  `okay so sample ${i + 1} is here. the build finished but the logo is still wrong, can you fix that? i think its the old file. maybe check the cache too`);
+
+test('voice: built from samples, nothing stored, usable for match and rewrite', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'tells-api-voice-'));
+  const cfg = { ...configFromEnv({ TELLS_DATA_DIR: dir }), port: 0 };
+  const store = new Store(dir);
+  const prompts: string[] = [];
+  const model = fromFunction('fake', async (req) => {
+    prompts.push(req.prompt);
+    const p = JSON.parse(req.prompt) as { draft?: string };
+    return { text: JSON.stringify({ text: (p.draft ?? '').replace('We are pleased to share that the', 'okay the') }), costUsd: 0.001 };
+  });
+  const server = createApp(cfg, { model, store });
+  await new Promise<void>((r) => server.listen(0, '127.0.0.1', () => r()));
+  const url = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+  try {
+    const built = await post(`${url}/v1/voice`, { samples: VOICE_SAMPLES });
+    assert.equal(built.status, 200);
+    const voice = await built.json();
+    assert.equal(voice.format, 'tells-voice');
+    store.flush();
+    const { readdirSync, readFileSync } = await import('node:fs');
+    for (const f of readdirSync(dir)) assert.ok(!readFileSync(join(dir, f), 'utf8').includes('the logo is still wrong'), 'samples must not be stored');
+
+    assert.equal((await post(`${url}/v1/voice`, { samples: ['too short'] })).status, 400);
+    const m = await post(`${url}/v1/voice/match`, { text: 'okay the logo is fixed now. can you check the cache? i think its fine', voice });
+    assert.equal(m.status, 200);
+    assert.ok(typeof (await m.json()).score === 'number');
+    assert.equal((await post(`${url}/v1/voice/match`, { text: 'hi', voice: { format: 'nope' } })).status, 400);
+
+    const draft = 'We are pleased to share that the new export is live. It handles 3 formats.';
+    const rw = await post(`${url}/v1/rewrite`, { text: draft, voice, polish: true });
+    assert.equal(rw.status, 200);
+    const j = await rw.json();
+    assert.equal(j.text, 'okay the new export is live. It handles 3 formats.');
+    assert.ok(j.voice && typeof j.voice.after.score === 'number');
+    assert.equal(JSON.parse(prompts[0]).draft, draft);
+  } finally {
+    server.close();
+  }
+});

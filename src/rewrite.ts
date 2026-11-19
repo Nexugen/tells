@@ -6,6 +6,8 @@ import { getSignal, signalContext } from './human.ts';
 import { guessRegister } from './register.ts';
 import type { Finding, LintOptions, LintResult, Register, Severity } from './types.ts';
 import { anthropic, ModelError, type Model } from './model.ts';
+import type { StyleMatch, VoiceProfile } from './voice.ts';
+import { voiceRewrite } from './voice-rewrite.ts';
 
 export interface RewriteOptions extends LintOptions {
   /** Defaults to the Anthropic adapter (ANTHROPIC_API_KEY). */
@@ -22,6 +24,13 @@ export interface RewriteOptions extends LintOptions {
    * bracketed placeholder for you to fill in. Default true.
    */
   humanize?: boolean;
+  /**
+   * A voice profile (see buildVoice). With one, the whole draft is rewritten to read like that
+   * writer, keeping every fact, and then the sentences that still carry a tell are fixed.
+   */
+  voice?: VoiceProfile;
+  /** With a voice: standard capitals, apostrophes and spelling, for publishing. Default false. */
+  polish?: boolean;
 }
 
 export interface Suggestion {
@@ -58,6 +67,8 @@ export interface RewriteResult {
   calls: number;
   usage: { inputTokens: number; outputTokens: number };
   costUsd: number;
+  /** Present for a voice rewrite: how close the text is to the voice before and after (see styleMatch). */
+  voice?: { before: StyleMatch; after: StyleMatch; fixedSpans: number; /** The text after the voice pass, before tells left in it were fixed. */ voiced: string };
 }
 
 interface Unit {
@@ -77,6 +88,7 @@ const RANK: Record<Severity, number> = { error: 0, warning: 1, info: 2 };
  * surrounding context, and a few human examples in the same register.
  */
 export async function rewrite(text: string, options: RewriteOptions = {}): Promise<RewriteResult> {
+  if (options.voice) return voiceRewrite(text, { ...options, voice: options.voice });
   const register: Register = options.register === 'auto' ? guessRegister(text).register : (options.register ?? 'professional');
   // A rewrite is asked for, so it targets every tell at its own severity, without the
   // corroboration that keeps lint() from accusing a text over one habit.

@@ -9,14 +9,18 @@ import { RULES } from './rules.ts';
 import { EXEMPLARS } from './exemplars.ts';
 import { REGISTERS, type LintOptions, type Register, type Severity } from './types.ts';
 import { anthropic, claudeCli } from './model.ts';
+import { buildVoice, checkVoice, splitSamples, styleMatch, type VoiceProfile } from './voice.ts';
 
-const VERSION = '0.3.3';
+const VERSION = '0.4.0';
 
 const HELP = `tells ${VERSION}: find the habits that make text read as AI-written
 
 Usage
   tells lint [files or folders...]     check text, no model, no network (stdin if no files)
   tells rewrite <file|->               fix only the flagged sentences with a model
+  tells voice build <files...> -o v.json  learn a writer's voice from samples of their writing
+  tells voice show <v.json>             print the habits a voice profile found
+  tells voice match <v.json> <file|->   how close a text is to a voice (0 to 100)
   tells rules [--json]                 list the rules
   tells exemplars [--register r]       list the human examples and their licences
 
@@ -41,6 +45,16 @@ Rewrite options
                      with no tools). Default anthropic, or TELLS_MODEL_BACKEND
   --model <id>       model id (default claude-haiku-5-5 for anthropic, haiku for cli)
   --json             print the full result as JSON
+  --voice <v.json>   rewrite the whole draft in this voice, keeping every fact, then fix
+                     what still carries a tell (see tells voice build)
+  --polish           with --voice: standard capitals, apostrophes and spelling
+
+Voice options
+  -o, --out <file>   where voice build writes the profile (default stdout)
+  --name <name>      a label stored in the profile
+  Each file is one sample. A file can hold several, separated by lines of ---,
+  or be a JSON array of strings, or JSONL with a "text" field per line.
+  Aim for 10 or more samples and 1,500 words or more. Nothing leaves your machine.
 
 Config
   A .tellsrc.json in the current folder can set register, disable, severity,
@@ -65,11 +79,12 @@ function parse(argv: string[]) {
     if (a === '-') rest.push(a);
     else if (a.startsWith('--')) {
       const [k, v] = a.slice(2).split('=', 2);
-      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color', 'strict', 'no-score', 'quiet'];
+      const bool = ['ci', 'json', 'write', 'plain', 'help', 'version', 'no-color', 'strict', 'no-score', 'quiet', 'polish'];
       if (v !== undefined) flags[k] = v;
       else if (bool.includes(k)) flags[k] = true;
       else flags[k] = argv[++i] ?? '';
     } else if (a === '-h') flags.help = true;
+    else if (a === '-o') flags.out = argv[++i] ?? '';
     else rest.push(a);
   }
   return { flags, rest };
@@ -131,6 +146,33 @@ function read(p: string): string {
   return p === '-' ? readFileSync(0, 'utf8') : readFileSync(p, 'utf8');
 }
 
+function loadVoice(path: string): VoiceProfile {
+  if (!existsSync(path)) usage(`no such voice file: ${path}`);
+  try {
+    const v: unknown = JSON.parse(readFileSync(path, 'utf8'));
+    checkVoice(v);
+    return v;
+  } catch (err) {
+    usage(`${path}: ${(err as Error).message}`);
+  }
+}
+
+/** One file as samples: a JSON array of strings, JSONL with "text", or text split on --- lines. */
+function samplesFrom(name: string, raw: string): string[] {
+  const t = raw.trim();
+  if (name.endsWith('.json') && t.startsWith('[')) {
+    const arr = JSON.parse(t) as unknown[];
+    return arr.map((x) => (typeof x === 'string' ? x : typeof (x as { text?: unknown })?.text === 'string' ? (x as { text: string }).text : '')).filter(Boolean);
+  }
+  if (name.endsWith('.jsonl')) {
+    return t.split('\n').filter((l) => l.trim()).map((l) => {
+      const d = JSON.parse(l) as unknown;
+      return typeof d === 'string' ? d : String((d as { text?: unknown }).text ?? '');
+    }).filter(Boolean);
+  }
+  return splitSamples(raw);
+}
+
 async function main() {
   const { flags, rest } = parse(process.argv.slice(2));
   if (flags.version) return void console.log(VERSION);
@@ -187,6 +229,8 @@ async function main() {
       const res = await rewrite(text, {
         ...base,
         model,
+        voice: typeof flags.voice === 'string' ? loadVoice(flags.voice) : undefined,
+        polish: Boolean(flags.polish),
         minSeverity: asSeverity(flags['min-severity'] ?? cfg.minSeverity, '--min-severity'),
         guidance: cfg.guidance,
       });
@@ -194,6 +238,12 @@ async function main() {
       else if (flags.write && file !== '-') {
         writeFileSync(file, res.text);
         process.stderr.write(`${file}: ${res.changes.length} sentences changed, known tells per 100 words ${res.before.score} -> ${res.after.score}\n`);
+        if (res.voice) process.stderr.write(`style match ${res.voice.before.score} -> ${res.voice.after.score}\n`);
+      } else if (res.voice) {
+        process.stdout.write(res.text);
+        const hp = (r: typeof res.before) => r.human.pattern?.score ?? '-';
+        process.stderr.write(`\nstyle match ${res.voice.before.score} -> ${res.voice.after.score}, known tells per 100 words ${res.before.score} -> ${res.after.score}, human-pattern score ${hp(res.before)} -> ${hp(res.after)}, ${res.model}, ${res.calls} calls\n`);
+        for (const r of res.rejected) process.stderr.write(`kept the draft unchanged: the rewrite ${r.reason}\n`);
       } else {
         process.stdout.write(res.text);
         process.stderr.write(`\n${res.changes.length} sentences changed, known tells per 100 words ${res.before.score} -> ${res.after.score}, ${res.model}, about $${res.costUsd.toFixed(4)}\n`);
@@ -205,6 +255,45 @@ async function main() {
       process.exitCode = 1;
     }
     return;
+  }
+
+  if (cmd === 'voice') {
+    const sub = rest.shift();
+    if (sub === 'build') {
+      if (!rest.length) usage('give the sample files: tells voice build <files...> -o voice.json');
+      const samples: string[] = [];
+      for (const f of expand(rest)) samples.push(...samplesFrom(f, read(f)));
+      let profile: VoiceProfile;
+      try {
+        profile = buildVoice(samples, { name: typeof flags.name === 'string' ? flags.name : undefined, register: register === 'auto' ? undefined : register });
+      } catch (err) {
+        usage((err as Error).message);
+      }
+      const json = JSON.stringify(profile, null, 1) + '\n';
+      if (typeof flags.out === 'string' && flags.out) {
+        writeFileSync(flags.out, json, { mode: 0o600 });
+        process.stderr.write(`${flags.out}: voice from ${profile.samples} samples, ${profile.words} words\n`);
+        for (const l of profile.summary) process.stderr.write(`  ${l}\n`);
+      } else process.stdout.write(json);
+      return;
+    }
+    if (sub === 'show') {
+      const v = loadVoice(rest[0] ?? usage('give a voice file'));
+      if (flags.json) return void console.log(JSON.stringify(v, null, 2));
+      console.log(`${v.name ? `${v.name}: ` : ''}${v.samples} samples, ${v.words} words, built ${v.createdAt}\n`);
+      for (const l of v.summary) console.log(`- ${l}`);
+      return;
+    }
+    if (sub === 'match') {
+      const v = loadVoice(rest[0] ?? usage('give a voice file and a text'));
+      const file = rest[1] ?? (process.stdin.isTTY ? usage('give a file, or pipe text in') : '-');
+      const m = styleMatch(read(file), v, { polish: Boolean(flags.polish) });
+      if (flags.json) return void console.log(JSON.stringify(m, null, 2));
+      console.log(`style match ${m.score}/100 (closer to the voice than ${m.score}% of other people's texts in the baseline)${m.words < 60 ? ', short text, read loosely' : ''}`);
+      console.log(`furthest from the voice: ${m.furthest.map((f) => f.label).join(', ')}`);
+      return;
+    }
+    usage('voice commands are build, show and match');
   }
 
   if (cmd === 'rules') {

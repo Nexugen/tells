@@ -48,3 +48,17 @@ test('lint at a real terminal ends with the credit line, and --quiet or json lea
   assert.ok(!run('--quiet').includes(CREDIT));
   assert.ok(!run('--format json').includes(CREDIT));
 });
+
+test('voice build, show and match work offline', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'tells-voice-cli-'));
+  const samples = join(dir, 'samples.txt');
+  writeFileSync(samples, Array.from({ length: 30 }, (_, i) => `okay so note ${i + 1}. the build finished but the logo is still wrong, can you fix that? i think its the old file`).join('\n---\n'));
+  const out = join(dir, 'voice.json');
+  spawnSync(process.execPath, ['--experimental-strip-types', CLI, 'voice', 'build', samples, '-o', out], { encoding: 'utf8' });
+  const shown = execFileSync(process.execPath, ['--experimental-strip-types', CLI, 'voice', 'show', out], { encoding: 'utf8' });
+  assert.match(shown, /30 samples/);
+  const text = join(dir, 'text.txt');
+  writeFileSync(text, 'okay the logo is fixed. can you check it? i think its the right file now');
+  const matched = execFileSync(process.execPath, ['--experimental-strip-types', CLI, 'voice', 'match', out, text], { encoding: 'utf8' });
+  assert.match(matched, /style match \d+\/100/);
+});

@@ -1,0 +1,10 @@
+{
+ "authors": 15,
+ "heldOut": 128,
+ "otherHumans": 1906,
+ "attribution": 45.3,
+ "chance": 6.7,
+ "aucVsOtherAuthors": 0.706,
+ "aucVsOtherHumans": 0.946,
+ "medianOwnMatch": 96
+}

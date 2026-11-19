@@ -54,15 +54,24 @@ export interface HumanScore {
 /** Score a text. Returns null under the model's minimum length, where the counts say too little. */
 export function humanScore(text: string, register: Register, findings: Pick<Finding, 'ruleId' | 'severity' | 'category'>[]): HumanScore | null {
   if (!M.trees?.length || M.keys.length !== SCORE_KEYS.length) return null;
-  const prose = stripLayout(text);
-  const masked = mask(prose);
-  if (countWords(masked) < M.minWords) return null;
-  const paras = paragraphs(masked);
-  const ctx: RuleContext = { text: prose, masked, paragraphs: paras, sentences: sentences(masked, paras), register };
-  const x = scoreFeatures({ text: prose, register, findings, ctx });
+  const x = featureVector(text, register, findings, M.minWords);
+  if (!x) return null;
   const p = 1 / (1 + Math.exp(-(M.calib.a * margin(x) + M.calib.b)));
   const score = Math.round(p * 100);
   return { score, low: score < M.low, lowLine: M.low };
+}
+
+/**
+ * The measurements behind the score (see SCORE_KEYS for their names), for a text with its
+ * layout stripped. Returns null under `minWords`. Voice profiles are built from the same vector.
+ */
+export function featureVector(text: string, register: Register, findings: Pick<Finding, 'ruleId' | 'severity' | 'category'>[], minWords = 0): number[] | null {
+  const prose = stripLayout(text);
+  const masked = mask(prose);
+  if (countWords(masked) < minWords) return null;
+  const paras = paragraphs(masked);
+  const ctx: RuleContext = { text: prose, masked, paragraphs: paras, sentences: sentences(masked, paras), register };
+  return scoreFeatures({ text: prose, register, findings, ctx });
 }
 
 export const SCORE_MODEL_VERSION = M.version;

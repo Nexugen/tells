@@ -206,6 +206,33 @@ const model = fromFunction('my-model', async ({ system, prompt, maxTokens }) => 
 await rewrite(draft, { model });
 ```
 
+## Sound like a person you know
+
+A draft can have no tells at all and still not sound like the person who will sign it. A voice profile fixes that part. You give tells samples of one person's writing (messages, posts, emails), it measures how they write, and `rewrite` can then turn a whole draft into that voice. Every fact stays and none are added.
+
+```sh
+npx tells voice build samples/*.txt -o voice.json   # one sample per file, or split a file with lines of ---
+npx tells voice show voice.json                     # the habits it found
+npx tells rewrite draft.md --voice voice.json --polish
+npx tells voice match voice.json draft.md           # 0 to 100: how close a text is to the voice
+```
+
+```ts
+import { buildVoice, rewrite, styleMatch } from '@nexugen/tells';
+
+const voice = buildVoice(samples);            // samples: string[]; no model, no network
+const res = await rewrite(draft, { voice, polish: true });
+console.log(res.text, res.voice?.before.score, res.voice?.after.score);
+```
+
+Building a profile is plain counting, like the lint. It uses the same measures as the human-pattern score (function words, punctuation, sentence rhythm, casing, contractions, the human signals), each compared with ordinary human writing from the benchmark, plus the words, openings and endings the samples keep coming back to, what they never do, and a few short excerpts. Aim for 10 or more samples and about 1,500 words. The minimum is 5 samples and 600 words. The profile is a JSON file you keep. It holds those excerpts, so treat it like the samples.
+
+The rewrite sends the draft, the profile's description and its excerpts to the model in one call. Then it checks the result against the draft. If the rewrite added or dropped a number, a name, a link, a code span or a `[placeholder]`, it goes back once with the problem named; if it still does not hold, you get your draft back unchanged and the reason in `result.rejected`. After that the text is linted again, and any sentence that still carries a tell goes through the usual span rewrite, told to keep the voice. `polish: true` keeps the writer's shape but uses standard capitals, apostrophes and spelling, for text that will be published. The rewrite never adds spelling mistakes.
+
+`styleMatch(text, voice)` is the check. The score is the share of other people's texts in the benchmark baseline that sit further from the voice than this text does, so 90 means closer than 90% of them. It measures the person, not the human-pattern score: a voice rewrite is not tuned to raise that score, and for a writer who types in lowercase it often goes down. Under about 60 words, read the match loosely.
+
+On 15 public-domain authors from the benchmark, a profile built from 80% of each author's passages put a held-out passage closest to its own author 45% of the time (chance is 7%), and scored held-out passages above other people's writing with an AUC of 0.95. Telling one literary author from another is harder, with an AUC of 0.71. [bench/VOICE.md](bench/VOICE.md) has the method.
+
 ## The score
 
 The score is known tells per 100 words, weighted: an error counts 3, a warning 2 and a hint 1. Texts shorter than 50 words are scored as if they had 50, so one dash in a tweet doesn't look like a disaster. 0 is clean, under 2 is light, under 5 is noticeable, and 5 or more is heavy.
@@ -238,7 +265,7 @@ node --experimental-strip-types bench/v2.ts topicout  # leave the AI, apps and t
 
 ## Hosted API
 
-There is a small HTTP server in `src/server` with the same lint and rewrite, and a page at `/` with a live checker. Lint is free with no key. Rewrite gives a few free tries per address, more with a free key, and stops at a daily cap on calls and on spend for the whole server. Self-host it with `npm run build && npm run serve`. Settings are in [deploy/README.md](deploy/README.md).
+There is a small HTTP server in `src/server` with the same lint and rewrite, and a page at `/` with a live checker. `POST /v1/voice` with `{"samples": [...]}` returns a voice profile, and `POST /v1/rewrite` and `POST /v1/voice/match` take one back as `"voice"`. The server never stores samples or profiles: you send the profile with each request. Lint is free with no key. Rewrite gives a few free tries per address, more with a free key, and stops at a daily cap on calls and on spend for the whole server. Self-host it with `npm run build && npm run serve`. Settings are in [deploy/README.md](deploy/README.md).
 
 ## Contributing
 
