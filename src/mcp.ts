@@ -7,7 +7,7 @@ import { REGISTERS, type LintResult, type Register } from './types.ts';
 export const MCP_VERSION = '0.5.0';
 const PROTOCOLS = ['2025-11-25', '2025-06-18', '2025-03-26', '2024-11-05'];
 
-export const MCP_INSTRUCTIONS = 'tells finds the habits that make writing read as AI-written (stock openers, "not X, it\'s Y", chatbot sign-offs, words chatbots overuse) and the human signals a text lacks. Call check_text on a draft before showing it to the user, then fix what it reports yourself or call fix_text. A marked phrase is not proof that AI wrote the text; never use tells to accuse a person.';
+export const MCP_INSTRUCTIONS = 'tells finds the habits that make writing read as AI-written (stock openers, "not X, it\'s Y", chatbot sign-offs, words chatbots overuse) and the human signals a text lacks. Call check_text on a draft before showing it to the user, then fix what it reports yourself or call fix_text. A marked phrase is not proof that AI wrote the text; never use tells to accuse a person. Report the verdict as given: zero warnings does not mean the text sounds human, so check the human-pattern score too (under 17 reads machine-like).';
 
 const registerProp = { type: 'string', enum: ['auto', ...REGISTERS], description: 'Kind of writing. auto (default) guesses from the text.' };
 
@@ -52,7 +52,7 @@ export function checkReport(text: string, r: LintResult) {
   });
   const strong = findings.filter((f) => f.severity !== 'info');
   const kinds = new Set(strong.map((f) => f.rule)).size;
-  const verdict = kinds ? `${kinds} ${kinds === 1 ? 'habit gives' : 'habits give'} this away.` : r.human.pattern?.low && !r.human.tooShort ? 'No single phrase stands out, but the rhythm and word choice read machine-made.' : findings.length ? 'Mostly reads like a person; only small hints.' : 'Nothing reads as AI-written.';
+  const verdict = kinds ? `${kinds} ${kinds === 1 ? 'habit gives' : 'habits give'} this away.` : r.human.pattern?.low && !r.human.tooShort ? `Reads as AI-written overall: the rhythm and word choice are machine-like (human-pattern score ${r.human.pattern.score} of 100), though no single phrase is a clear giveaway. Do not tell the user this sounds human.` : findings.length ? 'Mostly reads like a person; only small hints.' : 'Nothing reads as AI-written.';
   return {
     verdict,
     words: r.words,
