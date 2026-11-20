@@ -369,6 +369,104 @@
     "output": 1015,
     "reasoning": 795
    }
+  },
+  {
+   "id": "everyday:article:write-a-short-blog-post-in-the-first-person-abou#prose",
+   "family": "everyday:article:write-a-short-blog-post-in-the-first-person-abou",
+   "genre": "article",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "When I started journaling a year ago, I thought every entry needed to be profound. I stared at the blank page each night waiting for some grand revelation about my life, and for the first few weeks, I mostly just wrote about feeling awkward. It took me about a month to realize that the point wasn't to write a masterpiece, or even anything particularly interesting. Some days I only managed three messy sentences about what I ate for dinner and how tired I felt, and letting myself write badly was the only reason I kept going.\n\nOnce I dropped the pressure to be poetic, I started noticing things I would have otherwise missed. Flipping back through a few months of entries revealed patterns in my mood that were completely invisible in the moment. I saw how consistently a poor night of sleep turned minor work frustrations into perceived disasters, and how much better my week went when I spent even twenty minutes outside. Putting my worries on paper also acted like a quiet release valve. Thoughts that felt overwhelming while looping endlessly in my head suddenly looked manageable, and sometimes even a little silly, once they were sitting in ink in front of me.\n\nThe biggest surprise, though, was realizing how much my memory tends to distort the past. Reading entries from last spring, I found small, joyful moments I had completely forgotten, alongside crises that felt life-altering at the time and now barely register. Journaling didn't magically solve my problems, and I still have nights where I have nothing clever to say. What a year of writing actually gave me was a steadier perspective on my own life, reminding me that bad days pass faster than they feel like they will, and that there are far more good days in between than I usually give myself credit for.",
+   "usage": {
+    "input": 76,
+    "output": 1232,
+    "reasoning": 877
+   }
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#plain",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "**Elevate Your Kitchen Prep: The Eco-Friendly Bamboo Cutting Board**\n\nBring natural warmth and effortless functionality to your kitchen with our Bamboo Cutting Board. Designed for everything from everyday vegetable chopping to carving Sunday roasts and serving artisanal charcuterie, this versatile board is built to handle all your culinary tasks with ease.\n\n**Why You’ll Love It:**\n\n* **100% Sustainable & Eco-Friendly:** Crafted from organically grown, fast-renewing Moso bamboo, offering a durable and planet-friendly alternative to plastic and traditional hardwood boards.\n* **Gentle on Knives:** The natural density of bamboo provides a sturdy cutting surface that resists deep scratches while remaining gentle enough to keep your chef’s knives sharp longer.\n* **Mess-Free Juice Groove:** A deep, precision-carved perimeter groove catches meat juices, fruit liquids, and condensation before they hit your countertops.\n* **Reversible & Versatile:** Use the grooved side for heavy-duty slicing and carving, then flip it over to use the sleek flat side as a stylish serving tray for cheeses, breads, and appetizers.\n* **Built to Last:** Cross-laminated construction resists warping, cracking, and splintering, while naturally low-porosity fibers help repel moisture and odors.\n\n**Easy Care for Years of Use:**\nSimply hand wash with warm, soapy water and dry immediately after use (not dishwasher safe). Treat occasionally with food-grade mineral oil to keep the bamboo hydrated and looking brand new.\n\n**Perfect for** home cooks, entertainers, and thoughtful housewarming gifts—make every meal prep smoother, cleaner, and more sustainable.",
+   "usage": {
+    "input": 52,
+    "output": 737,
+    "reasoning": 402
+   }
+  },
+  {
+   "id": "everyday:product:write-a-product-description-for-a-bamboo-cutting#prose",
+   "family": "everyday:product:write-a-product-description-for-a-bamboo-cutting",
+   "genre": "product",
+   "register": "marketing",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Upgrade your daily meal prep with our handcrafted bamboo cutting board, designed to bring both durability and natural elegance to your kitchen. Made from sustainably harvested bamboo, this board offers an eco-friendly alternative to plastic and traditional hardwood surfaces. The dense yet forgiving grain stands up to heavy chopping while remaining gentle on your finest knife blades, helping them stay sharper for longer.\n\nGenerously sized for everything from dicing fresh vegetables to carving a roast, this versatile board features a smooth, reversible surface. One side is ideal for everyday slicing and prepping, while the other includes a subtle perimeter groove to catch juices and keep your countertops clean. Its solid construction provides a stable feel during use, and the warm, natural finish makes it attractive enough to double as a serving platter for cheeses, charcuterie, or appetizers when entertaining guests.\n\nNaturally resistant to moisture and odors, bamboo is less likely to warp, crack, or absorb stains over time compared to softer woods. Cleanup is simple, requiring only a quick hand wash with warm soapy water and a towel dry. With an occasional coat of food-grade mineral oil, this reliable cutting board will remain a staple in your kitchen for years to come.",
+   "usage": {
+    "input": 67,
+    "output": 909,
+    "reasoning": 670
+   }
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#prose",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Begin by pulling over to a safe, flat, and stable area away from moving traffic, then turn on your hazard lights and firmly engage the parking brake. If you have wheel chocks or heavy stones, place them in front of and behind the wheel diagonally opposite the flat tyre to prevent the car from rolling. Retrieve your spare tyre, jack, and lug wrench from the boot. Before lifting the vehicle, remove the hubcap or wheel cover if necessary, and use the lug wrench to loosen the lug nuts slightly by turning them counter-clockwise, just enough to break their initial resistance while the weight of the car keeps the wheel from spinning.\n\nNext, locate the proper jacking point on the underside of the car near the flat tyre, which is usually a reinforced notch on the metal frame specified in your owner's manual. Position the jack securely beneath this point and raise the vehicle until the flat tyre is completely off the ground, leaving enough clearance to fit the fully inflated spare. Finish unscrewing the lug nuts by hand and keep them together in a safe spot, then pull the flat tyre straight off the wheel studs. Lift the spare tyre onto the studs, align the holes carefully, push it flush against the hub, and thread the lug nuts back on by hand until they are snug.\n\nLower the jack slowly until the spare tyre rests firmly on the ground and supports the car's weight, then remove the jack completely. Use the lug wrench to tighten the lug nuts firmly, working in a crisscross or star pattern rather than going around in a circle so the wheel seats evenly against the hub. Once everything is secure, stow the flat tyre, jack, and wrench back in your boot and remove any wheel chocks. Keep in mind that many spare tyres are temporary and have strict speed and distance limits, so check the tyre pressure as soon as you can and drive cautiously to a garage to have your original tyre repaired or replaced.",
+   "usage": {
+    "input": 65,
+    "output": 1266,
+    "reasoning": 874
+   }
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#plain",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The main difference between a **Traditional IRA** and a **Roth IRA** comes down to **when you pay taxes** on your money:\n\n* **Traditional IRA:** You get a potential tax break **now** (contributions may be tax-deductible), and you pay taxes **later** when you withdraw the money in retirement.\n* **Roth IRA:** You pay taxes **now** (contributions are made with after-tax dollars), and your withdrawals in retirement are **tax-free**.\n\nHere is a breakdown of how they compare across the most important rules:\n\n---\n\n### 1. Taxes on Contributions & Withdrawals\n* **Traditional IRA:** Contributions are often tax-deductible in the year you make them, which lowers your taxable income now. Your investments grow tax-deferred, meaning you pay ordinary income tax on both your contributions and earnings when you withdraw them in retirement.\n* **Roth IRA:** Contributions are not tax-deductible. However, your investments grow tax-free, and **qualified withdrawals** in retirement (both contributions and earnings) are 100% tax-free.\n\n### 2. Income Limits\n* **Traditional IRA:** **Anyone** with earned income can contribute, regardless of how high their income is. However, your ability to *deduct* those contributions on your taxes may be limited if you (or your spouse) have a retirement plan at work (like a 401(k)) and your income exceeds IRS thresholds.\n* **Roth IRA:** There are **income limits** on who can contribute directly. If your Modified Adjusted Gross Income (MAGI) exceeds the IRS limit for your filing status, your allowed contribution is reduced or eliminated (though some high earners use a strategy called a \"Backdoor Roth IRA\").\n\n### 3. Early Withdrawals (Before Age 59½)\n* **Traditional IRA:** Withdrawing money before age 59½ generally triggers both ordinary income taxes and a **10% early withdrawal penalty** (unless you qualify for specific exceptions, like a first-time home purchase or certain medical/education expenses).\n* **Roth IRA:** You can withdraw your **original contributions** (not earnings) at **any time, for any reason, tax-free and penalty-free**. To withdraw *earnings* tax- and penalty-free, you generally must be at least 59½ and have held the account for at least five years.\n\n### 4. Required Minimum Distributions (RMDs)\n* **Traditional IRA:** You are required by the IRS to start taking annual withdrawals (RMDs) once you reach **age 73** (scheduled to rise to age 75 in 2033).\n* **Roth IRA:** There are **no RMDs** during the original owner's lifetime, allowing your money to continue growing tax-free as long as you want.\n\n### 5. Contribution Limits\n* Both accounts share the **same combined annual contribution limit** set by the IRS each year (with an additional \"catch-up\" contribution allowed if you are age 50 or older). You can split your annual limit between a Traditional and Roth IRA, as long as the total doesn't exceed the yearly cap and you have at least that much in earned income.\n\n---\n\n### Quick Summary Table\n\n| Feature | Traditional IRA | Roth IRA |\n| :--- | :--- | :--- |\n| **Tax Benefit** | Upfront (tax-deductible contributions) | In retirement (tax-free withdrawals) |\n| **Income Limit to Contribute** | None (limits apply to tax deductions) | Yes (phased out at higher incomes) |\n| **Early Withdrawal of Contributions** | Taxed + 10% penalty (unless exempt) | Tax-free and penalty-free anytime |\n| **RMDs** | Yes (starting at age 73) | None during your lifetime |\n\n---\n\n### Which one is better for you?\nA common rule of thumb is to compare your **current tax bracket** to your **expected tax bracket in retirement**:\n* **Consider a Traditional IRA** if you are in a higher tax bracket now and expect to be in a *lower* tax bracket in retirement (so you save on taxes at your higher current rate).\n* **Consider a Roth IRA** if you expect to be in the *same or a higher* tax bracket in retirement, want tax-free income flexibility later, or value the ability to access your contributions without penalty before retirement.\n\n*(Note: IRS income and contribution limits change annually, so it's always a good idea to check current IRS guidelines or consult a tax advisor for your specific situation.)*",
+   "usage": {
+    "input": 55,
+    "output": 1616,
+    "reasoning": 642
+   }
+  },
+  {
+   "id": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-#prose",
+   "family": "everyday:explain:what-is-the-difference-between-a-roth-ira-and-a-",
+   "genre": "explain",
+   "register": "professional",
+   "variant": "test",
+   "adversarial": false,
+   "text": "The primary difference between a Roth IRA and a traditional IRA comes down to when you pay taxes on your money. With a traditional IRA, you generally contribute pre-tax dollars, which means your contributions may be tax-deductible in the year you make them, lowering your current taxable income. Your investments then grow tax-deferred, and you pay ordinary income taxes when you withdraw the money in retirement. Conversely, a Roth IRA is funded with after-tax dollars, so you do not get an upfront tax deduction. Instead, your investments grow tax-free, and qualified withdrawals in retirement are completely free of federal income tax.\n\nAnother key distinction involves income limits and eligibility. Anyone with earned income can contribute to a traditional IRA regardless of how much they earn, though your ability to deduct those contributions on your taxes phases out at higher income levels if you or your spouse are covered by a retirement plan at work. Roth IRAs have strict income caps that determine whether you are allowed to contribute directly at all. If your modified adjusted gross income exceeds the IRS threshold for your filing status, your allowed contribution is reduced or eliminated altogether.\n\nThe two accounts also differ significantly in their withdrawal rules. Because you have already paid taxes on the money you put into a Roth IRA, you can withdraw your original contributions at any time without taxes or penalties, though withdrawing investment earnings early may trigger both. With a traditional IRA, withdrawals made before age 59 and a half are generally subject to both income taxes and an early withdrawal penalty, unless you qualify for a specific exception. Furthermore, traditional IRAs require you to start taking required minimum distributions once you reach age 73, whereas Roth IRAs have no required minimum distributions during the original owner's lifetime, allowing the money to continue growing tax-free indefinitely.\n\nChoosing between the two often depends on whether you expect your tax rate to be higher now or in retirement. If you anticipate being in a lower tax bracket later in life, a traditional IRA lets you avoid higher taxes today. If you expect your tax rate to stay the same or rise in the future, or if you simply value having tax-free income and greater flexibility in retirement, a Roth IRA is often the more advantageous option.",
+   "usage": {
+    "input": 70,
+    "output": 1383,
+    "reasoning": 931
+   }
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#plain",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Here is a draft you can customize with your company name and specific details:\n\n***\n\nOne year ago today, I took the leap and started [Company Name]. \n\nWhen I began, I thought the hardest part would be building the product. \n\nI was wrong. Building the product was only half the battle—building the resilience to keep going when things broke was the other half.\n\nHere are 5 honest lessons from my first year as a founder:\n\n**1. Done is better than perfect.**\nI spent too much time early on polishing details nobody noticed. Your V1 doesn’t need to be flawless; it just needs to solve a real problem for a real person. Ship early, listen closely, and iterate.\n\n**2. Talk to customers before you build.**\nAssumptions are expensive. Every time I stepped back from my laptop and actually talked to users, our roadmap got 10x clearer. Let their pain points guide what you build next.\n\n**3. Focus is harder than working hard.**\nIn Year 1, everything feels urgent. Saying “no” to good opportunities—features, partnerships, distractions—was the hardest skill to learn, and the most necessary one.\n\n**4. Your energy is a company asset.**\nEarly on, I treated exhaustion like a badge of honor. It isn’t. When the founder burns out, the business slows down. Protecting your mental clarity isn’t a luxury; it’s a strategic decision.\n\n**5. You never actually build alone.**\nEven as a solo founder (or small team), you don't do it in a vacuum. To the early customers who took a chance on us, the mentors who gave blunt advice, and the friends who listened during the tough weeks—thank you.\n\nYear 1 was chaotic, humbling, and easily the hardest thing I’ve ever done. I wouldn’t trade it for anything. \n\nHere’s to Year 2. 🚀\n\nFounders: What’s the biggest lesson you learned in your first year?\n\n#FounderJourney #StartupLife #Entrepreneurship #LessonsLearned #BuildingInPublic\n\n***\n\n*Tip: If you want to boost engagement, attach a candid photo from your first day or a behind-the-scenes moment from this past year—posts with authentic personal photos tend to perform well on LinkedIn.* If you'd like me to tailor this to your specific industry or solo/co-founder dynamic, just let me know!",
+   "usage": {
+    "input": 57,
+    "output": 1168,
+    "reasoning": 649
+   }
   }
  ],
  "modelVersion": "gemini-4-hydrogen"
