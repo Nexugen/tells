@@ -1,5 +1,5 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-21",
  "tellsVersion": "0.5.0",
  "scoreModel": "2026-11-18",
  "lowLine": 17,
@@ -13,78 +13,78 @@
    "provider": "Google",
    "costUsd": 0,
    "all": {
-    "n": 33,
-    "nScored": 33,
+    "n": 35,
+    "nScored": 35,
     "withWarning": {
-     "v": 54.5,
-     "lo": 36.4,
-     "hi": 72.7
+     "v": 54.3,
+     "lo": 37.1,
+     "hi": 71.4
     },
     "per100": {
-     "v": 1.67,
-     "lo": 1.11,
-     "hi": 2.23
+     "v": 1.57,
+     "lo": 1.02,
+     "hi": 2.13
     },
     "score": {
-     "v": 8.2,
-     "lo": 2.7,
-     "hi": 15.2
+     "v": 8.4,
+     "lo": 3.2,
+     "hi": 15.4
     },
     "machineLike": {
-     "v": 84.8,
-     "lo": 72.7,
-     "hi": 97
+     "v": 82.9,
+     "lo": 68.6,
+     "hi": 94.3
     },
     "flagged": {
-     "v": 90.9,
-     "lo": 81.8,
-     "hi": 100
+     "v": 88.6,
+     "lo": 77.1,
+     "hi": 97.1
     },
     "rulesOnly": {
-     "v": 63.6,
-     "lo": 48.5,
-     "hi": 78.8
+     "v": 65.7,
+     "lo": 51.4,
+     "hi": 80
     },
     "medianWords": 347
    },
    "heldOut": {
-    "n": 23,
-    "nScored": 23,
+    "n": 24,
+    "nScored": 24,
     "withWarning": {
-     "v": 52.2,
-     "lo": 30.4,
-     "hi": 73.9
+     "v": 54.2,
+     "lo": 33.3,
+     "hi": 75
     },
     "per100": {
-     "v": 1.62,
-     "lo": 0.95,
-     "hi": 2.39
+     "v": 1.59,
+     "lo": 0.92,
+     "hi": 2.33
     },
     "score": {
-     "v": 11.4,
-     "lo": 4,
-     "hi": 21.3
+     "v": 11,
+     "lo": 3.3,
+     "hi": 20.8
     },
     "machineLike": {
-     "v": 78.3,
-     "lo": 60.9,
-     "hi": 95.7
+     "v": 79.2,
+     "lo": 62.5,
+     "hi": 91.7
     },
     "flagged": {
-     "v": 87,
-     "lo": 73.9,
+     "v": 87.5,
+     "lo": 70.8,
      "hi": 100
     },
     "rulesOnly": {
-     "v": 65.2,
-     "lo": 43.5,
-     "hi": 82.6
+     "v": 66.7,
+     "lo": 45.8,
+     "hi": 83.3
     },
     "medianWords": 360
    },
    "byGenre": {
     "advice": 59,
-    "howto": 33,
+    "howto": 25,
     "explain": 0,
     "linkedin": 100,
     "email": 100,
@@ -95,17 +95,17 @@
     {
      "id": "bold-label-list",
      "name": "Bold-label bullets",
-     "share": 36
+     "share": 34
     },
     {
      "id": "unfilled-placeholder",
      "name": "Unfilled placeholder",
-     "share": 18
+     "share": 17
     },
     {
      "id": "bold-lead",
      "name": "Bold lead-ins",
-     "share": 15
+     "share": 14
     },
     {
      "id": "ai-vocabulary",
@@ -113,46 +113,46 @@
      "share": 9
     },
     {
-     "id": "listicle-intro",
-     "name": "List announcement",
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
      "share": 9
     },
     {
-     "id": "corporate-excitement",
-     "name": "Announcement voice",
-     "share": 6
+     "id": "listicle-intro",
+     "name": "List announcement",
+     "share": 9
     }
    ],
    "topRaw": [
     {
      "id": "bold-label-list",
      "name": "Bold-label bullets",
-     "share": 42
+     "share": 43
     },
     {
      "id": "bold-lead",
      "name": "Bold lead-ins",
-     "share": 18
+     "share": 20
     },
     {
      "id": "unfilled-placeholder",
      "name": "Unfilled placeholder",
-     "share": 18
+     "share": 17
     },
     {
      "id": "ai-vocabulary",
      "name": "AI vocabulary",
-     "share": 12
+     "share": 14
+    },
+    {
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
+     "share": 9
     },
     {
      "id": "listicle-intro",
      "name": "List announcement",
      "share": 9
-    },
-    {
-     "id": "corporate-excitement",
-     "name": "Announcement voice",
-     "share": 6
     },
     {
      "id": "exclamation",
@@ -175,10 +175,10 @@
      "share": 6
     }
    ],
-   "claudeWritten": 15.2,
+   "claudeWritten": 14.3,
    "plainVsProse": {
-    "plain": 88.2,
-    "prose": 18.8
+    "plain": 83.3,
+    "prose": 23.5
    }
   },
   {

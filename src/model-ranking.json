@@ -1,47 +1,47 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-21",
  "tellsVersion": "0.5.0",
  "models": [
   {
    "label": "Gemini 4 Hydrogen (API)",
    "provider": "Google",
-   "n": 33,
+   "n": 35,
    "withWarning": {
-    "v": 54.5,
-    "lo": 36.4,
-    "hi": 72.7
+    "v": 54.3,
+    "lo": 37.1,
+    "hi": 71.4
    },
    "per100": {
-    "v": 1.67,
-    "lo": 1.11,
-    "hi": 2.23
+    "v": 1.57,
+    "lo": 1.02,
+    "hi": 2.13
    },
    "score": {
-    "v": 8.2,
-    "lo": 2.7,
-    "hi": 15.2
+    "v": 8.4,
+    "lo": 3.2,
+    "hi": 15.4
    },
    "machineLike": {
-    "v": 84.8,
-    "lo": 72.7,
-    "hi": 97
+    "v": 82.9,
+    "lo": 68.6,
+    "hi": 94.3
    },
-   "nScored": 33,
+   "nScored": 35,
    "top": [
     {
      "id": "bold-label-list",
      "name": "Bold-label bullets",
-     "share": 36
+     "share": 34
     },
     {
      "id": "unfilled-placeholder",
      "name": "Unfilled placeholder",
-     "share": 18
+     "share": 17
     },
     {
      "id": "bold-lead",
      "name": "Bold lead-ins",
-     "share": 15
+     "share": 14
     },
     {
      "id": "ai-vocabulary",
@@ -49,8 +49,8 @@
      "share": 9
     },
     {
-     "id": "listicle-intro",
-     "name": "List announcement",
+     "id": "corporate-excitement",
+     "name": "Announcement voice",
      "share": 9
     }
    ]

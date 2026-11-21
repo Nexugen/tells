@@ -467,6 +467,34 @@
     "output": 1168,
     "reasoning": 649
    }
+  },
+  {
+   "id": "everyday:howto:how-do-i-change-a-flat-tyre#plain",
+   "family": "everyday:howto:how-do-i-change-a-flat-tyre",
+   "genre": "howto",
+   "register": "casual",
+   "variant": "dev",
+   "adversarial": false,
+   "text": "Changing a flat tyre is straightforward if you follow the right steps and prioritize safety. Here is a step-by-step guide:\n\n### Before You Start: Safety First\n* **Find a safe location:** Pull over onto a flat, stable, and straight stretch of road away from traffic. Avoid soft ground (like mud or grass) or hills.\n* **Make yourself visible:** Turn on your **hazard lights**. If you have reflective triangles or road flares, set them up behind your car.\n* **Secure the car:** Apply the **parking brake** firmly. Put automatic transmissions in **Park (P)**, or manual transmissions in **1st gear or Reverse**.\n* **Get your tools:** You will need your spare tyre, jack, and lug wrench (usually found under the boot/trunk floor), plus your car's owner's manual.\n\n---\n\n### Step-by-Step Instructions\n\n**1. Block the wheels**\nPlace wheel wedges (or heavy rocks/blocks of wood) in front of and behind the tyre diagonally opposite the flat one (e.g., if changing the front-left tyre, block the rear-right tyre). This stops the car from rolling.\n\n**2. Remove the hubcap (if applicable)**\nIf your car has a plastic wheel cover hiding the lug nuts, pry it off gently using the flat end of your lug wrench.\n\n**3. Loosen the lug nuts (do NOT remove them yet)**\nUsing the lug wrench, turn the lug nuts counter-clockwise about **half a turn to one full turn** just to break the initial resistance. Doing this while the tyre is still on the ground keeps the wheel from spinning. *(If a nut is stuck, you can use your foot to carefully push down on the wrench, or slide a metal pipe over it for leverage—just be careful not to slip).*\n\n**4. Position the jack and lift the car**\n* Check your owner’s manual to find the exact **jacking point** near the flat tyre (there is usually a reinforced metal notch under the frame near the wheel well). Never place the jack on plastic molding or soft metal, as it can damage the car or slip.\n* Raise the jack until the flat tyre is about **6 inches (15 cm)** off the ground (remember, an inflated spare tyre is taller than a flat one, so you need enough clearance to put it on).\n* **Safety rule:** Never put any part of your body underneath the car while it is supported only by a jack.\n\n**5. Remove the flat tyre**\nUnscrew the lug nuts completely by hand and keep them together in a safe spot (like inside the hubcap). Pull the flat tyre straight toward you to remove it, and lay it flat under the side of the car near the jack—this acts as an extra safety cushion if the jack slips.\n\n**6. Mount the spare tyre**\nLift the spare tyre onto the lug bolts, lining up the holes. Push it all the way back until it sits flush against the hub. \n\n**7. Put the lug nuts back on**\nScrew the lug nuts back onto the bolts by hand as tight as you can. *(Note: Make sure the tapered/cone-shaped end of the lug nut faces inward toward the wheel).*\n\n**8. Lower the car and tighten fully**\n* Lower the jack until the spare tyre is resting firmly on the ground, taking the weight of the car, then remove the jack.\n* Use the lug wrench to tighten the lug nuts as much as you can. Tighten them in a **star or crisscross pattern** (skipping every other nut) rather than going in a circle—this ensures the wheel sits evenly.\n\n**9. Pack up and check pressure**\nStow your flat tyre, jack, wrench, and wedges. If you have a tyre pressure gauge, check the spare's pressure (a small \"donut\" spare usually requires much higher pressure, often around 60 PSI—check the sidewall of the spare tyre).\n\n---\n\n### After Changing the Tyre\n* **Mind the speed limit:** If you put on a temporary \"space-saver\" (donut) spare, do **not** drive faster than **50 mph (80 km/h)**, and avoid driving long distances (usually max 50 miles / 80 km).\n* **Visit a tyre shop:** Get your flat tyre repaired or replaced as soon as possible, and ask them to check that your lug nuts are torqued to the manufacturer's specification.",
+   "usage": {
+    "input": 50,
+    "output": 1352,
+    "reasoning": 404
+   }
+  },
+  {
+   "id": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs#prose",
+   "family": "everyday:linkedin:write-a-linkedin-post-about-lessons-from-my-firs",
+   "genre": "linkedin",
+   "register": "marketing",
+   "variant": "test",
+   "adversarial": false,
+   "text": "Wrapping up my first year as a founder has been both the hardest and most rewarding chapter of my career. When I started, I had a neat roadmap and clear assumptions about how things would unfold. Within the first few months, the market humbled me quickly, and I learned that falling in love with the problem is far more important than falling in love with your initial solution. Listening closely to early users forced us to adapt in ways I never anticipated, and every adjustment brought us closer to building something people genuinely need.\n\nI also learned the hard way that perfection is the enemy of momentum. Early on, I spent too much time polishing ideas behind closed doors instead of putting them in front of real customers. Shipping something imperfect feels uncomfortable, yet those early, scrappy releases generated the honest feedback that actually moved the needle. Real progress came from shortening the loop between building, testing, and learning, rather than waiting until everything felt ready.\n\nBeyond the product and strategy, the biggest shift for me was personal. Building a company is an emotional rollercoaster where a great morning call can be followed by an overwhelming afternoon setback. Learning to separate my self-worth from daily metrics and finding a sustainable pace kept me grounded through the uncertainty. I am deeply grateful to the early customers, mentors, and supporters who believed in the vision when it was still rough around the edges, and I am excited to carry these lessons into year two.",
+   "usage": {
+    "input": 72,
+    "output": 919,
+    "reasoning": 632
+   }
   }
  ],
  "modelVersion": "gemini-4-hydrogen"
